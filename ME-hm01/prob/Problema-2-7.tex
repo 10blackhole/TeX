@@ -1,0 +1,175 @@
+\section{Problema 2.7}\label{prob:2.7}
+\begin{tcolorbox}
+\begin{problema}
+	Considere un gas de bosones $3$-dimensional sin masa con degeneración de spin $N_s$. Asumiendo que el potencial químico es nulo ($\m=0$), encuentre los coeficientes $A$ y $B$ para las expresiones para la densidad de presión y densidad de energía,
+	\begin{equation}
+  P=AN_sT^4,\qquad \left(\frac{E}{V}\right)=BN_sT^4
+\end{equation}
+\end{problema}
+\end{tcolorbox}
+
+\begin{sol}
+Por completitud, derivemos la expresión para la presión $P$ para un gas de bosones no interactuantes mostrada en el libro, asumiendo una relación de dispersión relativista $\epsilon(p)=\sqrt{p^2c^2+m^2c^4}$
+
+En clases vimos que para el caso de un gas de partículas no interactuantes en $D$-dimensiones con momentum $p$ y carga $q$ las cuales son consideradas independientes una de otra, el logaritmo de la función partición del ensamble gran canónico viene dado por
+\begin{equation}\label{zgc pm}
+  \ln(\zgc)=\frac{N_sV}{(2\p\hbar)^D}\int\dd^Dp(\mp )\ln(1\mp e^{-\b (\epsilon(p)-\m )})
+\end{equation}
+donde el signo $-$ es para bosones y el $+$ para fermiones. Ademas $N_s$ es la degeneración de spin, la cual en la mayoría de los casos se considera $(2s+1)$ pero acá no es relevante.
+
+Así, para un gas de bosones en $3$-dimensiones sin masa, asumiendo $\m=0$ se tiene
+\begin{equation}
+    \ln(\zgc)=\frac{N_sV}{(2\p\hbar)^3}\int\dd^3p\ln\left(\frac{1}{1-e^{-\b(\epsilon(p)-\m )}}\right)
+\end{equation}
+
+
+Sabemos que el potencial gran canónico se relaciona con $\zgc$ según,
+\begin{equation}\label{Omega zgc}
+  \Omega_{\rm GC}=-PV=-\k T\ln(\zgc )
+\end{equation}
+%es decir,
+%\begin{align}
+%  \frac{PV}{\k T}&=\ln(\zgc )\\
+%  &=\sum_p\ln(1+e^{-\b(\ep_p-\m )}+e^{-2\b(\ep_p-\m )}+\cdots)\\
+%  &=\sum_p\ln\left[\left(e^{-\b(\ep_p-\m )}\right)^p\right]\\
+%  &=\sum_p\ln\left[\frac{1}{1-e^{-\b (\epsilon_p-\m )}}\right]
+%\end{align}
+%donde usamos la serie geométrica.
+%Podemos aproximar la sumatoria al continuo, como se vio en clases y como lo indica el libro,
+%\begin{equation}
+%  \sum_p\to \frac{N_s}{(2\p\hbar)^3}V\int\dd^3 p
+%\end{equation}
+%donde $N_s$ es la degeneración de spin, la cual en la mayoría de los casos se considera $(2s+1)$ pero acá no es relevante. Luego,
+entonces,
+\begin{align}
+  \frac{PV}{\k T}&=\ln(\zgc)\\
+  &=\frac{N_sV}{(2\p\hbar)^3}\int\dd^3p\ln\left(\frac{1}{1-e^{-\b (\epsilon(p)-\m )}}\right)\\
+  &=\frac{4\p N_sV}{(2\p\hbar)^3}\int_0^\infty\dd pp^2\ln\left(\frac{1}{1-e^{-\b (\epsilon(p)-\m )}}\right)\\
+  &=-\frac{4\p N_sV}{(2\p\hbar)^3}\int_0^\infty\dd pp^2\ln\left(1-e^{-\b(\epsilon(p)-\m )}\right)\\
+  &=-\frac{4\p N_sV}{(2\p\hbar)^3}\left[\eval{\frac{p^3}{3}\ln\left(1-e^{-\b(\epsilon(p)-\m )}\right)}_{p=0}^{p=\infty}-\int_0^\infty \frac{p^3}{3}\dd p\dv{p}\ln\left(1-e^{-\b(\epsilon(p)-\m )}\right)\right]
+\end{align}
+donde en el último paso se ha integrado por partes y se ha usado el hecho de que debido a que $\epsilon(p)$ sólo depende de la magnitud de $p$, podemos usar la fórmula vista en clases
+\begin{equation}
+  \dd^Dp=\Omega p^{D-1}\dd p
+\end{equation}
+donde $\Omega$ es el elemento de ángulo sólido en $D$ dimensiones.
+
+
+ Notemos que
+\begin{equation}\label{int-partes}
+  \eval{\frac{p^3}{3}\ln\left(1-e^{-\b(\epsilon(p)-\m )}\right)}_{p=0}^{p=\infty}=0
+\end{equation}
+Esto debido a que cuando se evalúa en el límite inferior $p=0$ se anula directamente y cuando se evalúa en el límite superior, y asumimos la relación de dispersión relativista $\epsilon=\sqrt{p^2c^2+m^2c^4}$, la exponencial decae mucho más rápido que $p^3$, luego,
+\begin{equation}
+  \lim_{p\to \infty}\frac{p^3}{3}\ln\left(1-e^{-\b(\sqrt{p^2c^2+m^2c^4}-\m )}\right)=\frac{p^3}{3}\ln(1)=0
+\end{equation}
+Así, tenemos
+\begin{align}
+   \frac{PV}{\k T}&=\frac{4\p N_sV}{(2\p\hbar)^3}\int_0^\infty \frac{p^3}{3}\dd p\dv{p}\ln\left(1-e^{-\b(\epsilon(p)-\m )}\right)\\
+   &=\frac{4\p N_sV}{3(2\p\hbar)^3}\int_0^\infty \dd pp^3\frac{e^{-\b (\epsilon(p)-\m )}}{1-e^{-\b (\epsilon(p)-\m )}}\b \dv{\ep(p)}{p}
+\end{align}
+pero
+\begin{equation}\label{dedp}
+  \epsilon=\sqrt{p^2c^2+m^2c^4}\implies \dv{\epsilon}{p}=\frac{1}{2}\frac{2pc^2}{\sqrt{p^2c^2+m^2c^4}}=\frac{pc^2}{\epsilon}
+\end{equation}
+reemplazando en lo anterior,
+\begin{align}
+  \frac{PV}{\k T}&=\frac{4\p N_sV}{3(2\p\hbar)^3}\int_0^\infty \dd pp^3\frac{e^{-\b (\epsilon(p)-\m )}}{1-e^{-\b (\epsilon(p)-\m )}}\b \dv{\ep(p)}{p},\qquad \b=\frac{1}{\k T}\\
+  &=\frac{4\p N_sV}{3\k T(2\p\hbar)^3}\int_0^\infty\dd p p^4\frac{c^2}{\epsilon}\frac{e^{-\b (\epsilon(p)-\m )}}{1-e^{-\b (\epsilon(p)-\m )}}\\
+  &=\frac{N_sV}{\k T(2\p\hbar)^3}\int\dd^3p\frac{p^2c^2}{3\epsilon}\frac{e^{-\b (\epsilon(p)-\m )}}{1-e^{-\b (\epsilon(p)-\m )}}
+\end{align}
+multiplicando por $\k T/V$ a ambos lados, obtenemos
+\begin{equation}\label{27-P}
+  \boxed{P=\frac{N_s}{(2\p\hbar)^3}\int\dd^3p\frac{p^2c^2}{3\epsilon}\frac{e^{-\b (\epsilon(p)-\m )}}{1-e^{-\b (\epsilon(p)-\m )}}}
+\end{equation}
+la cual corresponde a la expresión de partida del libro pero ya no en unidades naturales.
+
+
+
+%
+%\begin{equation}
+%  P=\frac{N_s}{(2\p\hbar)^3}\int\dd^3p\frac{p^2}{3\epsilon}f(p),\qquad f(p)=\frac{e^{-\b\epsilon(p)}}{1-e^{-\b\epsilon(p)}}
+%\end{equation}
+Dado que estamos considerando un gas de bosones sin masa, la relación de dispersión relativista queda
+\begin{equation}
+  \epsilon=\sqrt{p^2c^2}=pc
+\end{equation}
+Luego, de \eqref{27-P}
+\begin{align}
+  P&=\frac{N_s}{(2\p\hbar)^3}\int\dd^3p\frac{p^2c^2}{3\epsilon}\frac{e^{-\b pc}}{1-e^{-\b pc}}\\
+  &=\frac{N_s}{(2\p\hbar)^3}\int\dd^3p\frac{p^2c^2}{3}\frac{1}{pc}\frac{e^{-\b pc}}{1-e^{-\b pc}}\\
+  &=\frac{N_sc}{3(2\p\hbar)^3}\int\dd^3p p\frac{e^{-\b pc}}{1-e^{-\b pc}}\\
+  &=\frac{4\p N_sc}{3(2\p\hbar)^3}\int_0^\infty p^2\dd p p\frac{e^{-\b pc}}{1-e^{-\b pc}}\\
+  &=\frac{4\p N_sc}{3(2\p\hbar)^3}\int_0^\infty \dd pp^3\frac{e^{-\b pc}}{1-e^{-\b pc}}\quad /\cdot\frac{e^{\b pc}}{e^{\b pc}}\label{mult-ee}\\
+  &=\frac{4\p N_sc}{3c(2\p\hbar)^3}\int_0^\infty \dd pp^3\frac{1}{e^{\b pc}-1}
+\end{align}
+Haciendo el siguiente cambio de variables
+\begin{equation}\label{27-cambio-varable}
+  u=\b pc,\quad p=\frac{1}{\b c}u ,\quad  \dd p =\frac{1}{\b c}\dd u
+\end{equation}
+donde es claro ver que los límites de integración no cambian, se tiene
+\begin{align}
+  P&=\frac{4\p N_sc}{3(2\p\hbar)^3}\int_0^\infty \left(\frac{1}{\b c}\right)^4\dd u\frac{u^3}{e^{u}-1}\\
+  &=\frac{4\p N_sc}{3(2\p\hbar)^3}\left(\frac{1}{\b c}\right)^4\int_0^\infty \dd u\frac{u^3}{e^{u}-1}
+\end{align}
+La integral que queda por hacer se puede calcular usando algún software de cálculo analítico, por ejemplo Maple, el cual arroja
+\begin{equation}\label{27-integral}
+  \int_0^\infty \dd u\frac{u^3}{e^{u}-1}=\frac{\p^4}{15}
+\end{equation}
+Finalmente,
+\begin{align}
+  P &=\frac{4\p N_sc}{3(2\p\hbar)^3}\left(\frac{1}{\b c}\right)^4\frac{\p^4}{15},\qquad \b=\frac{1}{\k T}\\
+  &=\frac{4\p N_sc}{3(2\p\hbar)^3}\left(\frac{\k T}{c}\right)^4\frac{\p^4}{15}\\
+  &=\frac{\p^2N_s\k^4}{90c^3\hbar^3}T^4
+\end{align}
+Luego, el coeficiente $A$ pedido viene dado por
+\begin{equation}
+\boxed{  A=\frac{\p^2\k^4}{90c^3\hbar^3}}
+\end{equation}
+
+Para calcular $E/V$ usamos la relación derivada en clases,
+\begin{equation}\label{J/E}
+  \frac{J}{V}=N_s\int\frac{\dd^3p}{(2\p\hbar)^3}j(p)f(\epsilon(p))
+\end{equation}
+donde $N_s$ es la degeneración de spin, $j(p)$ es una cantidad física para una partícula con magnitud de momentum $p$ y 
+\begin{equation}
+  f(\epsilon(p))=\frac{e^{-\b(\epsilon(p))}}{1-e^{-\b(\epsilon(p))}}
+\end{equation}
+para el caso de bosones con potencial químico nulo. Así, se tiene
+\begin{align}
+  \frac{E}{V}&=\frac{N_s}{(2\p\hbar)^3}\int\dd^3p\epsilon(p)f(\epsilon(p)),\qquad \epsilon=pc\\
+  &=\frac{N_s}{(2\p\hbar)^3}\int\dd^3p pc \frac{e^{-\b pc}}{1-e^{-\b pc}}\\
+  &=\frac{4\p cN_s}{(2\p\hbar)^3}\int_0^\infty p^2\dd p p \frac{e^{-\b pc}}{1-e^{-\b pc}}\qquad /\cdot \frac{e^{\b pc}}{e^{\b pc}-1}\\
+  &=\frac{4\p cN_s}{(2\p\hbar)^3}\int_0^\infty\dd pp^3\frac{1}{e^{\b pc}-1}
+\end{align}
+Haciendo el mismo cambio de variable \eqref{27-cambio-varable}, se obtiene
+\begin{align}
+  \frac{E}{V}&=\frac{4\p cN_s}{(2\p\hbar)^3}\int_0^\infty \left(\frac{1}{\b c}\right)\dd u\left(\frac{1}{\b c}\right)^3u^3\frac{1}{e^{u}-1}\\
+  &=\frac{4\p cN_s}{(2\p\hbar)^3}\left(\frac{1}{\b c}\right)^4\underbrace{\int_0^\infty \dd u\frac{u^3}{e^{u}-1}}_{\p^4/15},\qquad \b=\frac{1}{\k T}\\
+  &=\frac{4\p cN_s}{(2\p\hbar)^3}\left(\frac{\k T}{c}\right)^4\frac{\p^4}{15}\\
+  &=\frac{\p^2N_s\k^4}{30\hbar^3c^3}T^4
+\end{align}
+donde se usó \eqref{27-integral}. Así, el coeficiente $B$ viene dado por
+\begin{equation}
+\boxed{  B=\frac{\p^2\k^4}{30\hbar^3c^3}}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{sol}

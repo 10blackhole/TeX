@@ -1,0 +1,147 @@
+\section{Variación funcional de la acción}
+Considerems la posibilidad de un cambio tanto en la región de inegración como en las funciones de estado. En particular, consideremos una transformación infinitesimal de las variables independientes de la forma
+\begin{equation}\label{3a}
+  x^k\to x'^k=x^k+\delta x^k
+\end{equation}
+donde las cantidades $\delta x^k$ son funciones de las variables independientes arbitrariamente infinetismales. Para hacer esto más evidente, podemos escribirlas explícitamente como
+\begin{equation}
+  \delta x^k(x)=\lambda\xi^k(x)
+\end{equation}
+donde $\xi^k(x)$ es una función arbitraria y $\lambda$ es un parámetro arbitrariamente ifinitesimal.
+
+También le asociamos una transformación infinetismal a las funciones de estado y a sus derivadas parciales,
+\begin{align}
+  \psi^\alpha \to \psi'^\alpha&=\psi^\alpha+\delta \psi^\alpha(x)\\
+  \partial_k\psi^\alpha \to \partial_k\psi'^\alpha&=\partial¡_k\psi^\alpha+\delta (\partial_k\psi^\alpha(x))
+\end{align}
+las cuales pueden ser reescritas como
+\begin{equation}\label{3b}
+\begin{split}
+  \delta \psi^\alpha(x) &=\psi'^\alpha(x')-\psi^\alpha(x)\\
+  \delta (\partial_k\psi^\alpha(x)) &=\partial_k\psi'^\alpha(x')-\partial_k\psi^\alpha(x)
+ \end{split}
+\end{equation}
+
+la variación funcional de la accción \eqref{accion} es definida como
+\begin{align}
+  \delta I&=\int_\mathcal{R'}\LLagp\dd x'-\int_\mathcal{R}\LLag \dd x\\
+  &=\int_\mathcal{R'}\Lag (x^k+\delta x^k,\psi^\alpha+\delta\psi^\alpha,\partial_k\psi^\alpha+\delta(\partial_k\psi^\alpha))\dd x'-\int_\mathcal{R}\LLag\dd x \label{4}
+\end{align}
+Es importante notar de esta definición que \textbf{la forma funcional del integrando no es alterada}.
+
+Es conveniente reducir la integral sobre $\mathcal{R'}$ en \eqref{4} a una integral sobre $\mathcal{R}$ mediante un cambio de variables. Esxpandiendo en serie a primer orden, tenemos
+\begin{equation}\label{5}
+\begin{split}
+  \Lag (x^k+\delta x^k,\psi^\alpha+\delta\psi^\alpha,\partial_k\psi^\alpha+\delta(\partial_k\psi^\alpha))&=\LLag +\pdv{\Lag}{x^k}\delta x^k+\pdv{\Lag}{\psi^\alpha}\delta\psi^\alpha\\
+  &~~~~+\pdv{\Lag}{(\partial_k\psi^\alpha)}\delta(\partial_k\psi^\alpha)
+ \end{split}
+\end{equation}
+Ahora todas las cantidades del lado derecho de \eqref{5} están expresadas en téminos de coordenadas de la región $\mathcal{R}$.
+
+La transformación del elemento de volumen de $\mathcal{R'}$ a $\mathcal{R}$ se relacionan mediante el Jacobiano de la transformación \eqref{3a},
+\begin{equation}
+  \dd x'=\pdv{x'}{x}\dd x
+\end{equation}
+De \eqref{3a} vemos que
+\begin{align}
+  \pdv{x'^k}{x^k}=\pdv{x^k}(x^k+\delta x^k)=1+\pdv{(\delta x^k)}{x^k}
+\end{align}
+
+Reemplazando en \eqref{4} se tiene
+\begin{align}
+  \nonumber\delta I&=\int_\R \dd x\left[\left(\Lag+\pdv{\Lag}{x^k}\delta x^k+\pdv{\Lag}{\psi^\alpha}\delta\psi^\alpha+\pdv{\Lag}{(\partial_k\psi^\alpha)}\delta(\partial_k\psi^\alpha)\right)\left(1+\pdv{(\delta x^k)}{x^k}\right)\right]-\int_\R \dd x\Lag\\
+  &=\int_\R\dd x\left[\Lag \pdv{(\delta x^k)}{x^k}+\pdv{\Lag}{x^k}\delta x^k+\pdv{\Lag}{\psi^\alpha}\delta\psi^\alpha+\pdv{\Lag}{(\partial_k\psi^\alpha)}\delta(\partial_k\psi^\alpha)\right]\label{8}
+\end{align}
+
+Notemos que de \eqref{3b}, las funciones están definidas en puntos diferentes del espacio de las funciones independientes. Esto implica que
+\begin{equation}\label{9}
+  \delta (\partial_k\psi^\alpha(x))=\partial_k\psi^\alpha (x')-\partial_k\psi^\alpha (x)\neq \partial_k(\delta\psi^\alpha (x))
+\end{equation}
+En este punto, es conveniente definir nuevas cantidades $\delta_*\psi^\alpha$, para que \eqref{9} sea una igualdad. Así
+\begin{equation}\label{10}
+	\begin{split}
+		\psi'^\alpha (x')&=\psi^\alpha (x')+\delta_*\psi^\alpha(x')\\
+		\partial_k\psi'^\alpha (x')&=\partial_k\psi^\alpha (x')+\delta_*(\partial_k\psi^\alpha(x'))
+	\end{split}
+\end{equation}
+de donde se desprende
+\begin{equation}\label{10p}
+	\begin{split}
+		\delta_*\psi^\alpha(x')&=\psi'^\alpha (x')-\psi^\alpha (x')\\
+		\delta_*(\partial_k\psi^\alpha(x'))&=\partial_k\psi'^\alpha (x')-\partial_k\psi^\alpha (x')
+	\end{split}
+\end{equation}
+Así, de \eqref{10} y \eqref{10p}, se tiene
+\begin{align}
+  \delta_*(\partial_k\psi^\alpha(x'))&=\partial_k(\psi'^\alpha (x')-\partial_k\psi^\alpha (x')\\
+  &=\partial_k(\psi'^\alpha (x')-\psi^\alpha (x'))\\
+  &=\partial_k(\delta_*\psi^\alpha (x'))
+\end{align}
+Renombrando las coordenadas
+\begin{equation}
+	\delta_*(\partial_k\psi^\alpha(x))=\partial_k(\delta_*\psi^\alpha (x))
+\end{equation}
+Es decir, $\delta_*$ y $\partial$ conmutan.
+
+Además, notemos que usando \eqref{3a}, se tiene
+\begin{align}
+  \delta \psi^\alpha (x)&=\psi'^\alpha (x')-\psi^\alpha(x)\\
+  &=\psi'^\alpha (x+\delta x)-\psi^\alpha(x)\\
+  &=\psi'^\alpha (x)+\partial_l\psi'^\alpha (x)\delta x^l-\psi^\alpha (x)\\
+  &=\delta_*\psi^\alpha (x)+\partial_l\psi^\alpha (x)\delta x^l
+\end{align}
+
+De manera análoga,
+\begin{equation}
+  \delta (\partial_k\psi^\alpha(x))=\delta_*\partial_k\psi^\alpha (x)+\partial_l\partial_k\psi^\alpha (x)\delta x^l
+\end{equation}
+
+Es importante notar el énfasis en que $\partial$ no conmuta con $\delta$ pero si con $\delta_*$, por eso no es necesario considerar el paréntesis.
+
+Reemplazando en \eqref{8},
+\begin{align*}
+  \delta I&=\int_\R\dd x\left[\Lag \pdv{(\delta x^k)}{x^k}+\pdv{\Lag}{x^k}\delta x^k+\pdv{\Lag}{\psi^\alpha}\delta\psi^\alpha+\pdv{\Lag}{(\partial_k\psi^\alpha)}\delta(\partial_k\psi^\alpha)\right]\\
+  &=\int_\R \dd x\left[\Lag \pdv{(\delta x^k)}{x^k}+\pdv{\Lag }{x^k}\delta x^k\pdv{\Lag}{\psi^\alpha }\delta_*\psi^\alpha +\pdv{\Lag}{\psi^\alpha}\partial_k\psi^\alpha \delta x^k+\pdv{\Lag}{(\partial_k\psi^\alpha)}\delta_*\partial_k\psi^\alpha +\pdv{\Lag}{(\partial_l\psi^\alpha)}\partial_k\partial_l\psi^\alpha \delta x^k\right]
+\end{align*}
+donde se han renombrado algunos índices por conveniencia.
+
+Llegado a este punto, notemos que hasta el momento hemos considerado que $\Lag=\LLag$. Es conveniente introducir el concepto de derivada parcial con respecto a las variables independientes cuando las funciones de estado y sus derivadas han sido reemplazadas como funciones de las variables independientes $x^k$. Supongamos que entonces que $\Lag$ depende a lo más de derivadas de primer orden en $\psi^\alpha$. Así,
+\begin{equation}
+  \Lag = \Lag (x^k,\psi^\alpha (x^k),\partial_l\psi^\alpha (x^k))
+\end{equation}
+Definimos la derivada parcial con respecto a las variables independientes como
+\begin{equation}
+	\frac{\D\Lag}{\D x^k}\equiv \pdv{\Lag}{x^k}+\pdv{\Lag}{\psi^\alpha}\pdv{\psi^\alpha}{x^k}+\pdv{\Lag}{(\partial_l\psi^\alpha)}\pdv{(\partial_l\psi^\alpha)}{(\partial x^k)}
+\end{equation}
+de manera que tenemos el siguiente operador
+\begin{equation}
+  \D _k\equiv \frac{\D}{\D x^k}=\partial _k+\partial_k\psi^\alpha\pdv{\psi^\alpha}+\partial_k\partial_l\psi^\alpha\pdv{(\partial_l\psi^\alpha)}
+\end{equation}
+de manera que
+\begin{align*}
+  \delta I&=\int_\R \dd x\left[\Lag \pdv{(\delta x^k)}{x^k}+\pdv{\Lag }{x^k}\delta x^k+\pdv{\Lag}{\psi^\alpha }\delta_*\psi^\alpha +\pdv{\Lag}{\psi^\alpha}\partial_k\psi^\alpha \delta x^k+\pdv{\Lag}{(\partial_k\psi^\alpha)}\delta_*\partial_k\psi^\alpha +\pdv{\Lag}{(\partial_l\psi^\alpha)}\partial_k\partial_l\psi^\alpha \delta x^k\right]\\
+  &=\int_\R \dd x\left[\Lag \pdv{(\delta x^k)}{x^k}+\pdv{\Lag }{x^k}\delta x^k+\pdv{\Lag}{\psi^\alpha}\partial_l\psi^\alpha \delta x^l+\pdv{\Lag}{(\partial_l\psi^\alpha)}\partial_k\partial_l\psi^\alpha \delta x^k+\pdv{\Lag}{\psi^\alpha }\delta_*\psi^\alpha+\pdv{\Lag}{(\partial_k\psi^\alpha)}\delta_*\partial_k\psi^\alpha\right]\\
+  &=\int_\R \dd x\left[\frac{\D}{\D x^k}(\Lag\delta x^k)+\pdv{\Lag}{\psi^\alpha }\delta_*\psi^\alpha+\pdv{\Lag}{(\partial_k\psi^\alpha)}\delta_*\partial_k\psi^\alpha\right]
+\end{align*}
+Integrando por partes el último término,
+\begin{align}
+  \pdv{\Lag}{(\partial_k\psi^\alpha)}\delta_*\partial_k\psi^\alpha&=\pdv{\Lag}{(\partial_k\psi^\alpha)}\partial_k\delta_*\psi^\alpha\\
+  &=\partial_k\left(\pdv{\Lag}{(\partial_k\psi^\alpha)}\delta_*\psi^\alpha\right)-\partial_k\left(\pdv{\Lag}{(\partial_k\psi^\alpha)}\right)\delta_*\psi^\alpha\\
+  &=\D_k\left(\pdv{\Lag}{(\partial_k\psi^\alpha)}\delta_*\psi^\alpha\right)-\D_k\left(\pdv{\Lag}{(\partial_k\psi^\alpha)}\right)\delta_*\psi^\alpha
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

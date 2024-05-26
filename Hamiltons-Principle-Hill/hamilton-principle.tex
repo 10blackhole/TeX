@@ -1,0 +1,121 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{jheppub} % for details on the use of the package, please see the JINST-author-manual
+\usepackage{lineno}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,physics,cancel,mathtools}
+\usepackage{tcolorbox}
+\usepackage{marginnote,tensor}
+%~~~~~~~~~ Document setup
+% \usepackage[spanish]{babel} % English formatting
+\usepackage[utf8]{inputenc} % Standard encoding
+% \usepackage[a4paper,left=3cm,bottom=3cm]{geometry} % Page formatting
+\usepackage{indentfirst} % Indents the first paragraph
+\usepackage{amsmath} % Maths type package
+\usepackage{bm} % Bold font maths
+\usepackage{graphicx} % Advanced graphics package
+\usepackage[export]{adjustbox} 
+\usepackage{pdflscape} % Make pages landscape
+\usepackage{fancyhdr} % Fancy headers
+% \usepackage[colorlinks=true,citecolor=blue,urlcolor=blue,linkcolor=black]{hyperref} % Link colours
+%\usepackage{natbib} % Bibliography
+% \usepackage{flafter} % Reference any 'float'
+% \usepackage[framemethod=tikz]{mdframed} % Box off stuff
+\usepackage{color} % Colour support
+\usepackage{wrapfig} % Text flowing around figures
+\usepackage{lipsum} % Generates meaningless text
+\usepackage{xcolor}
+%\usepackage{biblatex}
+%\usepackage[backend=bibtex]{biblatex}
+%\addbibresource{bibliography.bib}
+\hypersetup{colorlinks=true, linkcolor=blue}
+
+\newtheorem{ej}{Example}[section]
+\newtheorem{sol}{Solution}[section]
+\newtheorem{dem}{Proof}[section]
+
+%\newcommand{\Lag}{L=L(q_i,\dot{q}_i,t)}
+\newcommand{\Lag}{\mathcal{L}}
+\newcommand{\R}{\mathcal{R}}
+\newcommand{\LLag}{\mathcal{L}(x^k,\psi^\alpha,\partial_k\psi^\alpha)}
+\newcommand{\LLagp}{\mathcal{L}(x'^k,\psi'^\alpha,\partial_k\psi'^\alpha)}
+\newcommand{\D}{\mathcal{D}}
+
+
+
+
+
+% \arxivnumber{1234.56789} % if you have one
+
+\title{\boldmath Principio de Hamilton y teoremas de conservación}
+
+% Collaborations
+
+%% [A] If main author
+%% \collaboration{\includegraphics[height=17mm]{collabroation-logo}\\[6pt]
+%%  XXX collaboration}
+
+%% or
+%% [B] If "on behalf of"
+%% \collaboration[c]{on behalf of XXX collaboration}
+
+
+% Authors
+% The "\note" macro will give a warning: "Ignoring empty anchor...", you can safely ignore it.
+
+%% [A] simple case: 2 authors, same institution
+%% \author[1]{A. Uthor\note{Corresponding author.}}
+%% \author{and A. Nother Author}
+%% \affiliation{Institution,\\Address, Country}
+
+%% or, e.g.
+%% [B] more complex case: 4 authors, 3 institutions, 2 footnotes
+%% \author[a,b]{F. Irst,\note{Now at another university}}
+%% \author[c]{S. Econd,}
+%% \author[a,2]{T. Hird\note{Also at Some University.}}
+%% \author[c,2]{and Fourth}
+%% \affiliation[a]{Institution_1,\\Address, Country}
+%% \affiliation[b]{Institution_2,\\Address, Country}
+%% \affiliation[c]{Institution_3,\\Address, Country}
+
+\author{Borja Diez}
+\affiliation{Universidad Arturo Prat}
+% \affiliation{Another University,\\
+% different-address, Country}
+
+% E-mail addresses: only for the corresponding author
+\emailAdd{borjadiez1014@gmail.com}
+
+\abstract{En este documento almacenaré algunas derivaciones de los cálculos realizados en \cite{RevModPhys.23.253}.}
+
+
+
+
+\begin{document}
+\maketitle
+\flushbottom
+
+\input{integral-variacional.tex}
+\input{varacion-I.tex}
+
+
+
+
+
+% Bibliography
+
+%% [A] Recommended: using JHEP.bst file
+%% \bibliographystyle{JHEP}
+%% \bibliography{biblio.bib}
+
+%% or
+%% [B] Manual formatting (see below)
+%% (i) We suggest to always provide author, title and journal data or doi:
+%% in short all the informations that clearly identify a document.
+%% (ii) please avoid comments such as "For a review'', "For some examples",
+%% "and references therein" or move them in the text. In general, please leave only references in the bibliography and move all
+%% accessory text in footnotes.
+%% (iii) Also, please have only one work for each \bibitem.
+
+\newpage
+\bibliographystyle{JHEP}
+\bibliography{biblio.bib}
+\end{document}

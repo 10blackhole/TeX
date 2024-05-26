@@ -1,0 +1,181 @@
+\section{Problema 1.5}
+\begin{tcolorbox}
+\begin{problema}
+Asumiendo que la presión $P$ es independiente de $V$ cuando es escrita como función de $\m$ y $T$, es decir, $\ln\zgc=PV/\k T$ (lo cual es verdad si el sistema es mucho más grande que el rango de interacción),
+\begin{enumerate}
+	\item Encuentre expresiones para $E/V$ y $Q/V$ en términos de $P,T$ y derivadas parciales de $P$ o $P/T$ con respecto a $\a\equiv-\m/\k T$ y $\b\equiv 1/\k T$. Aquí, asuma que el potencial químico está asociado con el número conservado $Q$.
+	\item Encuentre una expresión para $C_V=\eval{\dv*{E}{T}}_{Q,V}$ en términos de $P/T,E,Q,V$ y derivadas de $P,P/T,E$ y $Q$ con respecto a $\b$ y $\a$.
+	\item Muestre que la densidad de entropía es $s=\eval{{\partial_T P}}_\m $.
+\end{enumerate}
+\end{problema}
+\end{tcolorbox}
+
+\begin{sol}
+\begin{enumerate}
+\
+	\item 
+
+	Dado que 
+	\begin{equation}
+  \ln(\zgc )=\frac{PV}{\k T}
+\end{equation}
+y sabemos que el valor de expectación de la energía en el ensamble gran canónico viene dado por
+\begin{equation}
+  \ev{E}=-\pdv{\b}\ln(\zgc )
+\end{equation}
+tenemos
+\begin{align}
+  \ev{E}&=-\pdv{\b}\left(\frac{PV}{\k T}\right)\\
+  &=-V\pdv{\b}\left(\frac{P}{\k T}\right)
+\end{align}
+\begin{equation}\label{1-5-EV}
+  \implies \boxed{\frac{\ev{E}}{V}=-\pdv{\b}\left(\frac{P}{\k T}\right)}
+\end{equation}
+pero además sabemos que $\b =1/\k T$. Luego, \eqref{1-5-EV} queda
+\begin{equation}
+  \frac{\ev{E}}{V}=-\pdv{\b}\left(P \b \right)
+\end{equation}
+\begin{equation}
+  \implies \boxed{\frac{\ev{E}}{V}=-P}
+\end{equation}
+
+De manera similar, sabemos que el valor de expextación de $Q$ se relaciona con la función partición del ensamble gran canónico mediante
+\begin{equation}
+  \ev{Q}=-\pdv{\a }\ln(\zgc )
+\end{equation}
+así,
+\begin{align}
+  \ev{Q}&=-\pdv{\a}\left(\frac{PV}{\k T}\right)\\
+  &=-V\pdv{\a}\left(\frac{P}{\k T}\right)
+\end{align}
+\begin{equation}\label{1-5-QV}
+  \implies \boxed{\frac{\ev{Q}}{V}=-\pdv{\a}\left(\frac{P}{\k T}\right)}
+\end{equation}
+además,
+\begin{equation}
+  \a=-\frac{\m }{\k T}\implies \dd\a =\frac{\m }{\k T^2}\dd T\implies \pdv{\a}=\frac{\k T^2}{\m }\pdv{T}
+\end{equation}
+Reemplazando en \eqref{1-5-QV},
+\begin{align}
+  \frac{\ev{Q}}{V}&=-\frac{\k T^2}{\m }\pdv{T}\left(\frac{P}{\k T}\right)\\
+  &=\frac{\k T^2}{\m }\frac{P }{\k }\frac{1}{T^2}
+\end{align}
+\begin{equation}
+  \implies\boxed{ \frac{\ev{Q}}{V}=\frac{P}{\m }=-\frac{P}{\a\k T}}
+\end{equation}
+%%%%%%%%%%%%%%
+\item 
+El calor específico a volúmen constante viene dado por
+\begin{equation}
+  C_V=\eval{\dv{E}{T}}_{Q,V}
+\end{equation}
+Notemos que
+\begin{equation}
+  \b=\frac{1}{\k T}\implies \dd\b=-\frac{1}{\k T^2}\dd T\implies \dv{\b}=-\k T^2\dv{T}\implies \dv{T}=-\frac{1}{\k T^2}\dv{\b}
+\end{equation}
+Así, podemos escribir
+\begin{equation}\label{1-5-CV}
+  C_V=-\frac{1}{\k T^2}\eval{\dv{E}{\b }}_{Q,V}
+\end{equation}
+Para poder encontrar $\eval{\pdv*{E}{\b }}_{Q,V}$ notemos que la variación de la energía promedio $\ev{E}$ escrita en función de $\a$ y $\b$ viene dada por
+\begin{equation}\label{1-5-dE}
+  \d E=\pdv{E}{\a }\d \a +\pdv{E}{\b }\d \b 
+\end{equation}
+De manera similar, dado que estamos a $Q$ constante, se tiene que la variación de $Q=0$,
+\begin{equation}
+  \d Q=\pdv{Q}{\a }\d \a +\pdv{Q}{\b }\d \b =0
+\end{equation}
+\begin{equation}
+  \implies \pdv{Q}{\a }\d \a=-\pdv{Q}{\b}\d\b 
+\end{equation}
+podemos despejar $\d\a$ a $Q$ constante,
+\begin{equation}
+  \implies \d\a =-\frac{\pdv*{Q}{\b }}{\pdv*{Q}{\alpha }}\d\b 
+\end{equation}
+Reemplazando en \eqref{1-5-dE},
+\begin{align}
+ \eval{\d E}_{Q,V}&=-\pdv{E}{\a }\frac{\pdv*{Q}{\b }}{\pdv*{Q}{\alpha }}\d\b +\pdv{E}{\b }\d \b \\
+ &=\d\b\left[\pdv{E}{\b }-\pdv{E}{\a }\frac{\pdv*{Q}{\b }}{\pdv*{Q}{\alpha }}\right]
+\end{align}
+\begin{equation}
+  \implies \eval{\dv{E}{\b }}_{Q,V}=\pdv{E}{\b }-\pdv{E}{\a }\frac{\pdv*{Q}{\b }}{\pdv*{Q}{\alpha }}
+\end{equation}
+
+Reemplazando en \eqref{1-5-CV},
+\begin{align}
+   C_V&=-\frac{1}{\k T^2}\eval{\dv{E}{\b }}_{Q,V}\\
+   &=-\frac{1}{\k T^2}\left(\pdv{E}{\b }-\pdv{E}{\a }\frac{\pdv*{Q}{\b }}{\pdv*{Q}{\alpha }}\right)
+\end{align}
+pero,
+\begin{equation}
+  \b=\frac{1}{\k T}\implies \k \b^2=\frac{1}{\k T^2}
+\end{equation}
+Luego, $C_V$ escrito en términos de derivadas de $E$ y $Q$ con respecto a $\a$ y $\b$ queda,
+\begin{equation}
+ \boxed{ C_V=-\k\b^2\left(\pdv{E}{\b }-\pdv{E}{\a }\frac{\pdv*{Q}{\b }}{\pdv*{Q}{\alpha }}\right)}
+\end{equation}
+
+
+\item 
+De la primera y la segunda ley de la termodinámica combinadas, se tiene
+\begin{equation}
+  \dd E=T\dd S-P\dd V+\m \dd N
+\end{equation}
+Podemos \textit{integrar por partes} a los diferenciales del lado derecho,
+\begin{align}
+  \dd E&=\dd (TS)-S\dd T-\dd(PV)+V\dd P+\dd(\m N)-N\dd\m
+\end{align}
+\begin{equation}
+  \implies \dd E-\dd (TS)+\dd(PV)-\dd (\m N)=-S\dd T+V\dd P-N\dd\m 
+\end{equation}
+\begin{equation}
+  \implies \dd (E-TS+PV-\m N)=-S\dd T+V\dd P-N\dd\m 
+\end{equation}
+Pero en clases vimos que la energía libre de Gibbs viene dada por
+\begin{equation}
+  G=\m N=E-TS+PV\implies E-TS+PV-\m N=0
+\end{equation}
+Así,
+\begin{align}
+  0&=-S\dd T+V\dd P-N\dd\m 
+\end{align}
+considerando $\m$ constante,
+\begin{equation}
+  S\dd T=V\dd P\implies \frac{S}{V}=\eval{\pdv{P}{T}}_\m 
+\end{equation}
+Finalmente, la densidad de entropía viene dada por
+\begin{equation}
+  \boxed{s=\eval{\pdv{P}{T}}_\m }
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+\end{sol}

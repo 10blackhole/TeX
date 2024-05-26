@@ -1,0 +1,59 @@
+\section{Ecuaciones de movimiento}
+Calculemos las ecuaciones de movimiento asociadas los invariantes usando que
+\begin{equation}
+  \delta R^{ab}=\D \d \omega^{a}
+\end{equation}
+y
+\begin{equation}
+  \d T^{a}=\D\d e^{a}+\d \omega^{a}_{~b}
+\end{equation}
+
+%Las variaciones de los términos con respecto al vielbein son
+%\begin{align}
+%  \d_e(\eabc R^{ab}e^c)&=\eabc R^{ab}\d e^c\\
+%    \d_e(\eabc e^{a}e^be^c)&=3\eabc e^{a}e^b\delta e^c\\
+%    \d_e(\eabc \tilde{e}^{a}\tilde{e}^b\tilde{e}^c)&=3\phi^6\eabc e^{a}e^b\delta e^c
+%\end{align}
+%\begin{equation}
+%  \d_e(\tilde{T}^{a}\tilde{e}_a)=\phi^4(\D\d e^{a}e_a+T^{a}\d e_a)
+%\end{equation}
+
+Consideremos el siguiente Lagrangeano
+\begin{equation}
+  L=\a_0\o_{a}\left(\dd\o^{a}+\frac{2}{3}\epsilon^{abc}\o_b\o_c\right)+\a_1T^{a}e_a-\a_2\phi^4T^{a}e_a
+\end{equation}
+Variando con respecto al vielbein, tenemos
+\begin{align}
+  \d_eL&=(\a_1-\a_2\f^4)(\D\d e^{a}e_a+T^{a}\d e_a)
+\end{align}
+Integrando por partes,\begin{align}
+  \dd\left[(\a_1-\a_2\f^4)\d e^{a}e_a\right]&=-4\a_2\f^3\dd\f \d e^{a}e_a+(\a_1-\a_2\f^4)\D\d e^{a}e_a-(\a_1-\a_2\f^4)\d e^{a}e_a
+\end{align}
+Luego
+\begin{align}
+  \d_eL&=4\a_2\f^3\dd\f \d e^{a}e_a+(\a_1-\a_2\f^4)\d e^{a}T_a+(\a_1-\a_2\f^4)T^{a}\d e_a\\
+  &=-4\a_2\f^3\dd\f e^{a}\d e_a+2(\a_1-\a_2\f^4)T^{a}\d e_a
+\end{align}
+\begin{equation}
+ \boxed{ \frac{\d L}{\d e_a}=2(\a_1-\a_2\f^4)T^{a}-4\a_2\f^3\dd\f e^{a}=0}
+\end{equation}
+De donde se puede despejar algebraícamente la torsión en términos de $\f$,
+\begin{equation}\label{T}
+ \boxed{ T^{a}=\frac{2\a_2\f^3\dd\f e^{a}}{(\a_1-\a_2\f^4)}}
+\end{equation}
+Variando con respecto a $\f$ se tiene
+\begin{equation}
+  \boxed{\frac{\d L}{\d \f }=-4\a_2\f^3 T^{a}e_a=0}
+\end{equation}
+esta ecuación se satisface automáticamente de \eqref{T}.
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,714 @@
+\section{Conexión de Lorentz}
+La parte sin torsión de la conexión se obtiene como sigue. Dado que $\dd e^{a}$ es una 2-forma, deben existir coeficientes $\Omega^{a}_{~ bc}(x)$ tales que podamos escribir
+\begin{equation}\label{izau}
+  \dd e^{a}=-\frac{1}{2}\Omega^{a}_{~bc} e^{b}\wedge e^{c}
+\end{equation}
+en donde claramente $\Omega^{a}_{~bc}$ es antisimétrico en los índices contraídos con los vielbeins
+\begin{equation}\label{Omega-anti}
+  \Omega^{a}_{~bc}=-\Omega^{a}_{~cb}
+\end{equation}
+La condición de torsión nula
+\begin{equation}
+  T^{a}=\dd e^{a}+\omega^{a}_{~b}\wedge e^b=0
+\end{equation}
+puede reescribirse como
+%TODO Cambiar
+\begin{align}
+  \frac{1}{2}\Omega^{a}_{~bc}e^b\wedge e^c+\omega^{a}_{~b}\wedge e^b&=0\\
+  \frac{1}{2}\Omega^{a}_{~bc}e^b\wedge e^c+\omega^{a}_{~bc}e^c\wedge e^b&=0\\
+  \frac{1}{2}\Omega^{a}_{~bc}e^b\wedge e^c-\omega^{a}_{~bc}e^b\wedge e^c&=0
+\end{align}
+es decir,
+\begin{equation}
+  \omega^{a}_{~bc}e^b\wedge e^c=\frac{1}{2}\Omega^{a}_{~bc}e^b\wedge e^c
+\end{equation}
+
+Usando \eqref{Omega-anti}, y expandiendo el producto cuña, se tiene
+\begin{align}
+  \frac{1}{2}\omega^{a}_{~bc}(e^b\otimes e^c-e^c\otimes e^b)&=\frac{1}{4}\Omega^{a}_{~bc}(e^b\otimes e^c-e^c\otimes e^b)\\
+  (\omega^{a}_{~bc}-\omega^{a}_{~cb})e^b\otimes e^c&=\Omega^{a}_{~bc}e^b\wedge e^c
+\end{align}
+luego
+\begin{equation}
+  \omega_{abc}-\omega_{acb}=\Omega_{abc}
+\end{equation}
+Considerando permutaciones cíclicas de esta última ecuación,
+\begin{align}
+  \omega_{abc}-\omega_{acb}&=\Omega_{abc}\\
+  \omega_{bca}-\omega_{bac}&=\Omega_{bca}\\
+  \omega_{cab}-\omega_{cba}&=\Omega_{cab}
+\end{align}
+Sumando estas 3 ecuaciones en la forma $(++-)$, obtenemos
+\begin{align}
+   \omega_{abc}-\omega_{acb}+\omega_{bca}-\omega_{bac}-\omega_{cab}+\omega_{cba}&=\Omega_{abc}+\Omega_{bca}-\Omega_{cab}
+\end{align}
+Usando el hecho de que escritas de esta manera, $\omega_{abc}$ son antisimétricas en dos primeros 2 índices, i.e, $\omega_{abc}=-\omega_{bac}$, se tiene
+\begin{equation}
+  2\omega_{abc}=\Omega_{abc}+\Omega_{bca}-\Omega_{cab}
+\end{equation}
+Despejando,
+\begin{equation}
+  \omega_{abc}=\frac{1}{2}(\Omega_{abc}+\Omega_{bca}-\Omega_{cab})
+\end{equation}
+Finalmente, se tiene
+\begin{equation}\label{izau2}
+  \boxed{\omega_{ab}=\frac{1}{2}(\C_{bac}+\C_{acb}-\C_{cba})e^c}
+\end{equation}
+
+\subsection{Curvatura de Lorentz}
+Notemos que al separar la conexión como ${\omega}^{ab}=\oo\omega^{ab}+\kappa^{ab}$ induce tambien una separación en la curvatura. En efecto
+\begin{align}
+  R^{ab}&=\dd\omega^{ab}+\omega^{a}_{~c}\wedge\omega^{cb}\\
+  &=\dd (\oo\omega^{ab}+\kappa^{ab})+(\oo\omega^{a}_{~c}+\kappa^{a}_{~c})\wedge (\oo\omega^{cb}+\kappa^{cb})\\
+  &=\dd \oo\omega^{ab}+\dd \kappa^{ab}+\oo\omega^{a}_{~c}\wedge \oo\omega^{cb}+\oo\omega^{a}_{~c}\wedge \kappa^{cb}+ \kappa^{a}_{~c}\wedge \oo\omega^{cb}+\kappa^{a}_{~c}\wedge \kappa^{cb}\\
+  &=\dd \oo\omega^{ab}+\oo\omega^{a}_{~c}\wedge \oo\omega^{cb}+\dd \kappa^{ab}+\oo\omega^{a}_{~c}\wedge \kappa^{cb}+\oo{\omega}^b_{~c}\wedge \kappa^{ac}+\kappa^{a}_{~c}\wedge \kappa^{cb}\\
+  &=\oo{R}^{ab}+\oo{\D}\kappa^{ab}+\kappa^{a}_{~c}\wedge \kappa^{cb}
+\end{align}
+Así
+\begin{equation}\label{R-decomposed}
+  \boxed{R^{ab}=\oo{R}^{ab}+\oo{\D}\kappa^{ab}+\kappa^{a}_{~c}\wedge \kappa^{cb}}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Transformación conforme}
+Consideremos una transformación conforme de la forma
+\begin{equation}
+  g_{\mu\nu}\to \bar{g}_{\mu\nu}=\mathrm{e}^{2\sigma(x)}g_{\mu\nu}
+\end{equation}
+donde $\sigma(x)$ es una función arbitraria de las coordenadas del espacio-tiempo. De aquí es fácil ver que bajo esta transformación, el vielbein transforma como
+\begin{equation}
+  e^{a}\to \bar{e}^{a}=\e^{\sigma(x)}e^{a}
+\end{equation}
+De \eqref{izau} podemos escribir\begin{equation}
+	\dd e^{a}=\frac{1}{2}\mathcal{C}^{a}_{~bc} e^{b}\wedge e^{c}
+\end{equation}
+donde los coeficientes $\C_{abc}$ son los parámetros de estructura y se relacionan con la parte sin torsión de la conexión de Lorentz según \eqref{izau2}, i.e.,
+\begin{equation}
+ 	\omega_{ab}=\frac{1}{2}(\C_{bac}+\C_{acb}-\C_{cba})e^c
+\end{equation}
+
+Se define el operador $\I_a:\Omega^p\to \Omega^{p-1}$ según \cite{Izaurieta:2020kuy}
+\begin{equation}
+  \I _a=-*(e_a\wedge *
+\end{equation}
+Calculemos $\dd\bar{e}^{a}$,
+\begin{align}
+  \dd \bar{e}^{a}&=\dd (\e ^\sigma e^{a})\\
+  &=\e ^\sigma (\dd \sigma e^{a}+\dd e^{a}) \label{de}
+\end{align}
+Notemos que podemos escribir la 1-forma $\dd\sigma$ como
+\begin{equation}
+  \dd\sigma = \xi_a e^{a},\qquad \text{donde } \xi_a=\I_a\dd\sigma
+\end{equation}
+En efecto, si escribimos $\dd\sigma=\alpha_f e^{f}$, se tiene
+\begin{align}
+  \I_a\dd\sigma&=-*(e_a\wedge *\dd\sigma)\\
+  &=-*\left(e_a\wedge \alpha_f\frac{1}{3!}\epsilon^{fbcd}e^b\wedge e^c\wedge e^d\right)\\
+  &=-*\left(\alpha_f\frac{1}{3!}\epsilon^{fbcd}e^{a}\wedge e^b\wedge e^c\wedge e^d\right)\\
+  &=-\alpha_f\frac{1}{3!}\epsilon^{fbcd}\epsilon_{abcd}\\
+  &=\alpha_f\frac{1}{3!}3!\\
+  &=\alpha_f
+\end{align}
+luego, $\dd \sigma = \I_a\dd \sigma e^{a}=\xi_a e^{a}$. Reemplazando en \eqref{de},
+\begin{align}
+  \dd\bar{e}^{a}&=\e^\sigma (\dd\sigma e^{a}+\dd e^{a})\\
+  &=\e^\sigma\left(\xi_me^m\wedge e^{a}-\frac{1}{2}\C^{a}_{~bc}e^b\wedge e^c\right)\\
+  &=e^{-\sigma}\left(\xi_m\bar{e}^m\wedge \bar{e}^{a}-\frac{1}{2}\C^{a}_{~bc}\bar{e}^b\wedge\bar{e}^c\right)\\
+  &=\e^{-\sigma}\left(\xi_m\delta^m_{[b}\delta^{a}_{c]}-\frac{1}{2}\C^{a}_{~bc}\right)\bar{e}^b\wedge \bar{e}^c\\
+  &=\e^{-\sigma}\left(\frac{1}{2}\xi_m\delta^{ma}_{bc}-\frac{1}{2}\C^{a}_{~bc}\right)\bar{e}^b\wedge \bar{e}^c\\
+  &=\e^{-\sigma}\left(-\frac{1}{2}\xi_m\delta^{am}_{bc}-\frac{1}{2}\C^{a}_{~bc}\right)\bar{e}^b\wedge \bar{e}^c\\
+  &=-\frac{1}{2}\bar{\C}^{a}_{~bc}\bar{e}^b\wedge \bar{e}^c
+\end{align}
+Así,
+\begin{equation}
+  \bar{\C}^{a}_{~bc}=\e^{-\sigma} \left(\C^{a}_{~bc}+\xi_m\delta^{am}_{bc}\right)
+\end{equation}
+Notemos que
+\begin{align}
+  \bar{\C}_{abc}&=\e^{-\sigma}\left(\C_{abc}+\xi_m\eta_{ab}\delta^m_c-\xi_m\delta^m_b\eta_{ac}\right)\\
+  &=\e^{-\sigma}(\C_{abc}+\xi_c\eta_{ab}-\xi_b\eta_{ac})
+\end{align}
+De manera que
+\begin{subequations}\label{bar-C}
+\begin{align}
+  \bar{\C}_{bac}&=\e^{-\sigma}(\C_{bac}+\xi_c\eta_{ba}-\xi_a\eta_{bc})\\
+  \bar{\C}_{acb}&=\e^{-\sigma}(\C_{acb}+\xi_a\eta_{cb}-\xi_b\eta_{ca})\\
+  \bar{\C}_{cba}&=\e^{-\sigma}(\C_{cba}+\xi_a\eta_{cb}-\xi_b\eta_{ca})
+\end{align}
+\end{subequations}
+De \eqref{izau2} es fácil ver que
+\begin{equation}\label{bar-omega}
+	\bar{\omega}_{ab}=\frac{1}{2}(\bar{\C}_{bac}+\bar{\C}_{acb}-\bar{\C}_{cba})\bar{e}^c
+\end{equation}
+Reemplazando \eqref{bar-C} en \eqref{bar-omega} se tiene
+\begin{align}
+  \bar{\omega}_{ab}&=\frac{1}{2}\e^{-\sigma}(\C_{bac}+\xi_c\eta_{ba}-\xi_a\eta_{bc}+\C_{acb}+\xi_a\eta_{cb}-\xi_b\eta_{ca}-\C_{cba}-\xi_a\eta_{cb}+\xi_b\eta_{ca})\bar{e}^c\\
+  &=\frac{1}{2}\e^c(\C_{bac}+\C_{acb}-\C_{cba})+\frac{1}{2}e^c(\xi_c\eta_{ba}-\xi_a\eta_{bc}+\xi_a\eta_{cb}-\xi_b\eta_{ca}-\xi_a\eta_{cb}+\xi_b\eta_{ca})\\
+  &=\omega_{ab}+\frac{1}{2}(\cancel{\xi_c\eta_{ba}e^c}-\xi_ae_b+\xi_be_a-\cancel{\xi_c\eta_{ab}e^c}-\xi_ae_b+\xi_be_a)\\
+  &=\omega_{ab}+e_a\xi_b-e_b\xi_a
+\end{align}
+Así,
+\begin{equation}\label{bar-omega-1}
+  \bar{\omega}_{ab}=\omega_{ab}+\theta_{ab}
+\end{equation}
+
+donde hemos definido $\theta_{ab}=e_a\xi_b-e_b\xi_a$.
+
+Una importante pregunta que concierne a las transformaciones conforme en el formalismo de primer orden está relacionada con el tipo de transformación de la parte sin torsión de la conexión. 
+
+Primero veamos el el caso \textbf{canónico} en el cual la estructura torsional es invariante bajo las transformaciones conforme, es decir,
+\begin{equation}
+  \kappa_{ab}\to \bar{\kappa}_{ab}=\kappa_{ab}
+\end{equation}
+Esto implica que la conexión de spin transforma según \eqref{bar-omega-1},
+\begin{equation}
+  \bar{\omega}_{ab}=\omega_{ab}+\theta_{ab}
+\end{equation}
+
+Para ver cómo transforma la torsión en este caso, usamos el hecho que
+\begin{equation}
+  T^{a}=\kappa^{a}_{~b}\wedge e^b
+\end{equation}
+luego,
+\begin{align}
+  \bar{T}^{a}&=\bar{\kappa}^{a}_{~b}\wedge\bar{e}^b\\
+  &=\kappa^{a}_{~b}\wedge (\e^\sigma e^b)\\
+  &=\e^\sigma T^{a}
+\end{align}
+es decir,
+\begin{equation}
+ \boxed{\bar{T}^{a} =\e^\sigma T^{a}}
+\end{equation}
+
+Veamos como transforma la curvatura $R^{ab}$. De \eqref{R-decomposed},
+\begin{align}
+	\bar{R}^{ab}&=\oo{\bar{R}}^{ab}+\oo{\bar{\D}}\bar{\kappa}^{ab}+\bar{\kappa}^{a}_{~c}\wedge \bar{\kappa}^{cb}\\
+	&=\dd\oo{\bar{\omega}}^{ab}+\oo{\bar{\omega}}^{a}_{~c}\wedge\oo{\bar{\omega}}^{cb}+\dd\bar{\kappa}^{ab}+\oo{\bar{\omega}}^{a}_{~c}\wedge \bar{\kappa}^{cb}+\oo{\bar{\omega}}^{b}_{~c}\wedge \bar{\kappa}^{ac}+\bar{\kappa}^{a}_{~c}\wedge\bar{\kappa}^{cb}\\
+	&=\dd(\oomega^{ab}+\theta^{ab})+(\oomega^{a}_{~c}+\theta^{a}_{~c})\wedge (\oomega^{cb}+\theta^{cb})+\dd \kappa^{ab}+(\oomega^{a}_{~c}+\theta^{a}_{~c})\wedge \kappa^{cb}\\&~~~+(\oomega^b_{~c}+\theta^b_{~c})\wedge \kappa^{ac}+\kappa^{a}_{~c}\wedge\kappa^{cb}\\
+	&=\dd\oomega^{ab}+\dd\theta^{ab}+\oomega^{a}_{~c}\wedge\oomega^{cb}+\oomega^{a}_{~c}\wedge \theta^{cb}+\theta^{a}_{~c}\wedge \oomega^{ab}+\theta^{a}_{~c}\wedge \theta^{cb}+\dd\kappa^{ab}\\&~~~~ \oomega^{a}_{~c}\wedge\kappa^{cb}+\theta^{a}_{~c}\wedge\kappa^{cb}+\oomega^b_{~c}\wedge\kappa^{ac}+\theta^b_{~c}\wedge\kappa^{ac}+\kappa^{a}_{^c}\wedge\kappa^{cb}\\
+	&=\dd\oomega^{ab}+\oomega^{a}_{~c}\wedge\oomega^{cb}+\dd\kappa^{ab}+\oomega^{a}_{~c}\wedge\kappa^{cb}+\oomega^b_{~c}\wedge\kappa^{ac}+\kappa^{a}_{~c}\wedge\kappa^{cb}\\&~~~~
+	+\dd\theta^{ab}+\oomega^{a}_{~c}\wedge \theta^{cb}+\kappa^{a}_{~c}\wedge \theta^{cb}+\oomega^b_{~c}\wedge\theta^{ac}+\kappa^b_{~c}\wedge\theta^{ac}+\theta^{a}_{~c}\wedge\theta^{cb}\\
+	&=R^{ab}+\omega^{a}_{~c}\wedge \theta^{cb}+\omega^b_{~c}\wedge\theta^{ac}\\
+	&=R^{ab}+\D\theta^{ab}+\theta^{a}_{~c}\wedge\theta^{cb}
+\end{align}
+es decir,
+\begin{equation}
+  \boxed{\bar{R}^{ab}=R^{ab}+\D\theta^{ab}+\theta^{a}_{~c}\wedge\theta^{cb}}
+\end{equation}
+
+Por otro lado tenemos el caso \textbf{exótico}, donde la conexión de spin queda invariante bajo las transformaciones conformes, 
+\begin{equation}
+  \omega_{ab}\to \bar{\omega}_{ab}=\omega_{ab}
+\end{equation}
+Veamos como transforma la contorsión $\kappa_{ab}$,
+\begin{align}
+  \bar{\omega}_{ab}&=\omega_{ab}\\
+  \oo{\bar{\omega}}_{ab}+\bar{\kappa}_{ab}&=\oomega_{ab}+\kappa_{ab}\\
+  \oomega_{ab}+\theta_{ab}+\bar{\kappa}_{ab}&=\oomega_{ab}+\kappa_{ab}\\
+  \theta_{ab}+\bar{\kappa}_{ab}&=\kappa_{ab}
+\end{align}
+luego,
+\begin{equation}
+\boxed{\bar{\kappa}_{ab}=\kappa_{ab}-\theta_{ab}}
+\end{equation}
+Veamos como transforma la curvatura en este caso
+\begin{align*}
+  \bar{R}^{ab}&=\oo{\bar{R}}^{ab}+\oo{\bar{\D}}\bar{\kappa}^{ab}+\bar{\kappa}^{a}_{~c}\wedge \bar{\kappa}^{cb}\\
+  &=\dd\oo{\bar{\omega}}^{ab}+\oo{\bar{\omega}}^{a}_{~c}\wedge\oo{\bar{\omega}}^{cb}+\dd\bar{\kappa}^{ab}+\oo{\bar{\omega}}^{a}_{~c}\wedge \bar{\kappa}^{cb}+\oo{\bar{\omega}}^{b}_{~c}\wedge \bar{\kappa}^{ac}+\bar{\kappa}^{a}_{~c}\wedge\bar{\kappa}^{cb}\\
+  &=\dd\oo{\bar{\omega}}^{ab}+\cancel{\dd\theta^{ab}}+(\oomega^{a}_{~c}+\theta^{a}_{~c})\wedge (\oomega^{cb}+\theta^{cb})+\dd\kappa^{a}-\cancel{\dd\theta^{ab}}\\&
+  ~~~~+(\oomega^{a}_{~c}+\theta^{a}_{~c})\wedge (\kappa^{cb}-\theta^{cb})+(\oomega^b_{~c}+\theta^b_{~c})\wedge (\kappa^{ac}-\theta^{ac})+(\kappa^{a}_{~c}-\theta^{a}_{~c})\wedge (\kappa^{cb}-\theta^{cb})\\
+  &=\dd\oomega^{ab}+\oomega^{a}_{~c}\wedge\oomega^{cb}+\oomega^{a}_{~c}\wedge\theta^{cb}+\theta^{a}_{~c}\wedge\oomega^{cb}+\theta^{a}_{~c}\wedge\theta^{cb}+\dd\kappa^{ab}+\oomega^{a}_{~c}\wedge\kappa^{cb}-\oomega^{a}_{~c}\wedge\theta^{cb}\\
+  &~~~~+\theta^{a}_{~c}\wedge\kappa^{cb}-\theta^{a}_{~c}\wedge\theta^{cb}+\oomega^b_{~c}\wedge\kappa^{ac}-\oomega^b_{~c}\wedge\theta^{ac}+\theta^b_{~c}\wedge\kappa^{ac}-\theta^b_{~c}\wedge\theta^{ac}+\kappa^{a}_{~c}\wedge\kappa^{cb}\\
+  &~~~-\kappa^{a}_{~c}\wedge\theta^{cb}-\theta^{a}_{~c}\wedge \kappa^{cb}+\theta^{a}_{~c}\wedge\theta^{cb}\\
+  &=\dd\oomega^{ab}+\oomega^{a}_{~c}\wedge \oomega^{cb}+\dd\kappa^{ab}+\oomega^{a}_{~c}\wedge\kappa^{cb}+\oomega^b_{~c}\wedge\kappa^{ac}+\kappa^{a}_{~c}\wedge\kappa^{cb}\\
+  &=R^{ab}
+\end{align*}
+donde es fácil ver que los demás términos se cancelan entre sí. Finalmente
+\begin{equation}
+   \boxed{\bar{R}^{ab}=R^{ab}}
+\end{equation}
+
+
+Veamos ahora como transforma la torsión,
+\begin{equation}\label{theta e}
+\begin{split}
+  \bar{T}^{a}&=\bar{\kappa}^{a}_b\wedge\bar{e}^b\\
+  &=(\kappa^{a}_{~b}-\theta^{a}_{~b})\wedge\e^\sigma e^b\\
+  &=\e^\sigma (\kappa^{a}_{~b}-\theta^{a}_{~b})\wedge e^b\\
+  &=\e^\sigma (\kappa^{a}_{~b}\wedge e^b-\theta^{a}_{~b}\wedge e^b)\\
+  &=\e^\sigma (T^{a}-\theta^{a}_{~b}\wedge e^b)
+\end{split}
+\end{equation}
+Notemos que
+\begin{equation}\label{theta e2}
+\begin{split}
+  \theta^{a}_{~b}\wedge e^b&=(e^{a}\xi_b-e_b\xi^{a})\wedge e^b\\
+  &=e^{a}\xi_b\wedge e^b\\
+  &=e^{a}\wedge\dd\sigma
+\end{split}
+\end{equation}
+Luego,
+\begin{equation}
+   \boxed{\bar{T}^{a}=e^\sigma (T^{a}-e^{a}\wedge\dd\sigma)}
+\end{equation}
+
+Sin embargo, podemos considerar un rango más amplio de transformaciones interpolando entre ambos casos. Definimos el parámetro real $\lambda\in \mathbb{R}$, de manera que
+\begin{subequations}\label{lambda}
+\begin{align}
+  \bar{e}^{a}&=\e ^\sigma e^{a}\label{e lambda}\\
+  \bar{\omega}^{ab}&=\omega^{ab}+\lambda\theta^{ab}\label{omega lambda}\\
+  \bar{\kappa}^{ab}&=\kappa^{ab}+(\lambda-1)\theta^{ab}\label{kappa lambda}
+\end{align}
+\end{subequations}
+así, el límite $\lambda=1$ corresponde al caso canónico y $\lambda=0$ al exótico. Veamos como queda la torsión y la curvatura bajo las transformaciones \eqref{lambda}. Para la torsión tenemos
+\begin{align}
+  \bar{T}^{a}&=\bar{\kappa}^{a}_{~b}\wedge\bar{e}^b\\
+  &=\e^\sigma\left[\kappa^{a}_{~b}\wedge e^b +(\lambda-1)\theta^{a}_{~b}\wedge e^b\right]\\
+  &=\e^\sigma\left[T^{a}+(\lambda-1)e^{a}\wedge \dd\sigma\right]
+\end{align}
+donde para pasar a la última línea se usó \eqref{theta e}. Expandiendo a primer orden la exponencial, tenemos
+\begin{align}
+  \bar{T}^{a}&=T^{a}+(\lambda-1)e^{a}\wedge \dd\sigma+\sigma T^{a}+\sigma (\lambda-1)e^{a}\wedge \dd\sigma
+\end{align}
+luego, la transformación infinitesimal de la torsión es
+\begin{equation}
+  \boxed{\delta T^{a}=\sigma T^{a}+(\lambda-1)e^{a}\wedge\dd\sigma}
+\end{equation}
+ya que el último término es de segundo orden en $\sigma$.
+
+Veamos ahora cómo queda la curvatura bajo \eqref{lambda},
+\begin{align*}
+  \bar{R}^{ab}&=\oo{\bar{R}}^{ab}+\oo{\bar{\D}}\bar{\kappa}^{ab}+\bar{\kappa}^{a}_{~c}\wedge \bar{\kappa}^{cb}\\
+  &=\dd\oo{\bar{\omega}}^{ab}+\oo{\bar{\omega}}^{a}_{~c}\wedge\oo{\bar{\omega}}^{cb}+\dd\bar{\kappa}^{ab}+\oo{\bar{\omega}}^{a}_{~c}\wedge \bar{\kappa}^{cb}+\oo{\bar{\omega}}^{b}_{~c}\wedge \bar{\kappa}^{ac}+\bar{\kappa}^{a}_{~c}\wedge\bar{\kappa}^{cb}\\
+  &=\dd\oomega^{ab}+\dd\theta^{ab}+\oomega^{a}_{~c}\wedge \oomega^{cb}+\oomega^{a}_{~c}\wedge \theta^{cb}+\theta^{a}_{~c}\wedge \oomega^{cb}+\theta^{a}_{~c}\wedge \theta^{cb}+\dd\kappa^{ab}+(\lambda-1)\dd\theta^{ab}+\oomega^{a}_{~c}\wedge\kappa^{cb}\\&~~~~+(\lambda-1)\oomega^{a}_{~c}\wedge\theta^{cb}+\theta^{a}_{~c}\wedge\kappa^{cb}+(\lambda-1)\theta^{a}_{~c}\wedge\theta^{cb}+\oomega^b_{~c}\wedge\kappa^{ac}+(\lambda-1)\oomega^b_{~c}\wedge\theta^{ac}+\theta^c_{~c}\wedge\kappa^{ac}\\
+  &~~~~+(\lambda-1)\theta^b_{~c}\wedge\theta^{ac}+\kappa^{a}_{~c}\wedge\kappa^{cb}+(\lambda-1)\kappa^{a}_{~c}\wedge\theta^{cb}+(\lambda-1)\theta^{a}_{~c}\wedge\kappa^{cb}+(\lambda-1)^2\theta^{a}_{~c}\wedge\theta^{cb}\\
+  &=R^{ab}+\D\theta^{ab}+(\lambda-1)\D\theta^{ab}+(\lambda^2-2\lambda+1)\theta^{a}_{~c}\wedge\theta^{cb}+(2\lambda-1)\theta^{a}_{~c}\wedge\theta^{cb}\\
+  &=R^{ab}+\lambda\D\theta^{ab}+\lambda^2\theta^{a}_{~c}\wedge\theta^{cb}
+ \end{align*}
+ donde se usó \eqref{bar-omega-1}. Así
+ \begin{equation}
+  \boxed{\delta R^{ab}=\lambda\D\theta^{ab}++\lambda^2\theta^{a}_{~c}\wedge\theta^{cb}}
+\end{equation}
+ya que el último término es de segundo orden en $\sigma$.
+
+Además, el la transformación del campo escalar tal que sea invariante conforme en $d$-dimensones es \cite{Martinez:1996gn}
+\begin{equation}
+  \phi\to \bar{\phi}=\exp\left[\sigma\left(\frac{2-d}{2}\right)\right]\phi
+\end{equation}
+
+
+En resúmen, tenemos
+\begin{tcolorbox}
+\begin{subequations}\label{infini}
+\begin{align}
+    \delta e^{a}&=\sigma e^{a}\\
+    \delta \phi&=\left(\frac{2-d}{2}\right)\sigma\phi\\
+    \delta\omega^{a}&=\lambda \theta^{ab}\\
+    \delta R^{ab}&=\lambda D\theta^{ab}\\
+    \delta T^{a}&=\sigma T^{a}+(\lambda-1)e^{a}\wedge\dd\sigma
+\end{align}
+\end{subequations}
+\end{tcolorbox}
+
+
+\subsection{Campos auxiliares}
+Definimos los siguientes campos auxiliares
+\begin{align}
+    \Tilde{e}^{a}&=\phi^\frac{2}{d-2} e^{a}\\
+    \Tilde{\omega}^{ab}&=\omega^{ab}+\lambda\Sigma ^{ab}\\
+    \Tilde{\kappa}^{ab}&=\kappa^{ab}+(\lambda-1)\Sigma ^{ab}
+\end{align}
+donde 
+\begin{equation}
+  \Sigma^{ab}=\frac{2}{(d-2)}\frac{1}{\phi}\chi^{ab}
+\end{equation}
+y
+\begin{equation}
+  \chi^{ab}\equiv e^{a}z^b-z^{a}e^b,\qquad z^{a}=\I^{a}\dd\phi
+\end{equation}
+
+
+
+Veamos cómo es su variacion infinitesimal bajo transformaciones conformes infinitesimales usando \eqref{infini}. Para $\tilde{e}^{a}$, tenemos
+\begin{align}
+  \delta \tilde{e}^{a}&=\frac{2}{d-2}\phi^\frac{4-d}{d-2}\left(\frac{2-d}{2}\right)\sigma\phi e^{a}+\phi^\frac{2}{d-2}\sigma e^{a}\\
+  &=-\phi^\frac{2}{d-2}\sigma e^{a}+\phi^\frac{2}{d-2}\sigma e^{a}\\
+  &=0
+\end{align}
+Luego, $\tilde{e}^{a}$ es invariante conforme.
+
+Veamos ahora cómo varia $\tilde{\omega}^{ab}$,
+\begin{align}
+  \delta\tilde{\omega}^{ab}&=\delta \omega^{ab}+\lambda\delta\Sigma^{ab}\\
+  &=\lambda\theta^{ab}+\lambda\delta\Sigma^{ab}\label{d omega}
+\end{align}
+
+Calculemos $\delta\Sigma^{ab}$,
+\begin{align}
+  \delta\Sigma^{ab}&=-\frac{2}{(d-2)}\frac{1}{\phi^2}\delta\phi \chi^{ab}+\frac{2}{(d-2)}\frac{1}{\phi}\delta\chi^{ab}\\
+  &=-\frac{2}{(d-2)}\frac{1}{\phi^2}\left(\frac{2-d}{d}\right)\sigma\phi\chi^{ab}+\frac{2}{(d-2)}\frac{1}{\phi}\delta\chi^{ab}\\
+  &=\frac{\sigma}{\phi}\chi^{ab}+\frac{2}{(d-2)}\frac{1}{\phi}\delta\chi^{ab}\label{d sigma}
+\end{align}
+
+Calculemos $\delta\chi^{ab}$,
+\begin{align}
+  \delta\chi^{ab}&=\delta e^{a}z^b+e^{a}\delta z^b-\delta z^{a}e^b-z^{a}\delta e^b\\
+  &=\sigma (e^{a}z^b-z^{a}e^b)+e^{a}\delta z^b-\delta z^{a}e^b\\
+  &=\sigma\chi^{ab}+e^{a}\delta z^b-\delta z^{a}e^b \label{delta chi}
+\end{align}
+Calculemos $\delta z^{a}$. Para ello, notemos que (\textcolor{blue}{Por demostrar!})
+\begin{equation}
+  \delta_e z^{a}=-\I ^n(\delta e^{a})z_n
+\end{equation}
+luego,
+\begin{align}
+  \delta z^{a}&=\delta_a z^{a}+\delta_\phi z^{a}\\
+  &=-\I ^n(\delta e^{a})z_n+\I^{a}\dd (\delta \phi)\\
+  &=-\I^n (\sigma e^{a})z_n+\left(\frac{2-d}{2}\right)\I^{a}\dd (\sigma \phi)\\
+  &=-\sigma \I^n (e^{a})z_n+\left(\frac{2-d}{2}\right)(\phi\dd\sigma+\sigma\dd\phi)\\
+  &=-\sigma \eta^{na}z_n+\left(\frac{2-d}{2}\right)(\phi \xi^{a}+\sigma z^{a})\\
+  &=-\frac{d}{2}\sigma z^{a}+\left(\frac{2-d}{2}\right)\phi \xi^{a}
+\end{align}
+Reemplazando en \eqref{delta chi}
+\begin{align}
+  \delta\chi^{ab}&=\sigma\chi^{ab}+e^{a}\left[-\frac{d}{2}\sigma z^{b}+\left(\frac{2-d}{2}\right)\phi \xi^{b}\right]-\left[-\frac{d}{2}\sigma z^{a}+\left(\frac{2-d}{2}\right)\phi \xi^{a}\right]e^b\\
+  &=\sigma \chi^{ab}-\sigma\frac{d}{2}\chi^{ab}+\left(\frac{2-d}{2}\right)\phi\theta^{ab}\\
+  &=\sigma\left(\frac{2-d}{2}\right)\chi^{ab}+\left(\frac{2-d}{2}\right)\phi\theta^{ab}
+\end{align}
+Reemplazando en \eqref{d sigma},
+\begin{equation}
+\begin{split}
+  \delta\Sigma^{ab}&=\frac{\sigma}{\phi}\chi^{ab}+\frac{2}{(d-2)}\frac{1}{\phi}\delta\chi^{ab}\label{d sigma}\\
+  &=\frac{\sigma}{\phi}\chi^{ab}+\left(\frac{2}{d-2}\right)\frac{1}{\phi}\left[\sigma\left(\frac{2-d}{2}\right)  \chi^{ab}+\left(\frac{2-d}{2}\right)\phi\theta^{ab}\right]\\
+  &=\frac{\sigma}{\phi}\chi^{ab}-\frac{\sigma}{\phi}\chi^{ab}-\theta^{ab}\\
+  &=-\theta^{ab}
+\end{split}
+\end{equation}
+Así, de \eqref{d omega},
+\begin{align}
+  \delta\tilde{\omega}^{ab}&=\lambda\theta^{ab}+\lambda\delta\Sigma^{ab}\label{d omega}\\
+  &=\lambda\theta^{ab}-\lambda\theta^{ab}\\
+  &=0
+\end{align}
+es decir, $\tilde{\omega}^{ab}$ es invariante conforme.
+
+Finalmente calaculemos la variación de $\tilde{\kappa}^{ab}$,
+\begin{align}
+  \delta \bar{\kappa}^{ab}&=\delta \kappa^{ab}+(\lambda-1)\delta \Sigma^{ab}\\
+  &=\delta \kappa^{ab}-(\lambda-1) \theta^{ab}\\
+  &=(\lambda-1) \theta^{ab}-(\lambda-1) \theta^{ab}\\
+  &=0
+\end{align}
+donde usamos \eqref{d sigma}.
+
+Veamos ahora cómo queda la torsión y la curvartura definidas a partir de estos campos auxiliares. Para la torsión tenemos
+\begin{align}
+  \Tilde{T}^{a}&=\tilde{\kappa}^{a}_{~b}\wedge \tilde{e}^b\\
+  &=\left[\kappa^{a}_{~b}+(\lambda-1)\Sigma^{a}_{~b}\right]\wedge \left[\phi^\frac{2}{d-2} e^b\right]\\
+  &=\phi^\frac{2}{d-2}\left[\kappa^{a}_{~b}\wedge e^b+(\lambda-1)\Sigma^{a}_{~b}\wedge e^b\right]\\
+  &=\phi^\frac{2}{d-2}\left[T^{a}+(\lambda-1)\Sigma^{a}_{~b}\wedge e^b\right]
+\end{align}
+pero
+\begin{align}
+  \Sigma^{a}_{~b}\wedge e^b&=\frac{2}{(d-2)}\frac{1}{\phi}\chi^{a}_{~b}\wedge e^b\\
+  &=\frac{2}{(d-2)}\frac{1}{\phi}\left(e^{a}z_{b}-z^{a}e_b\right)\wedge e^b\\
+  &=\frac{2}{(d-2)}\frac{1}{\phi}e^{a}\wedge \dd \phi
+\end{align}
+luego
+\begin{align}
+   \Tilde{T}^{a}&=\phi^\frac{2}{d-2}\left[T^{a}+(\lambda-1)\Sigma^{a}_{~b}\wedge e^b\right]\\
+   &=\phi^\frac{2}{d-2}\left[T^{a}+(\lambda-1)\frac{2}{(d-2)}\frac{1}{\phi}e^{a}\wedge \dd \phi\right]\\
+   &=\phi^\frac{2}{d-2}T^{a}+\frac{2}{(d-2)}\phi^\frac{4-d}{d-2} (\lambda-1)e^{a}\wedge\dd\phi
+\end{align}
+
+Calculemos la curvatura construida a partir de los campos auxiliares
+\begin{align}
+  \Tilde{R}^{ab}&=\dd\tilde{\omega}^{ab}+\tilde{\omega}^{a}_{~c}\wedge\tilde{\omega}^{cb}\\
+  &=\dd (\omega^{ab}+\lambda \Sigma^{ab})+\left(\omega^{a}_{~c}+\lambda\Sigma^{a}_{~c}\right)\wedge \left(\omega^{cb}+\lambda\Sigma^{cb}\right)\\
+  &=\dd\omega^{ab}+\lambda \dd\Sigma^{ab} +\omega^{a}_{~c}\wedge \omega^{cb}+\lambda\omega^{a}_{~c}\wedge\Sigma^{cb}+\lambda \Sigma^{a}_{~c}\wedge\omega^{cb}+\lambda^2\Sigma^{a}_{~c}\wedge\Sigma^{cb}\\
+  &=R^{ab}+\lambda (\dd\Sigma^{ab}+\omega^{a}_{~c}\wedge \Sigma^{cb}+\omega^b_{~c}\wedge\Sigma^{ac})+\lambda^2\Sigma^{a}_{~c}\wedge\Sigma^{cb}\\
+  &=R^{ab}+\lambda \D \Sigma^{ab}+\lambda^2\Sigma^{a}_{~c}\wedge\Sigma^{cb}
+\end{align}
+
+Debido a que estas cantidades están construidas a partir de objetos que son conformalmente invariantes, ellas también lo son.
+
+En resumen, tenemos los siguientes campos auxiliares conformalmente invariantes
+\begin{tcolorbox}
+\begin{align}
+    \Tilde{e}^{a}&=\phi^\frac{2}{d-2} e^{a}\\
+    \Tilde{\omega}^{ab}&=\omega^{ab}+\lambda\Sigma ^{ab}\\
+    \Tilde{\kappa}^{ab}&=\kappa^{ab}+(\lambda-1)\Sigma ^{ab}\\
+    \tilde{T}^{a}&=\phi^\frac{2}{d-2}T^{a}+\frac{2}{(d-2)}\phi^\frac{4-d}{d-2} (\lambda-1)e^{a}\wedge\dd\phi\\
+    \Tilde{R}^{ab}&=R^{ab}+\lambda \D \Sigma^{ab}+\lambda^2\Sigma^{a}_{~c}\wedge\Sigma^{cb}
+\end{align}
+donde
+\begin{align}
+  \Sigma^{ab}=\frac{2}{(d-2)}\frac{1}{\phi}\left(e^{a}z^b-z^{a}e^b\right),\qquad z^{a}=\I^{a}\dd\phi
+\end{align}
+\end{tcolorbox}
+
+\subsection{Invariantes en $2+1$}
+En $(2+1)$-dimensiones estas cantidades se reducen a
+\begin{align}
+    \Tilde{e}^{a}&=\phi^2 e^{a}\\
+    \Tilde{\omega}^{ab}&=\omega^{ab}+\lambda\Sigma ^{ab}\\
+    \Tilde{\kappa}^{ab}&=\kappa^{ab}+(\lambda-1)\Sigma ^{ab}\\
+    \tilde{T}^{a}&=\phi^2T^{a}+2\phi (\lambda-1)e^{a}\wedge\dd\phi\\
+    \Tilde{R}^{ab}&=R^{ab}+\lambda \D \Sigma^{ab}+\lambda^2\Sigma^{a}_{~c}\wedge\Sigma^{cb}
+\end{align}
+donde
+\begin{align}
+  \Sigma^{ab}=\frac{2}{\phi}\left(e^{a}z^b-z^{a}e^b\right)=\frac{4}{\phi}e^{[a}z^{b]} ,\qquad z^{a}=\I^{a}\dd\phi
+\end{align}
+
+
+Calculemos los invariantes que nos podemos construir a partir de estas cantidades en $(2+1)$. 
+
+Primero
+\begin{align}
+  \epsilon_{abc}\tilde{R}^{ab}\wedge \tilde{e}^c&=\epsilon_{abc}\left(R^{ab}+\lambda \D \Sigma^{ab}+\lambda^2 \Sigma^{a}_{~d}\wedge \Sigma^{db}\right)\wedge\left(\phi^2e^c\right)\\
+  &=\phi^2\epsilon_{abc}\left(R^{ab}\wedge e^c+\lambda \D \Sigma^{ab}\wedge e^c+\lambda^2 \Sigma^{a}_{~d}\wedge \Sigma^{db}\wedge e^c\right)\label{inv}
+%  &=\phi^2\epsilon_{abc}R^{ab}\wedge e^c-2\lambda \epsilon_{abc}\dd\phi\wedge\chi^{ab}\wedge e^c+2\lambda\phi\epsilon_{abc}\D \chi^{ab}\wedge e^c+4\lambda^2\epsilon_{abc}\chi^{a}_{~d}\wedge\chi^{db}\wedge e^c
+\end{align}
+Trabajemos un poco más los últimos dos términos\footnote{De aquí en adelante para simplificar notación, consideraremos el \textit{wedge product} implícito.}. Calculemos $\eabc \D\S^{ab}e^c$,
+\begin{align}
+  \eabc \D\S^{ab}e^c&=-\frac{4}{\phi^2}\eabc\dd\phi e^{a}z^be^c+\frac{2}{\phi}\eabc \D(2e^{a}z^b)e^c\\
+  &=-\frac{4}{\phi^2}\eabc\dd\phi e^{a}z^be^c+\frac{4}{\phi}\eabc T^{a}z^be^c-\frac{4}{\phi}\eabc e^{a}\D z^be^c
+\end{align}
+Luego,
+\begin{equation}\label{2do termino}
+  \lambda\phi^2\eabc\D \S^{ab}e^c=-4\lambda\dd\phi e^{a}z^be^c+4\lambda\phi\eabc T^{a}z^be^c-4\lambda\eabc e^{a}\D z^be^c
+\end{equation}
+
+Ahora calculemos $\eabc\S^{a}_{~d}\S^{db}e^c$,
+\begin{align}
+  \eabc\S^{a}_{~d}\S^{db}e^c&=\frac{4}{\phi}\eabc(e^{a}z_d-z^{a}e_d)(e^dz^b-z^de^b)e^c\\
+  &=\frac{8}{\phi^2}\eabc e^{a}\dd\f z^be^c-\frac{4}{\f^2}\eabc z^2e^{a}e^be^c
+\end{align}
+Sin embargo, estos dos términos se pueden relacionar. Para evidenciar esto, escribámoslos en la base coordenada
+\begin{align}
+  \eabc z^2e^{a}e^be^c&=\eabc z^2e^{a}_\m e^b_\n e^c_\lambda \dd x^\m\wedge\dd x^\n\wedge\dd x^\lambda\\
+  &=\eabc e^{d}_\r \partial^\r\phi e^\t_d\partial_t\phi e^{a}_\m e^b_\n e^c_\lambda \dd x^\m\wedge\dd x^\n\wedge\dd x^\lambda\\
+  &=\det(e)\ep_{\m\n\lambda}\ep^{\m\n\lambda}\delta ^\t_\r \partial^\r\phi\partial_\t\phi\dd^3x\\
+  &=6\det(e)\partial_\m\phi\partial^\m\phi\dd^3x\label{z2eee}
+\end{align}
+de manera similar,
+\begin{align}
+  \eabc e^{a}\dd\phi z^be^c&=\eabc e^{a}_\m\partial_\n \phi z^be^c_\lambda \dd x^\m \wedge\dd x^\n\wedge\dd x^\lambda\\
+  &=2\det(e)\partial_\m\phi\partial^\m\phi\dd^3x\\
+  &=\frac{1}{3}\eabc z^2e^{a}e^be^c
+\end{align}
+Así
+\begin{equation}
+  \eabc\Sigma^{a}_{~d}\S^{db}e^c=-\frac{4}{3}\frac{1}{\f^2}\eabc z^2e^{a}e^be^c
+\end{equation}
+De esta manera \eqref{inv} queda
+\begin{align*}
+    \epsilon_{abc}\tilde{R}^{ab} \tilde{e}^c&=\phi^2\epsilon_{abc}\left(R^{ab} e^c+\lambda \D \Sigma^{ab} e^c+\lambda^2 \Sigma^{a}_{~d} \Sigma^{db} e^c\right)\\
+    &=\f^2\eabc R^{ab}e^c-4\eabc\lambda\dd\f e^{a}z^be^c+4\lambda \f\eabc(T^{a}z^be^c-e^{a}\D z^be^c)-\frac{4\lambda^2}{3}\eabc z^2e^{a}e^be^c\\
+    &=\f^2\eabc R^{ab}e^c+\frac{4\lambda}{3}\eabc z^2e^{a}e^be^c+4\lambda \f\eabc(T^{a}z^be^c-e^{a}\D z^be^c)-\frac{4\lambda^2}{3}\eabc z^2e^{a}e^be^c\\
+    &=\f^2\eabc R^{ab}e^c+\frac{4\lambda}{3}\eabc z^2e^{a}e^be^c(1-\lambda)+4\lambda \f\eabc(T^{a}z^be^c-e^{a}\D z^be^c)
+\end{align*}
+Notemos que dado que estas cantidades construiremos una acción, podemos manipular los términos de manera de ir armando términos de borde y hacer que la acción sea quasi-invariante bajo transformaciones conformes. En particular notemos que
+\begin{align}
+  \f\eabc e^{a}\D z^be^c&=2\det(e)\phi\nabla_\m\partial^\m \f\dd^3x\\
+  &=-2\det(e)\nabla_\m\f\partial^\m\f \dd^3x+\rm b.t.\\
+ &=-\frac{1}{3}\eabc z^2e^{a}e^be^c+\rm b.t.
+\end{align}
+Luego,
+\begin{align}
+  \epsilon_{abc}\tilde{R}^{ab} \tilde{e}^c&=\phi^2\epsilon_{abc}\left(R^{ab} e^c+\lambda \D \Sigma^{ab} e^c+\lambda^2 \Sigma^{a}_{~d} \Sigma^{db} e^c\right)\\
+  &=\f^2\eabc R^{ab}e^c+\frac{4\lambda}{3}(2-\lambda)\eabc z^2e^{a}e^be^c+4\lambda \f\eabc T^{a}z^be^c + \rm b.t.\\
+  &=\f^2\eabc R^{ab}e^c+\frac{8\lambda}{3}\left(1-\frac{\lambda}{2}\right)\eabc z^2e^{a}e^be^c+4\lambda \f\eabc T^{a}z^be^c + \rm b.t.
+\end{align}
+Este término es el análogo en $(2+1)$ que el que aparecee en la acción de \cite{Aviles:2024muk}.
+
+%Notemos que podemos armar el término de borde de otra manera. En efecto,
+%\begin{align}
+%  \eabc \phi^2\D \left(\frac{4}{\phi}e^{a}z^b\right)e^c=\eabc \D(4\phi e^{a}z^be^c)-8\eabc\dd\phi e^{a}z^be^c-4\eabc \phi T^{a}z^be^c
+%\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Otro invariante que nos podemos construir es
+\begin{align}
+  \tilde{T}^{a}\wedge\tilde{e}_a&=\left(\phi^2T^{a}+2\phi (\lambda-1)e^{a}\wedge\dd\phi\right)\wedge \left(\phi^2 e_{a}\right)\\
+  &=\phi^4 T^{a}\wedge e_a
+\end{align}
+
+Otro más
+\begin{align}
+  \epsilon_{abc}\tilde{e}^{a}\wedge \tilde{e}^b\wedge \tilde{e}^c&=\phi^6\epsilon_{abc}e^{a}\wedge e^b\wedge e^c
+\end{align}
+
+El otro invariante que podemos construir en $(2+1)$ es el Chern-Simons a partir de los campos auxiliares . Calculemos
+\begin{align}\label{CS}
+  \tilde{\omega}^{ab}\dd\tilde{\omega}_{ab}+\frac{2}{3}\tilde{\omega}^{a}_{~b}\tilde{\omega}^{b}_{~c}\tilde{\omega}^{c}_{~a}
+\end{align}
+
+Veamos primero cómo queda $\tilde{\omega}^{ab}\dd\tilde{\omega}_{ab}$. Para ello, recordemos que
+\begin{equation}
+  \Sigma^{ab}=\frac{4}{\phi}e^{[a}z^{b]},\qquad \dd\Sigma^{ab}=-\frac{4}{\phi^2}\dd\phi e^{[a}z^{b]}+\frac{4}{\phi}\dd e^{[a}z^{b]}-\frac{4}{\phi}e^{[a}\dd z^{b]}
+\end{equation}
+Así,
+\begin{align*}
+  \tilde{\omega}_{ab}\dd \tilde{\omega}^{ab}&=(\omega_{ab}+\lambda\Sigma_{ab})\wedge \dd (\omega^{ab}+\lambda\Sigma^{ab})\\
+  &=\omega_{ab}\dd\omega^{ab}+\lambda \omega_{ab}\left(-\frac{4}{\phi^2}\dd\phi e^{a}z^b+\frac{4}{\phi}\dd e^{a}z^b-\frac{4}{\phi}e^{a}\dd z^b\right)+\frac{4\lambda}{\phi}e^{a}z^b\dd\omega_{ab}+\frac{16\lambda^2}{\phi^2}z^2e_a\dd e^{a}
+\end{align*}
+
+Calculemos ahora $\frac{2}{3}\tilde{\omega}^{ab}\tilde{\omega}_{bc}\tilde{\omega}^{cd}\eta_{ca}$. Primero
+\begin{align}
+  \tilde{\omega}^{ab}\tilde{\omega}_{bc}&=\omega^{ab}\omega_{bc}+\frac{4\lambda}{\phi}\omega^{ab}e_{[b}z_{c]}+\frac{4\lambda}{\phi}e^{[a}z^{b]}\omega_{bc}+\frac{4\lambda^2}{\phi^2}(e^{a}\dd\phi z_c-z^2e^{a}e_c+z^{a}\dd\phi e_c)
+\end{align}
+
+Ahora $\tilde{\omega}^{ab}\tilde{\omega}_{bc}\tilde{\omega}^{cd}$,
+\begin{align}
+  \tilde{\omega}^{ab}\tilde{\omega}_{bc}\tilde{\omega}^{cd}&=\omega^{ab}\omega_{bc}\omega^{cd}+\frac{4\lambda}{\phi}\omega^{ab}\omega_{bc}e^{[c}z^{d]}+\frac{4\lambda}{\phi}\omega^{ab}e_{[b}z_{c]}\omega^{cd}+\frac{16\lambda^2}{\phi^2}\omega^{ab}e_{[b}z_{c]}e^{[c}z^{d]}\\&+\frac{4\lambda}{\phi}e^{[a}z^{b]}\omega_{bc}\omega^{cd}+\frac{16\lambda^2}{\phi^2}e^{[a}z^{b]}\omega_{bc}e^{[c}z^{d]}-\frac{4\lambda^2}{\phi^2}z^2e^{a}e_c\omega^{cd}-\frac{16\lambda^3}{\phi^3}z^2e{a}e_ce^{[c}z^{d]}\\
+  &+\frac{4\lambda^2}{\phi^2}z^{a}\dd\phi e_c\omega^{cd}+\frac{16\lambda^3}{\phi^3}z^{a}\dd\phi e_ce^{[c}z^{d]}
+\end{align}
+Bajando el último índice con una $\eta_{da}$,
+\begin{align*}
+  \tilde{\omega}^{ab}\tilde{\omega}_{bc}\tilde{\omega}^{c}_{~a}&=\omega^{ab}\omega_{bc}\omega^{c}_{~a}+\frac{2\lambda}{\phi}\omega^{ab}\omega_{bc}(e^cz_a-z^ce_a)+\frac{2\lambda}{\phi}\omega^{ab}(e_bz_c-z_be_c)\omega^c_{~a}+\frac{2\lambda}{\phi}(e^{a}z^b-z^{a}e^b)\omega_{bc}\omega^c_{~a}\\
+  &+\frac{4\lambda^2}{\phi^2}\omega^{ab}(2z_ae_b\dd\phi+z^2e_ae_b)+\frac{4\lambda^2}{\phi^2}\omega_{bc}(2z^be^c\dd\phi+z^2e^be^c)+\frac{4\lambda^2}{\phi^2}\omega^c_{~a}(2z_ce^{a}\dd\phi+z^2e_ce^{a})\\
+  &=\omega^{ab}\omega_{bc}\omega^{c}_{~a}+\frac{6\lambda}{\phi}\omega^{ab}\omega_{bc}(e^cz_a-z^ce_a)+\frac{12\lambda^2}{\phi^2}\omega^{ab}(2z_ae_b\dd\phi+z^2e_ae_b)
+%  &+\frac{4\lambda^2}{\phi^2}\omega^{ab}(e_b\dd\phi z_a-z^2e_be_a+z_b\dd\phi e_a)\\&+\frac{4\lambda^2}{\phi^2}(e^{a}z^b\omega_{bc}e^cz_a-e^{a}z^b\omega_{bc}z^ce_a-z^{a}e^b\omega_{bc}e^cz_a+z^{a}e^b\omega_{bc}z^ce_a)+\frac{4\lambda^2}{\phi^2}e^{a}\dd\phi z_c\omega^{c}_{~a}\\
+%  &+\frac{8\lambda^2}{\phi^3}e^{a}\dd\phi z_c(e^cz_a-z^ce_a)-\frac{4\lambda^2}{\phi^2}z^2e^{a}e_c\omega^{c}_{~a}-\frac{16\lambda^3}{\phi^3}z^2e^{a}e_c(e^cz_a-z^ce_a)+\frac{4\lambda^2}{\phi^2}z^{a}\dd\phi e_c\omega^{c}_{~a}\\
+%  &+\frac{16\lambda^3}{\phi^3}z^{a}\dd\phi e_c(e^cz_a-z^ce_a)
+\end{align*}
+Luego, 
+\begin{align*}
+    \tilde{\omega}^{ab}\dd\tilde{\omega}_{ab}&+\frac{2}{3}\tilde{\omega}^{a}_{~b}\tilde{\omega}^{b}_{~c}\tilde{\omega}^{c}_{~a}=\omega_{ab}\dd\omega^{ab}+\lambda \omega_{ab}\left(-\frac{4}{\phi^2}\dd\phi e^{a}z^b+\frac{4}{\phi}\dd e^{a}z^b-\frac{4}{\phi}e^{a}\dd z^b\right)+\frac{4\lambda}{\phi}e^{a}z^b\dd\omega_{ab}+\frac{16\lambda^2}{\phi^2}z^2e_a\dd e^{a}\\
+    &+\frac{2}{3}\omega^{ab}\omega_{bc}\omega^{c}_{~a}+\frac{4\lambda}{\phi}\omega^{ab}\omega_{bc}(e^cz_a-z^ce_a)+\frac{8\lambda^2}{\phi^2}\omega^{ab}(2z_ae_b\dd\phi+z^2e_ae_b)
+%    &+\frac{2}{3}\omega^{ab}\omega_{bc}\omega^{c}_{~a}+\frac{4\lambda}{3\phi}\omega^{ab}\omega_{bc}(e^cz_a-z^ce_a)+\frac{4\lambda}{3\phi}\omega^{ab}(e_bz_c-z_be_c)\omega^c_{~a}+\frac{4\lambda}{3\phi}(e^{a}z^b-z^{a}e^b)\omega_{bc}\omega^c_{~a}\\
+%    &+\frac{16\lambda^2}{3\phi^2}\omega^{ab}(2z_ae_b\dd\phi+z^2e_ae_b)+\frac{16\lambda^2}{3\phi^2}\omega_{bc}(2z^be^c\dd\phi+z^2e^be^c)+\frac{16\lambda^2}{3\phi^2}\omega^c_{~a}(2z_ce^{a}\dd\phi+z^2e_ce^{a})
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

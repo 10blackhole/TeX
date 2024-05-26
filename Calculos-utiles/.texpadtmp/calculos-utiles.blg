@@ -1,0 +1,9 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is '/Users/borjaalejandrodiezbravo/Desktop/Tex/Calculos-utiles/.texpadtmp/calculos-utiles.blg'
+[31] biber-darwin:340> INFO - === Sat May 11, 2024, 18:34:08
+[39] Biber.pm:419> INFO - Reading '/Users/borjaalejandrodiezbravo/Desktop/Tex/Calculos-utiles/.texpadtmp/calculos-utiles.bcf'
+[78] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[85] bbl.pm:660> INFO - Writing '/Users/borjaalejandrodiezbravo/Desktop/Tex/Calculos-utiles/.texpadtmp/calculos-utiles.bbl' with encoding 'UTF-8'
+[85] bbl.pm:763> INFO - Output to /Users/borjaalejandrodiezbravo/Desktop/Tex/Calculos-utiles/.texpadtmp/calculos-utiles.bbl
+[85] Biber.pm:131> WARN - The file '/Users/borjaalejandrodiezbravo/Desktop/Tex/Calculos-utiles/.texpadtmp/calculos-utiles.bcf' does not contain any citations!
+[85] Biber.pm:133> INFO - WARNINGS: 1

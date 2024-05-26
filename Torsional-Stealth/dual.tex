@@ -1,0 +1,67 @@
+\section{Bichos en el dual del grupo}
+Una propiedad interesante que aparece en $(2+1)$ es que podemos simplificar un poco lo cálculos trabajando con la conexión de Lorentz (y los demás objetos) en el dual del grupo. 
+
+La convención a seguir será
+\begin{align}
+  \epsilon_{012}&=-\epsilon^{012}=1\\
+  \epsilon_{abc}\epsilon^{def}&=-\delta_{abc}^{def}\\
+  \omega_{ab}&=\epsilon_{abc}\omega^c\label{omega dual}
+\end{align}
+Multiplicando \eqref{omega dual} por $\epsilon^{abf}$, tenemos
+\begin{align}
+  \epsilon^{abf}\omega_{ab}&=\epsilon^{abf}\epsilon_{abc}\omega^c\\
+  \epsilon^{abf}\omega_{ab}&=-\delta_{abc}^{abf}\omega^c\\\
+  \epsilon^{abf}\omega_{ab}&=-2!\delta^f_c\omega^c\\
+  \epsilon^{abf}\omega_{ab}&=-2\omega^f
+\end{align}
+Así, 
+\begin{equation}
+  \omega^{f}=-\frac{1}{2}\epsilon^{abf}\omega_{ab}
+\end{equation}
+o de manera equivalente
+\begin{equation}
+  \boxed{\omega_a=\frac{1}{2}\epsilon_{abc}\omega^{bc}}
+\end{equation}
+
+Veamos como queda la torsión escrita en términos de estas conexiones duales,
+\begin{align}
+  T^{a}&=\dd e^{a}+\omega^{a}_{~b}\wedge e^b\\
+  &=\dd e^{a}+\omega^{ab}\wedge e_b\\
+  &=\dd e^{a}-\epsilon^{abc}\omega_c\wedge e_b\\
+  &=\dd e^{a}-\epsilon^{acb}\omega_b\wedge e_c\\
+  &=\dd e^{a}+\epsilon^{abc} \omega_b\wedge e_c
+\end{align}
+Es decir,
+\begin{equation}
+	\boxed{T^{a}=\dd e^{a}+\epsilon^{abc} \omega_b\wedge e_c}
+\end{equation}
+
+Veamos ahora cómo queda la curvatura de Lorentz en el dual de grupo $R_{a}=\frac{1}{2}\epsilon_{abc}R^{bc}$. Notemos que
+\begin{align}
+  R^{bc}&=\dd\omega^{bc}+\omega^b_{~d}\wedge \omega^{dc}\\
+  &=\dd (-\epsilon^{bcf}\omega_f)+\eta^{bg}\omega_{gd}\wedge \omega^{bc}\\
+  &=-\epsilon^{bcf}\dd\omega_f-\eta^{bg}\epsilon_{gdm}\omega^m\wedge (-\epsilon^{dcl}\omega_l)\\
+  &=-\epsilon^{bcf}\dd\omega_f-\eta^{bg}\epsilon_{gdm}\epsilon^{dcl}\omega^m\wedge \omega_l\\
+  &=-\epsilon^{bcf}\dd\omega_f+\eta^{bg}\epsilon_{dgm}\epsilon^{dcl}\omega^m\wedge \omega_l\\
+  &=-\epsilon^{bcf}\dd\omega_f+\eta^{bg}\delta_{gm}^{cl}\omega^m\wedge\omega_l\\
+  &=-\epsilon^{bcf}\dd\omega_f+\cancel{\eta^{bg}\delta_g^c\delta_m^l\omega^m\wedge \omega_l}-\eta^{bg}\delta_g^l\delta_m^c\omega^m\wedge\omega_l\\
+  &=-\epsilon^{bcf}\dd\omega_f-\omega^c\wedge\omega^b\\
+  &=-\epsilon^{bcf}\dd\omega_f+\omega^b\wedge\omega^c
+\end{align}
+Luego,
+\begin{align}
+  \epsilon_{abc}R^{bc}&=\epsilon_{abc}\left(-\epsilon^{bcf}\dd\omega_f+\omega^b\wedge\omega^c\right)\\
+  &=-\epsilon_{abc}\epsilon^{bcf}\dd\omega_f+\epsilon_{abc}\omega^b\wedge \omega^c\\
+  &=-\epsilon_{abc}\epsilon^{fbc}\dd\omega_f+\epsilon_{abc}\omega^b\wedge \omega^c\\
+  &=\delta_{abc}^{bfc}\dd\omega_f+\epsilon_{abc}\omega^b\wedge\omega^c\\
+  &=2\dd\omega_a+\epsilon_{abc}\omega^b\wedge\omega^c
+\end{align}
+Así,
+\begin{align}
+    R_{a}&=\frac{1}{2}\epsilon_{abc}R^{bc}\\
+    &=\dd\omega_a+\frac{1}{2}\epsilon_{abc}\omega^b\wedge \omega^c
+\end{align}
+\begin{equation}
+\boxed{R^{a}=\dd\omega^{a}+\frac{1}{2}\epsilon^{abc}\omega_b\wedge \omega_c}
+\end{equation}
+

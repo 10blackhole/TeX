@@ -1,0 +1,125 @@
+\section{Problema 1.8}
+\begin{tcolorbox}
+\begin{problema}
+	Comenzando con\begin{equation}
+  T\dd S=\dd E+P\dd V-\m\dd Q,\quad \text{y}\quad  G\equiv E+PV-TS
+\end{equation}
+\begin{enumerate}
+	\item Muestre que
+	\begin{equation}
+  S=-\eval{\pdv{G}{T}}_{N,P},\qquad V=\eval{\pdv{G}{P}}_{N,T}
+\end{equation}
+\item Comenzando con
+ \begin{equation}\label{18-dS}
+  \d S(P,N,T)=\pdv{S}{P}\d P+\pdv{S}{N}\d N+\pdv{S}{T}\d T
+\end{equation}
+Muestre que los calores específicos,
+\begin{equation}
+  C_P\equiv T\eval{\pdv{S}{T}}_{N,P},\qquad C_V\equiv T\eval{\pdv{S}{T}}_{N,V}
+\end{equation}
+satisfacen la relación:
+\begin{equation}
+  C_P=C_V-T\left(\eval{\pdv{V}{T}}_{P,N}\right)^2\left(\eval{\pdv{V}{P}}_{T,N}\right)^{-1}
+\end{equation}
+Notar que la compresibilidad, $\equiv -\pdv*{V}{P}$, es positiva (a menos que el sistema sea inestable), luego $C_P>C_V$.
+\end{enumerate}
+\end{problema}
+\end{tcolorbox}
+
+\begin{sol}
+\
+\begin{enumerate}
+\item 
+La energía libre de Gibbs viene dada por
+	\begin{equation}
+  G= E+PV-TS
+\end{equation}
+o en su forma diferencial
+\begin{equation}\label{3.dG}
+  \dd G=\dd E+V\dd P+P\dd V-S\dd T-T\dd S
+\end{equation}
+de la expresión de la primera y la segunda ley de la termodinámica combinadas, donde consideraremos $Q=N$, tenemos
+\begin{equation}
+  T\dd S=\dd E+P\dd V-\m\dd N
+\end{equation}
+reemplazando en \eqref{3.dG},
+\begin{align}
+  \dd G&=\cancel{\dd E}+V\dd P+\cancel{P\dd V}-S\dd T-\cancel{\dd E}-\cancel{P\dd V}+\m\dd N\\
+  &=V\dd P-S\dd T+\m\dd N
+\end{align}
+pero además,
+\begin{equation}
+  \dd G=\eval{\pdv{G}{P}}_{T,N}\dd P+\eval{\pdv{G}{T}}_{P,N}\dd T+\eval{\pdv{G}{N}}_{T,P}\dd N
+\end{equation}
+comparando estas dos última expresiones, se tiene
+que 
+\begin{equation}\label{18-GTGP}
+  \boxed{\eval{\pdv{G}{T}}_{P,N}=-S,\qquad \eval{\pdv{G}{P}}_{T,N}=V}
+\end{equation}
+
+
+\item
+De \eqref{18-dS} podemos calcular $\eval{\dd S}_N$,
+\begin{align}
+  \d S(P,N,T)&=\eval{\pdv{S}{P}}_{T,N}\d P+\cancelto{0}{\eval{\pdv{S}{N}\d N}_{T,P}}+\eval{\pdv{S}{T}}_{P,N}\d T\\
+  &=\eval{\pdv{S}{P}}_{T,N}\d P+\eval{\pdv{S}{T}}_{P,N}\d T \label{18-dd S}
+\end{align}
+Queremos encontrar una expresión para $C_V$. Notemos que a volumen y número de partículas constantes se tiene
+\begin{align}
+  0=\eval{\d V}_N&=\eval{\pdv{V}{P}}_{T,N}\d P+\eval{\pdv{V}{T}}_{P,N}\d T+\cancelto{0}{\eval{\pdv{V}{N}}_{T,P}\d N}\\
+  &=\eval{\pdv{V}{P}}_{T,N}\d P+\eval{\pdv{V}{T}}_{P,N}\d T
+\end{align}
+\begin{equation}
+  \implies \eval{\pdv{V}{P}}_{T,N}\d P=-\eval{\pdv{V}{T}}_{P,N}\d T
+\end{equation}
+\begin{equation}
+  \implies \d P=-\eval{\pdv{V}{T}}_{P,N}\left(\eval{\pdv{V}{P}}_{T,N}\right)^{-1}\d T
+\end{equation}
+Reemplazando en \eqref{18-dd S},
+\begin{align}
+  \eval{\d S}_{N,V}&=\eval{\pdv{S}{P}}_{T,N}\left[-\eval{\pdv{V}{T}}_{P,N}\left(\eval{\pdv{V}{P}}_{T,N}\right)^{-1}\d T\right]+\eval{\pdv{S}{T}}_{P,N}\d T\\
+  &=-\eval{\pdv{S}{P}}_{T,N}\eval{\pdv{V}{T}}_{P,N}\left(\eval{\pdv{V}{P}}_{T,N}\right)^{-1}\d T+\eval{\pdv{S}{T}}_{P,N}\d T\\
+  &=\left[-\eval{\pdv{S}{P}}_{T,N}\eval{\pdv{V}{T}}_{P,N}\left(\eval{\pdv{V}{P}}_{T,N}\right)^{-1}+\eval{\pdv{S}{T}}_{P,N}\right]\d T
+\end{align}
+Luego,
+\begin{align}
+  \eval{\pdv{S}{T}}_{N,V}&=-\eval{\pdv{S}{P}}_{T,N}\eval{\pdv{V}{T}}_{P,N}\left(\eval{\pdv{V}{P}}_{T,N}\right)^{-1}+\eval{\pdv{S}{T}}_{P,N}
+\end{align}
+Multiplicando a ambos lados por $T$,
+\begin{align}\label{18-casi}
+  T\eval{\pdv{S}{T}}_{N,V}&=-T\eval{\pdv{S}{P}}_{T,N}\eval{\pdv{V}{T}}_{P,N}\left(\eval{\pdv{V}{P}}_{T,N}\right)^{-1}+T\eval{\pdv{S}{T}}_{P,N}\\
+  C_V&=-T\eval{\pdv{S}{P}}_{T,N}\eval{\pdv{V}{T}}_{P,N}\left(\eval{\pdv{V}{P}}_{T,N}\right)^{-1}+C_P
+\end{align}
+Además, podemos obtener una relación de Maxwell utilizando \eqref{18-GTGP}. Usando el hecho que
+\begin{align}
+  \pdv{G}{T}{P}&=\pdv{G}{P}{T}\\
+  \left(\pdv{T}\left(\pdv{G}{P}\right)_{T,N}\right)_{P,N}&=\left(\pdv{P}\left(\pdv{G}{T}\right)_{P,N}\right)_{T,N}\\
+  \eval{\pdv{V}{T}}_{P,N}&=-\eval{\pdv{S}{P}}_{N,T}
+\end{align}
+Reemplazando en \eqref{18-casi}, tenemos
+\begin{align}
+  C_V&=-T\left(-\eval{\pdv{V}{T}}_{P,N}\eval{\pdv{V}{T}}_{P,N}\right)\left(\eval{\pdv{V}{P}}_{T,N}\right)^{-1}+C_P\\
+  &=T\left(\eval{\pdv{V}{T}}_{P,N}\right)^2\left(\eval{\pdv{V}{P}}_{T,N}\right)^{-1}+C_P
+\end{align}
+Finalemte,
+\begin{equation}
+\boxed{  C_P=C_V-T\left(\eval{\pdv{V}{T}}_{P,N}\right)^2\left(\eval{\pdv{V}{P}}_{T,N}\right)^{-1}}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+\end{sol}

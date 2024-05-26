@@ -1,0 +1,58 @@
+\section{Problema 2.5}
+\begin{tcolorbox}
+\begin{problema}
+	Derive la expresión correspondiente para la presión para un gas de   Bosones/Fermiones no-interactuante en $2$-dimensiones. Note que en $2$-dimensiones, $P$ describe el trabajo realizado al expandirse por unidad de área, $\dd W=P\dd A$.
+\end{problema}
+\end{tcolorbox}
+
+\begin{sol}
+	Veamos primero el caso bosónico\footnote{Varios de los cálculos hechos en este problema son análogos a los realizados en el Problema \ref{prob:2.7}, por lo tanto recomiendo ver ese antes que este. }.
+	
+	Notemos que debido a que estamos considerando un gas en $2$ dimensiones, \eqref{Omega zgc} queda,
+\begin{equation}\label{Omega zgc}
+  \Omega_{\rm GC}=-PA=-\k T\ln(\zgc )
+\end{equation}
+\begin{equation}
+  \implies \frac{PA}{\k T}=\ln(\zgc)
+\end{equation}
+Considerando los signos $(-)$ en \eqref{zgc pm}, tenemos
+\begin{align}
+	\frac{PA}{\k T}&=-\frac{N_sA}{(2\p\hbar)^2}\int \dd^2p\ln\left(1-e^{-\b(\epsilon(p)-\m )}\right)\\
+	&=-\frac{2\p N_sA}{(2\p\hbar)^2}\int_0^\infty\dd p p\ln\left(1-e^{-\b(\epsilon(p)-\m )}\right)\\
+	&=-\frac{2\p N_sA}{(2\p\hbar)^2}\left[\eval{\frac{p^2}{2}\ln\left(1-e^{-\b(\epsilon(p)-\m )}\right)}_{p=0}^{p=\infty} -\int_0^\infty\frac{p^2}{2}\dd p\dv{p}\ln\left(1-e^{-\b(\epsilon(p)-\m )}\right)\right]\\
+	&=\frac{2\p N_sA}{(2\p\hbar)^2}\left[\int_0^\infty\frac{p^2}{2}\dd p\dv{p}\ln\left(1-e^{-\b(\epsilon(p)-\m )}\right)\right]\\
+	&=\frac{2\p N_s}{(2\p\hbar)^2}\int_0^\infty\frac{p^2}{2}\dd p\frac{-(-\b  )e^{-\b(\epsilon(p)-\m )}}{1-e^{-\b(\epsilon(p)-\m )}}\dv{\epsilon}{p}\\
+	&=\frac{2\p N_s A\b }{(2\p\hbar)^2}\int_0^\infty\frac{p^2}{2}\dd p\frac{e^{-\b(\epsilon(p)-\m )} }{1-e^{-\b(\epsilon(p)-\m )}}\frac{pc^2}{\epsilon}\\
+	&=\frac{2\p N_s A\b c^2}{(2\p\hbar)^2}\int_0^\infty\dd p\frac{p^3}{2\epsilon}\frac{e^{-\b(\epsilon(p)-\m )}}{1-e^{-\b(\epsilon(p)-\m )}}\\
+	&=\frac{N_s A\b c^2}{(2\p\hbar)^2}\int\dd^2p \frac{p^2}{2\epsilon}\frac{e^{-\b(\epsilon(p)-\m )}}{1-e^{-\b(\epsilon(p)-\m )}},\qquad \b=\frac{1}{\k T}\\
+	&=\frac{N_s A c^2}{\k T(2\p\hbar)^2}\int\dd^2p \frac{p^2}{2\epsilon}\frac{e^{-\b(\epsilon(p)-\m )}}{1-e^{-\b(\epsilon(p)-\m )}}
+\end{align}
+Donde se ha usado el mismo argumento que en \eqref{int-partes} para eliminar unos de los términos de la integración por partes. Además para expresar $\dv*{\epsilon}{p}$ se ha usado \eqref{dedp}.
+
+Multiplicando a ambos lados por $\k T/A$, obtenemos
+\begin{equation}
+ \boxed{ P_{\rm Bosones}=\frac{N_s  c^2}{(2\p\hbar)^2}\int\dd^2p \frac{p^2}{2\epsilon}\frac{e^{-\b(\epsilon(p)-\m )}}{1-e^{-\b(\epsilon(p)-\m )}}}
+\end{equation}
+
+Para el caso fermionico el cálculo es similar, solo que ahora debemos considerar el signo positvo en \eqref{zgc pm},
+\begin{align}
+	\frac{PA}{\k T}&=\frac{N_sA}{(2\p\hbar)^2}\int \dd^2p\ln\left(1+e^{-\b(\epsilon(p)-\m )}\right)\\
+	&=\frac{2\p N_sA}{(2\p\hbar)^2}\int_0^\infty\dd p p\ln\left(1+e^{-\b(\epsilon(p)-\m )}\right)\\
+	&=\frac{2\p N_sA}{(2\p\hbar)^2}\left[\eval{\frac{p^2}{2}\ln\left(1+e^{-\b(\epsilon(p)-\m )}\right)}_{p=0}^{p=\infty} -\int_0^\infty\frac{p^2}{2}\dd p\dv{p}\ln\left(1+e^{-\b(\epsilon(p)-\m )}\right)\right]\\
+	&=-\frac{2\p N_sA}{(2\p\hbar)^2}\left[\int_0^\infty\frac{p^2}{2}\dd p\dv{p}\ln\left(1+e^{-\b(\epsilon(p)-\m )}\right)\right]\\
+	&=-\frac{2\p N_s}{(2\p\hbar)^2}\int_0^\infty\frac{p^2}{2}\dd p\frac{(-\b  )e^{-\b(\epsilon(p)-\m )}}{1+e^{-\b(\epsilon(p)-\m )}}\dv{\epsilon}{p}\\
+	&=\frac{2\p N_s A\b }{(2\p\hbar)^2}\int_0^\infty\frac{p^2}{2}\dd p\frac{e^{-\b(\epsilon(p)-\m )} }{1+e^{-\b(\epsilon(p)-\m )}}\frac{pc^2}{\epsilon}\\
+	&=\frac{2\p N_s A\b c^2}{(2\p\hbar)^2}\int_0^\infty\dd p\frac{p^3}{2\epsilon}\frac{e^{-\b(\epsilon(p)-\m )}}{1+e^{-\b(\epsilon(p)-\m )}}\\
+	&=\frac{N_s A\b c^2}{(2\p\hbar)^2}\int\dd^2p \frac{p^2}{2\epsilon}\frac{e^{-\b(\epsilon(p)-\m )}}{1+e^{-\b(\epsilon(p)-\m )}},\qquad \b=\frac{1}{\k T}\\
+	&=\frac{N_s A c^2}{\k T(2\p\hbar)^2}\int\dd^2p \frac{p^2}{2\epsilon}\frac{e^{-\b(\epsilon(p)-\m )}}{1+e^{-\b(\epsilon(p)-\m )}}
+\end{align}
+\begin{equation}
+  \implies \boxed{P_{\rm Fermiones}=\frac{N_s  c^2}{(2\p\hbar)^2}\int\dd^2p \frac{p^2}{2\epsilon}\frac{e^{-\b(\epsilon(p)-\m )}}{1+e^{-\b(\epsilon(p)-\m )}}}
+\end{equation}
+
+Así, podemos considerar ambos casos,
+\begin{equation}
+ \boxed{ P=\frac{N_s  c^2}{(2\p\hbar)^2}\int\dd^2p \frac{p^2}{2\epsilon}\frac{e^{-\b(\epsilon(p)-\m )}}{1\pm e^{-\b(\epsilon(p)-\m )}}}
+\end{equation}
+donde el signo $(-)$ es para bosones y el $(+)$ para los fermiones.
+\end{sol}

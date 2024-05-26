@@ -1,0 +1,63 @@
+\section{Differentiable manifolds}
+\subsection{From Topological Spaces to Differentable Manifolds}
+%TODO agregar imagen
+It is assumed that the reader is acquainted with the notion of a topological space as a structure on which one can define a neighborhood and continuous functions. A \textbf{homeomorphism} between two topological spaces is a 1-1 map $\varphi: X\to Y$ for which both $\varphi$ and its inverse $\varphi^{-1}$ are continuous. If $\varphi$ and $\varphi^{-1}$ are continuously differentiable then $\varphi$ is called a \textbf{diffeomorphism}.
+
+A $D$-dimensional manifold $M^D$ is a topological space that locally has the properties of a $D$-dimensional Euclidean space $\mathbb{R}^D$ : A neighborhood of a point in $M^D$
+can continuously be mapped in a one-to-one way to the neighborhood of a point in
+$\mathbb{R}^D$. To be more precise, introduce a \textbf{chart} $(U_\alpha,\varphi_\alpha)$ as a homeomorphism $\varphi_\alpha$ from
+an open set $U_\alpha\subset M^D$ into an open set $R_\alpha\subset \mathbb{R}^D$. Two charts are compatible if the overlap maps are diffeomorphims $(\varphi_1\cdot \varphi_2\in C^\infty,\varphi_2\cdot \varphi_1^{-1}\in C^\infty)$ unless $U_1\cap U_2=\emptyset$. A set of compatible charts covering $M^D$ is called an atlas. In every chart the manifold can be equipped with a coordinate system: for $x\in M^D$ the coordinates are $x^\mu=\varphi(x)\in \mathbb{R}^D$. The naming makes it clear what one is aiming at. For instance the surface of a sphere, although not being homeomorphic to a plane, locally has enough smoothness to be mapped into an atlas. One chart is not sufficient since there will always be a point on the sphere that cannot be projected to the plane.
+
+In manuscript will only treat finite-dimensional manifolds. One possibility of extending the notion of manifolds to infinite dimensions is to consider Banach manifolds modeled on Banach spaces. It is also assumed that we are dealing with $C^\infty$ manifolds. In certain contexts it might suffice that the charts are $C^k$-related. Also complex manifolds are investigated in mathematics and applied to modern theoretical physics (catchword: Kähler manifolds). In these the transition functions are required to be analytic.
+
+\subsection{Tensor Bundles}
+On a manifold one can erect tensor bundles as “superstructures” by starting with defining the tangent and cotangent spaces of a manifold.
+
+\subsubsection{Tangent Bundle and Vector Fields}
+We are interested in the notion of vectors on a manifold $M$ (henceforth I will mostly drop the index for the dimension of the manifold and for the Euclidean space). The idea is to introduce these as tangent vectors of curves 'through' $x\in M$: A curve through a point $x$ is a smooth mapping of an interval $I=[0,1]\subset\mathbb{R}$ to the manifold:
+\begin{equation}
+  C=\mathbb{I}\to M\qquad t\mapsto C(t)\qquad \mbox{with}\qquad C(0)=x
+\end{equation}
+The coordinates of this curve are $x^\mu(C(t))$, and the tangent vector to this curve is
+\begin{equation}
+  \dv{t}x^\mu(C(t))
+\end{equation}
+Since one can have more then one curve with $C(0)=x$, the proper definition is: A \textit{tangent vector} $x\in M$ is an equivalence class of curves in $M$, where the equivalence relation between two curves is that they are tangent at the point $x$. Another-equivalent- definition is to understand a tangent vector as a directional derivative: Consider functions $f\in \mathcal{F}M$, that is $f:M\to \mathbb{R}$. The change of $f$ along a curve is given by
+\begin{equation}
+  \dv{t}f(C(t)),\qquad \mbox{locally}\qquad \pdv{x^\mu}f\dv{x^\mu(C(t))}{t}
+\end{equation}
+
+In defining
+\begin{equation}
+  X=(X^\mu\partial_\mu)\qquad \mbox{with}\qquad X^\mu =\dv{x^\mu(C(t))}{t}
+\end{equation}
+we can write $\dv{t}f(C(t))=Xf$. For every point along the curve we take this expression to define the differential operator $X_x$ as the tangent vector to the manifold in $x\in M$. All tangent vectors at a point in the manifold can be shown to build a vector space $\mathfrak{X}_xM$ isomorphic to $\mathbb{R}^D$. The natural basis in $\mathfrak{X}_xM$ is the coordinate or \textbf{holonomic} basis $\{\partial_\mu\}$. But of course any other (\textbf{anholonomic}) basis $\{e_I}
+\}$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

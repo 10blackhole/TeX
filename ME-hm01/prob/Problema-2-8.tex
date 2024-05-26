@@ -1,0 +1,91 @@
+\section{Problema 2.8}\label{prob:2.8}
+\begin{tcolorbox}
+\begin{problema}
+	Muestre que si el Problema \ref{prob:2.7} se repite para el caso de los fermiones, se cumple que
+	\begin{equation}
+  A_{\rm Fermiones}=\frac{7}{8}A_{\rm Bosones},\qquad B_{\rm Fermiones}=\frac{7}{8}B_{\rm Bosones}
+\end{equation}
+\end{problema}
+\end{tcolorbox}
+
+\begin{sol}
+	Ahora, repitamos el procedimiento del problema anterior pero este caso para los fermiones. Considerando el signo positivo en \eqref{zgc pm}. Así de \eqref{Omega zgc}, se tiene
+  \begin{align}
+  \frac{PV}{\k T}&=\frac{N_sV}{(2\p\hbar)^3}\int\dd^3p\ln\left(1+e^{-\b(\epsilon(p)-\m )}\right)\\
+  &=\frac{4\p N_s}{(2\p\hbar)^3}\int_0^\infty \dd p p ^2\ln\left(1+e^{-\b(\epsilon(p)-\m )}\right)\\
+  &=\frac{4\p N_s}{(2\p\hbar)^3}\left[\underbrace{\eval{\frac{p^3}{3}\ln\left(1+e^{-\b(\epsilon(p)-\m )}\right)}_{p=0}^{p=\infty}}_{0} -\int_0^\infty \frac{p^3}{3}\dd p\dv{p}\ln\left(1+e^{-\b(\epsilon(p)-\m )}\right)\right]\\
+  &=-\frac{4\p N_s}{(2\p\hbar)^3}\int_0^\infty \dd p\frac{p^3}{3}\frac{e^{-\b(\epsilon(p)-\m )}}{1+e^{-\b(\epsilon(p)-\m )}}\dv{\epsilon}{p}\left(-\b \right)\\
+  &=\frac{4\p N_s}{(2\p\hbar)^3}\frac{1}{3}\int_0^\infty\dd pp^3\frac{e^{-\b(\epsilon(p)-\m )}}{1+e^{-\b(\epsilon(p)-\m )}}\frac{pc^2}{\epsilon}\b \\
+  &=\frac{4\p N_sc^2}{(2\p\hbar)^3}\frac{1}{3}\int_0^\infty \dd pp^4\frac{e^{-\b(\epsilon(p)-\m )}}{1+e^{-\b(\epsilon(p)-\m )}}\b ,\qquad \b=\frac{1}{\k T}\\
+  &=\frac{N_s}{\k T(2\p\hbar)^3}\int\dd^3p\frac{p^2c^2}{3\epsilon}\frac{e^{-\b(\epsilon(p)-\m )}}{1+e^{-\b(\epsilon(p)-\m )}}
+\end{align}
+donde se usó \eqref{int-partes} en la integración por partes y \eqref{dedp} para $\dv*{\epsilon}{p}$. Así, multiplicando la última expresión por $\k T/V$, se tiene
+\begin{equation}
+  \boxed{P=\frac{N_s}{(2\p\hbar)^3}\int\dd^3p\frac{p^2c^2}{3\epsilon}\frac{e^{-\b (\epsilon(p)-\m )}}{1+e^{-\b (\epsilon(p)-\m )}}}
+\end{equation}
+notemos que es la misma expresión para el caso de los bosones \eqref{27-P} salvo el signo cambiado en el denominador. Luego, el procedimiento para calcular $P$, considerando ahora un gas de fermiones sin masa, cuya relación de dispersión es la relativista,
+\begin{equation}
+  \epsilon=pc
+\end{equation}
+es literalmente análogo al ya realizado. La única diferencia sustancial es que ahora debido al signo cambiado en el denominador, despues de realizar el cambio de variable \eqref{27-cambio-varable}, se tiene
+\begin{align}
+  P&=\frac{4\p N_sc}{3(2\p\hbar)^3}\left(\frac{1}{\b c}\right)^4\int_0^\infty \dd u\frac{u^3}{e^{u}+1}
+\end{align}
+Notemos que la integral que queda para resolver es distinta, pero igual se puede realizar con ayuda de algún software de cálculo analítico, resultando
+\begin{equation}
+  \int_0^\infty \dd u\frac{u^3}{e^{u}+1}=\frac{7\pi^4}{120}
+\end{equation}
+Luego,
+\begin{align}
+  P &=\frac{4\p N_sc}{3(2\p\hbar)^3}\left(\frac{1}{\b c}\right)^4\frac{7\p^4}{120},\qquad \b=\frac{1}{\k T}\\
+  &=\frac{4\p N_sc}{3(2\p\hbar)^3}\left(\frac{\k T}{c}\right)^4\frac{7\p^4}{120}\\
+  &=\frac{7}{720}\frac{\p^2N_s\k^4}{c^3\hbar^3}T^4
+\end{align}
+Luego, el coeficiente viene dado por
+\begin{equation}
+  \boxed{A_{\rm Fermiones}=\frac{7}{720}\frac{\p^2\k^4}{c^3\hbar^3}}
+\end{equation}
+Comparando con el coeficiente obtenido para los bosones, tenemos
+\begin{equation}
+  \boxed{\frac{A_{\rm Fermiones}}{A_{\rm Bosones}}=\frac{7}{720}\frac{\p^2\k^4}{c^3\hbar^3}\cdot \frac{90c^3\hbar^3}{\p^2\k^4}=\frac{7}{8}}
+\end{equation}
+
+Para calcular $E/V$ para el caso de los fermiones, usamos \eqref{J/E} donde ahora 
+\begin{equation}
+  f(\epsilon(p))=\frac{e^{-\b (\epsilon(p)-\m )}}{1+e^{-\b (\epsilon(p)-\m )}}
+\end{equation}
+de manera que
+\begin{align}
+  \frac{E}{V}&=\frac{N_s}{(2\p\hbar)^3}\int\dd^3p pc \frac{e^{-\b pc}}{1+e^{-\b pc}}
+\end{align}
+El cálculo vuelve a ser análogo que para el caso bosónico, con la misma diferencia en el denominador, por lo que la diferencia vuelve a aparecer en la integral a resolver despues de realizar el mismo cambio de variable,
+\begin{align}
+  \frac{E}{V}&=\frac{4\p cN_s}{(2\p\hbar)^3}\left(\frac{1}{\b c}\right)^4\underbrace{\int_0^\infty \dd u\frac{u^3}{e^{u}-1}}_{7\p^4/120},\qquad \b=\frac{1}{\k T}\\
+  &=\frac{4\p cN_s}{(2\p\hbar)^3}\left(\frac{\k T}{c}\right)^4\frac{7\p^4}{120}\\
+  &=\frac{7}{240}\frac{\p^2N_s\k^4}{\hbar^3c^3}T^4
+\end{align}
+Luego,
+\begin{equation}
+  \boxed{B_{\rm Fermiones}=\frac{7}{240}\frac{\p^2\k^4}{\hbar^3c^3}}
+\end{equation}
+Comparando con el coeficiente encontrado para el caso bosónico, tenemos
+\begin{equation}
+  \boxed{\frac{B_{\rm Fermones}}{B_{\rm Bosones}}=\frac{7}{240}\frac{\p^2\k^4}{\hbar^3c^3}\frac{30\hbar^3c^3}{\p^2\k^4}=\frac{7}{8}}
+\end{equation}
+Mostrando así lo pedido en el enunciado.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{sol}

@@ -1,0 +1,43 @@
+\newpage
+\section{Generalizaciones}
+El polinomio de Wheeler hasta Lovelock cúbico para $d=2m$ dimensiones, pareciera ser
+\begin{equation*}
+\begin{split}
+    &a^{2m}+\frac{\Lambda r^{2(m+1)}}{2(m^2-1)}+\textcolor{red}{\left(f(r)-\frac{2\gamma}{m}\right)}r^{2m}-4m(m-2)\alpha_2\textcolor{red}{\left(\left(f(r)-\frac{2\gamma}{m}\right)^2+\frac{4\gamma^2}{m^2(m-1)}\right)}r^{2(m-1)}\\
+    &+16m(m-1)(m-2)(m-3)\alpha_3\\
+    &\times\textcolor{red}{\left(\left(f(r)-\frac{2\gamma}{m}\right)^3-\frac{12f(r)\gamma^2}{m^2}+\frac{8\gamma^3}{m^3}+\frac{12f(r)\gamma}{m(m-1)}-\frac{8\gamma^3}{m(m-1)(m-2)}\right)}^{2(m-2)}=0
+\end{split}
+\end{equation*}
+o de forma más compacta, podemos considerar la siguiente serie
+\begin{equation}
+    \textcolor{red}{\sum_{k=0}^n(-1)^k\binom{n}{k}\frac{(m-k)!}{m!}f(r)^{n-k}(2\gamma)^k}
+\end{equation}
+las cuales se convierte en 
+\begin{equation*}
+    \sum_{l=0}^n\frac{\alpha_l(-4)^{l-1}r^{2(m-l+1)}(m!)^2}{(m-l-1)!(m-1+1)!}\frac{1}{m(m-1)}\sum_{k=0}^n(-1)^k\binom{n}{k}\frac{(m-k)!}{m!}f(r)^{n-k}(2\gamma)^k=a^{2m}
+\end{equation*}
+
+El polinomio de Wheeler para orden $n$ en la serie de Lovelock para $d=2m$ dimensiones, pareciera ser
+\begin{tcolorbox}
+\begin{equation*}
+   a^{2m} +\sum_{l=0}^{n}\frac{\alpha_l(-4)^{l-1}m!(m-2)!}{(m-l-1)!(m-l+1)!}F_l(r)r^{2(m-l+1)}=0
+\end{equation*}
+con
+% \begin{equation*}
+%     F_l(r)=\sum_{k=0}^l(-1)^k\binom{l}{k}f(r)^{l-k}\left(\frac{2\gamma}{m}\right)^k\left(1-\sigma+\sigma\frac{m^k(m-k)!}{m!}\right)
+% \end{equation*}
+% o
+\begin{equation*}
+    F_l(r)=\left(f(r)-\frac{2\gamma}{m}\right)^l+\sigma \sum_{k=0}^l(-1)^k\binom{l}{k}f(r)^{l-k}\left(\frac{2\gamma}{m}\right)^k\left(\frac{m^k(m-k)!}{m!}-1\right)
+\end{equation*}
+donde $\gamma=0,\pm 1$ para base manifolds productos de $(\mathbb{T}^2)$,$(\mathbb{S}^2)$ y $(\mathbb{H}^2)$ respectivamente.
+\end{tcolorbox}
+
+Para el caso cargado, considerando un ansatz de Maxwell alineado en la dirección del fibrado $U(1)$, se tiene
+\begin{equation*}
+    A=A_\mu\dd x^\mu=\left(\frac{p}{r^{2(m-1)}}+q r^2\right)(\dd t+\mathcal{B})
+\end{equation*}
+
+\begin{equation*}
+   a^{2m} +\sum_{l=0}^{n}\frac{p(-4)^{l-1}m!(m-2)!}{(m-l-1)!(m-l+1)!}F_l(r)r^{2(m-l+1)}+\frac{4(m-2)}{m-1}\left(\frac{p^2}{r^{2(m-1)}}+\frac{r^{2(m+1)}}{m+1}q^2\right)+16pq r^2=0
+\end{equation*}

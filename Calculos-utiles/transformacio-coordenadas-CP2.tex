@@ -1,0 +1,114 @@
+\section{Transformación de coordenadas $\mathbb{CP}^2$}
+La métrica de $\mathbb{CP}^2$ escrita en las coordenadas $x^\m=\{r,\th,\f,\psi\}$ luce como
+\begin{equation}\label{CP2.1}
+  \dd s^2=\frac{\dd r^2}{(1+\frac{\Lambda}{6}r^2)^2}+\frac{\dfrac{r^2}{4}}{(1+\frac{\Lambda}{6}r^2)^2}\sigma_3^2+\frac{\dfrac{r^2}{4}}{(1+\frac{\Lambda}{6}r^2)}(\sigma_1^2+\sigma_2^2)
+\end{equation}
+donde $0\leq r<\infty,0\leq\th\leq\p ,0\leq \f<2\p $ y $0\leq\psi\leq 4\p $, y las $\s_i$ son las formas invariantes izquierdas de Maurier-Cartan de $SU(2)$, definidas como
+\begin{align}
+  \s_1&=\cos\psi\dd\th+\sin\th\sin\psi \dd\f\\
+  \s_2&=-\sin\psi\dd\th+\sin\th\cos\psi \dd\f \\
+  \s_3&=\dd\psi+\cos\th\dd\f 
+\end{align}
+las cuales satisfacen $\dd\s_i+\frac{1}{2}\epsilon_{ijk}\s^{j}\wedge\s^k=0$. Además es directo notar que $\s_1^2+\s_2^2=\dd\Omega_2^2$ es el elemento de línea de las $2$-esfera unitaria. Luego, \eqref{CP2.1} puede ser escrita como
+\begin{equation}\label{CP2-r}
+  \dd s^2=\frac{\dd r^2}{(1+\frac{\Lambda}{6}r^2)^2}+\frac{\dfrac{r^2}{4}}{(1+\frac{\Lambda}{6}r^2)^2}(\dd\psi+\cos\th\dd\f )^2+\frac{\dfrac{r^2}{4}}{(1+\frac{\Lambda}{6}r^2)}(\dd\th^2+\sin^2\th\dd\phi^2)
+\end{equation}
+La métrica \eqref{CP2.1} es solución de las ecuaciones de Einstein con constante cosmológica en vacío
+\begin{equation}
+  R_{\m\n}-\frac{1}{2}Rg_{\m\n}+\Lambda g_{\m\n}=0
+\end{equation}
+%sujetas a $\Lambda=6$.
+% Se puede hacer que $\Lambda$ sea arbitrario colocando un factor de $\Lambda/6$ delante de los $r^2$ en los denominadores. (Para asegurar que esté bien lo hice así primero).
+
+
+Además,  esta métrica se puede expresar en términos de coordenadas periódicas $x'^\m=\{\th_1,\th_2,\f_1,\f_2\}$ como \footnote{Ver Ref. \cite{PhysRevD.106.084055} y Ref. \cite{Hoxha:2000jf}}
+\begin{equation}\label{CP2-angle}
+  \dd s^2=\frac{6}{\Lambda}\left[\dd\th_2^2+\sin^2\th_2\cos^2\th_2(\dd\f_2+\sin^2\th_1\dd\f_1)^2+\sin^2\th_2(\dd\th_1^2+\sin^2\th_1\cos^2\th_1\dd\f_1^2)\right]
+\end{equation}
+donde $0\leq\th_i\leq\p/2$ y $0\leq\f_i\leq 2\p $. Escrita en estas coordenadas es evidente que $\mathbb{CP}^2$ es una variedad compacta.
+
+La transformación de coordenadas que relaciona la métrica de $\mathbb{CP}^2$ escrita como \eqref{CP2-r} y \eqref{CP2-angle}
+% (\textcolor{purple}{up to el factor global $6$})
+ viene dada por
+\begin{equation}
+\left\{
+\begin{array}{ll}
+  r&=\sqrt{\dfrac{6}{\Lambda}}\tan\th_2 \\
+  \th&=2\th_1\\
+  \f&=-\f_1\\
+  \psi&=2\f_2+\f_1
+  \end{array}
+  \right.
+\end{equation}
+Es directo ver que
+\begin{align}
+  \dd r&=\sqrt{\dfrac{6}{\Lambda}}(1+\tan^2\th_2)\dd\th_2\\
+  \dd\th&=2\dd\th_1\\
+  \dd\f&=-\dd\f_1\\
+  \dd\psi&=2\dd\f_2+\dd\f_1
+\end{align}
+
+Para ver esto, expresemos cada término de \eqref{CP2-r} en términos de las coordenadas $x'^\m $. El primer término queda
+\begin{align}
+  \frac{\dd r^2}{(1+\frac{\Lambda}{6}r^2)^2}&=\frac{\frac{6}{\Lambda}(1+\tan^2\th_2)^2\dd\th_2^2}{(1+\tan^2\th_2)^2}=\frac{6}{\Lambda}\dd\th_2^2\label{1}
+\end{align}
+
+El segundo queda
+\begin{align}
+  \frac{\dfrac{r^2}{4}}{(1+\frac{\Lambda}{6}r^2)^2}(\dd\psi+\cos\th\dd\f )^2&=\frac{1}{4}\frac{6}{\Lambda}\frac{\tan^2\th_2}{(1+\tan^2\th_2)^2}\left[2\dd\f_2+\dd\f_1-\cos(2\th_1)\dd\f_1\right]^2
+\end{align}
+pero
+\begin{equation}
+  \frac{\tan^2\th_2}{(1+\tan^2\th_2)^2}=\sin^2\th_2\cos^2\th_2
+\end{equation}
+luego,
+\begin{align}
+   \frac{\dfrac{r^2}{4}}{(1+\frac{\Lambda}{6}r^2)^2}(\dd\psi+\cos\th\dd\f )^2&=\frac{6}{\Lambda}\frac{1}{4}\sin^2\th_2\cos^2\th_2\left[2\dd\f_2+\dd\f_1-\cos(2\th_1)\dd\f_1\right]^2\\
+   &=\frac{6}{\Lambda}\sin^2\th_2\cos^2\th_2\left[\frac{1}{2}(2\dd\f_2+\dd\f_1-\cos(2\th_1)\dd\f_1)\right]^2\\
+   &=\frac{6}{\Lambda}\sin^2\th_2\cos^2\th_2\left[\dd\f_2+\frac{1}{2}\dd\f_1-\frac{1}{2}\cos(2\th_1)\dd\f_1\right]^2\\
+   &=\frac{6}{\Lambda}\sin^2\th_2\cos^2\th_2\left[\dd\f_2+\frac{1}{2}\dd\f_1-\frac{1}{2}\cos^2(\th_1)\dd\f_1+\frac{1}{2}\sin^2(\th_1)\dd\f_1\right]^2\\
+   &=\frac{6}{\Lambda}\sin^2\th_2\cos^2\th_2\left[\dd\f_2+\sin^2(\th_1)\dd\f_1\right]^2\label{2}
+\end{align}
+donde se usó que $\cos(2\a )=\cos^2\a -\sin^2\a $.
+
+Finalmente el tercer término queda
+\begin{align}
+  \frac{\dfrac{r^2}{4}}{(1+\frac{\Lambda	}{6}r^2)}(\dd\th^2+\sin^2\th\dd\phi^2)&=\frac{6}{\Lambda}\frac{1}{4}\frac{\tan^2\th_2}{(1+\tan^2\th_2)}(4\dd\th_1^2+\sin^2(2\th_1)\dd\f_1^2)\\
+  &=\frac{6}{\Lambda}\frac{1}{4}\sin^2\th_2(4\dd\th_1^2+4\sin^2\th_1\cos^2\dd\f_1^2)\\
+  &=\frac{6}{\Lambda}\sin^2\th_2(\dd\th_1^2+\sin^2\th_1\cos^2\dd\f_1^2)\label{3}
+\end{align}
+donde se usó, 
+\begin{equation}
+  \frac{\tan^2\th_2}{1+\tan^2\th_2}=\sin^2\th_2,\qquad \sin(2\a )=2\sin\a\cos\a 
+\end{equation}
+Finalmente de \eqref{1}, \eqref{2} y \eqref{3} se tiene en efecto
+\begin{align}
+  \dd s^2&=\frac{\dd r^2}{(1+\frac{\Lambda}{6}r^2)^2}+\frac{\dfrac{r^2}{4}}{(1+\frac{\Lambda}{6}r^2)^2}(\dd\psi+\cos\th\dd\f )^2+\frac{\dfrac{r^2}{4}}{(1+\frac{\Lambda}{6}r^2)}(\dd\th^2+\sin^2\th\dd\phi^2)\\
+  &=\frac{6}{\Lambda}[\dd\th_2^2+\sin^2\th_2\cos^2\th_2(\dd\f_2+\sin^2\th_1\dd\f_1)^2+\sin^2\th_2(\dd\th_1^2+\sin^2\th_1\cos^2\th_1\dd\f_1^2)]\label{no-6}
+\end{align}
+
+%Notar el factor global de $6$ que no está presente en \eqref{no-6} si se compara con \eqref{CP2-angle}.
+
+Debido a los rangos de las coordenadas $x'^\m=\{\th_1,\th_2,\f_1,\f_2\}$, se tiene que el rango de las coordenadas $x^\m$ es $0\leq r<\infty,0\leq\th\leq\p ,0\leq \f<2\p $ y \textcolor{purple}{$0\leq\psi\leq 6\p $} \footnote{El rango de la coordenada $\psi$ no coincide con el que debería tener.} .
+
+
+
+\begin{align}
+  \sigma_1&=-4\cos\th_1\sin\th_1(\sin\f_2\cos\f_2\cos\f_1+\cos^2\th_2\sin\f_1)\dd\f_1\\
+  &~~~~ + 2(\cos^2\f_2\cos\f_1-2\sin\f_2\cos\f_2\sin\f_1-\cos\f_1)\dd\th_1\\
+  \sigma_2&=-2\cos\th_1\sin\th_1(2\cos^2\f_2\cos\f_1-2\sin\f_2\cos\f_2\sin\f_1-\cos\f_1)\dd\f_1\\
+  &~~~~ -2(2\sin\f_2\cos\f_2\cos\f_1+2\cos^2\f_2\sin\f_1-\sin\f_1)\dd \th_1\\
+  \sigma3&=2\dd\f_2+2\sin^2\th_1\dd\f_1
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+

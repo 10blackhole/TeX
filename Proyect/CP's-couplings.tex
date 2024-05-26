@@ -1,0 +1,101 @@
+% \chapter{CP's self duality Lovelock}
+\section{Polynomial constraint}
+% The $\mathbb{CP}^k$ are solutions of the equations of Lovelock in $D=2k$ dimensions up to a polynomial constraint over the Lovelock couplings $\alpha_p$. For intance, the following are the constraints to order $1,2$ and $3$ in the Lovelock series for $\mathbb{CP}^2,\mathbb{CP}^3$ and $\mathbb{CP}^4$ respectively
+% % \begin{align*}
+% %     \alpha_0+2\alpha_1&=0\\
+% %     \alpha_0+4\alpha_1+6\alpha_2&=0\\
+% %     25\alpha_0+15\alpha_1+480\alpha_2+576\alpha_3&=0
+% % \end{align*}
+
+% \begin{align*}
+%     -\frac{\alpha_0}{2}-\alpha_1&=0\\
+%     -\frac{\alpha_0}{2}-2\alpha_1-3\alpha_1&=0\\
+%     -\frac{\alpha_0}{2}-3\alpha_1-\frac{48}{5}\alpha_2-\frac{288}{25}\alpha_3&=0
+% \end{align*}
+
+A property of the $\mathbb{CP}^k$ spaces is that they are Lovelock constant, that is, each tensor of the equations of motion is proportional to the metric. Here are some examples:
+
+For $\mathbb{CP}^2$ in Einstein gravity we have
+\begin{align*}
+    -\frac{\alpha_0}{2}\delta^\mu_\nu&=-\frac{\alpha_0}{2}\delta^\mu_\nu\\
+    \alpha_1\left(R^\mu_\nu-\frac{1}{2}\delta^\mu_\nu\right)&=-\alpha_1\delta^\mu_\nu
+\end{align*}
+
+For $\mathbb{CP}^3$ in Einstein-Gauss-Bonnet gravity,
+\begin{align*}
+    -\frac{\alpha_0}{2}\delta^\mu_\nu&=-\frac{\alpha_0}{2}\delta^\mu_\nu\\
+    \alpha_1\left(R^\mu_\nu-\frac{1}{2}\delta^\mu_\nu\right)&=-2\alpha_1\delta^\mu_\nu\\
+    \alpha_2 H^\mu_\nu&=-3\alpha_2\delta^\mu_\nu
+\end{align*}
+
+For $\mathbb{CP}^4$ in cubic Lovelock,
+\begin{align*}
+    -\frac{\alpha_0}{2}\delta^\mu_\nu&=-\frac{\alpha_0}{2}\delta^\mu_\nu\\
+    \alpha_1\left(R^\mu_\nu-\frac{1}{2}\delta^\mu_\nu\right)&=-3\alpha_1\delta^\mu_\nu\\
+    \alpha_2 H^\mu_\nu&=-\frac{48}{5}\alpha_2\delta^\mu_\nu\\
+    \alpha_3M^\mu_\nu&=-\frac{288}{25}\alpha_3\delta^\mu_\nu
+\end{align*}
+where
+\begin{align*}
+    H^\mu_\nu=-\frac{1}{8}\delta^{\mu\mu_1...\mu_4}_{\nu\nu_1...\nu_4}R^{\nu_1\nu_2}_{\  \mu_1\mu_2}R^{\nu_3\nu_3}_{\  \mu_3\mu_4}
+\end{align*}
+and
+\begin{align*}
+    M^\mu_\nu=-\frac{1}{16}\delta^{\mu\mu_1...\mu_6}_{\nu\nu_1...\nu_6}R^{\nu_1\nu_2}_{\  \mu_1\mu_2}R^{\nu_3\nu_3}_{\  \mu_3\mu_4}R^{\nu_5\nu_6}_{\  \mu_5\mu_6}
+\end{align*}
+
+In this way, the $\mathbb{CP}^k$ spaces are solution of the Lovelock equations in $D=2k$ dimensions up to a polynomial constraint on the Lovelock couplings $\alpha_p$. For intance, the following are the constraints to order $1,2$ and $3$ in the Lovelock series for $\mathbb{CP}^2,\mathbb{CP}^3$, $\mathbb{CP}^4,\mathbb{CP}^5$ and $\mathbb{CP}^6$ respectively
+\begin{align*}
+    \frac{\alpha_0}{2}+\alpha_1&=0\\
+    \frac{\alpha_0}{2}+2\alpha_1+3\alpha_2&=0\\
+    \frac{\alpha_0}{2}+3\alpha_1+\frac{48}{5}\alpha_2+\frac{288}{25}\alpha_3&=0\\
+    \frac{\alpha_0}{2}+4\alpha_1+20\alpha_2+\frac{160}{3}\alpha_3&=0\\
+    \frac{\alpha_0}{2}+5\alpha_1+\frac{240}{7}\alpha_2+\frac{7200}{49}\alpha_3&=0
+\end{align*}
+
+In general, for Einstein gravity we have that $\mathbb{CP}^k$ spaces satisfy the the equations of motion up to the following polynomial constraint
+\begin{equation*}
+    \frac{\alpha_0}{2}+(k-1)\alpha_1=0
+\end{equation*}
+
+The polynomial constraint for cubic Lovelock gravity is
+\begin{equation*}
+    \frac{\alpha_0}{2}+(k-1)\alpha_1+\frac{2k(k-1)(k-2)}{k+1}\alpha_2+\frac{4k(k-1)^2(k-2)(k-3)}{(k+1)^2}\alpha_3=0
+\end{equation*}
+or equivantly
+\begin{equation*}
+    \frac{\alpha_0}{2k}\binom{k}{1}+\frac{2\alpha_1}{k}\binom{k}{2}+\frac{12\alpha_2}{k+1}\binom{k}{3}+\frac{96\alpha_3(k-1)}{(k+1)^2}\binom{k}{4}=0
+\end{equation*}
+
+\begin{tcolorbox}
+In a more compact way, the polynomial constraint so that the $\mathbb{CP}^k (\gamma=1)$ and $\mathbb{CH}^k (\gamma=-1)$ satisfy the Lovelock equations is
+\begin{equation*}
+    \frac{1}{k}\sum_{p=0}^n\binom{k}{k-p}^2\frac{l!^2(k-p)}{(k-p+1)}\left(\frac{2}{k+1}\right)^{p-1}\alpha_p=0
+\end{equation*}
+or equivantely
+\begin{equation*}
+    \frac{k!^2}{k}\sum_{p=0}^n\frac{\alpha_p}{(k-p-1)!(k-p+1)!}\left(\frac{2\gamma}{k+1}\right)^{p-1}=0
+\end{equation*}
+\end{tcolorbox}
+
+The Lovelock constant property reads as
+\begin{equation*}
+    -\frac{1}{2^{p+1}}\delta^{\mu\mu_1....\mu_{2p}}_{\nu\nu_1....\nu_{2p}}R^{\nu_1\nu_2}_{\ \mu_1\mu_2}\cdots R^{\nu_{2p-1}\nu_{2p}}_{\ \mu_{2p-1}\mu_{2p}}=\frac{k!^2}{k}\frac{1}{(k-p-1)!(k-p+1)!}\left(\frac{2}{k+1}\right)^{p-1}\delta^\mu_\nu
+\end{equation*}
+
+\begin{tcolorbox}
+In a more compact way, the polynomial constraint so that the $\mathbb{CP}^k (\gamma=1)$ and $\mathbb{CH}^k (\gamma=-1)$ satisfy the Lovelock equations is
+\begin{equation*}
+    \frac{k!^2}{k}\sum_{p=0}^n\frac{\alpha_p}{(k-p-1)!(k-p+1)!}\left(\frac{2\gamma}{k+1}\right)^{p-1}=0
+\end{equation*}
+\end{tcolorbox}
+
+\newpage
+The Einstein-Hilbert equations of motion are
+\begin{equation*}
+    -\sum_{p=0}^1\frac{\alpha_p}{2^{p+1}}\delta^{\mu\mu_1\mu_2}_{\nu\nu_1\nu_2}R^{\nu_1\nu_2}_{\mu_1\mu_2}=-\frac{\alpha_0}{2}\delta^\mu_\nu+\alpha_1\left(R^\mu_\nu-\frac{1}{2}R\delta^\mu_\nu\right)
+\end{equation*}
+but they can also be written as
+\begin{equation*}
+    -\frac{1}{4}\delta^{\mu\mu_1\mu_2}_{\nu\nu_1\nu_2}\left(R^{\nu_1\nu_2}_{\mu_1\mu_2}+c_1^{(1)}\delta^{\nu_1\nu_2}_{\mu_1\mu_2}\right)=R^\mu_\nu-\frac{1}{2}R\delta^\mu_\nu-10c_1^{(1)}\delta^\mu_\nu
+\end{equation*}
