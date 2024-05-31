@@ -1,0 +1,124 @@
+\section{Skyrme model}
+Un campo de Skyrme es descrito por un modelo sigma no lineal con términos adicionales el cual puede ser escrito convenientemente en términos de un campo escalar $U$ valuado sobre algún grupo, digamos $SU(2)$. El Lagrangiano de Skyrme describe interacciones no-lineales a bajas energías de piones o bariones.
+
+La acción de Einstein-Skyrme viene dada por
+\begin{equation}
+  S=S_G+S_{\rm Skyrme}
+\end{equation}
+donde 
+\begin{align}
+  S_G&=\kappa\int\dd^4x\sqrt{-g}(R-2\Lambda)\\
+  S_{\rm Skyrme}&=\frac{K}{2}\int\dd^4x\sqrt{-g}\Tr\left(\frac{1}{2}R^\m R_\m +\frac{\lambda}{16}F_{\m\n }F^{\m\n }\right)
+\end{align}
+con $\kappa=(16\p G)^{-1}$, donde $G$ es la constante gravitacional de Newton y los parámetros $K$ y $\lambda$ son fijados por el experimento. Aquí $R_\m $ y $F_{\m\n }$ se definen según
+\begin{align}
+  R_\m :=U^{-1}\nabla_\m U\label{R}\\
+  F_{\m\n}:=[R_\m, R_\n ]\label{F}
+\end{align}
+
+Las ecuaciones de Einstein resultantes son
+\begin{equation}
+  G_{\m\n }+\Lambda g_{\m\n }=\frac{1}{2\k }T_{\m\n }
+\end{equation}
+donde
+\begin{equation}
+  T_{\m\n }=-\frac{K}{2}\Tr\left[\left(R_\m R_\n -\frac{1}{2}g_{\m\n }R^\a R_\a \right)+\frac{\lambda}{4}\left(F_{\m\a }F_\n ^{~\a }-\frac{1}{4}g_{\m\n }F_{\a\b }F^{\a\b}\right)\right]
+\end{equation}
+
+Las ecuaciones de Skyrme vienen dadas por
+\begin{equation}
+  \nabla^\m R_\m +\frac{\lambda}{4}\nabla^\m [R^\n ,F_{\m\n }]=0
+\end{equation}
+
+Aquí $R_\m $ es expresado como
+\begin{equation}
+  R_\m =R_\m ^{i}t_i,\qquad i=1,2,3
+\end{equation}
+en la base de los generadores de $SU(2)$ $t_i$. Los índices de grupo (índices latinos) son subiso y bajados con la métrica plana $\d_{ij}$. Duchos generadores satisfacen la siguiente relación
+\begin{equation}\label{titj}
+  t_it_j=-\d_{ij}\id-\epsilon_{ijk}t_k
+\end{equation}
+donde $\id $ es la matriz identidad de $2\times 2$ y $\epsilon_{ijk}$ es el símbolo de Levi-Civita totalemnte antisimétrico con $\epsilon_{123}=\epsilon^{123}=1$. Los generadores $t_j$ se relacionan con las matrices de Pauli mediante $t_j=-i\sigma_j$.
+
+Usando \eqref{titj} obtenemos la siguiente relación de conmutación,
+\begin{align}
+  [t_i,t_j]&=t_it_j-t_jt_i\\
+  &=-\d_{ij}\id -\epsilon_{ijk}t_k+\d_{ji}\id +\epsilon_{jik}t_k\\
+  &=-2\epsilon_{ijk}t_k\label{[titj]}
+\end{align}
+
+De auí en adelante usaremos la parametrización estandar para un campo escalar $U(x^\m )$ valuado sobre $SU(2)$ dada por
+\begin{equation}\label{U}
+  U^{\pm }(x^\m )=Y^0(x^\m )\id \pm Y^{i}(x^\m )t_i
+\end{equation}
+donde los $Y^0$ y $Y^{i}$ satisfacen
+\begin{equation}
+  (Y^0)^2+Y^{i}Y_i=1
+\end{equation}
+Tomándole la derivada covariante a esta expresión es directo ver que
+\begin{equation}\label{ydy0}
+  Y^0\nabla_\m Y_0+Y^{i}\nabla_\m Y_i=0
+\end{equation}
+
+Con el fin de calcular cosas en esta teoría, es conveniente expresar cada uno de los objetos obtenidos a partir de $R_\m^{i}t_i$ a lo largo de los generadores del grupo, y es lo que haremos a partir de ahora.
+
+De \eqref{R} y \eqref{U}
+\begin{align}
+  R_\m&=U^{-1}\nabla_\m U\\
+  &=(Y^0\id-Y^{i}t_i)\nabla_\m (Y^0\id +Y^jt_j)\\
+  &=(Y^0\id-Y^{i}t_i)(\nabla_\m Y^0\id +\nabla_\m Y^jt_j)\\
+  &=Y^0\nabla_\m Y^0\id+Y^0\nabla Y^jt_j-Y^{i}\nabla Y^0t_i-Y^{i}\nabla_\m Y^jt_it_j\\
+  &=Y^0\nabla_\m Y^0\id+Y^0\nabla Y^jt_j-Y^{i}\nabla Y^0t_i+Y^{i}\nabla_\m Y^j(\d_{ij}\id+\epsilon_{ijk}t_k)\\
+  &=\underbrace{(Y^0\nabla_\m Y^0+Y^{i}\nabla_\m Y^{i})}_0\id +Y^0\nabla Y^it_i-Y^{i}\nabla Y^0t_i+\epsilon_{ijk}Y^{i}\nabla_\m Y^jt_k\\
+  &=Y^0\nabla Y^it_i-Y^{i}\nabla Y^0t_i+\epsilon_{ijk}Y^{i}\nabla_\m Y^jt_k
+\end{align}
+donde hemos usado \eqref{ydy0}. Así, las componentes de $R_\m $ a lo largo de los generadores de $SU(2)$ vienen dadas por
+\begin{equation}
+  \boxed{R_\m^k=\epsilon^{ijk}Y_{i}\nabla_\m Y_j+Y^0\nabla Y^k-Y^{k}\nabla Y^0}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
