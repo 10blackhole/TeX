@@ -1,7 +1,7 @@
 \section{Ecuaciones de movimiento}
 Calculemos las ecuaciones de movimiento asociadas los invariantes usando que
 \begin{equation}
-  \delta R^{ab}=\D \d \omega^{a}
+  \delta R^{ab}=\D \d \omega^{ab}
 \end{equation}
 y
 \begin{equation}
@@ -17,7 +17,62 @@ y
 %\begin{equation}
 %  \d_e(\tilde{T}^{a}\tilde{e}_a)=\phi^4(\D\d e^{a}e_a+T^{a}\d e_a)
 %\end{equation}
+\subsection{Primer caso}
+Consideremos el siguiente Lagrangeano
+\begin{equation}
+  L[e,\omega,\f ]=L[e,\omega]_{EC\Lambda}-L[e,\omega,\f ]_M
+\end{equation}
+donde 
+%\begin{equation}
+%  L_M=\eabc \f^2R^{ab}e^c+\frac{8\lambda}{3}\left(1-\frac{\lambda}{2}\right)\eabc z^2e^{a}e^be^c+4\lambda\f \eabc z^{a}T^be^c+V(\f )\eabc e^{a}e^be^c
+%\end{equation}
+\begin{align}
+ \Aboxed{ L_M&=\frac{1}{16}\eabc \left(\f^2R^{ab}e^c+\frac{4\lambda}{3}(2-\lambda)z^2e^{a}e^be^c+4\lambda\f z^{a}T^be^c+V(\f )e^{a}e^be^c\right)}
+\end{align}
 
+\textbf{Variaciones con respecto a $e$}:
+
+El primer término queda
+\begin{align}
+  \d_e\left(\frac{1}{16}\eabc\f^2R^{ab}e^c\right)&=\frac{1}{16}\eabc\f^2R^{ab}\d e^c
+\end{align}
+El segundo
+\begin{align}
+  \d_e\left(\frac{\lambda }{12}(2-\lambda)z^2e^{a}e^be^c\right)&=\frac{\lambda(\lambda-2)}{2}\eabc z_dz^{a}e^be^c\d e^d+\frac{\lambda}{4}(2-\lambda)\eabc z^2e^{a}e^be^c
+\end{align}
+donde hemos usado que
+\begin{equation}
+  \eabc z_dI^n(\d e^d)z_ne^{a}e^be^c=3\lambda(\lambda-2)\eabc z_dz^{a}e^be^c\d e^d
+\end{equation}
+El tercero
+\begin{align}
+  \d_e\left(\frac{\lambda}{4}\eabc \f z^{a}T^be^c\right)&=\frac{\lambda}{4}\eabc \f z^{a}T^b\d e^c-\frac{\lambda }{4}\eabc \f I^nT^{a}e^b\d e^c+\frac{\lambda}{4}\eabc z^{a}\dd\f e^b\d e^c\\&~~-\frac{\lambda}{4}\eabc \f \D z^{a}e^d\d e^c
+\end{align}
+Finalmente,
+\begin{tcolorbox}
+\begin{align}
+  \tau_c&=\frac{1}{4}\eabc\left(\frac{\f^2}{4}R^{ab}+\lambda\f z^{a}T^b\right)+\frac{\lambda}{4}(2-\lambda)\eabc z^2e^{a}e^b +\frac{3}{16}\eabc V(\f )e^{a}e^b\\
+  &~~-\frac{\lambda}{4}\eabc\left[\f \D z^{a}e^b+\f z_nI^nT^{a}e^b-z^{a}\dd \f e^b\right]+\frac{\lambda(\lambda-2)}{2}\eabc z_dz^{a}e^be^c\d e^d
+\end{align}
+\end{tcolorbox}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Segundo caso}
 Consideremos el siguiente Lagrangeano
 \begin{equation}
   L=\a_0\o_{a}\left(\dd\o^{a}+\frac{2}{3}\epsilon^{abc}\o_b\o_c\right)+\a_1T^{a}e_a-\a_2\phi^4T^{a}e_a

@@ -487,57 +487,102 @@ Primero
   &=\phi^2\epsilon_{abc}\left(R^{ab}\wedge e^c+\lambda \D \Sigma^{ab}\wedge e^c+\lambda^2 \Sigma^{a}_{~d}\wedge \Sigma^{db}\wedge e^c\right)\label{inv}
 %  &=\phi^2\epsilon_{abc}R^{ab}\wedge e^c-2\lambda \epsilon_{abc}\dd\phi\wedge\chi^{ab}\wedge e^c+2\lambda\phi\epsilon_{abc}\D \chi^{ab}\wedge e^c+4\lambda^2\epsilon_{abc}\chi^{a}_{~d}\wedge\chi^{db}\wedge e^c
 \end{align}
-Trabajemos un poco más los últimos dos términos\footnote{De aquí en adelante para simplificar notación, consideraremos el \textit{wedge product} implícito.}. Calculemos $\eabc \D\S^{ab}e^c$,
+Trabajemos un poco más los últimos dos términos\footnote{De aquí en adelante para simplificar notación, consideraremos el \textit{wedge product} implícito.}. 
+
+Primero, integremos por partes $\eabc\f^2 \D\Sigma^{ab}e^c$. Notemos que
 \begin{align}
-  \eabc \D\S^{ab}e^c&=-\frac{4}{\phi^2}\eabc\dd\phi e^{a}z^be^c+\frac{2}{\phi}\eabc \D(2e^{a}z^b)e^c\\
-  &=-\frac{4}{\phi^2}\eabc\dd\phi e^{a}z^be^c+\frac{4}{\phi}\eabc T^{a}z^be^c-\frac{4}{\phi}\eabc e^{a}\D z^be^c
+  \eabc\D(\f^2\Sigma^{ab}e^c)&=2\eabc \f\dd\f\Sigma^{ab}e^c+\eabc\f^2\D\Sigma^{ab}e^c-\eabc\f^2\Sigma^{ab}T^c
 \end{align}
 Luego,
-\begin{equation}\label{2do termino}
-  \lambda\phi^2\eabc\D \S^{ab}e^c=-4\lambda\dd\phi e^{a}z^be^c+4\lambda\phi\eabc T^{a}z^be^c-4\lambda\eabc e^{a}\D z^be^c
+\begin{align}
+  \eabc\f^2\D\Sigma^{ab}e^c&=\eabc\f^2\Sigma^{ab}T^c-2\f\eabc\dd\f\Sigma^{ab}e^c+\rm b.t\\
+  &=4\f\eabc z^{a}T^be^c-8\f\eabc\dd\f e^{a}z^be^c
+\end{align}
+
+Además,
+\begin{align}
+  \eabc\f^2\Sigma^{a}_{~d}\Sigma^{db}e^c&=-\frac{4}{3}\frac{1}{\f^2}z^2e^{a}e^be^c
+\end{align}
+donde hemos usado que
+\begin{equation}\label{prop}
+  2\det(e)\partial_\m \f\partial^\m \d\dd^3x=\frac{1}{3}\eabc z^2e^{a}e^be^c
+\end{equation}
+Finalmente,
+\begin{align}
+  \eabc\tilde{R}^{ab}\tilde{e}^c&=\eabc \f^2R^{ab}e^c+4\lambda\f\eabc z^{a}T^be^c-8\lambda\eabc\f\dd\f e^{a}e^be^c-\frac{4\lambda^2}{3}\eabc z^2e^{a}e^be^c
+\end{align}
+Usando \eqref{prop},
+\begin{equation}
+  \eabc\f\dd\f e^{a}z^be^c=-2\det(e)\partial_\m \f\partial^\m \dd^3x=-\frac{1}{3}\eabc z^2e^{a}e^be^c
+\end{equation}
+Luego,
+\begin{align}
+  \eabc\tilde{R}^{ab}\tilde{e}^c&=\eabc \f^2R^{ab}e^c+4\lambda\f\eabc z^{a}T^be^c+\frac{8\lambda}{3}\eabc z^2e^{a}e^be^c-\frac{4\lambda^2}{3}\eabc z^2e^{a}e^be^c
+\end{align}
+\begin{equation}\label{L1}
+  \boxed{\eabc\tilde{R}^{ab}\tilde{e}^c=\eabc \f^2R^{ab}e^c +\frac{8\lambda}{3}\left(1-\frac{\lambda}{2}\right)\eabc z^2e^{a}e^be^c  +4\lambda\f\eabc z^{a}T^be^c}
 \end{equation}
 
-Ahora calculemos $\eabc\S^{a}_{~d}\S^{db}e^c$,
-\begin{align}
-  \eabc\S^{a}_{~d}\S^{db}e^c&=\frac{4}{\phi}\eabc(e^{a}z_d-z^{a}e_d)(e^dz^b-z^de^b)e^c\\
-  &=\frac{8}{\phi^2}\eabc e^{a}\dd\f z^be^c-\frac{4}{\f^2}\eabc z^2e^{a}e^be^c
-\end{align}
-Sin embargo, estos dos términos se pueden relacionar. Para evidenciar esto, escribámoslos en la base coordenada
-\begin{align}
-  \eabc z^2e^{a}e^be^c&=\eabc z^2e^{a}_\m e^b_\n e^c_\lambda \dd x^\m\wedge\dd x^\n\wedge\dd x^\lambda\\
-  &=\eabc e^{d}_\r \partial^\r\phi e^\t_d\partial_t\phi e^{a}_\m e^b_\n e^c_\lambda \dd x^\m\wedge\dd x^\n\wedge\dd x^\lambda\\
-  &=\det(e)\ep_{\m\n\lambda}\ep^{\m\n\lambda}\delta ^\t_\r \partial^\r\phi\partial_\t\phi\dd^3x\\
-  &=6\det(e)\partial_\m\phi\partial^\m\phi\dd^3x\label{z2eee}
-\end{align}
-de manera similar,
-\begin{align}
-  \eabc e^{a}\dd\phi z^be^c&=\eabc e^{a}_\m\partial_\n \phi z^be^c_\lambda \dd x^\m \wedge\dd x^\n\wedge\dd x^\lambda\\
-  &=2\det(e)\partial_\m\phi\partial^\m\phi\dd^3x\\
-  &=\frac{1}{3}\eabc z^2e^{a}e^be^c
-\end{align}
-Así
-\begin{equation}
-  \eabc\Sigma^{a}_{~d}\S^{db}e^c=-\frac{4}{3}\frac{1}{\f^2}\eabc z^2e^{a}e^be^c
-\end{equation}
-De esta manera \eqref{inv} queda
-\begin{align*}
-    \epsilon_{abc}\tilde{R}^{ab} \tilde{e}^c&=\phi^2\epsilon_{abc}\left(R^{ab} e^c+\lambda \D \Sigma^{ab} e^c+\lambda^2 \Sigma^{a}_{~d} \Sigma^{db} e^c\right)\\
-    &=\f^2\eabc R^{ab}e^c-4\eabc\lambda\dd\f e^{a}z^be^c+4\lambda \f\eabc(T^{a}z^be^c-e^{a}\D z^be^c)-\frac{4\lambda^2}{3}\eabc z^2e^{a}e^be^c\\
-    &=\f^2\eabc R^{ab}e^c+\frac{4\lambda}{3}\eabc z^2e^{a}e^be^c+4\lambda \f\eabc(T^{a}z^be^c-e^{a}\D z^be^c)-\frac{4\lambda^2}{3}\eabc z^2e^{a}e^be^c\\
-    &=\f^2\eabc R^{ab}e^c+\frac{4\lambda}{3}\eabc z^2e^{a}e^be^c(1-\lambda)+4\lambda \f\eabc(T^{a}z^be^c-e^{a}\D z^be^c)
-\end{align*}
-Notemos que dado que estas cantidades construiremos una acción, podemos manipular los términos de manera de ir armando términos de borde y hacer que la acción sea quasi-invariante bajo transformaciones conformes. En particular notemos que
-\begin{align}
-  \f\eabc e^{a}\D z^be^c&=2\det(e)\phi\nabla_\m\partial^\m \f\dd^3x\\
-  &=-2\det(e)\nabla_\m\f\partial^\m\f \dd^3x+\rm b.t.\\
- &=-\frac{1}{3}\eabc z^2e^{a}e^be^c+\rm b.t.
-\end{align}
-Luego,
-\begin{align}
-  \epsilon_{abc}\tilde{R}^{ab} \tilde{e}^c&=\phi^2\epsilon_{abc}\left(R^{ab} e^c+\lambda \D \Sigma^{ab} e^c+\lambda^2 \Sigma^{a}_{~d} \Sigma^{db} e^c\right)\\
-  &=\f^2\eabc R^{ab}e^c+\frac{4\lambda}{3}(2-\lambda)\eabc z^2e^{a}e^be^c+4\lambda \f\eabc T^{a}z^be^c + \rm b.t.\\
-  &=\f^2\eabc R^{ab}e^c+\frac{8\lambda}{3}\left(1-\frac{\lambda}{2}\right)\eabc z^2e^{a}e^be^c+4\lambda \f\eabc T^{a}z^be^c + \rm b.t.
-\end{align}
+
+
+
+
+
+
+
+
+
+%Calculemos $\eabc \D\S^{ab}e^c$,
+%\begin{align}
+%  \eabc \D\S^{ab}e^c&=-\frac{4}{\phi^2}\eabc\dd\phi e^{a}z^be^c+\frac{2}{\phi}\eabc \D(2e^{a}z^b)e^c\\
+%  &=-\frac{4}{\phi^2}\eabc\dd\phi e^{a}z^be^c+\frac{4}{\phi}\eabc T^{a}z^be^c-\frac{4}{\phi}\eabc e^{a}\D z^be^c
+%\end{align}
+%Luego,
+%\begin{equation}\label{2do termino}
+%  \lambda\phi^2\eabc\D \S^{ab}e^c=-4\lambda\eabc\dd\phi e^{a}z^be^c+4\lambda\phi\eabc T^{a}z^be^c-4\lambda\eabc e^{a}\D z^be^c
+%\end{equation}
+%
+%Ahora calculemos $\eabc\S^{a}_{~d}\S^{db}e^c$,
+%\begin{align}
+%  \eabc\S^{a}_{~d}\S^{db}e^c&=\frac{4}{\phi}\eabc(e^{a}z_d-z^{a}e_d)(e^dz^b-z^de^b)e^c\\
+%  &=\frac{8}{\phi^2}\eabc e^{a}\dd\f z^be^c-\frac{4}{\f^2}\eabc z^2e^{a}e^be^c
+%\end{align}
+%Sin embargo, estos dos términos se pueden relacionar. Para evidenciar esto, escribámoslos en la base coordenada
+%\begin{align}
+%  \eabc z^2e^{a}e^be^c&=\eabc z^2e^{a}_\m e^b_\n e^c_\lambda \dd x^\m\wedge\dd x^\n\wedge\dd x^\lambda\\
+%  &=\eabc e^{d}_\r \partial^\r\phi e^\t_d\partial_t\phi e^{a}_\m e^b_\n e^c_\lambda \dd x^\m\wedge\dd x^\n\wedge\dd x^\lambda\\
+%  &=\det(e)\ep_{\m\n\lambda}\ep^{\m\n\lambda}\delta ^\t_\r \partial^\r\phi\partial_\t\phi\dd^3x\\
+%  &=6\det(e)\partial_\m\phi\partial^\m\phi\dd^3x\label{z2eee}
+%\end{align}
+%de manera similar,
+%\begin{align}
+%  \eabc e^{a}\dd\phi z^be^c&=\eabc e^{a}_\m\partial_\n \phi z^be^c_\lambda \dd x^\m \wedge\dd x^\n\wedge\dd x^\lambda\\
+%  &=2\det(e)\partial_\m\phi\partial^\m\phi\dd^3x\\
+%  &=\frac{1}{3}\eabc z^2e^{a}e^be^c
+%\end{align}
+%Así
+%\begin{equation}
+%  \eabc\Sigma^{a}_{~d}\S^{db}e^c=-\frac{4}{3}\frac{1}{\f^2}\eabc z^2e^{a}e^be^c
+%\end{equation}
+%De esta manera \eqref{inv} queda
+%\begin{align*}
+%    \epsilon_{abc}\tilde{R}^{ab} \tilde{e}^c&=\phi^2\epsilon_{abc}\left(R^{ab} e^c+\lambda \D \Sigma^{ab} e^c+\lambda^2 \Sigma^{a}_{~d} \Sigma^{db} e^c\right)\\
+%    &=\f^2\eabc R^{ab}e^c-4\eabc\lambda\dd\f e^{a}z^be^c+4\lambda \f\eabc(T^{a}z^be^c-e^{a}\D z^be^c)-\frac{4\lambda^2}{3}\eabc z^2e^{a}e^be^c\\
+%    &=\f^2\eabc R^{ab}e^c+\frac{4\lambda}{3}\eabc z^2e^{a}e^be^c+4\lambda \f\eabc(T^{a}z^be^c-e^{a}\D z^be^c)-\frac{4\lambda^2}{3}\eabc z^2e^{a}e^be^c\\
+%    &=\f^2\eabc R^{ab}e^c+\frac{4\lambda}{3}\eabc z^2e^{a}e^be^c(1-\lambda)+4\lambda \f\eabc(T^{a}z^be^c-e^{a}\D z^be^c)
+%\end{align*}
+%Notemos que dado que estas cantidades construiremos una acción, podemos manipular los términos de manera de ir armando términos de borde y hacer que la acción sea quasi-invariante bajo transformaciones conformes. En particular notemos que
+%\begin{align}
+%  \f\eabc e^{a}\D z^be^c&=2\det(e)\phi\nabla_\m\partial^\m \f\dd^3x\\
+%  &=-2\det(e)\nabla_\m\f\partial^\m\f \dd^3x+\rm b.t.\\
+% &=-\frac{1}{3}\eabc z^2e^{a}e^be^c+\rm b.t.
+%\end{align}
+%Luego,
+%\begin{align}
+%  \epsilon_{abc}\tilde{R}^{ab} \tilde{e}^c&=\phi^2\epsilon_{abc}\left(R^{ab} e^c+\lambda \D \Sigma^{ab} e^c+\lambda^2 \Sigma^{a}_{~d} \Sigma^{db} e^c\right)\\
+%  &=\f^2\eabc R^{ab}e^c+\frac{4\lambda}{3}(2-\lambda)\eabc z^2e^{a}e^be^c+4\lambda \f\eabc T^{a}z^be^c + \rm b.t.\\
+%  &=\f^2\eabc R^{ab}e^c+\frac{8\lambda}{3}\left(1-\frac{\lambda}{2}\right)\eabc z^2e^{a}e^be^c+4\lambda \f\eabc T^{a}z^be^c + \rm b.t.
+%\end{align}
 Este término es el análogo en $(2+1)$ que el que aparecee en la acción de \cite{Aviles:2024muk}.
 
 %Notemos que podemos armar el término de borde de otra manera. En efecto,

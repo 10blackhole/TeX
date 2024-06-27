@@ -21,7 +21,7 @@ Las ecuaciones de Einstein resultantes son
   G_{\m\n }+\Lambda g_{\m\n }=\frac{1}{2\k }T_{\m\n }
 \end{equation}
 donde
-\begin{equation}
+\begin{equation}\label{Tmn}
   T_{\m\n }=-\frac{K}{2}\Tr\left[\left(R_\m R_\n -\frac{1}{2}g_{\m\n }R^\a R_\a \right)+\frac{\lambda}{4}\left(F_{\m\a }F_\n ^{~\a }-\frac{1}{4}g_{\m\n }F_{\a\b }F^{\a\b}\right)\right]
 \end{equation}
 
@@ -46,6 +46,11 @@ Usando \eqref{titj} obtenemos la siguiente relación de conmutación,
   &=-\d_{ij}\id -\epsilon_{ijk}t_k+\d_{ji}\id +\epsilon_{jik}t_k\\
   &=-2\epsilon_{ijk}t_k\label{[titj]}
 \end{align}
+luego,
+\begin{equation}
+ \boxed{F_{\m\n }^{i}=[R_\m ,R_\n ]^{i}=-2\epsilon_{ijk}R_\m ^{i}R_\n ^j}
+\end{equation}
+
 
 De auí en adelante usaremos la parametrización estandar para un campo escalar $U(x^\m )$ valuado sobre $SU(2)$ dada por
 \begin{equation}\label{U}
@@ -76,6 +81,61 @@ donde hemos usado \eqref{ydy0}. Así, las componentes de $R_\m $ a lo largo de l
 \begin{equation}
   \boxed{R_\m^k=\epsilon^{ijk}Y_{i}\nabla_\m Y_j+Y^0\nabla_\m  Y^k-Y^{k}\nabla_\m  Y^0}
 \end{equation}
+
+Con este objeto, podemos construir todo el resto.
+
+Notemos que
+\begin{align}
+  \Tr(t_it_j)&=\Tr(-\d_{ij}\id -\epsilon_{ijk}t_k)=-2\d_{ij}
+\end{align}
+
+De esta manera,
+\begin{equation}
+  \Tr(R_\m R_\n )=-2R_\m ^{i}R_\n ^j \d_{ij}
+\end{equation}
+Definiendo
+\begin{equation}
+  S_{\m\n }:=R_\m ^{i}R_\n ^j \d_{ij}
+\end{equation}
+se tiene
+\begin{equation}\label{trrr}
+  \Tr(R_\m R_\n )=-2S_{\m\n }
+\end{equation}
+
+Además,
+\begin{align}
+  \Tr(F_{\m\a }F_\n ^{~\a })&=\Tr(F_{\m\a }^{i}t_iF_\n ^{j\a }t_j)\\
+  &=F_{\m\a }^{i}F_\n ^{j\a }\Tr(t_it_j)\\
+  &=-2\d_{ij}F_{\m\a }^{i}F_\n ^{j\a }\\
+  &=-2\d_{ij}(-2\epsilon_{ilm}R_\m ^lR_\a ^m)(-2\epsilon_{jpq}R_\n ^pR^{q\a })\\
+  &=-8\d_{ij}(\epsilon_{ilm}\epsilon_{jpq}R_\m ^lR_\a ^m R_\n ^p R^{q\a })\\
+  &=-8(\d_{lp}\d_{mq}-\d_{lq}\d_{mp})R_\m ^lR_\a ^m R_\n ^p R^{q\a }\\
+  &=8S_{\m\a }S_\n ^{~\a }-8S_{\m\n }S
+\end{align}
+\begin{equation}\label{trff}
+   \Tr(F_{\m\a }F_\n ^{~\a })=8S_{\m\a }S_\n ^{~\a }-8S_{\m\n }S
+\end{equation}
+
+Veamos ahora como queda \eqref{Tmn}. Primero notemos que
+\begin{equation}
+  \Tr(R-\m R_\n -\frac{1}{2}g_{\m\n }R^\a R_\a )=-2S_{\m\n }+g_{\m\n }S
+\end{equation}
+y
+\begin{equation}
+  \Tr(F_{\m\a }F_\n ^{~\a }-\frac{1}{4}g_{\m\n }F_{\a\b }F^{\a\b })=8S_{\m\a }S_\n ^{~\a }-8S_{\m\n }S-\frac{1}{4}g_{\m\n }(8S_{\a\b }S^{\a\b }-S^2)
+\end{equation}
+Luego, es directo ver que
+\begin{equation}
+  \boxed{T_{\m\n }=K\left[S_{\m\n }-\frac{1}{2}g_{\m\n}S+\lambda\left\{S_{\m\n}S-S_{\m\a }S_\n ^{~\a }-\frac{1}{4}g_{\m\n}(S^2-S_{\a\b}S^{\a\b })\right\}\right]}
+\end{equation}
+
+
+
+
+
+
+
+
 
 
 

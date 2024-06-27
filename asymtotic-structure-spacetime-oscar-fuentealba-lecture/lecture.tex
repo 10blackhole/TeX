@@ -1,0 +1,101 @@
+\section{Brief introduction: BMS, matching conditions and spatial infinity}
+\begin{itemize}
+	\item Boundary conditions originally given $D=4$ din not exhibit the BMS group bot only Poincaré at $i^0$ \cite{Regge:1974zd}.
+	\item BMS diffeos preserve boundary conditions at $\mathcal{I}$ (exact symmetries of General Relativity). The should appear independently of the description (incluiding slcings adapted to $i^0$).
+	\item Invariance of the gravitational $S$-matrix under BMS is based on the assumption of \textit{antipodal matching conditions} of th fields and charges between $\I_-^+$ and $\I_+^-$ (clearly involves $i^0$).
+	\item Connecting $i^0$ with $\I_-^+$ and $\I_+^-$ is a non-trivial and subtle question. Evolution of reasonable Cauchy data make null infinity not so smooth. Metric and Weyl tensor develop logarithmic singularities
+\end{itemize} 
+
+BMS symetry emerges at $i^0$ in $D=4$ through the reconsideration of the parity conditions \cite{Henneaux:2018cst}. 
+\begin{itemize}
+	\item The central ingredients are finiteness and invariance of the off-shell action: boundary conditions that make the kinetic term finite (well-defines symplectic structure).
+	\item  Symmetries are canonical: we can assoaciate to any symmetry a charge-generator.
+	\item Matching conditions imposeed by Strominger are a consequence of the boundary conditions imposed at $i^0$ for having a well-defines action printiple.
+\end{itemize}
+
+The symmary of this lecture will be the following:
+\begin{itemize}
+	\item Review of the asymptotic analysis on spacelike hypersurfaces that are asymptotically flat through the Hamiltonian approach. Based on: \cite{Regge:1974zd}, \cite{Henneaux:2018cst}, \cite{Henneaux:2019yax}.
+	\item Logarithmic supertranslations and supertranslation-invariant Lorentz charges. Based on: \cite{Fuentealba:2022xsz}, \cite{Fuentealba:2023syb}.
+\end{itemize}
+
+
+\section{BMS symmetry at spatial infinity}
+\subsection{Einstein gravity in Hamiltonian form}
+In the ADM decomposition one decompose the spacetime in space-like hypersurfaces at constant time. This hypersurfaces are separated by a $N\dd t$ distance where $N$ is knwon as the \textit{lapse} function and measure the separetaion between two slides. In the other hand, if we have a point in a initial hypersurface,  we can measure if this point move along the surface a distance $N^{i}\dd t$ which is captured by the \textit{shift} function $N^{i}$. Now we can compute how the line element change form one surface to the other one, 
+\begin{equation}
+  \dd s^2=-N^2\dd t^2+g_{ij}(\dd x^{i}+N^{i}\dd t)(\dd x^{j}+N^{j}\dd t).
+\end{equation}
+From here we can read how is the ADM decomposition of the metric,
+\begin{equation}
+  g_{\m\n }=\mqty(N^{i}N^{i}-N^2&&& N^j\\\\
+  N^{i}&&& g_{ij})
+\end{equation}
+and its inverse
+\begin{equation}
+  g^{\m\n }=\mqty(-\dfrac{1}{N^2}&&& \dfrac{N^{i}}{N^2}\\\\
+  \dfrac{N^j}{N^2}&&& g^{ij}-\dfrac{N^{i}N^j}{N^2})
+\end{equation}
+
+The Einstein-Hilbert action in Hamiltonian form, using the ADM decomposition is given by
+\begin{equation}
+  S[g_{ij},\p^{ij},N^\perp,N^{i}]=\int\dd t\left[\int\dd^3x\left(\p^{ij}\dot{g}_{ij}-N^\perp\mathcal{H}_\perp-N^{i}\mathcal{H}_i\right)+B_\infty\right]
+\end{equation}
+where $g_{ij}$ corresponds to the spatial component of the metric and $B_\infty$ is a boundary term at infinity which is going to be fixed by the fall-off of the fields ($g_{ij},\p^{ij}$) and the boundary conditions that we impose under the following criteria are
+\begin{itemize}
+	\item incluiding as many solutions as possible,
+	\item making the action finite and,
+	\item yielding finite/integrable canonical generators
+\end{itemize}
+and the fall-off of the constraints are
+\begin{equation}
+  \mathcal{H}_\perp=\frac{1}{\sqrt{g}}\left(\p^{ij}\p_{ij}-\frac{\p^2}{2}\right)-\sqrt{g}R,\qquad \mathcal{H}_i=-2\nabla^j\p_{ij}
+\end{equation}
+where $\sqrt{g}$ is the square root of the determinant of the spatial part of the metric which is related with de square root of the determinant of the metric manifold as $\sqrt{-g}=N\sqrt{g}$. 
+
+\subsection{Diffeomorphisms in Hamiltonian description}
+Symmetries? Diffeomorphisms that leave the action invariant up to surface integrals at the time boundarie: $(g_{ij},\p^{ij})\to (g'_{ij},\p'^{ij})$. In the Hamiltonian description this can be found by takin thecanonical  Poisson bracket
+\begin{equation}
+  \d_{\xi,\xi^{i}}\Phi=\left\{\Phi,\int\dd^3x(\xi^\perp\mathcal{H}_\perp+\xi^{i}\mathcal{H}_i)\right\}
+\end{equation}
+with
+\begin{equation}
+  \{g_{ij}(x),\p^{kl}(x')\}=\d^{(k}_{(i}\d^{l)}_{j)}\d^{(3)}(x-x')
+\end{equation}
+Then, we will obtain the following transformation for the fields
+\begin{align}
+  \d_{\xi,\xi^{i}}g_{ij}&=\frac{2\xi }{\sqrt{g}}\left(\p_{ij}-\frac{1}{2}g_{ij}\p \right)+\mathcal{L}_\xi g_{ij}\\
+  \d_{\xi,\xi^{i}}\p^{ij}&=-\xi\sqrt{g}\left(R^{ij}-\frac{1}{2}g^{ij}R\right)+\frac{\xi}{2\sqrt{g}}g^{ij}\left(\p^{mn}\p_{mn}-\frac{\p^2}{2}\right)\\&~~~~-\frac{2\xi}{\sqrt{g}}\left(\p^{im}\p^j_m -\frac{1}{2}\p^{ij}\p \right) +\sqrt{g}\left(\xi^{|ij}-g^{ij}\xi^{|m}_{~~|m}\right)+\mathcal{L}_\xi \p^{ij}
+\end{align}
+
+\subsection{Asymptotic analysis: Regge-Teitelboim boundary conditions}
+Let us consider the satandar Regge-Teitelmboim (RT) boundary conditions:
+\begin{equation}
+  g_{ij}=\d_{ij}+\frac{\bar{h}_{ij}}{r}+\mathcal{O}(r^{-2}),\qquad \p^{i}=\frac{\bar{\p }^{ij}}{r^2}+\mathcal{O}(r^{-3})
+\end{equation}
+where
+\begin{equation}
+  \bar{h}_{ij}(-n^{i})=\bar{h}_{ij}(n^{i})=\text{even}\qquad \bar{\p }_{ij}(-n^{i})=-\bar{\p }_{ij}(n^{i})=\text{odd}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

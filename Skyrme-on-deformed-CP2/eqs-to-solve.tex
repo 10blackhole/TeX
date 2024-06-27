@@ -1,0 +1,126 @@
+\section{Conventions}
+We define the gauge connection as $R_\m =R_\m^{i}t_i$ where $t_i=-\frac{i}{2}\tau_i$  are the generators of $SU(2)$ with $\tau_i$ being the Pauli matrices, which satisfy
+\begin{equation}
+  \tau_i\tau_j=\d_{ij}\id_{2\times 2} +i\epsilon_{ijk}\tau_k.
+\end{equation}
+From this, one can show that 
+\begin{equation}
+  \Tr(t_it_j)=-\frac{1}{2}\d_{ij}\qquad \text{and}\qquad [t_i,t_j]=\epsilon_{ijk}t_k.
+\end{equation}
+
+The Einstein-Skyrme action principle is given by
+\begin{equation}\label{S}
+  S=S_G+S_{\rm Skyrme},
+\end{equation}
+where 
+\begin{align}
+  S_G&=\kappa\int\dd^4x\sqrt{-g}(R-2\Lambda),\\
+  S_{\rm Skyrme}&=\frac{K}{2}\int\dd^4x\sqrt{-g}\Tr\left(\frac{1}{2}R^\m R_\m +\frac{\lambda}{16}F_{\m\n }F^{\m\n }\right).
+\end{align}
+Here $\kappa=(16\p G)^{-1}$, $G$ is the Newton gravitational constant and the parameters $K$ and $\lambda$ are fixed experimentaly. 
+
+$R_\m $ y $F_{\m\n }$ are defined by
+\begin{align}
+  R_\m :=U^{-1}\nabla_\m U\label{R},\\
+  F_{\m\n}:=[R_\m, R_\n ]\label{F}.
+\end{align}
+
+The Einstein equations associated with \eqref{S} are
+\begin{equation}\label{Einstein-eqs}
+  R_{\m\n }-\frac{1}{2}g_{\m\n}R +\Lambda g_{\m\n }=\frac{1}{2\k }T_{\m\n },
+\end{equation}
+where
+\begin{equation}\label{Tmn}
+  T_{\m\n }=-\frac{K}{2}\Tr\left[\left(R_\m R_\n -\frac{1}{2}g_{\m\n }R^\a R_\a \right)+\frac{\lambda}{4}\left(F_{\m\a }F_\n ^{~\a }-\frac{1}{4}g_{\m\n }F_{\a\b }F^{\a\b}\right)\right].
+\end{equation}
+
+Furthermore, the Skyrme field equations are given by
+\begin{equation}\label{Skyrme-eqs}
+  \nabla^\m R_\m +\frac{\lambda}{4}\nabla^\m [R^\n ,F_{\m\n }]=0.
+\end{equation}
+
+It is convenient to define the Maurier-Cartan left-invariant forms of $SU(2)$ as,
+\begin{align}
+  \sigma_1&=\cos\psi\dd\theta+\sin\th\sin\psi\dd\phi,\\
+  \sigma_2&=-\sin\psi\dd\theta+\sin\th\cos\psi\dd\phi,\\
+  \sigma_3&=\dd\psi+\cos\th\dd\phi,
+\end{align}
+which satisfy the relation $\dd\sigma_i+\frac{1}{2}\epsilon_{ijk}\sigma^j\wedge \sigma^k=0$. 
+
+The line element of $\mathbb{CP}^2$ can be written in terms of these forms as
+\begin{equation}\label{CP2}
+  \dd s^2=\frac{\dd r^2}{(1+\frac{\Lambda}{6}r^2)^2}+\frac{r^2}{4}\frac{\sigma_3^2}{(1+\frac{\Lambda}{6}r^2)^2}+\frac{r^2}{4}\frac{(\sigma_1^2+\sigma_2^2)}{(1+\frac{\Lambda}{6}r^2)},
+\end{equation}
+where $0\leq r<\infty, 0\leq\th\leq\pi ,0\leq\phi<2\p $, and $0\leq\psi<4\p $. This metric satisfy
+\begin{equation}
+  R_{\m\n }-\frac{1}{2}g_{\m\n}R +\Lambda g_{\m\n }=0.
+\end{equation}
+
+
+
+
+
+
+
+\section{Equations to solve}
+To solve the Skyrme equations, we consider the ansatz
+\begin{equation}
+  R=R_\m^{i}t_i\dd x^\m =\sum_{i=1}^3\sigma^{i}t_i,
+\end{equation}
+which satisfy automatically \eqref{Skyrme-eqs}.
+
+In order tho solve the Einstein equations \eqref{Einstein-eqs} we consider as a metric ansatz, a deformed $\mathbb{CP}^2$ of the form
+\begin{equation}
+  \dd s^2=\frac{\dd r^2}{f(r)(1+ar^2)^2}+f(r)h(r)\frac{r^2}{4}\frac{\sigma_3^2}{(1+ar^2)^2}+\frac{r^2}{4}\frac{(\sigma_1^2+\sigma_2^2)}{(1+ar^2)},
+\end{equation}
+where $a$ is a constant.
+
+Performing some manipulations, the system is reduced to two first order equations for $f(r)$ and $h(r)$,
+\begin{align}
+h(r)'&=-\frac{(ar^2+1)^2K\lambda}{\kappa r^3f(r)^2}+\frac{2h(r)(h(r)-1)}{r(ar^2+1)}-\frac{K(ar^2+1)}{2r\kappa f(r)^2}\\
+f(r)'&=\frac{\lambda K}{2\kappa r^3}\left(\frac{(ar^2+1)^2}{h(r) f(r)} -\frac{(ar^2+1)}{2}\right)-\frac{f(r)(1+3h(r)-2ar^2)}{r(ar^2+1)}+\frac{K(ar^2+1)}{4\kappa rh(r)f(r)}\\
+&~-\frac{Kar^2+2\Lambda\kappa r^2-8a\kappa r^2+K-8\kappa}{2\kappa	 r(ar^2+1)}
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

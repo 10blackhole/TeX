@@ -1,5 +1,5 @@
 % \chapter{CP's self duality Lovelock}
-\section{Polynomial constraint}
+
 % The $\mathbb{CP}^k$ are solutions of the equations of Lovelock in $D=2k$ dimensions up to a polynomial constraint over the Lovelock couplings $\alpha_p$. For intance, the following are the constraints to order $1,2$ and $3$ in the Lovelock series for $\mathbb{CP}^2,\mathbb{CP}^3$ and $\mathbb{CP}^4$ respectively
 % % \begin{align*}
 % %     \alpha_0+2\alpha_1&=0\\
@@ -12,7 +12,46 @@
 %     -\frac{\alpha_0}{2}-2\alpha_1-3\alpha_1&=0\\
 %     -\frac{\alpha_0}{2}-3\alpha_1-\frac{48}{5}\alpha_2-\frac{288}{25}\alpha_3&=0
 % \end{align*}
+\section{Wheeler polynomial v2}
+\begin{align}
+  &\alpha_0W_m+\alpha_1\sum_{k=0}^1\frac{1}{m^{1-k}}\frac{m!}{(m-1+k)!}(n^2-r^2)^{m-1-k+1}f(r)^k\\
+  &+\alpha_2\left[\sum_{k=0}^1\frac{1}{m^{2-k}}\frac{m!}{(m-2+k)!}(n^2-r^2)^{m-2-k+1}f(r)^k+H_2(n^2-r^2)^{m-2-2+1}f(r)^2\right]\\
+  &+\alpha_3\left[\sum_{k=0}^1\frac{1}{m^{3-k}}\frac{m!}{(m-3+k)!}(n^2-r^2)^{m-3-k+1}f(r)^k+\sum_{k=2}^3H_p(n^2-r^2)^{m-3-k+1}f(r)^k\right]
+\end{align}
+\begin{equation*}
+ \mu r+ \alpha_0W_m+\sum_{p=1}^N\alpha_p\left(\sum_{k=0}^1\frac{1}{m^{p-k}}\frac{m!}{(m-p+k)!}(n^2-r^2)^{m-p-k+1}f(r)^k+\sum_{k=2}^pH_k(n^2-r^2)^{m-p-k+1}f(r)^k\right)=0
+\end{equation*}
 
+
+
+
+
+
+\begin{equation}
+  H_i\equiv \sum_{k=1}^i\frac{(2m-1-2k)!!}{(2m-1-2i)!!}r^{2(i-k)}n^{2(k-1)}
+\end{equation}
+\begin{equation}
+  W_m=\sum_{i=0}^m(-1)^{m-1}\binom{m}{i}\left(-\frac{n^2}{r^2}\right)^{m-i}\frac{1}{2i-1}r^{2m}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Polynomial constraint}
 A property of the $\mathbb{CP}^k$ spaces is that they are Lovelock constant, that is, each tensor of the equations of motion is proportional to the metric. Here are some examples:
 
 For $\mathbb{CP}^2$ in Einstein gravity we have

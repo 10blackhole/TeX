@@ -1,0 +1,185 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{jheppub} % for details on the use of the package, please see the JINST-author-manual
+\usepackage{lineno}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,physics,cancel,mathtools}
+\usepackage{tcolorbox}
+\usepackage{marginnote,tensor}
+\usepackage{tcolorbox}
+%~~~~~~~~~ Document setup
+% \usepackage[spanish]{babel} % English formatting
+\usepackage[utf8]{inputenc} % Standard encoding
+% \usepackage[a4paper,left=3cm,bottom=3cm]{geometry} % Page formatting
+\usepackage{indentfirst} % Indents the first paragraph
+\usepackage{amsmath} % Maths type package
+\usepackage{bm} % Bold font maths
+\usepackage{graphicx} % Advanced graphics package
+\usepackage[export]{adjustbox} 
+\usepackage{pdflscape} % Make pages landscape
+\usepackage{fancyhdr} % Fancy headers
+% \usepackage[colorlinks=true,citecolor=blue,urlcolor=blue,linkcolor=black]{hyperref} % Link colours
+%\usepackage{natbib} % Bibliography
+% \usepackage{flafter} % Reference any 'float'
+% \usepackage[framemethod=tikz]{mdframed} % Box off stuff
+\usepackage{color} % Colour support
+\usepackage{wrapfig} % Text flowing around figures
+\usepackage{lipsum} % Generates meaningless text
+\usepackage{xcolor}
+%\usepackage{biblatex}
+%\usepackage[backend=bibtex]{biblatex}
+%\addbibresource{bibliography.bib}
+%\hypersetup{colorlinks=true, linkcolor=blue}
+
+\newtheorem{ej}{Example}[section]
+\newtheorem{sol}{Solution}[section]
+\newtheorem{dem}{Proof}[section]
+\newtheorem{prop}{Propiedad}[section]
+
+\def\a{\alpha}
+\def\b{\beta}
+\def\g{\gamma}
+\def\G{\Gamma}
+\def\d{\delta}
+%\def\D{\Delta}
+%\def\e{\eta}
+\def\la{\lambda}
+\def\La{\Lambda}
+\def\k{\kappa}
+\def\m{\mu}
+\def\n{\nu}
+\def\r{\rho}
+\def\p{\rho}
+\def\o{\omega}
+\def\s{\sigma}
+\def\S{\Sigma}
+\def\t{\tau}
+\def\p{\pi}
+\def\f{\phi}
+\def\vf{\varphi}
+\def\ep{\epsilon}
+\def\th{\theta}
+\def\Th{\Theta}
+\def\z{\zeta}
+\def\id{\mathrm{I}}
+
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\I}{\mathrm{I}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\D}{\mathrm{D}}
+\newcommand{\oo}{\mathring}
+\newcommand{\oomega}{\mathring{\omega}}
+\newcommand{\eabc}{\epsilon_{abc}}
+
+%-----COLORS LIST ------
+\definecolor{azure(colorwheel)}{rgb}{0.0, 0.5, 1.0}
+\definecolor{DarkViolet}{RGB}{148,0,211}
+\definecolor{myDarkBlue}{rgb}{0,0.1,0.7}
+\definecolor{DarkBlue}{RGB}{0,0,153}
+\definecolor{amber}{rgb}{1.0, 0.49, 0.0}
+\definecolor{amaranth}{rgb}{0.9, 0.17, 0.31}
+\definecolor{nicered}{rgb}{0.7,0.1,0.1}
+\definecolor{brown}{rgb}{0.5,0.1,0.1}
+\definecolor{nicegreen}{rgb}{0.0,0.3,0.0}
+\definecolor{tealgreen}{rgb}{0.0, 0.51, 0.5}
+\def\red#1{{\color{red} #1}}
+\def\green#1{{\color{green} #1}}
+\def\blue#1{{\color{blue} #1}}
+\def\orange#1{{\color{orange} #1}}
+%----------------------
+\newcommand{\mycolor}{DarkViolet}
+\def\myColor#1{{\color{\mycolor} #1}}
+\definecolor{tclr}{RGB}{148,0,211}
+%----------------------
+\newcommand{\corr}[1]{\textcolor{nicered}{#1}}
+\newcommand{\nick}[1]{\textcolor{olive}{#1}}
+\newcommand{\teo}[1]{\textcolor{azure(colorwheel)}{#1}}
+\newcommand{\chteo}[2]{\corr{\st{#1}} \teo{(#2)}}
+\newcommand{\bako}[1]{\textcolor{DarkViolet}{#1}}
+\newcommand{\than}[1]{\textcolor{magenta}{#1}}
+
+%----------------------
+\usepackage{hyperref}
+\hypersetup{colorlinks,bookmarksopen,
+	bookmarksnumbered,
+	citecolor={nicered},
+	linkcolor={myDarkBlue},
+	urlcolor={tealgreen},
+	pdfstartview=FitH}
+
+
+% \arxivnumber{1234.56789} % if you have one
+
+\title{\boldmath Conformal Killing Gravity (CKG)}
+
+% Collaborations
+
+%% [A] If main author
+%% \collaboration{\includegraphics[height=17mm]{collabroation-logo}\\[6pt]
+%%  XXX collaboration}
+
+%% or
+%% [B] If "on behalf of"
+%% \collaboration[c]{on behalf of XXX collaboration}
+
+
+% Authors
+% The "\note" macro will give a warning: "Ignoring empty anchor...", you can safely ignore it.
+
+%% [A] simple case: 2 authors, same institution
+%% \author[1]{A. Uthor\note{Corresponding author.}}
+%% \author{and A. Nother Author}
+%% \affiliation{Institution,\\Address, Country}
+
+%% or, e.g.
+%% [B] more complex case: 4 authors, 3 institutions, 2 footnotes
+%% \author[a,b]{F. Irst,\note{Now at another university}}
+%% \author[c]{S. Econd,}
+%% \author[a,2]{T. Hird\note{Also at Some University.}}
+%% \author[c,2]{and Fourth}
+%% \affiliation[a]{Institution_1,\\Address, Country}
+%% \affiliation[b]{Institution_2,\\Address, Country}
+%% \affiliation[c]{Institution_3,\\Address, Country}
+
+\author{Borja Diez}
+\affiliation{Universidad Arturo Prat}
+% \affiliation{Another University,\\
+% different-address, Country}
+
+% E-mail addresses: only for the corresponding author
+\emailAdd{borjadiez1014@gmail.com}
+
+\abstract{Abstract...}
+
+
+
+
+\begin{document}
+\maketitle
+%\tableofcontents
+%\flushbottom
+
+%\input{differentialble-manifolds.tex}
+\input{grav-at-cosmoligical-distances-harada.tex}
+
+
+
+% Bibliography
+
+%% [A] Recommended: using JHEP.bst file
+%% \bibliographystyle{JHEP}
+%% \bibliography{biblio.bib}
+
+%% or
+%% [B] Manual formatting (see below)
+%% (i) We suggest to always provide author, title and journal data or doi:
+%% in short all the informations that clearly identify a document.
+%% (ii) please avoid comments such as "For a review'', "For some examples",
+%% "and references therein" or move them in the text. In general, please leave only references in the bibliography and move all
+%% accessory text in footnotes.
+%% (iii) Also, please have only one work for each \bibitem.
+
+
+
+\newpage
+\bibliographystyle{JHEP}
+\bibliography{biblio.bib}
+\end{document}

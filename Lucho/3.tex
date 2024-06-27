@@ -1,0 +1,222 @@
+\section{Clase 3}
+\subsection{Dependencia funcional*}
+Sea $D\subset  \mathbb{R}^N$ un conjunto abierto y consideremos $m$ funciones reales de clase $C^1$ en $D$,
+\begin{align}
+  u_1&=f_1(x_1,..,x_n)\\
+  \vdots\\
+  u_m&=f_m(x_1,..,x_n)
+\end{align}
+Se dice que las funciones $f_i$ con $i=1,...,m$ son dependientes en el conjunto, si existe una función real $F:S\rightarrow \mathbb{R}$ de clase $C^1$ en un conjunto abierto $S\subset  \mathbb{R}^m$ que incluye $f_1(D)\times f_2(D)\times \cdots \times f_m(D)$, que no se anule en ningún entorno completo de $S$ y tal que
+\begin{equation}
+  F[f_1(x_1,...,x_n),...,f_m(x_1,...,x_n)]=0, \quad \forall (x_1,...,x_n)\in D
+\end{equation}
+También diremos que si $f_k(x_1,...,x_n)$ es una de las funciones dadas, depende funcionalmente de las otras funciones $f_i$ con $i=1,...,m$ y $i\neq k$ si existe una función $\varphi$ de clase $C^1$ tal que
+\begin{equation}
+  f_k(x_1,...,x_n)=\varphi[f_1(x_1,...,x_n),...,f_{k-1},f_{k+1},...,f_k]
+\end{equation}
+Las funciones se dicen independientes funcionalmente, si no son dependientes funcionalmente.
+
+\begin{ej}
+	Sea $f$ y $g$ don funciones de clase $C^1$ en un abierto $D\subset \mathbb{R}^2$. Si $g$ depende funcionalmente de $f$, entonces
+	\begin{equation}
+  g(x,y)=\varphi[f(x,y)],\quad \forall x,y\in D.
+\end{equation}
+Podemos reescribir esto como
+\begin{equation}
+  \varphi[f(x,y)]- g(x,y)=0
+\end{equation}
+Derivando a ambos lados con respecto a $x$
+\begin{equation}
+  \varphi'\pdv{f}{x}-\pdv{g}{x}=0
+\end{equation}
+y con respecto a $y$
+\begin{equation}
+  \varphi'\pdv{f}{y}-\pdv{g}{y}=0
+\end{equation}
+Lo que permite escribir el sistema como
+\begin{equation}
+  \mqty(\pdv{f}{x}&&\pdv{g}{x}\\\\ \pdv{f}{y}&&\pdv{g}{y})\mqty(\varphi'\\\\-1)=0,\qquad \varphi'\equiv \pdv{\varphi}{f}
+\end{equation}
+Dado que el sistema tiene solución no trivial, implica que el determinante de la matriz anterior se debe anular, es decir,
+\begin{equation}
+   \mqty|\pdv{f}{x}&&\pdv{g}{x}\\\\ \pdv{f}{y}&&\pdv{g}{y}|=0
+\end{equation}
+Una condición necesaria para que ocurra dependencia funcional es que el Jacobiano se anule,
+\begin{equation}
+  \pdv{(f,g)}{(x,y)}=0,\quad \forall (x,y)\in D.
+\end{equation}
+\end{ej}
+
+\begin{ej}
+	Dependencia funcional. Consideremos las siguientes funciones
+	\begin{align}
+  u(x,y)&=e^{2x-y}\\
+  v(x,y)&=e^{2y-4x}
+\end{align}
+\begin{equation}
+  \implies F(u,v)=u^2v-1,\qquad v=\frac{1}{u^2}=\varphi(u)
+\end{equation}
+\begin{equation}
+  \implies \pdv{(u,v)}{(x,y)}=\mqty|2e^{2x-y}&&-4e^{2y-4x}\\\\ -e^{2x-y}&&2e^{2y-4x}|=0
+\end{equation}
+Luego, son funcionalmente dependientes.
+\end{ej}
+
+
+
+
+
+
+\subsection{Condiciones de regularidad}
+Si llamamos $z^{i}\equiv (q,p)$ con $i=1,...,2N$ son las coordenadas del espacio de fase $\G $, los vínculos $\f^\a =0$, donde $\a=1,...,R$ definen la superficie de vínculos $\bar{\G}$, la cual viene dada por
+\begin{equation}
+  \bar{\G}=\{\bar{z}\in \G \, |\,  \f^\a(\bar{z})=0, \quad \a=1,...,R\leq 2N\}
+\end{equation}
+Los vínculos $\f_\a=0$ son regulares si y sólo si sus pequeñas variaciones evaluadas sobre $\bar{\G}$ son $R$ funciones linealmente independientes de $\d z^{i}$. A primer orden en $\d z^{i}$, la variación de los vínculos será $\d\f_\a=J_{\a i}\d z^{i}$ donde $J_{\a i}=\eval{\pdv{\f_\a }{z^{i}}}_{\bar{\G }}$. El conjunto de los vínculos $\f_\a =0$ es regular si y sólo si el Jacobiano $J$ tiene rango máximo, es decir, $\text{Rang}(J)=R$.
+
+\begin{ej}
+	Consideremos lo siguientes vínculos
+	\begin{equation}
+  \f^1=q=0,\qquad \f^2=pq=0
+\end{equation}
+El Jacobiano es
+\begin{equation}
+  J=\mqty|1&&p\\0&&q|_{\bar{\G }}=\mqty|1&&p\\0&&0|
+\end{equation}
+\begin{equation}
+  \implies \text{Rang}(J)=1
+\end{equation}
+Luego, los vínculos son funcionalmente dependientes, dado que $R=2$.
+\end{ej}
+
+Cuando los vínculos saisfacen las condiciones de regularidad, se cumplen los siguientes teoremas:
+\begin{teor}\label{teo:1}
+	Si una función $G$ del espacio de fase se anula en la superficie de los vínculos $\f_\a =0$, entonces $G=f^\a \f_\a $ para alguna función $g^\a $.
+\end{teor}
+
+\begin{teor}\label{teo:2}
+	Si $\lambda_n \d q^n+\m ^n \d p_n=0$ para variaciones arbitrarias $\d q^n$ y $\d p_n$ tangentes a la superficie de los vínculos, entonces
+	\begin{align}
+  \lambda_n &=u^m \pdv{\f_m }{q^n }\\
+  \m^n  &=u^m\pdv{\f_m }{p_n }
+\end{align}
+Para algún $u^m $. Las igualdades se satisfacen en la superficie de los vínculos \footnote{La demostración de este Teorema se puede ver en \cite{Henneaux:1994lbw}.}.
+\end{teor}
+
+Cuando tenemos vínculos, el mapeo $(q^n, \qd ^n)\rightarrow (p_n,q^n)$ no es unívoco dado que mapeo puntos desde una $2N$-variedad a una $(2N-R)$-variedad ($\G \rightarrow \bar{\G }$). Por lo tanto, las imágenes inversas de un punto dado de $\f_\a =0$ forma una vaiedad $R$-dimensional.
+
+\begin{ej}
+	Consideremos el siguiente Lagrangeano
+	\begin{equation}
+  L=\frac{1}{2}(\qd ^1-\qd^2)^2
+\end{equation}
+Las momenta vienen dadas por
+\begin{align}
+  p_1&=\qd^1-\qd^2\\
+  p_2&=\qd^2-\qd^1
+\end{align}
+Notamos que tenemos una superficie de vínculos dada por
+\begin{equation}
+  \f =p_1+p_2=0
+\end{equation}
+Todos los puntos $\qd^2-\qd^1=c$ son mapeados a un único punto en el espacio de fase $p_1=-c=-p_2$.
+%TODO img
+
+
+\end{ej}
+
+
+Con el fin de que la transformación sea uni-valuada es necsario introducir parámetros extras que indiquen la localización de $\qd$ en la variedad inversa. Estos parámetros podrían ser pensados como coordenadas en la variedad inversa para algún punto $P_n$.
+
+\subsection{Mecanismo de Dirac para sistemas con vínculos}
+Para continuar con la descripción dinámica sebemos tener el Hamiltoniano del sistema, el cual, en general, viene dado por
+\begin{equation}
+  H=p_n\qd^n -L(q^n,\qd^n,t)
+\end{equation}
+Si calculamos la variación de $H$, se tiene
+\begin{align}
+  \d H&=\d p_n\qd^n +p_n\d \qd^n -\underbrace{\pdv{L}{\qd^n }}_{p_n}\d \qd^n -\pdv{L}{q^n }\d ^n \\
+  &=\d p_n \qd ^n -\pdv{L}{q^n }\d q^n  \label{3.1}
+\end{align}
+Luego, $H=H(p^n ,q_n)$. Esto es cierto cuando el sistema no tiene vínculos. 
+
+En un sistema con vínculos, este Hamiltoniano no está únicamente determinado como función de los $p^n $ y $q_n $. Esto puede ser notado, dado que $\d p_n $ en la superficie de los vínculos no son todos independientes, sino que están restringidos a satisfacer los vínculos. Estos $\f_\a $ son identidades cuando los $p_n $ son expresados en función de $\qd^n $ y $q^n$ por medio de la transformación de Legendre. Por lo tanto, el Hamiltoniano canónico está sólo bien definido en la sub-variedad definida por los vínculos primarios.
+
+De \eqref{3.1} tenemos que
+\begin{align}
+  \pdv{H}{p_n}\d p_n+\pdv{H}{q^n }\d q^n &=\d p_n \qd^n -\pdv{L}{q^n }\d q^n 
+\end{align}
+\begin{align}
+  \implies \left(\pdv{H}{p_n }-\qd^n \right)\d p_n +\left(\pdv{H}{q^n}+\pdv{L}{q^n }\right)\d q^n =0
+\end{align}
+A partir del Teorema \ref{teo:2} tenemos que
+\begin{align}
+  \qd^n &=\pdv{H}{p_n }+u^m \pdv{\f_m}{p_n}
+\end{align}
+
+\subsection{Principio de acción para el Hamiltoniano con vínculos}
+Para el caso de sistemas singulares es necesario introducir la información de los vínculos en el principio de acción. Esto lo haremos por medio de funciones aribitrarias (multiplicadores de Lagrange) de tal manera que nos entregue las ecuaciones de movimiento correctas. Para esto, definimos el \textit{Hamiltoniano primario}, el cual viene dado por
+\begin{equation}
+  H_p=H_c+u^\a \f_\a 
+\end{equation}
+Por lo tanto, la acción vendrá dada por
+\begin{align}
+  I[q^n,p_n,u^\a  ]=\int(\qd^n p_n-H_c-u^\a \f_\a )\dd t
+\end{align}
+Las ecuaciones de movimiento vienen dadas por
+\begin{equation}
+\begin{split}
+  &\qd^n =\pdv{H_p}{p_n }=\pdv{H_c}{p_n }+u^\a \pdv{\f_\a }{p_n }\\
+  &\dot{p}=-\pdv{H_p}{q^n }=-\pdv{H_c}{q^n}-u^\a \pdv{\f_\a }{q^n }\\
+ &\f_\a =0
+\end{split}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
