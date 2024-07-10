@@ -15,11 +15,11 @@
 \section{Wheeler polynomial v2}
 \begin{align}
   &\alpha_0W_m+\alpha_1\sum_{k=0}^1\frac{1}{m^{1-k}}\frac{m!}{(m-1+k)!}(n^2-r^2)^{m-1-k+1}f(r)^k\\
-  &+\alpha_2\left[\sum_{k=0}^1\frac{1}{m^{2-k}}\frac{m!}{(m-2+k)!}(n^2-r^2)^{m-2-k+1}f(r)^k+H_2(n^2-r^2)^{m-2-2+1}f(r)^2\right]\\
-  &+\alpha_3\left[\sum_{k=0}^1\frac{1}{m^{3-k}}\frac{m!}{(m-3+k)!}(n^2-r^2)^{m-3-k+1}f(r)^k+\sum_{k=2}^3H_p(n^2-r^2)^{m-3-k+1}f(r)^k\right]
+  &+\alpha_2\left[\sum_{k=0}^1\frac{1}{m^{2-k}}\frac{m!}{(m-2+k)!}(n^2-r^2)^{m-2-k+1}f(r)^k+H_{2,2}(n^2-r^2)^{m-2-2+1}f(r)^2\right]\\
+  &+\alpha_3\left[\sum_{k=0}^1\frac{1}{m^{3-k}}\frac{m!}{(m-3+k)!}(n^2-r^2)^{m-3-k+1}f(r)^k+\sum_{k=2}^3H_{3,k}(n^2-r^2)^{m-3-k+1}f(r)^k\right]
 \end{align}
 \begin{equation*}
- \mu r+ \alpha_0W_m+\sum_{p=1}^N\alpha_p\left(\sum_{k=0}^1\frac{1}{m^{p-k}}\frac{m!}{(m-p+k)!}(n^2-r^2)^{m-p-k+1}f(r)^k+\sum_{k=2}^pH_k(n^2-r^2)^{m-p-k+1}f(r)^k\right)=0
+ \mu r+ \alpha_0W_m+\sum_{p=1}^N\alpha_p\left(\sum_{k=0}^1\frac{1}{m^{p-k}}\frac{m!}{(m-p+k)!}(n^2-r^2)^{m-p-k+1}f(r)^k+\sum_{k=2}^pH_{p,k}(n^2-r^2)^{m-p-k+1}f(r)^k\right)
 \end{equation*}
 
 
@@ -28,11 +28,48 @@
 
 
 \begin{equation}
-  H_i\equiv \sum_{k=1}^i\frac{(2m-1-2k)!!}{(2m-1-2i)!!}r^{2(i-k)}n^{2(k-1)}
+  H_{p,k}\equiv \sum_{j=1}^k\frac{(2m-1-2j-2(p-k))!!}{(2m-1-2k-2(p-k))!!}r^{2(k-j)}n^{2(j-1)}
 \end{equation}
 \begin{equation}
   W_m=\sum_{i=0}^m(-1)^{m-1}\binom{m}{i}\left(-\frac{n^2}{r^2}\right)^{m-i}\frac{1}{2i-1}r^{2m}
 \end{equation}
+
+\section{Wheeler polynomial v3}
+Para $\sigma=0$:
+\begin{equation}
+\mu  r+ \sum_{p=0}^N\frac{(-1)^{p-1}}{2}\frac{(2p)!}{p!}\frac{(m-1)!}{(m-1-p)!}\alpha_p\left( \sum_{k=0}^1 G_{p,k}(n^2-r^2)^{m-p-k+1}f(r)^k+(1-\sigma)\sum_{k=2}^p H_{p,k}(n^2-r^2)^{m-p-k+1}f(r)^k\right)
+\end{equation}
+donde
+\begin{align}
+  H_{p,k}&\equiv \sum_{j=1}^k\frac{[2(m-j-p+k)-1]!!}{[2(m-p)-1]!!}r^{2(k-j)}n^{2(j-1)}\\
+  G_{p,k}&\equiv \frac{1}{m^{p-k}}\frac{m!}{(m-p+k)!}W_{(p,m-p)}^{1-k}\\
+  W_{p,m}&\equiv \sum_{j=0}^m(-1)^{j-1}\binom{m}{j}n^{2(m-j)}r^{2j}\frac{1}{2j-1}(n^2-r^2)^{p-m-1}
+\end{align}
+
+\section{Wheeler polynomial v4}
+Para $\sigma=0$:
+\begin{equation}
+\mu  r+ \sum_{p=0}^N\frac{(-1)^{p-1}}{2}\frac{(2p)!}{p!}\frac{(m-1)!}{(m-1-p)!}\alpha_p\left( (1-\sigma)\sum_{k=0}^1\gamma^{p-k} G_{p,k}+\sum_{k=2}^p \gamma^{p-k}H_{p,k}\right)=0
+\end{equation}
+donde
+\begin{align}
+  H_{p,k}&\equiv (n^2-r^2)^{m-p-k+1}f(r)^k\sum_{j=1}^k\frac{[2(m-j-p+k)-1]!!}{[2(m-p)-1]!!}r^{2(k-j)}n^{2(j-1)}\\
+  G_{p,k}&\equiv \frac{1}{m^{p-k}}\frac{m!}{(m-p+k)!}W_{(p,m-p)}^{1-k}(n^2-r^2)^{m-p-k+1}f(r)^k\\
+  W_{p,m}&\equiv \sum_{j=0}^m(-1)^{j-1}\binom{m}{j}n^{2(m-j)}r^{2j}\frac{1}{2j-1}(n^2-r^2)^{-(m+1)}
+\end{align}
+
+\section{Wheeler polynomial v5}
+Para $\sigma=0$:
+\begin{equation}
+  \mu  r+ \sum_{p=0}^N\frac{(-1)^{p-1}}{2}\frac{(2p)!}{p!}\frac{(m-1)!}{(m-1-p)!}\alpha_p\left(\sum_{k=0}^{p-1}H_{p,p-k}(n^2-r^2)^{m-2p+k+1}f(r)^{p-k}\right)=0
+\end{equation}
+donde
+\begin{equation}
+   H_{p,k}\equiv \sum_{j=1}^k\frac{[2(m-j-p+k)-1]!!}{[2(m-p)-1]!!}r^{2(k-j)}n^{2(j-1)}
+\end{equation}
+
+
+
 
 
 

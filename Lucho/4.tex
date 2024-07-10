@@ -1,0 +1,99 @@
+\section{Clase 4}
+%\subsection{* Interludio de la clase pasada}
+De la clase pasada habíamos afirmado que el conjunto $\f^r=0$ es regular si y sólo si el Jacobiano $J_i^r\equiv \eval{\pdv{\f^r}{z^{i}}}_\G $ tiene rango máximo, es decir, $\text{Rango}(J)=R$. 
+
+\begin{teor}	\textbf{(Teorema del rango constante)}
+\begin{equation}
+u=f(x)=\left\{\begin{array}{ll}
+  u_1&=f_1(x_1,..,x_n)\\
+  &\vdots\\
+  u_m&=f_m(x_1,..,x_n)
+\end{array}
+\right.
+\end{equation}
+\begin{equation}
+  J(f(x))=\left(\pdv{f}{x}\right)
+\end{equation}
+La matriz Jacobiana $Jf(x)$ tenga un rango máximo igual a $r$, con $0<r\leq m$.
+\begin{itemize}
+	\item Todos los menores de orden  mayor que $r$
+	\item Para cada $r\in D$, existe un menor de orden $r$ en donde $Jf$ es nulo.
+\end{itemize}
+Entonces:
+\begin{enumerate}
+	\item Existen $r$ funciones $f_i$ independientes,
+	\item Cada una de las $m-r$ funciones restantes dependen de las funciones independientes.
+\end{enumerate}
+\end{teor}
+
+Al final de la clase pasada hicimos dos afirmaciones:
+\begin{Propo}
+	Sobre el subespacio $\G_p$ definidos $\Phi_\a (p,q)=0$, el Hamiltoniano canónico sólo depende de de $\{q_i\}$, $\{p_j\}$ independientes.
+\end{Propo}
+\begin{Propo}
+	Las ecuaciones de Hamilton serán 
+	\begin{equation}
+\begin{split}
+  &\qd^n =\pdv{H_p}{p_n }=\pdv{H_c}{p_n }+u^\a \pdv{\f_\a }{p_n }\\
+  &\dot{p}=-\pdv{H_p}{q^n }=-\pdv{H_c}{q^n}-u^\a \pdv{\f_\a }{q^n }\\
+ &\f_\a =0
+\end{split}
+\end{equation}
+\end{Propo}
+
+Para el caso b) aparecían nuevos vínculos ($X$) a los cuales nuevamente imponemos la preservación en el tiempo
+\begin{equation}
+  [X_a,H_c]+u^m[X_a,\f_m]=0
+\end{equation}
+Una vez finalizado el proceso, nos quedaremos con una serie de vínculos secundarios, que denotaremos
+\begin{equation}
+  \f_a=0;\qquad a=\underbrace{(N-R_w)}_s+1+\cdots + s+k
+\end{equation}
+donde $k$ es el número de vínculos secundarios y por lo tanto, el número total de vínculos será
+\begin{equation}
+  \Phi_j=0,\qquad j=1,...,s+k
+\end{equation}
+
+\subsection{Ecuaciones débiles y fuertes}
+\begin{defi}
+Vamos a introducir el símbolo de igualdad débil para las ecuaciones de los vínculos
+\begin{equation}
+  \f_j\approx 0
+\end{equation}
+Con esto enfatizamos que esta cantidad está numéricamente restringida a ser cero pero que no es idénticamente cero a lo largo de todo el espacio de fase. Esto significa en particular que los corchetes de Poisson con funciones dependientes de las variables canónicas no se anulan.
+
+Más generalmente, dos funciones $F$ y $G$ que coinciden en la superficie de los vínculos, se dicen débilmente iguales $F\approx G$
+\begin{equation}
+  F\approx G\implies F-G=g^j\f_j
+\end{equation}
+\end{defi}
+
+\subsection{Restricciones en los multiplicadores de Lagrange}
+Suponemos que ya hemos encontrado todos los vínculos, entonces podemos pasar a estudiar las resticciones sobre los multiplicadores de Lagrange, las cuales serán de la forma
+\begin{equation}\label{4.2}
+  [\f_j,H_c]+u^m[\f_j,\f_m]\approx 0
+\end{equation}
+donde $m=1,...,s$ y $j=1,...,s+k$ y $s$ es el número de vínculos primarios. Podemos considerar a \eqref{4.2} como un conjunto de $k+s$ ecuaciones lineales con $s\leq s+k$ para $u^m$ con coeficientes que son funciones de $p$ y $q$.
+
+La solución más general para \eqref{4.2} es 
+\begin{equation}
+  u^m=U^m+\n^m
+\end{equation}
+donde $U^m$ es una solución particular de \eqref{4.2} y $\n^m $ es la solución homogénea de \eqref{4.2}, es decir,
+\begin{equation}
+  \n^\m [\f_j,\f_m]\approx 0.
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
