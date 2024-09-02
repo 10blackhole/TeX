@@ -1,0 +1,186 @@
+\documentclass[../Main.tex]{subfiles}
+\begin{document} 
+Conformal Gravity fue propuesta como una teoria de gravitación modificada que podría explicar las curvas de rotación de las galaxias sin la necesidad de materia oscura~\cite{Mannheim:1988dj}. También se puede probar que en espacios AlAdS, para condiciones de borde tipo Neumann para los coeficientes de la expansión de Fefferman-Graham, la gravedad de Einstein con constante cosmológica emerge de conformal gravity en cuatro dimensiones \cite{https://doi.org/10.48550/arxiv.1105.5632}. Se ha demostrado en la Ref.~\cite{Grumiller_2014} que conformal gravity tiene acción on-shell y cargas conservadas finitas para espacios AlAdS sin necesidad de añadir contraterminos \cite{Anastasiou:2017rjf}. Adicionalmente, también se comprobó que lo anterior se cumple para Conformal Gravity en seis dimensiones \cite{Anastasiou:2021tlv}. Esto permite embeber todo el espacio de soluciones de Relatividad General en una teoría que es renormalizable para espacios AlAdS. El espacio de soluciones de CG contiene todos los espacios de Einstein. De hecho, la acción de CG se vuelve igual a la de la gravedad de Einstein-AdS renormalizada cuando se evalúa en espacios de Einstein~\cite{Anastasiou:2016jix}. En el caso de las variedades de AlAdS, la condición de Einstein se puede implementar, hasta el orden normalizable, imponiendo condiciones de borde tipo Neumann en la expansión de FG~\cite{Maldacena:2011mk}. Además, esta teoría tiene la notable propiedad de ser finita y poseer un principio variacional bien definido para espacios de AlAdS~\cite{Grumiller:2013mxa}.
+% (esto para coordenadas tipo schw) El decaimiento asintótico de esta acción va como:
+% \begin{equation*}
+%      I_{CG}=\alpha \int d{^4x}\sqrt{\lvert g\rvert}\;W^{\mu\nu}_{\lambda\rho}W^{\lambda\rho}_{\mu\nu} \approx \frac{1}{r^3}
+% \end{equation*}
+% Por lo que si integramos vamos a obtener una acción on-shell finita y cargas finitas, evitando así tener que agregar contraterminos para renormalizar \cite{Grumiller_2014}.
+
+
+\section{Principio de acción y ecuaciones de movimiento}
+La acción de esta teoría representa el único funcional de cuatro dimensiones construido únicamente en términos de la métrica que permanece invariante bajo reescalamientos de Weyl locales $g_{\mu\nu}\to\tilde{g}_{\mu\nu} = e^{2\sigma(x)}g_{\mu\nu}$. Como consecuencia, la teoría involucra términos de altas derivadas lo que la hace patológica debido a la presencia de fantasmas. Sin embargo, dado que las teorías de gravedad de altas derivada tienen mejores propiedades de renormalización que la gravedad de Einstein~\cite{Capper:1975ig,Stelle:1976gc,Julve:1978xn,Fradkin:1981iu}, son considerados modelos útiles para la gravedad cuántica. La acción de conformal gravity está dada por el funcional
+\begin{equation}
+I_{\rm CG} = \alpha_{\rm CG} \int\diff{^4x}\sqrt{|g|} \;W^{\alpha \beta}_{\mu \nu} W^{\mu \nu}_{\alpha \beta} \,,
+\label{ICGaction}
+\end{equation}
+donde $\alpha_{\rm CG}$ es una constante de acoplamiento adimensional, mientras que $W^{\mu\nu}_{\lambda\rho}$ es el tensor de Weyl definido en la Ec.~\eqref{weyltensor}. 
+Aquí, los índices griegos nos indican el parche de coordenadas del volumen. Las ecuaciones de movimiento, que son de cuarto orden, se obtienen realizando variaciones arbitrarias de la Ec.~\eqref{ICGaction} con respecto a la métrica, lo que nos da $B_{\mu\nu}=0$, donde
+\begin{align}
+B_{\mu \nu} = -4 \left(\nabla^{\lambda} C_{\mu \nu \lambda} + S^{\lambda \sigma} W_{\mu \lambda \nu \sigma } \right)\;\;\;\;\; \mbox{y} \;\;\;\;\;
+C_{\mu \nu \lambda} = \nabla_{\lambda} S_{\mu \nu} - \nabla_{\nu} S_{\mu \lambda} \,, 
+\end{align}
+son el tensor de Bach y Cotton, respectivamente. Por lo tanto, el espacio de soluciones de la teoría corresponde a espacio-tiempos Bach flat. Además, se puede observar que los espacios tipo Einstein satisfacen automáticamente esta condición. Ésto se debe a que la divergencia del tensor de Cotton se anula en virtud de que el tensor de Schouten es proporcional a la métrica, mientras que el segundo término del tensor de Bach se anula ya que el tensor de Weyl tiene traza nula en todos sus índices. Así, todos los espacios Einstein son Bach flat, aunque la afirmación inversa no es necesariamente verdadera. Por otro lado, aunque algunos espacios Bach flat  son conformemente Einstein, existen ejemplos donde esta condición no se cumple y no se pueden relacionar con soluciones en la gravedad de Einstein mediante una transformación conforme~\cite{Liu:2013fna,Dunajski:2013zta}. Existen distintas clases de soluciones a conformal gravity, entre ellas estan las conformalmente planas ($W^{\mu\nu}_{\lambda\rho}=0$), Bach-flat que no son Einstein \cite{Riegert:1984zz}, instantones gravitacionales \cite{Corral:2021xsu} y métricas de la familia Plebia\'nski-Demia\'nski \cite{Cisterna_2021}.
+
+
+Una de las características más interesantes de CG es la finitud de la acción cuando se evalúa en espacio-tiempos de AlAdS. Es decir, las divergencias usuales que surgen en la acción gravitacional debido al volumen infinito de los espacios AdS están ausentes en el caso de CG y no se necesitan contratérminos adicionales. De hecho, como se muestra en la referencia~\cite{Grumiller:2013mxa} para condiciones asintóticamente débiles en el borde de AdS, tanto el tensor de energia-momentum cuasilocal como la función de respuesta parcialmente sin masa son finitos; estas son las corrientes acopladas correspondientes a los gravitones masivos y sin masa, respectivamente. 
+
+El comportamiento asintótico de la acción de CG también se puede estudiar considerando argumentos de conteo de potencias. En particular, consideramos las condiciones genéricas de AlAdS que en el gauge de FG adquieren la forma
+\begin{align}
+ds^{2}&= \frac{\ell^2}{z^2} \left(dz^{2}+ \mathcal{G}_{i j} \left(z,x\right) dx^{i} dx^{j} \right)\,, \notag \\
+\mathcal{G}_{i j} \left(z,x\right) &= g_{\left(0\right) ij} \left(x\right) + \frac{z}{\ell} g_{\left(1\right) ij} \left(x\right) + \frac{z^2}{\ell^2} g_{\left(2\right) ij} \left(x\right) + \frac{z^3}{\ell^3} g_{\left(3\right) ij} \left(x\right)+ \ldots \,,
+\end{align}
+Donde $z$ es la coordenada radial, $\ell$ es el radio de AdS, y los índices latinos indican las coordenadas en la hipersuperficie de $z$ constante de codimensión-1. Aquí, $z=0$ denota la ubicación del borde conforme. Ésta estructura define una foliación ADM radial que nos permite descomponer el cuadrado del tensor de Weyl en términos de las tres contribuciones independientes; ellas son
+\begin{equation}
+W^{\alpha \beta}_{\mu \nu} W^{\mu \nu}_{\alpha \beta} = W^{ij}_{km} W^{km}_{ij} + 4 W^{iz}_{jz} W^{jz}_{iz} + 4 W^{iz}_{km}W^{km}_{iz} \,.
+\end{equation}
+Curiosamente, para las condiciones genéricas de AlAdS descritas anteriormente, todas las componentes independientes del tensor de Weyl decaen como $\mathcal{O} \left(z^2\right)$. Por lo tanto, el Lagrangiano de CG decae como $\mathcal{O} \left(z^4\right)$, lo que lleva a que la acción se comporte como
+\begin{equation}
+\int\diff{^4x}\sqrt{|g|}\; W^{\alpha \beta}_{\mu \nu} W^{\mu \nu}_{\alpha \beta} \sim \int \diff{^3x} \int \diff{z}\; \frac{\sqrt{|g_{\left(0\right)}|}}{z^4}\; \mathcal{O} \left(z^4\right) \sim \mathcal{O} \left(z\right) \,.
+\end{equation}
+Esto último indica que la acción de CG está libre de cualquier divergencia en la región infrarroja, de acuerdo con la Ref.~\cite{Grumiller:2013mxa}. Éste comportamiento de la acción de CG pone de manifiesto la relación entre la simetría conforme del volumen y la renormalización, no solo para CG, sino también para cada subsector del espacio de soluciones de la teoría. De hecho, para los espacio-tiempos tipo Einstein-AdS, donde $S_{\mu \nu} = -\frac{1}{2\ell^2} g_{\mu \nu}$, el tensor de Weyl coincide con la curvatura del grupo AdS sin torsión, $\mathcal{F}^{\alpha \beta}_{\mu \nu}$, dado por 
+\begin{equation}\label{WeylE}
+W^{\alpha \beta}_{\left(E\right) \mu \nu} = R^{\alpha \beta}_{\mu \nu} + \frac{1}{\ell^2}  \delta^{\alpha \beta}_{\mu \nu} \equiv \mathcal{F}^{\alpha \beta}_{\mu \nu} \,.
+\end{equation}
+Esta relación indica que la acción de CG evaluada para espacio-tiempos tipo Einstein se reduce a la acción de MacDowell-Mansouri para el grupo AdS \cite{MacDowell:1977jt} como vimos anteriormente. Esta última acción corresponde a la acción de Einstein-AdS renormalizada topológicamente\footnote{De hecho, la acción resultante en la Ec. \eqref{IMM} está desplazada por un término constante que involucra la característica de Euler de la variedad, que surge naturalmente del esquema de renormalización con Kounterterms y coincide con el volumen renormalizado \cite{Anastasiou:2018mfk}.} \cite{Miskovic:2009bm}
+\begin{equation}
+I_{\rm CG} \left[E\right] = I^{\rm (ren)}_{\rm EAdS}=\frac{\ell^2}{256 \pi G_{N}} \int\diff{^4x}\sqrt{|g|} \delta^{\mu_1\ldots\mu_4}_{\nu_1\ldots\nu_4}\mathcal{F}^{\nu_1\nu_2}_{\mu_1\mu_2}\mathcal{F}^{\nu_3\nu_4}_{\mu_3\mu_4} \,,
+\label{IMM}
+\end{equation}
+lo que es equivalente al tratamiento con renormalizacion holográfica. \cite{Anastasiou:2020zwc}.
+Es importante destacar que la acción de la Ec. \eqref{IMM} tiene un principio variacional de Dirichlet bien definido para la métrica en el borde conforme $g_{(0)ij}$ \cite{Anastasiou:2019ldc}. Esto concuerda con la Ref. \cite{Papadimitriou:2005ii}, que mostró que la finitud y la buena formulación del principio variacional en términos de las fuentes holográficas están relacionadas.
+
+Además, la Ec. \eqref{IMM} sugiere que los contratérminos de la gravedad de Einstein-AdS están dictados por la simetría conforme del volumen, lo que introduce el concepto de Renormalización Conforme. Por otro lado, se puede demostrar la finitud de la acción de MacDowell-Mansouri \eqref{IMM} utilizando la relación genérica off-shell entre $\mathcal{F}^{\alpha \beta}_{\mu \nu}$ y el tensor de Weyl. Esto se expresa mediante la ecuación
+\begin{equation}
+W^{\alpha \beta}_{\mu \nu} = \mathcal{F}^{\alpha \beta}_{\mu \nu}- X^{\alpha \beta}_{\mu \nu} \,,
+\label{weylfdecomposition}
+\end{equation}
+% where the $X$ tensor is defined as~\cite{Anastasiou:2020mik}
+\begin{equation}\label{Xtensor}
+X^{\alpha \beta}_{\mu \nu} = 2 H^{[\alpha}_{[\mu} \delta^{\beta]}_{\nu]}+ \frac{1}{12} \left(R+\frac{12}{\ell^2} \right) \delta^{\alpha \beta}_{\mu \nu} \,,
+\end{equation}
+con $H^{\alpha}_{\mu}=R^\alpha_\mu - \tfrac{1}{4}\delta^\alpha_\mu\,R $ siendo el tensor de Ricci sin traza. Así, reemplazando en la Eq.~\eqref{IMM}, se obtiene
+\begin{equation}\label{IEHren}
+I^{\rm (ren)}_{\rm EAdS} = \frac{\ell^2}{256 \pi G_{N}} \int\diff{^4x}\sqrt{|g|} \left[\delta^{\mu_1\ldots\mu_4}_{\nu_1\ldots\nu_4}W^{\nu_1\nu_2}_{\mu_1\mu_2} W^{\nu_3\nu_4}_{\mu_3\mu_4}+ 8 H^{\mu}_{\nu}H^{\nu}_{\mu}+\frac{2}{3} \left(R+\frac{12}{\ell^2}\right)^{2}\right] \,.
+\end{equation}
+Esta acción se reduce exactamente a la de la Ec. \eqref{ICGaction} para espacios tipo Einstein, como se puede ver al notar que los dos últimos términos de la Ec. \eqref{IEHren} se anulan automáticamente bajo esta condición. Por lo tanto, dado que la acción de CG es finita en general para asintóticas AdS débiles, se concluye que la expresión obtenida está renormalizada para espacios de Einstein-AdS.
+
+
+Si bien Conformal Gravity es una teoría finita, se ha demostrado que posee modos masivos de spin-2 con energía cinética negativa \cite{Lu:2011zk}. La acción \eqref{ICGaction} describe en general un campo de spin-2 sin masa asociado al gravitón, y un campo de spin-2 masivo. 
+
+
+
+\subsection{Critical gravity}\label{sec:Critical}
+Consideremos la acción de gravedad cuadrática mas general en 4 dimensiones. Esta teoría está motivada desde el ángulo de teorías efectivas, en donde la Relatividad General aparece como un límite de bajas energías de una completitud ultravioleta de la gravedad. La acción viene dada por
+\begin{equation}
+     I_{CRG}=\kappa\int_{\mathcal{M}} d^{4}x \sqrt{\lvert g\rvert} \left(R-2\Lambda +\beta R^2 +\alpha R^{\mu\nu}R_{\mu\nu}\right) \, .\label{ICRG}
+\end{equation}
+Interesantemente, fue probado en la Ref.~\cite{Stelle:1976gc} que esta teoría con $\Lambda=0$ es renormalizable perturbativamente en torno al espacio de Minkowski. Sin embargo, considerar términos cuadráticos en la curvatura que aportan factores de derivadas superiores, en general inducen la existencia de ghosts en el espectro~\cite{Stelle:1976gc}. Para el caso de esta teoría, a diferencia de Conformal Gravity, tenemos un modo escalar masivo además de los ya mencionados anteriormente. Esto se puede ver escribiendo las ecuaciones de movimiento linealizadas y analizando los operadores de onda asociados a cada modo. Podemos encontrar un sector no patológico eligiendo las constantes de acoplamiento de manera que los modos masivos se desacoplen del espectro.
+
+ Para encontrar los valores de las constante de acoplamiento en el sector no patológico, los autores de la  Ref.~\cite{Lu:2011ks} examinaron las ecuaciones de movimiento linealizadas en torno a AdS global en cuatro dimensiones. Las ecuaciones de movimiento en el régimen no lineal están dadas por
+\begin{align}
+    G_{\mu\nu}+\Lambda g_{\mu\nu}+E_{\mu\nu}&=0 \, ,
+    \end{align}
+en donde hemos definido
+\begin{align}
+    G_{\mu\nu}&=R_{\mu\nu}-\frac{1}{2}Rg_{\mu\nu}\,,\\
+    E_{\mu\nu}&=2\alpha\left(R_{\mu\rho}R^{\rho}_{\nu}-\frac{1}{4}R^{\rho\sigma}R_{\rho\sigma}g_{\mu\nu}\right)+2\beta R\left(R_{\mu\nu}-\frac{1}{4}Rg_{\mu\nu}\right)\nonumber\\
+    &+\alpha\left(\Box R_{\mu\nu}+\frac{1}{2}\Box Rg_{\mu\nu}-2\nabla_{\rho}\nabla_{(\mu}R_{\nu)}^{\rho}\right)+2\beta(g_{\mu\nu}\Box R-\nabla_{\mu}\nabla_{\nu}R)\,.
+\end{align}
+Escribiendo una perturbación de la métrica como $g_{\mu\nu}=\bar{g}_{\mu\nu}+h_{\mu\nu}$, en donde $\bar{g}_{\mu\nu}$ es la métrica del background e imponiendo el gauge $\nabla^{\mu}h_{\mu\nu}=\nabla_{\nu}h$, se encuentra una condición para la cual el modo escalar se desacopla, esta es
+\begin{align}
+    \alpha=-3\beta \, . \label{CCG}
+\end{align}
+En este caso, las ecuaciones de movimiento nos dicen que $h=0$. Como consecuencia de esta restricción, los términos cuadráticos  en la curvatura se pueden escribir como 
+\begin{align}
+     I_{CRG} = \kappa\int_{\mathcal{M}} d^{4}x \sqrt{\lvert g\rvert} \left[R-2\Lambda  -3\beta\left(R^{\mu\nu}R_{\mu\nu}-\frac{1}{3}R^2\right)\right] \, .
+\end{align}
+Esta acción puede ser reescrita utilizando la identidad off-shell 
+\begin{align}
+    W^{\mu\nu\lambda\rho}W_{\lambda\rho\mu\nu}=R^{\mu\nu\lambda\rho}R_{\lambda\rho\mu\nu}-2R^{\mu\nu}R_{\mu\nu}+\frac{1}{3}R^2 \, ,
+\end{align}
+lo cual implica que la acción de Critical Gravity queda
+\begin{align}
+       I_{CRG} = \kappa\int_{\mathcal{M}} d^{4}x \sqrt{\lvert g\rvert} \left[R-2\Lambda  -\frac{3\beta}{2}\left(W^{\mu\nu\lambda\rho}W_{\lambda\rho\mu\nu}-E_4\right)\right] \, ,
+\end{align}
+con $E_{4}$ el término de Gauss-Bonnet, definido como
+\begin{equation*}
+\mathcal{G} = \dfrac{1}{4} \delta _{\nu _{1} \ldots  \nu _{4}}^{\mu _{1} \ldots  \mu _{4}} R_{\mu _{1} \mu _{2}}^{\nu _{1} \nu _{2}} R_{\mu _{3} \mu _{4}}^{\nu _{3} \nu _{4}} = R^2 - 4R^\mu_\nu R^\nu_\mu + R^{\mu\nu}_{\lambda\rho}R^{\lambda\rho}_{\mu\nu} \,.
+\end{equation*}
+Luego, imponiendo \eqref{CCG} y el gauge transversal sin traza, esto es,
+\begin{align}
+    \nabla^{\mu}h_{\mu\nu}&=g^{\mu\nu}h_{\mu\nu}=0\,,
+\end{align}
+se pueden estudiar las condiciones bajo las cuales el modo masivo de spin-2 no tenga masa. En la Ref.~\cite{Lu:2011ks}, los autores encontraron que esto se logra cuando se cumple 
+\begin{equation}
+    \beta=-\frac{1}{2\Lambda} \label{CCG1}
+\end{equation}
+en donde hemos llegado a una teoría en cuatro dimensiones que solo describe gravitones sin masa. Esta teoría se conoce como Critical Gravity \cite{Lu:2011zk}. En particular, para la métrica de Schwarzschild-AdS, su masa y su entropía se anulan considerando las condiciones de criticalidad \eqref{CCG} y \eqref{CCG1}. Para el valor de $\beta$ dado por \eqref{CCG1} y reemplazando el valor de $\Lambda=-\tfrac{3}{\ell^2}$ nos queda
+\begin{align}
+    I_{CRG} = \kappa\int_{\mathcal{M}} d^{4}x \sqrt{\lvert g\rvert} \left[\left(R+\frac{6}{\ell^2}\right)  -\frac{\ell^2}{4}\left(W^{\mu\nu\lambda\rho}W_{\lambda\rho\mu\nu}-E_4\right)\right] \,.
+\end{align}
+Tal como hemos señalado para la acción \eqref{IEGB}, el valor del acoplamiento del término de Gauss-Bonnet $\alpha_0=\tfrac{\ell^2}{4}$ lleva a la acción de Einstein-AdS renormalizada. De este modo, obtenemos que la acción de Critical Gravity puede ser reescrita como~\cite{Anastasiou:2017rjf}
+\begin{align}
+    I_{CRG} = I_{EH}^{ren}-\frac{\kappa\ell^2}{4}\int_{\mathcal{M}} d^{4}x\sqrt{\lvert g\rvert}\,W^{\mu\nu\lambda\rho}W_{\lambda\rho\mu\nu}\,.\label{CriticalGravityAction}
+\end{align}
+Las ecuaciones de movimiento de esta teoría se obtienen de realizar variaciones arbitrarias de la acción~\eqref{CriticalGravityAction} con respecto de la métrica son
+\begin{align}\label{eomcritical}
+    G_{\mu\nu} - \frac{3}{\ell^2}g_{\mu\nu} + \frac{\ell^2}{4}B_{\mu\nu} = 0\,.
+\end{align}
+De aquí, es directo ver que los espacios Einstein-AdS que cumplen con~\eqref{ES} satisfacen las ecuaciones de movimiento de Critical Gravity. Además, dado que la acción~\eqref{IEGB} toma el valor de~\eqref{IMM1} para este tipo de espacios, se concluye que la acción~\eqref{CriticalGravityAction} es idénticamente cero para espacios tipo Einstein. De esta manera, se concluye que todos los espacios Einstein son el \textit{ground state} de esta teoría.
+
+% Es importante resaltar que para tener una solución que sea AlAdS es crucial agregar la constante cosmológica en el caso de 4 dimensiones por el Gauss-Bonnet
+
+
+
+
+
+
+\section{Renormalización conforme}\label{sec:CR}
+A continuación, presentamos una estrategia diferente para abordar la Renormalización Conforme. En lugar de encontrar una teoría invariante conforme y evaluarla en diferentes sectores del espacio de soluciones, realizamos su completitud conforme on-shell. Este será el principio guía para la derivación de la generalización a las teorías escalar-tensor.
+
+Nuestro punto de partida es la gravedad de Einstein-AdS en cuatro dimensiones. En este caso, la densidad lagrangiana de Einstein-Hilbert con una constante cosmológica negativa $\Lambda=-3/\ell^2$ es
+\begin{equation}
+\Lag_{\rm EH}= \sqrt{|g|} \left(R+\frac{6}{\ell^2}\right) \, .
+\end{equation}
+El comportamiento del escalar de Ricci bajo rescalamientos infinitesimales locales de Weyl de la métrica, es decir, $\delta_{\sigma} g_{\mu \nu} = 2 \sigma g_{\mu \nu}$, está dado por
+\begin{equation}
+\delta_{\sigma} R = -2 \sigma R - 2\left(D-1\right) \Box \sigma \, .
+\end{equation}
+Entonces, el término de Einstein-Hilbert se transforma de acuerdo a
+\begin{equation}
+\delta_{\sigma} \left[\sqrt{|g|} \left(R + \frac{6}{\ell^2} \right)\right]
+=2 \sqrt{|g|} \left [\sigma \left(R +\frac{12}{\ell ^{2}}\right) -3 \nabla ^{\mu } \nabla _{\mu }\sigma \right ] \, . \label{LEH4D}
+\end{equation}
+Para completar conformalmente el Lagrangiano de Einstein-Hilbert sin modificar las ecuaciones de campo, es necesario agregar términos de borde o topológicos. Como trabajamos en cuatro dimensiones, consideramos que la acción de Einstein-Hilbert se completa con el término de Gauss-Bonnet con una constante de acoplamiento arbitraria $c_4$, es decir,
+\begin{equation}\label{LagEHGB}
+\Lag_{\rm EH,GB} = \sqrt{|g|} \left(R+\frac{6}{\ell^2} + c_{4} E_{4}\right) \,,
+\end{equation}
+en donde $c_4$ es una constante con unidades de largo al cuadrado. En cuatro dimensiones, el término de Gauss-Bonnet no contribuye a la dinámica del volumen ya que su integral es proporcional a la suma de la característica de Euler y a la integral de la forma de Chern en un borde de codimensión uno. Sin embargo, cambia las cargas conservadas y la acción Euclídea on-shell de manera no trivial~\cite{Aros:1999id,Aros:1999kt,Miskovic:2009bm}. Considerando su variación de Weyl 
+\begin{equation}
+\dfrac{1}{4} \delta _{\sigma } \left(\sqrt{|g|} \;\delta _{\nu _{1} \ldots  \nu _{4}}^{\mu _{1} \ldots \mu _{4}} R_{\mu _{1} \mu _{2}}^{\nu _{1} \nu _{2}} R_{\mu _{3} \mu _{4}}^{\nu _{3} \nu _{4}}\right)
+= -16 \delta _{\nu _{1} \nu _{2}}^{\mu _{1} \mu _{2}}  \nabla _{\mu _{2}}\left (\sqrt{|g|} \;S_{\mu _{1}}^{\nu _{1}}  \nabla ^{\nu _{2}}\sigma \right ) \,, \label{weylvarGB}
+\end{equation}
+y sumando todas las contribuciones, obtenemos
+\begin{equation}\delta _{\sigma } \Lag_{\rm EH,GB} 
+=2 \sqrt{|g|} \left [\sigma  \left(R +\frac{12}{\ell ^{2}}\right) -3  \Box\sigma  -8 c_{4} \delta _{\nu _{1} \nu _{2}}^{\mu _{1} \mu _{2}} \left (\dfrac{1}{2} C_{\mu _{1} \mu _{2}}^{\nu _{1}}  \nabla ^{\nu _{2}}\sigma  +S_{\mu _{1}}^{\nu _{1}}  \nabla _{\mu _{2}} \nabla ^{\nu _{2}}\sigma \right )\right ]\,.
+\end{equation}
+Como era de esperarse, la acción de EH con el Gauss-Bonnet no es invariante de Weyl. Sin embargo, evaluando en espacios tipo Einstein, la acción toma la siguiente forma 
+\begin{equation}
+\delta _{\sigma } \Lag_{\rm EH,GB}\vert _{E} =\sqrt{|g|} \left ( -6  \Box\sigma  +\frac{24}{\ell^2} c_{4}  \Box\sigma \right ) \,.
+\end{equation}
+Exigiendo invarianza de Weyl on-shell de la acción, la constante de acoplamiento se fija de manera única como $c_{4}=\frac{\ell^2}{4}$. Así, la acción correspondiente coincide, modulo la característica de Euler de la variedad, con la acción de Einstein-AdS renormalizada topológicamente~\cite{Miskovic:2009bm}. Recientemente, se ha demostrado que esto es equivalente a la prescripción HR~\cite{Anastasiou:2020zwc}. Este procedimiento proporciona una ruta alternativa para obtener los términos de borde que hacen que la acción sea finita.
+
+La generalización del concepto de Renormalización Conforme en seis dimensiones ha sido presentada en la Ref. ~\cite{Anastasiou:2020mik}. En la siguiente Sección, extenderemos esta prescripción al caso en el que se incluyen campos escalares.
+
+
+
+
+
+
+
+
+
+
+\biblio %Se necesita para referenciar cuando se compilan subarchivos individuales - NO SACAR
+\end{document}

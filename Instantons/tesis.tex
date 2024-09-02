@@ -1,0 +1,29 @@
+\section{Tesis}
+\subsection{BPS bound}
+Let us consider the Yang-Mills action, continued to Euclidean space,
+\begin{equation}
+	S[A]=\frac{1}{2e^2}\int_{\M}\dd^4x\sqrt{g}\Tr(F_{\m\n}F^{\m\n })
+\end{equation}
+\begin{align}
+	\int_\M \sqrt{g}\Tr(F_{\m\n }-\tilde{F}_{\m\n })^2&=\int_\M \sqrt{g}\Tr(F_{\m\n }F^{\m\n })+2\int_\M \sqrt{g}\Tr (F_{\m\n }\tilde{F}^{\m\n })+\int_\M \sqrt{g}\Tr(\tilde{F}_{\m\n }\tilde{F}^{\m\n })
+\end{align}
+but
+\begin{align}
+  \tilde{F}_{\m\n }\tilde{F}^{\m\n }&=\left(\frac{1}{2}\epsilon_{\m\n\a\b }F^{\a\b }\right)\left(\frac{1}{2}\epsilon^{\m\n\lambda\r  }F_{\lambda\r  }\right)\\
+  &=\frac{1}{4}2!\delta^{\lambda\r}_{\a\b }F^{\a\b }F_{\lambda\r}\\
+  &=\frac{1}{4}2!\, 2!\d^\lambda_\a \d^\r_\b F^{\a\b }F_{\lambda\r}\\
+  &=F^{\a\b }F_{\a\b }
+\end{align}
+\begin{equation}
+	S[A]=\frac{1}{4e^2}\int_\M \sqrt{g}\Tr(F_{\m\n }-\tilde{F}_{\m\n })^2-\frac{1}{2e^2}\int_\M \sqrt{g}\Tr(F_{\m\n}\tilde{F}^{\m\n })
+\end{equation}
+but
+\begin{equation}
+  k=-\frac{1}{16\p^2}\int_\M \sqrt{g}\Tr(F_{\m\n}\tilde{F}^{\m\n })
+\end{equation}
+therefore
+\begin{equation}
+  S[A]-\frac{8\p^2}{e^2}k=\frac{1}{4e^2}\int_\M \sqrt{g}\Tr(F_{\m\n }-\tilde{F}_{\m\n })^2\geq 0
+\end{equation}
+
+

@@ -1,0 +1,119 @@
+\section{Yang-Mills Instantons}
+\subsection{Eguchi-Gilkey-Hanson}
+From a geometric point of view, the path integral has the advantage of being able to take the global topology of the gauge potentials into account, while the canonical perturbation theory approach to quantization is sensitive only to the local topology. At present, a mathematically precise theory of path integration can be formulated only for spacetimes with positive signatures. We refere to those spacetimes as \textit{Euclidean} manifolds. Physically meaningful answers are obtainable by continuing the results of the Euclidean path integration back to the Minkowski regim.
+
+In the Euclidean path-integral formulation approach to quantization, each field configuration $\f(x)$ is weighted by the \textit{Boltzmann factor} $e^{-S[\f ]}$.
+
+For Yang-Mills theories, the Euclidean action is
+\begin{equation}
+  S[A_\m ]=\frac{1}{4}\int_{\mathcal{M}}\dd^4x\sqrt{g}\Tr(F_{\m\n }F^{\m\n })
+\end{equation}
+which is positive definite. The contribution of each gauge potential or connection $A_\m (x)$ to the path integral is therefore bounded and well-behaved.
+
+The complete generating functional for the transition amplitudes of a theory is obtained by symming over all inequivalent configurations. Since the first-order functional variation of the action vanishes for solutions of the equations of motion, these configurations correspond to stationary points in the functional space. Therefore, in the path-integral approach, we first seek solutions to the Euclidean field equations with minimum action and the compute quantum-mechanical fluctuations around them.
+
+
+
+
+In order to find the minimum action configurations of the Yang-Mills theory, let us consider the inequality
+\begin{equation}
+  \int_{\mathcal{M}}\dd^4x\sqrt{g}\Tr(F_{\m\n }-\tilde{F}_{\m\n })^2\geq 0
+\end{equation}
+This bound is satured by the self-dual field configurations
+\begin{equation}
+  F_{\m\n }=\pm \tilde{F}_{\m\n }
+\end{equation}
+In fact, these field configurations solve the Yang-Mills field equations since the Bianchi identities imply the field equations. The action now becomes
+\begin{equation}
+  S=-\frac{1}{2}\int \Tr F\wedge *F=\mp \int\Tr F\wedge F=4\p |k|
+\end{equation}
+where
+\begin{equation}
+  -C_2=k=-\frac{1}{8\p }\Tr F\wedge F
+\end{equation}
+is the integral of the second Chern class. Hooft [1976a] called such special field configurations \textit{instantons} since in the case $|k|=1$ their field strenght is centered around some point in space-time and thus attains its maximum value at some \textit{instant of time}.
+
+\subsubsection{Physical interpretation of instantons}
+The instanton can be interpreted as a quantum-mechanical tunnelin phenomenon in Yang-Mills gauge theories. It induces a transition between homotopically inequivalent vacua. The true ground state of Yang-Mills theory then becomes a coherent mixture of all these vacuum states.
+
+
+\subsection{Instantons in Gauge Theories}
+Correlators in Quantum Field Theories are described by path integrals over all possible field configurations
+\begin{equation}
+  \ev{\prod_i\mathcal{O}(x_i,t_i)}=\int\mathcal{D}\f \prod_i\mathcal{O}(x_i,t_i)e^{\frac{i}{\hbar}S(\f )}
+\end{equation}
+For a gauge theory
+\begin{equation}
+  S=-\frac{1}{4g^2}\int\dd^4xF^{a}_{\m\n }F^{a\m\n }+\cdots
+\end{equation}
+In the classical limit $\hbar\to 0$, the integral is dominated by the saddle point of the action $\d S=0$. To compute the contribution of the saddle point to the integral is convenient to perform the analytic continuation
+\begin{equation}
+  t_E=it
+\end{equation}
+and write
+\begin{equation}
+  iS=-\frac{1}{4g^2}\int\dd t_E\dd^3xF^{a}_{mn}F^{a}_{mn}+\cdots=-S_E
+\end{equation}
+With respect to $S(\f )$, $S_E(\f )$ has the advantage of being positive defined. The classical limit of the path integral
+\begin{equation}
+  \ev{\prod_i\mathcal{O}(x_i,-it_{Ei})}=\int\mathcal{D}\f \prod_i\mathcal{O}(x_i,-it_{Ri})e^{-\frac{1}{\hbar}S(\f )}
+\end{equation}
+is then dominated by the minima of $S_E(\f )$. A solution of the Euclidean equations of motion is called an \textit{instanton}.
+
+
+Besides its applications in the computation of path integrals , instantons can be
+used also to compute tunnelling effects between different vacua of a quantum field
+theory. At low energies, the energy levels of a particle moving on a potential $V(x)$
+can be approximated by those of the harmonic oscillator for a particle moving on
+a quadratic potential $V(x)\approx \frac{\omega_0}{2}(x-x_0)^2$ around a minima at $x=x_0$. In presence of a tunnelling between two vacua, each harmonic oscillator energy levels split into two with energies
+\begin{equation}
+  E_n=\left(n+\frac{1}{2}\pm\frac{1}{2}\Delta_n\right)\omega_0,\qquad \Delta_n\sim e^{-S_E}
+\end{equation}
+with $S_E$ the Euclidean action for an instanton solution describing the transition between the two minima of a particle moving in the upside-down potential $V_E = -V(x)$. The factor in front of the exponential can be computed evaluating the fluctuation of the action up to quadratic order around the instanton action. We refer to Appendix 1A for details.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

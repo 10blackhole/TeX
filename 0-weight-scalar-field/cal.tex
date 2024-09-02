@@ -1,0 +1,243 @@
+\section{Building the equation of motion}
+Let us consider a scalar field with zero conformal weight, that is, under an infinitesimal conformal transformation
+\begin{equation}
+  \d_\omega g_{\m\n }=2\omega g_{\m\n },\qquad \d_\omega\f=0
+\end{equation}
+
+Let us consider the most general second order pseudoscalar constructed from the scalar field $\f$ and its derivatives up to second order, together with the metric tensor and its associates curvature
+\begin{equation}
+	\E =\sqrt{-g}E\left(\f,\nabla_\m \f ,\nabla_\m \nabla_\n \f ,g_{\m\n },R_{\m\n }^{\a\b }\right)=0
+\end{equation}
+The variation of this equation under infinitesimal conformal transformations reads,
+\begin{align}
+  \d_\omega \E&=\d_\omega(\sqrt{-g})E+\sqrt{-g}\d_\omega E\\
+  &=-\frac{1}{2}\sqrt{-g}g_{\m\n }\d_\omega g^{\m\n }E+\sqrt{-g}\d_\omega E
+\end{align}
+From $\d_\omega g_{\m\n }=2\omega g_{\m\n }$ and $\d_\omega(g_{\m\n }g^{\m\n })=0$ implies that
+\begin{equation}
+  g_{\m\n }\d_\omega g^{\m\n }=-g^{\m\n }\d_\omega g_{\m\n }
+\end{equation}
+Furthermore, from \eqref{delta-nabla} and \eqref{delta-nabla-nabla}, we have
+\begin{align}
+  \d_\omega \E&=\pdv{E}{\f }\cancelto{0}{\d_\omega \f} +\pdv{E}{(\nabla_\m \f )}\cancelto{0}{\d_\omega \nabla_\m \f} +\pdv{E}{(\nabla_\m \nabla_\n \f )}\d_\omega (\nabla_\m \nabla_\n \f )+\pdv{E}{g^{\m\n }}\d_\omega g^{\m\n }+P^{\m\n }_{\a\b }\d_\omega R^{\a\b }_{\m\n }
+\end{align}
+where we have defined 
+\begin{equation}\label{P-trnsor}
+  P^{\m\n }_{\a\b }:=\pdv{E}{R_{\m\n }^{\a\b }},\qquad   P^\m_\n :=P^{\a\m }_{\a\n }
+\end{equation}
+
+So then
+\begin{align*}
+  \d_\omega \E&=-\frac{1}{2}\sqrt{-g}g_{\m\n }\d_\omega g^{\m\n }E+\sqrt{-g}\pdv{E}{(\nabla_\m \nabla_\n \f  )}\d_\omega (\nabla_\m \nabla_\n \f )+\sqrt{-g}\pdv{E}{g^{\m\n }}\d_\omega g^{\m\n }+\sqrt{-g}P^{\m\n }_{\a\b }\d_\omega R^{\a\b }_{\m\n }\\
+  &=\sqrt{-g}\pdv{E}{(\nabla_\m \nabla_\n \f )}\left(g_{\n\b }\nabla^\r \f\nabla_\r\omega-2\nabla_{(\m }\f\nabla_{\n)}\omega\right)+\sqrt{-g}\pdv{E}{g^{\m\n }}\d_\omega g^{\m\n }+\sqrt{-g}P^{\m\n }_{\a\b }\d_\omega R^{\a\b }_{\m\n }-\frac{1}{2}\sqrt{-g}g_{\m\n }\d_\omega g^{\m\n }E\\
+  &=\sqrt{-g}\pdv{E}{(\nabla_\m \nabla_\n \f )}\left(g_{\n\b }\nabla^\r \f\nabla_\r\omega-2\nabla_{(\m }\f\nabla_{\n)}\omega\right)+\sqrt{-g}P^{\m\n }_{\a\b }\d_\omega R^{\a\b }_{\m\n }-2\omega g^{\m\n}\sqrt{-g}\left(\pdv{E}{g^{\m\n }}-\frac{1}{2}g_{\m\n }E\right)
+\end{align*}
+Note that
+\begin{align}
+  \pdv{(\sqrt{-g}E)}{g^{\m\n }}&=-\frac{1}{2}\sqrt{-g}g_{\m\n }E+\sqrt{-g}\pdv{E}{g^{\m\n }}\\
+  &=\sqrt{-g}\left(\pdv{E}{g^{\m\n }}-\frac{1}{2}g_{\m\n }E\right)
+\end{align}
+By defining
+\begin{align}\label{A-B}
+  A^{\m\n }:=\pdv{E}{(\nabla_\m \nabla_\n\f )},\qquad B_{\m\n }=-2\left(\pdv{E}{g^{\m\n }}-\frac{1}{2}g_{\m\n }E\right)=-\frac{2}{\sqrt{-g}}\pdv{(\sqrt{-g}E)}{g^{\m\n }}
+\end{align}
+we obtain
+\begin{align}
+  \d_\omega \E&=\sqrt{-g}A^{\m\n }\left(\g_{\m\n }\nabla^\r \f \nabla_\r \omega-2\nabla_\m \f\nabla_\n \omega\right)+\sqrt{-g}P^{\m\n }\d_\omega R^{\a\b }_{\m\n }+\sqrt{-g}\omega B_{\m\n }g_{\m\n }\\
+  &=\sqrt{-g}\left(A\nabla^\r \f\nabla_\r \omega-2A^{\m\n}\nabla_\m \f\nabla_\n\omega+\omega B+P^{\m\n}_{\a\b}\d_\omega R^{\a\b }_{\m\n }\right)
+\end{align}
+Using
+\begin{equation}
+  \d_\omega R^\a _{~\b\m\n }=2\nabla_{[\m }\d_\omega \G^\a _{~\n]\b }
+\end{equation}
+we have
+\begin{align}
+    \d_\omega \E&=\sqrt{-g}\left(A\nabla^\r \f\nabla_\r \omega-2A^{\m\n}\nabla_\m \f\nabla_\n\omega+\omega B+2P_\a ^{~\b\m\n }\nabla_{[\m }\d_\omega \G^{\a }_{~\n]\b }\right)\\
+    &=\sqrt{-g}\left(A\nabla^\n \f\nabla_\n  \omega-2A^{\m\n}\nabla_\m \f\nabla_\n\omega+\omega B+2P_\a ^{~\b\m\n }\nabla_{[\m }\d_\omega \G^{\a }_{~\n]\b }\right)\\
+    &=\sqrt{-g}\left[(A\nabla^\n \f -2A^{\m\n }\nabla_\m\f )\nabla_\n \omega+\omega B+2P_\a ^{~\b\m\n }\nabla_{[\m }\d_\omega \G^{\a }_{~\n]\b }\right]
+\end{align}
+
+Noting that
+\begin{align}
+  \d_\omega \G^\a_{~\n\b }&=\frac{1}{2}g^{\a\lambda}\left[\nabla_\n (\d_\omega g_{\b\lambda})+\nabla_\b (\d_\omega g_{\n\lambda})-\nabla_\lambda(\d_\omega g_{\n\b })\right]\\
+  &=g^{\a\lambda}\left(g_{\b\lambda}\nabla_\n\omega +g_{\n\lambda}\nabla_\b\omega-g_{\n\b }\nabla_\lambda\omega\right)\\
+  &=g^{\a\lambda}\left(g_{\b\lambda}\nabla_\n\omega +2g_{\n[\lambda}\nabla_{\b]}\omega\right)
+\end{align}
+we obtain
+\begin{align*}
+  \d_\omega\E&=\sqrt{-g}\left[(A\nabla^\n \f -2A^{\m\n }\nabla_\m\f )\nabla_\n \omega+\omega B+2P_\a ^{~\b\m\n }\nabla_{\m }g^{\a\lambda}\left(g_{\b\lambda}\nabla_\n\omega +2g_{\n[\lambda}\nabla_{\b]}\omega\right)\right]\\
+  &=\sqrt{-g}\left[(A\nabla^\n \f -2A^{\m\n }\nabla_\m\f )\nabla_\n \omega+\omega B+2P ^{\lambda\b\m\n }\nabla_{\m }\left(\cancel{g_{\b\lambda}}\nabla_\n\omega +2g_{\n\lambda}\nabla_{\b}\omega\right)\right]\\
+  &=\sqrt{-g}\left[(A\nabla^\n \f -2A^{\m\n }\nabla_\m\f )\nabla_\n \omega+\omega B+4P^{\lambda\b\m\n }\nabla_{\m }g_{\n\lambda}\nabla_{\b}\omega\right]\\
+  &=\sqrt{-g}\left[(A\nabla^\n \f -2A^{\m\n }\nabla_\m\f )\nabla_\n \omega+\omega B-4P^{\m\n }\nabla_{\m }\nabla_{\n }\omega\right]
+\end{align*}
+Imposing $\d_\omega\E=0$ for all $\omega$, we obtain the following conditions,
+\begin{subequations}\label{conditions}
+	\begin{align}
+ \label{A-condition} A\nabla^\n \f-2A^{\m\n }\nabla_\m \f&=0\\
+  \label{B-condition} B&=0\\
+ \label{P-condition} P^{\m\n }&=0
+\end{align}
+\end{subequations}
+ 
+From \eqref{P-tensor},
+\begin{equation}\label{dEdP}
+    \pdv{E}{R^{\m\n }_{\a\b }}= P^{\alpha\beta}_{\mu\nu}=\hat{H}^{\alpha\beta}_{\mu\nu}+\delta^{[\alpha}_{[\mu}\hat{I}^{\beta]}_{\nu]}+J\delta^\alpha_{[\mu}\delta^\beta_{\nu]}
+\end{equation}
+we notice that since $\hat{H}^{\alpha\beta}_{\mu\nu}$ is the traceless part of $H^{\alpha\beta}_{\mu\nu}$,
+\begin{equation}
+  P^\b_\n =P^{\a\b }_{\a\n }=\delta^{[\alpha}_{[\a }\hat{I}^{\beta]}_{\nu]}+J\delta^\alpha_{[\a }\delta^\beta_{\nu]}
+\end{equation}
+
+Since the variation with respect to the Weyl tensor does not cotribute so the first trace \eqref{dEdP}, the contribution of the Riemann tensor to $E$ has to be through its traceless part,
+\begin{equation}
+	\E =\sqrt{-g}E\left(\f,\nabla_\m \f ,\nabla_\m \nabla_\n \f ,g_{\m\n },C_{\m\n }^{\a\b }\right)=0\,.
+\end{equation}
+
+\begin{ej}
+	Let us consider the following action principle
+	\begin{align}
+  S[\f,g]&=\int\dd^Dx\sqrt{-g}\left(-\frac{1}{2}\nabla_\m \f\nabla^\m \f \right)^{D/2}\\
+  &=\int\dd^Dx\sqrt{-g}\left(-\frac{1}{2}(\nabla\f )^2\right)^{D/2}\\
+  &=\int\dd^Dx\sqrt{-g}X^{D/2}
+\end{align}
+where we have defined $X:=-\frac{1}{2}\nabla_\m \f\nabla^\m \f$. 
+
+Now, we must to find $E$. Varying with respect to $\f$,
+\begin{align}
+  \d_\f S&=-\int\dd^Dx\sqrt{-g}\frac{D}{2}\left(-\frac{1}{2}(\nabla\f )^2\right)^{\frac{D-2}{2}}\nabla^\m\f \nabla_\m \d\f \\
+  &=\int\dd^Dx\sqrt{-g}\frac{D}{2}\nabla_\m \left[\left(-\frac{1}{2}(\nabla\f )^2\right)^{\frac{D-2}{2}}\nabla^\m \f \right]\d\f +\rm b.t
+\end{align}
+therefore,
+\begin{align}
+  E&=\nabla_\m \left[\left(-\frac{1}{2}(\nabla\f )^2\right)^{\frac{D-2}{2}}\nabla^\m \f \right]\\
+  &=\frac{D-2}{2}\left(-\frac{1}{2}(\nabla\f )^2\right)^{\frac{D-4}{2}}(-1)\nabla^\a \f \nabla_\m \nabla_\a\f \nabla^\m \f +\left(-\frac{1}{2}(\nabla\f )^2\right)^{\frac{D-2}{2}}\Box\f 
+\end{align}
+which can be rewritten as
+\begin{equation}
+  E=X^{\frac{D-2}{2}}\Box\f -\frac{D-2}{2}X^{\frac{D-4}{2}}\nabla_\m \nabla_\n \f\nabla^\m \f\nabla^\n \f 
+\end{equation}
+
+Let's see how \eqref{A-condition} looks,
+\begin{align}
+  A^{\m\n }&=\pdv{(\nabla_\m \f\nabla_\n \f  )}\left[X^{\frac{D-2}{2}}g^{\m\n }\nabla_\m\f \nabla_\n\f  -\frac{D-2}{2}X^{\frac{D-4}{2}}\nabla_\m \nabla_\n \f\nabla^\m \f\nabla^\n \f \right]\\
+  &=X^{\frac{D-2}{2}}g^{\m\n }-\frac{D-2}{2}X^{\frac{D-4}{2}}\nabla^\m \f \nabla^\n\f 
+\end{align}
+and its trace yields
+\begin{align}
+  A&=DX^{\frac{D-2}{2}}-\frac{D-2}{2}X^{\frac{D-4}{2}}(\nabla\f )^2\\
+  &=DX^{\frac{D-2}{2}}+(D-2)X^{\frac{D-4}{2}}\left(-\frac{1}{2}(\nabla\f )^2\right)\\
+  &=DX^{\frac{D-2}{2}}+(D-2)X^{\frac{D-2}{2}}\\
+  &=2(D-1)X^{\frac{D-2}{2}}
+\end{align}
+Pluggin into \eqref{A-condition},
+\begin{align*}
+  A\nabla^\n \f-2A^{\m\n }\nabla_\m \f&=2(D-1)X^{\frac{D-2}{2}}\nabla^\n\f -2X^{\frac{D-2}{2}}g^{\m\n }\nabla_\m \f +(D-2)X^{\frac{D-4}{2}}\nabla^\m\f \nabla^\n\f \nabla_\m\f \\
+  &=2(D-1)X^{\frac{D-2}{2}}\nabla^\n\f-2X^{\frac{D-2}{2}}\nabla^\n\f +(D-2)X^{\frac{D-4}{2}}(\nabla\f )^2\nabla^\n\f \\
+  &=\left[2(D-2)X^{\frac{D-2}{2}}-2(D-2)X^{\frac{D-4}{2}}X\right]\nabla^\n\f \\
+  &=\left[2(D-2)X^{\frac{D-2}{2}}-2(D-2)X^{\frac{D-2}{2}}2\right]\nabla^\n\f \\
+  &=0\qquad \checkmark
+\end{align*}
+\end{ej}
+
+%--------------------
+
+
+\section{Building the auxiliar metric}
+We know the conditions that the most general second orden equation of motion for the zero conformal weight scalar field must satisfy. They are given by \eqref{conditions}. Now, the question is: how do we construct an auxiliary metric $\tilde{g}_{\m\n }$ such that  $\d_\omega \tilde{g}_{\m\n }=0$?
+
+Remember that in the exponential frame for the scalar field, the conformal transformations look like
+\begin{equation}
+  g_{\m\n }\to \bar{g}_{\m\n }= \e^{2\omega}g_{\m\n },\qquad \f\to \bar{\f }=\f 
+\end{equation}
+Since the inverse metric transforms as
+\begin{equation}
+  g^{\m\n }\to \bar{g}^{\m\n }=\e^{-2\omega}g^{\m\n }
+\end{equation}
+the kinetic term for the scalar field, defined as
+\begin{equation}
+  X:=-\frac{1}{2}\nabla_\m \f \nabla^\m \f =-\frac{1}{2}g^{\m\n }\nabla_\m \f\nabla_\n \f 
+\end{equation}
+transforms as
+\begin{equation}
+  \bar{X}=-\frac{1}{2}\bar{g}^{\m\n }\partial_\m \bar{\f }\partial_\n \bar{\f }=-\frac{1}{2}\e^{-2\omega}g^{\m\n }\partial_\m \f\partial_\n \f =\e^{-2\omega}X
+\end{equation}
+Thus, the auxiliary metric defined as
+\begin{equation}
+  \tilde{g}_{\m\n }=Xg_{\m\n }=-\frac{1}{2}(\nabla\f )^2g_{\m\n } \quad \implies\quad \d_\omega\tilde{g}_{\m\n }=0
+\end{equation}
+\textit{is conformally invariant}.
+
+Let us consider a pseudoscalar built from the zero wight conformal scalar field and its derivatives up to second order, and the conformally invariant geometry,
+\begin{equation}
+  \E=\sqrt{-\tilde{g}}E(\f,\tilde{\nabla}_\m\f ,\tilde{\nabla}_\m\nabla_\n \f ,\tilde{g}^{\m\n },\tilde{R}_{\m\n }^{\a\b })
+\end{equation}
+We notice that $\d_\omega\E=0$. Indeed
+\begin{align*}
+  \d_\omega\E=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}^{\m\n }E\cancel{\d_\omega\tilde{g}_{\m\n }}+\sqrt{-\tilde{g}}&\left(\pdv{E}{\f }\cancel{\d_\omega\f} +\pdv{E}{(\tilde{\nabla}_\m\f )}\d_\omega (\tilde{\nabla}_\m\f )+\pdv{E}{(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )}\d_\omega(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )\right.\\&\left. +\pdv{E}{\tilde{g}^{\m\n }}\cancel{\d_\omega\tilde{g}^{\m\n }}+\tilde{P}^{\m\n }_{\a\b}\cancel{\d_\omega\tilde{R}^{\a\b }_{\m\n }}\right)
+\end{align*}
+but
+\begin{align}
+  \d_\omega\tilde{\nabla}_\m\f&=\d_\omega\partial_\m\f =\partial_\m\d_\omega\f=0
+\end{align}
+and
+\begin{align}
+  \d_\omega(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )&=\d_\omega(\tilde{\nabla}_\m\partial_\n \f )\\
+ &=\d_\omega(\partial_\m\partial_\n \f -\tilde{\G}^{\lambda}_{~\m\n }\partial_\lambda\f )\\
+ &=\partial_\m\partial_\n \d_\omega\f -\d_\omega\tilde{\G}^\lambda_{~\m\n }\partial_\lambda\f -\tilde{\G}^\lambda_{^\m\n }\partial_\lambda \d_\omega\f \\
+ &=-\d_\omega\tilde{\G}^\lambda_{~\m\n }\partial_\lambda\f\\
+ &=0
+\end{align}
+since $\d_\omega\tilde{\G}^\lambda_{~\m\n }=0$. Therefore,
+\begin{align}
+  \d_\omega\E=0\, .
+\end{align}
+
+
+Since from conformal invariance for zero weight scalar field, the $P^{\m\n }=0$ condition implies that the explicit dependence of the Riemann tensor in the equation of motion is through the Weyl tensor, then,  for a equation of motion built from the conformally invariant geometry we have
+\begin{equation}
+  E=E(\f,\tilde{\nabla}_\m\f ,\tilde{\nabla}_\m\nabla_\n \f ,\tilde{g}^{\m\n },\tilde{C}_{\m\n }^{\a\b })=0
+\end{equation}
+
+[\rc{Is this last true?}]
+
+
+\section{Fréchet derivative}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

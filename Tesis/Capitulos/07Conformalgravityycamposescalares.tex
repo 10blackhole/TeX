@@ -1,0 +1,100 @@
+\documentclass[../Main.tex]{subfiles}
+\begin{document}
+Otra clase interesante de teorías de escalar-tensor con invarianza conforme manifiesta está dada por la acción CG~\eqref{ICGaction} y la acción del campo escalar con acoplamiento no mínimo $I_{\phi}$, es decir,
+\begin{equation}
+I_{\rm CG\phi} = I_{\rm CG} + I_{\phi} \, .
+\label{ICGphi}
+\end{equation}
+A diferencia de la acción de Einstein-Hilbert en la sección anterior, la acción CG es invariante conforme y la única parte que debe ser completada conforme proviene del sector escalar. Esto se logra mediante la introducción de términos de borde que nos permiten llevar $I_{\phi}$ a la forma dada en la ecuación~\eqref{Iphiren}. Por lo tanto, ambas acciones son totalmente invariantes conformes y pueden ser escritas en la forma
+\begin{equation}
+I_{\rm CG\phi,conf}   \equiv \frac{1}{4}\int\diff{^4x}\sqrt{|g|}\,\delta^{\mu_1\ldots\mu_4}_{\nu_1\ldots\nu_4}\left(\alpha W^{\nu_1\nu_2}_{\mu_1\mu_2}W^{\nu_3\nu_4}_{\mu_3\mu_4} - \zeta\Sigma^{\nu_1\nu_2}_{\mu_1\mu_2}\Sigma^{\nu_3\nu_4}_{\mu_3\mu_4}\right)  \,.\label{Lagconformal}
+\end{equation}
+De hecho, esta es la teoría escalar-tensor invariante conforme más general de gravedad, construida a partir de dos tensores cuadráticos covariantes conformes en presencia de campos escalares.
+Las ecuaciones de campo se obtienen mediante variaciones estacionarias de la acción con respecto a la métrica y el campo escalar, lo que resulta en
+\begin{subequations}\label{eom}
+\begin{align}\label{eomg}
+    \mathcal{E}_{\mu\nu} &\equiv \alpha B_{\mu\nu} - 48\zeta\nu\, T_{\mu\nu} = 0\,, \\
+    \label{eomp}
+    \mathcal{E} &\equiv \Box\phi - \frac{1}{6}\phi R - 4\nu\phi^3 = 0\,, 
+\end{align}
+\end{subequations}
+respectivamente. Para un campo escalar constante, estas ecuaciones de movimiento admiten espacios Einstein como soluciones ya que estos son Bach-flat y tienen tensor de energía-momentum nulo. 
+
+
+
+
+
+
+\section{Renormalización}
+Con la finalidad de estudiar las consecuencias de la completitud conforme de $I_{\rm CG\phi}$ en su renormalizacion, escribiremos la acción en términos de el tensor de Weyl al cuadrado tomando en cuenta la descomposicion realizada en la Ec.~\eqref{weylfdecomposition}. En este caso, $I_{\rm CG\phi,conf}$ se verá como 
+\begin{equation}\label{LagSigmaT}
+    I_{\rm CG\phi,conf} = \int\diff{^4x}\sqrt{|g|}\left[ \frac{(\alpha-\zeta)}{4}\delta^{\mu_1\ldots\mu_4}_{\nu_1\ldots\nu_4}W^{\nu_1\nu_2}_{\mu_1\mu_2}W^{\nu_3\nu_4}_{\mu_3\mu_4} + \frac{24\zeta}{\phi^4}\left(3 T_{\mu}^{\nu}T_{\nu}^{\mu}-T^2\right)\right]\,.
+\end{equation}
+Lo anterior es solo una reescritura de la  Ec.~\eqref{Lagconformal}, la cual puede simplificarse aún más si se cumplen las ecuaciones de movimiento de Ec.~\eqref{eomp} o, de forma equivalente, $T=0$, dando como resultado
+\begin{equation}\label{LagSigmaTon-shell}
+I_{\rm CG\phi,conf}\Big|_{\rm on-shell} = \int\diff{^4x}\sqrt{|g|}\left[ \frac{(\alpha-\zeta)}{4}\delta^{\mu_1\ldots\mu_4}_{\nu_1\ldots\nu_4}W^{\nu_1\nu_2}_{\mu_1\mu_2}W^{\nu_3\nu_4}_{\mu_3\mu_4} + \frac{72\zeta}{\phi^4}T_{\mu}^{\nu}T_{\nu}^{\mu}\right]\,.
+\end{equation}
+Por lo tanto, la acción coincide con el tensor de Weyl al cuadrado, adquiriendo su comportamiento asintótico bien definido para cualquier espacio de AlAdS, cuando se consideran configuraciones correspondientes a $T_{\mu\nu}=0$. Además, como se observó en la última sección, la adición de los contratérminos que completan conformemente a $I_{\phi}$ conduce a una acción finita incluso para configuraciones con $T_{\mu \nu}$ no nulo, siempre y cuando el decaimiento del término $\phi^{-4}T_{\mu}^{\nu}T_{\nu}^{\mu}$ sea lo suficientemente rápido.
+
+Además, existe un punto particular en el espacio de parámetros, es decir, $\alpha=\zeta$, donde la acción se anula idénticamente para todas las soluciones de la teoría para las cuales $T_{\mu \nu}=0$. Por lo tanto, la continuación Euclidiana de estas soluciones tiene una acción on-shell nula, al igual que la solución maximalmente simétrica, y por lo tanto se pueden considerar como parte del mismo estado de vacío de la teoría. Esta condición no implica necesariamente que el campo escalar deba ser trivial, más bien podría representar una configuración stealth. Esto proporciona una noción extendida de criticalidad ya que la acción Euclídea on-shell se anula para soluciones stealth en este punto particular del espacio de parámetros. Este resultado es completamente análogo a Critical Gravity para los campos puramente métricos~\cite{Lu:2011zk}, donde la acción y las cargas conservadas se anulan idénticamente para espacios de Einstein~\cite{Miskovic:2014zja,Anastasiou:2017rjf}. Sin embargo, en ambas teorías el vacío está determinado por espacios tipo Einstein. Aquí, en cambio, la criticalidad surge para configuraciones stealth que pueden o no ser espacios Einstein.
+
+
+
+
+
+
+
+\section{Aplicaciones: Configuraciones Stealth sobre la métrica de Riegert}
+Estudiemos las configuraciones stealth para verificar la Renormalización Conforme de manera explícita. Reemplazando la Ec.~\eqref{ansatz} en~\eqref{eom}, encontramos la siguiente solución
+\begin{subequations}\label{solution}
+\begin{align}
+    f(r) &= k + \frac{6mG}{r_0} - \frac{2}{r_0}\left(k+\frac{3mG}{r_0} \right)r - \frac{2mG}{r} - \frac{\lambda r^2}{3}\,,\\
+    \phi(r) &= \frac{1}{r-r_0}\sqrt{-\frac{k+\frac{2mG}{r_0}+\frac{\lambda r_0^2}{3}}{2\nu}}\,,
+\end{align}
+\end{subequations}
+donde $m$, $\lambda$ y $r_0$ son constantes de integración. Esta solución existe solo para $\nu\neq0$ y $r_0\neq0$ y, hasta donde sabemos, se encontró por primera vez en~\cite{Brihaye:2009ef}. De hecho, aunque el campo escalar no es trivial, tiene un tensor de energía-momentum nulo. Por lo tanto, concluimos que esta solución representa un campo escalar stealth~\cite{Ayon-Beato:2004nzi,Ayon-Beato:2005yoq,Hassaine:2006gz,Ayon-Beato:2013bsa} sobre la métrica de Riegert~\cite{Riegert:1984zz}; esta última representa el espacio-tiempo más general estático y esféricamente simétrico que resuelve las ecuaciones de campo de CG. Además, esta solución está continuamente conectada al agujero negro de Schwarzschild-AdS topológico cuando $r_0\to\infty$, donde el campo escalar se vuelve constante, es decir, $\phi=\sqrt{-\frac{\lambda}{6\nu}}$.
+
+La solución contiene una singularidad de curvatura en $r=0$, como se puede ver a partir de su escalar de Ricci, que es
+\begin{equation}
+    R = 4\lambda + \frac{12(3mG+kr_0)}{r_0^2\,r} - \frac{12mG}{r_0\,r^2}\,.
+\end{equation}
+La singularidad está cubierta por un único horizonte definido como la raíz real del polinomio cúbico $f(r_h)=0$. Para que exista un horizonte de agujero negro, se debe cumplir la condición $r_h>0$. Luego, centrándonos en el caso $k=1$ por simplicidad, identificamos dos casos posibles: (i) $r_0>0$ o (ii) $r_0<0$. En ambos casos, encontramos que $m>0$. En el primero, existe un polo en el campo escalar en $r=r_0$. Luego, exigiendo que el polo escalar se encuentre detrás del horizonte, encontramos $0<r_0<6mG<r_h$ y
+\begin{align}
+    \frac{(r_0-6mG)(r_0+3mG)^2}{r_0(3 mGr_0)^2 }&<\Lambda <0 &\lor& & \Lambda &=\frac{(r_0-6mG)(r_0+3mG)^2}{r_0(3 mGr_0)^2}\,.
+\end{align}
+Por otro lado, si $r_0<0$, el campo escalar es regular para $r\in\mathbb{R}_{>0}$. Entonces, de esa forma no es necesario pedir que $r_h>r_0$. Así, encontramos 
+\begin{align}
+    \bigg(r_0&\leq -2mG& &\land& \Lambda &\leq-\frac{3(r_0+2mG)}{r_0^3}\bigg)& &\lor& \bigg(r_0&>-2mG & &\land&  \Lambda &<0\bigg)\,.
+\end{align}
+Estas condiciones garantizan la existencia de una solución tipo agujero negro con un campo escalar regular fuera del horizonte. 
+
+La temperatura del agujero negro de la solución~\eqref{solution} viene dada por
+\begin{align}\label{beta1}
+ T_H = \frac{(r_h-r_0)\left[k(3r_h-r_0) - \lambda r_h^2(r_h-r_0)\right]}{4\pi r_h \left[ 3r_h(r_h-r_0)  +r_0^2\right]} \,,
+\end{align} 
+Como anticipamos, la invariancia conforme de la acción~\eqref{Lagconformal} hace que la acción Euclídea on-shell sea finita para las configuraciones stealth. Esto se puede ver explícitamente evaluando la ecuación~\eqref{Lagconformal} en la solución~\eqref{solution}, obteniendo
+\begin{align}
+I_E &= -\frac{16(\alpha-\zeta)\beta\omega_{(k)}m^2G^2}{r_h^3}\left[1-\frac{3r_h}{r_0}\left(1-\frac{r_h}{r_0}\right) \right]\, .
+\end{align}
+Se puede notar que, aunque el campo escalar no tiene backreaction, su presencia modifica la acción Euclídea on-shell de una manera no trivial. 
+
+Adicionalmente, existe otra solución tipo agujero negro asintóticamente AdS la cual no esta continuamente conectada a la solución de la Ec.~\eqref{solution}. Estas configuraciones fueron presentadas por primera vez en la Ref.~\cite{Herrera:2017ztd}, donde sus cargas conservadas fueron calculadas usando el formalismo de Abbot-Deser-Tekin~\cite{Abbott:1981ff,Deser:2002rt,Deser:2002jk,Deser:2003vh}. En las coordenadas que estamos usando en esta tesis, la solución asintótica de la Ref.~\cite{Herrera:2017ztd} viene dada por
+\begin{subequations}\label{solutionsyerko}
+\begin{align}
+    f(r) &= k + 12\nu\phi_0 -br - \frac{\lambda r^2}{3}\,, \\
+    \phi(r) &= \frac{\sqrt{\phi_0}}{r}\,,
+\end{align}
+\end{subequations}
+donde $\phi_0$, $b$ y $\lambda$ son constantes de integración sujetas a la condición $(\zeta-4\alpha)(k+6\nu\phi_0)=0$. Aunque esta solución no está conectada de forma continua a~\eqref{solution}, también representa una configuración de campo escalar stealth. Esta solución posee una singularidad de curvatura en $r=0$, la cual puede ser cubierta por un horizonte ubicado en $r=r_h$ definido mediante el polinomio $f(r_h)=0$. En la sección euclidiana, la ausencia de singularidades cónicas exige que el período del tiempo Euclídeo sea
+\begin{align}
+    \beta &= \frac{4\pi r_h\ell^2}{r_h^2+k\ell^2}\,,
+\end{align}
+de donde se puede deducir la temperatura de Hawking. La acción Euclídea on-shell conformemente renormalizada~\eqref{Lagconformal} para la solución en la Ec.~\eqref{solutionsyerko} se verá como 
+\begin{align}
+I_E = -\frac{16\beta\omega_{(k)}k^2(\alpha-\zeta)}{3r_h},.
+\end{align}
+Por lo tanto, se puede llegar a la conclusión de que la renormalización conforme proporciona un valor finito para la acción Euclídea on-shell para la solución~\cite{Herrera:2017ztd} también. 
+
+
+\biblio %Se necesita para referenciar cuando se compilan subarchivos individuales - NO SACAR
+\end{document}

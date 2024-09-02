@@ -1,0 +1,283 @@
+\documentclass[../Main.tex]{subfiles}
+\begin{document}
+
+Modificar la Relatividad General parece un camino evidente cuando buscamos explicar fenómenos en los que la teoría falla. Entender la expansión acelerada del universo, explicar la masa faltante de objetos a escalas cosmológicas y comprender como se relaciona la gravedad con la mecánica cuántica son las razones que suelen repetirse en este marco ya que son interrogantes fundamentales de la física moderna. La extensión mas sencilla de relatividad general en 4 dimensiones es agregar el termino de constante cosmológica, lo cual esta permitido por el teorema de Lovelock \cite{Lovelock:1971yv}. La acción de Einstein-Hilbert con constante cosmológica en cuatro dimensiones esta dada por
+\begin{equation}
+    I_{\text{AdS}}=\kappa \int_{\mathcal{M}} \diff^{4}x \sqrt{\lvert g\rvert}\, (R-2\Lambda) + 2 \kappa\sigma\int_{\partial\mathcal{M}} \diff^{3}x \sqrt{\lvert h\rvert}\, K\, \, ,\label{ehconl}
+\end{equation}
+cuyas ecuaciones de movimiento estan dadas por 
+\begin{align}
+R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}R+\Lambda g_{\mu\nu} =0\, . \label{econlambda}
+\end{align}
+
+ Una solución a estas ecuaciones que es de particular interés en este trabajo es el espacio-tiempo Anti-de Sitter (AdS), el cual se define como un tipo de espacio-tiempo con curvatura constante negativa. Esta solución fue introducida por el matemático Élie Cartan a principios del siglo XX y posteriormente utilizado por físicos en la década de 1980 para modelar ciertos sistemas gravitatorios. Actualmente tiene relevancia tanto en teorías de gravitación como en teoría de cuerdas.
+
+Una de las características más interesantes de AdS es su simetría conforme~\cite{balasubramanian1999stress}, tema que detallaremos con mas profundidad en las siguientes secciones. Esta simetría se puede expresar matemáticamente mediante la siguiente expresión 
+\begin{equation}
+g_{\mu\nu}(x) \rightarrow e^{2\omega}g_{\mu\nu}(x)
+\end{equation}
+donde $g_{\mu\nu}(x)$ es el tensor métrico, $\omega(x)$ es una función arbitraria, y $\mu$ y $\nu$ representan índices espacio-temporales.
+
+Esta simetría tiene importantes implicancias para la holografía, un concepto teórico que sugiere que la información contenida dentro de un sistema físico puede representarse en un espacio de menor dimensión. El principio holográfico se puede formular matemáticamente utilizando la correspondencia AdS/CFT, que relaciona el comportamiento de los sistemas gravitatorios en AdS con el de teorías de campos conforme en dimensiones inferiores~\cite{witten1998anti}. Esta correspondencia se expresa matemáticamente mediante la siguiente ecuación:
+\begin{equation}
+Z_{\text{AdS}}[\phi_{0}] = Z_{\text{CFT}}[\phi_{0}]
+\end{equation}
+donde $Z_{\text{AdS}}[\phi_{0}]$ es la función de partición de un sistema gravitatorio en AdS con una métrica de borde fija $\phi_{0}$, y $Z_{\text{CFT}}[\phi_{0}]$ es la función de partición de una teoría de campo conforme en el borde con la misma métrica fija~\cite{maldacena1999large}.
+
+\subsection{Espacio-tiempo Anti-de Sitter}
+
+La estructura métrica de $\rm AdS_{d+1}$ en un sistema particular de coordenadas, está representada por un hiperboloide inmerso en un espacio tiempo de Minkowski $M^{d,2}$, con coordenadas
+\begin{align}
+    X^{\mu}=(X^{0},\cdots,X^{d+1})\, ,
+\end{align}
+y el elemento de línea 
+\begin{align}
+    \diff s^2=\eta_{\mu\nu}\diff X^{\mu}\diff X^{\nu} \;\;\;\;\;\; \mbox{con} \;\;\;\;\; \eta_{\mu\nu}=\rm diag(-,-,+,\cdots,+)\, . \label{adsline}
+\end{align}
+Así, el hiperboloide esta descrito por
+\begin{align}
+    -(X^{0})^2-(X^{1})^2+(X^{2})^2+\cdots+(X^{d+1})^2=-\ell^2 \, . \label{ads1}
+\end{align}
+La ecuación anterior es llamada $\rm AdS_{d+1}$ Minkowskiano y tiene la particularidad de que pareciera tener dos direcciones temporales, siendo $\ell\neq 0$ el radio de curvaturade AdS. 
+
+Dado que $\rm AdS_{d+1}$ está construido inmerso en $M^{d,2}$, posee las mismas isometrías del espacio ambiente, en este caso $SO(d,2)$. Dicho grupo también es el grupo de simetrías del grupo conforme en una dimensión menor. Es importante resaltar que lo anterior fue el primer indicio de una relación entre AdS como espacio-tiempo y la simetría conforme en una dimensión menor~\cite{Brown:1986nw}, lo que más tarde contribuiría al desarrollo de la conjetura AdS/CFT. El grupo $SO(d,2)$ posee exactamente el número de generadores que el grupo de isometrías de $M^{d,1}$.
+\begin{align}
+    SO(d,2)\to M^{d,1}\to \frac{(d+1)(d+2)}{2}\, .
+\end{align}
+De esta forma, es evidente que $AdS_{d+1}$ es un espacio maximalmente simétrico, es decir, posee el número máximo de vectores de Killing. Adicionalmente, dado que $AdS_{d+1}$ es maximalmente simétrico se cumple lo siguiente para sus cantidades que describen la curvatura,
+\begin{align}\notag
+R_{\mu\nu\lambda\rho}&=-\frac{1}{\ell^2}(g_{\mu\lambda}g_{\nu\rho}-g_{\mu\rho}g_{\nu\lambda}) \, ,\\
+R_{\mu\nu}&=\frac{d}{\ell^2}g_{\mu\nu}\, ,\label{adseins}\\ \notag
+R&=\frac{-d(d+1)}{\ell^2} \, . 
+\end{align}
+Luego, de la Ec.~\eqref{adseins} se puede ver que $AdS_{d+1}$ es un espacio tipo Einstein, puesto que estos espacios se definen como una variedad en la cual su tensor de Ricci es proporcional a la métrica de dicha variedad. Por lo tanto, tal y como habíamos mencionado, $AdS_{d+1}$ es una solución a las ecuaciones de Einstein con constante cosmológica en el vacío \eqref{econlambda}.
+
+
+
+\subsubsection{Coordenadas globales}
+Podemos parametrizar~\eqref{adsline} de la siguiente forma
+\begin{align} \notag
+    X^{0}&=\ell\cosh{\rho}\cos{\tau}\\ \notag
+    X^{1}&=\ell\cosh{\rho}\sin{\tau}\\ \notag
+    X^{i}&=\ell\Omega_{i}\sinh{\rho} \,\,\,\,\,\mbox{con}\,\,\,\,\,i=2,\cdots,d+1\,\,\,\mbox{y}\,\,\, \Omega^{2}_{i}=1 \, ,
+\end{align}
+con $\rho\,\in\mathbb{R}_{+}$ y $\tau\,\in\,[0,2\pi]$. Así, podemos escribir en la forma conocida como coordenadas globales. El elemento de línea toma la forma 
+\begin{align}
+    \diff s^2=\ell^2(-\cosh^2{\rho}\,\diff\tau^2+\diff\rho^2+\sinh^2{\rho}\,\diff\Omega^2_{d-1})\, . \label{adsglobal}
+\end{align}
+Como podemos observar, la métrica no depende de $\tau$, por lo que posee un vector de Killing tipo tiempo. Sin embargo, al ser periódica en la misma coordenada tenemos curvas tipo tiempo cerradas. Para evitar lo anterior, podemos extender el rango de coordenadas tal que $\tau\,\in\,[-\infty,+\infty]$ y realizar el siguiente cambio de coordenadas
+\begin{align}\notag
+t&=\ell\tau \, , \\ \notag 
+r&=\ell\sinh{\rho}\, ,
+\end{align}
+de esta forma, obtenemos
+\begin{align}
+\diff s^{2}=-\left(1+\frac{r^2}{\ell^2}\right)\diff t^{2}+\frac{\diff r^{2}}{\left(1+\frac{r^2}{\ell^2}\right)}+r^2 \diff\Omega^{2}_{d-1} \, . \label{ads4}
+\end{align}
+La ecuación anterior es la representación mas conocida del elemento de línea de AdS, la cual se conoce como coordenadas estáticas. Luego, podemos tomar el límite $r\to\infty$
+\begin{align}
+    \lim_{r\to\infty} \diff s^{2}=-\frac{r^{2}}{\ell^{2}}\diff t^{2}+r^2 \diff\Omega^{2}_{d-1}=\frac{r^2}{\ell^{2}}\left(-\diff t^{2}+\ell^2\diff\Omega^{2}_{d-1}\right)\, , \label{ads3}
+\end{align}
+donde es notorio que la métrica diverge. En el límite $r\to\infty$, para cualquier espacio AdS se cumple que: (i) el volumen es infinito, (ii) posee un polo de segundo orden y (iii) se induce una estructura conforme, lo que es evidente al mirar el factor en la Ec.~\eqref{ads3}. Dicha estructura se puede considerar como un segundo indicio de una relación con la simetría conforme. Luego, conviene ver el comportamiento de la Ec.~\eqref{ads1} para valores grandes de $X^{\mu}$, entonces $\rm AdS_{d+1}$ 
+\begin{align}
+-(X^{0})^2-(X^{1})^2+(X^{2})^2+\cdots+(X^{d+1})^2= 0\, ,
+\end{align}
+esta hipersuperficie es asintóticamente tipo luz y, al igual que los conos de luz, tiene la propiedad de ser invariante conforme. Esta propiedad es importante ya que, al aplicar una transformación conforme, se preservan los ángulos entre los vectores y, por lo tanto, se mantiene la estructura causal. Entonces, al tener una hipersuperficie tipo luz como comportamiento asintótico, se induce una estructura conforme en $\rm AdS_{d+1}$. Así, tenemos nuevamente un indicio de conexión con la simetría conforme.
+
+Ahora, si partimos de las coordenadas globales de la Ec.~\eqref{adsglobal} y aplicamos el siguiente cambio de coordenadas 
+\begin{align}
+    \tan{\theta}\to\sinh{\rho}\, ,
+\end{align}
+el parche global tomará la forma
+\begin{align}
+    \diff s^2=\frac{\ell^2}{\cos^2{\theta}}\left(-\diff\tau^2+\diff\theta^2+\sin^2{\theta}\,\diff\Omega^{2}_{d-1}\right)\, . \label{ads5}
+\end{align}
+Ahora, analicemos los rangos de coordenadas de $\theta$. En este caso, el ángulo va de $0\leqslant\theta\leqslant\pi/2$, lo cual no cubre completamente el parche. Sin embargo, se cubre el sector donde $\theta=\pi/2$. Este valor es relevante, ya que el elemento de línea $\diff s^2$ diverge y además, es donde se localiza el borde conforme. Todo espacio asintóticamente AdS (AAdS) posee un borde conforme. Este borde es tipo tiempo y nos da información sobre la geometría de la variedad. En este caso, ya no es globalmente hiperbólica. Ahora, para ir de forma suave en el borde, podemos hacer el siguiente rescalamiento 
+\begin{align}
+ (\diff s')^2=\frac{\cos^2{\theta}}{\ell^2}\diff s^2=-\diff\tau^2+\diff\theta^2+\sin{\theta}\,\diff\Omega^{2}_{d-1}\, ,
+\end{align}
+donde $\theta=\pi/2=\partial\mathcal{M}\to\diff\theta^2=0$ y $\sin{\theta}=1$, así, el elemento de línea en el borde queda 
+\begin{align}
+(\diff s')^2\Big|_{\partial\mathcal{M}}= \diff\tau^2+\diff\Omega^{2}_{d-1}\, ,
+\end{align}
+entonces la topología del borde es un cilindro, i.e., $S^{d-1}\times\mathbb{R}$. En consecuencia, el borde es conformalmente plano, lo que se puede resumir como 
+\begin{align}
+    W^{\alpha\beta}_{\mu\nu}({\rm bulk})=W^{ij}_{km}({\rm boundary})=0 \, ,
+\end{align}
+con $W^{\alpha\beta}_{\mu\nu}$ el tensor de Weyl definido como 
+\begin{equation}
+W_{\mu \nu}^{\alpha \beta}= R_{\mu \nu}^{\alpha \beta} -4S^{[\alpha}_{[\mu} \delta^{\beta]}_{\nu]} \;\;\;\;\; \mbox{con} \;\;\;\;\; S_{\mu\nu} = \frac{1}{2} \left(R_{\mu \nu} - \frac{1}{6} g_{\mu \nu} R\right) \,,
+\label{weyltensor}
+\end{equation}
+con $S_{\mu\nu}$ el tensor de Schouten.
+
+
+\section{Espacios asintóticamente localmente anti-de Sitter}
+Ahora, queremos definir un espacio asintóticamente localmente anti-de Sitter (AlAds) generalizando las nociones anteriores. Consideremos ahora la métrica de la Ec.~\eqref{ads5}, como mencionamos anteriormente posee un polo de orden 2 en $\theta=\pi/2$ y es el lugar donde se ubica el borde. Ya sabemos cómo proceder para que el elemento de línea sea finito considerando un reescalamiento. Sin embargo, este reescalamiento no es único, ya que podemos definir también 
+\begin{align}\notag
+ g'_{\mu\nu}=\frac{\cos^2{\theta}}{\ell^2}g_{\mu\nu} \;\;\;\;\; \mbox{ó} \;\;\;\;\; 
+ g'_{\mu\nu}=\frac{\cos^2{\theta}}{\ell^2}e^{2\sigma(x)}g_{\mu\nu}\, .
+\end{align}
+Así, si $\sigma(x)$ es una función sin polos en el borde y sin ceros, ambas métricas son finitas modulo una transformación conforme. Esto induce una estructura conforme en el borde de AdS, i.e., $g'=\Omega^2 g$ y $\Omega(\partial \mathcal{M})=0\to d\Omega(\partial \mathcal{M})\neq 0$. Variedades con estas propiedades se conocen como espacios asintóticamente localmente anti-de Sitter (AlAds). Para corroborar que, en efecto un espacio AlAdS se aproxima a un espacio AdS con propiedades dadas por las Ec.~\eqref{adseins}, reemplazamos~\eqref{ads5} en las ecuaciones de Einstein, obteniendo
+\begin{align}\notag
+    R_{\mu\nu}&=-\diff|\diff\Omega|^2 g_{\mu\nu}+\mathcal{O}^{-2}(\Omega^{-1})\\
+    R_{\mu\nu\rho\sigma}&=|\diff\Omega^2|(g_{\mu\rho}g_{\nu\sigma}-g_{\mu\sigma}g_{\nu\rho})+{O}(\Omega^{-3}) \, .
+\end{align}
+Notemos que dado que $g$ tiene un polo de segundo orden en $\partial \mathcal{M}$, el término de mayor orden en tensor de Riemann es de orden $\Omega^{-4}$. Las ecuaciones de campo de Einstein implican entonces que 
+\begin{align}
+    |\diff\Omega|^2=\frac{1}{\ell^2}\;\;\;\;\;\mbox{en}\;\;\;\;\; \partial\mathcal{M}\, .
+\end{align}
+De ello se deduce que el tensor de Riemann de un espacio-tiempo AlAdS cerca de $\partial\mathcal{M}$ se parece al de AdS puro.
+
+
+
+
+
+
+
+
+
+\subsubsection{Expansión de Fefferman-Graham}
+El término AdS asintóticamente (localmente) sugiere que la métrica del espacio-tiempo $g_{\mu\nu}$ debería (localmente) aproximarse a~\eqref{ads4}, al menos con una adecuada elección de coordenadas. Esto está lejos de manifestarse en las definiciones anteriores. Pero resulta ser una consecuencia de las ecuaciones de Einstein. De hecho, éstas ecuaciones implican que la estructura asintótica es descrita por 
+la expansión Fefferman-Graham. La métrica en coordenadas de FG se ve como 
+\begin{align}
+\diff s^2=\frac{\ell^2}{4\rho^2}\diff\rho^2+\frac{1}{\rho}g_{ij}(\rho,x)\diff x^{i}\diff x^{j}\, .
+\end{align}
+
+ 
+Según el teorema de Fefferman-Graham, que tenga una estructura asintótica como AdS admite una expansión de Fefferman-Graham~\cite{fefferman2008ambient} (FG). Así, AdS siendo una solución a las ecuaciones de Einstein en vacío con constante cosmológica negativa, admitirá una expansión de FG de la forma
+\begin{align}
+g_{ij}(\rho,x)=g_{(0)ij}(x)+\rho g_{(2)ij}(x)+\rho^{2}g_{(4)ij}(x)+\cdots+\rho^{d/2}g_{(d)ij}    \, ,
+\end{align}
+para dimensiones impares del borde. Para dimensiones del borde par, por otro lado, la expansión es
+\begin{align}
+g_{ij}(\rho,x)=g_{(0)ij}(x)+\rho g_{(2)ij}(x)+\rho^{d/2}g_{(d)ij}+\rho^{d/2}\ln{\rho}\alpha_{(d)ij}(x)+\cdots\mathcal{O}(\rho^{d/2 +1})\, .
+\end{align}
+El término logarítmico de la ecuación anterior expresa las diferentes características geométricas entre tener borde par o impar. Además, el coeficiente $\alpha_{d}$ está relacionado con la anomalía conforme cuando la dimensión del borde es par. Ahora, si no se incluye éste término al imponer la condición de espacios Einstein la serie se estropea.  
+
+\section{Renormalización para espacios AlAdS}
+Luego de mencionar las propiedades de los espacios AdS y AlAdS, queremos probar algunos de los métodos para calcular cargas conservadas y renormalización en espacios que solucionan las ecuaciones de Einstein con constante cosmológica negativa. 
+
+Primeramente, calculemos la acción Euclidea on-shell para la métrica de Schwarzschild-AdS, dada por
+\begin{align}
+    \diff s^2=-f(r)\diff t^2+\frac{\diff r^2}{f(r)}+r^2\left(\diff \theta^2+\sin^2\theta\diff \phi^2\right)\,\,\,\,\,\,\mbox{con}\,\,\,\,\,\, f(r)=1-\frac{2mG}{r}+\frac{r^2}{\ell^2}\, .
+\end{align} \label{schwads}
+Recordemos que debemos tomar en cuenta un background para eliminar las divergencias. Para este caso, tomaremos como espacio tiempo de referencia AdS global. Tomando la traza la de la Ec.~\eqref{econlambda} obtenemos $R=4\Lambda$. Así, reemplazando en la acción~\eqref{ehconl}, obtenemos 
+\begin{align}
+I^{\text{on-shell}}_{\text{AdS}}=2\Lambda\kappa\int \diff^{4}x \sqrt{|g|}+2\sigma\kappa\int \diff^{3}x \sqrt{|h|}(K-K_{0}) \, .
+\end{align}
+En este caso, si calculamos el término de borde, nos queda una contribución que va como $\mathcal{O}(r^{-2})$. Luego, si tomamos el límite de $r\to\infty$ el factor correspondiente al borde no aporta al valor de la acción Euclídea on-shell. Sin embargo, el volumen como es proporcional al determinante de la métrica posee una divergencia del orden de $\mathcal{O}(r^{3})$, i.e., diverge como el volumen de AdS. 
+Ahora, siguiendo el mismo espíritu del método de substracción de background, restaremos a la acción resultante el volumen de AdS global con el fin de eliminar la divergencia del término de volumen~\cite{Hawking:1982dh}. Primero, debemos fijar las longitudes de arco de la métrica, tal y como en el calculo de la acción Euclídea en la Ec.~\eqref{periodo}. Lo anterior se debe a que AdS global no tiene horizonte, así en virtud que ambas métricas estén el mismo ensamble debemos fijar el periodo del tiempo Euclídeo de la siguiente manera
+\begin{align}\notag
+\int \sqrt{\diff s^2}\big|_{r=R}&=\int \sqrt{\diff s^2_{(0)}}\big|_{r=R}\\ \notag
+\int_{0}^{\beta_\tau}\sqrt{g^{\rm BH}_{\tau\tau}}\diff\tau&=\int_{0}^{\beta_0}\diff\tau\sqrt{g^{\rm AdS}_{\tau\tau}}\\ \notag
+\beta_\tau\sqrt{\left(1-\frac{2mG}{R}+\frac{R^2}{\ell^2}\right)}&=\beta_0\sqrt{1+\frac{R^2}{\ell^2}}\\
+\beta_0&=\frac{\sqrt{\left(1-\frac{2mG}{R}+\frac{R^2}{\ell^2}\right)}}{\sqrt{1+\frac{R^2}{\ell^2}}}\beta_{\tau} \, .
+\end{align}
+Ahora, la integral de la acción será
+\begin{align}\notag
+I^{\text{on-shell}}_{\text{AdS}}&=2\Lambda\kappa\int \diff^{4}x \sqrt{|g^{\rm BH}|}-2\Lambda\kappa\int \diff^{4}x \sqrt{|g^{\rm AdS}|}\\\notag
+&=2\Lambda\kappa\left[\int^{\beta_{\tau}}_{0}\diff\tau\int^{2\pi}_{0}\diff\phi\int^{\pi}_{0}\sin{\theta}\diff\theta\int^{R}_{r_h}r^{2}\diff r-\int^{\beta_0}_{0}\diff\tau\int^{2\pi}_{0}\diff\phi\int^{\pi}_{0}\sin{\theta}\diff\theta\int^{R}_{0}r^{2}\diff r\right]\\\notag
+&=8\pi\kappa\beta_{\tau}\Lambda\frac{1}{3}(R^3-r_{h}^3)-8\pi\kappa\beta_{0}\Lambda\frac{1}{3}R^3\\ \notag
+&=\frac{8\pi\kappa\beta_{\tau}\Lambda}{3}\left(R^3-r_{h}^3-\frac{\sqrt{\left(1-\frac{2mG}{R}+\frac{R^2}{\ell^2}\right)}}{\sqrt{1+\frac{R^2}{\ell^2}}}R^3\right)\\ \notag
+&=\lim_{R \to \infty}\frac{8\pi\kappa\beta_{\tau}\Lambda}{3}(R^3-r_{h}^3-R^3+mG\ell^2+\mathcal{O}(R^{-2}))\\
+&=\frac{8\pi\kappa\beta_{\tau}}{\ell^2}(mG\ell^2-r_{h}^3)\, \label{AEOAdS}
+\end{align}
+donde en la penúltima linea expandimos en serie de Taylor el factor que acompaña a $R^3$. De este valor de la acción Euclídea on-shell usando las relaciones presentadas en la sección~\ref{sec:AEO} podemos obtener las cantidades termodinámicas del sistema. 
+
+Ahora, veamos como se aplica el formalismo de Brown-York para el agujero negro de Schwarzschild-AdS.
+
+Siguiendo el mismo análisis de la sección~\ref{sec:BY} vamos a calcular la masa del agujero negro a la Brown-York. El valor de la curvatura extrínseca del black hole y del background vienen dadas por la Ec.~\eqref{curvextri}, donde
+\begin{align}
+f(r)_{\rm BH}&=1-\frac{2mG}{r}+\frac{r^2}{\ell^2}\, ,\\
+f(r)_{\rm AdS}&=1+\frac{r^2}{\ell^2}\, .
+\end{align}
+Luego, reemplazando los valores anteriores y el vector normal unitario definido en la sección~\ref{sec:BY} en la Ec.~\eqref{qby}, la masa va como 
+\begin{align}
+    Q[\xi]=\frac{r^3}{2G\ell^2}+\frac{1}{2}M+\frac{M\ell^2}{2r^2}+\mathcal{O}\left(\frac{1}{r^3}\right)\, .
+\end{align}
+Por ende, la carga es divergente para espacios AlAdS. De hecho, el método de substracción de background no permite cancelar las divergencias en este formalismo. Es por ello que necesitamos de una prescripción distinta.
+
+\subsection{Renormalización holográfica}
+
+Con el propósito de resolver el problema que de la sección anterior, Balasubramanian y Kraus \cite{balasubramanian1999stress} propusieron una manera para renormalizar el tensor de stress cuasilocal en espacios AlAdS agregando una serie de términos de borde construidos a partir de cantidades intrínsecas llamados contratérminos. Estos se añaden a la acción y cancelan las divergencias problemáticas para los cálculos de cargas. Adicionalmente, coinciden con los propuestos en las Refs.~\cite{Emparan:1999pm,deHaro:2000vlm,Skenderis:2002wp} inspirados en la renormalizacion de la acción Euclidea on-shell en el marco de la correspondencia AdS/CFT. Esta serie, para una variedad en 4 dimensiones, se ve de la forma\footnote{En general, los coeficientes de la serie de contraterminos dependen de la dimensionalidad del espacio y podría contener términos de curvatura superior~\cite{Emparan:1999pm,deHaro:2000vlm,Skenderis:2002wp}.}
+\begin{equation}
+    I_{ct}=\frac{1}{8\pi G}\int_{\partial\mathcal{M}}\diff^{3}x\sqrt{\lvert h\rvert}\left[\frac{2}{\ell}+\frac{\ell}{2}\mathcal{R} \right]  \, ,\label{ct}
+\end{equation}
+donde $\ell$ es el radio de curvatura de AdS que se relaciona con la constante cosmológica en cuatro dimensiones vía $\Lambda=-\tfrac{3}{\ell^2}$ y $\mathcal{R}$ es la curvatura intrínseca que se define a través de la relación de Gauss-Codazzi como
+\begin{equation}
+    \mathcal{R}^{\rho}\hspace{0.5ex}_{\sigma\mu\nu}=h^{\rho}_{\alpha}h^{\beta}_{\sigma}h^{\gamma}_{\mu}h^{\delta}_{\nu}R^{\alpha}\hspace{0.5ex}_{\beta\gamma\delta}+2\sigma K^{\rho}\hspace{0.3ex}_{[\mu}K_{\nu]\hspace{0.3ex}
+    \sigma} \,.
+\end{equation}
+Así, la acción para AdS renormalizada con contraterminos es
+\begin{align}
+    I_{\rm AdS}+I_{\rm ct}=\kappa \int_{\mathcal{M}} \diff^{4}x \sqrt{\lvert g\rvert}\, (R-2\Lambda) + 2 \kappa\sigma\int_{\partial\mathcal{M}} \diff^{3}x \sqrt{\lvert h\rvert}\, K+2 \kappa\int_{\partial\mathcal{M}}\diff^{3}x\sqrt{\lvert h\rvert}\left[\frac{2}{\ell}+\frac{\ell}{2}\mathcal{R} \right]\, . 
+\end{align}
+Asimismo, de la Ref.~\cite{balasubramanian1999stress}, el tensor de energía-momentum cuasilocal en 4 dimensiones toma la forma 
+\begin{align}
+\tau_{\mu\nu}=-2\kappa\sigma\left[K_{\mu\nu}-h_{\mu\nu}K\right] -4\sigma\kappa\left[\frac{1}{\ell}h_{\mu\nu}-\frac{\ell}{2}\left(\mathcal{R}_{\mu\nu}-\frac{1}{2}h_{\mu\nu}\mathcal{R}\right)\right]\, .
+\end{align}
+De la definición anterior, la carga conservada asociada es 
+\begin{align}
+Q[\xi]=\int_{\Sigma}\diff^{2}x\sqrt{\gamma}u_{\mu}\xi_{\nu}\tau^{\mu\nu}\, ,
+\end{align}
+de manera que, si calculamos la integral anterior obtenemos
+\begin{align}
+    Q[\xi]=M\, . 
+\end{align}
+
+
+Es importante mencionar que con este método de renormalizacion también es posible obtener una acción Euclídea on-shell finita, obteniendo el mismo valor que la Ec.~\eqref{AEOAdS}. 
+
+
+
+\subsection{Renormalización con términos topológicos}
+Ya vimos que es necesario un esquema de renormalizacion diferente a la substracción de background para calcular cantidades conservadas en la acción de Einstein-Hilbert con constante cosmológica. Existe otra prescripción para renormalizar que considera términos extrínsecos o Kounterterms, los cuales están construidos en función de la curvatura extrínseca de la variedad. En general, los métodos de renormalizacion holográfica y topológica no coinciden en cuanto al valor de las cargas. De hecho, difieren por el tensor de Weyl del borde, excepto en el caso de 4 dimensiones, ya que en este caso los bordes son conformalmente planos, i.e., $W=0$. Adicionalmente, en 4 dimensiones se puede probar que la renormalización topológica es equivalente (modulo la característica de Euler) a sumar el termino de Gauss-Bonnet \cite{Aros:1999id,Aros:1999kt,Olea_2007,Olea:2005gb}, es decir,
+\begin{equation} 
+    I_{EH}^{ren}=\kappa \int_{\mathcal{M}} d^{4}x \sqrt{\lvert g\rvert} (R-2\Lambda) + \kappa \alpha_{0}\int_{\mathcal{M}} d^{4}x \sqrt{\lvert g\rvert}\,\mathcal{G} \, , \label{IEGB}
+\end{equation}
+en donde para el valor $\alpha_{0}=\tfrac{\ell^2}{4}$  \eqref{IEGB} es finita, ya que de forma general diverge \cite{Olea:2005gb,Olea_2007,Aros:1999id,Aros:1999kt}. Hemos definido al Gauss-Bonnet como
+\begin{align}
+    \mathcal{G}=R^2 -4R^{\mu\nu}R_{\mu\nu}+R^{\mu\nu\lambda\rho}R_{\mu\nu\lambda\rho} \, .
+\end{align}
+En cuatro dimensiones, este término no cambia las ecuaciones de movimiento ya que se relaciona con la característica de Euler, $\chi(\mathcal{M})$, a través del teorema de Chern-Gauss-Bonnet
+\begin{equation}
+    \int d^{4}x \sqrt{\lvert g\rvert}\,\mathcal{G}=32\pi^2\chi(\mathcal{M}) + \int_{\partial{\mathcal{M}}}d^{3}x\sqrt{\lvert h\rvert}\,\mathcal{B}\,,
+\end{equation}
+en donde la forma de Chern está definida como
+\begin{align}
+    % \chi&=2-2g\\
+    \mathcal{B}&=-4\delta^{\alpha\beta\gamma}_{\mu\nu\lambda}K^{\mu}_{\alpha}\left(\frac{1}{2}\mathcal{R}^{\nu\lambda}_{\beta\gamma}-\frac{1}{3}K^{\nu}_{\beta}K^{\lambda}_{\gamma}\right)\,.
+\end{align}
+
+
+Para valores arbitrarios de $\alpha_{0}$, la acción \eqref{IEGB} es divergente para espacios Einstein con comportamiento AlAdS, i.e.,
+\begin{align}
+    R_{\mu\nu}=-\frac{3}{\ell^2} g_{\mu\nu} \, . \label{ES}
+\end{align}
+Sin embargo, cuando el acoplamiento del Gauss-Bonnet toma el valor de $\alpha_{0}=\tfrac{\ell^2}{4}$, la acción puede ser escrita de la forma conocida como MacDowell-Mansouri \cite{MacDowell:1977jt}, esto es,
+\begin{align}
+    \label{MacdowellMansouri}
+    I_{MM} &= \frac{\kappa \ell^2}{16}\int_{\mathcal{M}} d{^4x}\sqrt{\lvert g\rvert}\delta^{\mu_1\ldots\mu_4}_{\nu_1\ldots\nu_4}\left(R^{\nu_1\nu_2}_{\mu_1\mu_2} + \frac{1}{\ell^2}\delta^{\nu_1\nu_2}_{\mu_1\mu_2} \right)\left(R^{\nu_3\nu_4}_{\mu_3\mu_4} + \frac{1}{\ell^2}\delta^{\nu_3\nu_4}_{\mu_3\mu_4} \right) \, .
+\end{align}
+Por otro lado, la descomposición del tensor de Riemann en términos de sus piezas irreducibles nos entrega que puede ser escrito como
+\begin{align}
+    R^{\mu\nu}_{\lambda\rho}=W^{\mu\nu}_{\lambda\rho}+4S^{[\mu}_{[\lambda}\delta^{\nu]}_{\rho]}\, , \label{desc}
+\end{align}
+en donde $W^{\mu\nu}_{\lambda\rho}$ es el tensor de Weyl, mientras que  $S^{\mu}_{\nu}=g^{\mu\lambda}S_{\nu\lambda}$ es el tensor de Schouten.
+Ahora, usando la condición \eqref{ES}, el tensor de Schouten es $S_{\mu\nu}=-\tfrac{1}{2\ell^2}g_{\mu\nu}$. Por lo tanto, el tensor de Weyl toma la forma 
+\begin{align}
+    W^{\mu\nu}_{\lambda\rho(E)} = R^{\mu\nu}_{\lambda\rho} + \frac{1}{\ell^2}\delta^{\mu\nu}_{\lambda\rho} \equiv \mathcal{F}^{\alpha \beta}_{\mu \nu}  \, .
+\end{align}
+El lado derecho de esta ecuación representa las piezas Riemannianas de la curvatura de gauge para el grupo de AdS. Así, la acción~\eqref{MacdowellMansouri} evaluada en un espacio Einstein~\eqref{ES} queda de la siguiente manera
+\begin{equation}
+    I_{MM} = \frac{\kappa\ell^2}{4}\int d{^4x}\sqrt{\lvert g\rvert}\;W^{\mu\nu}_{\lambda\rho(E)}W^{\lambda\rho}_{\mu\nu(E)} \,. \label{IMM1}
+\end{equation}
+ Otra característica interesante de la acción \eqref{IMM1}  es  su relación con el invariante conforme en 4 dimensiones $W^{\mu\nu}_{\lambda\rho}W^{\lambda\rho}_{\mu\nu}$.
+ Esto nos invita a pensar que podría existir una relación entre la simetría conforme y la renormalizacion de acción y cargas conservadas en espacios AlAdS. 
+
+
+
+
+\biblio %Se necesita para referenciar cuando se compilan subarchivos individuales - NO SACAR
+\end{document}

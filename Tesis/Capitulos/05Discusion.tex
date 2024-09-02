@@ -1,0 +1,232 @@
+\documentclass[../Main.tex]{subfiles}
+\begin{document}
+
+El descubrimiento del Boson de Higgs en el año 2012 por parte de las colaboraciones ATLAS y CMS en CERN, nos dio evidencia observacional de la existencia de un campo escalar fundamental como piedra angular del modelo estándar \cite{CMS:2012qbp,ATLAS:2012yve}. Incluso antes de este evento, los campos escalares tenían relevancia en ciertas áreas de la física, como por ejemplo en la cosmología de épocas tempranas, teoría de bajas energías de la cromodinámica cuántica, los pares de Bardeen–Cooper–Schrieffer en superconductividad, entre muchas otras.
+
+
+En el caso de gravitación, acoplamientos no-minimales entre campos escalares y la geometría son interesantes ya que permiten describir la evolución tardía del Universo y, a su vez, evitar violaciones al teorema de no pelo; teorema que discutiremos más adelante. 
+
+La acción para un campo escalar conformalmente acoplado a \eqref{IEGB} se ve de la siguiente manera
+\begin{equation}
+    I[g_{\mu\nu},\phi]=\int_{\mathcal{M}} d^{4}x \sqrt{\lvert g\rvert}\left(\kappa\,R -\frac{1}{12} R\phi^2-\frac{1}{2} \nabla^{\mu}\phi\nabla_{\mu}\phi\right)\,.
+\end{equation}
+Bekenstein \cite{Bekenstein:1974sf,bekenstein1973black} y Bocharova-Melnikov-Bronnikov \cite{Bocharova:1970skc} encontraron de forma independiente una solución para esta acción. Sin embargo, en esta solución el campo escalar diverge en el horizonte de eventos. Inspirados por esto, Martinez-Staforelli-Troncoso-Zanelli~\cite{Martinez:2002ru,Martinez:2005di} encontraron una generalización añadiendo un término con un potencial cuártico más la constante cosmológica. En este caso, el campo escalar es regular fuera y sobre el horizonte de eventos. Ésta solución es conocida como el MSTZ black hole y la acción está dada por
+\begin{equation}
+    I[g_{\mu\nu},\phi]=\int_{\mathcal{M}} d^{4}x \sqrt{\lvert g\rvert}\left[\kappa(R-2\Lambda) -\frac{1}{12} R\phi^2-\frac{1}{2} \nabla^{\mu}\phi\nabla_{\mu}\phi-\nu\phi^4\right],
+\end{equation}
+en donde $\nu$ es un parámetro adimensional de la teoría que caracteriza la intensidad del acoplamiento cuártico de los campos escalares. Las ecuaciones de movimiento que se obtienen de variar esta acción con respecto de la metrica y el campo escalar son
+\begin{align}
+ G_{\mu\nu}+\Lambda g_{\mu\nu}&=\frac{1}{2\kappa} T_{\mu\nu}\, ,\\
+   \Box\phi - \frac{1}{6}\phi R - 4\nu\phi^3 &= 0\,,
+\end{align}
+respectivamente, en donde el tensor de energía-momentum está definido por
+\begin{align}
+T_{\mu\nu} &= \nabla_\mu\phi\nabla_\nu\phi - \frac{1}{2}g_{\mu\nu}\nabla_\lambda\phi\nabla^\lambda\phi + \frac{1}{6}\left(g_{\mu\nu}\Box - \nabla_\mu\nabla_\nu + G_{\mu\nu} \right)\phi^2 - \nu\phi^4 g_{\mu\nu} \,.
+\label{Ttensor}
+\end{align}
+El valor $\nu=-\tfrac{2\Lambda G}{9}$ y la positividad de la constante cosmológica son necesarias para asegurar la existencia de una solución tipo agujero negro estático y esfericamente simétrico \cite{Martinez:2002ru}. Recientes trabajos relacionados que recuperan el agujero negro de BBMB mencionado anteriormente tomando ciertos límites en parámetros de soluciones con campos escalares pueden ser vistos aquí \cite{Barrientos:2022avi, Barrientos:2023tqb}
+
+\section{Teorema de no Pelo}
+Cuando mencionamos anteriormente el teorema de no pelo nos referimos al enunciado propuesto por Bekenstein~\cite{PhysRevLett.28.452,PhysRevD.5.1239} y desarrollado posteriormente por Israel, Wheerler, Carter y Hawking~\cite{PhysRevLett.26.331,PhysRev.164.1776} que establece que los agujeros negros en el espacio-tiempo de la Relatividad General están completamente caracterizados por solo tres propiedades físicas: masa ($\mathbf{M}$), carga eléctrica ($\mathbf{Q}$) y momento angular ($\mathbf{J}$). 
+
+El teorema nos enuncia que, una vez que un agujero negro astrofísico se ha formado a través del colapso gravitacional de la materia, todas las demás características y propiedades del objeto original desaparecen y sólo quedan las tres cantidades mencionadas anteriormente. Actualmente, existen estudios que tratan de probar este teorema mediante ondas gravitacionales~\cite{PhysRevLett.123.111102,PhysRev.164.1776} y la observación directa de la sombra del agujero negro de M87~\cite{Tang:2022uwi}. Sin embargo, en escenarios con agujeros negros extremales~\cite{PhysRevD.103.L021502} o en mecánica cuántica~\cite{PhysRevLett.128.111301} pueden existir violaciones al teorema.
+
+Agregar un campo escalar conformalmente acoplado puede inducir que la solución adquiera lo que se conoce como pelo primario, i.e., donde hay un parámetro nuevo no trivial, o un pelo secundario, donde este parámetro proveniente del campo escalar puede definirse en función de las constante de integración de la métrica.
+
+A modo de ejemplo, consideremos la acción de Einstein-Klein-Gordon dada por la ecuación
+\begin{align}
+I_{\rm EKG}=\int\diff{^4x}\sqrt{|g|}\left(\kappa R - \frac{1}{2}\nabla^{\mu} \phi \nabla_{\mu} \phi - V(\phi)\right) \,,
+\end{align}
+donde $V(\phi)$ es un potencial arbitrario. Las EOM son  
+\begin{align}
+ G_{\mu\nu}&=\frac{1}{2\kappa} T_{\mu\nu}\, ,\\
+   \Box\phi &= \frac{\diff V}{\diff\phi}\,,
+\end{align}
+con $T_{\mu\nu}=\nabla_{\mu}\phi\nabla_{\nu}\phi-\frac{1}{2}g_{\mu\nu}\nabla_{\lambda}\phi\nabla^{\lambda}\phi+g_{\mu\nu}V(\phi)$ el tensor de energía-momentum del campo escalar. Ahora, estudiemos la ecuación de movimiento del campo escalar. Vamos a asumir estaticidad y simetría esférica para la métrica y el campo escalar, esto es 
+\begin{align}
+\diff s^2=-f(r)h^2(r)\diff t^2+\frac{\diff r^2}{f(r)}+r^2\diff\Omega^2\;\;\;\;\;\mbox{y}\;\;\;\;\;\phi=\phi(r)\, .
+\end{align}
+Además, consideraremos la existencia de un horizonte en $r=r_h$, tal que $f(r_h)=0$. Si multiplicamos por $\phi$ e integramos ambos lados sobre una variedad $\mathcal{M}$, la cual está delimitada por el horizonte y una región asintótica $r\to\infty$, tenemos
+\begin{align}
+\int_{\mathcal{M}}\diff{^4x}\sqrt{|g|}\left(-\phi\Box\phi+\phi\frac{\diff V}{\diff\phi}\right)=0\, . \label{ekgm}
+\end{align}
+Luego, vamos a integrar por partes el término $\phi\Box\phi$, lo cual nos entrega
+\begin{align}
+-\phi\Box\phi=\nabla_{\mu}\phi\nabla^{\mu}\phi-\nabla_{\mu}(\phi\nabla^{\mu}\phi)\, .
+\end{align}
+Reemplazando en~\eqref{ekgm}, obtenemos
+\begin{align}
+\int_{\mathcal{M}}\diff{^4x}\sqrt{|g|}\left(\nabla_{\mu}\phi\nabla^{\mu}\phi+\phi\frac{\diff V}{\diff\phi}\right)-\int_{\mathcal{M}}\diff{^4x}\sqrt{|g|}\nabla_{\mu}(\phi\nabla^{\mu}\phi)=0\, .   
+\end{align}
+Como el último término es una derivada total, podemos utilizar el teorema de la divergencia, lo que nos deja con un término de borde. Así, considerando una foliación radial, el término de borde se anula tanto en el horizonte como en la región asintótica, siempre que los campos escalares decaigan lo suficientemente rápido cuando $r\to\infty$. Por lo tanto, nos queda
+\begin{align}
+\int_{\mathcal{M}}\diff{^4x}\sqrt{|g|}\left(\nabla_{\mu}\phi\nabla^{\mu}\phi+\phi\frac{\diff V}{\diff\phi}\right)=0\, .   
+\end{align}
+Luego, notemos que el primer término de la integral es semi definido positivo fuera del horizonte, ya que $g^{\mu\nu}\nabla_{\mu}\phi\nabla_{\nu}\phi=g^{rr}[\phi'(r)]^2\geq 0$ si $r\geq r_h$. Además, vamos a considerar que el potencial $V(\phi)$ cumpla con $\phi\,\diff V/\diff\phi\geq0$, como por ejemplo el termino de masa
+\begin{align*}
+V(\phi)=\frac{m^2}{2}\phi^2 \;\;\;\to\;\;\;\phi\frac{\diff V}{\diff\phi}=m^2\phi^2\, .
+\end{align*}
+Entonces, remplazando en la integral anterior, tenemos
+\begin{align}
+\int_{\mathcal{M}}\diff{^4x}\sqrt{|g|}\left(\nabla_{\mu}\phi\nabla^{\mu}\phi+m^2\phi^2\right)=0\, .
+\end{align}
+Podemos notar que tenemos la suma de dos cantidades positivas que son iguales a cero. La única forma en que esto se cumpla es si cada factor por separado es cero, lo cual implica que $\phi=0$. De esta forma, podemos ver que para que exista un horizonte y además las cantidades estén bien comportadas, el campo escalar debe ser trivial. Este es el teorema de no pelo de Bekenstein. Sin embargo, es posible relajar ciertas condiciones del teorema y encontrar soluciones tipo agujero negro con campo escalar no trivial, como veremos a continuación.
+
+
+
+
+\section{Acoplamiento conforme}
+
+El análisis realizado en el capítulo anterior nos dice que, en presencia de campos puramente métricos, la invariancia conforme en el volumen conduce a una acción finita cuando se consideran espacio-tiempos de tipo anti-de Sitter (AlAdS). En esta sección, estudiamos si esta relación se puede extender en presencia de campos escalares. Nuestro punto de partida es la teoría escalar-tensor acoplada conformalmente con un campo escalar auto-interactuante, cuya acción está dada por
+\begin{equation}\label{ccscalar}
+I_\phi = \int\diff{^4x}\sqrt{|g|}\left(\frac{1}{12}\phi^{2} R + \frac{1}{2}\nabla^{\mu} \phi \nabla_{\mu} \phi + \nu\phi^{4}\right) \,,
+\end{equation}
+donde $\nu$ es una constante de acoplamiento adimensional del campo escalar cuártico. Esta acción es cuasi-invariante conforme, es decir, transforma como un termino de borde bajo reescalamientos simultáneos de Weyl de la métrica y del campo escalar, dados por $g_{\mu\nu}\to\tilde{g}_{\mu\nu} = e^{2\sigma(x)}g_{\mu\nu}$ y $\phi\to\tilde{\phi} = e^{-\sigma(x)}\phi$.
+En efecto, considerando reescalamientos infinitesimales de Weyl de los campos 
+\begin{align}
+\delta_{\sigma} g_{\mu \nu} = 2 \sigma g_{\mu \nu} \;\;\;\;\; \mbox{y} \;\;\;\;\; \delta_{\sigma} \phi = - \sigma \phi \,, 
+%\delta_{\sigma} R &= - 2 \sigma R - 6 \nabla^{\mu} \nabla_{\mu} \sigma \,,
+\end{align}
+la Ec.~\eqref{ccscalar} transforma como 
+\begin{align}
+\delta_{\sigma}I_{\phi} %&= \int\diff{^4x} \left[\left(\delta_{\sigma} \sqrt{|g|} \right) \mathcal{L}_{\phi}+ \sqrt{|g|} \delta_{\sigma}\mathcal{L}_{\phi} \right] \notag \\
+%&= -\int\diff{^4x}\sqrt{|g|} \left(2 \phi \nabla^{\mu} \sigma \nabla_{\mu} \phi + \phi^{2} \Box \sigma\right) \notag \\
+&=-\frac{1}{2}\int\diff{^4x}\sqrt{|g|} \nabla_{\mu} \left(\phi^{2} \nabla^{\mu} \sigma \right) \,. \label{Weylvargandphi}
+\end{align}
+La presencia de una derivada total indica que la acción $I_{\phi}$ debe ser complementada por un término de borde y/o una contribución topológica para restaurar la invarianza conforme local exacta de la teoría.
+
+Para realizar la completitud conforme de la última expresión, consideramos que para un escalar $\Phi$ de dimensión de escalamiento arbitraria $\Delta$, la variación de Weyl del Laplaciano multiplicado por el elemento de volumen se expresa como
+\begin{equation}
+\delta_{\sigma}\left(\sqrt{|g|} \Box \Phi \right) =  \sqrt{|g|} \left[\left(D+\Delta-2\right) \sigma \Box \Phi +\Delta \Phi \Box \sigma + \left(D+2\Delta-2\right) \nabla^{\lambda} \sigma \nabla_{\lambda} \Phi \right] \,.
+\end{equation}
+Así, para $\Phi = \phi^2$ con $\Delta=-2$ en cuatro dimensiones, obtenemos
+\begin{equation}
+\delta_{\sigma}\left(\sqrt{|g|} \Box \phi^2 \right) = -2 \sqrt{|g|} \nabla_{\mu} \left(\phi^{2} \nabla^{\mu} \sigma \right) \,.
+\end{equation}
+Por lo tanto, la combinación 
+\begin{equation}
+I_{\phi,\rm cc}=I_{\phi} - \frac{1}{4}\int\diff{^4x}\sqrt{|g|} \Box \phi^2 \,,
+\end{equation}
+es completamente invariante bajo reescalamientos de Weyl tanto de la métrica como del campo escalar. De hecho, esta acción puede escribirse de manera equivalente como
+\begin{equation}
+I_{\phi,\rm cc}=\int\diff{^4}x\sqrt{|g|}\left(\frac{1}{12}\phi^2 R - \frac{1}{2}\phi\Box\phi + \nu\phi^4\right) \,.
+\label{Ibulkconf}
+\end{equation}
+En la última expresión, queda manifiesto que la completitud conforme de la acción de campo escalar con acoplamiento no mínimo conduce a una dependencia explícita del operador Yamabe $\Delta_2$, que se expresa como sigue
+\begin{equation}\label{Yamabe}
+\Delta_2 = - \Box+ \frac{\left(D-2\right)}{4\left(D-1\right)} R\,.
+\end{equation}
+Este operador diferencial ---frecuentemente llamado Laplaciano conforme--- es covariante conforme con un peso de escala $-\frac{D+2}{2}$ cuando actúa sobre escalares de dimensiones de escala $\Delta = -\frac{D-2}{2}$~\cite{Osborn:2015rna, Gover:2002ay}. Se puede extender trivialmente este operador diferencial agregando un escalar con peso conforme $\Delta=-2$. En particular, para la teoría de interés, consideramos la extensión
+ %such that
+% \begin{equation}
+% \tilde{\Delta}_{2} = \Delta_{2}+ c X \,,
+% \label{Yamabeext}
+% \end{equation}
+% where $c$ is a dimensionless constant. For the theory of interest, given in Eq.\eqref{ccscalar}, the extension of the Yamabe operator reads
+\begin{equation}
+\tilde{\Delta}_{2} = \Delta_{2}+ c \phi^{2}\,,
+\label{Yamabeext}
+\end{equation}
+donde $c$ es una constante de acoplamiento adimensional arbitraria. Esto, nos permite reescribir la acción \eqref{Ibulkconf} como 
+\begin{equation}
+I_{\phi,\rm cc}= \frac{1}{2}\int\diff{^4}x\sqrt{|g|} \phi \tilde{\Delta}_{2} \phi \,.
+\label{Ibulkconf2}
+\end{equation}
+Como el operador Yamabe es covariante conforme, la acción~\eqref{Ibulkconf2} es explícitamente invariante bajo reescalaminetos de Weyl. Sin embargo, existen configuraciones que rompen la simetría, como los campos escalares constantes. En ese caso, la parte cinética del campo escalar se anula y solo queda la parte de Einstein-Hilbert, perdiendo la información de la presencia del escalar. Además, se puede ver que la transformación conforme se vuelve singular para un escalar constante al empezar con una configuración escalar no trivial tal que la acción~\eqref{Ibulkconf2} sea finita y el espacio-tiempo sea AlAdS. Entonces, se puede elegir la transformación conforme para que el campo escalar sea constante. Si el valor original de la acción era finito, entonces, por la invarianza conforme, debería seguir siendo finito en la configuración de campo escalar constante. Sin embargo, en ese caso, la acción diverge con el volumen AdS. Por lo tanto, la transformación debe ser singular. Esto implica que $I_{\phi,\rm cc}$ debe ser complementado por los términos compensatorios correspondientes que son necesarios para garantizar la invariancia conforme del volumen para todas las posibles configuraciones de campo de la teoría, incluido el caso de un campo escalar constante.
+
+Para evitar este problema, es conveniente introducir el tensor prpouesto en  Ref.~\cite{Oliva:2011np}, este es,
+\begin{equation}\label{Stensor}
+\mathcal{S}^{\mu\nu}_{\,\lambda\rho}=\phi^2R^{\mu\nu}_{\,\lambda\rho}-4\phi\delta^{[\mu}_{[\lambda}\nabla^{\nu]}\nabla_{\rho]}\phi+8\delta^{[\mu}_{[\lambda}\nabla^{\nu]}\phi\nabla_{\rho]}\phi-\delta^{\mu\nu}_{\lambda\rho}\nabla_\alpha\phi\nabla^\alpha\phi\,,
+\end{equation}
+que transforma covariantemente bajo reescalamientos de Weyl en cuatro dimensiones, i.e.,
+\begin{align}
+\mathcal{S}^{\mu\nu}_{\lambda\rho}\to \tilde{\mathcal{S}}^{\mu\nu}_{\lambda\rho} &=  e^{-4\sigma(x)}\mathcal{S}^{\mu\nu}_{\lambda\rho}\,. 
+\end{align} 
+Esto implica que el tensor~\eqref{Stensor} se convierte en un objeto conveniente para construir teorías escalar-tensor de gravedad invariante conforme. De hecho, sus trazas son
+\begin{align}\label{Smunu}
+\mathcal{S}^\mu_\nu &\equiv \mathcal{S}^{\mu\lambda}_{\nu\lambda} = \phi^2R^\mu_\nu - \delta^\mu_\nu \phi\Box\phi - 2\phi\nabla^\mu\nabla_\nu\phi + 4\nabla^\mu\phi\nabla_\nu\phi - \delta^\mu_\nu\nabla_\lambda\phi\nabla^\lambda\phi\,, \\
+\label{S}
+\mathcal{S} &\equiv \mathcal{S}^{\mu\nu}_{\mu\nu} = \phi^2 R-6\phi\square\phi \, .
+\end{align}
+Se puede observar que la Ec.~\eqref{Yamabe} y~ \eqref{S} coinciden, módulo un factor global, si y solo si $c=0$. Una generalización natural de la Eq.~\eqref{Stensor} incluyendo la pieza faltante del operador de Yamabe en la  Eq.~\eqref{S} se puede obtener cambiando $S^{\mu\nu}_{\lambda\rho}$ en el espacio del campo, según
+\begin{equation}\label{Sigma}
+\Sigma^{\mu\nu}_{\lambda\rho} = \frac{1}{\phi^2}\left(\mathcal{S}^{\mu\nu}_{\lambda\rho} + 2\nu\phi^4\,\delta^{\mu\nu}_{\lambda\rho} \right)\,,
+\end{equation}
+donde $\delta^{\mu_1\ldots\mu_p}_{\nu_1\ldots\nu_p}=p!\,\delta^{\mu_1}_{[\nu_1}\dots\delta^{\mu_p}_{\nu_p]}$ es la delta de Kronecker generalizada de rango $p$. Escrito en esta forma, se puede ver que $\Sigma^{\mu\nu}_{\lambda\rho}$ tiene el mismo peso conforme que el tensor de Weyl. Entonces, su traza
+\begin{align}\label{Yamabe2}
+\phi^2\Sigma^{\mu\nu}_{\mu\nu} &=  \phi^2 R - 6 \phi\Box\phi + 24\nu\phi^4 = 6\phi\tilde{\Delta}_2\phi
+\end{align}
+para $c=4\nu$. Es decir, la traza completa del tensor covariante conforme $\Sigma^{\mu\nu}_{\lambda\rho}$ es equivalente, modulo un factor global, al operador de Yamabe en 4D.
+
+Así, basado en el análisis anterior, consideramos una teoría escalar-tensor invariante conforme cuya dinámica está descrita por el principio de acción
+\begin{align}\notag
+I_{\phi,\rm conf} &= \frac{\zeta}{4}\int\diff{^4}x\sqrt{|g|}\,\delta^{\mu_1\ldots\mu_4}_{\nu_1\ldots\nu_4}\Sigma^{\nu_1\nu_2}_{\mu_1\mu_2}\Sigma^{\nu_3\nu_4}_{\mu_3\mu_4} \\
+&= 96\zeta\nu\int\diff{^4}x\sqrt{|g|}\,\left[\frac{1}{12}\phi^2 R - \frac{1}{2}\phi\Box\phi + \nu\phi^4 + \frac{1}{96\nu}\,\left(E_4 + \nabla_\mu J^\mu\right)\right] \label{Lagphi}  \,,
+\end{align}
+donde $\zeta$ es un parametro adimensional y
+\begin{align}
+J^{\mu} &= 8 \left[\phi^{-1} G^\mu_\lambda\nabla^\lambda\phi+ \phi^{-2} \left(\nabla^{\mu} \phi \Box \phi -\nabla^{\lambda} \phi\nabla_{\lambda}\nabla^{\mu} \phi \right) + \phi^{-3} \nabla^{\mu} \phi \nabla^{\lambda} \phi \nabla_{\lambda} \phi \right]\,,
+\end{align}
+con $G_{\mu\nu}=R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}R$. La Ec.~\eqref{Lagphi} reproduce, modulo un término de borde, exactamente el operador de Yamabe de la acción escalar-tensor acoplada conforme en la Eq.~\eqref{Ibulkconf2}. % since integration by parts gives $\phi\Box\phi = \nabla_\mu\left(\phi\nabla^\mu\phi \right) - \nabla_\mu\phi\nabla^\mu\phi$. 
+Como vimos anteriormente, el término de Gauss-Bonnet no transforma covariantemente bajo reescalamientos de Weyl [ver la Eq.~\eqref{weylvarGB}]. Sin embargo, dado que el lado izquierdo de la ecuación 
+\begin{align}\label{GBS}
+    \frac{1}{4\phi^4}\delta^{\mu_1\ldots\mu_4}_{\nu_1\ldots\nu_4}S^{\nu_1\nu_2}_{\mu_1\mu_2}S^{\nu_3\nu_4}_{\mu_3\mu_4} = \frac{1}{4}\delta^{\mu_1\ldots\mu_4}_{\nu_1\ldots\nu_4}R^{\nu_1\nu_2}_{\mu_1\mu_2}R^{\nu_3\nu_4}_{\mu_3\mu_4} + \nabla_\mu J^\mu\,,
+\end{align}
+transforma de forma covariante bajo reescalamientos de Weyl por construcción, se puede concluir que la divergencia de $J^\mu$ compensa la pieza no homogénea del Gauss-Bonnet bajo transformaciones conformes. 
+
+Las ecuaciones de movimiento para la acción inicial \eqref{ccscalar} se pueden obtener realizando variaciones estacionarias de la acción de la Eq.~\eqref{Lagphi} con respecto a la métrica y el campo escalar, así, tenemos
+\begin{subequations}\label{EOMLagphi}
+\begin{align}\label{eomlagphig}
+    T_{\mu\nu} &\equiv \nabla_\mu\phi\nabla_\nu\phi - \frac{1}{2}g_{\mu\nu}\nabla_\lambda\phi\nabla^\lambda\phi + \frac{1}{6}\left(g_{\mu\nu}\Box - \nabla_\mu\nabla_\nu + G_{\mu\nu} \right)\phi^2 - \nu\phi^4 g_{\mu\nu} = 0 \,, \\\label{eomlagphip}
+   \mathcal{E} &\equiv\Box\phi - \frac{1}{6}\phi R - 4\nu\phi^3 = 0\,, 
+\end{align}
+\end{subequations}
+respectivamente. Tomando la traza de la Ec.~\eqref{eomlagphig} y comparandola con Ec.~\eqref{eomlagphip}, se tiene que $T= g^{\mu\nu}T_{\mu\nu}=\phi\,\mathcal{E}$. Adicionalmente, el tensor $\Sigma$ está relacionado al $T_{\mu\nu}$ de la Ec.~\eqref{eomlagphig} mediante
+\begin{equation}\label{SigmaT}
+\phi^{2}\Sigma^\mu_\nu=6\left(T^\mu_\nu - \frac{1}{2}T\delta^\mu_\nu\right)\,.
+\end{equation}
+Se puede observar que una configuración constante del campo escalar, digamos $\phi=\phi_0$, reduce la teoría~\eqref{Lagphi} a la gravedad de Einstein-AdS. Este caso corresponde al marco de Einstein de la simetría de Weyl. De hecho, para que la acción se pueda escribir en términos de la constante gravitatoria usual $G_N$ y el radio de AdS $\ell$, se realiza la siguiente elección
+\begin{equation}\label{couplingsEinstein}
+    \nu \phi_{0}^{2} = \frac{1}{2\ell^2} \;\;\;\;\; \mbox{y} \;\;\;\;\;  \zeta = \frac{\ell^2}{64\pi G_{N}}\,.
+\end{equation}
+A nivel de las ecuaciones de movimiento, se puede ver que la Ec.~\eqref{eomlagphig} se convierte en la ecuación de campo de Einstein habitual al hacer la elección de gauge del tensor de Weyl como en la Ec.~\eqref{couplingsEinstein}. Además, la Ec.~\eqref{eomlagphip} simplemente implica la restricción de que el escalar de Ricci debe estar fijo en términos del radio de AdS, como ocurre en el caso de los espacios tipo Einstein. Por lo tanto, es evidente que la teoría admite la familia completa de soluciones Einstein-AdS para un campo escalar constante.
+
+A nivel de la acción, ahora podemos verificar cómo la elección de gauge de Weyl mencionada anteriormente implica que el Lagrangiano se reduce a la gravedad de Einstein-AdS renormalizada. De hecho, para los valores de las constantes de acoplamiento en la Ec.~\eqref{couplingsEinstein}, la acción~\eqref{Ibulkconf2} se puede expresar en la forma de MacDowell-Mansouri dada en la Ec.~\eqref{IMM}. Esta es la forma exacta de la acción de Einstein-Hilbert off-shell con constante cosmológica negativa, complementada por el término de Gauss-Bonnet con un acoplamiento fijo; este último proporciona un contratermino natural para la renormalización de la acción Euclídea on-shell y las cargas conservadas para soluciones asintóticamente localmente Einstein-AdS~\cite{Aros:1999id,Aros:1999kt,Miskovic:2009bm}. La discusión anterior se resume en la siguiente relación
+\begin{equation}
+I_{\phi_{0}, \rm conf} = I^{\rm (ren)}_{\rm EAdS} \, .
+\end{equation}
+Por lo tanto, concluimos que la acción~\eqref{Lagphi} tiene un límite Einstein bien definido, impuesto a través de la elección de la ecuación~\eqref{couplingsEinstein} para un campo escalar constante.
+
+Para estudiar la finitud de la teoría~\eqref{Lagphi} cuando se consideran espaciotiempos AlAdS, realizamos la descomposición off-shell del tensor de Weyl \eqref{weyltensor} en términos del tensor $\Sigma$ \eqref{SigmaT} y el tensor de Schouten. Dado que el tensor de Einstein aparece explícitamente en la definición de $T_{\mu \nu}$, podemos escribir el tensor de Schouten de manera equivalente como
+\begin{equation}
+S^{\mu}_{\nu} = \frac{1}{2} \left(G^{\mu}_{\nu} +\frac{1}{3}R \delta^{\mu}_{\nu}\right) \, .
+\end{equation}
+Teniendo en cuenta que en las ecuaciones~\eqref{eomlagphig} y~\eqref{eomlagphip}, se puede reemplazar el tensor de Einstein y el escalar de Ricci en términos de $T_{\mu\nu}$ y su traza correspondiente. Cuando esta última se reemplaza en la definición del tensor de Weyl \eqref{weyltensor}, se obtiene la forma off-shell del tensor de Weyl, es decir,
+\begin{equation}\label{Weyldecomp}
+    W^{\mu\nu}_{\alpha \beta} = \Sigma^{\mu\nu}_{\alpha\beta} - \frac{2}{\phi^2}\left(6T^{[\mu}_{[\alpha}\delta^{\nu]}_{\beta]} - T\delta^{\mu\nu}_{\alpha\beta} \right)\,.
+\end{equation}
+Dado que las ecuaciones de campo implican que $T_{\mu\nu}=0$, concluimos que el tensor $\Sigma$ coincide con el tensor de Weyl y la acción on-shell se convierte en
+\begin{equation}
+I_{\phi,\rm conf}\big|_{\rm on-shell} = \zeta\int\diff{^4}x\sqrt{|g|}\,W^{\mu\nu}_{\lambda\rho}W^{\lambda\rho}_{\mu\nu}\,.
+\end{equation}
+Por lo tanto, la teoría de campo escalar-tensor completamente invariante conforme es equivalente on-shell a CG, que es finita para cualquier solución AlAdS~\cite{Grumiller:2013mxa}. Un ejemplo particular de este hecho se ha mostrado recientemente en la Ref.~\cite{Barrientos:2022yoz} para soluciones  Taub-NUT-AdS y Eguchi-Hanson cargadas en presencia de campos escalares conformemente acoplados.
+
+Análogamente al caso de Einstein-AdS discutido en la sección~\ref{sec:CR}, pedir la invarianza conforme local exacta de la acción bajo reescalamiento de Weyl tanto de la métrica como del campo escalar, dicta los contra-términos que hacen que la acción sea finita. Es decir, la relación $I_{\phi,\rm conf}=I_{\phi}^{\rm (ren)}$ es válida y conduce a la acción escalar conforme renormalizada, que se expresa como
+\begin{align}
+I_{\phi}^{\rm (ren)}&=\frac{1}{384\nu}\int\diff{^4}x\sqrt{|g|}\,\delta^{\mu_1\ldots\mu_4}_{\nu_1\ldots\nu_4}\Sigma^{\nu_1\nu_2}_{\mu_1\mu_2}\Sigma^{\nu_3\nu_4}_{\mu_3\mu_4}= I_{\phi}+\frac{1}{96\nu}\int \diff{^4}x\sqrt{|g|} \left(E_4 + \nabla_\mu \tilde{J}^\mu\right) \,,
+\label{Iphiren}
+\end{align}
+en donde
+\begin{equation}
+\tilde{J}^{\mu} = 8 \left[\phi^{-1} G^\mu_\lambda\nabla^\lambda\phi+ \phi^{-2} \left(\nabla^{\mu} \phi \Box \phi -\nabla^{\lambda} \phi\nabla_{\lambda}\nabla^{\mu} \phi \right) + \phi^{-3} \nabla^{\mu} \phi \nabla^{\lambda} \phi \nabla_{\lambda} \phi \right]-\tfrac{1}{2}\phi\nabla^{\mu}\phi \,
+\end{equation}
+y $I_{\phi}$ es definido en la Ec.~\eqref{ccscalar}.
+Por eso, la última expresión es conformemente invariante para todas las configuraciones permitidas por el espacio de solución de la teoría.
+
+Es importante destacar que en la teoría de la Ec.~\eqref{ccscalar}, o equivalente en la Ec.~\eqref{Iphiren}, el campo escalar no puede ser eliminado de forma que se recupere la gravedad de Einstein-AdS~\eqref{couplingsEinstein} sin cambiar el comportamiento asintótico. Por lo tanto, al fijar la condición de AlAdS en una configuración no trivial del campo escalar, se elige el espacio-tiempo físico como aquel en el cual dicho campo escalar está presente. Así, el escalar es físico ya que contribuirá a las cargas asintóticas de la configuración y, en el contexto de AdS/CFT, a las fuentes holográficas.
+
+
+
+\biblio %Se necesita para referenciar cuando se compilan subarchivos individuales - NO SACAR
+\end{document}
+

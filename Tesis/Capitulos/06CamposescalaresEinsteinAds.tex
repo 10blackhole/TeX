@@ -1,0 +1,86 @@
+\documentclass[../Main.tex]{subfiles}
+\begin{document}
+En esta sección, extendemos la aplicación de la prescripción de Renormalización Conforme, en el caso en el que la gravedad de Einstein-AdS se acopla a la teoría de campo escalar con acoplamiento conforme. Una motivación relevante para estudiar este tipo de teorías viene de que en 3 dimensiones acoplar campos escalares se puede entender como una forma de estudiar efectos cuánticos en agujeros negros, como el caso de la referencia \cite{Martinez:1996gn,Casals:2016odj} en la que se estudia una generalización el agujero negro de Bañados-Teitelboim-Zanelli con pelo. Se ha demostrado que estas soluciones están relacionadas a las C-metric en 4 dimensiones \cite{Emparan:2020znc}. Adicionalmente, lo anterior ha sido explorado tambien en 2+1 dimensiones en las refrencias \cite{Arenas-Henriquez:2022www,Arenas-Henriquez:2023hur,Cisterna:2023qhh}.
+
+En nuestro caso, la forma genérica de la acción es la siguiente
+\begin{equation}
+I_{\phi \rm EAdS} = \frac{1}{16 \pi G_{N}} \int \diff{^4}x\sqrt{|g|} \left(R-2 \Lambda\right) + I_{\phi} \, .
+\label{IphiEads}
+\end{equation}
+En las dos secciones anteriores, hemos demostrado que la cancelación de las divergencias en los espacios de AlAdS equivale al requisito de que la acción sobre la superficie sea invariante bajo reescalamientos de Weyl de los campos en el bulk. Sin embargo, la completitud conforme de la acción en la ecuación~\eqref{IphiEads} para cualquier configuración del espacio de soluciones es altamente no trivial. No obstante, hay ciertos sectores de la teoría que nos permiten hacer que la acción correspondiente sea invariante conforme. Para lograrlo, consideramos por separado la métrica y el sector escalar. Como se mostró en la última sección, este último puede complementarse con términos de borde que lo hacen invariante off-shell en cuatro dimensiones. Aunque esto es finito para todas las posibles soluciones de dicha teoría, no se espera que sea cierto cuando se incluyen otros sectores. De manera similar, el sector de la teoría puramente métrica se vuelve invariante conforme para los espacios Einstein-AdS cuando se le agrega el término de Gauss-Bonnet con una constante general fija, como se ve en la ecuación \eqref{IMM} y en las referencias \cite{Maldacena:2011mk,Anastasiou:2016jix}. Sin embargo, mostramos que, siempre y cuando el campo escalar en AdS tenga un comportamiento asintótico adecuado, la acción es finita sin necesidad de considerar contraterminos de borde intrínsecos.
+
+
+
+\section{Renormalización}
+La dinámica de la teoría en la que estamos interesados está dictada por un principio de acción que contiene un sector de Einstein-AdS escrito en una forma de MacDowell-Mansouri y los escalares acoplados conformalmente renormalizados, es decir,
+\begin{equation}\label{IMMphi}
+    I_{\rm MM\phi} = \frac{1}{4}\int\diff{^4}x\sqrt{|g|}\,\delta^{\mu_1\ldots\mu_4}_{\nu_1\ldots\nu_4}\left(\alpha \mathcal{F}^{\nu_1\nu_2}_{\mu_1\mu_2}\mathcal{F}^{\nu_3\nu_4}_{\mu_3\mu_4} - \zeta \Sigma^{\nu_1\nu_2}_{\mu_1\mu_2}\Sigma^{\nu_3\nu_4}_{\mu_3\mu_4} \right)\,,
+\end{equation}
+donde $\alpha = \frac{\ell^2}{64 \pi G}$, mientras que $\mathcal{F}^{\mu\nu}_{\lambda\rho}$ y $\Sigma^{\mu\nu}_{\lambda\rho}$ están definidos en las Ecs. \eqref{WeylE} y \eqref{Sigma}, respectivamente. Las ecuaciones de campo para el campo métrico y el campo escalar obtenidas a partir de variaciones arbitrarias de la acción \eqref{IMMphi} con respecto a esos campos son
+\begin{subequations}\label{eomMMphi}
+\begin{align}\label{eomgMMphi}
+    \mathcal{E}_{\mu\nu} &\equiv \alpha \left(G_{\mu\nu} - \frac{3}{\ell^2} g_{\mu\nu}\right)  - 12 \ell^{2}\zeta\nu  T_{\mu\nu} =0 \,, \\
+    \label{eomphiMMphi}
+    \mathcal{E} &\equiv \Box\phi - \frac{1}{6}\phi R - 4\nu\phi^3 = 0\,,
+\end{align}    
+\end{subequations}
+respectivamente. Vale la pena mencionar que esta teoría admite espacios de Einstein-AdS como soluciones cuando el campo escalar es constante. De hecho, la condición de la Ec.~\eqref{couplingsEinstein} impone que las soluciones de las ecuaciones \eqref{eomMMphi} son variedades de Einstein, para las cuales la acción de la Ec.~\eqref{IMMphi} se anula de manera idéntica. En particular, esta teoría admite el espacio global de AdS como el estado fundamental cuando el campo escalar es constante.
+
+Habiendo completado parcialmente la simetría conforme de la teoría, estudiamos bajo qué condiciones su acción resulta. Siguiendo la prescripción introducida en la última sección, podemos reescribir la acción en términos de tensor de Weyl al cuadrado, que es finito para cualquier espacio de AlAdS. De manera similar, hemos introducido una descomposición alternativa del tensor de Weyl en términos del tensor $\Sigma$ \eqref{Weyldecomp}.
+Además, dado que la traza del tensor de energía-momentum $T_{\mu\nu}$ se anula en la solución, entonces la Ec.~\eqref{eomgMMphi} restringe el espacio de soluciones a tener un escalar de Ricci constante y negativo, es decir,
+\begin{equation}
+    R = -\frac{12}{\ell^2}\,.
+\end{equation}
+Esto simplifica el tensor $X$ en la ecuación \eqref{Xtensor}, ya que ahora depende explícitamente del tensor de Ricci sin traza. Reemplazando las Ecs.~\eqref{weylfdecomposition} y \eqref{Weyldecomp} en la acción $I_{\rm MM\phi}$ y teniendo en cuenta las ecuaciones de movimiento, obtenemos que
+\begin{equation}
+I_{\rm MM\phi}\Big|_{\rm on-shell} = \int\diff{^4}x\sqrt{|g|} \left[\left(\alpha -\zeta\right) W^{\alpha \beta}_{\mu \nu} W^{\mu \nu}_{\alpha \beta} + 2 \alpha \left( \frac{\alpha}{4 \ell^{2} \zeta \nu^{2} \phi^{4}}-1\right) H^{\mu}_{\nu} H^{\nu}_{\mu}\right] \,. \label{IMMphios}
+\end{equation}
+Esta acción en la solución coincide con la acción de CG para espacios de Einstein ($H^{\mu}_{\nu} = 0$) o, equivalentemente, para soluciones stealth: un campo escalar no trivial con tensor de energía-momentum nulo~\cite{Ayon-Beato:2004nzi,Ayon-Beato:2005yoq,Hassaine:2006gz,Ayon-Beato:2013bsa}. Por lo tanto, en esos casos, la teoría es finita para espacios Einstein. De hecho, si $\alpha=\zeta$, la acción se anula de manera idéntica para soluciones de Einstein, lo que proporciona un tipo diferente de criticidad en las teorías escalar-tensor. Por otro lado, las soluciones no Einstein también pueden proporcionar una acción finita en la solución si y solo si el decaimiento de la contribución no-Weyl de la última expresión es suficientemente rápida. Un ejemplo característico de esto se presenta a continuación. 
+
+
+
+
+
+
+
+
+
+
+\section{Aplicaciones: El agujero negro de MSTZ}
+En el caso del agujero negro de MSTZ, los autores consideraron un elemento de línea que permanece localmente invariante bajo la acción de los grupos de isometría $\mbox{SO}(3)\times\mathbb{R}$, $\mbox{SO}(1,2)\times\mathbb{R}$, y $\mbox{ISO}(2)\times\mathbb{R}$. Estas condiciones producen 
+\begin{equation}\label{ansatz}
+    \diff{s^2} = -f(r)\diff{t^2} + \frac{\diff{r^2}}{f(r)} + r^2\diff{\Sigma_{(k)}^2} \,.
+\end{equation}
+En donde $\diff{\Sigma_{(k)}^2}$ es el elemento de línea de la variedad base 2-dimensional de curvatura constante $k$, describiendo localmente secciones transversas $\mathbb{S}^2$, $\mathbb{T}^2$, y $\mathbb{H}^2$ para $k=1,0,-1$, respectivamente. Así, la solución esta dada por~\cite{Martinez:2002ru,Martinez:2005di}
+\begin{equation}\label{MTZ}
+    f(r) = k\left(1+\frac{\mu\,G}{r}\right)^2 + \frac{r^2}{\ell^2} \;\;\;\;\; \mbox{y} \;\;\;\;\; \phi(r) = \frac{1}{\ell}\sqrt{\frac{1}{2\nu}}\,\frac{\mu\,G}{r+\mu\,G}\,,
+\end{equation}
+donde $\mu$ s una constante de integración, $\nu >0$ y la siguiente condición sobre los parámetros
+\begin{equation}
+    \zeta = \frac{\ell^2}{64\pi G}\,,
+\end{equation}
+se debe cumplir. De hecho, se puede fijar $\zeta=\tfrac{1}{96\nu}$ sin perdida de generalidad con el fin de obtener la misma normalización que en las Ref.~\cite{Martinez:2002ru,Martinez:2005di}. Esta solución posee una singularidad de curvatura en $r=0$. Además, se conoce que por la hipótesis de censura cósmica se requiere la existencia de un horizonte en $r=r_{h}$, este definido por las raíces positivas del polinomio $f(r_{h})=0$. Esta condición exige que $k=-1$. Para que esta solución describa un agujero negro, la topología de la sección transversal debe ser $\mathbb{H}^2/\Gamma$, donde $\Gamma$ es un subgrupo de $SO(2,1)$, tal que las hipersuperficies de $t-r$ constante tengan un área finita. En el caso $\mu>0$, la solución tiene un solo horizonte y está dado por
+\begin{equation}
+    r_+ = \frac{\ell}{2}\left(1+\sqrt{1+\frac{4\mu G}{\ell}} \right)\,.
+\end{equation}
+
+Como mencionamos en la Sec.~\ref{sec:AEO}, a primer orden en la aproximación del punto de silla, podemos obtener la función de partición $\mathcal{Z}$ a través de la relación $\ln \mathcal{Z} \approx - I_E$. Para la solución~\eqref{MTZ}, encontramos
+\begin{equation}
+T_H = \beta^{-1} = \frac{2r_+-\ell}{2\pi\ell^2}\,.
+\end{equation}
+Entonces, evaluando la acción Euclídea on-shell~\eqref{IMMphi} en la solución~\eqref{MTZ} obtenemos
+\begin{equation}
+    I_E = - \frac{\beta\omega_{(k)}\left(\ell^2-r_+\ell+r_+^2 \right)}{8\pi G\ell}\,,
+\end{equation}
+con $\omega_{(k)}$ el volumen de codimension-2 de la variedad base.  Notablemente, el valor de la función de partición es finito sin ninguna referencia a contratermos en el borde, a pesar de corresponder a una configuración no stealth. Esto se debe al hecho de que el decaimiento del campo escalar y el tensor de Ricci sin traza es de orden $\mathcal{O} \left(r^{-1}\right)$ y $\mathcal{O} \left(r^{-4}\right)$, respectivamente, lo que hace que la contribución no Weyl en la ecuación \eqref{IMMphios} sea subdominante y no induzca divergencias. Lo anterior se puede ver directamente a partir del hecho de que
+\begin{align}
+\int\diff{^4x}\sqrt{|g|}\left( \frac{\alpha}{4 \ell^{2} \zeta \nu^{2} \phi^{4}}-1\right) H^{\mu}_{\nu} H^{\nu}_{\mu} \sim \mathcal{O}(r^{-1})\,,
+\end{align}
+cuando se evalúa en la solución~\eqref{MTZ}. Por lo tanto, esta prescripción proporciona una definición natural de contratérminos para teorías escalar-tensor que poseen un sector Einstein y campos escalares acoplados de forma conforme, siempre que la parte no Weyl al cuadrado del Lagrangiano on-shell~\eqref{IMMphios} tenga un decaimiento al menos tan rápido como $\mathcal{O} \left(r^{-4}\right)$.
+
+Además, notemos que la forma on-shell de la acción $I_{\rm MM\phi}$ indica que se anula idénticamente para espacio-tiempos tipo Einstein cuando $\alpha=\zeta$ o, equivalentemente, $\nu=\frac{2\pi G}{3\ell^2}$. De hecho, este es exactamente el punto en el espacio de parámetros donde existe la solución~\eqref{MTZ}, aunque la configuración no es Einstein. Esta teoría es completamente análoga a Critical Gravity de la Sec.~\ref{sec:Critical}, que es trivial para espacio-tiempos Einstein. Esto significa que $I_{\rm MM\phi}$ para el valor específico de $\nu$ corresponde a la generalización de Critical Gravity a teorías de escalar-tensor de la gravedad.
+
+
+
+\biblio %Se necesita para referenciar cuando se compilan subarchivos individuales - NO SACAR
+\end{document}
