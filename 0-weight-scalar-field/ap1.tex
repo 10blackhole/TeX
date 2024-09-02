@@ -19,7 +19,7 @@ Changing the dumb indice $\sigma$ by $\rho$,
 \end{align}
 
 
-\subsection{Varation of the Riemann tensor}
+\subsection{Variation of the Riemann tensor}
 The Riemann tensor is given by
 \begin{equation*}
     \tensor{R}{^\rho_{\lambda\mu\nu}}=\partial_\mu\tensor{\Gamma}{^\rho_{\lambda\nu}}-\partial_\nu\tensor{\Gamma}{^\rho_{\lambda\mu}}+\tensor{\Gamma}{^\rho_{\tau\mu}}\tensor{\Gamma}{^\tau_{\lambda\nu}}-\tensor{\Gamma}{^\rho_{\tau\nu}}\tensor{\Gamma}{^\tau_{\lambda\mu}}
@@ -38,7 +38,7 @@ Adding a convenient zero of the form $\tensor{\Gamma}{^\tau_{\mu\nu}}\delta\tens
 
 
 \subsection{Variation of derivatives of $\f$ w.r.t $\omega$}
-Let's compute the infnitisimals variations of the covariant derivatives of the scalar field. First, let us calculate $\d_\omega \nabla_\m \f $:
+Let's compute the infinitesimal variations of the covariant derivatives of the scalar field. First, let us calculate $\d_\omega \nabla_\m \f $:
 \begin{align}
   \d_\omega\nabla_\m \f&=\nabla_\m \d_\omega\f=0 \label{delta-nabla}
 \end{align}
@@ -72,7 +72,7 @@ Using the metric compatibility condition $\nabla_\m g_{\a\b }=0$ and $\nabla_\a\
 
 
 \subsection{Variation of $E$ w.r.t Riemann tensor}
-In order to see what \eqref{P-condition} implies, let us split the dependece of the Riemann tensor in terms of its traceless part $C_{\m\n }^{\a\b }$, the traceless part of the Ricci tensor $S^\a_\b $, and the scalar curvature $R$. So we have
+In order to see what \eqref{P-condition} implies, let us split the dependence of the Riemann tensor in terms of its traceless part $C_{\m\n }^{\a\b }$, the traceless part of the Ricci tensor $S^\a_\b $, and the scalar curvature $R$. So we have
 \begin{equation*}
     E\left(g^{\mu\nu},R^{\alpha\beta}_{\mu\nu}\right)=E\left(g^{\mu\nu},C^{\alpha\beta}_{\mu\nu},S^\alpha_\beta,R\right)
 \end{equation*}
@@ -142,6 +142,23 @@ Hence,
 \begin{equation}\label{P-tensor}
     P^{\alpha\beta}_{\mu\nu}=\hat{H}^{\alpha\beta}_{\mu\nu}+\delta^{[\alpha}_{[\mu}\hat{I}^{\beta]}_{\nu]}+J\delta^\alpha_{[\mu}\delta^\beta_{\nu]}
 \end{equation}
+
+\subsection{Christoffel of the conformally invariant geometry}
+\begin{align}
+  \tilde{\G }^\lambda_{~\m\n }&=\frac{1}{2}\tilde{g}^{\lambda\r }\left(\partial_\m \tilde{g}_{\n\r}+\partial_\n \tilde{g}_{\m\r }-\partial_\r\tilde{g}_{\m\n }\right)\\
+  &=\frac{1}{2}\frac{1}{X}g^{\lambda\r }\left[\partial_\m (Xg_{\n\r })+\partial_\n  (Xg_{\m \r })-\partial_\r  (Xg_{\m\n  })\right]\\
+  &=\frac{1}{2}\frac{1}{X}g^{\lambda\r }\left[g_{\n\r }\partial_\m X+X\partial_\m g_{\n\r }+g_{\m \r }\partial_\n  X+X\partial_\n  g_{\m \r }-g_{\m\n }\partial_\r  X-X\partial_\r  g_{\m\n  }\right]\\
+  &=\G^{\lambda}_{~\m\n }+\frac{1}{2}\frac{1}{X}g^{\lambda\r }\left(g_{\n\r }\partial_\m X+g_{\m \r }\partial_\n  X-g_{\m\n  }\partial_\r  X\right)\\
+  &=\G^{\lambda}_{~\m\n }+\frac{1}{2}\frac{1}{X}g^{\lambda\r }\left(-g_{\n\r }\partial^\a\f\partial_\a\partial_\m\f --g_{\m \r }\partial^\a\f\partial_\a\partial_\n \f +g_{\m\n  }\partial^\a\f\partial_\a\partial_\r \f \right)\\
+  &=\G^{\lambda}_{~\m\n }+\frac{1}{2}\frac{1}{X}\left(-\d^\lambda_\n \partial^\a\f\partial_\a\partial_\m\f-\d^\lambda_\m  \partial^\a\f\partial_\a\partial_\n \f  +g_{\m\n }\partial^\a\f\partial_\a\partial^\lambda\f \right)\\
+  &=\G^{\lambda}_{~\m\n }+G^{\lambda}_{~\m\n }
+\end{align}
+with
+\begin{equation}
+  G^{\lambda}_{~\m\n }:=\frac{1}{2}\frac{1}{X}\left(-\d^\lambda_\n \partial^\a\f\partial_\a\partial_\m\f-\d^\lambda_\m  \partial^\a\f\partial_\a\partial_\n \f  +g_{\m\n }\partial^\a\f\partial_\a\partial^\lambda\f \right)
+\end{equation}
+
+
 
 
 

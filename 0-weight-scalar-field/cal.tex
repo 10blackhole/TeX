@@ -88,7 +88,7 @@ we notice that since $\hat{H}^{\alpha\beta}_{\mu\nu}$ is the traceless part of $
   P^\b_\n =P^{\a\b }_{\a\n }=\delta^{[\alpha}_{[\a }\hat{I}^{\beta]}_{\nu]}+J\delta^\alpha_{[\a }\delta^\beta_{\nu]}
 \end{equation}
 
-Since the variation with respect to the Weyl tensor does not cotribute so the first trace \eqref{dEdP}, the contribution of the Riemann tensor to $E$ has to be through its traceless part,
+Since the variation with respect to the Weyl tensor does not contribute so the first trace \eqref{dEdP}, the contribution of the Riemann tensor to $E$ has to be through its traceless part,
 \begin{equation}
 	\E =\sqrt{-g}E\left(\f,\nabla_\m \f ,\nabla_\m \nabla_\n \f ,g_{\m\n },C_{\m\n }^{\a\b }\right)=0\,.
 \end{equation}
@@ -194,14 +194,71 @@ since $\d_\omega\tilde{\G}^\lambda_{~\m\n }=0$. Therefore,
 
 
 Since from conformal invariance for zero weight scalar field, the $P^{\m\n }=0$ condition implies that the explicit dependence of the Riemann tensor in the equation of motion is through the Weyl tensor, then,  for a equation of motion built from the conformally invariant geometry we have
-\begin{equation}
-  E=E(\f,\tilde{\nabla}_\m\f ,\tilde{\nabla}_\m\nabla_\n \f ,\tilde{g}^{\m\n },\tilde{C}_{\m\n }^{\a\b })=0
+\begin{equation}\label{EE}
+  E=E(\f,\tilde{\nabla}_\m\f ,\tilde{\nabla}_\m\nabla_\n \f ,\tilde{g}^{\m\n },\rc{\tilde{C}_{\m\n }^{\a\b }})=0
 \end{equation}
 
 [\rc{Is this last true?}]
 
 
 \section{Fréchet derivative}
+Now, let's try to find an action principle from which it emerges \eqref{EE}. To do that, we will use the formalism used in \cite{Ayon-Beato:2023bzp}. Hence, first we must to introduce the concept of Fréchet derivative.
+
+Let $P[u]=P\left(x,u^{(n)}\right)$ be a differential function, i.e. that depends in the point $x$, the function $u$ together with its derivatives $u^{(n)}$. Consider noew its variation under a one-parameter family of functions. After interchanging the variation with derivatives (and without integrating by parts) we end with a differential operator acting on an arbitrary variation $\d u$ called the \textit{Fréchet derivative} of $P$,
+\begin{equation}
+  \d P=\dv{\varepsilon}\eval{P[u+\varepsilon\d u]}_{\varepsilon=0}:=D_P(\d u)
+\end{equation}
+Here, we consider the scond order conformally invariant psudoscalar defined by
+\begin{equation}\label{E-frechet}
+  \E=\sqrt{-\tilde{g}}E(\f,\tilde{\nabla}_\m\f ,\tilde{\nabla}_\m\nabla_\n \f ,\tilde{g}^{\m\n },\tilde{R}_{\m\n }^{\a\b })
+\end{equation}
+which is the natural quantity that could be derived from a convariant action. The role of he dependet function $u$ is played by the zero weight conformally invariant sacalr field $\f$,  and hence the Fréchet derivative of $\E$ can be calculated from
+\begin{equation}
+  D_\E(\d\f )=\d_\f\E\, .
+\end{equation}
+
+From \eqref{E-frechet} and using that $\d \f=0$, we have
+\begin{align*}
+  \d_\f \E=&-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n }\d_\f \tilde{g}^{\m\n }+\sqrt{-\tilde{g}}\left(\pdv{E}{\f }\d\f \pdv{E}{(\tilde{\nabla}_\m\f )}\d_\f(\tilde{\nabla}_\m\f )+\pdv{E}{(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )}\d_\f(\tilde{\nabla}_\m\tilde{\nabla}_\n \f )+\pdv{E}{\tilde{g}^{\m\n }}\d_\f\tilde{g}^{\m\n }+\tilde{P}^{\m\n }_{\a\b }\d_\f \tilde{R}^{\a\b }_{\m\n }\right)\\
+  &=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n }\d_\f \tilde{g}^{\m\n }+\sqrt{-\tilde{g}}\left[\pdv{E}{\tilde{g}^{\m\n }}\d_\f\tilde{g}^{\m\n }+ E_\f\d\f +E^\m_\f \d_\f(\tilde{\nabla}_\m\f )+E^{\m\n }_\f \d_\f(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )+\tilde{P}^{\m\n }_{\a\b }\d_\f \tilde{R}^{\a\b }_{\m\n }\right]
+\end{align*}
+where we have defined
+\begin{equation}
+  E_\f:=\pdv{E}{\f },\qquad E^\m_\f:=\pdv{E}{(\tilde{\nabla}_\m\f )},\qquad E^{\m\n }_\f:=\pdv{E}{(\tilde{\nabla}_\m\tilde{\nabla}_\n \f )}
+\end{equation}
+in order to reduce some notation.
+
+
+
+
+
+Before proceeding, let's compute the variation w.r.t the scalar field $\f$ of some quantities:
+\begin{align}
+  \d_\f \tilde{g}_{\m\n }&=\d_\f (Xg_{\m\n })\\
+  &=\d_\f \left(-\frac{1}{2}(\nabla\f )^2g_{\m\n }\right)\\
+  &=-\nabla^\a \f \nabla_\a \d \f g_{\m\n }\\
+  &=-g_{\m\n }g^{\a\b }\nabla_\a\f\nabla_\b\d\f  \\
+  &=-g_{\m\n }g^{\a\b }\partial_\a\f\partial_\b\d\f\\
+  &=-g_{\m\n }Xg^{\a\b }X^{-1}\partial_\a\f\partial_\b\d\f \\
+  &=-\tilde{g}_{\m\n }\tilde{\nabla}^\a \f\tilde{\nabla}_\a\d\f 
+\end{align}
+
+\begin{align}
+  \d_\f \tilde{g}^{\m\n }&=\d_\f\left[\left(-\frac{1}{2}(\nabla\f )^2\right)^{-1} g^{\m\n }\right]\\
+  &=-\frac{1}{X^2}(-\nabla^\a\f\nabla_\a\d\f )g^{\m\n }\\
+  &=\frac{1}{X^2}g^{\m\n }g^{\a\b }\partial_\a\f\partial_\b\d\f \\
+  &=X^{-1}g^{\m\n }X^{-1}g^{\a\b }\partial_\a\f\partial_\b\d\f \\
+  &=\tilde{g}^{\m\n }\tilde{\nabla}^\a\f\tilde{\nabla}_\a\d\f 
+\end{align}
+
+\begin{align}
+  \d_\f \sqrt{-\tilde{g}}&=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n } \d_\f\tilde{g}^{\m\n }\\
+  &=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n}\tilde{g}^{\m\n }\tilde{\nabla}^\a\f\tilde{\nabla}_\a\d\f \\
+  &=-\frac{D}{2}\sqrt{-\tilde{g}}\tilde{\nabla}^\a\f \tilde{\nabla}_\a\d\f 
+\end{align}
+
+
+
 
 
 
