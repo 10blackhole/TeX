@@ -29,13 +29,13 @@ where we have defined
 So then
 \begin{align*}
   \d_\omega \E&=-\frac{1}{2}\sqrt{-g}g_{\m\n }\d_\omega g^{\m\n }E+\sqrt{-g}\pdv{E}{(\nabla_\m \nabla_\n \f  )}\d_\omega (\nabla_\m \nabla_\n \f )+\sqrt{-g}\pdv{E}{g^{\m\n }}\d_\omega g^{\m\n }+\sqrt{-g}P^{\m\n }_{\a\b }\d_\omega R^{\a\b }_{\m\n }\\
-  &=\sqrt{-g}\pdv{E}{(\nabla_\m \nabla_\n \f )}\left(g_{\n\b }\nabla^\r \f\nabla_\r\omega-2\nabla_{(\m }\f\nabla_{\n)}\omega\right)+\sqrt{-g}\pdv{E}{g^{\m\n }}\d_\omega g^{\m\n }+\sqrt{-g}P^{\m\n }_{\a\b }\d_\omega R^{\a\b }_{\m\n }-\frac{1}{2}\sqrt{-g}g_{\m\n }\d_\omega g^{\m\n }E\\
+  &=\sqrt{-g}\pdv{E}{(\nabla_\m \nabla_\n \f )}\left(g_{\n\b }\nabla^\r \f\nabla_\r\omega-2\nabla_{(\m }\f\nabla_{\n)}\omega\right)+\sqrt{-g}\pdv{E}{g^{\m\n }}\d_\omega g^{\m\n }+\sqrt{-g}P^{\m\n }_{\a\b }\d_\omega R^{\a\b }_{\m\n }\\& -\frac{1}{2}\sqrt{-g}g_{\m\n }\d_\omega g^{\m\n }E\\
   &=\sqrt{-g}\pdv{E}{(\nabla_\m \nabla_\n \f )}\left(g_{\n\b }\nabla^\r \f\nabla_\r\omega-2\nabla_{(\m }\f\nabla_{\n)}\omega\right)+\sqrt{-g}P^{\m\n }_{\a\b }\d_\omega R^{\a\b }_{\m\n }-2\omega g^{\m\n}\sqrt{-g}\left(\pdv{E}{g^{\m\n }}-\frac{1}{2}g_{\m\n }E\right)
 \end{align*}
 Note that
 \begin{align}
   \pdv{(\sqrt{-g}E)}{g^{\m\n }}&=-\frac{1}{2}\sqrt{-g}g_{\m\n }E+\sqrt{-g}\pdv{E}{g^{\m\n }}\\
-  &=\sqrt{-g}\left(\pdv{E}{g^{\m\n }}-\frac{1}{2}g_{\m\n }E\right)
+  &=\sqrt{-g}\left(\pdv{E}{g^{\m\n }}-\frac{1}{2}g_{\m\n }E\right) \label{d-sqrt-E}
 \end{align}
 By defining
 \begin{align}\label{A-B}
@@ -195,10 +195,8 @@ since $\d_\omega\tilde{\G}^\lambda_{~\m\n }=0$. Therefore,
 
 Since from conformal invariance for zero weight scalar field, the $P^{\m\n }=0$ condition implies that the explicit dependence of the Riemann tensor in the equation of motion is through the Weyl tensor, then,  for a equation of motion built from the conformally invariant geometry we have
 \begin{equation}\label{EE}
-  E=E(\f,\tilde{\nabla}_\m\f ,\tilde{\nabla}_\m\nabla_\n \f ,\tilde{g}^{\m\n },\rc{\tilde{C}_{\m\n }^{\a\b }})=0
+  E=E(\f,\tilde{\nabla}_\m\f ,\tilde{\nabla}_\m\nabla_\n \f ,\tilde{g}^{\m\n },\tilde{C}_{\m\n }^{\a\b })=0
 \end{equation}
-
-[\rc{Is this last true?}]
 
 
 \section{Fréchet derivative}
@@ -210,7 +208,7 @@ Let $P[u]=P\left(x,u^{(n)}\right)$ be a differential function, i.e. that depends
 \end{equation}
 Here, we consider the scond order conformally invariant psudoscalar defined by
 \begin{equation}\label{E-frechet}
-  \E=\sqrt{-\tilde{g}}E(\f,\tilde{\nabla}_\m\f ,\tilde{\nabla}_\m\nabla_\n \f ,\tilde{g}^{\m\n },\tilde{R}_{\m\n }^{\a\b })
+  \E=\sqrt{-\tilde{g}}E(\f,\tilde{\nabla}_\m\f ,\tilde{\nabla}_\m\nabla_\n \f ,\tilde{g}^{\m\n },\tilde{C}_{\m\n }^{\a\b })
 \end{equation}
 which is the natural quantity that could be derived from a convariant action. The role of he dependet function $u$ is played by the zero weight conformally invariant sacalr field $\f$,  and hence the Fréchet derivative of $\E$ can be calculated from
 \begin{equation}
@@ -219,14 +217,30 @@ which is the natural quantity that could be derived from a convariant action. Th
 
 From \eqref{E-frechet} and using that $\d \f=0$, we have
 \begin{align*}
-  \d_\f \E=&-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n }\d_\f \tilde{g}^{\m\n }+\sqrt{-\tilde{g}}\left(\pdv{E}{\f }\d\f \pdv{E}{(\tilde{\nabla}_\m\f )}\d_\f(\tilde{\nabla}_\m\f )+\pdv{E}{(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )}\d_\f(\tilde{\nabla}_\m\tilde{\nabla}_\n \f )+\pdv{E}{\tilde{g}^{\m\n }}\d_\f\tilde{g}^{\m\n }+\tilde{P}^{\m\n }_{\a\b }\d_\f \tilde{R}^{\a\b }_{\m\n }\right)\\
-  &=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n }\d_\f \tilde{g}^{\m\n }+\sqrt{-\tilde{g}}\left[\pdv{E}{\tilde{g}^{\m\n }}\d_\f\tilde{g}^{\m\n }+ E_\f\d\f +E^\m_\f \d_\f(\tilde{\nabla}_\m\f )+E^{\m\n }_\f \d_\f(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )+\tilde{P}^{\m\n }_{\a\b }\d_\f \tilde{R}^{\a\b }_{\m\n }\right]
+  \d_\f \E&=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n }\d_\f \tilde{g}^{\m\n }+\sqrt{-\tilde{g}}\left(\pdv{E}{\f }\d\f \pdv{E}{(\tilde{\nabla}_\m\f )}\d_\f(\tilde{\nabla}_\m\f )+\pdv{E}{(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )}\d_\f(\tilde{\nabla}_\m\tilde{\nabla}_\n \f )\right.\\&\hspace{5cm}\left.+\pdv{E}{\tilde{g}^{\m\n }}\d_\f\tilde{g}^{\m\n }+\tilde{P}^{\m\n }_{\a\b }\d_\f \tilde{C}^{\a\b }_{\m\n }\right)\\
+  &=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n }\d_\f \tilde{g}^{\m\n }+\sqrt{-\tilde{g}}\left[\pdv{E}{\tilde{g}^{\m\n }}\d_\f\tilde{g}^{\m\n }+ E_\f\d\f +E^\m_\f \d_\f(\tilde{\nabla}_\m\f )+E^{\m\n }_\f \d_\f(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )+\tilde{P}^{\m\n }_{\a\b }\cancel{\d_\f \tilde{C}^{\a\b }_{\m\n }}\right]\\
+  &=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n }\d_\f \tilde{g}^{\m\n }+\sqrt{-\tilde{g}}\left[\pdv{E}{\tilde{g}^{\m\n }}\d_\f\tilde{g}^{\m\n }+ E_\f\d\f +E^\m_\f \d_\f(\tilde{\nabla}_\m\f )+E^{\m\n }_\f \d_\f(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )\right]
 \end{align*}
 where we have defined
 \begin{equation}
   E_\f:=\pdv{E}{\f },\qquad E^\m_\f:=\pdv{E}{(\tilde{\nabla}_\m\f )},\qquad E^{\m\n }_\f:=\pdv{E}{(\tilde{\nabla}_\m\tilde{\nabla}_\n \f )}
 \end{equation}
-in order to reduce some notation.
+in order to reduce some notation and we used the fact that the Weyl tensor is conformally invariant, $\tilde{C}^{\a\b }_{\m\n }=C^{\a\b }_{\m\n }$, so that $\d_\f C^{\a\b }_{\m\n }=0$. Then,
+\begin{align}
+  \d_\f \E &=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n }\d_\f \tilde{g}^{\m\n }+\sqrt{-\tilde{g}}\left[\pdv{E}{\tilde{g}^{\m\n }}\d_\f\tilde{g}^{\m\n }+ E_\f\d\f +E^\m_\f \d_\f(\tilde{\nabla}_\m\f )+E^{\m\n }_\f \d_\f(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )\right]
+\end{align}
+Using \eqref{d-sqrt-E}, we can write
+\begin{align}
+  \d_\f \E &=\sqrt{-\tilde{g}}\left[\frac{1}{\sqrt{-\tilde{g}}}\pdv{(\sqrt{-\tilde{g}}E)}{\tilde{g}^{\m\n }}\d_\f\tilde{g}^{\m\n }+ E_\f\d\f +E^\m_\f \d_\f(\tilde{\nabla}_\m\f )+E^{\m\n }_\f \d_\f(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )\right]\\
+  &=\sqrt{-\tilde{g}}\left[-\frac{1}{2}E_{\m\n }+ E_\f\d\f +E^\m_\f \d_\f(\tilde{\nabla}_\m\f )+E^{\m\n }_\f \d_\f(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )\right]\label{df-E}
+\end{align}
+where 
+\begin{equation}
+  E_{\m\n }:=-\frac{2}{\sqrt{-\tilde{g}}}\pdv{(\sqrt{-\tilde{g}}E)}{\tilde{g}^{\m\n }}
+\end{equation}
+
+
+
 
 
 
@@ -256,6 +270,127 @@ Before proceeding, let's compute the variation w.r.t the scalar field $\f$ of so
   &=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n}\tilde{g}^{\m\n }\tilde{\nabla}^\a\f\tilde{\nabla}_\a\d\f \\
   &=-\frac{D}{2}\sqrt{-\tilde{g}}\tilde{\nabla}^\a\f \tilde{\nabla}_\a\d\f 
 \end{align}
+
+\begin{align}
+  \d_\f (\tilde{\nabla}_\m \f)=\tilde{\nabla}_\m\d\f 
+\end{align}
+
+\begin{align}
+  \d_\f (\tilde{\nabla}_\m\tilde{\nabla}_\n\f )&=\d_\f (\tilde{\nabla}_\m\partial_\n \f )\\
+  &=\d_\f \left(\partial_\m \partial_\n \f -\tilde{\G }^\lambda_{~\m\n }\partial_\lambda\f \right)\\
+  &=\partial_\m\partial_\n\d \f -\d \f\tilde{\G }^\lambda_{~\m\n }\partial_\lambda\f-\tilde{\G }^\lambda_{~\m\n }\partial_\lambda\d\f \\
+  &=\tilde{\nabla}_\m\f\tilde{\nabla}_\n\d \f -\tilde{\nabla}_\lambda\f\d\f \tilde{\G }^\lambda_{~\m\n }\\
+  &=\tilde{\nabla}_\m\f\tilde{\nabla}_\n\d \f -\tilde{\nabla}_\lambda\f \d_\f \tilde{\G }^\lambda_{~\m\n }\\
+  &=\tilde{\nabla}_\m\f\tilde{\nabla}_\n\d \f-\tilde{\nabla}_\lambda\f\frac{1}{2}\tilde{g}^{\lambda\r }\left(\tilde{\nabla}_\m\d_\f \tilde{g}_{\n\r }+\tilde{\nabla}_\n \d_\f \tilde{g}_{\m\r }-\tilde{\nabla}_\r \d_\f \tilde{g}_{\m\n }\right)\\
+  &=\tilde{\nabla}_\m\f\tilde{\nabla}_\n\d \f-\frac{1}{2}\tilde{\nabla}^\r\f \left(2\tilde{\nabla}_{(\m }\d_\f \tilde{g}_{\n)\r }-\tilde{\nabla}_\r \d_\f \tilde{g}_{\m\n }\right)
+\end{align}
+
+
+Therefore,
+\begin{align}
+  E^{\m\n }_\f \d_\f (\tilde{\nabla}_\m\tilde{\nabla}_\n\f )&=E^{\m\n }_\f \left[\tilde{\nabla}_\m\f\tilde{\nabla}_\n\d \f-\frac{1}{2}\tilde{\nabla}^\r\f \left(2\tilde{\nabla}_{(\m }\d_\f \tilde{g}_{\n)\r }-\tilde{\nabla}_\r \d_\f \tilde{g}_{\m\n }\right)\right]\\
+  &=E^{\m\n }_\f \left[\tilde{\nabla}_\m\f\tilde{\nabla}_\n\d \f+\tilde{\nabla}^\r\f\tilde{\nabla}_\m(\tilde{g}_{\n\r }\tilde{\nabla}^\a\f\tilde{\nabla}_\a\d\f )-\frac{1}{2}\tilde{\nabla}^\r\f\tilde{\nabla}_\r (\tilde{g}_{\m\n }\tilde{\nabla}^\a\f\tilde{\nabla}_\a\d\f )\right]\\
+  &=E^{\m\n }_\f \left[\tilde{\nabla}_\m\f\tilde{\nabla}_\n\d\f +\tilde{\nabla}_\n\f \tilde{\nabla}_\m(\tilde{\nabla}^\a\f\tilde{\nabla}_\a\d\f )-\frac{1}{2}\tilde{g}_{\m\n }\tilde{\nabla}^\r\f\tilde{\nabla}_\r(\tilde{\nabla}^\a\f\tilde{\nabla}_\a\d\f )\right]
+\end{align}
+
+So \eqref{df-E} becomes
+
+[\rc{Complete!!}]
+
+\begin{align}
+  \d_\f\E &=\sqrt{-\tilde{g}}\left\{E_\f\d\f +E^\m_\f \tilde{\nabla}_\m\d\f -\frac{1}{2}E_{\m\n }\tilde{g}^{\m\n }\tilde{\nabla}^\a \tilde{\nabla}_\a \d\f \right.\\
+  &  \quad \left. + E^{\m\n }_\f \left[\tilde{\nabla}_\m \tilde{\nabla}_\n \d\f +\tilde{\nabla}_\n\f\tilde{\nabla}_\m (\tilde{\nabla}^\a\tilde{\nabla}_\a\d\f )-\frac{1}{2}\tilde{g}_{\m\n }\tilde{\nabla}^\r\f\tilde{\nabla}_\r (\tilde{\nabla}^\a\f\tilde{\nabla}_\a\d\f )\right]\right\} \\
+  &=\sqrt{-\tilde{g}}\left\{E_\f\d_\f+\left(E^\m_\f\tilde{\nabla}_\m-\frac{1}{2}E_{\r\tau }\tilde{g}^{\r\tau }\tilde{\nabla}^\m\f \right)\tilde{\nabla}_\m\d\f +E^{\m\n }_\b\tilde{\nabla}_\m\tilde{\nabla}_\n \d\f +E^{\m\n }_\f\tilde{\nabla}_\n \f(\tilde{\nabla}_\m \tilde{\nabla}^\a\f )\tilde{\nabla}_\a\d\f \right.\\
+  &\left.\quad + E^{\m\n }_\f\tilde{\nabla}_\n\f\tilde{\nabla}^\a \f(\tilde{\nabla}_\m\tilde{\nabla}_\a\d\f )-\frac{1}{2}E^{\m\n}_\f \tilde{g}_{\m\n }\tilde{\nabla}^\r\f(\tilde{\nabla}_\r\tilde{\nabla}^\a \f )\tilde{\nabla}_\a\d\f  -\frac{1}{2}E^{\m\n }_\f\tilde{g}_{\m\n }\tilde{\nabla}^\r\f\tilde{\nabla}^\a\f(\tilde{\nabla}_\r\tilde{\nabla}_\a\d\f )\right\}
+\end{align}
+
+At this point it is convenient to introduce the following notation
+\begin{equation}
+  \tr \tilde{E}:=\tilde{g}^{\m\n }E_{\m\n },\qquad \tr\tilde{E}_\f :=\tilde{g}_{\m\n }\tilde{E}^{\m\n }_\f 
+\end{equation}
+Therefore, [\rc{Check possible typos}]
+\begin{align*}
+   \d_\f\E &=\sqrt{-\tilde{g}}\left\{E_\f\d_\f+\left(E^\m_\f\tilde{\nabla}_\m-\frac{1}{2}\tr\tilde{E }\, \tilde{\nabla}^\m\f \right)\tilde{\nabla}_\m\d\f +E^{\m\n }_\f \tilde{\nabla}_\m\tilde{\nabla}_\n \d\f +E^{\m\n }_\f\tilde{\nabla}_\n \f(\tilde{\nabla}_\m \tilde{\nabla}^\a\f )\tilde{\nabla}_\a\d\f \right.\\
+  &\left.\quad + E^{\m\n }_\f\tilde{\nabla}_\n\f\tilde{\nabla}^\a \f(\tilde{\nabla}_\m\tilde{\nabla}_\a\d\f )-\frac{1}{2}E^{\m\n}_\f \tilde{g}_{\m\n }\tilde{\nabla}^\r\f(\tilde{\nabla}_\r\tilde{\nabla}^\a \f )\tilde{\nabla}_\a\d\f  -\frac{1}{2}\tr \tilde{E}_\f \tilde{\nabla}^\r\f\tilde{\nabla}^\a\f(\tilde{\nabla}_\r\tilde{\nabla}_\a\d\f )\right\}\\
+  &=\sqrt{-\tilde{g}}\left\{E_\f\d_\f+\left(E^\m_\f\tilde{\nabla}_\m-\frac{1}{2}\tr\tilde{E }\, \tilde{\nabla}^\m\f \right)\tilde{\nabla}_\m\d\f +E^{\m\n }_\f \tilde{\nabla}_\m\tilde{\nabla}_\n \d\f +E^{\m\n }_\f\tilde{\nabla}_\n \f(\tilde{\nabla}_\m \tilde{\nabla}^\a\f )\tilde{\nabla}_\a\d\f \right.\\
+  &\left.\quad + E^{\m\n }_\f\tilde{\nabla}_\n\f\tilde{\nabla}^\a \f(\tilde{\nabla}_\m\tilde{\nabla}_\a\d\f )-\frac{1}{2}E^{\m\n}_\f \tilde{g}_{\m\n }\tilde{\nabla}^\r\f(\tilde{\nabla}_\r\tilde{\nabla}^\a \f )\tilde{\nabla}_\a\d\f \right.\\
+   &\left.\quad  -\frac{1}{2}\tr\tilde{E}_\f \left[\tilde{\nabla}^\r\f (\tilde{\nabla}_\r\tilde{\nabla}^\a\f )\tilde{\nabla}_\a\d\f +\tilde{\nabla}^\r\f\tilde{\nabla}^\a\f (\tilde{\nabla}_\r\tilde{\nabla}_\a\d\f )\right]\right\}\\
+   &=\sqrt{-\tilde{g}}\left\{E_\f\d\f +\left(E^\m_\f\rc{\tilde{\nabla}_\m}-\frac{1}{2}\tr \tilde{E}\tilde{\nabla}^\m\f \right)\tilde{\nabla}_\m\d\f +\left[E^{\m\n }_\d\tilde{\nabla}_\n\f (\tilde{\nabla}_\m\tilde{\nabla}^\a\f )-\frac{1}{2}\tr \tilde{E}_\f \tilde{\nabla}^\r\f (\tilde{\nabla}_\r\tilde{\nabla}^\a\f )\right]\tilde{\nabla}_\d\f\right. \\
+   &\left. \quad +E^{\m\n }_\f\tilde{\nabla}_\m\tilde{\nabla}_\n \d\f +E^{\m\n }_\f\tilde{\nabla}_\n\f\tilde{\nabla}^\a\f (\tilde{\nabla}_\m\tilde{\nabla}_\a\d\f )-\frac{1}{2}\tr \tilde{E}_\f \tilde{\nabla}^\r\f\tilde{\nabla}^\a\f (\tilde{\nabla}_\r\tilde{\nabla}_\a\d\f )\right\}\\
+    &=\sqrt{-\tilde{g}}\left\{E_\f\d\f +\left[E^\m_\f \tilde{\nabla}_\m-\frac{1}{2}\tr\tilde{E}\tilde{\nabla}^\m\f +\left(E^{\a\b }_\f\tilde{\nabla}_\f-\frac{1}{2}\tr \tilde{E}_\b\f \tilde{\nabla}^\a\f \right)\tilde{\nabla}_\a\tilde{\nabla}^\m\f \right]\tilde{\nabla}_\m\d\f\right.\\
+    &\quad \left.+\left[E^{\m\n }_\f+\left(E^{\m\a }_\f \tilde{\nabla}_\n\f-\frac{1}{2}\tr\tilde{E}_\f \tilde{\nabla}^\m\f \right)\tilde{\nabla}^\n\f \right]\tilde{\nabla}_\m\tilde{\nabla}_\n\d\f  \right\}
+\end{align*}
+
+[\rc{Complete with text}]
+
+
+\begin{equation}\label{DE}
+  D_\E =\sqrt{-\tilde{g}}\left[E_\f +H^\m\tilde{\nabla}_\m +H^{(\m\n )}\tilde{\nabla}_\m\tilde{\nabla}_\n \right]
+\end{equation}
+where
+\begin{align}
+  H^\m &:=\left[E^\m_\f \tilde{\nabla}_\m-\frac{1}{2}\tr\tilde{E}\tilde{\nabla}^\m\f +\left(E^{\a\b }_\f\tilde{\nabla}_\b \f -\frac{1}{2}\tr \tilde{E}_\f\tilde{\nabla}^\a\f \right)\tilde{\nabla}_\a\tilde{\nabla}^\m\f \right]\\
+  H^{\m\n }&:=E^{\m\n }_\f+\left(E^{\m\a }_\f \tilde{\nabla}_\n\f-\frac{1}{2}\tr\tilde{E}_\f\tilde{\nabla}^\m\f \right)\tilde{\nabla}^\n\f 
+\end{align}
+
+
+
+At this point let us remember that the adjoit of a differential operator $O$, denoted bu $O^\dagger$  satisfies
+\begin{equation}
+	\int\dd^Dx AO(B)=\int\dd ^DxBO^\dagger(A)
+\end{equation}
+for every pair of differntial functions $A$ and $B$, with equality achieved up to boundary terms.
+In order to ensure that the equations arise from an action principle, we need $D_\E $ to be self-adjoint
+
+\begin{align}
+  \int\dd^DxAD_\E (B)&=\int\dd^Dx\sqrt{-\tilde{g}}\left[A\left(E_\f +H^\m\tilde{\nabla}_\m +H^{(\m\n )}\tilde{\nabla}_\m\tilde{\nabla}_\n\right)B\right]\\
+  &=\int\dd^Dx\sqrt{-\tilde{g}}\left[AE_\f B +AH^\m \tilde{\nabla}_\m B+AH^{\m\n }\tilde{\nabla}_\m\tilde{\nabla}_\n B\right]\\
+  &=\int\dd^Dx\sqrt{-\tilde{g}}\left[BE_\f A-B\tilde{\nabla}_\m (H^\m A)-\tilde{\nabla}_\m (AH^{\m\n })\tilde{\nabla}_\n B\right]+\rm b.t\\
+  &=\int\dd^Dx\sqrt{-\tilde{g}}\left[BE_\f A-B\tilde{\nabla}_\m (H^\m A)+B\tilde{\nabla}_\m\tilde{\nabla}_\n (H^{\m\n }A)\right]+\rm b.t
+\end{align}
+Then, 
+\begin{align}
+  D^\dagger_\E (A)&=\sqrt{-\tilde{g}}\left[E_\f A-\tilde{\nabla}_\m (H^\m A)+\tilde{\nabla}_\m\tilde{\nabla}_\n (H^{\m\n }A)\right]\\
+  &=\sqrt{-\tilde{g}}\left[E_\f A-A\tilde{\nabla}_\m H^\m -H^\m \tilde{\nabla}_\m A+\tilde{\nabla}_\n (A\tilde{\nabla}_\m H^{\m\n }+H^{\m\n }\tilde{\nabla}_\m A)\right]
+\end{align}
+But, in order to make appear $D_\E$ from \eqref{DE}, we can add an smart zero,
+\begin{align}
+  D^\dagger_\E (A)&=\sqrt{-\tilde{g}}\left[E_\f A-\tilde{\nabla}_\m (H^\m A)+\tilde{\nabla}_\m\tilde{\nabla}_\n (H^{\m\n }A)\right]+2H^\m \tilde{\nabla}_\m A-2H^\m \tilde{\nabla}_\m A\\
+  &=\sqrt{-\tilde{g}}\left[E_\f A-A\tilde{\nabla}_\m H^\m +H^\m \tilde{\nabla}_\m A+\tilde{\nabla}_\n A\tilde{\nabla}_\m H^{\m\n }+A\tilde{\nabla}_\m \tilde{\nabla}_\n H^{\m\n }\right. \\
+  &\left.\quad +\tilde{\nabla}_\n H^{\m\n }\tilde{\nabla}_\m A +H^{\m\n }\tilde{\nabla}_\m \tilde{\nabla}_\n A -2H^\m \tilde{\nabla}_\m A\right]\\
+  &=D_\E (A)+\sqrt{-\tilde{g}}\left[-A\tilde{\nabla}_\m H^\m +\tilde{\nabla}_\n A\tilde{\nabla}_\m H^{\m\n }+A\tilde{\nabla}_\m \tilde{\nabla}_\n H^{\m\n }+\tilde{\nabla}_\n H^{\m\n }\tilde{\nabla}_\m A-2H^\m \tilde{\nabla}_\m A\right]\\
+  &=D_\E (A)+\sqrt{-\tilde{g}}\left[-A\tilde{\nabla}_\m H^\m +2\tilde{\nabla}_\m H^{\m\n }\tilde{\nabla}_\n A+A\tilde{\nabla}_\m \tilde{\nabla}_\n H^{\m\n }-2H^\m \tilde{\nabla}_\m A\right]\\
+  &=D_\E (A)+\sqrt{-\tilde{g}}\left[2J^\m \tilde{\nabla}_\m A+\tilde{\nabla}_\m J^\m A\right]
+\end{align}
+where we have defined
+\begin{equation}
+  J^\m :=\tilde{\nabla}_\n H^{(\n\m) }-H^\m 
+\end{equation}
+
+[\rc{text}]
+
+\begin{equation}
+  D^\dagger _\E (A)=D_\E (A) \Leftrightarrow J^\m =0
+\end{equation}
+
+[\rc{text}]
+\begin{equation}
+\boxed{  \tilde{\nabla}_\n H^{(\n\m) }=H^\m }
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
