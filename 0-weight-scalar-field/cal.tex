@@ -143,7 +143,7 @@ Pluggin into \eqref{A-condition},
 
 
 \section{Building the auxiliar metric}
-We know the conditions that the most general second orden equation of motion for the zero conformal weight scalar field must satisfy. They are given by \eqref{conditions}. Now, the question is: how do we construct an auxiliary metric $\tilde{g}_{\m\n }$ such that  $\d_\omega \tilde{g}_{\m\n }=0$?
+We know the conditions that the most general second order equation of motion for the zero conformal weight scalar field must satisfy. They are given by \eqref{conditions}. Now, the question is: how do we construct an auxiliary metric $\tilde{g}_{\m\n }$ such that  $\d_\omega \tilde{g}_{\m\n }=0$?
 
 Remember that in the exponential frame for the scalar field, the conformal transformations look like
 \begin{equation}
@@ -202,15 +202,15 @@ Since from conformal invariance for zero weight scalar field, the $P^{\m\n }=0$ 
 \section{Fréchet derivative}
 Now, let's try to find an action principle from which it emerges \eqref{EE}. To do that, we will use the formalism used in \cite{Ayon-Beato:2023bzp}. Hence, first we must to introduce the concept of Fréchet derivative.
 
-Let $P[u]=P\left(x,u^{(n)}\right)$ be a differential function, i.e. that depends in the point $x$, the function $u$ together with its derivatives $u^{(n)}$. Consider noew its variation under a one-parameter family of functions. After interchanging the variation with derivatives (and without integrating by parts) we end with a differential operator acting on an arbitrary variation $\d u$ called the \textit{Fréchet derivative} of $P$,
+Let $P[u]=P\left(x,u^{(n)}\right)$ be a differential function, i.e. that depends in the point $x$, the function $u$ together with its derivatives $u^{(n)}$. Consider now its variation under a one-parameter family of functions. After interchanging the variation with derivatives (and without integrating by parts) we end with a differential operator acting on an arbitrary variation $\d u$ called the \textit{Fréchet derivative} of $P$,
 \begin{equation}
   \d P=\dv{\varepsilon}\eval{P[u+\varepsilon\d u]}_{\varepsilon=0}:=D_P(\d u)
 \end{equation}
-Here, we consider the scond order conformally invariant psudoscalar defined by
+Here, we consider the second order conformally invariant psudoscalar defined by
 \begin{equation}\label{E-frechet}
   \E=\sqrt{-\tilde{g}}E(\f,\tilde{\nabla}_\m\f ,\tilde{\nabla}_\m\nabla_\n \f ,\tilde{g}^{\m\n },\tilde{C}_{\m\n }^{\a\b })
 \end{equation}
-which is the natural quantity that could be derived from a convariant action. The role of he dependet function $u$ is played by the zero weight conformally invariant sacalr field $\f$,  and hence the Fréchet derivative of $\E$ can be calculated from
+which is the natural quantity that could be derived from a convariant action. The role of he dependent function $u$ is played by the zero weight conformally invariant scalar field $\f$,  and hence the Fréchet derivative of $\E$ can be calculated from
 \begin{equation}
   D_\E(\d\f )=\d_\f\E\, .
 \end{equation}
@@ -297,49 +297,48 @@ So \eqref{df-E} becomes
 
 [\rc{Complete!!}]
 
-\begin{align}
+\begin{align*}
   \d_\f\E &=\sqrt{-\tilde{g}}\left\{E_\f\d\f +E^\m_\f \tilde{\nabla}_\m\d\f -\frac{1}{2}E_{\m\n }\tilde{g}^{\m\n }\tilde{\nabla}^\a \tilde{\nabla}_\a \d\f \right.\\
   &  \quad \left. + E^{\m\n }_\f \left[\tilde{\nabla}_\m \tilde{\nabla}_\n \d\f +\tilde{\nabla}_\n\f\tilde{\nabla}_\m (\tilde{\nabla}^\a\tilde{\nabla}_\a\d\f )-\frac{1}{2}\tilde{g}_{\m\n }\tilde{\nabla}^\r\f\tilde{\nabla}_\r (\tilde{\nabla}^\a\f\tilde{\nabla}_\a\d\f )\right]\right\} \\
   &=\sqrt{-\tilde{g}}\left\{E_\f\d_\f+\left(E^\m_\f\tilde{\nabla}_\m-\frac{1}{2}E_{\r\tau }\tilde{g}^{\r\tau }\tilde{\nabla}^\m\f \right)\tilde{\nabla}_\m\d\f +E^{\m\n }_\b\tilde{\nabla}_\m\tilde{\nabla}_\n \d\f +E^{\m\n }_\f\tilde{\nabla}_\n \f(\tilde{\nabla}_\m \tilde{\nabla}^\a\f )\tilde{\nabla}_\a\d\f \right.\\
   &\left.\quad + E^{\m\n }_\f\tilde{\nabla}_\n\f\tilde{\nabla}^\a \f(\tilde{\nabla}_\m\tilde{\nabla}_\a\d\f )-\frac{1}{2}E^{\m\n}_\f \tilde{g}_{\m\n }\tilde{\nabla}^\r\f(\tilde{\nabla}_\r\tilde{\nabla}^\a \f )\tilde{\nabla}_\a\d\f  -\frac{1}{2}E^{\m\n }_\f\tilde{g}_{\m\n }\tilde{\nabla}^\r\f\tilde{\nabla}^\a\f(\tilde{\nabla}_\r\tilde{\nabla}_\a\d\f )\right\}
-\end{align}
+\end{align*}
 
 At this point it is convenient to introduce the following notation
 \begin{equation}
   \tr \tilde{E}:=\tilde{g}^{\m\n }E_{\m\n },\qquad \tr\tilde{E}_\f :=\tilde{g}_{\m\n }\tilde{E}^{\m\n }_\f 
 \end{equation}
-Therefore, [\rc{Check possible typos}]
+Therefore,
 \begin{align*}
    \d_\f\E &=\sqrt{-\tilde{g}}\left\{E_\f\d_\f+\left(E^\m_\f\tilde{\nabla}_\m-\frac{1}{2}\tr\tilde{E }\, \tilde{\nabla}^\m\f \right)\tilde{\nabla}_\m\d\f +E^{\m\n }_\f \tilde{\nabla}_\m\tilde{\nabla}_\n \d\f +E^{\m\n }_\f\tilde{\nabla}_\n \f(\tilde{\nabla}_\m \tilde{\nabla}^\a\f )\tilde{\nabla}_\a\d\f \right.\\
   &\left.\quad + E^{\m\n }_\f\tilde{\nabla}_\n\f\tilde{\nabla}^\a \f(\tilde{\nabla}_\m\tilde{\nabla}_\a\d\f )-\frac{1}{2}E^{\m\n}_\f \tilde{g}_{\m\n }\tilde{\nabla}^\r\f(\tilde{\nabla}_\r\tilde{\nabla}^\a \f )\tilde{\nabla}_\a\d\f  -\frac{1}{2}\tr \tilde{E}_\f \tilde{\nabla}^\r\f\tilde{\nabla}^\a\f(\tilde{\nabla}_\r\tilde{\nabla}_\a\d\f )\right\}\\
   &=\sqrt{-\tilde{g}}\left\{E_\f\d_\f+\left(E^\m_\f\tilde{\nabla}_\m-\frac{1}{2}\tr\tilde{E }\, \tilde{\nabla}^\m\f \right)\tilde{\nabla}_\m\d\f +E^{\m\n }_\f \tilde{\nabla}_\m\tilde{\nabla}_\n \d\f +E^{\m\n }_\f\tilde{\nabla}_\n \f(\tilde{\nabla}_\m \tilde{\nabla}^\a\f )\tilde{\nabla}_\a\d\f \right.\\
   &\left.\quad + E^{\m\n }_\f\tilde{\nabla}_\n\f\tilde{\nabla}^\a \f(\tilde{\nabla}_\m\tilde{\nabla}_\a\d\f )-\frac{1}{2}E^{\m\n}_\f \tilde{g}_{\m\n }\tilde{\nabla}^\r\f(\tilde{\nabla}_\r\tilde{\nabla}^\a \f )\tilde{\nabla}_\a\d\f \right.\\
    &\left.\quad  -\frac{1}{2}\tr\tilde{E}_\f \left[\tilde{\nabla}^\r\f (\tilde{\nabla}_\r\tilde{\nabla}^\a\f )\tilde{\nabla}_\a\d\f +\tilde{\nabla}^\r\f\tilde{\nabla}^\a\f (\tilde{\nabla}_\r\tilde{\nabla}_\a\d\f )\right]\right\}\\
-   &=\sqrt{-\tilde{g}}\left\{E_\f\d\f +\left(E^\m_\f\rc{\tilde{\nabla}_\m}-\frac{1}{2}\tr \tilde{E}\tilde{\nabla}^\m\f \right)\tilde{\nabla}_\m\d\f +\left[E^{\m\n }_\d\tilde{\nabla}_\n\f (\tilde{\nabla}_\m\tilde{\nabla}^\a\f )-\frac{1}{2}\tr \tilde{E}_\f \tilde{\nabla}^\r\f (\tilde{\nabla}_\r\tilde{\nabla}^\a\f )\right]\tilde{\nabla}_\d\f\right. \\
+   &=\sqrt{-\tilde{g}}\left\{E_\f\d\f +\left(E^\m_\f-\frac{1}{2}\tr \tilde{E}\tilde{\nabla}^\m\f \right)\tilde{\nabla}_\m\d\f +\left[E^{\m\n }_\d\tilde{\nabla}_\n\f (\tilde{\nabla}_\m\tilde{\nabla}^\a\f )-\frac{1}{2}\tr \tilde{E}_\f \tilde{\nabla}^\r\f (\tilde{\nabla}_\r\tilde{\nabla}^\a\f )\right]\tilde{\nabla}_\d\f\right. \\
    &\left. \quad +E^{\m\n }_\f\tilde{\nabla}_\m\tilde{\nabla}_\n \d\f +E^{\m\n }_\f\tilde{\nabla}_\n\f\tilde{\nabla}^\a\f (\tilde{\nabla}_\m\tilde{\nabla}_\a\d\f )-\frac{1}{2}\tr \tilde{E}_\f \tilde{\nabla}^\r\f\tilde{\nabla}^\a\f (\tilde{\nabla}_\r\tilde{\nabla}_\a\d\f )\right\}\\
     &=\sqrt{-\tilde{g}}\left\{E_\f\d\f +\left[E^\m_\f \tilde{\nabla}_\m-\frac{1}{2}\tr\tilde{E}\tilde{\nabla}^\m\f +\left(E^{\a\b }_\f\tilde{\nabla}_\f-\frac{1}{2}\tr \tilde{E}_\b\f \tilde{\nabla}^\a\f \right)\tilde{\nabla}_\a\tilde{\nabla}^\m\f \right]\tilde{\nabla}_\m\d\f\right.\\
     &\quad \left.+\left[E^{\m\n }_\f+\left(E^{\m\a }_\f \tilde{\nabla}_\n\f-\frac{1}{2}\tr\tilde{E}_\f \tilde{\nabla}^\m\f \right)\tilde{\nabla}^\n\f \right]\tilde{\nabla}_\m\tilde{\nabla}_\n\d\f  \right\}
 \end{align*}
-
-[\rc{Complete with text}]
-
+Therefore, the Fréchet derivative is given by the following operator
 
 \begin{equation}\label{DE}
   D_\E =\sqrt{-\tilde{g}}\left[E_\f +H^\m\tilde{\nabla}_\m +H^{(\m\n )}\tilde{\nabla}_\m\tilde{\nabla}_\n \right]
 \end{equation}
 where
 \begin{align}
-  H^\m &:=\left[E^\m_\f \tilde{\nabla}_\m-\frac{1}{2}\tr\tilde{E}\tilde{\nabla}^\m\f +\left(E^{\a\b }_\f\tilde{\nabla}_\b \f -\frac{1}{2}\tr \tilde{E}_\f\tilde{\nabla}^\a\f \right)\tilde{\nabla}_\a\tilde{\nabla}^\m\f \right]\\
-  H^{\m\n }&:=E^{\m\n }_\f+\left(E^{\m\a }_\f \tilde{\nabla}_\n\f-\frac{1}{2}\tr\tilde{E}_\f\tilde{\nabla}^\m\f \right)\tilde{\nabla}^\n\f 
+  H^\m &:=E^\m_\f -\frac{1}{2}\tr\tilde{E}\tilde{\nabla}^\m\f +\left(E^{\a\b }_\f\tilde{\nabla}_\b \f -\frac{1}{2}\tr \tilde{E}_\f\tilde{\nabla}^\a\f \right)\tilde{\nabla}_\a\tilde{\nabla}^\m\f \\
+  H^{\m\n }&:=E^{\m\n }_\f+\left(E^{\m\a }_\f \tilde{\nabla}_\a \f-\frac{1}{2}\tr\tilde{E}_\f\tilde{\nabla}^\m\f \right)\tilde{\nabla}^\n\f 
 \end{align}
+%[\rc{Check possible typos!}]
 
 
 
-At this point let us remember that the adjoit of a differential operator $O$, denoted bu $O^\dagger$  satisfies
+At this point let us remember that the adjoint of a differential operator $O$, denoted bu $O^\dagger$  satisfies
 \begin{equation}
 	\int\dd^Dx AO(B)=\int\dd ^DxBO^\dagger(A)
 \end{equation}
-for every pair of differntial functions $A$ and $B$, with equality achieved up to boundary terms.
+for every pair of differential functions $A$ and $B$, with equality achieved up to boundary terms.
 In order to ensure that the equations arise from an action principle, we need $D_\E $ to be self-adjoint
 
 \begin{align}
@@ -354,82 +353,101 @@ Then,
   &=\sqrt{-\tilde{g}}\left[E_\f A-A\tilde{\nabla}_\m H^\m -H^\m \tilde{\nabla}_\m A+\tilde{\nabla}_\n (A\tilde{\nabla}_\m H^{\m\n }+H^{\m\n }\tilde{\nabla}_\m A)\right]
 \end{align}
 But, in order to make appear $D_\E$ from \eqref{DE}, we can add an smart zero,
-\begin{align}
+\begin{align*}
   D^\dagger_\E (A)&=\sqrt{-\tilde{g}}\left[E_\f A-\tilde{\nabla}_\m (H^\m A)+\tilde{\nabla}_\m\tilde{\nabla}_\n (H^{\m\n }A)\right]+2H^\m \tilde{\nabla}_\m A-2H^\m \tilde{\nabla}_\m A\\
   &=\sqrt{-\tilde{g}}\left[E_\f A-A\tilde{\nabla}_\m H^\m +H^\m \tilde{\nabla}_\m A+\tilde{\nabla}_\n A\tilde{\nabla}_\m H^{\m\n }+A\tilde{\nabla}_\m \tilde{\nabla}_\n H^{\m\n }\right. \\
   &\left.\quad +\tilde{\nabla}_\n H^{\m\n }\tilde{\nabla}_\m A +H^{\m\n }\tilde{\nabla}_\m \tilde{\nabla}_\n A -2H^\m \tilde{\nabla}_\m A\right]\\
   &=D_\E (A)+\sqrt{-\tilde{g}}\left[-A\tilde{\nabla}_\m H^\m +\tilde{\nabla}_\n A\tilde{\nabla}_\m H^{\m\n }+A\tilde{\nabla}_\m \tilde{\nabla}_\n H^{\m\n }+\tilde{\nabla}_\n H^{\m\n }\tilde{\nabla}_\m A-2H^\m \tilde{\nabla}_\m A\right]\\
   &=D_\E (A)+\sqrt{-\tilde{g}}\left[-A\tilde{\nabla}_\m H^\m +2\tilde{\nabla}_\m H^{\m\n }\tilde{\nabla}_\n A+A\tilde{\nabla}_\m \tilde{\nabla}_\n H^{\m\n }-2H^\m \tilde{\nabla}_\m A\right]\\
   &=D_\E (A)+\sqrt{-\tilde{g}}\left[2J^\m \tilde{\nabla}_\m A+\tilde{\nabla}_\m J^\m A\right]
-\end{align}
+\end{align*}
 where we have defined
 \begin{equation}
   J^\m :=\tilde{\nabla}_\n H^{(\n\m) }-H^\m 
 \end{equation}
 
-[\rc{text}]
-
+Thus, for $D_\E $ to be self-adjoint, it must be fulfilled that
 \begin{equation}
   D^\dagger _\E (A)=D_\E (A) \Leftrightarrow J^\m =0
 \end{equation}
-
-[\rc{text}]
-\begin{equation}
+and the Helmholtz condition is reduced to
+\begin{equation}\label{Hemholtz-condition}
 \boxed{  \tilde{\nabla}_\n H^{(\n\m) }=H^\m }
 \end{equation}
+where 
+\begin{align}
+  H^\m &:=\left[E^\m_\f -\frac{1}{2}\tr\tilde{E}\tilde{\nabla}^\m\f +\left(E^{\a\b }_\f\tilde{\nabla}_\b \f -\frac{1}{2}\tr \tilde{E}_\f\tilde{\nabla}^\a\f \right)\tilde{\nabla}_\a\tilde{\nabla}^\m\f \right]\\
+  H^{\m\n }&:=E^{\m\n }_\f+\left(E^{\m\a }_\f \tilde{\nabla}_\a \f-\frac{1}{2}\tr\tilde{E}_\f\tilde{\nabla}^\m\f \right)\tilde{\nabla}^\n\f 
+\end{align}
 
+Helmholtz conditions implies that a symmetric second rank tensor depending up to second order in the scalar field $\f$ and auxiliar metric $\tilde{g}_{\m\n }$ has a second order divergence. The most general tensor with these properties was characterized by Horndeski. Consequently, $H^{\m\n }$ belongs to the Horndeski family builded for the auxiliar metric $\tilde{g}_{\m\n }$.
 
+\subsection{Quantities written in the auxiliar frame}
+As an example, let's consider again the action principle
+\begin{equation}\label{S-auxiliar-frame}
+  S[g_{\m\n },\f ]=\int\dd^Dx\sqrt{-g}X^{D/2}
+\end{equation}
 
+Its equation is rewritten in the auxiliar frame as
+\begin{align}
+  \E&=\sqrt{-g}E\\
+  &=\sqrt{-g}\nabla_\m \left(X^{\frac{D-2}{2}}\nabla^\m \f \right)\\
+  &=\partial_\m \left(\underbrace{\sqrt{-g}X^\frac{D}{2}}_{\sqrt{-\tilde{g}}}\underbrace{X^{-1}g^{\m\n }}_{\tilde{g}^{\m\n }}\partial_\n \f \right)\\
+  &=\partial_\m (\sqrt{-\tilde{g}}\tilde{g}^{\m\n }\partial_\n \f )\\
+  &=\sqrt{-\tilde{g}}\tilde{g}^{\m\n }\tn_\m\tn_\n\f \\
+  &=\sqrt{-\tilde{g}}\tilde{\Box }\f 
+\end{align}
+which implies that
+\begin{equation}
+  E=\tilde{\Box }\f =\tilde{g}^{\m\n }\tn_\m \tn_\n\f 
+\end{equation}
+Thus
+\begin{equation}
+  E^{\m\n }_\f :=\pdv{E}{(\tn_\m\tn_\n\f )}=\tilde{g}^{\m\n }
+\end{equation}
+So then
+\begin{align}
+  H^{\m\n }&:=E^{\m\n }_\f+\left(E^{\a\m  }_\f \tilde{\nabla}_\a \f-\frac{1}{2}\tr\tilde{E}_\f\tilde{\nabla}^\m\f \right)\tilde{\nabla}^\n\f \notag \\
+  &=\tilde{g}^{\m\n } +\left(\tilde{g}^{\a\m }\tn_\a\f -\frac{1}{2}\tilde{g}_{\lambda\r }\tilde{E}^{\lambda\r }_\f \tn^\m\f \right)\tn^\n\f \notag  \\
+  &=\tilde{g}^{\m\n }+\left(\tn^\m\f-\frac{1}{2}\tilde{g}_{\lambda\r }\tilde{g}^{\lambda\r }\tn^\m\f \right)\tn^\n\f \notag \\
+  &=\tilde{g}^{\m\n }\left(\tn^\m\f -\frac{D}{2}\tn^\m\f \right)\tn^\n\f \notag  \\
+  &=\tilde{g}^{\m\n }-\frac{(D-2)}{2}\tn^\m\f\tn^\n\f \label{Hmn-auxiliar-frame}
+\end{align}
 
+Furthermore,
+\begin{align}
+  E_{\m\n }&:=-\frac{2}{\sqrt{-\tilde{g}}}\pdv{(\sqrt{-\tilde{g}}E)}{\tilde{g}^{\m\n }}\\
+  &=-\frac{2}{\sqrt{-\tilde{g}}}\left(-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n }E+\sqrt{-\tilde{g}}\pdv{E}{\tilde{g}^{\m\n }}\right)\\
+  &=-2\left(-\frac{1}{2}\tilde{g}_{\m\n }E+\tn_\m\tn_\n\f \right)\\
+  &=-2\left(-\frac{1}{2}\tilde{g}_{\m\n }\tilde{\Box }\f +\tn_\m\tn_\n\f \right)\\
+  &=\tilde{g}_{\m\n }\tilde{\Box }\f-2\tn_\m\tn_\n\f 
+\end{align}
+which implies
+\begin{equation}
+  \tr\tilde{E}:=\tilde{g}^{\m\n }E_{\m\n }=D\tilde{\Box}\f-2\tilde{\Box }\f=(D-2)\tilde{\Box}\f 
+\end{equation}
+It is also clear to see that
+\begin{equation}
+  E^\m_\f :=\pdv{E}{(\tn_\m \f )}=0
+\end{equation}
+So then
+\begin{align}
+  H^\m &:=\left[E^\m_\f -\frac{1}{2}\tr\tilde{E}\tilde{\nabla}^\m\f +\left(E^{\a\b }_\f\tilde{\nabla}_\b \f -\frac{1}{2}\tr \tilde{E}_\f\tilde{\nabla}^\a\f \right)\tilde{\nabla}_\a\tilde{\nabla}^\m\f \right]\\
+  &=-\frac{1}{2}(D-2)\tilde{\Box}\f\tn^\m\f+\left(\tilde{g}^{\a\b }\tn_\b\f -\frac{1}{2}\tilde{g}_{\lambda\r }\tilde{E}^{\lambda\r }_\f \tn^\a\f \right)\tn_\a\tn_\m\f \\
+  &=-\frac{(D-2)}{2}\tilde{\Box }\f\tn^\m\f +\left(\tn^\a\f-\frac{1}{2}\tilde{g}_{\lambda\r }\tilde{g}^{\lambda\r }\tn^{\a}\f \right)\tn_\a\tn^\m\f \\
+  &=-\frac{(D-2)}{2}\tilde{\Box\f }\tn^\m \f +\left(\tn^{\a }\f-\frac{D}{2}\tn^{\a }\f \right)\tn_\a\tn^\m\f \\\
+  &=-\frac{(D-2)}{2}\tilde{\Box}\f \tn^\m\f -\frac{(D-2)}{2}\tn^{\a }\f\tn_\a\tn^\m\f \\
+  &=-\frac{(D-2)}{2}\left(\tilde{\Box}\f\tn^\m\f +\tn^{\a }\f\tn_\a\tn^\m \f \right)
+\end{align}
+Finally, we have
+\begin{align}
+  \tn_\m H^{\m\n }&=\tn_\m\left( \tilde{g}^{\m\n }-\frac{(D-2)}{2}\tn^\m\f\tn^\n\f \right)\\
+  &=-\frac{(D-2)}{2}\tn_\m \left(\tn^\m\f\tn^\n \f \right)\\
+  &=-\frac{(D-2)}{2}\left(\tilde{\Box}\f \tn^\n\f+\tn^\m\f\tn_\m\tn^\n\f \right)\\
+  &=H^\n 
+\end{align}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+That is to say, the equations of motion coming from \eqref{S-auxiliar-frame}, writen in the auxiliar frame, satisfy the Hemholtz conditions \eqref{Hemholtz-condition}.
 
 
 
