@@ -455,7 +455,7 @@ That is to say, the equations of motion coming from \eqref{S-auxiliar-frame}, wr
 \section{Horndeski theorem}
 Horndeski theorem says that in a space of dimension four, the most general symmetric contravariant tensor density of the form
 \begin{equation}
-  A^{ab}=A^{ab}(g_{ij},\partial_hg_{ij},\partial_{hk}g_{ij},\f,\partial_h\f,\partial_{hk}\f )
+  A^{ab}=A^{ab}(g_{ij},\partial_hg_{ij},\partial_{h}\partial_k g_{ij},\f,\partial_h\f,\partial_h\partial_k\f )
 \end{equation}
 which is such that $\nabla_aA^{ab }$ is at most of second-order in the derivatives of both $g_{ij}$ and $\f$ is given by
 \begin{equation}\label{Horndeski}
@@ -475,9 +475,13 @@ Note that the dependece on the Riemann tensor only appears in the first three te
 \end{equation}
  only the term proportional to the trace of the Ricci tensor survives.
  
- Now, using the identity
+ Now, using the identities
 \begin{equation}
-{\displaystyle \delta _{\nu _{1}\dots \nu _{s}\,\mu _{s+1}\dots \mu _{p}}^{\mu _{1}\dots \mu _{s}\,\mu _{s+1}\dots \mu _{p}}={\frac {(D-s)!}{(D-p)!}}\delta _{\nu _{1}\dots \nu _{s}}^{\mu _{1}\dots \mu _{s}}}
+{\displaystyle \delta _{\nu _{1}\dots \nu _{s}\,\mu _{s+1}\dots \mu _{p}}^{\mu _{1}\dots \mu _{s}\,\mu _{s+1}\dots \mu _{p}}={\frac {(D-s)!}{(D-p)!}}\delta _{\nu _{1}\dots \nu _{s}}^{\mu _{1}\dots \mu _{s}}}\,,
+\end{equation}
+and
+\begin{equation}
+  {\displaystyle \delta _{\nu _{1}\dots \nu _{p}}^{\mu _{1}\dots \mu _{p}}=p!\delta _{[\nu _{1}}^{\mu _{1}}\dots \delta _{\nu _{p}]}^{\mu _{p}}=p!\delta _{\nu _{1}}^{[\mu _{1}}\dots \delta _{\nu _{p}}^{\mu _{p}]}}
 \end{equation}
  let's see how the first three terms of \eqref{Horndeski} look like:
  
