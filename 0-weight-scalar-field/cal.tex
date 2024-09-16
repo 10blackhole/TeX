@@ -382,7 +382,7 @@ where
   H^{\m\n }&:=E^{\m\n }_\f+\left(E^{\m\a }_\f \tilde{\nabla}_\a \f-\frac{1}{2}\tr\tilde{E}_\f\tilde{\nabla}^\m\f \right)\tilde{\nabla}^\n\f 
 \end{align}
 
-Helmholtz conditions implies that a symmetric second rank tensor depending up to second order in the scalar field $\f$ and auxiliar metric $\tilde{g}_{\m\n }$ has a second order divergence. The most general tensor with these properties was characterized by Horndeski. Consequently, $H^{\m\n }$ belongs to the Horndeski family builded for the auxiliar metric $\tilde{g}_{\m\n }$.
+Helmholtz conditions implies that a symmetric second rank tensor depending up to second order in the scalar field $\f$ and auxiliar metric $\tilde{g}_{\m\n }$ has a second order divergence. The most general tensor with these properties was characterized by Horndeski \cite{Horndeski:1974wa}. Consequently, $H^{\m\n }$ belongs to the Horndeski family builded for the auxiliar metric $\tilde{g}_{\m\n }$.
 
 \subsection{Quantities written in the auxiliar frame}
 As an example, let's consider again the action principle
@@ -470,7 +470,7 @@ which is such that $\nabla_aA^{ab }$ is at most of second-order in the derivativ
 where $K_i $ are arbitrary differentiable functions of $\f$ and $\partial_i\f$ \cite{Horndeski:1974wa}.
 
 Note that the dependece on the Riemann tensor only appears in the first three terms of \eqref{Horndeski} with all indices contracted with the Kronecker delta, then, from its irreducible decomposition
-\begin{equation}
+\begin{equation}\label{R-CSR}
   R^{ab}_{mn}=C^{ab}_{mn}+2\d^{[a}_{[m}S^{b]}_{n]}+\frac{1}{6}\d^{a}_{[m}\d^b_{n]}R
 \end{equation}
  only the term proportional to the trace of the Ricci tensor survives.
@@ -544,9 +544,115 @@ we can multiply \eqref{0-AR} by $Y_aY_b$,
   &=-\frac{K_3}{3}\frac{1}{2}Y^{a}Y_a X
 \end{align}
 but, $X\neq 0$, so then $K_3=0$. In summary we have
-\begin{equation}
+\begin{equation}\label{K1230}
   K_1=K_2=K_3=0\,.
 \end{equation}
+
+Let's consider now the associated divergence, calculated by Horndeski as \cite{Horndeski:1974wa}
+\begin{equation}\label{nabla-A}
+\begin{split}
+  \frac{\nabla_b A^{ab}}{\sqrt{-g}}&=K_1'\d^{acde}_{fhjk}\nabla^f\f \nabla^h\nabla_c\f R^{jk}_{de}+2\dot{K}_2\d^{acd}_{efh}\nabla_p\f \nabla^{e}\nabla^p\f R^{fh}_{cd}\\
+  &\quad +K_3\d^{acde}_{fhjk}\nabla^h\f \nabla^f\nabla_c\f R^{jk}_{de}+K_5\d^{acd}_{efh}\nabla^m\f R^{fe}_{mc}\nabla^h\nabla_d\f \\
+  &\quad +2\dot{K}_1\d^{acde}_{fhjk}\nabla_p\f \nabla^f\nabla^p\f \nabla^h\nabla_c\f R^{jk}_{de}+\frac{3}{2}K_4\d^{acde}_{fhjk}\nabla^mR^{hf}_{mc}\nabla^j\nabla_d\f \nabla^k\nabla_e\f \\
+  &\quad +\frac{1}{2}K_1\d^{acde}_{fhjk}\nabla^m\f R^{hf}_{mc}R^{jk}_{de}+K_2'\d^{acd}_{efh}\nabla^{e}\f R^{fh}_{cd}+\frac{1}{2}K_7\d^{ac}_{de}\nabla^m\f R^{ed}_{mc}\\
+  &\quad +\frac{1}{2}K_8\d^{acd}_{efh}\nabla_c\f \nabla^f\f \nabla^m\f R^{he}_{md}+2\dot{K}_3\d^{acde}_{fhjk}\nabla_p\f \nabla^f\nabla^p\f \nabla_c\f R^{jk}_{de}\\
+  &\quad +K_6\d^{acde}_{fhjk}\nabla_c\f \nabla^h\f \nabla^m\f R^{jf}_{md}\nabla^k\nabla_e\f +K_4'\d^{acde}_{fhjk}\nabla^f\f\nabla^h\nabla_c\f \nabla^j\nabla_d\f \nabla^k\nabla_e\f \\
+  &\quad +2\dot{K}_5\d^{acd}_{efh}\nabla_p\f \nabla^{e}\nabla^p\f \nabla^f\nabla_c\f \nabla^h\nabla_d\f +K_6\d^{acde}_{fhjk}\nabla^h\f \nabla^f\nabla_c\f \nabla^j\nabla_d\f \nabla^k\nabla_e\f \\
+  &\quad +2\dot{K}_8\d^{acd}_{efh}\nabla_p\f \nabla^{e}\nabla^p\f \nabla_c\f\nabla^f\f\nabla^h\nabla_d\f +2\dot{K}_6\d^{acde}_{fhjk}\nabla_p\f \nabla^f\nabla^p\f \nabla_c\f \nabla^h\f \nabla^j\nabla_d\f\nabla^k\nabla_e\f \\
+  &\quad +2\dot{K}_4\d^{acde}_{fhjk}\nabla_p\f \nabla^f\nabla^p\f \nabla^h\nabla_c\f \nabla^j\nabla_d\f \nabla^k\nabla_e\f +K_5'\d^{acd}_{efh}\nabla^{e}\f \nabla^f\nabla_c\f \nabla^h\nabla_d\f \\
+  &\quad +2\dot{K}_7\d^{ac}_{de}\nabla_p\f \nabla^d\nabla^p\f \nabla^{e}\nabla_c\f +K_8\d^{acd}_{efh}\nabla^f\f\nabla^{e}\nabla_c\f \nabla^h\nabla_d\f +(2\dot{K}_9+K_{10})\nabla_b\f \nabla^b\nabla^{a}\f \\
+  &\quad+ K_7'\d^{ac}_{de}\nabla^d\f \nabla^{e}\nabla_c\f +\nabla^{a}\f (K_9'+\r K_{10}'+2\dot{K}_{10}\nabla^b\f \nabla^c\f \nabla_c\nabla_b\f +K_{10}\nabla^c\nabla_c\f )
+\end{split}
+\end{equation}
+where a prime denotes a partial derivative with respect to $\f$ and a dot denotes a partial derivative with respect to $\r$. Pluggin \eqref{K1230} into \eqref{nabla-A} we obtain
+\begin{align*}
+  \frac{\nabla_b A^{ab}}{\sqrt{-g}}&=K_5\d^{acd}_{efh}\nabla^m\f R^{fe}_{mc}\nabla^h\nabla_d\f +\frac{3}{2}K_4\d^{acde}_{fhjk}\nabla^mR^{hf}_{mc}\nabla^j\nabla_d\f \nabla^k\nabla_e\f +\frac{1}{2}K_7\d^{ac}_{de}\nabla^m\f R^{ed}_{mc}\\
+  &\quad +\frac{1}{2}K_8\d^{acd}_{efh}\nabla_c\f \nabla^f\f \nabla^m\f R^{he}_{md}+K_6\d^{acde}_{fhjk}\nabla_c\f \nabla^h\f \nabla^m\f R^{jf}_{md}\nabla^k\nabla_e\f\\&\quad  +K_4'\d^{acde}_{fhjk}\nabla^f\f\nabla^h\nabla_c\f \nabla^j\nabla_d\f \nabla^k\nabla_e\f +2\dot{K}_5\d^{acd}_{efh}\nabla_p\f \nabla^{e}\nabla^p\f \nabla^f\nabla_c\f \nabla^h\nabla_d\f \\&\quad +K_6\d^{acde}_{fhjk}\nabla^h\f \nabla^f\nabla_c\f \nabla^j\nabla_d\f \nabla^k\nabla_e\f +2\dot{K}_8\d^{acd}_{efh}\nabla_p\f \nabla^{e}\nabla^p\f \nabla_c\f\nabla^f\f\nabla^h\nabla_d\f \\ &\quad+2\dot{K}_6\d^{acde}_{fhjk}\nabla_p\f \nabla^f\nabla^p\f \nabla_c\f \nabla^h\f \nabla^j\nabla_d\f\nabla^k\nabla_e\f \\
+  &\quad +2\dot{K}_4\d^{acde}_{fhjk}\nabla_p\f \nabla^f\nabla^p\f \nabla^h\nabla_c\f \nabla^j\nabla_d\f \nabla^k\nabla_e\f +K_5'\d^{acd}_{efh}\nabla^{e}\f \nabla^f\nabla_c\f \nabla^h\nabla_d\f \\
+  &\quad +2\dot{K}_7\d^{ac}_{de}\nabla_p\f \nabla^d\nabla^p\f \nabla^{e}\nabla_c\f +K_8\d^{acd}_{efh}\nabla^f\f\nabla^{e}\nabla_c\f \nabla^h\nabla_d\f +(2\dot{K}_9+K_{10})\nabla_b\f \nabla^b\nabla^{a}\f \\
+  &\quad+ K_7'\d^{ac}_{de}\nabla^d\f \nabla^{e}\nabla_c\f +\nabla^{a}\f (K_9'+\r K_{10}'+2\dot{K}_{10}\nabla^b\f \nabla^c\f \nabla_c\nabla_b\f +K_{10}\nabla^c\nabla_c\f )
+\end{align*}
+The scalar curvature dependence would be through those terms with the Riemann tensor contracted totally with the Kronecker delta
+\begin{align*}
+  \frac{6}{R}\frac{\nabla_b A^{ab}}{\sqrt{-g}}&=K_5\d^{acd}_{efh}\d^f_m\d^{e}_c\nabla^m\f \nabla^h\nabla_d\f +\frac{3}{2}K_4\d^{acde}_{fhjk}\d^h_m\d^f_c\nabla^m\nabla^j\nabla_d\f \nabla^k\nabla_e\f +\frac{1}{2}K_7\d^{ac}_{de}\d^{e}_m\d^d_c\nabla^m\f \\
+  &\quad +\frac{1}{2}K_8\d^{acd}_{efh}\d^h_m\d^{e}_d\nabla_c\f \nabla^f\f \nabla^m\f +K_6\d^{acde}_{fhjk}\d^j_m\d^f_d\nabla_c\f \nabla^h\f \nabla^m\f\nabla^k\nabla_e\f\\
+  &=-2K_5\d^{ad}_{fh}\nabla^f\f\nabla^h\nabla_d\f-\frac{3}{2}K_4\d^{ade}_{hjk}\nabla^h\f\nabla^j\nabla_d\f\nabla^k\nabla_e\f -\frac{3}{2}K_7\nabla^{a}\f \\
+  &\quad +K_8\d^{ac}_{fh}\nabla_c\f \nabla^f\f\nabla^h\f +K_6\d^{ace}_{hjk}\nabla_c\f \nabla^h\f\nabla^j\f\nabla^k\nabla_e\f 
+\end{align*}
+Note that due to symmetry in the covariant derivative indices contracted with the antisymmetric Kronecker delta, the last two terms vanish. Therefore,
+\begin{align*}
+  \frac{6}{R}\frac{\nabla_b A^{ab}}{\sqrt{-g}}&=-2K_5\d^{ad}_{fh}\nabla^f\f\nabla^h\nabla_d\f-\frac{3}{2}K_4\d^{ade}_{hjk}\nabla^h\f\nabla^j\nabla_d\f\nabla^k\nabla_e\f -\frac{3}{2}K_7\nabla^{a}\f \\
+  &=-2K_5\left(\d^{a}_f\d^d_h-\d^d_f\d^{a}_h\right)\nabla^f\f\nabla^h\nabla_d\f-\frac{3}{2}K_7\nabla^{a}\f  \\
+  &\quad -\frac{3}{2}K_43!\left(\d^{a}_h\d^d_j\d^{e}_k+\d^{a}_j\d^d_k\d^{e}_h+\d^{a}_k\d^d_h\d^{e}_j-\d^{a}_j\d^d_h\d^{e}_k-\d^{a}_h\d^d_k\d^{e}_j-\d^{a}_j\d^d_k\d^{e}_h\right)\nabla^h\f\nabla^j\nabla_d\f\nabla^k\nabla_e\f \\
+  &=-2K_5 (\nabla^{a}\Box\f -\nabla^d\f\nabla^{a}\nabla_d\f )-\frac{3}{2}K_7\nabla^{a}\f \\
+  &\quad -9K_4\left[\nabla^{a}(\Box\f )^2+\nabla^{e}\f\nabla^{a}\nabla_d \f\nabla^d\nabla_e\f +\nabla^d\f\nabla^{e}\nabla_d\f \nabla^{a}\nabla_e\f -\nabla^d\f\nabla^{a}\nabla_d\f \Box\f \right.\\
+  &\left.\qquad \qquad -\nabla^{a}\f \nabla^{e}\nabla_d\f\nabla^d\nabla_e\f -\nabla^d\f\nabla^{a}\nabla_d\f\Box\f  \right]
+\end{align*}
+Introducing the following notation,
+\begin{equation}
+  \f^{a}:=\nabla^{a}\f,\quad \f^{ab}:=\nabla^{a}\nabla^b \f ,\quad X^{a}:=\nabla^{a}X=-\nabla^b \nabla^{a}\nabla_b\f =-\f^b \nabla^{a}\f_b 
+\end{equation}
+we have
+\begin{align*}
+  \frac{6}{R}\frac{\nabla_b A^{ab}}{\sqrt{-g}}&=-2K_5(\f^{a}\Box\f +X^{a})-\frac{3}{2}K_7\f^{a}\\
+  &\quad -9K_4\left[\f^{a}(\Box\f )^2-\nabla^{a}\f_dX^d-X^{e}\nabla^{a}\f_e+X^{a}\Box\f -\f^{a}\f_{ed}\f^{ed}+X^{a}\Box\f \right]\\
+  &=-2K_5(\f^{a}\Box\f +X^{a})-\frac{3}{2}K_7\f^{a}\\
+  &\quad -9K_4\left[\f^{a}(\Box\f )^2-\f^{a}\f_{ed}\f^{ed}+2X^{a}\Box\f -2X^d\nabla^{a}\f_d \right]
+\end{align*}
+
+The partial derivative with respect to the scalar curvature is given by
+\begin{align}
+  \pdv{R}\left(\frac{6\nabla_b A^{ab}}{\sqrt{-g}}\right)&=-2K_5(\f^{a}\Box\f +X^{a})-\frac{3}{2}K_7\f^{a}\\
+  &\quad -9K_4\left[\f^{a}(\Box\f )^2-\f^{a}\f_{ed}\f^{ed}+2X^{a}\Box\f -2X^d\nabla^{a}\f_d \right]
+\end{align}
+[\rc{Check factors}] %TODO Check factors
+
+The above must vanish for any value of the second derivative. Since the terms with the same degree have a common coefficient, such coefficients must vanish independently. Hence
+\begin{equation}
+  K_4=K_5=K_7=0
+\end{equation}
+In this way, the divergence of $A^{ab}$ is reduced to
+\begin{align*}
+    \frac{\nabla_b A^{ab}}{\sqrt{-g}}&= \frac{1}{2}K_8\d^{acd}_{efh}\nabla_c\f \nabla^f\f \nabla^m\f R^{he}_{md}+K_6\d^{acde}_{fhjk}\nabla_c\f \nabla^h\f \nabla^m\f R^{jf}_{md}\nabla^k\nabla_e\f\\&\quad +K_6\d^{acde}_{fhjk}\nabla^h\f \nabla^f\nabla_c\f \nabla^j\nabla_d\f \nabla^k\nabla_e\f +2\dot{K}_8\d^{acd}_{efh}\nabla_p\f \nabla^{e}\nabla^p\f \nabla_c\f\nabla^f\f\nabla^h\nabla_d\f \\ &\quad+2\dot{K}_6\d^{acde}_{fhjk}\nabla_p\f \nabla^f\nabla^p\f \nabla_c\f \nabla^h\f \nabla^j\nabla_d\f\nabla^k\nabla_e\f \\
+  &\quad+K_8\d^{acd}_{efh}\nabla^f\f\nabla^{e}\nabla_c\f \nabla^h\nabla_d\f +(2\dot{K}_9+K_{10})\nabla_b\f \nabla^b\nabla^{a}\f \\
+  &\quad+\nabla^{a}\f (K_9'+\r K_{10}'+2\dot{K}_{10}\nabla^b\f \nabla^c\f \nabla_c\nabla_b\f +K_{10}\nabla^c\nabla_c\f )
+\end{align*}
+
+Now, let's see the dependence of the traceless Ricci tensor $S^{a}_b$ in the expression above. Using \eqref{R-CSR} we have
+\begin{align*}
+  \frac{\nabla_bA^{ab}}{\sqrt{-g}}&=\frac{1}{2}K_8\d^{acd}_{efh}\f_c\f^f\f^m R^{he}_{md}+K_6\d^{acde}_{fhjk}\f_c\f^h\f^m\f^k_e R^{jf}_{md}\\
+  &=\frac{1}{2}2K_8\d^{acd}_{efh}\d^{[h}_{[m}S^{e]}_{d]}\f_c\f^f\f^m +2K_6\d^{acde}_{fhjk}\d^{[j}_{[m}S^{f]}_{d]}\f_c\f^h\f^m\f^k_e\\
+  &=\frac{K_8}{2}\d^{acd}_{efh}\left(\d^h_mS^{e}_d-\d^h_dS^{e}_m\right)\f_c\f^f\f^m+K_6\d^{acde}_{fhjk}\left(\d^j_mS^f_d-\d^j_dS^f_m\right)\f_c\f^h\f^m\f^k_e\\
+  &=\frac{K_8}{2}\left(\underbrace{\d^{acd}_{efh}S^{e}_d\f_c\f^{(f}\f^{h)}}_{=0}-2\d^{ac}_{ef}S^{e}_m\f_c\f^f\f^m\right)+K_6\left(\underbrace{\d^{acde}_{fhjk}S^f_d\f_c\f^{(h}\f^{j)}\f^k_e}_{=0}-\d^{ace}_{fhk}S^f_m\f_c\f^h\f^m\f^k_e\right)\\
+  &=-K_8\d^{ac}_{ef}S^{e}_m\f_c\f^f\f^m-K_6\d^{ace}_{fhk}S^f_m\f_c\f^h\f^m\f^k_e\\
+  &=-2K_8\d^{a}_{[e}\d^{c}_{f]}S^{e}_m\f_c\f^f\f^m-6K_6\d^{a}_{[f}\d^{c}_{h}\d^{e}_{k]}S^f_m\f_c\f^h\f^m\f^k_e
+\end{align*}
+Since both terms have different degree in the second derivative, they must vanish independently, that is 
+\begin{equation}
+  K_6=K_8=0
+\end{equation}
+In summary, if one demands that only curvature couplings occurs through the Weyl tensor, then there is no nonminimal coupling at all, and the second order tensor becomes, in fact, of first order
+
+\begin{equation}
+\begin{split}
+  A^{ab}&=\sqrt{-g}\left\{K_9g^{ab}+K_{10}\nabla^{a}\f\nabla^b\f  \right\}
+\end{split}
+\end{equation}
+with second order divergence given by
+\begin{align}
+   \nabla_b A^{ab}&= \sqrt{-g}\left\{(2\dot{K}_9+K_{10})\nabla_b\f \nabla^b\nabla^{a}\f\right. \\
+  &\quad\left.+\nabla^{a}\f (K_9'+\r K_{10}'+2\dot{K}_{10}\nabla^b\f \nabla^c\f \nabla_c\nabla_b\f +K_{10}\nabla^c\nabla_c\f )\right\}
+\end{align}
+
+
+
+
+
+
+
+
+
+
 
 
 
