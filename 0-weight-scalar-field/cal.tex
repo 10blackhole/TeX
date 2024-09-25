@@ -1,10 +1,10 @@
 \section{Building the equation of motion}
-Let us consider a scalar field with zero conformal weight, that is, under an infinitesimal conformal transformation
+Let us consider a scalar field with zero conformal weight that is, under an infinitesimal conformal transformation
 \begin{equation}
   \d_\omega g_{\m\n }=2\omega g_{\m\n },\qquad \d_\omega\f=0
 \end{equation}
 
-Let us consider the most general second order pseudoscalar constructed from the scalar field $\f$ and its derivatives up to second order, together with the metric tensor and its associates curvature
+Let us consider the most general second-order pseudoscalar constructed from the scalar field $\f$ and its derivatives up to second order, together with the metric tensor and its associates curvature
 \begin{equation}
 	\E =\sqrt{-g}E\left(\f,\nabla_\m \f ,\nabla_\m \nabla_\n \f ,g_{\m\n },R_{\m\n }^{\a\b }\right)=0
 \end{equation}
@@ -88,7 +88,7 @@ we notice that since $\hat{H}^{\alpha\beta}_{\mu\nu}$ is the traceless part of $
   P^\b_\n =P^{\a\b }_{\a\n }=\delta^{[\alpha}_{[\a }\hat{I}^{\beta]}_{\nu]}+J\delta^\alpha_{[\a }\delta^\beta_{\nu]}
 \end{equation}
 
-Since the variation with respect to the Weyl tensor does not contribute so the first trace \eqref{dEdP}, the contribution of the Riemann tensor to $E$ has to be through its traceless part,
+Since the variation with respect to the Weyl tensor does not contribute to the first trace \eqref{dEdP}, the contribution of the Riemann tensor to $E$ has to be through its traceless part,
 \begin{equation}
 	\E =\sqrt{-g}E\left(\f,\nabla_\m \f ,\nabla_\m \nabla_\n \f ,g_{\m\n },C_{\m\n }^{\a\b }\right)=0\,.
 \end{equation}
@@ -129,7 +129,7 @@ and its trace yields
   &=DX^{\frac{D-2}{2}}+(D-2)X^{\frac{D-2}{2}}\\
   &=2(D-1)X^{\frac{D-2}{2}}
 \end{align}
-Pluggin into \eqref{A-condition},
+Pluggin' into \eqref{A-condition},
 \begin{align*}
   A\nabla^\n \f-2A^{\m\n }\nabla_\m \f&=2(D-1)X^{\frac{D-2}{2}}\nabla^\n\f -2X^{\frac{D-2}{2}}g^{\m\n }\nabla_\m \f +(D-2)X^{\frac{D-4}{2}}\nabla^\m\f \nabla^\n\f \nabla_\m\f \\
   &=2(D-1)X^{\frac{D-2}{2}}\nabla^\n\f-2X^{\frac{D-2}{2}}\nabla^\n\f +(D-2)X^{\frac{D-4}{2}}(\nabla\f )^2\nabla^\n\f \\
@@ -142,8 +142,8 @@ Pluggin into \eqref{A-condition},
 %--------------------
 
 
-\section{Building the auxiliar metric}
-We know the conditions that the most general second order equation of motion for the zero conformal weight scalar field must satisfy. They are given by \eqref{conditions}. Now, the question is: how do we construct an auxiliary metric $\tilde{g}_{\m\n }$ such that  $\d_\omega \tilde{g}_{\m\n }=0$?
+\section{Building the auxiliary metric}
+We know the conditions that the most general second-order equation of motion for the zero conformal weight scalar field must satisfy. They are given by \eqref{conditions}. Now, the question is: how do we construct an auxiliary metric $\tilde{g}_{\m\n }$ such that  $\d_\omega \tilde{g}_{\m\n }=0$?
 
 Remember that in the exponential frame for the scalar field, the conformal transformations look like
 \begin{equation}
@@ -161,21 +161,22 @@ transforms as
 \begin{equation}
   \bar{X}=-\frac{1}{2}\bar{g}^{\m\n }\partial_\m \bar{\f }\partial_\n \bar{\f }=-\frac{1}{2}\e^{-2\omega}g^{\m\n }\partial_\m \f\partial_\n \f =\e^{-2\omega}X
 \end{equation}
-Thus, the auxiliary metric defined as
+Thus, the auxiliary metric is defined as
 \begin{equation}
   \tilde{g}_{\m\n }=Xg_{\m\n }=-\frac{1}{2}(\nabla\f )^2g_{\m\n } \quad \implies\quad \d_\omega\tilde{g}_{\m\n }=0
 \end{equation}
 \textit{is conformally invariant}.
 
-Let us consider a pseudoscalar built from the zero wight conformal scalar field and its derivatives up to second order, and the conformally invariant geometry,
+Let us consider a pseudoscalar built from the zero weight conformal scalar field and its derivatives up to second-order and the conformally invariant geometry,
 \begin{equation}
-  \E=\sqrt{-\tilde{g}}E(\f,\tilde{\nabla}_\m\f ,\tilde{\nabla}_\m\nabla_\n \f ,\tilde{g}^{\m\n },\tilde{R}_{\m\n }^{\a\b })
+  \E=\sqrt{-\tilde{g}}E(\f,\tilde{\nabla}_\m\f ,\tilde{\nabla}_\m\tilde{\nabla}_\n \f ,\tilde{g}^{\m\n },\tilde{C}_{\m\n }^{\a\b })
 \end{equation}
+where we used the fact that for zero-weight, the $P^{\m\n }=0$ condition implies that the only dependence on the curvature is through the Weyl tensor, which is conformally invariant.
 %TODO [\rc{Update argument.}]
 
 We notice that $\d_\omega\E=0$. Indeed
 \begin{align*}
-  \d_\omega\E=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}^{\m\n }E\cancel{\d_\omega\tilde{g}_{\m\n }}+\sqrt{-\tilde{g}}&\left(\pdv{E}{\f }\cancel{\d_\omega\f} +\pdv{E}{(\tilde{\nabla}_\m\f )}\d_\omega (\tilde{\nabla}_\m\f )+\pdv{E}{(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )}\d_\omega(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )\right.\\&\left. +\pdv{E}{\tilde{g}^{\m\n }}\cancel{\d_\omega\tilde{g}^{\m\n }}+\tilde{P}^{\m\n }_{\a\b}\cancel{\d_\omega\tilde{R}^{\a\b }_{\m\n }}\right)
+  \d_\omega\E=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}^{\m\n }E\cancel{\d_\omega\tilde{g}_{\m\n }}+\sqrt{-\tilde{g}}&\left(\pdv{E}{\f }\cancel{\d_\omega\f} +\pdv{E}{(\tilde{\nabla}_\m\f )}\d_\omega (\tilde{\nabla}_\m\f )+\pdv{E}{(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )}\d_\omega(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )\right.\\&\left. +\pdv{E}{\tilde{g}^{\m\n }}\cancel{\d_\omega\tilde{g}^{\m\n }}+\tilde{P}^{\m\n }_{\a\b}\cancel{\d_\omega\tilde{C}^{\a\b }_{\m\n }}\right)
 \end{align*}
 but
 \begin{align}
@@ -195,10 +196,10 @@ since $\d_\omega\tilde{\G}^\lambda_{~\m\n }=0$. Therefore,
 \end{align}
 
 
-Since from conformal invariance for zero weight scalar field, the $P^{\m\n }=0$ condition implies that the explicit dependence of the Riemann tensor in the equation of motion is through the Weyl tensor, then,  for a equation of motion built from the conformally invariant geometry we have
-\begin{equation}\label{EE}
-  E=E(\f,\tilde{\nabla}_\m\f ,\tilde{\nabla}_\m\nabla_\n \f ,\tilde{g}^{\m\n },\tilde{C}_{\m\n }^{\a\b })=0
-\end{equation}
+%Since from conformal invariance for zero weight scalar field, the $P^{\m\n }=0$ condition implies that the explicit dependence of the Riemann tensor in the equation of motion is through the Weyl tensor, then,  for a equation of motion built from the conformally invariant geometry we have
+%\begin{equation}\label{EE}
+%  E=E(\f,\tilde{\nabla}_\m\f ,\tilde{\nabla}_\m\nabla_\n \f ,\tilde{g}^{\m\n },\tilde{C}_{\m\n }^{\a\b })=0
+%\end{equation}
 
 
 \section{Fréchet derivative}
@@ -373,6 +374,7 @@ Thus, for $D_\E $ to be self-adjoint, it must be fulfilled that
   D^\dagger _\E (A)=D_\E (A) \Leftrightarrow J^\m =0
 \end{equation}
 and the Helmholtz condition is reduced to
+\begin{tcolorbox}
 \begin{equation}\label{Hemholtz-condition}
 \boxed{  \tilde{\nabla}_\n H^{(\n\m) }=H^\m }
 \end{equation}
@@ -381,16 +383,17 @@ where
   H^\m &:=\left[E^\m_\f -\frac{1}{2}\tr\tilde{E}\tilde{\nabla}^\m\f +\left(E^{\a\b }_\f\tilde{\nabla}_\b \f -\frac{1}{2}\tr \tilde{E}_\f\tilde{\nabla}^\a\f \right)\tilde{\nabla}_\a\tilde{\nabla}^\m\f \right]\\
   H^{\m\n }&:=E^{\m\n }_\f+\left(E^{\m\a }_\f \tilde{\nabla}_\a \f-\frac{1}{2}\tr\tilde{E}_\f\tilde{\nabla}^\m\f \right)\tilde{\nabla}^\n\f 
 \end{align}
+\end{tcolorbox}
 
-Helmholtz conditions implies that a symmetric second rank tensor depending up to second order in the scalar field $\f$ and auxiliar metric $\tilde{g}_{\m\n }$ has a second order divergence. The most general tensor with these properties was characterized by Horndeski \cite{Horndeski:1974wa}. Consequently, $H^{\m\n }$ belongs to the Horndeski family builded for the auxiliar metric $\tilde{g}_{\m\n }$.
+Helmholtz conditions imply that a symmetric second rank tensor depending up to second order in the scalar field $\f$ and auxiliary metric $\tilde{g}_{\m\n }$ has a second order divergence. Horndeski characterized the most general tensor with these properties \cite{Horndeski:1974wa}. Consequently, $H^{\m\n }$ belongs to the Horndeski family built for the auxiliary metric $\tilde{g}_{\m\n }$.
 
-\subsection{Quantities written in the auxiliar frame}
+\subsection{Quantities written in the auxiliary frame}
 As an example, let's consider again the action principle
 \begin{equation}\label{S-auxiliar-frame}
   S[g_{\m\n },\f ]=\int\dd^Dx\sqrt{-g}X^{D/2}
 \end{equation}
 
-Its equation is rewritten in the auxiliar frame as
+Its equation is rewritten in the auxiliary frame as
 \begin{align}
   \E&=\sqrt{-g}E\\
   &=\sqrt{-g}\nabla_\m \left(X^{\frac{D-2}{2}}\nabla^\m \f \right)\\
@@ -469,15 +472,15 @@ which is such that $\nabla_aA^{ab }$ is at most of second-order in the derivativ
 %TODO check possible typos.
 where $K_i $ are arbitrary differentiable functions of $\f$ and $\partial_i\f$ \cite{Horndeski:1974wa}.
 
-Note that the dependece on the Riemann tensor only appears in the first three terms of \eqref{Horndeski} with all indices contracted with the Kronecker delta, then, from its irreducible decomposition
+Note that the dependence on the scalar curvature only appears in the first three terms of \eqref{Horndeski} with all indices contracted with the Kronecker delta, then, from its irreducible decomposition
 \begin{equation}\label{R-CSR}
   R^{ab}_{mn}=C^{ab}_{mn}+2\d^{[a}_{[m}S^{b]}_{n]}+\frac{1}{6}\d^{a}_{[m}\d^b_{n]}R
 \end{equation}
- only the term proportional to the trace of the Ricci tensor survives.
+ only the terms proportional to the trace of the Ricci tensor survive.
  
  Now, using the identities
-\begin{equation}
-{\displaystyle \delta _{\nu _{1}\dots \nu _{s}\,\mu _{s+1}\dots \mu _{p}}^{\mu _{1}\dots \mu _{s}\,\mu _{s+1}\dots \mu _{p}}={\frac {(D-s)!}{(D-p)!}}\delta _{\nu _{1}\dots \nu _{s}}^{\mu _{1}\dots \mu _{s}}}\,,
+ \begin{equation}
+  \d^{\m_1...\m_p}_{\n_1...\n_p}\d^{\n_1}_{\m_1}\cdots \d^{\n_k}_{\m_k}=\frac{(D-p+k)!}{(D-p)!}\d^{\m_{k+1}...\m_p}_{\n_{k+1}...\n_p}
 \end{equation}
 and
 \begin{equation}
@@ -618,7 +621,7 @@ In this way, the divergence of $A^{ab}$ is reduced to
   &\quad+\nabla^{a}\f (K_9'+\r K_{10}'+2\dot{K}_{10}\nabla^b\f \nabla^c\f \nabla_c\nabla_b\f +K_{10}\nabla^c\nabla_c\f )
 \end{align*}
 
-Now, let's see the dependence of the traceless Ricci tensor $S^{a}_b$ in the expression above. Using \eqref{R-CSR} we have
+Let's see the dependence of the traceless Ricci tensor $S^{a}_b$ in the expression above. Using \eqref{R-CSR} we have
 \begin{align*}
   \frac{\nabla_bA^{ab}}{\sqrt{-g}}&=\frac{1}{2}K_8\d^{acd}_{efh}\f_c\f^f\f^m R^{he}_{md}+K_6\d^{acde}_{fhjk}\f_c\f^h\f^m\f^k_e R^{jf}_{md}\\
   &=\frac{1}{2}2K_8\d^{acd}_{efh}\d^{[h}_{[m}S^{e]}_{d]}\f_c\f^f\f^m +2K_6\d^{acde}_{fhjk}\d^{[j}_{[m}S^{f]}_{d]}\f_c\f^h\f^m\f^k_e\\
@@ -627,22 +630,127 @@ Now, let's see the dependence of the traceless Ricci tensor $S^{a}_b$ in the exp
   &=-K_8\d^{ac}_{ef}S^{e}_m\f_c\f^f\f^m-K_6\d^{ace}_{fhk}S^f_m\f_c\f^h\f^m\f^k_e\\
   &=-2K_8\d^{a}_{[e}\d^{c}_{f]}S^{e}_m\f_c\f^f\f^m-6K_6\d^{a}_{[f}\d^{c}_{h}\d^{e}_{k]}S^f_m\f_c\f^h\f^m\f^k_e
 \end{align*}
-Since both terms have different degree in the second derivative, they must vanish independently, that is 
+Since both terms have different degrees in the second derivative, they must vanish independently, that is 
 \begin{equation}
   K_6=K_8=0
 \end{equation}
-In summary, if one demands that only curvature couplings occurs through the Weyl tensor, then there is no nonminimal coupling at all, and the second order tensor becomes, in fact, of first order
+In summary, if one demands that only curvature couplings occur through the Weyl tensor, then there is no nonminimal coupling at all, and the second-order tensor becomes, in fact, of first-order,
 
 \begin{equation}
 \begin{split}
   A^{ab}&=\sqrt{-g}\left\{K_9g^{ab}+K_{10}\nabla^{a}\f\nabla^b\f  \right\}
 \end{split}
 \end{equation}
-with second order divergence given by
+with second-order divergence given by
 \begin{align}
    \nabla_b A^{ab}&= \sqrt{-g}\left\{(2\dot{K}_9+K_{10})\nabla_b\f \nabla^b\nabla^{a}\f\right. \\
   &\quad\left.+\nabla^{a}\f (K_9'+\r K_{10}'+2\dot{K}_{10}\nabla^b\f \nabla^c\f \nabla_c\nabla_b\f +K_{10}\nabla^c\nabla_c\f )\right\}
 \end{align}
+
+Another restriction in the allowed terms is given by the fact that
+\begin{align}
+  \tilde{X}=-\frac{1}{2}\tilde{g}^{\m\n }\tn_\m\f \tn_\n\f =-\frac{1}{2}\frac{1}{X}g^{\m\n }\nabla_\m\f \nabla_\n\f=\frac{1}{X}X=1
+\end{align}
+
+
+In this way, the symmetric second rank tensor depending up to second order in the scalar field $\f$ and auxiliary metric $\tilde{g}^{\m\n}$ such that a second order divergence is given by
+\begin{align}
+  H^{\m\n}=\tilde{K}_9\tilde{g}^{\m\n }+\tilde{K}_{10}\tn^\m\f\tn^\n\f 
+\end{align}
+
+Taking its divergence,
+\begin{align}
+  \nabla_\n H^{(\m\n)}&=\partial_\f\tilde{K}_9\tn^\m\f +\partial_\f\tilde{K}_{10}\tn^\m\f \tn^\n\f \tn_\n\f +\tilde{K}_{10}\tn^\n\tn^\m\f\tn^\n\f +\tilde{K}_{10}\tn^\m\f\tilde{\Box}\f \\
+  &=\partial_\f \tilde{K}_9\tn^\m\f +\tilde{K}_{10}\tilde{\Box\f }\tn^\m\f -2\partial_\f\tilde{K}_{10}\tilde{X}\tn^\m\f -\tilde{K}_{10}\tn^\m\f 
+\end{align}
+but $\tilde{X}=1$, so then
+\begin{align}
+  H^\m = \nabla_\n H^{(\m\n)}&=\partial\f\tilde{K}_9+\tilde{K}_{10}\tilde{\Box}\f\tn^\m\f  -2\partial_\f \tilde{K}_{10}\tn^\m\f \\
+   &=(\partial_\f\tilde{K}_9+\tilde{K}_{10}\Box\f -2\partial_\f \tilde{K}_{10})\tn^\m\f 
+\end{align}
+
+In summary:
+\begin{tcolorbox}
+	\begin{align}
+  H^{\m\n}&=\tilde{K}_9\tilde{g}^{\m\n }+\tilde{K}_{10}\tn^\m\f\tn^\n\f \\
+  H^\m &=(\partial_\f\tilde{K}_9+\tilde{K}_{10}\Box\f -2\partial_\f \tilde{K}_{10})\tn^\m\f \\
+  K_i&=\eval{K_i(\f,\tilde{X})}_{\tilde{X}=1}
+\end{align}
+\end{tcolorbox}
+
+
+
+
+We can decompose $\pdv*{E}{(\tn_\n\tn_\n\f )}$ in its trace and traceless part,
+\begin{align}
+  \tn_\m\tn_\n\f =\TL_{\m\n }+\frac{1}{D}\tilde{g}^{\m\n }\tilde{\Box}\f 
+\end{align}
+where the $\TL_{\m\n }$ is the traceless part,
+\begin{equation}
+  \TL^\m_\n =\tn^\m\tn_\n\f -\frac{1}{D}\d^\m_\n \tilde{\Box}\f 
+\end{equation}
+Therefore, we have
+\begin{align}
+  E^{\m\n }_\f =\pdv{E}{(\tn_\m\tn_\n\f )}=\pdv{E}{(\TL^\a_\b) }\pdv{(\TL^\a_\b )}{(\tn_\m\tn_\n\f )}+\pdv{E}{(\tilde{\Box}\f )}\pdv{(\tilde{\Box}\f )}{(\tn_\m\tn_\n\f )}
+\end{align}
+but
+\begin{align}
+  \TL_{\a\b }&=\tn_\a\tn_\b \f-\frac{1}{D}\tilde{g}_{\a\b }\tilde{\Box}\f \\
+  \implies \TL^\a_\b &=\tn^\a\tn_\b\f -\frac{1}{D}\d^\a_\b\tilde{\Box}\f \\
+  &=\tilde{g}^{\m\a }\tn_\m\tn_\b\f  -\frac{1}{D}\d^\a_\b \tilde{g}^{\m\n }\tn_m\tn_\n\f \\
+  \implies \pdv{(\TL^\a_\b )}{(\tn_\m\tn_\n\f )}&=\tilde{g}^{\m\a }\d^\n_\b -\frac{1}{D}\d^\a_\b \tilde{g}^{\m\n }
+\end{align}
+and
+\begin{equation}
+  \pdv{(\tilde{\Box}\f )}{(\tn_\m\tn_\n\f )}=\pdv{(\tn_\m\tn_\n\f )}\left(\tilde{g}^{\m\n }\tn_\m\tn_\n\f \right)=\tilde{g}^{\m\n }
+\end{equation}
+Therefore
+\begin{align}
+  E^{\m\n }_\f &=\pdv{E}{(\TL^\a_\b )}\left(\tilde{g}^{\m\a }\d^\n_\b -\frac{1}{D}\d^\a_\b \tilde{g}^{\m\n }\right)+\pdv{E}{(\tilde{\Box}\f )}\tilde{g}^{\m\n }\\
+  &=\A ^{\m\n }-\frac{1}{D}\A \tilde{g}^{\m\n }+\pdv{E}{(\tilde{\Box}\f )}\tilde{g}^{\m\n }\\
+  &=\hat{\A }^{\m\n }+\pdv{E}{(\tilde{\Box}\f )}\tilde{g}^{\m\n }
+\end{align}
+where we have defined $\A^{\m\n } :=\pdv{E}{(\TL_{\m\n })}$ and $\hat{\A}$ is its traceless part.
+
+Now, let's decompose the two-rank Helmholtz conditions in its trace and traceless part,
+\begin{align}
+  \tilde{g}_{\m\n }H^{\m\n }&=\tilde{g}_{\m\n }\left[E^{\m\n }_\f+\left(E^{\m\a }_\f \tilde{\nabla}_\a \f-\frac{1}{2}\tr\tilde{E}_\f\tilde{\nabla}^\m\f \right)\tilde{\nabla}^\n\f \right]\\
+  &=\tr \tilde{E}_\f +E^{\a\m }_\f \tn_\a\tn_\m\f -\frac{1}{2}\tr \tilde{E}_\f \tn^\m\f \tn_\m\f \\
+  &=\tr\tilde{E}_\f +E^{\a\m }_\f\tn_\a\f\tn_\m\f +\tr \tilde{E}_\f \tilde{X}\\
+  &=2\tr\tilde{E}_\f +E^{\a\m }_\f\tn_\a\f\tn_\m\f\\
+  &=(2\tilde{g}_{\a\m }+\tn_\a\f\tn_\m\f )E^{\a\m }_\f \\
+  &=(2\tilde{g}_{\a\m }+\tn_\a\f\tn_\m\f )\left(\hat{\A }^{\m\n }+\pdv{E}{(\tilde{\Box}\f )}\tilde{g}^{\m\n }\right)\\
+  &=\cancel{2\tilde{g}_{\a\m }\hat{\A}^{\a\m }}+8\pdv{E}{(\tilde{\Box}\f )}+\hat{\A }^{\a\m }\tn_\a\f\tn_\m\f +\pdv{E}{(\tilde{\Box}\f )}\left(\tn\f \right)^2\\
+  &=\pdv{E}{(\tilde{\Box}\f )}\left(8-2\tilde{X}\right)+\hat{\A}^{\a\m }\tn_\a\f\tn_\m\f \\
+  &=6\pdv{E}{(\tilde{\Box}\f )}+\hat{\A }^{\m\n}\tn_\m\f\tn_\n\f \\
+  &=6\pdv{E}{(\tilde{\Box}\f )}+\A^{\m\n}\tn_\m\f\tn_\n\f-\frac{1}{4}\A (\tn\f )^2\\
+  &=6\pdv{E}{(\tilde{\Box}\f )}+\A^{\m\n}\tn_\m\f\tn_\n\f+\frac{1}{2}\A \tilde{X}\\
+  &=6\pdv{E}{(\tilde{\Box}\f )}+\left(\tn_\m\f\tn_\n\f +\frac{1}{2}\tilde{g}_{\m\n }\right)\pdv{E}{(\TL_{\m\n })}
+\end{align}
+but also
+\begin{align}
+  \tilde{g}_{\m\n }H^{\m\n }&=\tilde{g}_{\m\n }(\tilde{K}_9\tilde{g}^{\m\n }+\tilde{K}_{10}\tn^\m\f\tn^\n\f)\\
+  &=4\tilde{K}_9+\tilde{K}_{10}(\tn\f )^2\\
+  &=4\tilde{K}_9-2\tilde{K}_{10}\tilde{X}\\
+  &=2(2\tilde{K}_9-\tilde{K}_{10})
+\end{align}
+Thus
+\begin{align}
+  6\pdv{E}{(\tilde{\Box}\f )}+\left(\tn_\m\f\tn_\n\f +\frac{1}{2}\tilde{g}_{\m\n }\right)\pdv{E}{(\TL_{\m\n })}&=2(2\tilde{K}_9-\tilde{K}_{10})
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

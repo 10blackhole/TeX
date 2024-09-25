@@ -1,0 +1,837 @@
+%%\documentclass[aps,twoside,a4paper,11pt]{book}
+
+\documentclass[twoside,a4paper,11pt]{book}
+
+\usepackage{etex}
+
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+
+%\usepackage[spanish]{babel}
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+\usepackage{amssymb,amsfonts,amsthm}
+\usepackage{extarrows}
+%\usepackage{lmodern}
+
+\usepackage[british,spanish,es-nosectiondot]{babel} % Español
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} % codificacion Limux, mac?
+
+\usepackage{fancyhdr} %encabezados guais
+\usepackage[nottoc]{tocbibind} %para incluir la bibliografía en el índice
+\usepackage{graphicx}
+\usepackage{graphbox}
+\usepackage{epsfig}\parskip 5pt plus 1pt
+\usepackage{multirow}
+\usepackage{booktabs}  %for nicer tables
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{tikz-cd}
+\usepackage{commath}
+\usepackage{xcolor}
+\usepackage{cancel}
+\usepackage{tikz-feynman}
+
+\usepackage[utf8]{inputenc} %for bibliography
+
+\usepackage{enumerate}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{bbm}
+\usepackage{mathrsfs}
+\usepackage{ytableau}
+%\usepackage[hang,center]{subfigure} 
+\usepackage{subfigure} 
+\usepackage[font=small,labelfont=bf]{caption} 
+%\usepackage{subcaption} 
+\usepackage{comment}
+\usepackage{fancybox}
+\usepackage{braket}
+\usepackage[skins,theorems]{tcolorbox}
+\tcbset{highlight math style={enhanced,
+		colframe=black,colback=white,arc=0pt,boxrule=1pt}}
+
+\newtheorem{theorem}{Claim}
+
+\parskip 5pt plus 1pt
+\usepackage{amsbsy}
+%\usepackage{rotate}
+%\usepackage{axodraw4j}
+%\usepackage{bbm}
+\usepackage{color}
+%\usepackage{easybmat}
+%\usepackage{verbatim}  % this is so we can use \begin{comment}
+
+%%%% Colors $$$$
+\definecolor{dark-gray}{gray}{0.20}
+\definecolor{gray}{gray}{0.30}
+\definecolor{light-gray}{gray}{0.80}
+\definecolor{dark-red}{rgb}{0.7,0,0}
+\definecolor{dark-green}{rgb}{0.1,0.4,0}
+\definecolor{dark-blue}{rgb}{0.3,0.3,0.7}
+\definecolor{light-blue}{rgb}{0.8,0.8,1}
+\definecolor{swamp}{RGB}{240, 199, 197}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+
+%\usepackage[right]{showlabels}
+
+
+
+%\textwidth 15.0cm
+%\oddsidemargin 0.5cm
+%\evensidemargin 0.5cm
+%\topmargin 0.6cm
+
+
+\usepackage{slashed}
+
+
+
+\usepackage[hmargin=3cm,vmargin=3.4cm]{geometry}
+
+% Set equal margins on book style
+%\setlength{\oddsidemargin}{50pt}
+%\setlength{\evensidemargin}{50pt}
+%\setlength{\marginparwidth}{57pt}
+%\setlength{\footskip}{30pt}
+
+\usepackage{tabularx} %para poder hacer tablas con footnotes que funcionen
+\newcommand{\op}{\hspace{1pt}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+
+\definecolor{MyGrey}{rgb}{0,0,0} %defining the color 'MyDarkGreen'
+\definecolor{MyDarkBlue}{rgb}{0.23,0.21,0.69} %defining the color 'MyDarkBlue'
+\definecolor{MyLightBlue}{rgb}{0.22,0.51,0.86}
+\definecolor{MyDarkRed}{rgb}{0.69,0.21,0.23}
+
+%% the hyperref package should be loaded last as it redefines several LaTeX commands
+\usepackage[colorlinks=true,linkcolor=MyDarkRed,citecolor=MyDarkRed,urlcolor=MyLightBlue,bookmarksnumbered=true,bookmarksopen]{hyperref}
+%\usepackage[colorlinks=true,linkcolor=MyGrey,citecolor=MyGrey,urlcolor=MyGrey,bookmarksnumbered=true,bookmarksopen]{hyperref}
+
+
+\usepackage{cite} % The cite package must be loaded after hyperref package
+\usepackage{cleveref}
+\usepackage{float}
+
+%======================================================================
+\usetikzlibrary{mindmap,trees}
+
+%======================================================================
+
+%\usepackage[small,compact]{titlesec}
+
+
+%\usepackage{breakurl}
+
+%% This is to put big numbers at the beginning of each chapter:
+\newcommand\chapterheadstartvskip{\vspace*{-5\baselineskip}}
+\usepackage[times]{quotchap}
+
+%\titleformat{\part}
+  %{\normalfont\scshape}{\thepart}{1em}{}
+
+\def\beq{\begin{equation}}
+\def\eeq{\end{equation}}
+\def\beqa{\begin{eqnarray}}
+\def\eeqa{\end{eqnarray}}
+%\def\tr{{\rm tr \,}}
+%\def\Tr{{\rm Tr \,}}
+
+\def\Om{\Omega}
+\def\om{\omega}
+\def\th{\theta}
+\def\vt{\vartheta}
+\def\vphi{\varphi}
+\def\-{\hphantom{-}}
+\def\ov{\overline}
+\def\s2{\frac{1}{\sqrt2}}
+\def\wh{\widehat}
+\def\wt{\widetilde}
+\def\oh{\frac{1}{2}}
+\def\id{{\bf 1}}
+\def\ido{{\bf 0}}
+\def\IC{\mathbb{C}}
+\def\sig{{\sigma}}
+\def\Sig{{\Sigma}}
+\def\raw{\rightarrow}
+\def\Raw{\Rightarrow}
+\def\CK {{\cal K}}
+\def\CM {{\cal M}}
+\def\CR {{\cal R}}
+\def\CN {{\cal N}}
+\def\CF {{\cal F}}
+\def\CL {{\cal L}}
+\def\CA {{\cal A}}
+\def\CS {{\cal S}}
+\def\CW {{\cal W}}
+\def\CD {{\cal D}}
+\def\CO {{\cal O}}
+\def\CT{{\cal T}}
+\def\w {{\wedge}}
+\def\res {{\text{Res}}}
+\def\mr {{\mathcal R}}
+\def\mi {{\mathcal I}}
+\def\mm {{\mathcal M}}
+\def\IF{\relax{\rm I\kern-.18em F}}
+\def\II{\relax{\rm I\kern-.18em I}}
+\def\IP{\relax{\rm I\kern-.18em P}}
+\def\IC{\relax\hbox{\kern.25em$\inbar\kern-.3em{\rm C}$}}
+\def\IR{\relax{\rm I\kern-.18em R}}
+
+
+%~~~~~~~~~~~~~~~ COMANDOS PROPIOS ALVARO ~~~~~~~~~~~~~~%
+
+\def\bulk{\mathrm{bulk}}
+\def\DBI{\mathrm{DBI}}
+\def\CS{\mathrm{CS}}
+\newcommand{\bmat}{\left(\begin{array}}
+\newcommand{\emat}{\end{array}\right)}
+\def\CH {{\cal H}}
+\def\preal{{\rm Re\,}}
+\def\pim{{\rm Im\,}}
+\def\ds{\displaystyle}
+\def\yzero{\smash{\hbox{$y\kern-4pt\raise1pt\hbox{${}^\circ$}$}}}
+\def\p{\partial}
+\def\a{\alpha}
+\def\b{\beta}
+\def\g{\gamma}
+\def\d{\delta}
+\def\beq{\begin{equation}}
+\def\eeq{\end{equation}}
+\def\beqa{\begin{eqnarray}}
+\def\eeqa{\end{eqnarray}}
+\def\Om{\Omega}
+\def\om{\omega}
+\def\th{\theta}
+\def\vt{\vartheta}
+\def\vphi{\varphi}
+\def\-{\hphantom{-}}
+\def\ov{\overline}
+\def\lraw{\leftrightarrow}
+\def\s2{\frac{1}{\sqrt2}}
+\def\wh{\widehat}
+\def\wt{\widetilde}
+\def\oh{\frac{1}{2}}
+\def\beq{\begin{equation}}
+\def\eeq{\end{equation}}
+\def\beqa{\begin{eqnarray}}
+\def\eeqa{\end{eqnarray}}
+\def\tr{{\rm tr \,}}
+\def\Tr{{\rm Tr \,}}
+\def\diag{{\rm diag \,}}
+\def\IF{\relax{\rm I\kern-.18em F}}
+\def\II{\relax{\rm I\kern-.18em I}}
+\def\IP{\relax{\rm I\kern-.18em P}}
+\def\IC{\relax\hbox{\kern.25em$\inbar\kern-.3em{\rm C}$}}
+\def\IR{\relax{\rm I\kern-.18em R}}
+\def\hm{\relax{n_H}}
+\def\vac{|0 \rangle}
+\def\vm{\relax{n_V}}
+\def\cc{{\mathcal C}}
+\def\ck{{\mathcal K}}
+\def\CK{{\mathcal{K}}}
+\def\ci{{\mathcal I}}
+\def\cj{{\mathcal J}}
+\def\cu{{\mathcal U}}   
+\def\cg{{\mathcal G}}
+\def\cn{{\mathcal N}}
+\def\cam{{\mathcal M}}
+\def\cad{{\mathcal D}}
+\def\cp{{\mathcal P}}
+\def\ct{{\mathcal T}}
+\def\cv{{\mathcal V}}
+\def\cz{{\mathcal Z}}
+\def\ch{{\mathcal H}}
+\def\cf{{\mathcal F}}
+\def\tv{\tilde v}
+\def\Dsl{\,\raise.15ex\hbox{/}\mkern-13.5mu D} %this one can be subscripted
+\def\RR{{\mathbb R}}
+\def\id{{\rm I}}
+\def\tD{{\text D}}
+\def\cw{{\mathcal W}}
+\def\tv{\tilde v}
+\def\RR{{\mathbb R}}
+\def\id{{\rm I}}
+\def\tD{{\text D}}
+\def\Mp{{M_{\text{P}}}}
+\def\ms{{M_{\text{s}}}}
+\def\mkk{{M_{\text{KK}}}}
+\def\mkkt{{M^2_{\text{KK}}}}
+\def\mst{{M^2_{\text{s}}}}
+\def\mpt{{M^2_{\text{P}}}}
+\def\mpf{{M^4_{\text{P}}}}
+\def\cco{{\mathfrak{c}}}
+\def\nco{{\mathfrak{n}}}
+\def\mmod{{M_{\text{mod}}}}
+\def\mmodt{{M^2_{\text{mod}}}}
+\def\mkky{{M^y_{\text{KK}}}}
+\def\mkkx{{M^x_{\text{KK}}}}
+\def\ls{{\ell_s}}
+\def\tk{{\tilde{\kappa}}}
+%\def\cp#1{\relax\ifmmode {\IP\kern-2pt{}_{#1}}\else $\IP\kern-2pt{}_{#1}$\fi}
+\def\LUV{\Lambda_{\text{UV}}}
+\def\LQG{\Lambda_{\text{QG}}}
+\def\LSP{\Lambda_{\text{sp}}}
+
+%my defs
+
+\def\A{{\bf A}}   
+\def\B{{\bf B}}
+\def\ent{{\bf Z}}
+\def\C{{\bf C}}
+\def\ti{\times}
+\def\OR{\Omega {\cal R}}  
+\def\R{{\mathcal R}}
+\def\ca{{\mathcal A}}
+\def\lam{\lambda}
+\def\raw{\rightarrow}
+\def\Raw{\Rightarrow}
+\def\G{\Gamma}
+\def\eps{\epsilon}
+\def\arr{\arrowvert}
+\def\Arr{\Arrowvert}
+\def\M6{\mathcal{M}_6}
+\def\i{\text{i}}
+
+
+%Masses and energy scales
+\def\Mpl{M_{\text{Pl}}}
+\def\Mpd{M_{\text{Pl;}\, d}}
+\def\Mpf{M_{\text{Pl;}\, 4}}
+\def\Mpt{M_{\text{Pl;}\,  10}}
+\def\Mpe{M_{\text{Pl;}\,  11}}
+\def\MKK{m_{\text{KK}}}
+\def\LUV{\Lambda_{\text{UV}}}
+\def\LQG{\Lambda_{\text{QG}}}
+\def\LSP{\Lambda_{\text{sp}}}
+\def\Ns{\mathsf{N}_s}
+\def\Ms{m_s}
+\def\Ntot{N_{\text{tot}}}
+\def\MBH{M_{\text{BH}}}
+\def\phid{\phi_{d}}
+\def\varphid{\varphi_{d}}
+\def\gsd{g_{s,\,d}}
+\def\Mt{m_{\text{tow}}}
+\def\Mti{m_{\text{tow,}\, i}}
+\def\peff{p_{\text {eff }}}
+\def\Mteff{m_{\text {tow, eff }}}
+\def\fdim{2^{\lfloor d/2 \rfloor}}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+
+%~~~~~~~~~~~~~~~ COMANDOS PROPIOS IRENE ~~~~~~~~~~~~~~%
+%\newcommand{\ket}[1]{|#1\rangle}
+%\newcommand{\bra}[1]{\langle#1|}
+%\newcommand{\braket}[2]{\langle#1|#2\rangle}
+\newcommand{\crea}[2]{#1^{\dagger}_{#2}}
+\newcommand{\des}[2]{#1_{#2}}
+\newcommand{\grad}[1]{\vec{\nabla}#1}
+\newcommand{\diver}[1]{\vec{\nabla}\vec{#1}}
+\newcommand{\rotac}[1]{\vec{\nabla}\times#1}
+\newcommand{\Ann}[2]{A_{\left[#1\right.}A_{#2]}}
+\newcommand{\Abb}[2]{A_{\left[\bar{#1}\right.}A_{\bar{#2}]}}
+\newcommand{\Anb}[2]{A_{\left[#1\right.}A_{\bar{#2}]}}
+\newcommand{\Abn}[2]{A_{\left[\bar{#1}\right.}A_{#2]}}
+\newcommand{\Avnn}[2]{A^{\left[#1\right.}A^{#2]}}
+\newcommand{\Avbb}[2]{\bar{A}^{\left[#1\right.}\bar{A}^{#2]}}
+\newcommand{\Avnb}[2]{A^{\left[#1\right.}\bar{A}^{#2]}}
+\newcommand{\Avbn}[2]{\bar{A}^{\left[#1\right.}A^{#2]}}
+%\newcommand{\C}[1]{(\iota^*C_6)_{#1}}
+\newcommand{\Gb}[0]{G_{\bar 1 \bar 2 \bar 3}}
+\newcommand{\Gn}[0]{G_{123}}
+\newcommand{\Sb}[1]{S_{\bar #1 \bar #1}}
+\newcommand{\Sn}[1]{S_{#1 #1}}
+\newcommand{\eref}[1]{(\ref{#1})}
+\newcommand{\sref}[1]{\S\ref{#1}}
+\newcommand{\tref}[1]{Table~\ref{#1}}
+\newcommand{\fref}[1]{Figure \ref{#1}}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+
+\def\RR{\mathbb{R}}
+\def\ZZ{\mathbb{Z}}
+\def\a{\alpha}
+\def\n{\nu}
+\def\b{\beta}
+%\def\c{\chi}
+\def\d{\delta}
+\def\f{\phi}
+\def\g{\gamma}
+\def\h{\eta}
+\def\k{\kappa}
+\def\l{\lambda}
+\def\m{\mu}
+\def\th{\theta}
+%\def\p{\pi}
+\def\r{\rho}
+\def\s{\sigma}
+\def\t{\tau}
+\def\w{\omega}
+\def\y{\psi}
+\def\x{\xi}
+\def\z{\zeta}
+\def\G{\Gamma}
+\def\D{\Delta}
+\def\Th{\Theta}
+\def\L{\Lambda}
+\def\Lam{{\Lambda}}
+\def\X{\Xi}
+\def\P{\Pi}
+\def\S{\Sigma}
+\def\U{\Upsilon}
+\def\F{\Phi}
+\def\Y{\Psi}
+\def\W{\Omega}
+\def\beq{\begin{equation}}
+\def\enq{\end{equation}}
+%\def\ba{\bar{\alpha}}
+\def\bb{\bar{\beta}}
+%\def\bc{\bar{\chi}}
+\def\bd{\bar{\delta}}
+%\def\be{\bar{\varepsilon}}
+%\def\bf{\bar{\phi}}
+%\def\bg{\bar{\gamma}}
+\def\bh{\bar{\eta}}
+%\def\bk{\bar{\kappa}}
+%\def\bl{\bar{\lambda}}
+\def\bm{\bar{\mu}}
+\def\bn{\bar{\nu}}
+%\def\bp{\bar{\pi}}
+\def\br{\bar{\rho}}
+\def\bs{\bar{\sigma}}
+%\def\bt{\bar{\tau}}
+\def\bw{\bar{\omega}}
+%\def\bx{\bar{\xi}}
+%\def\by{\bar{\psi}}
+\def\bz{\bar{\zeta}}
+\def\bD{\bar{\Delta}}
+\def\bF{\bar{\Phi}}
+\def\bG{\bar{\Gamma}}
+%\def\bL{\bar{\Lambda}}
+%\def\bP{\bar{\Pi}}
+\def\bF{\bar{\Phi}}
+%\def\bS{\bar{\Sigma}}
+\def\bI{\bar{\Ipsilon}}
+%\def\bW{\bar{\Omega}}
+%\def\bX{\bar{\Xi}}
+\def\bY{\bar{\Psi}}
+\def\ii{\\\indent}%Deja una inea iademas hace sangria (para textos)
+\def\iii{\\\\\indent}%lo mismo pero con dos lineas
+\def\dg{^\dagger}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+% Macros from the Bivio-draft
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%1. FLORITURAS
+\newcommand{\vs}{\vspace{4mm}}
+\newcommand{\raya}{\hrule width \textwidth}
+%\def\erf[#1]{(\ref{#1})} % For references to formulas
+\newcommand{\erf}[1]{(\ref{#1})}
+
+
+%\makeatletter
+%\setlength{\@fptop}{0pt}
+%\makeatother
+
+
+%2. MATHEMATICS
+%
+%  2.1. Fonts
+\newcommand{\cA}{{\cal A}}  \newcommand{\cB}{{\cal B}}
+\newcommand{\cC}{{\cal C}}  \newcommand{\cD}{{\cal D}}
+\newcommand{\cE}{{\cal E}}  \newcommand{\cF}{{\cal F}}
+\newcommand{\cG}{{\cal G}}  \newcommand{\cH}{{\cal H}}
+\newcommand{\cI}{{\cal I}}  \newcommand{\cJ}{{\cal J}}
+\newcommand{\cK}{{\cal K}}  \newcommand{\cL}{{\cal L}}
+\newcommand{\cM}{{\cal M}}  \newcommand{\cN}{{\cal N}}
+\newcommand{\cO}{{\cal O}}  \newcommand{\cP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}  \newcommand{\cR}{{\cal R}}
+\newcommand{\cS}{{\cal S}}  \newcommand{\cT}{{\cal T}}
+\newcommand{\cU}{{\cal U}}  \newcommand{\cV}{{\cal V}}
+\newcommand{\cW}{{\cal W}}  \newcommand{\cX}{{\cal X}}
+\newcommand{\cY}{{\cal Y}}  \newcommand{\cZ}{{\cal Z}}
+
+\newcommand{\bbA}{{\mathbb A}}  \newcommand{\bbB}{{\mathbb B}}
+\newcommand{\bbC}{{\mathbb C}}  \newcommand{\bbD}{{\mathbb D}}
+\newcommand{\bbE}{{\mathbb E}}  \newcommand{\bbF}{{\mathbb F}}
+\newcommand{\bbG}{{\mathbb G}}  \newcommand{\bbH}{{\mathbb H}}
+\newcommand{\bbI}{{\mathbb I}}  \newcommand{\bbJ}{{\mathbb J}}
+\newcommand{\bbK}{{\mathbb K}}  \newcommand{\bbL}{{\mathbb L}}
+\newcommand{\bbM}{{\mathbb M}}  \newcommand{\bbN}{{\mathbb N}}
+\newcommand{\bbO}{{\mathbb O}}  \newcommand{\bbP}{{\mathbb P}}
+\newcommand{\bbQ}{{\mathbb Q}}  \newcommand{\bbR}{{\mathbb R}}
+\newcommand{\bbS}{{\mathbb S}}  \newcommand{\bbT}{{\mathbb T}}
+\newcommand{\bbU}{{\mathbb U}}  \newcommand{\bbV}{{\mathbb V}}
+\newcommand{\bbW}{{\mathbb W}}  \newcommand{\bbX}{{\mathbb X}}
+\newcommand{\bbY}{{\mathbb Y}}  \newcommand{\bbZ}{{\mathbb Z}}
+\newcommand{\bbRP}{{\mathbb RP}}
+
+\newcommand{\bA}{{\mathbf A}}
+\newcommand{\bB}{{\mathbf B}}  \newcommand{\bC}{{\mathbf C}}
+\newcommand{\bE}{{\mathbf E}}  \newcommand{\bH}{{\mathbf H}}
+\newcommand{\bK}{{\mathbf K}}  \newcommand{\bL}{{\mathbf L}}
+\newcommand{\bM}{{\mathbf M}}  \newcommand{\bN}{{\mathbf N}}
+\newcommand{\bP}{{\mathbf P}}  \newcommand{\bQ}{{\mathbf Q}}
+\newcommand{\bR}{{\mathbf R}}  \newcommand{\bS}{{\mathbf S}}
+\newcommand{\bT}{{\mathbf T}}  \newcommand{\bU}{{\mathbf U}}
+\newcommand{\bV}{{\mathbf V}}  \newcommand{\bW}{{\mathbf W}}
+\newcommand{\bX}{{\mathbf X}}  \newcommand{\bZ}{{\mathbf Z}}
+
+\newcommand{\bg}{{\mathbf g}}  \newcommand{\by}{{\mathbf y}}
+\newcommand{\bk}{{\mathbf k}}  \newcommand{\bq}{{\mathbf q}}
+\newcommand{\bx}{{\mathbf x}}  \newcommand{\bxi}{{\mathbf \xi}}
+\newcommand{\bRP}{{\mathbf RP}} 
+\newcommand{\msm}[1]{\mbox{\small$#1$}}
+
+\def\bsk{\boldsymbol{k}} \def\bsp{\boldsymbol{p}}
+\def\bsxi{\boldsymbol{\xi}}
+
+\def\gtka{{\mathfrak a}} \def\gtkb{{\mathfrak b}}
+\def\gtkd{{\mathfrak d}} \def\gtkg{{\mathfrak g}}
+\def\gtkh{{\mathfrak h}} \def\gtks{{\mathfrak s}}
+\def\wn{{\mathfrak{w}}}  \def\qn{{\mathfrak{q}}}
+
+\def\gtkG{{\mathfrak G}} \def\gtkH{{\mathfrak H}}
+%
+%  2.2. New Commands
+\newcommand{\be}{\begin{equation}} \newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}} \newcommand{\eea}{\end{eqnarray}}
+\newcommand{\beann}{\begin{eqnarray*}}  \newcommand{\eeann}{\end{eqnarray*}}
+\newcommand{\bfig}{\begin{figure}} \newcommand{\efig}{\end{figure}}
+\newcommand{\ba}{\begin{array}} \newcommand{\ea}{\end{array}}
+\newcommand{\bcen}{\begin{center}} \newcommand{\ecen}{\end{center}}
+\newcommand{\btab}{\begin{tabular}} \newcommand{\etab}{\end{tabular}}
+\newcommand{\nn}{\nonumber}
+\newcommand{\matt}{\left ( \begin{array}{ccc}}
+\newcommand{\ematt}{\end{array} \right )} \newcommand{\matf}{\left
+(\begin{array}{cccc}}
+    \newcommand{\ematf}{\end{array} \right )} \newcommand{\vect}{\left (
+\begin{array}{c}}
+    \newcommand{\evect}{\end{array} \right )} %\newcommand{\Tr} {\rm Tr}  
+    \newcommand{\cotanh}{{\rm cotanh}} \def\beqn{\begin{eqnarray}}
+ \def\eeqn{\end{eqnarray}} \def\la{\lambda} \def\ga{\gamma}
+%\def\om{\omega}   \def\al{\alpha} \def\d{\partial} \def\Tr{ {\rm Tr} }
+
+%\newcommand{\bb}{\mathsf{b}}
+\newcommand{\ww}{\mathsf{w}}
+\newcommand{\IX}{{\bf X}}
+\newcommand{\IS}{{\bf S}}
+\def\NN{{\cal N}}
+\def\IC{{\bf C}}
+\def\IS{{\bf S}}
+\def\IR{{\bf R}}
+\def\IZ{{\mathbb{Z}}}
+\def\IX{{\bf X}}
+\def\IY{{\bf Y}}
+\def\IT{{\bf T}}
+\def\IP{\bf P}
+\def\tr{{\rm tr \,}}
+\def\ov{\overline}
+
+
+%
+%  2.3. Operatorname
+\def\U{\operatorname{U}}         \def\SU{\operatorname{SU}}
+\def\O{\operatorname{O}}         \def\SO{\operatorname{SO}}
+\def\Sp{\operatorname{Sp}}       \def\SL{\operatorname{SL}}
+\def\tr{\operatorname{tr\:}}     \def\Tr{\operatorname{Tr\,}}
+\def\rank{\operatorname{rank}}   \def\dim{\operatorname{dim}}
+\def\deg{\operatorname{deg}}     \def\diag{\operatorname{diag}}
+\def\Res{\operatorname{Res}}     \def\sign{\operatorname{sign}}
+\renewcommand{\Re}{\mathop{\rm Re}}   \renewcommand{\Im}{\mathop{\rm Im}}
+%
+%  2.4. Miscelanea
+%\newcommand{\bra}[1]{\langle #1|}
+%\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\vev}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\then}{\Rightarrow}
+\newcommand{\dd}{{\rm d}}
+\newcommand{\e}{{\rm e}}
+\newcommand{\adsfive}{$\mathop{\rm AdS_5\times{}S^5}$\,}
+%
+%  2.5. SUSY
+\def\None{{\cal N}\!=\!1} \def\Ntwo{{\cal N}\!=\!2} \def\Nfour{{\cal N}\!=\!4}
+\newcommand{\wholesp}{\int\!\dd^4x\,\dd^2\theta\,\dd^2\overline\theta~}
+\newcommand{\chiralsp}{\int\!\dd^4x\,\dd^2\theta~}
+\newcommand{\antichsp}{\int\!\dd^4x\,\dd^2\overline\theta~}
+%
+%  2.6. Tildes and Hats
+\newcommand{\wtil}[1]{\widetilde{#1\,}}
+\def\Ht{\widetilde{H}} \def\Nt{\widetilde{N}} \def\Qt{\widetilde{Q}}
+\def\Rt{\widetilde{R}} \def\St{\widetilde{S}} \def\Ut{\widetilde{U}}
+\def\Vt{\widetilde{V}} \def\Wt{\widetilde{W}} \def\ft{{\widetilde{f}}}
+\def\st{\widetilde{s}} \def\wtt{\widetilde{t\,}} \def\wtw{\widetilde{w\,}}
+
+\def\hn{{\widehat N}} \def\hq{{\widehat Q}} \def\hp{{\widehat \Phi}}
+\def\hs{{\widehat S}} \def\ha{{\widehat A}} \def\hx{{\widehat X}}
+\def\hy{{\widehat Y}} \def\hf{{\widehat f}} \def\hb{{\widehat B}}
+%
+%3. NEW THEOREMS AND THEIR COMMANDS
+%
+\newtheorem{Proposition}{Proposition}[section]
+\newtheorem{Definition}{Definition}[section]
+\newtheorem{Theorem}{Theorem}[section]
+\newtheorem{Lemma}{Lemma}[section]
+\newtheorem{Corrolary}{Corrolary}[section]
+
+%\newcommand{\bp}{\begin{Proposition}}   \newcommand{\ep}{\end{Proposition}}
+\newcommand{\bt}{\begin{Theorem}}   \newcommand{\et}{\end{Theorem}}
+\newcommand{\bl}{\begin{Lemma}}     \newcommand{\el}{\end{Lemma}}
+\newcommand{\bc}{\begin{Corrolary}} \newcommand{\ec}{\end{Corrolary}}
+
+
+
+%======================================================================
+\newcommand{\drawsquare}[2]{\hbox{%
+\rule{#2pt}{#1pt}\hskip-#2pt%  left vertical
+\rule{#1pt}{#2pt}\hskip-#1pt%  lower horizontal
+\rule[#1pt]{#1pt}{#2pt}}\rule[#1pt]{#2pt}{#2pt}\hskip-#2pt%  upper horizontal
+\rule{#2pt}{#1pt}}% right vertical
+
+
+\newcommand{\fund}{~\raisebox{-.5pt}{\drawsquare{6.5}{0.4}}~}
+\newcommand{\antifund}{~\overline{\raisebox{-.5pt}{\drawsquare{6.5}{0.4}}}~}
+
+\newcommand{\symm}{~\raisebox{-.5pt}{\drawsquare{6.5}{0.4}}\hskip-0.4pt%
+        \raisebox{-.5pt}{\drawsquare{6.5}{0.4}}~}%  symmetric second rank
+
+\newcommand{\asymm}{~\raisebox{-3.5pt}{\drawsquare{6.5}{0.4}}\hskip-6.9pt%
+        \raisebox{3pt}{\drawsquare{6.5}{0.4}}~}%  antisymmetric second rank
+
+\newcommand{\antiasymm}{~\overline{\raisebox{-3.5pt}{\drawsquare{6.5}{0.4}}\hskip-6.9pt%
+        \raisebox{3pt}{\drawsquare{6.5}{0.4}}}~}%  antisymmetric second rank
+
+\newcommand{\antisymm}{~\overline{\raisebox{-.5pt}{\drawsquare{6.5}{0.4}}\hskip-0.4pt%
+        \raisebox{-.5pt}{\drawsquare{6.5}{0.4}}}~}%  symmetric second rank
+%======================================================================
+
+%Comments
+\newcommand{\AC}[1]{{\color{red}{\textbf{AC: }#1}}}
+
+
+%=====================VARIOS=============================================
+\graphicspath{{./Introduction/}{./1-Axion/}{./2-Instanton/}{./3-BFT/}{./4-AdS/}}
+%\DeclareRobustCommand*\cal{\@fontswitch\relax\mathcal}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% useful for draft version
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{dsfont}
+%\usepackage[notref,notcite]{showkeys}
+
+%%\usepackage{refcheck}
+%%\usepackage{showlabels}
+%%\showlabels{cite}
+%%\showlabels{ref}
+\newcommand{\remark}[1] { {\color{red} {\bf XXX} {#1} \bf{XXX}} }
+
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}{}}
+%\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}}
+%\renewcommand{\thesubsubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+
+%\renewcommand{\tocsection}[3]{\indentlabel{\ignorespaces#1 #2\quad}#3}
+%\renewcommand{\tocsubsection}[3]{\indentlabel{\ignorespaces#1 #2\quad}#3}
+%\renewcommand{\tocchapter}[3]{\indentlabel{\ignorespaces#1 #2\quad}#3}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Titulo}
+\author{Alberto Castellano Mora}
+\makeindex
+
+
+\begin{document}
+
+\pagenumbering{roman} % para comenzar la numeracion de paginas en numeros romanos
+\pagestyle{headings}
+\pagestyle{empty}
+
+\newcommand{\HRule}{\rule{\linewidth}{1mm}}
+\setlength{\parindent}{1cm}
+\setlength{\parskip}{1mm}
+\noindent
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\include{Chapters/0-portada/portada}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\setcounter{page}{1}  %%% DEPENDE DE VERSION
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+%\fancyhead[LE] {\scshape\nouppercase\leftmark}
+\fancyhead[LE] {\itshape\nouppercase\leftmark}
+\fancyhead[RO] {\itshape\nouppercase\rightmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+%\renewcommand{\footrulewidth}{0pt}
+%\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+%\renewcommand{\thesection}{\Roman{section}}
+\thispagestyle{empty}
+
+\fancypagestyle{simple}{
+  \fancyhead{}
+  \fancyfoot[C]{\thepage}
+ \renewcommand{\headrulewidth}{0.0pt} 
+}
+
+\input{TitlePage.tex}
+
+%\include{varios.tex}
+\input{varios.tex}
+%\include{acknowlegments.tex}
+\input{acknowledgments.tex}
+%\include{Abstract.tex}
+\input{Abstract.tex}
+
+\newpage
+
+\selectlanguage{british}
+\thispagestyle{empty}
+%\pagenumbering{roman}
+{\hypersetup{hidelinks}
+\tableofcontents}
+\clearpage
+\thispagestyle{empty}
+\cleardoublepage
+\pagenumbering{arabic}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+
+\part{\scshape \textcolor{MyDarkRed}{Preliminaries}} 
+\label{partI}
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introduction}	\input{Introduction.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter{Background Material} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%\section{Motivation}
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+\chapter{From String Theory to the Swampland Program} \label{ch:reviewstringtheory} \input{StringCompactifications.tex}
+
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%\section{$\mathcal{N} = 1$ gauge dynamics}  \input{Introduction/GaugeDynamics}%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\part{\scshape \textcolor{MyDarkRed}{The Quantum Gravity Scale}}\label{part:QGscale}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{The Species Scale as the Quantum Gravity cut-off}\label{ch:SpeciesIntro} \input{SpeciesScaleIntro.tex}
+%\chapter{Gravity in the Presence of a Large Number of Species} \label{ch:SpeciesIntro} \input{SpeciesScaleIntro.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter{The Species Scale as the Quantum Gravity cut-off}\label{ch:GravEFT} \input{GravEFT.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\part{\scshape  \textcolor{MyDarkRed}{String Theory Tests and Applications}}
+\label{part:StringTheoryTests}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Higher-curvature Corrections in String Theory}\label{ch:Higherdimops} \input{Higherdimops.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{The Emergence Proposal}\label{ch:Emergence} \input{Emergence.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\part{\scshape  \textcolor{MyDarkRed}{Universal constraints on the Species Scale}} 
+\label{part:pattern}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Bounds on Asymptotic Decay Rates}\label{ch:bounds} \input{Bounds.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{A Universal Pattern at Infinite Distance}\label{ch:pattern} \input{Pattern.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\part{\scshape  \textcolor{MyDarkRed}{Conclusions}} 
+\label{part:Conclussions}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Final Comments} \label{ch:Conclusions}\input{Conclusions.tex} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\selectlanguage{british}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\part{\scshape  \textcolor{MyDarkRed}{Appendices}} \label{part:appendices}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\appendix  
+\renewcommand{\thesection}{\Alph{chapter}.\arabic{section}}
+%\renewcommand{\thesubsection}{A.\arabic{subsection}}
+\input{appendices.tex}
+\newpage
+
+\bibliographystyle{JHEP}
+%\bibliographystyle{JHEP}
+%\inputencoding{latin2}
+\bibliography{alberbib}
+\inputencoding{utf8}
+
+
+\newpage
+%\thispagestyle{empty}
+%\phantom{lala}
+%\color{white} aaaa
+%\newpage
+\thispagestyle{empty}
+\phantom{lala}
+\end{document}
+
+

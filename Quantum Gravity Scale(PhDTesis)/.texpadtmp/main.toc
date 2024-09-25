@@ -1,0 +1,151 @@
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {british}{}\relax 
+\contentsline {part}{I\hspace {1em}\scshape \textcolor {MyDarkRed}{Preliminaries}}{1}{part.1}%
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}%
+\babel@toc {spanish}{}\relax 
+\babel@toc {british}{}\relax 
+\contentsline {chapter}{\numberline {2}From String Theory to the Swampland Program}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1{}}Basics of string theory}{11}{section.2.1}%
+\contentsline {section}{\numberline {2.2{}}Maximally supersymmetric theories}{16}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2{}.1}11d M-theory}{16}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2{}.2}Type II supergravity in 10d}{18}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2{}.3}Maximal supergravity in 9d}{21}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2{}.4}Maximal supergravity in 8d}{22}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3{}}Theories with reduced supersymmetry}{24}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3{}.1}Compactifications preserving 16 supercharges}{24}{subsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3{}.1.1}M-theory on a $K3$ surface}{24}{subsubsection.2.3.1.1}%
+\contentsline {subsection}{\numberline {2.3{}.2}Compactifications preserving 8 supercharges}{26}{subsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3{}.2.1}4d $\mathcal {N}=2$ theories}{29}{subsubsection.2.3.2.1}%
+\contentsline {subsubsection}{\numberline {2.3{}.2.2}5d $\mathcal {N}=1$ theories}{32}{subsubsection.2.3.2.2}%
+\contentsline {section}{\numberline {2.4{}}String dualities}{33}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4{}.1}Duality symmetries with higher supersymmetry}{34}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4{}.2}Duality symmetries with lower supersymmetry}{39}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5{}}The Swampland program}{44}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5{}.1}The Weak Gravity Conjecture}{46}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5{}.2}The Distance Conjecture}{48}{subsection.2.5.2}%
+\contentsline {part}{II\hspace {1em}\scshape \textcolor {MyDarkRed}{The Quantum Gravity Scale}}{51}{part.2}%
+\contentsline {chapter}{\numberline {3}The Species Scale as the Quantum Gravity cut-off}{53}{chapter.3}%
+\contentsline {section}{\numberline {3.1{}}General relativity as an effective field theory}{55}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1{}.1}Non-renormalizable field theories}{55}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1{}.2}The gravitational EFT}{58}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2{}}Gravity in the presence of a large number of species}{60}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2{}.1}Non-perturbative analysis}{60}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2{}.2}Perturbative analysis}{62}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3{}}The species scale in quantum gravity}{64}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3{}.1}Why you get old}{65}{subsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3{}.1.1}Species scale from Kaluza-Klein towers}{65}{subsubsection.3.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.3{}.1.2}Species scale from string towers}{69}{subsubsection.3.3.1.2}%
+\contentsline {subsection}{\numberline {3.3{}.2}An algorithmic procedure in the presence of multiple towers}{72}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4{}}Summary}{75}{section.3.4}%
+\contentsline {part}{III\hspace {1em}\scshape \textcolor {MyDarkRed}{String Theory Tests and Applications}}{77}{part.3}%
+\contentsline {chapter}{\numberline {4}Higher-curvature Corrections in String Theory}{79}{chapter.4}%
+\contentsline {section}{\numberline {4.1{}}String theory examples in higher dimensions}{81}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1{}.1} 10d Type IIB string theory}{81}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1{}.2} 10d Type IIA string theory}{85}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1{}.3}M-theory on $\mathbf {T}^2$}{86}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1{}.4}M-theory on $\mathbf {T}^3$}{89}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2{}}String theory examples in lower dimensions}{95}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2{}.1}The $\mathcal {R}^2$--\,operator}{97}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2{}.2}The irrelevant operators}{98}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2{}.3}General lessons}{101}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3{}}Summary}{105}{section.4.3}%
+\contentsline {chapter}{\numberline {5}The Emergence Proposal}{107}{chapter.5}%
+\contentsline {section}{\numberline {5.1{}}Emergence in quantum field theory}{108}{section.5.1}%
+\contentsline {section}{\numberline {5.2{}}Emergence in quantum gravity}{111}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2{}.1}Emergence of the graviton and the species cut-off}{113}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2{}.2}Relation to the Swampland conjectures}{114}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2{}.3}Classical metrics from quantum effects}{116}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3{}}Kinetic terms from one-loop corrections}{117}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3{}.1}Emergence of moduli metrics}{117}{subsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3{}.1.1}Self-energy of a modulus field}{117}{subsubsection.5.3.1.1}%
+\contentsline {subsubsection}{\numberline {5.3{}.1.2}Generating moduli metrics}{121}{subsubsection.5.3.1.2}%
+\contentsline {subsection}{\numberline {5.3{}.2}Emergence of $\mathsf {U(1)}$ gauge kinetic terms}{122}{subsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3{}.2.1}Self-energy of a gauge 1-form}{122}{subsubsection.5.3.2.1}%
+\contentsline {subsubsection}{\numberline {5.3{}.2.2}Generating gauge kinetic terms}{125}{subsubsection.5.3.2.2}%
+\contentsline {subsection}{\numberline {5.3{}.3}Emergence of fermion kinetic terms}{127}{subsection.5.3.3}%
+\contentsline {subsubsection}{\numberline {5.3{}.3.1}Self-energy of a Weyl fermion}{129}{subsubsection.5.3.3.1}%
+\contentsline {subsubsection}{\numberline {5.3{}.3.2}Generating fermion kinetic terms in 4d }{130}{subsubsection.5.3.3.2}%
+\contentsline {subsubsection}{\numberline {5.3{}.3.3}A Weak-Gravity-like conjecture for Yukawa couplings}{131}{subsubsection.5.3.3.3}%
+\contentsline {section}{\numberline {5.4{}}Emergence in string theory}{133}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4{}.1}Emergence in 4d $\mathcal {N}=2$ theories}{133}{subsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4{}.1.1}Preliminary remarks}{133}{subsubsection.5.4.1.1}%
+\contentsline {subsubsection}{\numberline {5.4{}.1.2}Emergence of the gauge kinetic function}{135}{subsubsection.5.4.1.2}%
+\contentsline {subsubsection}{\numberline {5.4{}.1.3}Other possible infinite distance limits in 4d}{139}{subsubsection.5.4.1.3}%
+\contentsline {subsubsection}{\numberline {5.4{}.1.4}Emergence in the hypermultiplet sector}{142}{subsubsection.5.4.1.4}%
+\contentsline {subsection}{\numberline {5.4{}.2}Emergence in 6d $\mathcal {N}=(1,0)$ theories}{144}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4{}.3}Emergence in 7d $\mathcal {N}=1$ theories}{146}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5{}}Emergence of higher-dimensional terms}{149}{section.5.5}%
+\contentsline {section}{\numberline {5.6{}}Summary}{152}{section.5.6}%
+\contentsline {part}{IV\hspace {1em}\scshape \textcolor {MyDarkRed}{Universal constraints on the Species Scale}}{155}{part.4}%
+\contentsline {chapter}{\numberline {6}Bounds on Asymptotic Decay Rates}{157}{chapter.6}%
+\contentsline {section}{\numberline {6.1{}}A convex hull condition for the species scale}{158}{section.6.1}%
+\contentsline {section}{\numberline {6.2{}}Consistency of the bound under dimensional reduction}{162}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2{}.1}Field theoretic considerations}{163}{subsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2{}.1.1}Testing the CHC in $\mathbf {S}^1$--\,compactifications}{164}{subsubsection.6.2.1.1}%
+\contentsline {subsection}{\numberline {6.2{}.2}Beyond field theory}{168}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3{}}String theory evidence}{170}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3{}.1}M-theory on $\mathbf {T}^2$}{171}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3{}.2}M-theory on $\mathbf {T}^3$}{178}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3{}.3}M-theory on $\mathbf {T}^k$}{183}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4{}}Summary}{185}{section.6.4}%
+\contentsline {chapter}{\numberline {7}A Universal Pattern at Infinite Distance}{187}{chapter.7}%
+\contentsline {section}{\numberline {7.1{}}The pattern and its consequences}{188}{section.7.1}%
+\contentsline {section}{\numberline {7.2{}}Deriving the pattern in maximal supergravity}{193}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2{}.1}Summary of underlying key features}{193}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2{}.2}Maximal supergravity in 9d}{197}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2{}.3}Maximal supergravity in 8d}{199}{subsection.7.2.3}%
+\contentsline {subsection}{\numberline {7.2{}.4}Maximal supergravity in $d<8$}{201}{subsection.7.2.4}%
+\contentsline {subsubsection}{\numberline {7.2{}.4.1}A sketch of the proof}{201}{subsubsection.7.2.4.1}%
+\contentsline {subsubsection}{\numberline {7.2{}.4.2}Relevant computations}{204}{subsubsection.7.2.4.2}%
+\contentsline {section}{\numberline {7.3{}}Examples in set-ups with 16 supercharges}{206}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3{}.1}Heterotic string theory in 9d}{206}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3{}.2}M-theory in 7d}{209}{subsection.7.3.2}%
+\contentsline {section}{\numberline {7.4{}}Examples in 4d $\mathcal {N}=2$ EFTs}{213}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4{}.1}The vector multiplet moduli space}{214}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4{}.2}Type IV limits: M-theory circle decompactification}{215}{subsection.7.4.2}%
+\contentsline {subsubsection}{\numberline {7.4{}.2.1}Example 1: the Quintic}{215}{subsubsection.7.4.2.1}%
+\contentsline {subsubsection}{\numberline {7.4{}.2.2}General story}{217}{subsubsection.7.4.2.2}%
+\contentsline {subsection}{\numberline {7.4{}.3}Type III limits: Partial decompactification}{218}{subsection.7.4.3}%
+\contentsline {subsubsection}{\numberline {7.4{}.3.1}Example 2: Type IIA on $\mathbb {P}^{1,1,1,6,9} [18]$}{218}{subsubsection.7.4.3.1}%
+\contentsline {subsubsection}{\numberline {7.4{}.3.2}General story}{222}{subsubsection.7.4.3.2}%
+\contentsline {subsection}{\numberline {7.4{}.4}Type II limits: Emergent string limits}{225}{subsection.7.4.4}%
+\contentsline {subsubsection}{\numberline {7.4{}.4.1}Example 3: Type IIA on $\mathbb {P}^{1,1,2,2,6} [12]$}{225}{subsubsection.7.4.4.1}%
+\contentsline {subsubsection}{\numberline {7.4{}.4.2}General story}{231}{subsubsection.7.4.4.2}%
+\contentsline {subsection}{\numberline {7.4{}.5}Comments about the complex structure moduli space of Type IIB}{233}{subsection.7.4.5}%
+\contentsline {subsection}{\numberline {7.4{}.6}The hypermultiplet moduli space}{235}{subsection.7.4.6}%
+\contentsline {subsubsection}{\numberline {7.4{}.6.1}Classical infinite distance points}{235}{subsubsection.7.4.6.1}%
+\contentsline {subsubsection}{\numberline {7.4{}.6.2}Non-perturbative corrections}{238}{subsubsection.7.4.6.2}%
+\contentsline {subsubsection}{\numberline {7.4{}.6.3}Intertwining the vector and hypermultiplet sectors}{238}{subsubsection.7.4.6.3}%
+\contentsline {section}{\numberline {7.5{}}On the quest for a bottom-up rationale}{239}{section.7.5}%
+\contentsline {section}{\numberline {7.6{}}Summary}{244}{section.7.6}%
+\contentsline {part}{V\hspace {1em}\scshape \textcolor {MyDarkRed}{Conclusions}}{247}{part.5}%
+\contentsline {chapter}{\numberline {8}Final Comments}{249}{chapter.8}%
+\babel@toc {spanish}{}\relax 
+\babel@toc {british}{}\relax 
+\contentsline {part}{VI\hspace {1em}\scshape \textcolor {MyDarkRed}{Appendices}}{257}{part.6}%
+\contentsline {chapter}{\numberline {A}Conventions}{259}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {B}Relevant Automorphic Forms}{263}{appendix.Alph2}%
+\contentsline {section}{\numberline {B.1}Mathematical preliminaries}{263}{section.Alph2.1}%
+\contentsline {section}{\numberline {B.2}$\mathsf {SL(2, \mathbb {Z})}$ Maas waveforms}{263}{section.Alph2.2}%
+\contentsline {section}{\numberline {B.3}$\mathsf {SL(3, \mathbb {Z})}$ Maas waveforms}{265}{section.Alph2.3}%
+\contentsline {chapter}{\numberline {C}A Heat Kernel Primer}{269}{appendix.Alph3}%
+\contentsline {section}{\numberline {C.1}The heat kernel expansion}{269}{section.Alph3.1}%
+\contentsline {section}{\numberline {C.2}A one-loop correction to the Einstein-Hilbert action}{271}{section.Alph3.2}%
+\contentsline {chapter}{\numberline {D}Loop Calculations}{273}{appendix.Alph4}%
+\contentsline {section}{\numberline {D.1}Self-energy of a modulus}{273}{section.Alph4.1}%
+\contentsline {section}{\numberline {D.2}Self-energy of a gauge 1-form}{278}{section.Alph4.2}%
+\contentsline {section}{\numberline {D.3}Self-energy of a Weyl fermion}{283}{section.Alph4.3}%
+\contentsline {chapter}{\numberline {E}Generalities on charge-to-mass and species vectors}{287}{appendix.Alph5}%
+\contentsline {section}{\numberline {E.1}Compactification on an $n$-dimensional cycle}{287}{section.Alph5.1}%
+\contentsline {section}{\numberline {E.2}Generalization to `nested' compactifications}{290}{section.Alph5.2}%
+\contentsline {chapter}{\numberline {F}Details on the Hypermultiplet Metric}{293}{appendix.Alph6}%
+\contentsline {section}{\numberline {F.1}The moduli space metric}{293}{section.Alph6.1}%
+\contentsline {subsection}{\numberline {F.1.1}The contact potential $\chi ^{\rm IIA}$}{295}{subsection.Alph6.1.1}%
+\contentsline {section}{\numberline {F.2}$\mathsf {SL(2,\mathbb {Z})}$ duality}{296}{section.Alph6.2}%
+\contentsline {subsection}{\numberline {F.2.1}The classical metric}{297}{subsection.Alph6.2.1}%
+\contentsline {subsection}{\numberline {F.2.2}Quantum corrections}{298}{subsection.Alph6.2.2}%
+\contentsline {section}{\numberline {F.3}The evaluation of the pattern within $\mathcal {M}_{\rm HM}$}{300}{section.Alph6.3}%
+\contentsline {chapter}{Bibliography}{303}{appendix*.145}%

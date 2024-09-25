@@ -1,0 +1,2012 @@
+\chapter{Conventions}
+\label{ap:conventions}
+
+In this appendix we summarize the conventions used throughout the main text.
+
+\subsubsection*{Metric signature}
+
+In general, when referring to $d$-dimensional Minkowski space, we denote the global flat coordinates as $\{x^{\mu}\}$, with $\mu=0,1,\ldots,d-1$. Moreover, our convention for the metric signature is the mostly plus one, namely
+%
+\beq\label{eq:Minksignature}
+ \eta_{\mu \nu} = \text{diag} \left(-1, +1, \ldots, +1 \right)\, .
+\eeq
+%
+Similarly, for those cases where in addition to a $d$-dimensional flat background we also have some internal compact space (of real dimension $n$) $\mathcal{X}_n$, we denote by $\{y^m\}$, $m=1, 2, \ldots n$, any local set of coordinates for the latter.
+
+\subsubsection*{Differential forms}
+
+On the other hand, when writing down local lagrangians describing the dynamics associated to tensor-like fields (of any rank), we adopt differential form notation. In particular, $p$-forms living in some $d$-dimensional manifold $\mathcal{M}$ may be expanded as follows
+%
+\beq\label{eq:pforms}
+ C_p= \frac{1}{p!} C_{\mu_1 \ldots \mu_p} dx^{\mu_1} \wedge \ldots \wedge dx^{\mu_p}\, ,
+\eeq
+%
+where the subindex indicates the rank of the anti-symmetric tensor and $\wedge$ denotes the exterior product within the algebra $\Omega(\mathcal{M}) = \bigoplus_{p=0}^{d} \Omega_p(\mathcal{M})$. For instance, taking the product between a $p$-form $C_p$ and a $q$-form $A_q$, yields the following $(p+q)$-form
+%
+\beq\label{eq:extproduct}
+ C_p \wedge A_q= \frac{1}{p! q!} C_{\mu_1 \ldots \mu_p} A_{\nu_1 \ldots \nu_q} dx^{\mu_1} \wedge \ldots \wedge dx^{\mu_p} \wedge dx^{\nu_1} \wedge \ldots \wedge dx^{\nu_q}\, .
+\eeq
+%
+These may be interpreted as generalized Abelian gauge fields subject to the redundancy condition
+%
+\beq\label{eq:gaugepformtransf}
+ C_p \to C_p + d \omega_{p-1}\, ,
+\eeq
+%
+where $d= \partial_{\mu} dx^{\mu}$ denotes the exterior derivative --- which acts as a map from $\Omega_p(\mathcal{M})$ to $\Omega_{p+1}(\mathcal{M})$ --- whereas $\omega_{p-1} \in \Omega_{p-1}(\mathcal{M})$. Additionally, one may define field strengths $F_{p+1}$ for the above gauge fields $C_p$ through the exterior derivative
+%
+\beq\label{eq:fieldstrength}
+ F_{p+1} := dC_p= \frac{1}{p!} \partial_{\mu_0}C_{\mu_1 \ldots \mu_p} dx^{\mu_0} \wedge dx^{\mu_1} \wedge \ldots \wedge dx^{\mu_p}\, ,
+\eeq
+%
+which are left invariant under the transformation \eqref{eq:gaugepformtransf}.\footnote{More generally, the field strength is invariant under any shift of the form $C_p \to C_p + \xi_{p}$, with $\xi_{p} \in \text{Ker}\, (\dd)$. These transformations can be classified in terms of the cohomology group $H^p (\mathcal{M})$ associated to the exterior derivative, such that the ones displayed in eq. \eqref{eq:gaugepformtransf} correspond to the trivial class, whereas in general there might be additional non-trivial classes which provide for \emph{large} gauge transformations, i.e. those which are not continuously connected to the identity.} In terms of those, the usual kinetic terms for the $p$-form gauge fields would read as
+%
+\beq\label{eq:kinetictermforms}
+ -\frac12 \int F_{p+1} \wedge \star F_{p+1} = -\frac12 \int \frac{1}{p!} F_{\mu_1 \ldots \mu_{p+1}} F^{\mu_1 \ldots \mu_{p+1}}\, \star 1 = -\frac12 \int \dd^dx\, \sqrt{-g}\, \frac{1}{p!} F_{\mu_1 \ldots \mu_{p+1}} F^{\mu_1 \ldots \mu_{p+1}}\, ,
+\eeq
+%
+where $\star 1 = \sqrt{-g}\, dx^1 \wedge dx^{2} \wedge \ldots \wedge dx^{d}$ denotes the volume form on $\mathcal{M}$.
+
+\subsubsection*{Curvature tensors}
+
+In all our discussions from the main text regarding the dynamics of the spacetime metric $g_{\mu \nu} (x)$, the conventions for the different curvature invariants are the following.
+
+First, we define the Levi-Civita connection $\Gamma^{\sigma}_{\mu \nu}$ as usual
+%
+\beq\label{eq:LeviCivita}
+ \Gamma^{\sigma}_{\mu\nu}=\begin{Bmatrix}
+\sigma\\ \mu \nu
+\end{Bmatrix}=\frac{1}{2}\, g^{\sigma \lambda} \left( \partial_{\mu}g_{\nu\lambda}+\partial_{\nu}g_{\mu\lambda} - \partial_{\lambda}g_{\mu\nu} \right)\, ,
+\eeq
+%
+where $g^{\mu \nu}$ is the inverse metric. From this one can readily compute the Riemann tensor
+%
+\beq\label{eq:Riemanntensor}
+\mathcal{R}^{\sigma}_{\ \lambda\mu\nu}=\partial_{\mu}\Gamma^{\sigma}_{\nu\lambda}-\partial _{\nu}\Gamma^{\sigma}_{\mu\lambda}+\Gamma^{\eta}_{\mu\lambda}\Gamma^{\sigma}_{\mu\eta}-\Gamma^{\eta}_{\mu\lambda}\Gamma^{\sigma}_{\nu\eta}\, ,
+\eeq
+%
+together with the associated Ricci tensor and curvature scalar
+%
+\beq\label{eq:Ricci&curvaturescalar}
+ \mathcal{R}_{\mu \nu} = \mathcal{R}^{\sigma}_{\ \mu \sigma \nu}\, , \qquad \mathcal{R}= g^{\mu \nu}\mathcal{R}_{\mu \nu}\, .
+\eeq
+%
+These quantities enter both in the action functional for Einstein gravity
+%
+\beq
+\begin{aligned}\label{eq:conventionalEH}
+    S_{\rm EH} \left[ g_{\mu \nu} (x) \right]= \frac{1}{2 \kappa_d^2} \int \mathcal{R} \star 1\ +\ S_{\rm matter} \left[ \phi (x),\, \Psi (x),\, \ldots \right]\, ,
+\end{aligned}
+\eeq
+%
+where $\kappa_d^2 = 8\pi G_N$ and $G_N$ denotes Newton's gravitational constant, as well as in the corresponding classical equations of motion
+%
+\beq
+\begin{aligned}
+    \mathcal{R}_{\mu \nu}- \frac12 g_{\mu \nu} \mathcal{R} = \kappa_d^2 T_{\mu \nu}\, ,
+\end{aligned}
+\eeq
+%
+where $T_{\mu \nu}$ is the energy-momentum tensor of the matter fields, see Section \ref{ss:basics} for details.
+
+\subsubsection*{Spinors and Clifford algebra}
+
+The Clifford algebra in $d$ spacetime dimensions is generated by the gamma matrices $\gamma^{\mu}$, which satisfy the following anti-commutation rules 
+%
+\beq\label{eq:Cliffordalgebra}
+\begin{aligned}
+    \lbrace \gamma^{\mu}, \gamma^{\nu}\rbrace= 2g^{\mu \nu}\, .
+\end{aligned}
+\eeq
+%
+Using a locally flat frame such that $\gamma^{a}= e^a_{\mu} \gamma^{\mu}$, the above relation can be conveniently rewritten as
+%
+\beq
+\begin{aligned}
+    \lbrace \gamma^{a}, \gamma^{b}\rbrace= 2 \eta^{a b}\, , \qquad a, b = 0, 1, \ldots, d-1\, ,
+\end{aligned}
+\eeq
+%
+where we have introduced a vielbein $e^a = e^a_{\mu}(x) dx^{\mu}$ which locally diagonalizes the spacetime metric, namely it satisfies
+%
+\beq
+\begin{aligned}\label{eq:apvielbeindef}
+    g^{\mu \nu} e^a_{\mu} e^b_{\nu} = \eta^{a b}\, .
+\end{aligned}
+\eeq
+%
+Note that $\{ e^a_{\mu}\}$ is defined up to local Lorentz rotations of the form
+%
+\beq
+\begin{aligned}
+    e^a_{\mu} \to \Lambda^a_{\ b} e^b_{\mu}\, , \qquad \Lambda^a_{\ b} \in \mathsf{SO(1, d-1)}\, ,
+\end{aligned}
+\eeq
+%
+which obviously leave the condition \eqref{eq:apvielbeindef} unchanged.
+
+The spinor fields $\psi(x)$ hence arise as (Grassmann-valued) representations of the above algebra. These crucially depend on the number of spacetime dimensions as well as the metric signature (i.e. whether it is of Lorentzian or Riemannian type). For instance, in eleven-dimensional Minkowski space, the irreducible representation of the Clifford algebra \eqref{eq:Cliffordalgebra} involves Majorana spinors, which are real-valued such that $\psi^* = \psi$ (c.f. Section \ref{ss:Mthy11d}). On the other hand, in even-dimensional spacetimes, it is possible to introduce an additional gamma matrix 
+%
+\beq
+\begin{aligned}\label{eq:gammad+1}
+    \gamma^{d+1}=\i^{\frac{d}{2}-1} \prod_{k=0}^{d-1}\, ,
+\end{aligned}
+\eeq
+%
+which squares to the identity operator, commutes with any other gamma matrix and moreover projects onto states of definite chirality. Hence, one can define Weyl spinors as follows
+%
+\beq
+\begin{aligned}
+    \psi_{\pm} = \left(1 \pm \gamma^{d+1}\right) \psi\, ,
+\end{aligned}
+\eeq
+%
+thus satisfying $\gamma^{d+1}\, \psi_{\pm} = \pm\, \psi_{\pm}$. Let us mention that both Majorana and Weyl conditions are compatible in dimensions $d=2$ (mod 8).
+
+\subsubsection*{Units}
+
+In this work we employ natural units, namely we set $\hbar=c=1$ from the start --- unless stated otherwise. This convenient choice leaves us with only one inequivalent physical magnitude (or quantity), for instance energy, denoted here by $[E]$. To measure those, we will oftentimes switch between two different sets of units that are customarily used when considering gravitational effective field theories arising as low energy limits of string theory.
+
+The first one is the most natural choice in string theory, where we measure every quantity in terms of the string length $\ell_s=2 \pi \sqrt{\alpha'}$. Accordingly, by studying physical processes involving gravitons in the external legs one finds that the strength of gravitational interactions in $d$ spacetime dimensions --- i.e. the gravitational coupling $\kappa_d$ --- reads as
+%
+\beq
+\begin{aligned}
+    2\kappa_d^2= e^{2\varphi_d}\, \frac{\ell_s^{d-2}}{2\pi}\, ,
+\end{aligned}
+\eeq
+%
+where $\varphi_d= \phi - \frac12 \log \mathcal{V}_{10-d}$ denotes the (vacuum expectation value of the) $d$-dimensional dilaton, which depends both on the 10d one and the volume of the internal space (measured in string units as well).
+
+Alternatively, the conventional choice of units in gravity involves sitting in the Einstein frame, where the two-derivative lagrangian has the form displayed in \eqref{eq:conventionalEH}. Moreover, it is common practice to associate an energy scale to the gravitational interactions themselves, which is usually referred to as the (reduced) Planck mass
+%
+\beq
+   \Mpd = \kappa_d^{-\frac{1}{d-2}} \, .
+\eeq
+%
+In terms of length-scales, one analogously defines the so-called Planck length as follows
+%
+\beq
+   \ell_d = \frac{(4\pi)^{\frac{1}{d-2}}}{\Mpd}\, ,
+\eeq
+%
+which can be easily related to the string scale previously introduced by the following mathematical relation
+%
+\beq
+   \ell_d^{d-2} = \ell_s^{d-2} e^{2\varphi_d}\, .
+\eeq
+%
+
+\chapter{Relevant Automorphic Forms}
+\label{ap:Massform}
+
+This appendix serves as a mathematical compendium for the relevant set of automorphic functions that appear at several instances in the thesis. We particularize to the discrete groups $\mathsf{SL(2, \mathbb{Z})}$ and $\mathsf{SL(3, \mathbb{Z})}$, since they capture the different U-duality symmetries arising in $d=10,\, 9$ and 8 maximal supergravity theories, which are thoroughly discussed in Parts \ref{part:StringTheoryTests} and \ref{part:pattern}. A similar analysis can be done for the (bigger) U-duality groups that appear upon reducing the number of non-compact spacetime dimensions, see e.g., \cite{Green:2010kv} for details. 
+
+\section{Mathematical preliminaries}\label{ss:mathdefs}
+
+An automorphic function $\varphi$ of a given Lie group $G$ is defined as a map from a space $\mathcal{M}$ to $\mathbb{R}$ (or more generally $\mathbb{C}$), where $\mathcal{M}$ admits some natural $G$-group action. Such automorphic function, $\varphi: \mathcal{M} \to \mathbb{R}$, is moreover left invariant under the corresponding group action, namely
+%
+\beq\label{eq:automorphicfn}
+ \varphi (g \cdot p) = \varphi (p)\, , \qquad \forall p \in \mathcal{M},\quad \text{and}\quad \forall g \in G\, .
+\eeq
+%
+This means, in particular, that the function $\varphi$ can be unambiguously defined on the quotient space $\mathcal{M}/G$.
+
+In general, for a given pair $(\mathcal{M}, G)$ there can be more than one non-trivial automorphic form, and in certain cases the set $\lbrace \varphi\rbrace$ may even be infinite --- a simple example being the pair $(\mathbb{H}, \mathsf{SL(2, \mathbb{Z})})$, with $\mathbb{H}$ the upper-half plane. In addition, whenever $\mathcal{M}$ has a non-trivial boundary $\partial \mathcal{M}$, it is convenient to classify the set of automorphic functions depending on their behaviour at $\partial \mathcal{M}$. This includes the case of hyperbolic spaces, where despite their non-compactness, one can define some boundary after a process of `one-point' compactification. In such instances, the boundary $\partial \mathcal{M}$ lies at infinite distance (in the natural bi-invariant metric), see below. 
+
+\section{$\mathsf{SL(2, \mathbb{Z})}$ Maas waveforms} \label{s:SL2Waveforms}
+
+In this section we particularize to the case in which the group $G$ is isomorphic to $\mathsf{SL(2, \mathbb{Z})}$. We will restrict ourselves to the set of automorphic functions of $\mathsf{SL(2, \mathbb{Z})}$ which are moreover real analytic, since they appear as (generalized) `Wilson coefficients' in the EFT expansion of some gravitational effective field theories (see Chapter \ref{ch:Higherdimops}). In fact, there exists a very convenient and economic way to generate such analytic functions as eigenfunctions of some appropriate elliptic operator. Now, since we want these functions to be automorphic forms as well, we can simply take the hyperbolic Laplace operator, which is both elliptic and $\mathsf{SL(2, \mathbb{Z})}$-invariant (in a precise sense that we specify below). This operator reads
+%
+\beq\label{eq:SL2Laplacian}
+\Delta_2 = \tau_2^2 \left( \frac{\partial^2}{\partial \tau_1^2} + \frac{\partial^2}{\partial \tau_2^2}\right)\, ,
+\eeq
+%
+where as usual we define $\tau=\tau_1 + \text{i} \tau_2$. Note that this is nothing but the laplacian operator associated to the hyperbolic metric \eqref{eq:IIB10dSL2}. Therefore, the eigenfunctions of this operator --- which are moreover modular invariant --- are called singular Maas forms \cite{DHoker:2022dxx}. Here we will be interested, for reasons that will become clear later on, in a subgroup of such set of functions, those denoted simply as Maas forms, which have the additional property of growing polynomially (instead of exponentially) with $\tau_2$, as $\tau_2 \to \infty$. An example of Maas form that plays a key role in the discussion from the main text are the so-called non-holomorphic Eisenstein series \cite{DHoker:2022dxx}
+%
+\beq\label{eq:nonholoEisenstein}
+\frac{\Gamma(\ell)}{2\pi^{\ell}}\, E_{\ell}^{sl_2}(\tau, \bar \tau) \equiv \pi^{-\ell}\, \Gamma(\ell)\, \frac{1}{2} \sum_{(m, n) \in \mathbb{Z}^2 \setminus \lbrace (0,0) \rbrace} \frac{\tau_2^\ell}{\left| m+n\tau\right|^{2\ell}}\, ,
+\eeq
+%
+which converge absolutely if $\text{Re}\, \ell >1$. It can be shown (upon using that the fractional linear transformation in eq. \eqref{eq:SdualitytransIIBdilaton} conmutes with the operator $\Delta_2$), that indeed $E_{\ell}^{sl_2}(\tau)$ are both automorphic and eigenfunctions of the hyperbolic laplacian, with eigenvalue given by $\ell(\ell-1)$. The polynomial growth of the Eisenstein series can be also easily understood, since upon taking the limit $\tau_2 \to \infty$, the infinite series is clearly dominated by the terms with $n=0$, which grows as $\tau_2^\ell$. More precisely, the functions $E_{\ell}^{sl_2}(\tau)$ have an alternative Fourier expansion in $\tau_1$, which can be obtained upon Poisson resumming\footnote{\label{fnote:Poissonresummation}The Poisson resummation identity reads as follows \begin{equation}
+    \notag \sum_{n \in \mathbb{Z}} F(x+na) = \frac{1}{a} \sum_{k \in \mathbb{Z}} \tilde{F} \left(\frac{2\pi k}{a} \right) e^{2\pi i k x/a}\, ,
+\end{equation}
+with $\tilde{F} (\omega)=\int_{-\infty}^{\infty} \dd x\, F(x) e^{-i \omega x}$ the Fourier transform of $F(x)$.} on the integer $n$, yielding
+%
+\begin{align}\label{eq:nonpertexpansion}
+	\notag E_{\ell}^{sl_2} =\, & \bigg[ 2\zeta(2\ell) \tau_2^{\ell} + 2\pi^{1/2}\frac{\Gamma(\ell-1/2)}{\Gamma(\ell)} \zeta(2\ell-1) \tau_2^{1-\ell}\\
+ &+ \frac{8 \pi^\ell \tau_2^{1/2}}{\Gamma(\ell)} \sum_{m=1}^{\infty} m^{\ell-1/2} \sigma_{1-2\ell} (m)\, \cos(2\pi m \tau_1)\, K_{\ell-1/2} (2\pi m \tau_2)\bigg]\, ,
+\end{align}
+%
+where $\sigma_{1-2\ell} (m) = \sum_{d|m} d^\ell$ runs over all divisors $d$ of $m$, and $K_\ell(y)$ is the modified Bessel function of second kind, which is defined as follows
+%
+\begin{equation}
+    K_\ell(y)=\frac{1}{2} \int_0^{\infty} \dd x\, x^{\ell-1} \exp \left[ -\frac{y}{2} \left( x + \frac{1}{x}\right)\right]\, ,
+    \end{equation}
+%
+and decays asymptotically as $ K_\ell(y) \sim \sqrt{\frac{\pi}{2y}} e^{-y}$ for $y \to \infty$.
+
+Let us finally mention that the modular form $\left(2\pi^{\ell}\right)^{-1} \Gamma(\ell) E_{\ell}^{sl_2}(\tau)$, when seen as a function also of the variable $\ell$, has a meromorphic continuation to all $\ell\in \mathbb{C}$, which is thus analytic everywhere except for simple poles at $\ell=0,1$. Moreover, if the divergence for $\ell=1$ is `extracted', namely upon selecting the constant term (with respect to $\ell$) in the Laurent series for $E_{\ell}^{sl_2}$ at $\ell=1$, one obtains the following function \cite{DHoker:2022dxx}
+%
+\beq
+2\pi\left(\gamma_{\text{e}} - \log 2\right) - \pi \log \left( \tau_2\,|\eta(\tau)|^4 \right)\, ,
+\eeq
+%
+where $\gamma_{\text{e}}$ is the Euler-Mascheroni constant and $\eta(\tau)$ denotes the Dedekind eta function, which may be defined as
+%
+\beq \label{eq:Dedekind}
+\eta(\tau) = q^{\frac{1}{24}} \prod_{k=1}^{\infty} \left( 1-q^k\right)\, , \qquad q=e^{2\pi \i \tau}\, .
+\eeq
+%
+To conclude, let us note that even though the function $\hat{E}_{1}^{sl_2}(\tau) = - \pi\log \left( \tau_2\,|\eta(\tau)|^4 \right)$ arises as some sort of analytic extension of $E_{1}^{sl_2}(\tau)$, it is actually not a Maas form, since $\Delta_2 \hat{E}_{1}^{sl_2}(\tau)$ is not proportional to $\hat{E}_{1}^{sl_2}(\tau)$ itself but it rather gives a constant value. This can be easily checked upon noting that $\partial \bar \partial \hat{E}_{1}^{sl_2}(\tau)= \frac{\pi}{4 \tau^2_2}$, as well as $\Delta_2=4 \tau_2^2 \partial \bar \partial$, where we have defined $\partial = \partial/\partial \tau$ and $\bar \partial = \partial/\partial \bar \tau$. In any event, what remains true is that the large modulus behaviour of $\hat{E}_{1}^{sl_2}(\tau)$ matches with that expected for $E_{\ell=1}^{sl_2}(\tau)$, since upon using the Fourier series expansion for $\eta(\tau)$
+%
+\beq
+\eta(\tau) = q^{\frac{1}{24}} \left( 1-q-q^2+q^5 + \mathcal{O}(q^7) \right)\, ,
+\eeq
+%
+one finds the following relevant asymptotic expression 
+%
+\beq \label{eq:asymptotic behavior}
+-\pi \text{log} \left(\tau_2\,|\eta(\tau)|^4\right)\, \sim\, -\pi \text{log} \left(\tau_2\,e^{-\frac{\pi \tau_2}{3}}\right)\, \sim\, \frac{\pi^2}{3} \tau_2 - \pi \text{log} (\tau_2)\, ,
+\eeq
+%
+whose first term precisely is $2 \zeta(2) \tau_2$.
+
+\section{$\mathsf{SL(3, \mathbb{Z})}$ Maas waveforms}
+
+We consider now the case where $G=\mathsf{SL(3, \mathbb{Z})}$. The motivation comes from the fact that it captures the U-dualities arising in maximal supergravity in eight dimensions. Therefore, following the same strategy as before, let us first introduce the appropriate elliptic $\mathsf{SL(3, \mathbb{Z})}$-invariant operator, namely the Laplace operator on the coset space $\mathsf{SL(3, \mathbb{R})}/\mathsf{SO(3)}$
+%
+\beq \label{eq:laplacianSL3}
+\Delta_3 = 4\tau_2^2 \partial_{\tau} \partial_{\bar \tau} + \frac{1}{\nu \tau_2} \left| \partial_b -\tau \partial_c \right|^2 + 3 \partial_{\nu} \left( \nu^2 \partial_{\nu}\right)\, ,
+\eeq
+%
+where the local parametrization in \eqref{eq:laplacianSL3} has been chosen to make contact with Type IIB string theory compactified on $\mathbf{T}^2$ (see Section \ref{ss:MthyT3}). Note that the previous coordinates can be compactly grouped into the following $3\times3$ matrix (see e.g., \cite{Kiritsis:1997em})
+%
+\beq
+ \mathcal{B}= \nu^{1/3} \begin{pmatrix}
+		\frac{1}{\tau_2} \quad  \frac{\tau_1}{\tau_2} \quad \frac{c+\tau_1 b}{\tau_2}\\ \frac{\tau_1}{\tau_2} \quad  \frac{|\tau|^2}{\tau_2} \quad \frac{\tau_1 c+|\tau|^2 b}{\tau_2}\\ \frac{c+\tau_1 b}{\tau_2} \quad  \frac{\tau_1 c+|\tau|^2 b}{\tau_2} \quad \frac{1}{\nu} + \frac{|c+\tau b|^2}{\tau_2}
+	\end{pmatrix}\, ,
+\eeq
+%
+which moreover satisfies $\mathcal{B}=\mathcal{B}^{\text{T}}$ as well as $\det \mathcal{B}=1$. The usefulness of the matrix $\mathcal{B}$ rests on the fact that it transforms in the adjoint representation of $\mathsf{SL(3, \mathbb{Z})}$, namely upon performing some transformation $\mathcal{A} \in \mathsf{SL(3, \mathbb{Z})}$, one finds that
+%
+\beq \label{eq:Btransf}
+  \mathcal{B} \rightarrow \mathcal{A}^{\text{T}}\, \mathcal{B}\, \mathcal{A}\, .
+\eeq
+%
+With this, we are now ready to define the Eisenstein $\mathsf{SL(3, \mathbb{Z})}$ series of order $\ell$:
+%
+\beq\label{eq:SL3Eisenstein}
+E_{\ell}^{sl_3} = \sum_{\mathbf{n}\, \in\, \mathbb{Z}^3 \setminus \lbrace \vec{0} \rbrace} \left( \sum_{i, j =1}^3 n_i\, \mathcal{B}^{ij}\, n_j\right)^{-\ell} = \sum_{\mathbf{n}\, \in\, \mathbb{Z}^3 \setminus \lbrace \vec{0} \rbrace} \nu^{-\ell/3} \left[ \frac{\left| n_1 + n_2 \tau + n_3 \left( c+\tau b\right)\right|^2}{\tau_2} + \frac{n_3^2}{\nu}\right]^{-\ell}\, ,
+\eeq
+%
+where $\mathcal{B}^{ij}$ denote the components of the inverse matrix $\mathcal{B}^{-1}$. Note that the above expression is manifestly $\mathsf{SL(3, \mathbb{Z})}$-invariant, since the vector $\textbf{n} = \left( n_1, n_2, n_3\right)$ transforms as $\textbf{n} \rightarrow \mathcal{A}^{\text{T}}\, \textbf{n}$ under the duality group. In addition, as it was also the case for the non-holomorphic Eisenstein series defined in eq. \eqref{eq:nonholoEisenstein} above, the functions $E_{\ell}^{sl_3}$ are eigenvectors of the laplacian $\Delta_3$, satisfying
+%
+\beq 
+  \Delta_3 E_{\ell}^{sl_3} = \frac{2\ell (2\ell-3)}{3} E_{\ell}^{sl_3}\, .
+\eeq
+%
+Let us also mention that the series $E_{\ell}^{sl_3}$, when viewed as a function of $\ell$, are absolutely convergent for $\ell>3/2$, whilst $E_{3/2}^{sl_3}$ is logarithmically divergent. This is reminiscent of the situation for the $\mathsf{SL(2, \mathbb{Z})}$ Eisenstein series $E_{\ell}^{sl_2}$, which had a simple pole for $\ell=1$. Therefore, proceeding analogously as in that case, one may define
+%
+\beq \label{eq:regularisation}
+  \hat{E}_{3/2}^{sl_3} \equiv \lim_{\ell\to 3/2} \left( E_{\ell}^{sl_3} - \frac{2\pi}{\ell-3/2} - 4\pi(\gamma_{\text{e}}-1)\right)\, ,
+\eeq
+%
+where again $\gamma_{\text{e}}$ denotes the Euler-Mascheroni constant. Such newly defined function is no longer singular and remains invariant under $\mathsf{SL(3, \mathbb{Z})}$ transformations, with the price of not being a zero-mode of the laplacian \eqref{eq:laplacianSL3} anymore.
+
+\subsubsection*{Fourier-like expansions}
+
+In what follows, our aim will be to rewrite the $\mathsf{SL(3, \mathbb{Z})}$ Eisenstein series in a way which makes manifest the perturbative and non-perturbative origin of the different terms that appear in the expansion, similarly to what we did for the $\mathsf{SL(2, \mathbb{Z})}$ case. We closely follow Appendix A of \cite{Kiritsis:1997em}. First, let us introduce the following integral representation
+%
+\begin{align}\label{eq:integralrep}
+	\notag E_{\ell}^{sl_3} &= \frac{\pi^\ell}{\Gamma(\ell)} \int_0^{\infty} \frac{\dd x}{x^{1+\ell}} \sum_{\mathbf{n}\, \in\, \mathbb{Z}^3 \setminus \lbrace \vec{0} \rbrace} \exp \left[-\frac{\pi}{x} \left( \sum_{i, j =1}^3 n_i\, \mathcal{B}^{ij}\, n_j\right) \right]\\
+ &= \nu^{-\ell/3} \frac{\pi^\ell}{\Gamma(\ell)} \int_0^{\infty} \frac{\dd x}{x^{1+\ell}} \sum_{\mathbf{n}\, \in\, \mathbb{Z}^3 \setminus \lbrace \vec{0} \rbrace} \exp \left[-\frac{\pi}{x} \left( \frac{\left| n_1 + n_2 \tau + n_3 \left( c+ \tau b\right) \right|^2}{\tau_2} + \frac{n_3^2}{\nu}\right) \right]\, ,
+\end{align}
+%
+which can be shown to coincide with the defining series \eqref{eq:SL3Eisenstein} after performing the change of variables $y=x^{-1}$ and using the definition of the $\Gamma$-function, namely 
+%
+\begin{align}
+	\Gamma(z) = \int_0^{\infty} \dd y\, y^{z-1} e^{-y}\, .
+\end{align}
+%
+After carefully separating the sum in the integers $n_i$ and performing a series of Poisson resummations (see footnote \ref{fnote:Poissonresummation}), one arrives at a Fourier expansion of the form \cite{Kiritsis:1997em,Basu:2007ru,Basu:2007ck}
+%
+\begin{align}\label{eq:instexpSL3}
+	\notag E_{\ell}^{sl_3} &= 2\nu^{-\ell/3} \tau_2^\ell \zeta(2\ell) + 2 \sqrt{\pi} T_2 \left( \tau_2 \nu^{1/3}\right)^{3/2-\ell} \frac{\Gamma(\ell-1/2)}{\Gamma(\ell)} \zeta(2\ell-1) + 2\pi \nu^{2\ell/3-1} \frac{\zeta(2\ell-2)}{\ell-1}\\
+ &+  2 \frac{\pi^\ell \sqrt{\tau_2}}{\Gamma(\ell) \nu^{\ell/3}} \sum_{m,n \neq 0} \left| \frac{m}{n}\right|^{\ell-1/2} e^{2\pi \text{i} m n\tau_1}\, K_{\ell-1/2} (2\pi |m n| \tau_2)\, +\, \sum_{m, n \in \mathbb{Z} \setminus \lbrace (0,0) \rbrace} \mathcal{I}^\ell_{m, n}\, ,
+\end{align}
+%
+where we have defined $T_2 \equiv \text{Im}\, T$, with $T= b+ \text{i} \left( \nu \tau_2\right)^{-1/2}$, and 
+%
+\begin{align}
+	\mathcal{I}^\ell_{m, n} = 2\frac{\pi^\ell \nu^{\ell/6-1/2}}{\Gamma(\ell) \tau_2^{\ell/2-1/2}} \sum_{k \neq 0} \left| \frac{m+n\tau}{k}\right|^{\ell-1} e^{2\pi \text{i} k \left[n(c+\tau_1 b)- (m+n\tau_1)b \right]}\, K_{\ell-1} \left(2\pi |k|\frac{\left| m+n\tau \right|}{\sqrt{\nu \tau_2}}\right)\, .
+\end{align}
+%
+Notice that upon using the expansion for the $\mathsf{SL(2, \mathbb{Z})}$ series in eq. \eqref{eq:nonpertexpansion}, one can group the terms which depend on $\nu^{-\ell/3}$ into the following expression
+%
+\begin{align}\label{eq:SL3&SL2}
+	 E_{\ell}^{sl_3} &= \nu^{-\ell/3} E_{\ell}^{sl_2}(\tau) + 2\pi \nu^{2\ell/3-1} \frac{\zeta(2\ell-2)}{\ell-1}\, +\, \sum_{m, n \in \mathbb{Z} \setminus \lbrace (0,0) \rbrace} \mathcal{I}^\ell_{m, n}\, .
+\end{align}
+%
+From a string theory perspective, each of these terms in the expansion can be given a physical interpretation in terms of instanton corrections, see Chapter \ref{ch:Higherdimops} for details. 
+
+Furthermore, there exists another set of coordinates on $\mathsf{SL(3, \mathbb{R})}/\mathsf{SO(3)}$ apart from those employed in eq. \eqref{eq:laplacianSL3}, in which $\{\nu, \tau\}$ are exchanged with $\{\varphi_8, T\}$, where $e^{-2\varphi_8}=\tau_2^{3/2} \nu^{-1/2}$. From the Type IIB point of view, they correspond to the complexified K\"ahler modulus of $\mathbf{T}^2$ as well as the eight-dimensional dilaton (see Section \ref{ss:MthyT3}). Using such parametrization, one can expand $E_{\ell}^{sl_3}$ around `weak coupling' as follows 
+%
+\begin{align}\label{eq:instexpSL3-2}
+	\notag E_{\ell}^{sl_3} &= 2 \zeta(2\ell) e^{-\frac{4\ell}{3} \varphi_8} + \pi^{1/2} \frac{\Gamma(\ell-1/2)}{\Gamma(\ell)} e^{-\left(\frac{2\ell}{3}-1 \right)\varphi_8} E_{\ell-1/2}^{sl_2} (T)\\
+    \notag&+  \frac{2\pi^\ell}{\Gamma(\ell)} T_2^{\ell/2-1/4} e^{-\left(\frac{\ell}{3}-\frac{1}{2} \right)\varphi_8} \sum_{m,n \neq 0} \left| \frac{m}{n}\right|^{\ell-1/2} e^{2\pi \text{i} m n\tau_1}\, K_{\ell-1/2} (2\pi |m n| \tau_2)\\
+    &+\frac{2\pi^\ell}{\Gamma(\ell)} T_2^{1/2} e^{\left(\frac{2\ell}{3}-1 \right)\varphi_8} \sum_{k \neq 0} \left| \frac{m+n\tau}{k}\right|^{\ell-1} e^{2\pi \text{i} k \left[n(c+\tau_1 b)- (m+n\tau_1)b \right]}\, K_{\ell-1} \left(2\pi |k| \left| m+n\tau \right| T_2\right)\, ,
+\end{align}
+%
+where one should view $\tau_2$ as a function of $\lbrace\varphi_8, T_2\rbrace$ in the previous expression.
+
+\subsubsection*{The $E_{3/2}^{sl_3}$ series}
+
+To close this section, let us briefly discuss the particular case of the $\mathsf{SL(3, \mathbb{Z})}$ Eisenstein series of order-$3/2$, since it plays a crucial role in our analysis in Section \ref{ss:MthyT3}. In fact, as already mentioned, $E_{\ell}^{sl_3}$, when seen as a function of the variable $\ell$, has a simple pole at $\ell=3/2$.\footnote{This is easy to see from eq. \eqref{eq:instexpSL3} above, since the functions $\zeta(1+x)$ as well as $\Gamma(x)$ present simple poles at $x=0$. Indeed, one obtains the following expansions around the pole:
+%
+\beq
+\notag \zeta(1+\epsilon)= \frac{1}{\epsilon} + \gamma_{\text{e}} + \mathcal{O}(\epsilon)\, , \qquad \Gamma(\epsilon)=\frac{1}{\epsilon} - \gamma_{\text{e}} + \mathcal{O}(\epsilon)\, .
+%
+\eeq} Regularizing in a way that preserves automorphicity (see eq. \eqref{eq:regularisation}), one finds for the series expansion the following expression
+%
+\begin{align}\label{eq:Eisenstein3/2}
+	\notag \hat{E}_{3/2}^{sl_3} &= 2\zeta(3) \frac{\tau_2^{3/2}}{\nu^{1/2}} + \frac{2 \pi^2}{3} T_2 + \frac{4\pi}{3} \log \nu\\
+ &+  4\pi \sqrt{\frac{\tau_2}{\nu}} \sum_{m,n \neq 0} \left| \frac{m}{n}\right| e^{2\pi \text{i} m n\tau_1}\, K_{1} (2\pi |m n| \tau_2)\, +\, \sum_{m, n \in \mathbb{Z} \setminus \lbrace (0,0) \rbrace} \mathcal{I}^{3/2}_{m, n}\, ,
+\end{align}
+%
+which in the limit \eqref{eq:instexpSL3-2} becomes \cite{Green:2010wi}
+%
+\begin{align}\label{eq:Eisenstein3/2-2}
+	\hat{E}_{3/2}^{sl_3} &= 2\zeta(3) e^{-2\varphi_8} + 2 \hat{E}_{1}^{sl_2} (T) + \frac{4 \pi}{3} \varphi_8 + \mathcal{O} \left( \exp(-(T_2 e^{2\varphi_8})^{-1/2}),\exp(-(T_2^{-1} e^{2\varphi_8})^{-1/2})\right)\, .
+\end{align}
+%
+
+\chapter{A Heat Kernel Primer}
+\label{ap:heatkernel}
+
+In this appendix we review the basics of the heat kernel formalism, which provides a useful technique to perform covariant computations in field theory and gravity. As a proof of concept, we apply these ideas so as to determine the contribution to the Einstein-Hilbert term induced by a tower of massive particles. See also Section \ref{ss:Emergencegraviton} for a complementary discussion.
+
+\section{The heat kernel expansion}
+\label{s:intro}
+
+The heat kernel or `inverse mass' expansion (see e.g., \cite{Schubert:2001he,Vassilevich:2003xt} for reviews on the topic) allows one to compute in a manifestly gauge and diffeomorphism invariant fashion the corrections to the Wilsonian/quantum effective action induced by integrating out a particle at one loop in perturbation theory. The basic idea hinges on the following mathematical identity (due to Schwinger):
+%
+\beq\label{eq:Schwingerintegral}
+\int_{\varepsilon \to 0^+}^{\infty} \frac{\dd \tau}{\tau}\, e^{-\tau A} = -\log A + \text{const.}\, .
+\eeq
+%
+This relation allows us to define in a convenient way the logarithm of the determinant of any (trace class) operator $D$ as a Gaussian integral 
+%
+\beq\label{eq:logdetop}
+\log \det D = \text{tr} \log D = - \int_{0}^{\infty} \frac{\dd \tau}{\tau}\, \text{tr}\, e^{-\tau D} = \sum_n \log \lambda_n\, ,
+\eeq
+%
+where we have assumed the spectrum of eigenvalues $\{ \lambda_n \}$ of the operator $D$ to be discrete for simplicity, and the integral above should be interpreted in the regularized sense \eqref{eq:Schwingerintegral}. Moreover, one can promote the definition \eqref{eq:logdetop} to incorporate as well those cases in which $D$ is some differential operator with a continuous spectrum, such that the trace above includes a priori both discrete sums as well as spacetime integrals. For instance, one may consider differential operators which arise as deformations of the laplacian (therefore appearing in the kinetic terms of the theory) of the form
+%
+\beq\label{eq:laplaciandeformation}
+D = -\nabla_{\mu} \nabla^{\mu} + X\, ,
+\eeq
+%
+where $\nabla_{\mu}$ denotes the corresponding gauge and covariant derivative, whilst $X$ captures the deformation (e.g., mass terms, spin-orbit couplings, etc.).
+
+Furthermore, it is customary to define the \emph{heat kernel} associated to a given operator $D$ as follows
+%
+\beq\label{eq:heatkerneldef}
+K(\tau; x, y) = e^{-\tau D}\, ,
+\eeq
+%
+where the name originates from the fact that $K(\tau; x, y)$ indeed solves the heat equation
+%
+\beq\label{eq:heateq}
+\frac{\partial K(\tau; x, y)}{\partial \tau} + D\, K(\tau; x, y) = 0\, ,
+\eeq
+%
+with the boundary condition $K(\tau; 0,0)= \delta (x-y)$. In simple cases, such as when $\nabla_{\mu} = \partial_{\mu}$ and $X=0$, one can explicitly solve the equation \eqref{eq:heateq} to find
+%
+\beq\label{eq:heatkernelfree}
+K_{\rm free}(\tau; x, y) = \frac{1}{(4\pi\tau)^{d/2}} e^{-\frac{(x-y)^2}{4\tau}}\, ,
+\eeq
+%
+where $d$ is the spacetime dimension. More generally, though, it is hard to obtain an analytic solution to the heat kernel equation. However, it is actually possible to perform a small proper time expansion which gives a Taylor series of the form
+%
+\beq\label{eq:heatkernelgeneric}
+K(\tau; x, y) = K_{\rm free}(\tau; x, y) \sum_{n=0}^{\infty} a_n(x, y) \tau^n\, ,
+\eeq
+%
+whose coefficients $a_n(x, y)$ are known as the \emph{Seeley-deWitt coefficients} and characterize in a universal way the operator whose determinant we are interested in computing. Inserting this back into the one-loop determinant arising from the path integral one obtains the following formal expression
+%
+\beq\label{eq:heatkernel}
+S[g, A] = \int_{0}^{\infty} \frac{\dd \tau}{\tau}\, e^{-\tau m^2} \int \frac{\dd^dx\, \sqrt{-g}}{(4\pi \tau)^{\frac{d}{2}}}\, \sum_{n=0}^{\infty} a_n(x) \tau^n\, .
+\eeq
+%
+Note that the parameters $a_n(x) = a_n(x, y=x)$ are always regular, although they can of course lead ultimately to some UV divergence upon integration over Scwhinger proper time, $\tau\in \mathbb{R}_+$. Such divergences are ultra-violet in nature and always come from the lower part of the integration domain --- namely when $\tau \to 0$, which corresponds to small loops in the target space. For example, in $d=4$ the terms with $n=0,1,2$ all become UV divergent and thus subject to the renormalization procedure. On the other hand, from the point of view of the Emergence proposal --- and following our discussion in Chapter \ref{ch:Emergence}, in this thesis we are interested in imposing the species/quantum gravity scale as the UV cut-off, and indeed the wordline/heat kernel formalism here described allows us to do so in a manifestly gauge invariant way. In practice, we just need to restrict the integration domain to $\tau \in [\varepsilon, \infty)$, where by dimensional analysis one identifies $\varepsilon= \LSP^{-2}$. For instance, in the case of a minimally coupled complex scalar $\phi(x)$ one finds the following first Seeley-deWitt coefficients \cite{Bastianelli:2008cu}
+%
+\begin{align} \label{eq:dewittcoeffscalar}
+	 a_0 &= 1\, , \qquad a_1 = \frac{1}{6} \mathcal{R}\, , \qquad a_2=-\frac{1}{12} F_{\mu \nu} F^{\mu \nu}\, ,
+\end{align}
+%
+whilst for a (minimally coupled) Weyl fermion $\Psi(x)$ one rather obtains \cite{Bastianelli:2008cu}
+%
+\begin{align} \label{eq:dewittcoefffermion}
+	a_0 = -2\, , \qquad a_1 = \frac{1}{6} \mathcal{R}\, , \qquad  a_2=-\frac{1}{3} F_{\mu \nu} F^{\mu \nu}\, .
+\end{align}
+%
+These can be seen to contribute to the renormalization of the vacuum energy, the Planck mass and (in case we add an extra $\mathsf{U(1)}$ gauge field) the electric charge, respectively. 
+
+\section{A one-loop correction to the Einstein-Hilbert action}
+\label{s:oneloopEH}
+
+As a simple application of this formalism, let us compute the one-loop contribution to the kinetic term of the graviton due to either a spin-0 or spin-$\frac{1}{2}$ field, c.f. eqs. \eqref{eq:dewittcoeffscalar} and \eqref{eq:dewittcoefffermion} above. In both cases we get
+%
+\beq\label{eq:heatkernelEH}
+S^{\text{1-loop}}_{\text{EH}} = \int \dd^dx\, \sqrt{-g}\, \mathcal{R} \int_{\varepsilon}^{\infty} \dd \tau\, e^{-\tau m^2}  \frac{1}{6(4\pi \tau)^{\frac{d}{2}}}\, ,
+\eeq
+%
+such that upon integrating over Schwinger proper time leads to
+%
+\beq \label{eq:integratedoneloop}
+\frac{1}{6(4\pi)^{\frac{d}{2}}}\, \varepsilon^{\frac{d-2}{2}}\, E_{\frac{d}{2}} (m^2 \varepsilon)\, ,
+\eeq
+%
+which can be seen to decrease as $m^2\varepsilon$ increases, namely when the field mass gets close to the UV cut-off. Moreover, this can be expanded for any spacetime dimension whenever $m^2 \varepsilon \ll 1$ by using the asymptotic properties of the exponential integral function, namely
+%
+\beq\label{eq:Expfnasymptoticsodd}
+\int_{\varepsilon}^{\infty} \frac{\dd \tau}{\tau^{\frac{d}{2}}}\, e^{-\tau m^2} \sim m^{d-2} \left[  \Gamma (-d/2+1) - \sum_{n=0}^{\infty} (-)^n \frac{\left( m^2 \varepsilon \right)^{-\frac{d}{2}+n+1}}{n! \left( -\frac{d}{2}+n+1\right)}\right]\, ,
+\eeq
+%
+as $m^2 \varepsilon \to 0^+$, where we assumed $d \notin 2 \mathbb{Z}_{\geq0}$. For $d \in 2 \mathbb{Z}_{\geq0}$, one obtains an additional logarithmic term
+%
+\beq\label{eq:Expfnasymptoticseven}
+\int_{\varepsilon}^{\infty} \frac{\dd \tau}{\tau^{\frac{d}{2}}}\, e^{-\tau m^2} \sim m^{d-2} \left[ c_{\frac{d}{2}-1}+ \frac{(-1)^{\frac{d}{2}}}{\left(\frac{d}{2}-1 \right)!} \log (m^2 \varepsilon) - \sum_{n=0}^{\infty} (-)^n \frac{\left( m^2 \varepsilon \right)^{-\frac{d}{2}+n+1}}{n! \left( -\frac{d}{2}+n+1\right)}\right]\, ,
+\eeq
+%
+where $c_{\frac{d}{2}-1}$ denotes some $d$-dependent numerical coefficient of value
+%
+\beq
+c_{\frac{d}{2}-1}= \frac{(-1)^{\frac{d}{2}-1}}{\left(\frac{d}{2}-1 \right)!} \left(\gamma-\sum_{n=1}^{d/2-1} \frac{1}{n} \right)\, ,
+\eeq
+%
+and $\gamma \approx 0.577$ is the Euler-Mascheroni constant. Therefore, upon identifying $\LSP=\varepsilon^{-2}$ and substituting either asymptotic expression at leading order in \eqref{eq:heatkernel}, one finds
+%
+\beq \label{eq:leading1loopEH}
+S^{\text{1-loop}}_{\text{EH}} = \frac{\LSP^{d-2}}{3(d-2)(4\pi)^{\frac{d}{2}}}\int \dd^dx\, \sqrt{-g}\, \mathcal{R}\, .
+\eeq
+%
+Hence, assuming that we have $N$ of these fields, we recover the result advocated in eq. \eqref{eq:finalquantumEH} from the main text.
+
+\subsubsection*{Example: Kaluza-Klein theory on $\mathbf{S}^1$}
+
+For illustrative purposes, we analyze here an explicit example in which one can perform the summation of the one-loop contribution to the graviton kinetic term due to an \emph{infinite} tower of states. For simplicity, and since this already provides a couple of nice insights, we consider the simplest Kaluza-Klein scenario of a $D=d+1$ dimensional theory compactified on a circle. We will concentrate on the contribution to the Einstein-Hilbert term associated to Kaluza-Klein replicas of a $D$-dimensional complex scalar $\phi(s, z)$.
+
+In fact, it is easy to see that for a spectrum of this sort, when performing the one-loop integral \eqref{eq:heatkernelEH} and after expanding the result in powers of $m^2\varepsilon$ (c.f. eqs. \eqref{eq:Expfnasymptoticsodd} and \eqref{eq:Expfnasymptoticseven}), each term contributes after summing over all the modes roughly the same way, i.e. precisely as $N \LSP^{d-2}$, such that they can all be in principle resummed. This latter observation was actually to be expected based on the following heuristic argument. The intuition comes from the fact that our KK states in the $d$-dimensional theory are nothing but the momentum excitations modes of the massless $D$-dimensional scalar field, i.e. before compactifying on the $\mathbf{S}^1$. Hence, from the higher dimensional perspective, one expects these massless fields to provide for a one-loop correction of the form 
+%
+\beq\label{eq:masslessheatkernelEH}
+S^{\text{1-loop}}_{\text{EH}} = \int \dd^{D}x\, \sqrt{-\hat g}\, \hat{\mathcal{R}} \int_{\varepsilon}^{\infty} \dd \tau\,  \frac{1}{6(4\pi \tau)^{\frac{D}{2}}}= \frac{\varepsilon^{-\frac{D-2}{2}}}{3 (D-2)(4\pi)^{\frac{D}{2}}} \int \dd^{D}x\, \sqrt{-\hat g}\, \hat{\mathcal{R}}\, ,
+\eeq
+%
+thus proportional to $\LSP^{d-1} \simeq M_{\text{Pl};\, d+1}^{d-1}$. However, one should also take into account the extra $\sqrt{-\hat g}$ factor in \eqref{eq:masslessheatkernelEH}, which when integrated over the $(d+1)$-dimensional spacetime $\mathcal{M}^{d+1} \cong \mathbb{R}^{1,\, d-1} \times \mathbf{S}^1_{\mathsf{R}}$ behaves roughly as $2\pi \mathsf{R} \LSP^{d-1} \simeq (\LSP/m_{\rm KK}) \LSP^{d-2} \simeq N \LSP^{d-2}$, where we substituted $m_{\rm KK}=1/\mathsf{R}$. %We will comment on a possible interpretation of this result later on.
+
+Being slightly more careful, the Schwinger integral in $\mathcal{M}^{d+1} \cong \mathbb{R}^{1,\, d-1} \times \mathbf{S}^1_{\mathsf{R}}$ reads as follows
+%
+\beq\label{eq:Schwingercircle}
+\begin{aligned}
+\mathcal{A}=\frac{1}{6(4\pi)^{\frac{d}{2}}} \int_{\varepsilon}^{\infty} \frac{\dd \tau}{\tau^{\frac{d}{2}}}\, \frac{1}{2\pi \mathsf{R}} \sum_{n=-\infty}^{\infty} e^{-\tau \frac{n^2}{\mathsf{\mathsf{R}}^2}}= \frac{1}{3\times 2^{d+2} \pi^{\frac{d+1}{2}}} \int_{0}^{\varepsilon^{-1}} \dd \hat{\tau}\, \hat{\tau}^{\frac{d-3}{2}}\, \sum_{\omega=-\infty}^{\infty} e^{- \hat{\tau} \left( \pi \mathsf{R} \omega\right)^2}\, ,
+\end{aligned}
+\eeq
+%
+where we have performed a Poisson resummation (c.f. footnote \ref{fnote:Poissonresummation})
+%
+\begin{align}
+    \sum_{n\in\mathbb{Z}} e^{-(2\pi n)^2 a/2}=\frac{1}{\sqrt{2\pi a}} \sum_{\omega\in\mathbb{Z}} e^{-\omega^2/2a}\, ,
+\end{align}
+%
+and we defined a new variable $\hat{\tau} = \tau^{-1}$. It is clear from the above expression that the UV divergent part is now associated to having no winding of the particle worldline along the circle, namely when $\omega=0$. Separating both pieces we find
+%
+\beq\label{eq:UVconvS1}
+\begin{aligned}
+\mathcal{A}_{\omega\neq0}\, &\sim\, \frac{1}{3\times 2^{d+1} \pi^{\frac{d+1}{2}}}\, \sum_{\omega \geq 1} \left(\pi \mathsf{R} \omega \right)^{-d+1}\, \Gamma \left( \frac{d-1}{2}\right) \\
+&= \frac{1}{3\times 2^{d+1} \pi^{\frac{3d-1}{2}} \mathsf{R}^{d-1}}\, \Gamma \left( \frac{d-1}{2}\right)\, \zeta(d-1)\, ,
+\end{aligned}
+\eeq
+%
+for the UV finite part (we only keep the leading order term in $\varepsilon$), as well as 
+%
+\beq\label{eq:UVdivS1}
+\begin{aligned}
+\mathcal{A}_{\omega=0}\, &=\, \frac{1}{3\times 2^{d+2} \pi^{\frac{d+1}{2}}} \int_{0}^{\varepsilon^{-1}} \dd \hat{\tau}\, \hat{\tau}^{\frac{d-3}{2}} = \frac{\LSP^{d-1}}{3\times 2^{d+1} \pi^{\frac{d+1}{2}} (d-1)}\, ,
+\end{aligned}
+\eeq
+%
+for the divergent piece, which agrees with our previous estimation \eqref{eq:masslessheatkernelEH}.
+
+Notice that the dominant contribution comes from the $\omega=0$ term. However, there is a second finite threshold correction to the $d$-dimensional EH term scaling like $m_{\rm KK}^{d-2}$.\footnote{Actually, one can also arrive at \eqref{eq:UVconvS1} upon imposing $\zeta$-function regularization directly to eq. \eqref{eq:Schwingercircle}, see e.g., \cite{Alvarez:2022hjn}.}
+
+\begin{comment}
+Let us finally prove that every term in the asymptotic expansion of the one-loop determinant (c.f. eqs. \eqref{eq:Expfnasymptoticsodd} and \eqref{eq:Expfnasymptoticseven}) contributes roughly the same upon summation over KK modes. We focus on those terms of the form $m_n^{2k} \LQG^{d-2k}$, with $k\in \mathbb{Z}_{\geq0}$ and we have substituted $\varepsilon=\LQG^{-2}$. Then we find
+%
+\beq\label{eq:uniformisation}
+\sum_{|n|\leq N} m_n^{2k} \LQG^{d-2k} \simeq m_{\rm KK}^{2k} \LQG^{d-2k} N^{2k+1} \simeq \LQG^d N \simeq \LQG^2 \Mpd^{d-2}\, ,
+\eeq
+%
+where we have used $\LQG \simeq N m_{\rm KK}$ in the second step and $N \LQG^{d-2} \simeq \Mpd^{d-2}$ in the last one. (Essentially the same contribution arises when focusing on the extra logarithmic term that arises in the CW potential whenever $d \in 2\mathbb{Z}_{\geq0}$.) Therefore, we see some kind of `uniformization' of the expansion of the quantum-induced potential, in agreement with our considerations from the previous paragraph.
+
+\end{comment}
+
+\chapter{Loop Calculations}
+\label{ap:Loops}
+		
+In this appendix we provide detailed calculations of the one-loop Feynman graphs presented in Section \ref{s:selfenergybosons} from the main text. In particular, we focus on those diagrams that contribute to the wave-function renormalization of a scalar, a 1-form gauge field and a Weyl spinor coming from loops of massive scalar and fermions particles. To do so, we compute the amputated one-loop diagram corresponding to each of these processes, shown in Figures \ref{fig:scalarpropagator}-\ref{fig:kineticfermionsbas}. As an important remark, even though we discuss our set-up for the different relevant cases in Lorentzian spacetimes, when performing any loop calculation we will analytically continue the relevant integrals so as to work with Euclidean signature instead, which simplifies the analysis considerably.
+		
+\section{Self-energy of a modulus}
+\label{ap:Loopsscalar}
+		
+Let us begin by considering a real modulus $\phi$, coupled to massive (real) scalars $\{\sigma^{(n)}\}$ or Dirac fermions $\{\psi^{(n)}\}$ through their mass terms as follows
+%
+\begin{align}
+			S_{\mathrm{kin,} \phi}\, &=\, -\dfrac{1}{2} \int   d\phi \wedge \star d\phi \, , \label{eq:Skinphi} \\
+			S_{\sigma^{(n)}} \, &=\,  - \dfrac{1}{2} \int   \left( d\sigma^{(n)} \wedge \star d\sigma^{(n)}\,  +\,  m_n(\phi)^2 \sigma^{(n)} \sigma^{(n)} \right) \star 1\, , \label{eq:Ssigman}\\
+			S_{\psi^{(n)}} \, &= \,  \int  \left( \i \overline{\psi^{(n)}}\,  \slashed{D} \, \psi^{(n)} \, -\,  m_n(\phi) \, \overline{\psi^{(n)}}\psi^{(n)} \right) \star 1\, . \label{eq:Spsin}
+\end{align}
+%
+We keep in mind that the label $n \in \mathbb{N}$ will eventually denote the step in the tower in which either the scalars $\{\sigma^{(n)}\}$ or the fermions $\{\psi^{(n)}\}$ are organized, with their masses $m_n(\phi)$ increasing accordingly, but for now the computation is meant to be quite general. In the context of Emergence, we are interested in the computation of the wave-function renormalization of the scalar field $\phi$ in $d$ spacetime dimensions due to scalar and fermionic loops. The idea is thus to extract the momentum-dependent part of the exact propagator of the massless modulus $\phi$ at $\mathcal{O}(\hbar)$ in the Wilsonian effective action after integrating out the heavy fields, which takes the form
+%
+\beq\label{eq:exactpropscalar}
+		D(p^2)=\frac{1}{p^2-\Pi(p^2)}\, ,
+\eeq
+%
+after deforming the contour of integration and analytically extending the results to Euclidean signature, i.e. $\Bar{g}_{\mu \nu}= \delta_{\mu \nu}$ (see e.g., \cite{Nair:2005iw}). Here, $\Pi(p^2)$ corresponds to the (amputated) one-loop Feynman diagram displayed in Figure \ref{fig:scalarpropagator}.
+		
+\subsubsection*{Scalar loop}
+		
+Let us begin by considering the contribution due to a loop of scalars $\{\sigma^{(n)}\}$, which is shown in Figure \ref{fig:scalarloopscalar} and  reads (taking into account an overall $1/2$ symmetry factor of the diagram)
+%
+\beq
+		\Pi_n(p^2) \ = \frac{\lambda_n^2}{2} \int \frac {\text{d}^dq}{(2\pi)^d} \frac {1}{(q^2+m_n^2)} \frac {1}{\left((q-p)^2+m_n^2\right)}\, ,
+\label{eq:selfenergyscalar(ap)}
+\eeq
+%
+with the coupling $\lambda_n=2m_n(\partial_\phi m_n)$ coming from the trilinear vertex arising after expanding the mass term in eq. \eqref{eq:Ssigman} around the modulus v.e.v. at linear order. Since we are interested in the correction to the propagator, we need to extract the term proportional to $p^2$, so that we take a derivative with respect to $p^2$ and evaluate the result at $p=0$ to obtain\footnote{Notice that naively one would also obtain a term proportional to $1/|p|$ after taking the derivative with respect to $p^2$, but this would correct the linear term in the momentum expansion, which can be seen to be absent when the detailed computation is performed (as required by Lorentz invariance).} 
+%
+\beq
+		\frac {\partial \Pi_n(p^2)}{\partial p^2} \bigg\rvert_{p=0}  = - \frac{\lambda_n^2}{2} \int \frac {\text{d}^dq}{(2\pi)^d} \frac {1}{(q^2+m_n^2)^3}\, .
+\label{eq:sigmaa_ap}
+\eeq
+%
+From this expression we expect the integral to be divergent for $d\geq 6$ and convergent otherwise. However, since we will always keep in mind the idea of introducing the UV cut-off associated to QG, namely the species scale, we perform the momentum integral up to a maximum scale $\Lambda$, which yields the following general expression
+%
+\beq
+		\begin{split}
+			\frac{\partial \Pi_n(p^2)}{\partial p^2} \bigg\rvert_{p=0}  \, =  \, - \lambda_n^2  \ \frac{ \pi^{d/2}  }{8\,  (2 \pi)^d \, \Gamma(d/2) } \ \frac{\Lambda^d}{m_n^6} \ & \left[ - \frac{(d-6)m_n^4+(d-4)m_n^2\Lambda^2}{(\Lambda^2+m_n^2)^2} \right.  \\
+			& \quad \left.  + \left(d+ \frac{8}{d}-6\right) \ _2{\cal F}_1\left( 1,\frac{d}{2};\frac{d+2}{2}; -\frac{\Lambda^2}{m_n^2}\right) \right]  \, ,
+		\end{split}
+\label{eq:scalarloopscalarexact}
+\eeq
+%  
+with $_2{\cal F}_1(a,b;c;d)$ the ordinary (or Gaussian) hypergeometric function. Given the kind of towers that we are dealing with (c.f. Section \ref{s:speciesscale}), the two relevant asymptotic limits for this expression are \emph{(i)} $\Lambda \gg m_n$ (for most states of KK-like towers) and \emph{(ii)} $\Lambda \simeq m_n$ (for most states of stringy towers). In order to study each of these limits in turn, we will also distinguish between $d>6$, $d=6$ and $d<6$, given that the divergence of the corresponding expressions in the large $\Lambda$ limit is different for these three cases.
+		
+Let us begin by considering the limit, $\Lambda \gg m_n$, which dominates the contributions coming from KK-like towers. In this case, the integral diverges polynomially  with $\Lambda$ for $d>6$ as
+%
+\beq
+		\frac {\partial \Pi_n^{(d>6)}(p^2)}{\partial p^2} \bigg\rvert_{p=0}\, = \, - \lambda_n^2 \ \frac{\pi^{d/2}}{(2 \pi)^d\ \Gamma\left( d/2 \right) \ (d-6)}   \ \Lambda^{d-6} \, + \, \mathcal{O}\left(\Lambda^{d-8}\, m_n^2\right) + \mathrm{const.} \ ,
+\label{eq:scalarloopscalarsd>6}
+\eeq
+%  
+such that the leading term goes like $\Lambda^{d-6}$. For $d<6$ one can expand eq. \eqref{eq:scalarloopscalarexact} to obtain
+% 
+\beq
+		\frac {\partial \Pi_n^{(d<6)}(p^2)}{\partial p^2} \bigg\rvert_{p=0}\, = \, - \lambda_n^2 \ \frac{\pi^{\frac{d+2}{2}}}{16 \ (2 \pi)^d  \ \Gamma\left( d/2 \right)} \frac{(d-2)(d-4)}{\sin\left( d \pi/2\right)} \ \frac{1}{m_n^{6-d}} + \, \mathcal{O}\left(\frac{1}{\Lambda^{6-d}}\right)  \ .
+\label{eq:scalarloopscalarsd<6}
+\eeq
+%
+		%
+		\begin{table}[t]\begin{center}
+				\renewcommand{\arraystretch}{2.00}
+				\begin{tabular}{|c||c|c|c|c|c|}
+					\hline
+					$d$ & 2 & 3 & 4 & 5 & 6 \\
+					\hline 
+					$\dfrac {\partial \Pi_n}{\partial p^2} \bigg\rvert_{p=0}$ &
+					$-\dfrac{1}{16 \pi}\dfrac{\lambda_n^2}{m_n^4}$ & 
+					$ -\dfrac{1}{64 \pi  }\dfrac{\lambda_n^2}{m_n^3}$ &
+					$ -\dfrac{1}{64 \pi^2}\dfrac{\lambda_n^2}{m_n^2}$ & 
+					$-\dfrac{9}{128 \pi^2}\dfrac{\lambda_n^2}{m_n}$ &
+					$ -\dfrac{\lambda_n^2 }{256 \pi ^3} \log \left(\dfrac{\Lambda ^2}{m_n^2}\right) $ \\
+					\hline 
+					\hline
+					$d$ &  7 & 8 & 9 & 10 & 11\\
+					\hline 
+					$\dfrac {\partial \Pi_n}{\partial p^2} \bigg\rvert_{p=0}$ &
+					$  -\dfrac{\lambda_n^2  \, \Lambda }{240 \pi^4}  $ &
+					$-\dfrac{\lambda_n^2  \, \Lambda^2  }{3072 \pi^4} $ &
+					$ -\dfrac{\lambda_n^2  \, \Lambda^3  }{10080 \pi^5}$ &
+					$ -\dfrac{\lambda_n^2  \, \Lambda^4   }{98304 \pi^5}$ &
+					$  -\dfrac{\lambda_n^2  \, \Lambda^5 }{302400 \pi^6} $  \\
+					\hline
+				\end{tabular}
+				\caption{Leading contribution to the wave-function renormalization of a modulus field due to a loop of massive scalars, as given by eq. \eqref{eq:scalarloopscalarexact}, in the limit $\Lambda\gg m_n$ for different number of spacetime dimensions $2 \leq d \leq 11$.}
+				\label{tab:scalarloopscalarLambda>>m}\end{center}
+		\end{table}  
+		%
+%
+Note that the leading piece here is actually the constant term in $\Lambda$, which was irrelevant in \eqref{eq:scalarloopscalarsd>6} but provides instead the leading correction for $d<6$. Additionally, the piece proportional to $(d-2)(d-4)\sin^{-1}\left( d \pi/2\right)$ must be defined as a limit, thus taking a value equal to $\{ 4/\pi,\, 3,\, 1\}$ for $d=2,\, 4$, $d=1,\, 5$, and $d=3$, respectively. Let us also remark that for $d<6$ the loop integral is convergent such that, at the QFT level, no UV cut-off (nor UV regulator whatsoever) is actually necessary. Finally, for the marginal case $d=6$, we get the expected leading logarithmic correction
+%
+\beq
+		\frac {\partial \Pi_n^{(d=6)}(p^2)}{\partial p^2} \bigg\rvert_{p=0} \, =\, -  \frac{\lambda_n^2 }{256 \pi^3 }\log \left( \frac{\Lambda^2}{m_n^2} \right) \ + \ \mathcal{O}\left( \Lambda^0 \right)  \, .
+\label{eq:scalarloopscalard=6}
+\eeq
+%
+A summary of the relevant leading term for a different number of spacetime dimensions can be found in Table \ref{tab:scalarloopscalarLambda>>m}.
+		
+Consider now the alternative limiting case, namely $\Lambda \simeq m_n$, which gives an upper bound for the states whose contribution to the loop must be included. Notice that this is the dominant term for towers of string oscillator modes. In this case, we can expand eq. \eqref{eq:scalarloopscalarexact} for any $d$, yielding the following expression
+%
+\beq
+		\begin{split}
+			\frac {\partial \Pi_n(p^2)}{\partial p^2} \bigg\rvert_{p=0} \, = \, -  \frac{\lambda_n^2 \  \pi^{d/2}}{32 \ (2 \pi)^d\ \Gamma(d/2) }   &\left\{ 10-2d+(d-2)(d-4) \left[\psi\left( \frac{d+2}{4}\right)-  \psi\left( \frac{d}{4} \right)  \right] \right\} \Lambda^{d-6}   \\
+			& \quad + \mathcal{O}(\Lambda-m_n)   \, ,
+		\end{split}
+\label{eq:scalarloopscalarLambda=m}
+\eeq
+%  
+where $\psi(z)$ represents the digamma function.\footnote{The digamma function, $\psi(z)$, is defined as the logarithmic derivative of the familiar gamma function $\Gamma(z)$ with respect to its argument, namely
+%
+\beq
+			\notag \psi(z) = \frac{d}{dz} \log \left( \Gamma(z)\right) = \frac{\Gamma'(z)}{\Gamma(z)}\, .
+\eeq
+%
+} Notice that since in this limit $\Lambda \simeq m_n$, we recover the same leading asymptotic dependence with $\Lambda$ and $m_n$ as in eqs. \eqref{eq:scalarloopscalarsd>6}-\eqref{eq:scalarloopscalard=6}. The precise form of the leading term for different number of spacetime dimensions is summarized in Table \ref{tab:scalarloopscalarLambda=m}.
+		%
+		\begin{table}[t]\begin{center}
+				\renewcommand{\arraystretch}{2.00}
+				\begin{tabular}{|c||c|c|c|c|c|}
+					\hline
+					$d$ & 2 & 3 & 4 & 5 & 6 \\
+					\hline 
+					$\dfrac {\partial \Pi_n}{\partial p^2} \bigg\rvert_{p=0}$ &
+					$-\dfrac{3}{64 \pi}\dfrac{\lambda_n^2}{m_n^4}$ & 
+					$ -\dfrac{1}{128 \pi}\dfrac{\lambda_n^2}{m_n^3}$ &
+					$ -\dfrac{1}{256 \pi^2}\dfrac{\lambda_n^2}{m_n^2}$ & 
+					$-\dfrac{(3\pi-8)}{768 \pi^3}\dfrac{\lambda_n^2}{m_n}$ &
+					$ -\dfrac{8\log(2)-5}{2048 \pi ^3} \lambda_n^2  $ \\
+					\hline 
+					\hline
+					$d$ &  7 & 8 & 9 & 10 & 11\\
+					\hline 
+					$\dfrac {\partial \Pi_n}{\partial p^2} \bigg\rvert_{p=0}$ &
+					
+					$\begin{aligned}[t] -\tfrac{(16-5\pi) }{2560 \pi^4} \times  & \\  \lambda_n^2  \, \Lambda & \end{aligned}$ &
+					$\begin{aligned}[t]-\tfrac{(17-24\log(2)) }{24576 \pi^4} \times & \\ \lambda_n^2  \, \Lambda^2 & \end{aligned}$  &
+					$ \begin{aligned}[t]-\tfrac{(105\pi-328)}{322560 \pi^5} \times & \\ \lambda_n^2  \, \Lambda^3 & \end{aligned}$ &
+					$ \begin{aligned}[t]-\tfrac{(16\log(2)-11)  }{131072 \pi^5} \times & \\ \lambda_n^2  \, \Lambda^4 & \end{aligned}$ &
+					$ \begin{aligned}[t] -\tfrac{(992-315\pi) }{9676800 \pi^6} \times & \\ \lambda_n^2  \, \Lambda^5 & \end{aligned}$  \\
+					\hline
+				\end{tabular}
+				\caption{Leading contribution to the wave-function renormalization of a modulus field due to a loop of massive scalars, given by eq. \eqref{eq:scalarloopscalarexact}, in the limit $\Lambda \simeq m_n$ for different number of spacetime dimensions $2 \leq d \leq 11$.}
+				\label{tab:scalarloopscalarLambda=m}\end{center}
+		\end{table}  
+		%
+		
+		
+Let us remark that the leading asymptotic dependence with the corresponding energy scale (i.e. with the UV cut-off or the mass of the particle running in the loop) is the same for the two limiting cases, $\Lambda \gg m_n$ and $\Lambda\simeq m_n$, with only numerical prefactors differing between the two expressions. Thus, since these limits actually bound the contribution of a given particle to the loop, we can safely use any of the above asymptotic relations in order to calculate the field dependent contribution of the towers to the relevant kinetic terms.
+		
+		
+		
+\subsubsection*{Fermionic loop}
+		
+We now consider the contribution to the scalar metric from a loop of fermions, with a coupling induced by the mass term as specified in the action \eqref{eq:Spsin}. The calculation is similar to the scalar loop above, and the corresponding Feynman diagram, displayed in Figure \ref{fig:scalarloopfermion}, gives the following correction
+%
+\begin{equation}\label{eq:selfenergyfermion(ap)}
+			\begin{aligned}
+				\Pi_n(p^2) \ &= -\mu_n^2  \int \frac {\text{d}^dq}{(2\pi)^d}\ \text{tr} \left (\frac {1}{\i \slashed{q}+m_n}\ \frac {1}{\i (\slashed{q}-\slashed{p})+m_n} \right)\\
+				&= -\mu_n^2  \int \frac {\text{d}^dq}{(2\pi)^d} \text{tr} \left ( \frac{(-\i \slashed{q} + m_n)(-\i (\slashed{q}-\slashed{p})+m_n)}{(q^2+m_n^2)((q-p)^2+m_n^2)} \right)\ . 
+			\end{aligned}
+\end{equation}
+%
+Here, the relevant coupling constant is $\mu_n = \partial_\phi m_n(\phi)$, and notice that there is an extra minus sign with respect to \eqref{eq:selfenergyscalar(ap)} due to the fact that the particle is of fermionic nature. By recalling that the dimensionality of the Dirac matrices in $d$ spacetime dimensions is $\fdim$ (where $\lfloor x \rfloor$ denotes the largest integer less than or equal to $x$), and using the following identities
+%
+\begin{equation}
+			\label{eq:scalarloopfermionstraces}
+			\text{tr} \left(\gamma^{\mu} \right)=\ 0\,  , \qquad
+			\text{tr} \left(\gamma^{\mu} \gamma^{\nu}\right)=\ \fdim \delta^{\mu \nu}\ ,
+\end{equation}
+%
+we can explicitly perform the trace in \eqref{eq:selfenergyfermion(ap)}, which leads to
+%
+\begin{equation}
+			\text{tr}\left\{ (-\i \slashed{q} + m_n)(-\i(\slashed{q}-\slashed{p})+m_n) \right\} \, =\, -\fdim (q^2 - p\cdot q -m_n^2)\, .
+\end{equation}
+%
+Thus, upon extracting the part that is linear in $p^2$ we arrive at
+%
+\begin{equation}\label{eq:fermionloopddim}
+			\frac{\partial \Pi_n(p^2)}{\partial p^2} \bigg\rvert_{p=0} \, = \,   -\mu_n^2\, \fdim  \int \frac {\text{d}^dq}{(2\pi)^d} \frac{1}{(q^2+m_n^2)^2} \ + \ 2 m_n^2 \, \mu_n^2\ \fdim \int \frac {\text{d}^dq}{(2\pi)^d} \frac{1}{(q^2+m_n^2)^3} \, ,
+\end{equation}
+%
+where we have used the fact that some terms quadratic in $q$ cancel identically between themselves and that those linear in $q$ vanish after integration along the angular directions. Notice that the second piece is exactly the same as the contribution from $\fdim$ real scalars (recall that $\lambda_n= 2 m_n (\partial_\phi m_n)=2 m_n \mu_n$), but with \emph{opposite} sign. Thus, we can use all the results from our previous computations in order to evaluate the exact contribution. (Note that in the case in which the number of fermionic degrees of freedom equals the bosonic ones --- as e.g., in supersymmetric set-ups --- there is an exact cancellation between these two pieces.) The first term in \eqref{eq:fermionloopddim}, however, has a different (although similar) structure, and it is expected to be divergent for $d\geq 4$. Its precise form after imposing a UV cut-off $\Lambda$ for the momentum integral is therefore
+%
+\begin{equation}
+			\frac{\partial \Pi_n(p^2)}{\partial p^2} \bigg\rvert_{p=0}  \, =  \, - \mu_n^2  \ \frac{ \fdim \pi^{d/2}  }{  (2 \pi)^d \, \Gamma(d/2) } \ \frac{\Lambda^d}{m_n^4} \  \left[  \frac{m_n^2}{\Lambda^2+m_n^2}  + \left(\frac{2}{d}-1\right) \ _2{\cal F}_1\left( 1,\frac{d}{2};\frac{d+2}{2}; -\frac{\Lambda^2}{m_n^2}\right) \right]  \, .
+\label{eq:scalarloopfermionexact}
+\end{equation}
+%
+		%
+		\begin{table}[t]\begin{center}
+				\renewcommand{\arraystretch}{2.00}
+				\begin{tabular}{|c||c|c|c|c|c|}
+					\hline
+					$d$ & 2 & 3 & 4 & 5 & 6 \\
+					\hline 
+					$\dfrac {\partial \Pi_n}{\partial p^2} \bigg\rvert_{p=0}$ &
+					$-\dfrac{1}{2 \pi}\dfrac{\mu_n^2}{m_n^2}$ & 
+					$ -\dfrac{1}{4 \pi  }\dfrac{\mu_n^2}{m_n}$ &
+					$ -\dfrac{\mu_n^2 }{4 \pi^2 } \log \left(\dfrac{\Lambda ^2}{m_n^2}\right)$ & 
+					$ -\dfrac{\mu_n^2  \, \Lambda }{3 \pi^2}$ &
+					$ -\dfrac{\mu_n^2  \, \Lambda^2 }{16 \pi^3} $ \\
+					\hline 
+					\hline
+					$d$ &  7 & 8 & 9 & 10 & 11\\
+					\hline 
+					$\dfrac {\partial \Pi_n}{\partial p^2} \bigg\rvert_{p=0}$ &
+					$  -\dfrac{\mu_n^2  \, \Lambda^3 }{45 \pi^4}  $ &
+					$-\dfrac{\mu_n^2  \, \Lambda^4  }{192 \pi^4} $ &
+					$ -\dfrac{\mu_n^2  \, \Lambda^5  }{525 \pi^5}$ &
+					$ -\dfrac{\mu_n^2  \, \Lambda^6   }{2304 \pi^5}$ &
+					$  -\dfrac{\mu_n^2  \, \Lambda^7 }{6615 \pi^6} $  \\
+					\hline
+				\end{tabular}
+				\caption{Leading contribution to the wave-function renormalization of a modulus field due to a loop of massive fermions, as given by eq. \eqref{eq:scalarloopfermionexact}, in the limit $\Lambda\gg m_n$ for different number of spacetime dimensions $2 \leq d \leq 11$.}
+				\label{tab:scalarloopfermionLambda>>m}\end{center}
+		\end{table}  
+		%
+%
+Now, in the limit $\Lambda \gg m_n$, which as we said is particularly relevant for most states in a KK-like tower, the leading contribution to the propagator in $d>4$ takes the form
+%
+\begin{equation}
+			\frac {\partial \Pi_n^{(d>4)}(p^2)}{\partial p^2} \bigg\rvert_{p=0}\, = \, -\mu_n^2\,  \frac{2^{\lfloor \frac{d+2}{2} \rfloor} \pi^{d/2}}{(2 \pi)^d\ \Gamma\left( d/2 \right) \ (d-4)}   \ \Lambda^{d-4} \, + \, \mathcal{O}\left(\Lambda^{d-6}\, m_n^2\right) + \mathrm{const.} \ ,
+			\label{eq:scalarloopfermionsd>4}
+\end{equation}
+%
+which is very similar to the scalar contribution \eqref{eq:scalarloopscalarsd>6} but with a different power of the cut-off. Similarly, for $d<4$ the dominant term (which corresponds to the `const.' piece in the previous expansion) reads\footnote{Notice that in the context of the Swampland program one typically studies EFTs in $d\geq 4$, but we also include here the results in lower dimensions for completeness.}
+%
+\begin{equation}
+			\frac {\partial \Pi_n^{(d<4)}(p^2)}{\partial p^2} \bigg\rvert_{p=0}\, = \, - \mu_n^2 \ \frac{2^{\lfloor\frac{d-2}{2} \rfloor} \ \pi^{\frac{d+2}{2}} }{(2 \pi)^d  \ \Gamma\left( d/2 \right)} \ \frac{(2-d)}{\sin\left( d \pi/2\right)} \ \frac{1}{m_n^{4-d}} + \, \mathcal{O}\left(\frac{1}{\Lambda^{4-d}}\right)  \ ,
+\label{eq:scalarloopfermionsd<4}
+\end{equation}
+%
+where once again for $d=2$ the quotient $(2-d) \sin^{-1}\left( d \pi/2\right)$ is defined as a limit and takes a value of $2/ \pi$. For the marginal case, we recover instead the expected logarithmic divergence
+%
+\beq
+		\frac {\partial \Pi_n^{(d=4)}(p^2)}{\partial p^2} \bigg\rvert_{p=0} \, =\, -  \frac{\mu_n^2 }{4 \pi^2 }\log \left( \frac{\Lambda^2}{m_n^2} \right) \ + \ \mathcal{O}\left( \Lambda^0 \right)  \, .
+\label{eq:scalarloopfermionsd=6}
+\eeq
+%
+The precise leading contributions for all relevant values of $d$ are summarized in Table \ref{tab:scalarloopfermionLambda>>m}.
+		
+Taking now the other relevant limit, namely $\Lambda \simeq m_n$, we can similarly expand eq. \eqref{eq:scalarloopfermionexact} to obtain the following expression
+%
+\begin{equation}
+			\frac {\partial \Pi_n(p^2)}{\partial p^2} \bigg\rvert_{p=0} \, = \, - \mu_n^2 \ \frac{2^{\lfloor\frac{d}{2}-2 \rfloor}  \pi^{d/2}}{ (2 \pi)^d\ \Gamma(d/2) }   \left\{ 2+(d-2)\left[\psi\left( \frac{d}{4}\right)-  \psi\left( \frac{d+2}{4} \right)  \right] \right\} \Lambda^{d-4} + \, \mathcal{O}(\Lambda-m_n)   \, .
+\label{eq:scalarloopfermionLambda=m}
+\end{equation}
+%
+As in the scalar case, since we have $\Lambda\simeq m_n$, the asymptotic dependence with the relevant scale is the same as the one in the $\Lambda \gg m_n$ limit, and only numerical prefactors change. The leading terms in \eqref{eq:scalarloopfermionLambda=m} for $2\leq d \leq 11$ are outlined in Table \ref{tab:scalarloopfermionLambda=m}.
+%
+		%
+		\begin{table}[t]\begin{center}
+				\renewcommand{\arraystretch}{2.00}
+				\begin{tabular}{|c||c|c|c|c|c|}
+					\hline
+					$d$ & 2 & 3 & 4 & 5 & 6 \\
+					\hline 
+					$\dfrac {\partial \Pi_n}{\partial p^2} \bigg\rvert_{p=0}$ &
+					$-\dfrac{1}{4 \pi}\dfrac{\mu_n^2}{m_n^2}$ & 
+					$ -\dfrac{(\pi -2)}{8 \pi^2  }\dfrac{\mu_n^2}{m_n}$ &
+					$ -\frac{(2\log(2)-1)}{8 \pi^2 } \mu_n^2 $ & 
+					$ \begin{aligned}[t]-\tfrac{(10-3\pi)}{24 \pi^3}\times &\\ \mu_n^2  \, \Lambda & \end{aligned}$ &
+					$ \begin{aligned}[t]-\tfrac{(3-4\log(2))}{32 \pi^3}\times &\\ \mu_n^2  \, \Lambda^2 & \end{aligned}$ \\
+					\hline 
+					\hline
+					$d$ &  7 & 8 & 9 & 10 & 11\\
+					\hline 
+					$\dfrac {\partial \Pi_n}{\partial p^2} \bigg\rvert_{p=0}$ &
+					$ \begin{aligned}[t] -\tfrac{ (15\pi-46)}{360 \pi^4}\times &\\  \mu_n^2  \, \Lambda^3 & \end{aligned}$ &
+					$\begin{aligned}[t]-\tfrac{(3\log(2)-2)}{96 \pi^4}\times &\\ \mu_n^2  \, \Lambda^4  & \end{aligned}$ &
+					$ \begin{aligned}[t]-\tfrac{(334-105\pi) }{12600 \pi^5}\times &\\ \mu_n^2  \, \Lambda^5 & \end{aligned}$ &
+					$ \begin{aligned}[t]-\tfrac{ (17-24\log(2)) }{4608 \pi^5}\times &\\ \mu_n^2  \, \Lambda^6 & \end{aligned}$ &
+					$ \begin{aligned}[t] -\tfrac{(315\pi-982) }{264600 \pi^6}\times &\\  \mu_n^2  \, \Lambda^7 & \end{aligned}$  \\
+					\hline
+				\end{tabular}
+				\caption{Leading contribution to the wave-function renormalization of a modulus field due to a loop of massive fermions, as given by eq. \eqref{eq:scalarloopfermionexact}, in the limit $\Lambda\simeq m_n$ for different number of spacetime dimensions $2 \leq d \leq 11$.}
+				\label{tab:scalarloopfermionLambda=m}\end{center}
+		\end{table}  
+		%
+% 
+		
+\section{Self-energy of a gauge 1-form}
+\label{ap:Loops1-form}
+		
+We consider now a 1-form, $A_\mu$, with field strength $F_{\mu \nu }\, =\,2\  \partial_{[\mu} A_{\nu]}$, coupled to massive (complex) scalars $\{\chi^{(n)}\}$ or fermions $\{\psi^{(n)}\}$ through the following action
+%
+\begin{align}
+			S_{\mathrm{kin,} A_1}\, &= \, -\dfrac{1}{4\, g^2} \int \dd^d x \sqrt{-g} \   F_{\mu\nu} F^{\mu \nu}\, , \label{eq:SkinA1} \\
+			S_{\sigma^{(n)}} \, &=\,  - \dfrac{1}{2} \int \dd^d x \sqrt{-g} \ \left(  D_\mu \chi^{(n)} \overline{D^\mu \chi^{(n)}}\,  +\,  m_n^2 \ \chi^{(n)} \overline{\chi^{(n)}} \right) \, , \label{eq:SchinA1}\\
+			S_{\psi^{(n)}} \, &= \,  \int \dd^d x \sqrt{-g} \   \left( \i \overline{\psi^{(n)}}\,  \slashed{D} \, \psi^{(n)} \, -\,  m_n \ \overline{\psi^{(n)}}\psi^{(n)} \right) \, . \label{eq:SpsinA1}
+\end{align}
+%
+Here, the overline denotes complex conjugation for the scalars as well as Dirac conjugation for the fermions, whilst $D_\mu$ represents the appropriate covariant derivative of the fields minimally coupled to $A_1$, defined as 
+%
+\begin{equation}
+			D_\mu \chi^{(n)} \, = \, \left(\partial_\mu -\i q_n A_\mu \right) \chi^{(n)} \, , \qquad D_\mu \psi^{(n)} \, = \, \left(\partial_\mu -\i q_n A_\mu \right) \psi^{(n)}\, .
+\end{equation}
+%
+We will be concerned in what follows with the corrections to the propagator of $A_1$ induced by quantum loops from integrating out heavy scalar and fermion fields. As a remark, we will not elaborate on the subtleties associated to gauge invariant regularization, which are made manifest specially when imposing a UV cut-off $\Lambda$. %\footnote{Notice that a similar problem arises upon imposing a UV cut-off at or below the Planck scale in a gravitational theory, since doing so is a priori inconsistent with diffeomorphism invariance. This becomes evident e.g., when we compactify such theory on a circle, where the gauge invariances of the spin-2 KK massive modes mix between each other, such that simply retaining a finite number of them explicitly breaks the relevant gauge symmetries\cite{Dolan:1983aa,Duff:1989ea}.} 
+Let us just mention that gauge invariance in the presence of a hard cut-off can be ensured rigorously (see Appendix \ref{ap:heatkernel} for details), but we will take a pragmatic approach here by focusing only on the dependence of the required amplitudes with $\Lambda$, instead of watching carefully that the correct tensorial structure is maintained even at the quantum level --- which is of course related to the preservation of gauge invariance. To do so, we use the Lorenz gauge (i.e. $\partial_\mu A^\mu=0$), since it can also be easily generalized to arbitrary $p$-form gauge fields. The propagator then takes the form (on a flat background with Euclidean metric $\Bar{g}_{\mu \nu}= \delta_{\mu \nu}$)\footnote{\label{fn:FeynmantHooftgauge}Strictly speaking, in order to fix the tensorial structure of the propagator as in eq. \eqref{eq:A1propagatorapp}, one has to impose additionally the Feynman-`t Hooft gauge, which is an instance of the more general $R_{\xi}$-gauges, with $\xi$ fixed to be equal to 1.} 
+%
+\begin{equation}
+\label{eq:A1propagatorapp}
+			D^{\mu \nu} (p^2) \, = \, \left( \dfrac{p^2}{g^2} \delta ^{\mu \nu} - \Pi^{\mu \nu}(p^2) \right)^{-1}\, ,
+\end{equation}
+%
+where $\Pi^{\mu \nu}$ is zero at tree level, and gives the amputated Feynman diagram from the loops shown in Figure \ref{fig:1-formpropagator}. By using again our gauge choice, we can extract the tensorial dependence as follows 
+%(see footnote \ref{fn:FeynmantHooftgauge})
+%
+\begin{equation}
+			\label{eq:A1loopamplitudeapp}
+			\Pi^{\mu \nu} (p^2) \, = \, \Pi(p^2) \delta ^{\mu \nu} \, .
+\end{equation}
+%
+We are thus interested in extracting the piece proportional to $p^2$ within $\Pi(p^2)$, as arising from the aforementioned loop corrections.
+		
+\subsubsection*{Scalar loop}
+		
+We begin by considering the coupling of the 1-form to a complex scalar, $\chi^{(n)}$, with mass $m_n$ and charge $q_n$, as given by the action \eqref{eq:SchinA1}. The relevant one-loop Feynamn diagram is shown in Figure \ref{fig:1-formloopscalar}, and it reads
+%
+\beq
+		\Pi^{\mu \nu}_n(p) \, =\,   g^2 \, q_n^2 \int \frac {\text{d}^dq}{(2\pi)^d} \frac {(2q-p)^{\mu} (2q-p)^{\nu}}{(q^2+m_n^2)\left( (q-p)^2+m_n^2\right)} \, .
+\label{eq:A1scalar}
+\eeq
+%
+From all the terms in the numerator, we only need to keep track of the ones $\propto q^\mu q^\nu$. The reason being that the ones proportional to $p^\mu p^\nu$ amount essentially to a change of gauge, which as we argued is not important for our purposes here, whilst the ones linear in $q^\mu$ instead turn out to either cancel identically or produce also linear terms in $q^\mu$ after taking the derivative with respect to $p^2$ and setting $p$ to zero, which then also cancel after the angular integration. Moreover, we can explicitly use Lorentz invariance to replace
+%
+\begin{equation}
+\label{eq:qmuqnuaverage}
+			q^\mu q^\nu \ \longrightarrow \ \dfrac{q^2}{d} \, \delta^{\mu \nu}\, ,
+\end{equation}
+%
+under the integral sign in \eqref{eq:A1scalar}. Notice that this gives rise at the end of the day to the tensor structure announced in \eqref{eq:A1loopamplitudeapp}. Thus, the precise form of the relevant piece of the amputated Feynman diagram yields
+%
+\begin{equation}\label{eq:1-formscalarloopprop}
+			\frac{\partial \Pi^{\mu \nu}_n(p^2)}{\partial p^2} \bigg\rvert_{p=0} \, = \, -g^2\,  q_n^2\,   \frac{4}{d} \, \delta^{\mu\nu} \, \int \dfrac{d^d q}{(2\pi)^d} \dfrac{q^2}{(q^2+m_n^2)^3} \, .
+\end{equation}
+%
+As happened with the modulus case, we expect this integral to behave differently depending on the number of spacetime dimensions. In particular, it seems to diverge for $d\geq4$, but we will introduce a cut-off for any $d$ since at the end of the day we are interested in integrating up to a physical UV scale beyond which our EFT weakly coupled to Einstein gravity stops being valid. The exact expression gives therefore
+%
+\beq
+		\begin{split}
+			\frac{\partial \Pi_n(p^2)}{\partial p^2} \bigg\rvert_{p=0}   =  \, - g^2 \, q_n^2  \ \frac{ \pi^{d/2}  }{d\,  (2 \pi)^d \, \Gamma(d/2) } \ \frac{\Lambda^{d+2}}{m_n^6} \ & \left[ - \frac{(d-4)m_n^4+(d-2)m_n^2\Lambda^2}{(\Lambda^2+m_n^2)^2} \right.  \\
+			& \quad \left.  + \dfrac{d(d-2)}{d+2} \ _2{\cal F}_1\left( 1,\frac{d+2}{2};\frac{d+4}{2}; -\frac{\Lambda^2}{m_n^2}\right) \right]  \, ,
+		\end{split}
+\label{eq:1-formloopscalarexact}
+\eeq
+%  
+where $\Pi_n(p^2)$ captures the part of the diagram after extracting the tensorial piece (c.f. eq. \eqref{eq:A1loopamplitudeapp}).
+		
+In analogy with the massless scalar case, the two relevant asymptotic limits that we take for this expression are \emph{(i)} $\Lambda \gg m_n$ (for most states of KK-like towers) and \emph{(ii)} $\Lambda \simeq m_n$ (for most states of stringy towers). In the first case, the integral diverges polynomially with $\Lambda$ for $d>4$ as 
+%
+\begin{equation}
+			\frac {\partial \Pi_n^{(d>4)}(p^2)}{\partial p^2} \bigg\rvert_{p=0} = \, -g^2 \, q_n^2\  \frac{8\ \pi^{d/2}}{(2 \pi)^d\ \Gamma\left( d/2 \right) \ d\, (d-4)}    \ \Lambda^{d-4} \, + \, \mathcal{O}\left(\Lambda^{d-6}\, m_n^2\right) + \mathrm{const.} \ ,
+\label{eq:1formloopfermionsd>4}
+\end{equation}
+%
+whereas in lower dimensions it is convergent and the leading contribution is given by
+%
+\begin{equation}
+			\frac {\partial \Pi_n^{(d<4)}(p^2)}{\partial p^2} \bigg\rvert_{p=0} = \, - g^2 \, q_n^2 \ \frac{\pi^{\frac{d+2}{2}} }{2 \, (2 \pi)^d  \ \Gamma\left( d/2 \right)} \ \frac{(2-d)}{\sin\left( d \pi/2\right)} \ \frac{1}{m_n^{4-d}} + \, \mathcal{O}\left(\frac{1}{\Lambda^{4-d}}\right)  \ ,
+\label{eq:1formloopfermionsd<4}
+\end{equation}
+%
+with the quotient $(2-d)/\sin\left( d \pi/2\right)$ defined as a limit with value $2/ \pi$ for $d=2$. Finally, for the marginal case, we get the expected logarithmic behaviour familiar from (scalar) QED
+%
+\beq
+		\frac {\partial \Pi_n^{(d=4)}(p^2)}{\partial p^2} \bigg\rvert_{p=0} \, =\, -  \frac{g^2 \, q_n^2 }{16 \pi^2 }\log \left( \frac{\Lambda^2}{m_n^2} \right) \ + \ \mathcal{O}\left( \Lambda^0 \right)  \, .
+\label{eq:1formloopscalard=4}
+\eeq
+%
+The exact leading contributions for different values of $d$ are summarized in Table \ref{tab:1-formloopscalarLambda>>m}.
+%
+		\begin{table}[t]\begin{center}
+				\renewcommand{\arraystretch}{2.00}
+				\begin{tabular}{|c||c|c|c|c|c|}
+					\hline
+					$d$ & 2 & 3 & 4 & 5 & 6 \\
+					\hline 
+					$\dfrac {\partial \Pi_n}{\partial p^2} \bigg\rvert_{p=0}$ &
+					$-\dfrac{1}{4 \pi}\dfrac{g^2 \, q_n^2}{m_n^2}$ & 
+					$ -\dfrac{1}{8 \pi  }\dfrac{g^2 \, q_n^2}{m_n}$ &
+					$ -\dfrac{g^2 \, q_n^2 }{16 \pi^2 } \log \left(\dfrac{\Lambda ^2}{m_n^2}\right)$ & 
+					$ -\dfrac{g^2 \, q_n^2  \, \Lambda }{15 \pi^2}$ &
+					$ -\dfrac{g^2 \, q_n^2  \, \Lambda^2 }{192 \pi^3} $ \\
+					\hline 
+					\hline
+					$d$ &  7 & 8 & 9 & 10 & 11\\
+					\hline 
+					$\dfrac {\partial \Pi_n}{\partial p^2} \bigg\rvert_{p=0}$ &
+					$  -\dfrac{g^2 \, q_n^2  \, \Lambda^3 }{630 \pi^4}  $ &
+					$-\dfrac{g^2 \, q_n^2  \, \Lambda^4  }{6144 \pi^4} $ &
+					$ -\dfrac{g^2 \, q_n^2  \, \Lambda^5  }{18900 \pi^5}$ &
+					$ -\dfrac{g^2 \, q_n^2  \, \Lambda^6   }{184320 \pi^5}$ &
+					$  -\dfrac{g^2 \, q_n^2  \, \Lambda^7 }{582120 \pi^6} $  \\
+					\hline
+				\end{tabular}
+				\caption{Leading contribution to the wave-function renormalization of a gauge 1-form due to a loop of massive charged complex scalars, as given by eq. \eqref{eq:1-formloopscalarexact}, in the limit $\Lambda\gg m_n$, for different number of spacetime dimensions $2 \leq d \leq 11$. }
+				\label{tab:1-formloopscalarLambda>>m}\end{center}
+		\end{table}  
+%
+In the other relevant limit, namely when $\Lambda \simeq m_n$, the expansion of eq. \eqref{eq:1-formloopscalarexact} produces instead 
+%
+\begin{equation}
+			\begin{split}
+				\frac {\partial \Pi_n(p^2)}{\partial p^2} \bigg\rvert_{p=0}  =  - g^2 q_n^2 \ \frac{ \pi^{d/2}}{ 4 d\, (2 \pi)^d\ \Gamma(d/2) }  & \left\{ 2(d-3) +d(d-2)\left[\psi\left( \frac{d+2}{4}\right)-  \psi\left( \frac{d+4}{4} \right)  \right] \right\} \Lambda^{d-4} \\
+				& \quad +  \mathcal{O}(\Lambda-m_n)   \, .
+			\end{split}
+\label{eq:1-formloopscalarLambda=m}
+\end{equation}
+%
+The precise values for this expression in different number of spacetime dimensions are summarized in Table \ref{tab:1-formloopscalarLambda=m}.
+%
+		\begin{table}[t]\begin{center}
+				\renewcommand{\arraystretch}{2.00}
+				\begin{tabular}{|c||c|c|c|c|c|}
+					\hline
+					$d$ & 2 & 3 & 4 & 5 & 6 \\
+					\hline 
+					$\dfrac {\partial \Pi_n}{\partial p^2} \bigg\rvert_{p=0}$ &
+					$-\dfrac{1}{16 \pi}\dfrac{g^2 \, q_n^2}{m_n^2}$ & 
+					$ -\dfrac{(3\pi -8)}{48 \pi^2  }\dfrac{g^2 \, q_n^2}{m_n}$ &
+					$ \begin{aligned}[t]-\tfrac{(8\log(2)-5)}{128 \pi^2 } \times &\\g^2 \, q_n^2 &\end{aligned}$  & 
+					$ \begin{aligned}[t]-\tfrac{(16-5\pi)}{160 \pi^3}\times &\\ g^2 \, q_n^2  \, \Lambda & \end{aligned}$ &
+					$ \begin{aligned}[t]-\tfrac{( 17-24\log(2))}{1536 \pi^3}\times &\\ g^2 \, q_n^2  \, \Lambda^2 & \end{aligned}$ \\
+					\hline 
+					\hline
+					$d$ &  7 & 8 & 9 & 10 & 11\\
+					\hline 
+					$\dfrac {\partial \Pi_n}{\partial p^2} \bigg\rvert_{p=0}$ &
+					$ \begin{aligned}[t] -\tfrac{ (105\pi-328)}{20160 \pi^4}\times &\\  g^2 \, q_n^2  \, \Lambda^3 & \end{aligned}$ &
+					$\begin{aligned}[t]-\tfrac{(16\log(2)-11)}{8192 \pi^4}\times &\\ g^2 \, q_n^2  \, \Lambda^4  & \end{aligned}$ &
+					$ \begin{aligned}[t]-\tfrac{(992-315\pi ) }{604800 \pi^5}\times &\\ g^2 \, q_n^2  \, \Lambda^5 & \end{aligned}$ &
+					$ \begin{aligned}[t]-\tfrac{ (167-240\log(2)) }{1474560 \pi^5}\times &\\ g^2 \, q_n^2  \, \Lambda^6 & \end{aligned}$ &
+					$ \begin{aligned}[t] -\tfrac{(385\pi-1208) }{10348800 \pi^6}\times &\\  g^2 \, q_n^2  \, \Lambda^7 & \end{aligned}$  \\
+					\hline
+				\end{tabular}
+				\caption{Leading contribution to the wave-function renormalization of a gauge 1-form due to a loop of massive charged complex scalars, given by eq. \eqref{eq:1-formloopscalarexact}, in the limit $\Lambda \simeq m_n$, for different number of spacetime dimensions $2 \leq d \leq 11$.}
+				\label{tab:1-formloopscalarLambda=m}\end{center}
+		\end{table}  
+%
+		
+\subsubsection*{Fermionic loop}
+		
+Let us consider now the effect of the coupling of the 1-form to a spin-$\frac{1}{2}$ fermion $\psi^{(n)}$, with mass $m_n$ and charge $q_n$ (c.f. action \eqref{eq:SpsinA1}. The corresponding one-loop Feynamn diagram is displayed in Figure \ref{fig:1-formloopfermion}, and it takes the form
+%
+\begin{equation}\label{eq:A1selfenergyfermion}
+			\begin{aligned}
+				\Pi^{\mu\nu}_n(p^2) \ &= - (\i g)^2 \, q_n^2  \int \frac {\text{d}^dq}{(2\pi)^d}\ \text{tr} \left (\frac {1}{\i \slashed{q}+m_n}\ \gamma^\mu \ \frac {1}{\i (\slashed{q}-\slashed{p})+m_n} \ \gamma^\nu  \right) \\
+				&= g^2\ q_n^2  \int \frac {\text{d}^dq}{(2\pi)^d} \text{tr} \left ( \frac{(-\i \slashed{q} + m_n)\, \gamma^\mu \, (-\i(\slashed{q}-\slashed{p})+m_n)\, \gamma^\nu }{(q^2+m_n^2)((q-p)^2+m_n^2)} \right)\ .  
+			\end{aligned}
+\end{equation}
+%
+In order to perform the traces of the numerator we make use of the relations \eqref{eq:scalarloopfermionstraces}, as well as
+%
+\begin{equation}
+			\text{tr} \left(\gamma^{\mu} \gamma^{\nu} \gamma^{\rho} \gamma^{\sigma}\right)= \fdim \left( \delta^{\mu \nu}\delta^{\rho \sigma}-\delta^{\mu \rho}\delta^{\nu \sigma}+\delta^{\mu \sigma}\delta^{\rho \nu} \right)\ ,
+\label{eq:traceidentityfour}
+\end{equation}
+%
+to obtain
+%
+\begin{equation}
+\label{eq:traces1-formloop}
+			\begin{split}
+				\text{tr}& \Big \lbrace (-\i \slashed{q} + m_n)\, \gamma^\mu \, (-\i(\slashed{q}-\slashed{p})+m_n)\, \gamma^\nu \Big \rbrace \\
+				& =\, \fdim \, \left( \delta^{\mu \nu} \, (q^2 - q\cdot p + m_n^2)- 2\,  q^\mu q^\nu+p^\mu q^\nu+p^\nu q^\mu  \right) \, . 
+			\end{split}
+\end{equation}
+%
+By differentiating with respect to $p^2$ so as to select the piece that contributes to the propagator, and after taking into account the fact that  linear and cubic  terms in $q^\mu$ yield zero upon performing the angular integration over $q$ --- together with identical cancellations in the term proportional to $(q\cdot p)$ and \eqref{eq:qmuqnuaverage}, we get
+%
+\begin{equation}\label{eq:1formfermionloopcompleteexpression}
+\begin{aligned}
+	\frac{\partial \Pi^{\mu \nu}_n(p^2)}{\partial p^2} \bigg\rvert_{p=0}  &= \, -\fdim\, g^2\,  q_n^2 \, \delta^{\mu\nu}  \int \dfrac{d^d q}{(2\pi)^d} \dfrac{1}{(q^2+m_n^2)^2}\\
+    &+ \,  \fdim\,  g^2\,  q_n^2\,   \frac{2}{d} \, \delta^{\mu\nu}  \int \dfrac{d^d q}{(2\pi)^d} \dfrac{q^2}{(q^2+m_n^2)^3}\, .    
+\end{aligned}
+\end{equation}
+%
+Similarly to the modulus case, the second piece has the same form as the scalar contribution but with an opposite sign. In fact, by taking into account that we are now considering a complex scalar with two real degrees of freedom, it can be seen that in the presence of an equal number of fermionic and bosonic degrees of freedom with identical mass and charge, the cancellation between the scalar contribution and this second term from the fermions would be exact. Therefore, the precise expression for this correction (along with its asymptotic expansions) can be easily obtained from eqs. \eqref{eq:1-formloopscalarexact}-\eqref{eq:1-formloopscalarLambda=m} by simply multiplying by a factor of $-\fdim/2$.
+		
+Let us now focus on the first term. Notice that, after extracting the tensorial structure, it gives exactly the same contribution as \eqref{eq:fermionloopddim} upon substituting $\mu_n^2 \,  \to \,  g^2 \, q_n^2$. Hence, we can use, \emph{mutatis mutandis}, the corresponding formulae from the modulus section, that we summarize here for completeness. By introducing a UV cut-off $\Lambda$ and upon performing the integral, the first term in \eqref{eq:1formfermionloopcompleteexpression} reads as
+%
+\begin{equation}
+			\frac{\partial \Pi_n(p^2)}{\partial p^2} \bigg\rvert_{p=0}  \, =  \, - g^2\, q_n^2  \ \frac{ \fdim \pi^{d/2}  }{  (2 \pi)^d \, \Gamma(d/2) } \ \frac{\Lambda^d}{m_n^4} \  \left[  \frac{m_n^2}{\Lambda^2+m_n^2}  + \left(\frac{2}{d}-1\right) \ _2{\cal F}_1\left( 1,\frac{d}{2};\frac{d+2}{2}; -\frac{\Lambda^2}{m_n^2}\right) \right]  \, .
+\label{eq:1-formloopfermionexact}
+\end{equation}
+%
+%
+		\begin{table}[t]\begin{center}
+				\renewcommand{\arraystretch}{2.00}
+				\begin{tabular}{|c||c|c|c|c|c|}
+					\hline
+					$d$ & 2 & 3 & 4 & 5 & 6 \\
+					\hline 
+					$\dfrac {\partial \Pi_n}{\partial p^2} \bigg\rvert_{p=0}$ &
+					$-\dfrac{1}{2 \pi}\dfrac{g^2\, q_n^2}{m_n^2}$ & 
+					$ -\dfrac{1}{4 \pi  }\dfrac{g^2\, q_n^2}{m_n}$ &
+					$ -\dfrac{g^2\, q_n^2 }{4 \pi } \log \left(\dfrac{\Lambda ^2}{m_n^2}\right)$ & 
+					$ -\dfrac{g^2\, q_n^2  \, \Lambda }{3 \pi^2}$ &
+					$ -\dfrac{g^2\, q_n^2  \, \Lambda^2 }{16 \pi^3} $ \\
+					\hline 
+					\hline
+					$d$ &  7 & 8 & 9 & 10 & 11\\
+					\hline 
+					$\dfrac {\partial \Pi_n}{\partial p^2} \bigg\rvert_{p=0}$ &
+					$  -\dfrac{g^2\, q_n^2  \, \Lambda^3 }{45 \pi^4}  $ &
+					$-\dfrac{g^2\, q_n^2  \, \Lambda^4  }{192 \pi^4} $ &
+					$ -\dfrac{g^2\, q_n^2  \, \Lambda^5  }{525 \pi^5}$ &
+					$ -\dfrac{g^2\, q_n^2  \, \Lambda^6   }{2304 \pi^5}$ &
+					$  -\dfrac{g^2\, q_n^2  \, \Lambda^7 }{6615 \pi^6} $  \\
+					\hline
+				\end{tabular}
+				\caption{Leading contribution to the wave-function renormalization of a gauge 1-form due to a loop of massive charged fermions, as given by eq. \eqref{eq:1-formloopfermionexact}, in the limit $\Lambda\gg m_n$ for different number of spacetime dimensions $2 \leq d \leq 11$.}
+				\label{tab:1-formloopfermionLambda>>m}\end{center}
+		\end{table}  
+%
+%
+In the limit $\Lambda \gg m_n$, the leading piece from the fermionic loop to the propagator when $d>4$ is
+%
+\begin{equation}
+			\frac {\partial \Pi_n^{(d>4)}(p^2)}{\partial p^2} \bigg\rvert_{p=0}\, = \, -g^2\, q_n^2\,  \frac{2^{\lfloor \frac{d+2}{2} \rfloor} \pi^{d/2}}{(2 \pi)^d\ \Gamma\left( d/2 \right) \ (d-4)}   \ \Lambda^{d-4} \, + \, \mathcal{O}\left(\Lambda^{d-6}\, m_n^2\right) + \mathrm{const.}\, .
+\label{eq:1-formloopfermionsd>4}
+\end{equation}
+%
+Similarly, for $d<4$ the dominant contribution takes the form
+%
+\begin{equation}
+			\frac {\partial \Pi_n^{(d<4)}(p^2)}{\partial p^2} \bigg\rvert_{p=0}\, = \, - g^2\, q_n^2 \ \frac{2^{\lfloor\frac{d-2}{2} \rfloor} \ \pi^{\frac{d+2}{2}} }{(2 \pi)^d  \ \Gamma\left( d/2 \right)} \ \frac{(2-d)}{\sin\left( d \pi/2\right)} \ \frac{1}{m_n^{4-d}} + \, \mathcal{O}\left(\frac{1}{\Lambda^{4-d}}\right)\, ,
+\label{eq:1-formloopfermionsd<4}
+\end{equation}
+%
+with the quotient $(2-d)/\sin\left( d \pi/2\right)$  defined as a limit with value $2/ \pi$ for $d=2$. For the marginal case,  the expected logarithmic divergence is obtained
+%
+\beq
+		\frac {\partial \Pi_n^{(d=4)}(p^2)}{\partial p^2} \bigg\rvert_{p=0} \, =\, -  \frac{g^2\, q_n^2 }{4 \pi^2 }\log \left( \frac{\Lambda^2}{m_n^2} \right) \ + \ \mathcal{O}\left( \Lambda^0 \right)\, .
+\label{eq:1-formloopfermionsd=}
+\eeq
+%
+These results are summarized in Table \ref{tab:1-formloopfermionLambda>>m}.
+		
+Taking instead the limit $\Lambda \simeq m_n$ in eq. \eqref{eq:1-formloopfermionexact}, one arrives at
+%
+\begin{equation}
+			\frac {\partial \Pi_n(p^2)}{\partial p^2} \bigg\rvert_{p=0} \, = \, - g^2\, q_n^2 \ \frac{2^{\lfloor\frac{d}{2}-2 \rfloor}  \pi^{d/2}}{ (2 \pi)^d\ \Gamma(d/2) }   \left\{ 2+(d-2)\left[\psi\left( \frac{d}{4}\right)-  \psi\left( \frac{d+2}{4} \right)  \right] \right\} \Lambda^{d-4} + \, \mathcal{O}(\Lambda-m_n)\, .
+\label{eq:1-formloopfermionLambda=m}
+\end{equation}
+%
+As happened with the scalar modulus before, since we have $\Lambda\simeq m_n$, the asymptotic dependence with the relevant scale coincides with the $\Lambda \gg m_n$ limit, and only the numerical prefactors change. The relevant leading terms for $2\leq d \leq 11$ are shown in Table \ref{tab:1-formloopfermionLambda=m}.
+%
+%
+		\begin{table}[t]\begin{center}
+				\renewcommand{\arraystretch}{2.00}
+				\begin{tabular}{|c||c|c|c|c|c|}
+					\hline
+					$d$ & 2 & 3 & 4 & 5 & 6 \\
+					\hline 
+					$\dfrac {\partial \Pi_n}{\partial p^2} \bigg\rvert_{p=0}$ &
+					$-\dfrac{1}{4 \pi}\dfrac{g^2\, q_n^2}{m_n^2}$ & 
+					$ -\dfrac{(\pi -2)}{8 \pi^2  }\dfrac{g^2\, q_n^2}{m_n}$ &
+					$ -\frac{(2\log(2)-1)}{8 \pi^2 } g^2\, q_n^2 $ & 
+					$ \begin{aligned}[t]-\tfrac{(10-3\pi)}{24 \pi^3}\times &\\ g^2\, q_n^2  \, \Lambda & \end{aligned}$ &
+					$ \begin{aligned}[t]-\tfrac{(3- 4\log(2))}{32 \pi^3}\times &\\ g^2\, q_n^2  \, \Lambda^2 & \end{aligned}$ \\
+					\hline 
+					\hline
+					$d$ &  7 & 8 & 9 & 10 & 11\\
+					\hline 
+					$\dfrac {\partial \Pi_n}{\partial p^2} \bigg\rvert_{p=0}$ &
+					$ \begin{aligned}[t] -\tfrac{ (15\pi- 46)}{360 \pi^4}\times &\\  g^2\, q_n^2  \, \Lambda^3 & \end{aligned}$ &
+					$\begin{aligned}[t]-\tfrac{(3\log(2)-2)}{96 \pi^4}\times &\\ g^2\, q_n^2  \, \Lambda^4  & \end{aligned}$ &
+					$ \begin{aligned}[t]-\tfrac{(334-105\pi) }{12600 \pi^5}\times &\\ g^2\, q_n^2  \, \Lambda^5 & \end{aligned}$ &
+					$ \begin{aligned}[t]-\tfrac{ (17-24\log(2)) }{4608 \pi^5}\times &\\ g^2\, q_n^2  \, \Lambda^6 & \end{aligned}$ &
+					$ \begin{aligned}[t] -\tfrac{(315\pi -982) }{264600 \pi^6}\times &\\  g^2\, q_n^2  \, \Lambda^7 & \end{aligned}$  \\
+					\hline
+				\end{tabular}
+				\caption{Leading contribution to the wave-function renormalization of a gauge 1-form due to a loop of massive charged fermions, as given by eq. \eqref{eq:1-formloopfermionexact}, in the limit $\Lambda\simeq m_n$ for different number of spacetime dimensions $2 \leq d \leq 11$.}
+				\label{tab:1-formloopfermionLambda=m}\end{center}
+		\end{table} 
+%
+		
+\section{Self-energy of a Weyl fermion}
+\label{ap:LoopsWeylfermion}
+	
+To close up this appendix, we will consider a \emph{chiral} (i.e. we restrict to even-dimensional spacetimes) spin-$\frac{1}{2}$ field, $\chi$, coupled to massive (complex) scalars $\{\phi^{(n)}\}$ and Dirac fermions, $\{\Psi^{(n)}\}$, through the following Yukawa-like interactions
+%
+\begin{equation}\label{eq:fermion&bosonYukawas(ap)}
+			\mathcal{Y}_n\ \overline{\phi^{(n)}} \left(\psi^{(n)}\chi \right)\, ,  
+\end{equation}
+%
+where $\mathcal{Y}_n$ denotes the coupling constant and $n \in \mathbb{Z} \setminus \lbrace0\rbrace$ labels the massive fields. We also use $\psi^{(n)}$ to denote the Weyl fermion of the same chirality as $\chi$, which pairs up with its charge conjugate (say the one labeled by $-n$) so as to form the aforementioned massive Dirac spin-$\frac{1}{2}$ field, i.e. $\Psi^{(n)}=\left(\psi^{(n)}, \overline{\psi^{(-n)}} \right)^{\text{T}}$. 
+		
+In the following, and for simplicity, we will use Dirac fermions all along so as to perform the relevant loop integrals. Therefore, in order to take into account that the massless field $\chi$ is chiral we define a new Dirac fermion $\mathcal{X}$, which reduces to $\chi$ upon using the familiar chirality projector $P_{-}=\frac{1}{2}(1-\gamma^{d+1})$, i.e. $\chi = P_{-}\ \mathcal{X}$, c.f. eq. \eqref{eq:gammad+1}. With this in mind, it is easy to see that the interaction \eqref{eq:fermion&bosonYukawas(ap)} above can be written in terms of $\{\Psi^{(n)},\, \mathcal{X}\}$ as follows
+%
+\begin{equation}\label{eq:interactionsfermion2(ap)}
+			\mathcal{Y}_n\ \phi^{(n)} \left( \overline{\Psi^{(n)}} P_{-} \mathcal{X} \right) + \text{h.c.}\, .  
+\end{equation}
+%
+The idea then is to extract again the momentum-dependent part of the exact propagator associated to the massless fermion $\chi$ at $\mathcal{O}(\hbar)$ in the effective action, which after analytically extending to Euclidean signature reads formally as
+%
+\beq\label{eq:Euclexactpropagator(ap)}
+		S(\slashed{p})= \frac{1}{\i\slashed{p}}\, P_{-} + \frac{1}{\i\slashed{p}}\, P_{-}\, \left(\i \Sigma(\slashed{p})\right)\, \frac{1}{\i\slashed{p}}\, P_{-} + \ldots\, ,
+\eeq
+%
+where the fermion self-energy $\i \Sigma(\slashed{p})$ corresponds in this case to the (amputated) one-loop Feynman graph displayed in Figure \ref{fig:kineticfermionsbas}. (Notice that this is nothing but the fermionic analogue of $\Pi(p^2)$ in \eqref{eq:exactpropscalar}.) 
+		
+\subsubsection*{Loop computation}
+		
+We will concentrate on the first diagram\footnote{The analysis involving massive vectors as in Figure \ref{fig:fermionloopvector} should give us analogous results.} in Figure \ref{fig:kineticfermionsbas} involving Dirac fermions $\{\Psi^{(n)}\}$ with masses $\{m_n^{{\text{f}}}\}$ as well as complex bosonic scalars $\{\phi^{(n)}\}$ with mass given by $\{m_n^{{\text{b}}}\}$, which reads
+%
+\beq
+		\i \Sigma_n(\slashed{p}) \ = |\mathcal{Y}_n|^2 \int \frac{\text{d}^dq}{(2\pi)^d} \frac{P_{-} \left( -\i \slashed{q} + m_n^{\text{f}}\right) P_{+}}{q^2+(m_n^{\text{f}})^2} \frac {1}{(q-p)^2+(m_n^{{\text{b}}})^2}\, ,
+\label{eq:selfenergychi(ap)}
+\eeq
+%
+where the projection operators $P_{\pm}$ arise from the Feynman rules associated to the interaction \eqref{eq:interactionsfermion2(ap)}. There are several interesting things to notice before moving on with the loop computation. First, and due to the anti-commutation properties between $\gamma^{d+1}$ and the $\gamma^{\mu}$ (namely $\lbrace \gamma^{\mu}, \gamma^{d+1} \rbrace=0$), the operators $P_{\pm}$ project out the term proportional to $m_n^{{\text{f}}}$ in the numerator of eq. \eqref{eq:selfenergychi(ap)} above whilst keeping the one $\propto \slashed{q}$. This ultimately translates into the fact that the self-energy provides no net contribution at $\mathcal{O}(\hbar)$ for the mass of the chiral field $\chi$.\footnote{This is actually ensured to be true at all orders in perturbation theory due to the chirality of the fermionic field $\chi(x)$.} We also notice that the self-energy includes the projector $P_{+}$, as it should since it is associated to the \emph{chiral} massless fermion, $\chi$.
+		
+Thus, in order to extract the wave-function renormalization one needs to focus on the piece in the self-energy linear in $p$. Therefore, one can mimic the discussion in the preceding sections by taking derivatives with respect to $p^{\mu}$, and then evaluating the resulting expression at $p=0$. Upon doing so one finds
+%
+\beq
+		\begin{aligned}\label{eq:Euclwavefunctionfermion(ap)}
+			\frac{\partial \Sigma_n(\slashed{p})}{\partial p^{\mu}} \bigg\rvert_{p=0} = \frac{-2 |\mathcal{Y}_n|^2 \delta_{\mu \nu} \gamma^{\nu}\ P_{+}}{d} \int \frac{\text{d}^dq}{(2\pi)^d} \frac{q^2}{\left[ q^2 + (m_n^{{\text{f}}})^2 \right] \left[ q^2 + (m_n^{{\text{b}}})^2 \right]^2}\, .
+		\end{aligned}
+\eeq
+%
+Notice that this has the correct sign so as to renormalize the wave-function of the massless fermion appropriately in eq. \eqref{eq:Euclexactpropagator(ap)}. 
+		
+		
+Now, in order to study the kind of corrections induced by the above diagram, we will first specialize to the easier case in which both towers present identical mass gaps, namely when $m_n^{{\text{b}}} = m_n^{{\text{f}}} = m_n$. One is thus lead to perform the following integral in momentum space (after introducing a UV cut-off $\Lambda$), which we already encountered in Section \ref{ap:Loops1-form} before (c.f. eq. \eqref{eq:1-formscalarloopprop})
+%
+\beq\label{eq:momentumintegralfermionsamemasses}
+		\begin{aligned}
+			\frac{\partial \Sigma_n(\slashed{p})}{\partial p^{\mu}} \bigg\rvert_{p=0} = \frac{-2 |\mathcal{Y}_n|^2 \delta_{\mu \nu} \gamma^{\nu}\ P_{+}}{d} \int_{|q| \leq \Lambda} \frac{\text{d}^dq}{(2\pi)^d} \frac{q^2}{\left(q^2 + m_n^2 \right)^3} \, .
+		\end{aligned}
+\eeq
+%
+Of course, this is not a coincidence, since one place in which this kind of diagrams naturally appears is in supersymmetric gauge theories, see discussion in Section \ref{sss:emergencefermion} in the main text. The behaviour of such integral depends, among various things, on the ratio $\Lambda/m_n$ as well as the spacetime dimension, $d$. For concreteness, let us show in here the explicit results for the case in which $\Lambda/m_n \gg 1$. For $d>4$, the integral diverges polynomially as 
+%
+\begin{equation}
+			\frac{\partial \Sigma_n^{(d>4)}(\slashed{p})}{\partial p^{\mu}} \bigg\rvert_{p=0} = \, -|\mathcal{Y}_n|^2 \delta_{\mu \nu} \gamma^{\nu}\ P_{+}\  \frac{4\ \pi^{d/2}}{(2 \pi)^d\ \Gamma\left( d/2 \right) \ d\, (d-4)}    \ \Lambda^{d-4} \, + \, \mathcal{O}\left(\Lambda^{d-6}\right) + \mathrm{const.}\, ,
+\label{eq:fermionloopd>4}
+\end{equation}
+%
+whereas in lower dimensions it is convergent and the leading contribution is given by
+%
+\begin{equation}
+			\frac{\partial \Sigma_n^{(d<4)}(\slashed{p})}{\partial p^{\mu}} \bigg\rvert_{p=0} = \, - |\mathcal{Y}_n|^2 \delta_{\mu \nu} \gamma^{\nu}\ P_{+} \ \frac{\pi^{\frac{d+2}{2}} }{4 \, (2 \pi)^d  \ \Gamma\left( d/2 \right)} \ \frac{(2-d)}{\sin\left( d \pi/2\right)} \ \frac{1}{m_n^{4-d}} + \, \mathcal{O}\left(\frac{1}{\Lambda^{4-d}}\right)\, ,
+\label{eq:fermionloopd<4}
+\end{equation}
+%
+with the quotient $(2-d)/\sin\left( d \pi/2\right)$ defined as a limit with value $2/ \pi$ for $d=2$. Finally, for the marginal case, we get the usual logarithmic behaviour
+%
+\beq
+		\frac{\partial \Sigma_n^{(d=4)}(\slashed{p})}{\partial p^{\mu}} \bigg\rvert_{p=0} \, =\, -  \frac{|\mathcal{Y}_n|^2 \delta_{\mu \nu} \gamma^{\nu}\ P_{+}}{32 \pi^2 }\, \log \left( \frac{\Lambda^2}{m_n^2} \right) \ + \ \mathcal{O}\left( \Lambda^0 \right)\, .
+\label{eq:fermionloopd=4}
+\eeq
+%
+		
+Let us come back to the more general expression, i.e. eq. \eqref{eq:Euclwavefunctionfermion(ap)}, in which we take the states running in the loop to have different masses. Performing the momentum integral we arrive at the analogue of \eqref{eq:momentumintegralfermionsamemasses}, namely
+%
+\begin{equation}
+			\begin{aligned}
+				\frac{\partial \Sigma_n(\slashed{p})}{\partial p^{\mu}} \bigg\rvert_{p=0} &= \, -|\mathcal{Y}_n|^2 \delta_{\mu \nu} \gamma^{\nu}\ P_{+}\  \frac{2\ \pi^{d/2}}{(2 \pi)^d\ \Gamma\left( d/2 \right)\ d} \ \frac{\Lambda^{d+2}}{\left[ (m_n^{{\text{f}}})^3 -m_n^{{\text{f}}} (m_n^{{\text{b}}})^2 \right]^2} \left[  \frac{(m_n^{{\text{f}}})^2\left[(m_n^{{\text{f}}})^2 - (m_n^{{\text{b}}})^2 \right]}{(m_n^{{\text{b}}})^2\ (\Lambda^2+(m_n^{{\text{b}}})^2)} \right.  \\
+				& \quad \left.  +\, \dfrac{2}{d+2} \ _2{\cal F}_1\left( 1,\frac{d+2}{2};\frac{d+4}{2}; -\frac{\Lambda^2}{(m_n^{{\text{f}}})^2}\right) \right.  \\
+				& \quad \left.  +\, \dfrac{(m_n^{{\text{f}}})^2\left[(m_n^{{\text{b}}})^2(d-2) - (m_n^{{\text{f}}})^2 d\right]}{(m_n^{{\text{b}}})^4\ (d+2)} \ _2{\cal F}_1\left( 1,\frac{d+2}{2};\frac{d+4}{2}; -\frac{\Lambda^2}{(m_n^{{\text{b}}})^2}\right) \right] \ ,
+			\end{aligned}
+\label{eq:momentumintegralfermiondiffmasses(ap)}
+\end{equation}
+%
+which of course reduces to the previous expressions whenever the masses are taken to be equal.
+
+\begin{comment}
+		
+\chapter{M-theory compactifications}
+\label{ap:Mthycompactifications}
+
+\AC{This may go into Section \ref{ch:reviewstringtheory}}
+		
+In this appendix we include detail formulae and derivations relevant for the discussions involving M-theory compactifications down to ten and five spacetime dimensions. We start with the reduction of 11d M-theory to ten dimensions, which plays an important role for the emergence mechanism to work in 10d Type IIA at strong coupling, as discussed in section \ref{ss:Emergence10dST} in the main text. We then turn in section \ref{ap:5dMtheory} to M-theory compactified on a CY$_3$, which is relevant for Emergence in 4d $\mathcal{N}=2$, as discussed in section \ref{s:emergence4dN=2} as well as for the emergent potentials of section \ref{s:Scalarpotential}. We conclude in section \ref{ap:dimreductiongravitino} by deriving some general formulae describing the volume dependence of the massive gravitino couplings to the appropriate $p$-form gauge fields appearing in the different low-energy M-theory effective actions in several dimensions, which are relevant for the emergence computations associated to the flux potential in 5d and 4d.
+		
+\section{M-theory on $S^1$}
+\label{ap:MtheoryKKcompactS1}
+		
+In the present section we review with some more detail the compactification of 11d supergravity on a circle so as to obtain the 10d massless Type IIA effective action along with the relevant kinetic terms and interactions associated to the Kaluza-Klein replica of the 11d gravity multiplet. 
+%on the $S^1$. 
+The discussion here is complementary to the analysis performed in section \ref{ss:Emergence10dST}, although the computations will be done following a different approach than the one employed in the main text. The reason for this is twofold: first, upon doing so we will see that the identifications between 10d and 11d fields become simply the familiar ones (see e.g. \cite{Witten:1995ex}) and second, this alternative approach will serve also to show how our results are independent of the specific units or conventions adopted, as they should be.
+		
+\subsubsection*{Duality with 10d Type IIA}
+		
+Let us start then by writing here the Type IIA supergravity action in the 10d string frame
+%
+\begin{equation}
+			\begin{aligned}
+				S_\text{IIA, s}^{\text{10d}} = &\frac{2\pi}{\ell_s^8} \int \text{d}^{10}x\sqrt{-g}\ e^{-2 \phi} \left(R+4(\partial \phi)^2\right)-\frac{2\pi}{\ell_s^8}\int \frac{e^{-2\phi}}{2} H_3\wedge \star H_3 \\
+				&-\frac{2\pi}{\ell_s^8}\int \frac{1}{2} \left[F_2 \wedge \star F_2 + \tilde F_4 \wedge \star \tilde F_4 + B_2\wedge F_4 \wedge F_4\right]\, , 
+			\end{aligned}
+\end{equation}
+%
+where $H_3=dB_2$, $\tilde{F}_4=d C_3-C_1 \wedge H_3$ and $F_2=dC_1$ in the previous expression. (Recall that $\ell_s=2\pi \sqrt{\alpha'}$ denotes the fundamental string length.) Next, upon performing a usual Weyl rescaling to the 10d metric
+%
+\begin{align}\label{eqap:10dWeylrescaling}
+			g_{\mu \nu} \to g_{\mu \nu}\, e^{(\phi-\phi_0)/2}\ , 
+\end{align}
+% 
+one arrives at the following Einstein-framed action
+%
+\begin{equation}
+			\begin{aligned}\label{eqap:IIA10daction}
+				S_\text{IIA, E}^{\text{10d}} = &\frac{1}{2\kappa_{10}^2} \int \text{d}^{10}x\sqrt{-g} \left(R-\frac{1}{2}(\partial \phi)^2\right)-\frac{1}{4\kappa_{10}^2}\int e^{-(\phi-\phi_0)}\, H_3\wedge \star H_3 \\
+				&-\frac{e^{2 \phi_0}}{4\kappa_{10}^2}\int \left[e^{\frac{3}{2}(\phi-\phi_0)}\, F_2 \wedge \star F_2 + e^{\frac{1}{2}(\phi-\phi_0)}\, \tilde F_4 \wedge \star \tilde F_4 + B_2\wedge F_4 \wedge F_4\right]\, , 
+			\end{aligned}
+\end{equation}
+%
+where one can now clearly see that the gravitational strength, encapsulated by the (dimension-full) factor $2\kappa_{10}^2= 2 \Mpt^{-8}= (2 \pi)^{7} \alpha'^4\ e^{2 \phi_0}$, is essentially controlled by the dilaton v.e.v. $\phi_0 \equiv \braket{\phi}$, which thus determines the Planck-to-string scale ratio. Notice that this action is similar but not quite the same as the one displayed in eq. \eqref{eq:IIA10d}, the difference being the reference scale in which we choose to measure the ten-dimensional fields, namely string units here vs Planck units there.
+		
+In what follows we will start from 11d supergravity and compactify the theory on a circle, retaining part of the massive spectrum (as seen from the lower dimensional theory) in an explicit way within our action functional. This let us obtain some of the (minimal) couplings that such fields present with respect to the massless modes of the 10d theory, which subsequently are used to repeat again the emergence computations of section \ref{sss:IIAstrongcoupling}, using this time different units and conventions.
+		
+Hence, we take the 11d $\mathcal{N}=1$ supergravity action describing the low energy limit of M-theory, which reads
+%
+\begin{align}\label{eqap:Mthyaction}
+			S^{\text{11d}}_{\text{M-th}} = \frac{1}{2\kappa_{11}^2} \int \hat{R} \ \hat{\star} 1-\frac{1}{2}  d\hat{C}_3\wedge \hat{\star}  d\hat{C}_3 -\frac{1}{6} \hat C_3 \wedge d\hat{C}_3 \wedge d\hat{C}_3 \, ,    
+\end{align}
+%
+in the bosonic sector. Upon compactifying on a $S^1$, one should first expand the different 11d fields in a Fourier series, following the Kaluza-Klein prescription (see e.g. \cite{Duff:1986hr}). Similarly as we did in section \ref{ss:Emergence10dST}, we concentrate our efforts here in computing explicitly the couplings that the massive replica of the 3-form gauge field present with respect to the massless Type IIA Ramond-Ramond $p$-forms, since this will be enough to illustrate later on how the emergence mechanism applies to this particular set-up. 
+		
+As it is customary in $S^1$ compactifications, we impose the familiar ansatz for the metric
+%
+\begin{align}
+			ds^2_{11} = ds^2_{10}+ e^{2\varphi} (dz-C_1)^2\, ,    
+\end{align}
+%
+where $z \in [0, 2 \pi R)$ parameterizes the circular direction, $\varphi$ is the `radion' field and $C_1=(C_1)_{\mu}\, dx^{\mu}$ denotes the KK photon.\footnote{The fields $g_{\mu \nu} (x)$, $\varphi(x)$ and $C_1(x)$ represent the zero (Fourier) modes corresponding to the appropriate components of the 11d metric along the $S^1$.} Notice that the notation has been chosen in order to make the matching with Type IIA supergravity more explicit, where the KK photon becomes nothing but the RR 1-form. The dimensional reduction of the Einstein-Hilbert on a $S^1$ is straightforward but cumbersome, so we skip it and refer the interested reader to the existing literature\cite{Duff:1986hr}. Thus, we focus on the last two terms in eq. \eqref{eqap:Mthyaction} above.
+		
+We start with the first one, corresponding to the kinetic term of the massless 3-form potential. Hence, upon reducing such term by expanding the field strength $\hat G_4= d\hat C_3$ into its Fourier modes and integrating over the compact direction, we arrive at the following action in 10d (after fixing some `unitary' gauge for the massive modes\cite{Duff:1986hr})
+%
+\begin{equation}
+			\label{eq:3formddimgravity}
+			\begin{aligned}
+				S^{\text{10d}}_{\text{kin,} C_3^{(n)}} = &-\frac{2 \pi R}{4\kappa_{11}^2} \int e^{\varphi} \left( dC_3-C_1 \wedge dB_2 \right) \wedge \star \left( dC_3-C_1 \wedge dB_2 \right) + e^{-\varphi}\, dB_2 \wedge \star dB_2\\
+				& - \frac{2 \pi R}{4\kappa_{11}^2} \int \sum_{n \neq 0} \left [ e^{\varphi}\, \mathcal{D} C^{(n)}_3 \wedge \star \mathcal{D} C^{(-n)}_3 + e^{-\varphi}\, \frac{n^2}{R^2}\, C^{(n)}_3 \wedge \star C^{(-n)}_3 \right]\, ,
+			\end{aligned}
+\end{equation}
+%
+where $B_2$, $C_3$ are 2-form and 3-form fields, respectively, that arise essentially from the zero-mode components of $\hat C_3$ with/without one leg in the $z$-th direction, whilst $\mathcal{D} C^{(n)}_3= dC^{(n)}_3 + \frac{in}{R}\, C_1 \wedge C^{(n)}_3$ refers to the covariant derivative with respect to the $U(1)$ gauge field $C_1$, under which the whole tower is charged (as expected on general grounds). Notice that in the above expression we are keeping inside $\varphi(x)$ its asymptotic value, i.e. the constant v.e.v. $\varphi_0 \equiv \braket{\varphi}$. Thus, the physical radius of the eleven-th dimension would be given in this case by $R_{\text{phys}}= R\, e^{\varphi_0}$.
+		
+On the other hand, the Chern-Simons term appearing in eq. \eqref{eqap:Mthyaction}, when reduced on the M-theory circle, can be seen to give the following \emph{topological} contribution to the 10d action
+%
+\begin{equation}
+			\label{eq:CSterm}
+			\begin{aligned}
+				S^{\text{10d}}_{\text{top,} C_3^{(n)}} \supset -\frac{2 \pi R}{4\kappa_{11}^2} \int  B_2 \wedge dC_3 \wedge dC_3 + \sum_{n \neq 0} \frac{in}{R} \left ( C_3 \wedge C^{(n)}_3 \wedge dC^{(-n)}_3 - C_3\wedge dC^{(n)} \wedge C^{(-n)}_3 \right)\, ,
+			\end{aligned}
+\end{equation}
+%
+where the first summand leads to the Chern-Simons term in Type IIA supergravity (see e.g. \cite{Polchinski:1998rq,Polchinski:1998rr}), while the second one encapsulates the (trilinear) interactions between each 3-form field in the KK tower and the massless RR 3-form potential. 
+		
+Now, in order to extract the precise Feynman rules associated to the kind of interactions between the $C_3^{(n)}$ and the massless fields $C_1$ and $C_3$, it is necessary to first match the zero mode action of the M-theory circle compactification with the two-derivate Type IIA supergravity lagrangian, c.f. eq. \eqref{eqap:IIA10daction}. Upon taking into account the Weyl rescaling \eqref{eqap:10dWeylrescaling}, where the 10d dilaton $\phi$ is related to the radion field by $\varphi=2 \phi/3$ \cite{Witten:1995ex},\footnote{This is precisely where the discussion departs from the one in section \ref{sss:IIAstrongcoupling}. There, a similar Weyl rescaling is performed to the 10d metric but including not only the fluctuation $\tilde \phi=\phi-\phi_0$, but also its asymptotic value, see discussion around eq. \eqref{eq:KKansatz11dmetric}.} we arrive at the following 10d bosonic action
+%
+\begin{equation}
+\label{eqap:finalbosonicaction}
+	\begin{aligned}
+			S^{\text{10d}}_{\text{bos}} =& \tilde{S}_\text{IIA, E}^{\text{10d}} -\frac{2 \pi R_{\text{phys}}}{4\kappa^2_{11}} \int  \sum_{n \neq 0} \left [ e^{\frac{\phi-\phi_0}{2}}\, \mathcal{D} C^{(n)}_3 \wedge \star \mathcal{D} C^{(-n)}_3 + e^{-(\phi-\phi_0)}\, \frac{n^2}{R^2_{\text{phys}}}\, C^{(n)}_3 \wedge \star C^{(-n)}_3 \right] \\
+			 &-  \frac{2 \pi R_{\text{phys}}}{4\kappa^2_{11}} \int \sum_{n \neq 0} \frac{in}{R_{\text{phys}}} \left [ C_3 \wedge C^{(n)}_3 \wedge dC^{(-n)}_3 - C_3\wedge dC^{(n)}_3 \wedge C^{(-n)}_3 \right] + \ldots \, ,
+	\end{aligned}
+\end{equation}
+%
+where $\tilde{S}_\text{IIA, E}^{10}$ can be seen to almost agree with eq. \eqref{eqap:IIA10daction} above. Let us write its expression explicitly here
+%
+\begin{equation}\label{eq:almostIIA10d}
+		\begin{aligned}
+				\tilde{S}_\text{IIA, E}^{\text{10d}} = &\frac{2 \pi R_{\text{phys}}}{2\kappa^2_{11}} \int \text{d}^{10}x\sqrt{-g} \left(R-\frac{1}{2}(\partial \phi)^2\right)-\frac{2 \pi R_{\text{phys}}\, e^{-\frac{4}{3}\phi_0}}{4\kappa^2_{11}}\int e^{-(\phi-\phi_0)}\, dB_2 \wedge \star dB_2 \\
+				&-\frac{2 \pi R_{\text{phys}}}{4\kappa^2_{11}}\int \left[e^{\frac{4}{3}\phi_0} e^{\frac{3}{2}(\phi-\phi_0)}\,dC_1 \wedge \star dC_1 + e^{\frac{1}{2}(\phi-\phi_0)}\, \tilde F_4 \wedge \star \tilde F_4 + e^{-\frac{2}{3}\phi_0}\, B_2\wedge dC_3 \wedge dC_3\right]\, . 
+		\end{aligned}
+\end{equation}
+%
+In order to match completely the above action with the `conventional' one as displayed in eq. \eqref{eqap:IIA10daction}, it is thus necessary to make the following redefinitions of massless fields (see e.g. sect. 16 of \cite{Ortin:2015hya})
+%
+\begin{align}
+			\label{eq:CBredefs}
+			C_1 \to C_1\, e^{\frac{1}{3}\phi_0}\ , \qquad C_3 \to C_3\, e^{\phi_0}\ , \qquad B_2 \to B_2\, e^{\frac{2}{3}\phi_0} , 
+\end{align}
+%
+as well as some identifications of the relevant scales and constants appearing in our set-up\cite{Witten:1995ex, Ortin:2015hya}
+%
+\begin{align}\label{eq:vevmatching}
+			\frac{2 \pi R_{\text{phys}}}{2\kappa^2_{11}}=\frac{1}{2\kappa^2_{10}}= \frac{2 \pi}{g_s^2 \ell_s^8}\, , 
+\end{align}
+%
+where $(2\kappa^2_{11})^{-1}= \frac{2 \pi}{g_s^3 \ell_s^9}$ and $2 \pi R_{\text{phys}}= \ell_s g_s$. (Recall that $R_{\text{phys}}= R\, e^{2 \phi_0/3}$, with $g_s=e^{\phi_0}$.)
+		
+\subsubsection*{Revisiting emergence in 10d}
+		
+From eq. \eqref{eqap:finalbosonicaction} above one can clearly see that the interaction vertices between the massive 3-forms and both the RR $C_3$ and $C_1$ fields are controlled essentially by the same quantity, namely $e^{\phi_0}/(2\kappa^2_{10} R_{\text{phys}})$. What we want to do now is to repeat the emergence computations of section \ref{sss:IIAstrongcoupling} with these new interaction rules. Notice from \eqref{eqap:IIA10daction} that the kinetic terms of both $p$-form gauge fields are controlled by the same quantity
+%
+\begin{align}\label{eqap:coupling1formIIA}
+		\frac{e^{2 \phi_0}}{2\kappa^2_{10}}=\frac{g_s^2 \Mpt^8}{2}\, , 
+\end{align}
+%
+which should be what one obtains after summing over quantum corrections induced by the tower of D0-branes up to the species scale. We will consider the corrections induced by the KK replica of the 3-form potential, bearing in mind that according to our general discussion in section \ref{ss:Emergence10dST}, the massive spin-2 and spin-$\frac{3}{2}$ should contribute similarly.
+		
+Thus, for the RR 1-form one obtains the following one-loop correction to the self-energy in the usual Lorenz gauge
+%
+\beq \label{eqap:oneformfermion10d}
+	\frac {\partial \Pi_{n,\mu \nu}^{(10d)}(p)}{\partial p^2} \bigg\rvert_{p=0}\, \sim\, - (2\kappa^2_{10})^2\, q_n^2\, g^2\, \delta_{\mu \nu} \Lambda_{\text{QG}}^{6}\ ,
+\eeq
+%
+whilst the expression for the 3-form is essentially the same up to the tensorial structure, which becomes the one appropriate for a rank-3 antisymmetric gauge field. Notice that we have neglected contributions of $\mathcal{O}(1)$ above and we have moreover included a factor of $(2\kappa^2_{10})^2$, which appears through the propagators of the massive 3-form fields, $C^{(n)}_3$ (see eq. \eqref{eqap:finalbosonicaction}). From the discussion above one can properly identify the physical $U(1)$ charges as
+%
+\beq
+	q_n\, g= e^{\phi_0}\, \frac{n\, m_{\text{D}0}}{2\kappa^2_{10}}\, ,
+\eeq
+%
+where we have used the relations displayed around eq. \eqref{eq:vevmatching} as well as the fact that $ m_{\text{D}0}=1/R_{\text{phys}}$. All in all, after summing over the entire tower of D0-branes, we obtain the following one-loop wave-function renormalization for the $C_1$-field
+%
+\beq \label{eqap:sumovertoweroneform}
+	\sum_n \frac {\partial \Pi_{n,\mu \nu}^{(10d)}(p)}{\partial p^2} \bigg\rvert_{p=0} \sim - e^{2 \phi_0}\, m_{\text{D}0}^2\, \Lambda_{\text{QG}}^{6}\, \delta_{\mu \nu} \sum_n n^2 \sim - \delta_{\mu \nu}\ e^{2 \phi_0}\, m_{\text{D}0}^2\, \Lambda_{\text{QG}}^{6}\ N^3\, ,
+\eeq
+%
+where $N$ denotes the total number of steps of the D0-brane tower whose mass is at or below the QG scale, $\Lambda_{\text{QG}}$. Now, upon using the definition of the species scale, eq. \eqref{species}, as well as the mass formula of our BPS tower, one can show that both $\Lambda_{\text{QG}}$ and $N$ can be written (up to order one factors) in terms of the mass of a single D0-brane as follows
+%
+\beq \label{eqap:QGscaleandN} 
+	\Lambda_{\text{QG}}\, \sim\, m_{\text{D}0}^{\frac{1}{9}}\, \Mpt^{\frac{8}{9}}\, , \qquad N\, \sim\,  m_{\text{D}0}^{-\frac{8}{9}}\, \Mpt^{\frac{8}{9}}\, .
+\eeq
+%
+Substituting these back into eq. \eqref{eqap:sumovertoweroneform} we find
+%
+\beq
+	\sum_n \frac {\partial \Pi_{n,\mu \nu}^{(10d)}(p)}{\partial p^2} \bigg\rvert_{p=0} \sim - \delta_{\mu \nu}\, e^{2 \phi_0}\, \Mpt^8\, ,
+\eeq
+%
+which indeed agrees with what we wanted to reproduce, c.f. eq. \eqref{eqap:coupling1formIIA}.
+		
+		
+Concerning the wave-function renormalization of the 10d dilaton field, the calculation is exactly the same as the one performed in section \ref{sss:IIAstrongcoupling}, the only difference being the units in which we measure the mass of the D0-branes, which does not affect the final result after summing over all the contributions from the tower. 
+		
+		
+\section{Dimensional reduction of the $P$-form-gravitino coupling}
+\label{ap:dimreductiongravitino}
+Motivated by the gravitino coupling with the field strength $\hat{G}_4$ in 11d M-theory (see eq. \eqref{eq:MthyactiongravitinoG4coupling}), in this appendix we consider the reduction of a coupling of the same form in $D$ dimensions after compactification on a $k=D-d$ dimensional manifold. To be as general as possible, we begin with a coupling between a $P$-form field strength and a gravitino bilinear in  $D$ dimensions and obtain the $d$-dimensional couplings between the reduced $p$-form field strength ($p\leq P$) and the corresponding gravitino bilinear KK replicas. The goal is to extract the dependence on the internal volume of the $d$-dimensional coupling between the $p$-form and the KK modes of the gravitino, as this is what we use in the main text to compute the  one-loop contribution to the kinetic term of the corresponding massless $(p-1)$-form. As we show, this volume dependence can be extracted very generally, and the specific details of the compactification would only introduce different order-one factors and dependence on other moduli, but not on the overall volume. Our results are thus applicable to both Calabi--Yau and circle compactifications, which are the ones we use in the main text, and we discuss some more specific properties of them at the end of the section, after presenting the general formulae. Let us start with the coupling
+%
+\begin{equation}
+			\label{eq:P-formgravitinogeneral}
+			S^D_{G_p \bar{\psi} \psi} = \frac{1}{16\kappa_{D}^2}\int \text{d}^{D}x \sqrt{-g_{D}}\dfrac{1}{(P)!}G_{M_1 \ldots M_{P}} \overline{\psi}_N \Gamma^{[N|}\Gamma^{M_1 \ldots M_{P}} \Gamma^{|Q]} \psi_Q\, , 
+\end{equation}
+%
+where $\Gamma^M$ denote the $D$-dimensional gamma matrices and $\Gamma^{M_1 \ldots M_{n}}$ their anti-symmetrized combinations. Here we use $M=0, \ldots, D-1$, $\mu=0, \ldots, d-1$, $i=1, \ldots, k$. First of all, we can expand the $D$-dimensional gravitino field as
+%
+\begin{equation}	\label{eq:gravitinoexpansiongeneral}
+			\psi_{\mu}\, =\,  \sum_{n,\alpha}  \psi^{(n)}_{\mu,\alpha } \otimes \xi^{(n)}_\alpha\, ,
+\end{equation}
+%
+where $\xi^{(n)}_{\alpha }$ denote the internal spinors that are eigenstates of the Dirac operator ($i \slashed{\nabla}_{\text{CY}}$) along the internal space
+%
+\begin{equation}
+			\label{eq:Diraceigenvalueproblemgeneral}
+			-i \gamma^m \nabla_m \xi^{(n)}_{\alpha} =  \lambda_{(n)} \xi^{(n)}_{\alpha}\, .
+\end{equation}
+%
+Similarly, we can obtain the zero modes of the lower-dimensional $p$-form field strengths upon expanding the $P$-form field strengths in the corresponding basis of internal harmonic $(P-p)$-forms, denoted generically by $\omega_a$, namely
+%
+\begin{equation}	\label{eq:P-formexpansiongeneral}
+			G_P= \sum_a F_p^a \wedge \omega_a\, , \qquad a=1, \ldots, b^{P-p}\, .
+\end{equation}
+%	
+Introducing now eqs. \eqref{eq:gravitinoexpansiongeneral} and \eqref{eq:P-formexpansiongeneral} into the $P$-form-gravitino bilinear, \eqref{eq:P-formgravitinogeneral} we obtain the following lower dimensional interaction term (note that this includes the case $P=p$, in which case $\omega_a=1$)
+%
+\begin{equation}
+			\label{eq:gravitinovertices1}
+			\sqrt{g_{d}} \sum_{n,\alpha,\beta} (F_p)^a_{\mu_1 \ldots \mu_p}\ \left( \overline{\psi^{(n)}_{\nu,\alpha}} \gamma^{[\nu |}\gamma^{\mu_1 \ldots \mu_p} \gamma^{| \rho ]} \psi^{(n)}_{\rho,\beta} \right) \int d^ky \sqrt{g_{k}} (\omega_a)_{i_1\ldots i_{P-p}}\ \xi^{(n), \dagger}_\alpha \gamma^{i_1\ldots i_{P-p}} \xi^{(n)}_\beta   \, .
+\end{equation}
+%
+The integral over the internal dimensions is a bilinear on the internal spinors $\xi^{(n)}_\alpha$ and the choice of each pair of $\alpha$ and $\beta$ depends on the number of internal gamma matrices, i.e. $(P-p)$,  through generalizations of the orthogonality condition $\xi^{\dagger}_\alpha \xi_{\beta}=\delta_{\alpha \beta}$ (for particular cases, such as  CY$_3$ compactifications, one can be more precise and obtain relations such as  \eqref{eq:xiproperties}). Since we are interested in the dependence of such interaction on the internal volume, $\mathcal{V}_k$, we do not need to perform the computation in more detail, since keeping track of the $\gamma^i$ structure is enough for this purpose, as we illustrate in the following.
+		
+To begin with, we can extract the dependence of the internal integral on the overall volume by rewriting all the quantities depending on the internal metric in terms of a related one of unit volume, i.e. a new metric $\tilde{g}_k$ satisfying the constraint 
+%
+\begin{equation}
+			\int_{\mathcal{M}_k} d^ky \sqrt{\tilde{g}_k} = 1\, .
+\end{equation}
+%
+It is easy to see that both metrics are hence related as $(g_k)_{ij}=(\tilde{g}_k)_{ij} \mathcal{V}_k^{2/k}$. This means, in particular, that we can analogously define \emph{unimodular} (internal) vielbeins $\tilde{e}^{i}_a=\mathcal{V}_k^{1/k} e^{i}_a$, such that the final dependence on the volume scalar of the internal integral appearing in eq. \eqref{eq:gravitinovertices1} becomes simply a prefactor of the form $\mathcal{V}_k^{1-\frac{P-p}{k}}$. In addition, we need to take into account the Weyl rescaling of the $d$-dimensional metric to go to the Einstein frame, namely $(g_d)_{\mu \nu} \to\, \mathcal{V}_k^{-\frac{2}{d-2}}\, (g_d)_{\mu \nu} $, together with the field redefinition of the massive modes of the gravitino in order for them to have canonical kinetic terms (so that we can directly apply the results from the diagrams computed in section \ref{s:EmergenceQG} and Appendix \ref{ap:Loops}), which yields $\psi_{\mu , \alpha}^{(n)}\to \, \mathcal{V}_k^{-\frac{1}{2d-4}} \, \psi_{\mu , \alpha}^{(n)}$. Therefore, putting together all these rescalings and redefinitions, the $d$-dimensional interactions between the tower of gravitini and the corresponding zero-mode $p$-form field strength read
+%
+\begin{equation}
+			\label{eq:gravitinovertices2}
+			S^{d}_{F_p \bar{\psi} \psi }= \mathcal{V}_k^\theta\sqrt{g_{d}} \sum_{n,\alpha,\beta} (F_p)^a_{\mu_1 \ldots \mu_p}\ \left( \overline{\psi^{(n)}_{\nu, \alpha}} \gamma^{[\nu |}\gamma^{\mu_1 \ldots \mu_p} \gamma^{| \rho ]} \psi^{(n)}_{\rho,\beta} \right) M^{\alpha \beta}  \, , \qquad \theta=\dfrac{p-d+1}{d-2}-\dfrac{P-p}{k}+1 \, ,
+\end{equation}
+%
+where $M^{\alpha \beta}$ represents the volume-independent part that comes from the internal integration with respect to the internal unimodular volume element and can only depend on other internal moduli, which  we do not take to be divergent in the emergence computations in the main text for simplicity.
+		
+\subsubsection*{11d M-theory on a Calabi--Yau three-fold}
+	
+For concreteness, we let us now specify to the case of a  11d M-theory on a Calabi--Yau three-fold. First, we can decompose the $11$d $\Gamma$-matrices as \cite{Grana:2020hyu,Held:2010az}
+%
+\begin{equation}
+			\label{eq:gammadecomposition}
+			\Gamma^{\mu}=\gamma^{\mu} \otimes \gamma_{7}\, , \qquad \Gamma^{4+m}=\mathbb{I} \otimes \gamma^{m}\, ,
+\end{equation}
+%
+where $\gamma^\mu$ and $\gamma^m$ denote the 5d and 6d $\gamma$-matrices, respectively and similarly with the chirality matrices. (In particular, one has for the chirality operator in the six-dimensional internal space the following $\gamma_{7}=i \gamma^{123456}$.) Moreover, recall that on a Calabi--Yau three-fold there is one \emph{globally} defined internal spinor, which turns out to be also covariantly constant. We denote it by $\xi_+$, together with its charge conjugate $\xi_+^C=\xi_-$, of opposite chirality (i.e. $\gamma_7\  \xi_{\pm}=\pm \xi_{\pm}$). The following bilinears of the internal spinors turn out to be particularly useful (see e.g. Appendix A of \cite{Grana:2020hyu})
+%
+\begin{equation}
+			\label{eq:xiproperties}
+			\begin{array}{rl}
+				\xi_+^\dagger \xi_+\, =\, \xi_-^\dagger \xi_- \, =\, 1\\
+				\xi_{\pm}^{ \dagger} \gamma^{m_{1} \ldots m_{n}} \xi_{\mp}=0  & \quad \text{for}\ n=0,2,4,6\, ;\\
+				\xi_{\pm}^{ \dagger} \gamma^{m_{1} \ldots m_{n}} \xi_{\pm}=0 &  \quad \text{for}\ n =1,3,5\, ,\\
+				%\eta_{\pm}^{i \dagger} \gamma^{m} \eta_{\mp}^{i}=0
+			\end{array}
+\end{equation}
+%
+and one can also construct both the K\"ahler 2-form and the (unique) holomorphic (3,0)-form of the three-fold in the following way \cite{Koerber:2010bx}:
+%
+\begin{equation}
+			\label{JOdefinitions}
+			J_{i j}=i \xi_+^{\dagger} \gamma_{i j} \xi_+=-i \xi_-^{\dagger} \gamma_{i j} \xi_-\, , \qquad \Omega_{ijk}=\xi_-^{\dagger} \gamma_{ijk} \xi \, .
+\end{equation}
+%
+		
+These (covariantly) constant spinorial modes are part of a larger group of eigenstates of the Dirac operator ($i \slashed{\nabla}_{\text{CY}}$), so that eq. \eqref{eq:Diraceigenvalueproblemgeneral} now takes the simplified form
+%
+\begin{equation}
+			\label{eq:Diraceigenvalueproblem}
+			-i \gamma^m \nabla_m \xi^{(n)}_{\pm} = \pm \lambda_{(n)} \xi^{(n)}_{\pm}\, ,
+\end{equation}
+%
+and the eigenspinors satisfy the chirality condition 
+%
+\begin{equation}
+			\gamma_7\ \xi^{(n)}_{\pm}= \pm \xi^{(n)}_{\pm}\, .
+\end{equation}
+%
+Of course, the series of eigenvalues starts with $\lambda_{(0)}=0$, whose eigenspinors are precisely the covariantly constant ones, i.e. $\xi^{(0)}_{\pm}=\xi_{\pm}$. Notice that given that $\gamma_7$ is purely imaginary, the eigenfunctions of the hermitian operator $(i \slashed{\nabla}_{\text{CY}})^2$ come in pairs of opposite chirality, even for the zero modes\cite{Green:2012pqa}. They can also be related by complex (charge) conjugation, as it was the case for the zero modes as well as satisfy similar orthogonality conditions as the corresponding zero modes, see eq. \eqref{eq:xiproperties}.
+		
+Thus, the expansion of the gravitino into into its KK modes, eq. \eqref{eq:gravitinoexpansiongeneral}, now reads
+%
+\begin{equation}
+\label{eq:gravitinoexpansion+-}
+	\begin{split}
+				%	\Psi^{(10)}_{+\, \mu}= & \psi_{+ \mu} \otimes \xi_+ +  \psi_{+ \mu }^C \otimes \xi_- \, = \, \psi_{+ \mu} \otimes \xi_+ + c.c. \,  , \\
+				\psi_{\mu}\, =\,  \sum_{n=0}^\infty \left( \psi^{(n)}_{\mu} \otimes \xi^{(n)}_+ +  \psi^{(n),\ C}_{\mu} \otimes \xi^{(n)}_-\right) \, , 
+	\end{split}
+\end{equation}
+%
+where  $\psi^{(n)}_{\mu}, \psi^{(n),\ C}_{\mu}$ are an infinite number of five-dimensional gravitini together with their charge conjugates. These comprise in particular the two massless 5d $\mathcal{N}=2$ symplectic-Majorana gravitini (see e.g. \cite{Aspinwall:1996mn} and footnote \ref{fn:symplecticmajorana}), as well as the tower of massive quaternionic spinors. Notice that this is the most general expansion compatible with the Majorana character of the single 11d gravitino. Of course, we are restricting to the $\mu$ indices since these are the ones that yield the 5d gravitini, but there should also be analogously massless and massive dilatini following from the internal components of the 11d gravitino. 
+		
+Finally, from the 11d Dirac conjugate we can read the 5d and 6d Dirac conjugates, given by
+%
+\begin{equation}
+			\overline{\psi_M}=\psi^{\dagger}_M\  \Gamma^0 \ \Longrightarrow \ \overline{\psi^{(n)}_\mu}=\psi^{(n),\ \dagger}_\mu\ \gamma^0 \, , \quad \overline{\xi^{(n)}_\pm}= \xi_\pm^{(n),\ \dagger} \gamma_7\, ,
+\end{equation}
+%
+where we have used the decomposition reviewed in eq. \eqref{eq:gammadecomposition}.
+		
+Dimensionally reducing eq. \eqref{eq:P-formgravitinogeneral} in such set-up, with $D=11$, $k=6$, and the values of $P$ and $p$ that correspond to the expansion \eqref{eq:11dp-formsexpansion} we obtain the following schematic terms\footnote{Note that we are using here $\mathcal{V}_6$ to denote the volume of the six-dimensional internal manifold in 11d Planck units, but this is denoted $\mathcal{V}_5$ in the main text since it is the one that enters the 5d EFT, in order to distinguish it from the one that appears in the 4d EFT, which is denoted $\mathcal{V}$ and corresponds to the volume of the internal manifold measured in 10d string units.}
+%
+\begin{equation}\label{eq:5dp-formpsipsicouplings}
+	 \begin{split}
+				S^{4d}_{F_4^0\bar{\psi}\psi}=& \, \mathcal{V}_6 \sum_{n,\alpha,\beta} (F_4^0)_{\mu_1 \ldots \mu_4}\ \left( \overline{\psi^{(n)}_{\nu, \alpha}} \gamma^{[\nu |}\gamma^{\mu_1 \ldots \mu_4} \gamma^{| \rho ]} \psi^{(n)}_{\rho,\beta} \right) M_{F_4^0}^{\alpha \beta} \, , \\
+				S^{4d}_{F_5^a\bar{\psi}\psi}=& \, \mathcal{V}_6 \sum_{n,\alpha,\beta} (F_5^a)_{\mu_1 \ldots \mu_5}\ \left( \overline{\psi^{(n)}_{\nu, \alpha}} \gamma^{[\nu |}\gamma^{\mu_1 \ldots \mu_5} \gamma^{| \rho ]} \psi^{(n)}_{\rho,\beta} \right) M_{F_5^a}^{\alpha \beta} \, , \\
+				S^{4d}_{H_4^I\bar{\psi}\psi}=& \, \mathcal{V}_6^{1/2} \sum_{n,\alpha,\beta} (H_4^I)_{\mu_1 \ldots \mu_4}\ \left( \overline{\psi^{(n)}_{\nu, \alpha}} \gamma^{[\nu |}\gamma^{\mu_1 \ldots \mu_4} \gamma^{| \rho ]} \psi^{(n)}_{\rho,\beta} \right) M_{H_4^I}^{\alpha \beta} \, , \\
+		\end{split}
+\end{equation}
+%
+(with $\alpha\, , \beta=\pm$) which give the volume dependence displayed in eqs. \eqref{eq:5dgravitinop-formvertices} and where we have not explicitly shown the expressions for $M^{\alpha \beta}$  since they are not relevant for our purposes, but they can be easily obtained. For $n=0$ these also serve as the starting point for the reduction from 5d to 4d to extract the dependence on the volume of the $S^1$, denoted $R_5$, which is needed in section \ref{ss:4dpotential}.
+
+\end{comment}
+
+\chapter{Generalities on charge-to-mass and species vectors}
+\label{ap:generalities}
+
+In this appendix we present a derivation of the formulae associated to the computation of the relevant scalar charge-to-mass and species vectors that are extensively used in Part \ref{part:pattern} of the thesis. Section \ref{s:compactificationNmfd} focuses on general compactifications of a $D$-dimensional gravitational theory on some Ricci-flat closed manifold of real dimension $n\in \mathbb{N}$. In Section \ref{ss:nestedcompactifications} we generalize the analysis to the case in which the compact space is a product of the form $\mathcal{X}'_n=\mathcal{X}_{n_1}\times \ldots \times\mathcal{X}_{n_N}$, with $n_i$ denoting the dimensionality of the corresponding submanifold. In both cases we take the opportunity to revisit the universal pattern presented in Chapter \ref{ch:pattern}, checking it explicitly.
+	
+\section{Compactification on an $n$-dimensional cycle}\label{s:compactificationNmfd}
+	
+Let us start by studying the kind of charge-to-mass vectors that typically appear in string-motivated EFTs. In order to be as general as possible, we consider a $D$-dimensional theory compactified down to $d=D-n$ spacetime dimensions. We denote $\mathcal{V}_n$ the overall volume modulus associated to the internal compact manifold, $\mathcal{X}_n$, measured in $D$-dimensional Planck units. Suppose that we focus on a sector of the theory described by the following simple action \cite{Etheredge:2022opl}
+%
+\begin{equation}\label{eq:higherDdim}
+	S_{D} \supseteq \int \dd^{D}x\, \sqrt{-g_D}\,  \left[  \frac{1}{2\kappa_{D}^2}\mathcal{R}_{D} - \frac{1}{2}\left(\partial \hat \phi \right)^2 \right]\, ,
+\end{equation}
+%
+where $\hat{\phi}$ is some generic canonically normalized modulus. Note that one may also think of $\hat \phi$ as parametrizing some fixed (asymptotically) geodesic trajectory in a multi-moduli set-up. Upon compactification on the $n$-fold $\mathcal{X}_n$, one arrives at
+%
+\begin{equation}\label{eq:ddim}
+	S_{d} \supseteq \int \dd^{d}x\, \sqrt{-g_d}\,  \left[ \frac{1}{2\kappa_{d}^2} \left(\mathcal{R}_{d} - \frac{d+n-2}{n (d-2)} \left(\partial \log \mathcal{V}_n \right)^2 \right)- \frac{1}{2} \left(\partial \hat \phi \right)^2 \right]\, ,
+\end{equation}
+%
+where we have retained only the scalar-tensor sector of the lower dimensional theory, ignoring possible extra fields arising in the dimensional reduction process.\footnote{To obtain \eqref{eq:ddim} in such form one needs to perform a Weyl rescaling of the $d$-dimensional metric as follows $g_{\mu \nu} \to g_{\mu \nu} \mathcal{V}_n^{-\frac{2}{d-2}}$.} One can then define a canonically normalized volume modulus
+%
+\begin{equation}\label{eq:canonicalvolume}
+	\hat \rho = \frac{1}{\kappa_d}\sqrt{\frac{d+n-2}{n(d-2)}} \log \mathcal{V}_n\, ,
+\end{equation}
+%
+which indeed controls the overall Kaluza-Klein scale associated to the compact internal space
+%
+\begin{equation}\label{eq:KKscale}
+	m_{\text{KK},\, n} \sim  M_{\text{Pl};\, d}\, e^{-\kappa_d \sqrt{\frac{d+n-2}{n (d-2)}} \hat \rho}\, .
+\end{equation}
+%
+As customary, this tower of states becomes exponentially light when taking the decompactification limit $\hat \rho \to \infty$. In terms of scalar charge-to-mass vectors one would then write
+%
+\begin{equation}\label{eq:kkcharge2mass}
+	\vec{\zeta}_{\text{KK},\, n} = \left( 0 , \sqrt{\frac{d+n-2}{n (d-2)}} \right)\, ,
+\end{equation}
+%
+where the first (last) entry corresponds to the normalized modulus $\hat \phi$ ($\hat \rho$).
+	
+Let us also assume that the scalar $\hat \phi (x)$ is non-compact, and that the higher dimensional theory satisfies the Distance Conjecture \cite{Ooguri:2006in}. Therefore, there should exist an infinite tower of particles with mass behaving asymptotically as follows
+%
+\begin{equation}\label{eq:SDCDdim}
+	m_{\text{tow}} \sim  M_{\text{Pl};\, D}\, e^{-\kappa_D \lambda_D \hat \phi}\, ,
+\end{equation}
+%
+where $\lambda_D$ is nothing but the $D$-dimensional scalar charge-to-mass ratio along the positive $\hat \phi$-direction. If such tower of particles is inherited by the lower-dimensional theory, they would present a mass which in Planck units depends on both $\hat \phi$ and the volume modulus $\hat \rho$ through the relation
+%
+\begin{equation}\label{eq:SDCddim}
+	m_{\text{tow}} \sim  M_{\text{Pl};\, d}\, \exp\left\{-\kappa_d \lambda_D \hat \phi - \kappa_d \sqrt{\frac{n}{(d+n-2)(d-2)}} \hat \rho\right\}\, ,
+\end{equation}
+%
+where the second term in the exponent arises just from the ratio $M_{\text{Pl};\, D}/M_{\text{Pl};\, d}$. Again, in terms of scalar charge-to-mass vectors one obtains
+%
+\begin{equation}\label{eq:chargetomasstower}
+	\vec{\zeta}_{\text{t}} = \left( \lambda_D , \sqrt{\frac{n}{(d+n-2)(d-2)}} \right)\, .
+\end{equation}
+%
+Note that if $\hat{\phi}$ denotes the $D$-dimensional dilaton in some string theory, then $\lambda_D=\frac{1}{\sqrt{D-2}}=\frac{1}{\sqrt{d+n-2}}$ \cite{Etheredge:2022opl, vandeHeisteeg:2023ubh}, whilst if it corresponds to a volume modulus from a higher compactification (i.e. from $D'=D+n'$ to $D$ spacetime dimensions), then $\lambda_D=\sqrt{\frac{D+n'-2}{n'(D-2)}}=\sqrt{\frac{d+n+n'-2}{n'(d+n-2)}}$. Remarkably, this also encompasses the case in which one of the moduli corresponds to some dilatonic field, since upon taking the limit $n'\to \infty$ the first entry of the scalar charge-to-mass vector becomes $\frac{1}{\sqrt{D-2}}$.
+	
+For the species scale, on the other hand, we will distinguish between two possibilities, as predicted by the Emergent String Conjecture \cite{Lee:2019wij}. First of all, if the limit corresponds to an emergent critical string, the QG cut-off will be given by the string scale since the set of light states will be dominated by an exponentially large number of string excitation modes. Because of this, one has
+%
+\begin{equation} \label{eq:stringmassdependence}
+	\LSP \sim m_{\rm string}\sim M_{\text{Pl};\, D}\, \exp\left\{-\kappa_D\frac{1}{D-2} \hat \phi\right\}\, .
+\end{equation}
+%
+Hence $\vec{\mathcal{Z}}_{\rm osc}=\vec{\zeta}_{\rm osc}$, so that in this limit
+%
+\begin{equation}\label{eq:generalstringlimit}
+	\vec{\zeta}_{\text{t}}\cdot\vec{\mathcal{Z}}_{\rm sp}=|\vec{\zeta}_{\rm osc}|^2=\frac{1}{d-2}\, ,
+\end{equation}
+%
+thus fulfilling \eqref{eq:pattern}. Notice that \eqref{eq:generalstringlimit} above is also verified when $\vec{\zeta}_{\text{t}}=\vec{\zeta}_{\text{KK},\, n}$ (see Figure \ref{sfig:KKstring}), since for an emergent string limit the KK tower falls at the same rate as the string mass \cite{Lee:2019wij}. Otherwise, one could retrieve a critical string in $d<10$.
+	
+The second possibility would correspond to explore some decompactification limit, namely when the tower from \eqref{eq:SDCDdim} is of Kaluza-Klein nature (in some duality frame). In such a case, one would have three different species vectors: those which are parallel to the original $\zeta$-vectors and a new one arising as an effective combination thereof. For the former, one can write 
+%
+\begin{equation}\label{eq:Zvectorgeneral}
+	\vec{\mathcal{Z}}_{{\rm KK},\, n'}=\frac{n'}{d+n'-2}\vec{\zeta}_{{\rm KK},\, n'}\, , \qquad \vec{\mathcal{Z}}_{{\rm KK},\, n}=\frac{n}{d+n-2}\vec{\zeta}_{{\rm KK},\, n}\, ,
+\end{equation}
+%
+where $\vec{\zeta}_{{\rm KK},\, n}$ is given by \eqref{eq:kkcharge2mass} above and with
+%
+\begin{equation}
+	\vec{\zeta}_{{\rm KK},\, n'} = \left( \sqrt{\frac{d+n+n'-2}{n' (d+n-2)}} , \sqrt{\frac{n}{(d+n-2)(d-2)}} \right)\, ,
+\end{equation}
+%
+thus satisfying $|\vec{\zeta}_{{\rm KK},\, n'}|^2=\frac{d+n'-2}{n' (d-2)}$. Therefore, whenever we explore an asymptotic direction parallel to one of these two, the species scale will be parametrically controlled by the Planck scale of the $(d+n')$-dimensional (resp. $(d+n)$) theory. As an example, upon taking the limit $\hat\phi, \hat\rho \to \infty$ along the $\vec{\zeta}_{{\rm KK},\, n'}$\,-direction one finds
+%
+\begin{align} \label{eq:kkspeciesvector}
+	\LSP \sim M_{{\rm Pl};\, d+n'}\sim M_{\text{Pl};\, d}\, \left(\frac{m_{{\rm KK},\, n'}}{M_{\text{Pl};\, d}}\right)^{\frac{n'}{d+n'-2}}\, ,
+\end{align}
+%
+with $m_{{\rm KK},\, n'}$ denoting the mass scale of the corresponding KK-like tower. For intermediate directions, however, the dominant species vector is that obtained by combining the previous ones as follows
+%
+\begin{equation}\label{eq:effectiveKKspeciesvector}
+	\vec{\mathcal{Z}}_{{\rm KK},\, n+n'} = \frac{1}{d+n+n'-2}\left( n'\, \vec{\zeta}_{{\rm KK},\, n'} + n\, \vec{\zeta}_{{\rm KK},\, n}  \right)\, ,
+\end{equation}
+%
+which is indeed controlled by the Planck scale of the $(d+n+n')$-dimensional parent theory, see Figure \ref{sfig:twoKK}. With this we can now check if the pattern \eqref{eq:pattern} is satisfied. Once again, for the directions determined by any of the three species vectors one easily verifies that $\vec{\zeta}_{\text{t}} \cdot \vec{\mathcal{Z}}_{\text{sp}}=\frac{1}{d-2}$. In particular, when probing the $\vec{\mathcal{Z}}_{{\rm KK},\, n+n'}\,$-direction what one effectively does is decompactifying both cycles at the same rate, such that the total KK mass yields a charge-to-mass vector of the form
+%
+\begin{equation} \label{eq:effectivezeta}
+	\vec{\zeta}_{{\rm KK},\, n+n'} = \frac{1}{n+n'}\left( n'\, \vec{\zeta}_{{\rm KK},\, n'} + n\, \vec{\zeta}_{{\rm KK},\, n}  \right)\, ,
+\end{equation}
+%
+which happens to lie at the point closest to the origin within the polytope generated by $\vec{\zeta}_{{\rm KK},\, n'}$ and $\vec{\zeta}_{{\rm KK},\, n}$, see Figure \ref{sfig:twoKK}.
+	
+For intermediate cases, given that the species scale is determined by $\vec{\mathcal{Z}}_{{\rm KK},\, n+n'}$ together with the fact that $\vec{\zeta}_{{\rm KK},\, n+n'}$ is orthogonal to the line joining the two $\zeta$-vectors, one finds that \eqref{eq:pattern} still holds for any asymptotically light tower.
+	
+\section{Generalization to `nested' compactifications}
+\label{ss:nestedcompactifications}	
+	
+The previous analysis can be easily generalized to the case in which our $D$-dimensional theory is compactified down to $d=D-n$ on an $n$-dimensional manifold given by the Cartesian product $\mathcal{X}_n=\mathcal{X}_{n_1}\times \ldots \times\mathcal{X}_{n_N}$, with $n=\sum_{i=1}^N n_i$. This can be alternatively seen as a step-by-step (or `nested') compactification
+%
+\begin{equation}\label{eq:compactchain}
+	\notag D=d+\sum_{i=1}^N n_i\to d+\sum_{i=2}^N n_i\to \ldots \to d+n_N\to d\, ,
+\end{equation}
+%
+where the order of the compactification chain is unimportant and only amounts to a certain rotation of the associated scalar charge-to-mass vectors, hence not affecting neither their length nor the angles subtended between them. With this in mind, one finds that the KK tower obtained from the decompactifying any $\mathcal{X}_{n_i} \subset \mathcal{X}_n$ is given by
+%
+\begin{equation}\label{eq: gen eq}
+	\zeta^j_{{\rm KK},\, n_i}=\left\{
+	\begin{array}{ll}
+		0& \qquad \text{if }j<i\\
+		\sqrt{\frac{d+\sum_{l=i}^Nn_l-2}{n_i(d+\sum_{l=i+1}^Nn_l-2)}}& \qquad \text{if }i=j\\
+		\sqrt{\frac{n_j}{(d+\sum_{l=j}^Nn_l-2)(d+\sum_{l=j+1}^Nn_l-2)}}& \qquad \text{if }j>i
+	\end{array}
+	\right.
+\end{equation} 
+%
+Notice that this also encompasses the case in which one of the moduli corresponds to some $D$-dimensional dilaton, upon setting $n_0\to \infty$, so that the zero-th entry of the scalar charge-to-mass vector becomes $\frac{1}{\sqrt{D-2}}$.
+	
+On the other hand, given a subset $\{\vec{\zeta}_{{\rm KK},\, m_j}\}_{j=1}^M\subseteq \{\vec{\zeta}_{{\rm KK},\, n_i}\}_{i=1}^N$, one can show that
+%
+\begin{equation}\label{eq: mult decompact}
+	\vec{\zeta}_{{\rm KK},\, \sum_j m_j}=\frac{1}{\sum_{j=1}^M m_j}\sum_{j=1}^M m_j\, \vec{\zeta}_{{\rm KK},\, m_j}\, ,
+\end{equation}
+%
+corresponds to the `effective' KK tower associated to the joint decompactification of $\mathcal{X}_{m_1}\times \ldots \times \mathcal{X}_{m_M}$, where the volume of each of the cycles grows at the same rate. Incidentally, it can be seen to coincide with the point of the polytope spanned by $\{\vec{\zeta}_{{\rm KK},\, m_j}\}_{j=1}^M$ located closest to the origin.
+	
+Taking infinite distance limits, the easiest possibility would be an emergent string limit, for which $\vec{\zeta}_{\text{t}}\cdot\vec{\mathcal{Z}}_{\rm sp}=|\vec{\zeta}_{\rm osc}|^2=\frac{1}{d-2}$ is trivially fulfilled. The other option would correspond to explore a decompactification limit from $d$ to $d+\sum_{j=1}^M m_j$ dimensions, with $\{m_j\}_{j=1}^M\subseteq\{n_i\}_{i=1}^N$, where we allow the possibility of a dilaton-like direction by taking $m_0\to\infty$. In this case the species scale will be parametrically given by the Planck scale of the ($d+\sum_{j=1}^M m_j$)-dimensional theory,\footnote{If $m_0\to\infty$ then the species scale is again given by the fundamental string scale.} so that
+%
+\begin{align} \label{eq:kkspeciesvectorgeneral}
+	\LSP&\sim M_{{\rm pl},\, d+\sum_{j=1}^M m_j}\sim M_{\text{Pl};\, d}\exp\left\{-\kappa_d\frac{\sum_{j=1}^M m_j}{(d+\sum_{j=1}^M m_j-2)(d-2)}\hat{\rho}\right\}\notag\\
+	&\sim M_{\text{Pl};\, d}\left(\frac{m_{{\rm KK},\, \sum_{j=1}^M m_j}}{M_{{\rm Pl},d}}\right)^{\frac{\sum_{j=1}^M m_j}{d+\sum_{j=1}^M m_j-2}},
+\end{align}
+%
+where $\hat{\rho}$ is the normalized modulus denoting the volume being decompactified. As a result, we find
+%
+\begin{equation}
+	\vec{\mathcal{Z}}_{\rm sp}=\frac{\sum_{j=1}^M m_j}{d+\sum_{j=1}^M m_j-2}\vec{\zeta}_{{\rm KK},\, \sum_{j=1}^M m_j}=\frac{1}{d+\sum_{j=1}^M m_j-2}\sum_{j=1}^M m_j\, \vec{\zeta}_{{\rm KK},\, m_j}\, ,
+\end{equation}
+%
+where \eqref{eq: mult decompact} is used. Now, for the leading tower, we have two possibilities. First of all, we might be moving in the joint compactification direction, so $\vec{\zeta}_{\text{t}}=\vec{\zeta}_{{\rm KK},\, \sum_{j=1}^M m_j}$, and thus
+%
+\begin{equation}
+	\vec{\zeta}_{\text{t}}\cdot\vec{\mathcal{Z}}_{\rm sp}=\frac{\sum_{j=1}^M m_j}{d+\sum_{j=1}^M m_j-2} |\vec{\zeta}_{{\rm KK},\, \sum_{j=1}^M m_j}|^2=\frac{1}{d-2}\, .
+\end{equation}
+%
+The other possibility is that we move in some other direction, where while still decompactifying  $\mathcal{X}_{m_1}\times \ldots \times \mathcal{X}_{m_M}$, not all cycles do so at the same rate. Then we will have a leading tower $\vec{\zeta}_{\text{t}}=\vec{\zeta}_{{\rm KK},{m_{i_0}}}\in \{\vec{\zeta}_{{\rm KK},m_j}\}_{j=1}^M$, so that
+%
+\begin{align}
+	\vec{\zeta}_{\text{t}}\cdot\vec{\mathcal{Z}}_{\rm sp}&= \frac{1}{d+\sum_{j=1}^M m_j-2}\sum_{j=1}^M m_j\, \vec{\zeta}_{{\rm KK},\, {m_{i_0}}}\cdot\vec{\zeta}_{{\rm KK},\, m_j}\notag\\
+	&=\frac{1}{d+\sum_{j=1}^M m_j-2}\left[m_{i_0}|\, \vec{\zeta}_{{\rm KK},\,{m_{i_0}}}|^2+\sum_{j\neq i_0}m_j\, \vec{\zeta}_{{\rm KK},\,{m_{i_0}}}\cdot\vec{\zeta}_{{\rm KK},\, m_j}\right]\notag\\
+	&=\frac{1}{d+\sum_{j=1}^M m_j-2}\frac{d+\sum_{j=1}^Mm_{j}-2}{d-2}=\frac{1}{d-2}\, ,
+\end{align}
+%
+where for the last sum in the second line we have used \eqref{eq: gen eq}. The generalization of this, for which several (but not all) of the cycles decompactify the fastest at the same pace is straightforward, as $\vec{\zeta}_{\text{t}}$ will be a convex combination of KK vectors (actually determined by the closest point to the origin of the polytope generated by the latter). Indeed, this follows from the fact that all possible $\vec{\zeta}_{\rm t}$ are located in the polytope spanned by the $\vec{\zeta}_{\text{KK},\, m_j}$ vectors corresponding to dimensions being decompactified, to which $\vec{\mathcal{Z}}_{\rm sp}$ is perpendicular, by construction.
+
+\chapter{Details on the Hypermultiplet Metric}
+\label{ap:hypermetric}
+	
+The material presented in this appendix is complementary to the discussion in Section \ref{ss:hypers}, where the fate of the pattern presented in Chapter \ref{ch:pattern} within certain heavily quantum-corrected moduli spaces was analyzed. Here we provide more details regarding the relevant non-perturbative corrections, as well as their contribution to the exact hypermultiplet metric. Section \ref{ss:exactmetric} briefly summarizes the procedure employed in \cite{Alexandrov:2014sya} to obtain the aforementioned line element, upon using the twistorial formulation of quaternionic-K\"ahler spaces. Section \ref{ss:SL2Z} reviews the duality properties of the hypermultiplet moduli space arising from Type II compactifications on CY three-folds \cite{Bohm:1999uk, Robles-Llana:2007bbv}, both at the classical and quantum levels. Finally, in Section \ref{ss:detailshyper} we use these considerations to argue how the pattern survives at the quantum level in a non-trivial way.
+	
+\section{The moduli space metric}
+\label{ss:exactmetric}
+	
+The exact hypermultiplet metric for Type IIA string theory compactified on a CY$_3$ has been recently computed exactly to all orders in $g_s$ incorporating the contributions of \emph{mutually local} D2-brane instantons in \cite{Alexandrov:2014sya}. The strategy followed in that work was to exploit the twistorial description of quaternionic-K\"ahler manifolds (see e.g., \cite{Alexandrov:2008ds,Alexandrov:2010qdt}), combined with certain symmetries which are also expected to be preserved at the quantum level. In the following we will briefly review such computation in order to explicitly show the very non-trivial metric one arrives at, which is strongly corrected both at the perturbative and non-perturbative level, thus putting naively in danger any conclusion drawn from the tree-level metric displayed in \eqref{eq:classicalhypermetric}.
+	
+The crucial ingredient to obtain the hypermultiplet metric is the so-called \emph{contact potential} $\chi^{\rm IIA}$, which is a real-valued function defined over a twistor space $\mathcal{Z}$ constructed as a $\mathbb{P}^1$-bundle over the moduli space $\mathcal{M}_{\rm HM}$. It moreover has a connection given by the $\mathsf{SU(2)}$ part, $\vec{p}=\left( p^+, p^-, p^3\right)$, of the Levi-Civita connection on $\mathcal{M}_{\rm HM}$, which in turn determines the holomorphic contact structure associated to $\mathcal{Z}$ (see e.g., the review \cite{Alexandrov:2011va}). Therefore, one may define a holomorphic 1-form as follows
+%
+\begin{align}\label{eq:holomorphic1form}
+	\mathcal{X}=-4 \text{i} \chi^{\text{IIA}} Dt\, ,
+\end{align}
+%
+where $t$ is a complex coordinate on $\mathbb{P}^1$ and $Dt= d t +p^+-\text{i} p^3t+p^- t^2$. Now, in order to obtain the metric on $\mathcal{M}_{\rm HM}$ one first computes the contact potential $\chi^{\rm IIA}$ including all D-instanton corrections, which reads \cite{Alexandrov:2009zh}
+%
+\begin{align}\label{eq:chiIIAtwistor}
+	\chi^{\rm IIA} =\, \frac{\mathcal{R}^2}{2} e^{-K_{\text{cs}}} + \frac{\chi_{E}(X_3)}{96\pi} -\frac{\text{i} \mathcal{R}}{16 \pi^2} \sum_{\gamma} \Omega(\gamma) \left( Z_{\gamma} \mathcal{J}_{\gamma}^{(1, +)} + \bar{Z}_{\gamma} \mathcal{J}_{\gamma}^{(1, -)}\right)\, ,
+\end{align}
+%
+where $\mathcal{R}=e^{-\phi} \mathcal{V}_{A_0}/2$ is the mirror dual of the ten-dimensional IIB dilaton, $K_{\text{cs}}$ is the complex structure K\"ahler potential, and $Z_{\gamma}(z)=q_I z^I-p^I \mathcal{F}_I$ denotes the central charge function of a D2-instanton with integral charges $\gamma=\left( q_I, p^I\right)$. Their degeneracy is captured by the Donaldson-Thomas invariants $\Omega(\gamma)$, which count (in a BPS indexed way) the relevant instantons within the class $[\gamma] \in H_3(X_3, \mathbb{Z})$ \cite{Alexandrov:2013yva}.\footnote{The Donaldson-Thomas invariants $\Omega(\gamma)$ can be related, upon using Mirror Symmetry, to the genus-0 Gopakumar-Vafa invariants in the Type IIB dual description \cite{Gopakumar:1998ii, Gopakumar:1998jq}, see discussion after eq. \eqref{eq:alpha'correctedKahlerpot}.} We have also defined the twistorial integrals \cite{Alexandrov:2014sya}
+%
+\begin{align}\label{eq:Jintegral}
+	\mathcal{J}_{\gamma}^{(1, \pm)}= \pm \int_{\ell_{\gamma}} \frac{\dd t}{t^{1 \pm 1}}\, \log \left( 1-\sigma_{\gamma} e^{-2\pi \text{i} \Theta_{\gamma}(t)}\right)\, ,
+\end{align}
+%
+where $\ell_{\gamma}$ is a BPS ray on $\mathbb{P}^1$, $\sigma_{\gamma}$ is a sign function that we will take to be $+1$ in the following, and $\Theta_{\gamma}(t)$ are functions defined over the twistor space $\mathcal{Z}$ which, in the case of mutually local instantons, are given by
+%
+\begin{align}\label{eq:Thetafn}
+	\Theta_{\gamma}(t) = q_I \xi ^I -p_I \tilde{\xi}_I + \mathcal{R} \left( t^{-1} Z_{\gamma}-t \bar{Z}_{\gamma}\right)\, .
+\end{align}
+%
+As a next step, one needs to determine the $\mathsf{SU(2)}$ connection $\vec{p}$ as functions on the base $\mathcal{M}_{\text{HM}}$ and the complex coordinate $t \in \mathbb{P}^1$, from which one extracts the triplet of quaternionic 2-forms $\vec{\omega}$ as follows 
+%
+\begin{align}
+	\vec{\omega}=-2 \left(d \vec{p} + \frac{1}{2} \vec{p} \times \vec{p} \right)\, .
+\end{align}
+%
+The advantage of knowing $\vec{\omega}$ is that these are defined by the almost complex structures $\vec{\mathcal{I}}$ characterizing the quaternionic-K\"ahler manifold $\mathcal{M}_{\text{HM}}$ as well as by its metric. Therefore, upon specifying e.g., $\mathcal{I}^3$ by providing a basis of holomorphic 1-forms on $\mathcal{M}_{\text{HM}}$, one may retrieve the metric via the relation $g(X,Y)=\omega^3 (X, \mathcal{I}^3 Y)$, for all $X,Y \in T\mathcal{M}_{\text{HM}}$. Once all this has been done, one arrives at the quantum-corrected line element (we henceforth set all magnetic charges $p^I=0$, which can be achieved via some symplectic rotation) \cite{Alexandrov:2014sya}:
+%
+\begin{align}\label{eq:quantumhypermetric}
+	\nonumber d s^2_{\text{HM}} &= \frac{1}{2\left(\chi^{\text{IIA}}\right)^2} \left( 1-\frac{\chi^{\text{IIA}}}{\mathcal{R}^2 U}\right)(d \chi^{\text{IIA}})^2 + \frac{1}{2 \left(\chi^{\text{IIA}}\right)^2\left( 1-\frac{\chi^{\text{IIA}}}{\mathcal{R}^2 U}\right)} \left( d \varrho - \tilde{\xi}_J d\xi^J+\xi^J d\tilde{\xi}_J + \mathcal{H} \right)^2\\
+	\nonumber  &+\frac{\mathcal{R}^2}{2 \left(\chi^{\text{IIA}}\right)^2} \left| z^I \mathcal{Y}_I\right|^2 + \frac{1}{2 \chi^{\text{IIA}} U} \left| \mathcal{Y}_I M^{IJ} \bar{v}_J - \frac{\text{i} \mathcal{R}}{2\pi} \sum_{\gamma} \Omega_{\gamma} \mathcal{W}_{\gamma} d Z_{\gamma}\right|^2\\
+	\nonumber &-\frac{1}{2 \chi^{\text{IIA}}} M^{IJ} \left( \mathcal{Y}_I + \frac{\text{i} \mathcal{R}}{2\pi} \sum_{\gamma} \Omega_{\gamma}\, q_I \mathcal{J}_{\gamma}^{(2, +)} \left( d Z_{\gamma}-U^{-1} Z_{\gamma}\, \partial e^{-K_{\text{cs}}}\right)\right)\\
+	\nonumber &\times \left( \bar{\mathcal{Y}}_J - \frac{\text{i} \mathcal{R}}{2\pi} \sum_{\gamma'} \Omega_{\gamma'}\, q'_J \mathcal{J}_{\gamma'}^{(2, -)} \left( d \bar{Z}_{\gamma'}-U^{-1} \bar{Z}_{\gamma'}\, \bar{\partial} e^{-K_{\text{cs}}}\right)\right)\\
+	\nonumber &+\frac{\mathcal{R}^2\, e^{-K_{\text{cs}}}}{2 \chi^{\text{IIA}}} \Bigg( G_{i \bar j} d z^i d z^{\bar j} - \frac{1}{\left( 2\pi U\right)^2} \left|  \sum_{\gamma} \Omega_{\gamma} \mathcal{W}_{\gamma} Z_{\gamma} \right|^2 \left| \partial K_{\text{cs}}\right|^2\\
+	&+\frac{e^{K_{\text{cs}}}}{2\pi} \sum_{\gamma} \Omega_{\gamma} \mathcal{J}_{\gamma}^{(2)}\left| d Z_{\gamma}-U^{-1} Z_{\gamma}\, \partial e^{-K_{\text{cs}}}\right|^2\Bigg)\, ,
+\end{align}
+%
+where $\mathcal{Y}_I$ is a (1,0)-form adapted to $\mathcal{I}^3$ which reads
+%
+\begin{align}\label{eq:holomorphic1formJ3}
+	\mathcal{Y}_I= d\tilde{\xi}_I -\mathcal{F}_{IK} d\xi^K - \frac{1}{8\pi^2} \sum_{\gamma} \Omega_{\gamma} q_I d \mathcal{J}_{\gamma}^{(1)}\, ,
+\end{align}
+%
+whilst $U$ denotes some real function that is defined as follows\footnote{Note that the quantity $U$ defined in \eqref{eq:Udef} can be intuitively thought of as an instanton corrected version of the complex structure K\"ahler potential.}
+%
+\begin{align}\label{eq:Udef}
+	U= e^{-K_{\text{cs}}} - \frac{1}{2\pi} \sum_{\gamma} \Omega_{\gamma} \left| Z_{\gamma}\right|^2\mathcal{J}_{\gamma}^{(2)} + v_I M^{IJ} \bar{v}_J\, ,
+\end{align}
+%
+with the matrix $M^{IJ}$ being the inverse of $M_{IJ}=-2\text{Im}\, \mathcal{F}_{IJ} - \sum_{\gamma} \Omega_{\gamma} \mathcal{J}_{\gamma}^{(2)} q_I q_J$, and the vector $v_I$ is given by
+%
+\begin{align}
+	v_I=\frac{1}{4\pi} \sum_{\gamma} \Omega_{\gamma} q_I \left( Z_{\gamma} \mathcal{J}_{\gamma}^{(2, +)} + \bar{Z}_{\gamma} \mathcal{J}_{\gamma}^{(2, -)}\right)\, .
+\end{align}
+%
+We have also introduced the quantities $\mathcal{W}_{\gamma}=\bar{Z}_{\gamma} \mathcal{J}_{\gamma}^{(2)}- \mathcal{J}_{\gamma}^{(2, +)}v_I M^{IJ} q_J$ and $\mathcal{H}$, the latter being a 1-form generalizing the K\"ahler connection on the complex structure moduli space (see \cite{Alexandrov:2014sya} for details); as well as the following twistorial integrals (c.f. \eqref{eq:Jintegral}) 
+%
+\begin{align}\label{eq:JintegralII}
+	\mathcal{J}_{\gamma}^{(2, \pm)}&= \pm \int_{\ell_{\gamma}} \frac{\dd t}{t^{1 \pm 1}}\, \frac{1}{\sigma_{\gamma} e^{-2\pi \text{i} \Theta_{\gamma}(t)}-1}\, , \qquad \mathcal{J}_{\gamma}^{(2)}= \int_{\ell_{\gamma}} \frac{\dd t}{t}\, \frac{1}{\sigma_{\gamma} e^{-2\pi \text{i} \Theta_{\gamma}(t)}-1}\, , \notag\\
+	\mathcal{J}_{\gamma}^{(1)}&= \int_{\ell_{\gamma}} \frac{\dd t}{t}\, \log\left(1-\sigma_{\gamma} e^{-2\pi \text{i} \Theta_{\gamma}(t)} \right)\, ,
+\end{align}
+%
+which may be rewritten in terms of Bessel functions, thus capturing the exponentially suppressed behavior --- at large central charge --- associated to D-instanton effects.
+	
+Several comments are in order. First, notice how cumbersome the quantum-corrected metric becomes when compared with its classical analogue in \eqref{eq:classicalhypermetric}. %Of course, it is possible to retrieve the latter upon setting all the $q_I$, and consequently all $Z_{\gamma}$, to zero.
+Particularly interesting are the corrections to the metric components associated to the non-compact scalars, namely the 4d dilaton and the complex structure moduli. Regarding the former, it is the contact potential $\chi^{\rm IIA}$ which may be taken to parametrize the quantum hypermultiplet moduli space.\footnote{In fact, the real function $\chi^{\rm IIA}$ can be physically identified with the quantum-exact four-dimensional dilaton $\varphi_4$ \cite{deWit:2006gn}, and it plays a role similar to a would-be K\"ahler potential \cite{deWit:1999fp,deWit:2001brd}.} As for the latter, we clearly see that the classical piece $G_{i \bar j} d z^i d z^{\bar j}$ receives strong instanton corrections which can even overcome the tree-level contribution \cite{Marchesano:2019ifh}. Moreover, there also appear cross-terms of the form $(d \chi^{\text{IIA}} d z^i + \text{c.c.})$, which arise from the 1-form $d \mathcal{J}_{\gamma}^{(1)}$ inside $\mathcal{Y}_I$ in \eqref{eq:holomorphic1formJ3} above. Hence, a direct evaluation of the pattern discussed in Chapter \ref{ch:pattern} at infinite distance points within $\mathcal{M}_{\text{HM}}$ in principle requires from the use of the full lime element \eqref{eq:quantumhypermetric}, which can become rather involved depending on the limit of interest. Therefore, it is highly non-trivial for the inner product $\vec{\zeta}_{\text{t}} \cdot \vec{\mathcal{Z}}_{\text{sp}}$ to verify \eqref{eq:pattern} at any infinite distance boundary, even if it does so already at the classical level.
+	
+\subsection{The contact potential $\chi^{\rm IIA}$}
+\label{sss:chiIIA}
+	
+Before moving on, let us have a closer look at the contact potential to get a grasp on its physical meaning. This will also provide us with some useful formulae that will be used several times in the following.
+	
+Therefore, we start from the twistorial expression for $\chi^{\rm IIA}$, as shown in eq. \eqref{eq:chiIIAtwistor}, which may be written as follows \cite{Alexandrov:2008gh}
+%
+\begin{equation}\label{eq:fullcontactpotential}
+	\chi^{\rm IIA}= \chi^{\rm IIA}_{\rm class} + \chi^{\rm IIA}_{\rm quant}\, .
+\end{equation}
+%
+The first term corresponds to the classical piece
+%
+\begin{equation}\label{eq:classicalcontactpot}
+	\chi^{\rm IIA}_{\rm class} = \frac{\mathcal{R}^2}{2} e^{-K_{\text{cs}}}\, ,
+\end{equation}
+%
+such that $\chi^{\rm IIA}_{\rm class}$ matches with $e^{-2\varphi_4}$, as one can easily check upon using eqs. \eqref{eq:CSmetric} and \eqref{eq:slagvolumes}. On the other hand, for the quantum corrected piece, $\chi^{\rm IIA}_{\rm quant}$ and in the particular case of mutually local instantons arising from D2-branes\footnote{This set of instantons is mapped by Mirror Symmetry to D($-1$) and D1-instantons wrapping holomorphic 0- and 2-cycles within the CY three-fold, respectively \cite{Robles-Llana:2007bbv}.} wrapping sLag representatives of the 3-cycle classes $[A_I]$, one finds \cite{Robles-Llana:2007bbv,Alexandrov:2014sya,Cortes:2021vdm}
+%
+\begin{equation}\label{eq:quantumchi}
+	\chi^{\rm IIA}_{\rm quant} = \frac{\chi_{E}(X_3)}{96\pi} + \frac{\mathcal{R}}{2\pi^2} \sum_{\gamma} \Omega (\gamma) \sum_{m=1}^{\infty} \frac{|k_I z^I|}{m} \cos \left( 2\pi m k_I \zeta^I\right) K_1 \left( 4\pi m \mathcal{R}|k_I z^I|\right)\, ,
+\end{equation}
+%
+where the term proportional to the Euler characteristic of the three-fold, $\chi_{E}(X_3)=2( h^{1,1}(X_3)-h^{2,1}(X_3))$, comes from a one-loop $g_s$-correction, whilst the second piece arises from the non-perturbative D2-brane instantons. To actually see how \eqref{eq:quantumchi} arises from eq. \eqref{eq:chiIIAtwistor} above, one needs to substitute the definition of the quantities $\mathcal{J}_{\gamma}^{(1, \pm)}$ (c.f. eq. \eqref{eq:Jintegral}), then expand the logarithm around $\Theta_{\gamma}=0$ and finally rewrite the integrals in terms of the modified Bessel function upon using the following identity
+%
+\begin{align}\label{eq:Besselintegral}
+	\int_{0}^{\infty} \frac{\dd y}{y}\, \left(ay + \frac{b}{y}\right) e^{-\left(ay+b/y\right)/2} = 4 \sqrt{ab} K_1 \left( \sqrt{ab}\right)\, .
+\end{align}
+%
+	
+Notice that the contribution to \eqref{eq:quantumchi} associated to the D2-instantons is controlled by their BPS central charge, which coincides (up to order one factors) with the corresponding 4d action
+%
+\begin{equation}\label{eq:D2instantonaction}
+	S_{m,\, k_I} = 4\pi m \mathcal{R} |k_I z^I| + 2\pi {\rm i} m k_I \zeta^I\, ,
+\end{equation}
+%
+where $k_I=(k_0, \mathbf{k})$ denote the (quantized) instanton charges. The axionic v.e.v.s $\zeta^I$ measure the oscillatory part of the corrections, whereas the non-compact scalars $(z^I, \mathcal{R})$ determine their `size' through the modified Bessel function $K_1(y)$.
+	
+\section{$\mathsf{SL(2,\mathbb{Z})}$ duality}
+\label{ss:SL2Z}
+	
+Here we provide some details regarding the $\mathsf{SL(2,\mathbb{Z})}$ invariance that the Type IIA hypermultiplet metric inherits from its dual Type IIB compactification via Mirror Symmetry. This will moreover highlight the effect that the D2-brane instanton corrections have on certain (classical) infinite distance singularities $\mathcal{M}_{\rm HM}^{\rm IIA}$ in the large complex structure (LCS) limit studied in Section \ref{ss:hypers} (see also Section \ref{ss:detailshyper} below).
+	
+\subsection{The classical metric}
+	
+Let us first exhibit the duality of the theory at the classical level. The tree-level metric was shown in \eqref{eq:classicalhypermetric} above, and we repeat it here for the comfort of the reader:
+%
+\begin{align}\label{eq:classicalhypermetricII}
+	h_{p q}\, d q^p d q^q &= \left( d \varphi_4\right)^2 + G_{i \bar j} d z^i d z^{\bar j} + \frac{e^{4\varphi_4}}{4} \left( d \varrho - \left( \tilde{\xi}_J d\xi^J-\xi^J d\tilde{\xi}_J \right)\right)^2 \notag\\
+	& -\frac{e^{2\varphi_4}}{2} \left( \text{Im}\, \mathcal{U}\right)^{-1\ IJ} \left( d\tilde{\xi}_I -\mathcal{U}_{IK} d\xi^K\right) \left( d\tilde{\xi}_J -\bar{\mathcal{U}}_{JL} d\xi^L\right)\, ,
+\end{align}
+%
+where the different fields describing the hypermultiplet sector of Type IIA on the three-fold $X_3$ were discussed around \eqref{eq:CSmoduli}. In order to uncover the $\mathsf{SL(2,\mathbb{Z})}$ invariance of the action at tree-level, it is useful to switch to the Type IIB mirror description, where the symmetry is manifest, and then map the duality transformations back to the original Type IIA set-up. Regarding the first step,  we will simply state here the relevant identifications, whilst referring the reader interested in the details to the original references \cite{Candelas:1990rm, Aspinwall:1993nu}. These read 
+%
+\begin{align}\label{eq:mirrormap}
+	\xi^0 &= \tau_1\, , \quad \xi^i = c^i-\tau_1 b^i\, , \quad z^i=b^i+\text{i}t^i\, , \quad \mathcal{R}=\frac{\tau_2}{2}\, , \notag\\
+	\tilde{\xi}_0 &= c^0-\frac{1}{2} \rho_j b^j + \frac{1}{2} \kappa_{ijk} c^i b^j b^k - \frac{1}{6} \tau_1\, \kappa_{ijk} b^i b^j b^k\, , \quad \tilde{\xi}_i=\rho_i - \kappa_{ijk} c^j b^k + \frac{1}{2} \tau_1\, \kappa_{ijk} b^j b^k\, , \notag\\
+	\varrho &= 2b^0 + \tau_1 c^0 + \rho_j \left( c^j - \tau_1 b^j\right)\, ,
+\end{align}
+%
+where $\tau=\tau_1 + \text{i} \tau_2= C_0 + \text{i}\, e^{-\phi_{\rm{IIB}}}$ is the Type IIB axio-dilaton, $\vartheta^i \equiv b^i+ \text{i} t^i$ denote the (complexified) K\"ahler moduli of the mirror three-fold $Y_3$, $\{ c^i, \rho_i\}$ arise as period integrals of the RR and 2-form and 4-form fields $\{C_2, C_4\}$ over integral bases of $H_2(Y_3)$ and $H_4(Y_3)$, respectively; and finally $\{b^0, c^0 \}$ are scalar fields dual to the four-dimensional components of the 2-forms $C_2$ and $B_2$. We stress that the complex structure moduli $\{z^i\}$ appearing in the mirror map above should be taken as the `flat' (inhomogeneous)  coordinates associated to the expansion of the prepotential around the LCS point \cite{Hori:2003ic}. Therefore, upon applying such map to the line element displayed in \eqref{eq:classicalhypermetricII} one obtains \cite{Ferrara:1989ik}
+%
+\begin{align}\label{classicalhypermetric}
+	\nonumber h_{pq} d q^p d q^q &= (d \varphi_4)^2 + G_{i \bar j} d \vartheta^i d \bar \vartheta^j + \frac{1}{24} e^{2\varphi_4}\cK (d C_0)^2\\
+	\nonumber  &+\frac{1}{6}e^{2\varphi_4}\cK G_{i \bar j} \left(d c^i-C_0 d b^i\right) \left(d c^j-C_0 d b^j\right)\\
+	&+\frac{3}{8\cK}e^{2\varphi_4}G^{i \bar j}\left(d \rho_i - \kappa_{ikl} c^k d b^l\right)\left(d \rho_j - \kappa_{jmn} c^m d b^n\right)\\
+	\nonumber &+\frac{3}{2\cK}e^{2\varphi_4}\left(d c^0-\frac{1}{2}(\rho_id b^i -b^i d \rho_i)\right)^2\\
+	\nonumber&+\frac{1}{2}e^{4\varphi_4}\left(d b^0+C_0d c^0 +c^i d \rho_i+\frac{1}{2}C_0(\rho_id b^i- b^i d \rho_i)-\frac{1}{4} \kappa_{ijk}c^i c^jd  b^k\right)^2\, .
+\end{align}
+%
+Now, as already mentioned, the 4d theory inherits from the 10d supergravity a continuous $\mathsf{SL(2,\mathbb{R})}$ symmetry which is broken down to a discrete $\mathsf{SL(2,\mathbb{Z})}$ subgroup by non-perturbative effects (see Section \ref{s:dualities} for details). The action of any such element $\mathcal{A} \in \mathsf{SL(2,\mathbb{Z})}$ on the Type IIB coordinates reads as \cite{Gunther:1998sc, Bohm:1999uk}
+%
+\begin{align}\label{eq:SdualitytransIIB}
+	\tau \rightarrow \frac{a\tau + b}{c\tau+d}\,,\qquad
+	t^i \rightarrow |c\tau+d| t^i \,,\qquad
+	\begin{pmatrix}
+		c^i\\b^i
+	\end{pmatrix}
+	\rightarrow
+	\begin{pmatrix}
+		a \quad  b\\c \quad  d
+	\end{pmatrix}
+	\begin{pmatrix}
+		c^i\\b^i
+	\end{pmatrix}\, , 
+\end{align}
+%
+where we have only displayed the transformations that are most relevant for our purposes here.\footnote{\label{fnote:SL2Zcontactpotential}Notice that under \eqref{eq:SdualitytransIIB}, the 4d dilaton transforms non-trivially, namely $e^{-2\varphi_4} \rightarrow \frac{e^{-2\varphi_4}}{|c\tau+d|}$.} One can then easily check that these are already enough so as to prove the invariance of the first two rows in \eqref{classicalhypermetric} under $\mathsf{SL(2,\mathbb{Z})}$.
+	
+Finally, it is now straightforward to translate the S-duality transformations \eqref{eq:SdualitytransIIB} into a set of analogous ones in the Type IIA mirror dual compactification upon using the mirror map \eqref{eq:mirrormap}. This leads to
+%
+\begin{align}\label{eq:SdualitytransIIA}
+	&\Xi \rightarrow \frac{a\, \Xi + b}{c\, \Xi+d}\,,\qquad
+	\text{Im}\, z^i \rightarrow |c\, \Xi+d|\, \text{Im}\, z^i \,,\qquad \notag\\
+	&\begin{pmatrix}
+		\xi^i + \xi^0\, \text{Re}\, z^i\\ \text{Re}\, z^i
+	\end{pmatrix}
+	\rightarrow
+	\begin{pmatrix}
+		a \quad  b\\c \quad  d
+	\end{pmatrix}
+	\begin{pmatrix}
+		\xi^i + \xi^0\, \text{Re}\, z^i\\ \text{Re}\, z^i
+	\end{pmatrix}\, , 
+\end{align}
+%
+where we have defined the complex field $\Xi= \xi^0 + 2 \text{i} \mathcal{R}$. Note that this is again sufficient to show the invariance of the metric components in \eqref{eq:classicalhypermetricII} associated to the 4d dilaton, the complex structure and the $\xi^I$ coordinates.
+	
+\subsection{Quantum corrections}
+	
+One can go beyond the previous tree-level analysis and study $\mathsf{SL(2,\mathbb{Z})}$ duality once quantum corrections have been taken into account. Following the discussion of Section \ref{ss:exactmetric}, we will only consider the effect of `electric' D2-brane instantons, i.e. those wrapping the $A_I$\,-cycles introduced in \eqref{eq:symplecticpairing}.  
+	
+Recall that the quantum hypermultiplet metric can be effectively encoded into the contact (or tensor) potential, $\chi^{\rm IIA}$, which reads (see Section \ref{sss:chiIIA})
+%
+\begin{align}\label{eq:apchiIIA}
+	\chi^{\rm IIA} &=\, \frac{\mathcal{R}^2}{2} \frac{{\rm i} \int\Omega \wedge \bar \Omega }{|Z^0|^2} + \frac{\chi_{E}(X_3)}{96\pi} \notag\\
+	&+ \frac{\mathcal{R}}{2\pi^2} \sum_{\gamma} \Omega (\gamma) \sum_{m=1}^{\infty} \frac{|k_I z^I|}{m} \cos \left( 2\pi m k_I \xi^I\right) K_1 \left( 4\pi m \mathcal{R}|k_I z^I|\right) \, ,
+	\end{align}
+%
+where the first, second and third terms correspond to the classical, one-loop and D2-instanton contributions, respectively. Now, instead of trying to show how the exact hypermultiplet metric \eqref{eq:quantumhypermetric} still respects $\mathsf{SL(2,\mathbb{Z})}$ duality, we will concentrate on rewriting the above expression in a way which manifestly reflects the symmetry. This will allow us to relate certain non-perturbative corrections to classically-derived terms, thus providing more evidence in favour of our argumentation in Section \ref{ss:detailshyper} below. 
+	
+Let us start by extracting a common $\sqrt{\mathcal{R}}$ factor from each of the three terms in \eqref{eq:apchiIIA}, yielding
+%
+\begin{align}\label{eq:modinvariantchi}
+	\frac{\chi^{\rm IIA}}{\sqrt{\mathcal{R}}} &=\, \frac{\mathcal{R}^{3/2}}{2} \frac{{\rm i} \int\Omega \wedge \bar \Omega }{|Z^0|^2} + \frac{\chi_{E}(X_3)}{96\pi} \mathcal{R}^{-1/2} \notag\\
+	&+ \frac{\mathcal{R}^{1/2}}{2\pi^2} \sum_{\gamma} \Omega (\gamma) \sum_{m=1}^{\infty} \frac{|k_I z^I|}{m} \cos \left( 2\pi m k_I \xi^I\right) K_1 \left( 4\pi m \mathcal{R}|k_I z^I|\right) \, .
+\end{align}
+%
+Therefore, given that the contact potential transforms under $\mathsf{SL(2, \mathbb{Z})}$ precisely the same way as $\sqrt{\mathcal{R}}$ does (see footnote \ref{fnote:SL2Zcontactpotential}), we can now concentrate on finding a modular invariant expression for the right-hand side of \eqref{eq:modinvariantchi}. To do so, we first expand the classical term around the LCS, as follows
+%
+\begin{equation}\label{eq:chiclassical}
+	\begin{aligned}
+		\frac{\mathcal{R}^{3/2}}{2} \frac{{\rm i} \int\Omega \wedge \bar \Omega }{|Z^0|^2} =&\,  4 \mathcal{R}^{3/2} \bigg[ \frac{1}{3!} \kappa_{ijk} v^i v^j v^k + \frac{\zeta(3) \chi_{E}(X_3)}{4(2 \pi)^3}\\
+		&+ \frac{1}{2(2 \pi)^3} \sum_{\textbf{k}>0} n_{\textbf{k}}\, \text{Re}\, \left \lbrace \text{Li}_3 \left( e^{2\pi \text{i}k_i z^i} \right) + 2\pi k_i v^i \text{Li}_2 \left( e^{2\pi \text{i}k_i z^i} \right)\right \rbrace \bigg ]\, ,
+	\end{aligned}
+\end{equation}
+%
+where $\zeta(x)$ denotes the Riemann zeta function, $\text{Li}_k (x)= \sum_{j=1}^{\infty} \frac{x^j}{j^k}$ is the polylogarithm function and we have defined $v^i \equiv \text{Im}\, z^i$ in the above expression. The physical interpretation of each term is clear: the first piece corresponds to the classical volume term of the mirror dual Type IIB compactification on $Y_3$, whilst the second and third ones arise as perturbative and non-perturbative $\alpha'$-corrections that modify the former away from the large volume point. The integers $n_{\textbf{k}}$ denote the genus-zero Gopakumar-Vafa invariants that `count' the multiplicity of holomorphic 2-cycles in a given class $[k_i \gamma^i] \in H^+_2(Y_3, \mathbb{Z})$.
+	
+Next, we divide the instanton piece in \eqref{eq:modinvariantchi} into two different terms, namely we separate the contributions associated to D2-branes wrapped on the SYZ cycle from those wrapping the remaining $A_I$\,-cycles. The reason for doing so will become clear in the following. This leads to
+%
+\begin{align}\label{eq:chiD2}
+	\frac{\chi^{\rm IIA}_{\text{D2}}}{\sqrt{\mathcal{R}}} =\, &\frac{\mathcal{R}^{1/2} \chi_{E}(X_3)}{8\pi^2} \sum_{k_0, m \neq 0} \left| \frac{k_0}{m}\right| e^{ 2\pi \i m k_0 \xi^0} K_1 \left( 4\pi \mathcal{R}|m k_0|\right)\notag\\
+	&+ \frac{\mathcal{R}^{1/2}}{4\pi^2} \sum_{\textbf{k}>0} n_{\textbf{k}} \sum_{m\neq0, k_0 \in \mathbb{Z}} \frac{|k_I z^I|}{|m|} e^{ 2\pi \i m k_I \xi^I} K_1 \left( 4\pi m \mathcal{R}|k_I z^I|\right)\, ,
+\end{align}
+%
+where we have substituted the Donaldson-Thomas invariants $\Omega(\gamma)$ by $\chi_{E}(X_3)/2$ and $n_{\textbf{k}}$ for $\gamma = \left(k_0 \neq 0, \textbf{k}=0 \right)$ and $\gamma = \left(k_0 \in \mathbb{Z}, \textbf{k} > 0 \right)$, respectively. 
+	
+With this, we are finally ready to rewrite \eqref{eq:modinvariantchi} in a manifestly modular invariant way. Notice that the first term in eq. \eqref{eq:chiclassical} is left unchanged under the set of transformations in \eqref{eq:SdualitytransIIA}, reflecting the fact that the tree-level hypermultiplet metric at LCS/Large Volume is modular invariant. Consider now the terms which are proportional to the Euler characteristic of the three-fold, $\chi_{E}(X_3)$. They read
+%
+\begin{align}\label{eq:chiEuler}
+	\frac{\chi^{\rm IIA}_{\chi_{E}}}{\sqrt{\mathcal{R}}} =\, &\frac{\chi_{E}(X_3)}{2(2\pi)^3} \bigg[ 2\mathcal{R}^{3/2} \zeta(3) + \frac{\pi^2}{6} \mathcal{R}^{-1/2} + 4\pi \mathcal{R}^{1/2} \sum_{k_0 \neq 0, m > 0} \left| \frac{k_0}{m}\right| e^{ 2\pi \i m k_0 \xi^0} K_1 \left( 4\pi \mathcal{R}|m k_0|\right) \bigg]\, .
+\end{align}
+%
+which from eq. \eqref{eq:nonpertexpansion} we recognize to be
+%
+\begin{align}\label{eq:chiEulerII}
+	\frac{\chi^{\rm IIA}_{\chi_{E}}}{\sqrt{\mathcal{R}}}\, =\, \frac{\chi_{E}(X_3)}{2(2\pi)^3} \sum_{m, n \in \mathbb{Z}\setminus \lbrace (0,0) \rbrace} \frac{\mathcal{R}^{3/2}}{|m\, \Xi +n|^3}\, ,
+\end{align}
+%
+and is indeed modular invariant.
+	
+Finally, we group together those terms containing sums over Gopakumar-Vafa invariants, such that, after performing a Poisson resummation over the unconstrained integer $k_0$ (c.f. footnote \ref{fnote:Poissonresummation}), one finds \cite{Robles-Llana:2007bbv}
+%
+\begin{align}\label{eq:chiGV}
+	\frac{\chi^{\rm IIA}_{\text{GV}}}{\sqrt{\mathcal{R}}}\, =\, \frac{1}{(2\pi)^3} \sum_{\textbf{k}\neq 0} n_{\textbf{k}} \sum_{m, n \in \mathbb{Z}\setminus \lbrace (0,0) \rbrace} \frac{\mathcal{R}^{3/2}}{|m\, \Xi +n|^3} \left( 1+2\pi |m\, \Xi +n| k_i v^{i}\right) e^{-S_{m, n}}\, ,
+\end{align}
+%
+where $S_{m, n}= 2 \pi k_i \left( |m\, \Xi +n| v^i + \i m \left( \xi^i+\xi^0 \text{Re}\, z^i \right) -in \text{Re}\, z^i\right)$. This last term can be seen to be the mirror dual of the quantum corrections arising from Euclidean Type IIB $(p,q)$-strings, and it tells us that the exponentially suppressed terms within the complex structure K\"ahler potential --- close to the LCS point --- are related by $\mathsf{SL(2, \mathbb{Z})}$ duality to certain D2-brane instanton contributions. In fact, it is precisely this relation the one that plays a key role when evaluating the pattern \eqref{eq:pattern} after taking into account stringy quantum corrections, see Section \ref{ss:detailshyper} below.
+	
+\section{The evaluation of the pattern within $\mathcal{M}_{\rm HM}$}
+\label{ss:detailshyper}
+	
+In Section \ref{ss:hypers} from the main text, we were interested in evaluating the relation \eqref{eq:pattern} for certain trajectories lying entirely within the hypermultiplet moduli space $\mathcal{M}_{\rm HM}$. Such infinite distance paths were of the form
+%
+\begin{equation}\label{eq:generictrajII}
+	\text{Im}\, z^i \sim \sigma^{e^1}\, , \qquad e^{-\varphi_4}\sim \sigma^{e^2}\, , \qquad \sigma \to \infty\, ,
+\end{equation}
+%
+with $e^1, e^2 \geq 0$, thus including both the weak coupling and large complex structure points. Classically, i.e. without taking into account D-instanton corrections, both kind of limits were shown to fulfill the pattern. Quantum-mechanically, however, one expects large instanton contributions to modify the computation, at least in some cases. The purpose of this subsection is to put all the machinery previously described into work in order to prove that eq. \eqref{eq:pattern} still holds even after taking into account all relevant quantum effects, as advertised in Section \ref{sss:instantons}. We analyze each of these limits in turn.	
+	
+\subsubsection*{Weak coupling point}
+	
+In this case, since the singularity that is being approached is at weak string coupling, we do not expect neither perturbative nor non-perturbative effects to become important, and indeed the classical analysis from Section \ref{sss:classivalvsquantum} should be reliable. This can be readily confirmed upon looking at the behavior of the sum in eq. \eqref{eq:quantumchi}, since for $\mathcal{R} \to \infty$ and $z^I$ finite one finds
+%
+\begin{equation}\label{eq:asympotic Bessel infinity}
+	K_1 \left( 4\pi m \mathcal{R}|k_I z^I|\right) \sim \sqrt{\frac{1}{8m \mathcal{R}|k_I z^I|}}\, e^{-4\pi m \mathcal{R}|k_I z^I|} %\left(1 \, +\, \mathcal{O}(1/\mathcal{R}|k_I z^I|) \right)
+	\, ,
+\end{equation}
+%
+such that $\chi^{\rm IIA}_{\rm quant}= \text{const.}\, + \mathcal{O}\left( e^{-\mathcal{R}|k_I z^I|}\right) \ll \chi^{\rm IIA}_{\rm class}$ asymptotically. Similarly, the moduli space metric deviates from the tree-level one by additional terms which at leading order behave as follows (c.f. \eqref{eq:quantumhypermetric}) 
+%
+\begin{equation}
+	\delta  d s_{\rm HM}^2 =  \delta  d s_{\rm HM}^2\rvert_{\text{1-loop}} + \delta  d s_{\rm HM}^2\rvert_{\text{D-inst}}\, \sim\, \frac{\chi_{E}(X_3)}{\chi^{\rm IIA}}\, +\, \sum_{\gamma} \Omega_{\gamma}\, e^{-S_{m,\, k_I}}\, ,
+\end{equation}
+%
+and thus it is enough to use the classical approximation \eqref{eq:classicalhypermetricII}. Therefore, we conclude that the calculations performed after \eqref{eq:fundstringmass} remain valid, and the pattern is still verified.
+	
+Let us also say a few words about the S-dual limit, since it will play a crucial role in what follows. As we mention in the main text, the weak coupling singularity here discussed translates into a physically equivalent one at both strong coupling and LCS, namely $\left( \mathcal{R}' \sim \sigma^{-1} , \text{Im}\, z^{i\, '} \sim \sigma \right)$. Notice that $\mathcal{R}'\, \text{Im}\, z^{j\, '} \to \text{const.}$ , which means, in practice, that the tree-level piece of $\chi^{\rm IIA}$ still dominates over the quantum corrections, i.e. the D2-brane instanton contributions decouple.\footnote{This is not completely true, since the instanton sum can still lead to additional \emph{finite distance} degenerations, which are the S-dual versions of the conifold loci \cite{Candelas:1989js}.} Hence, one can again safely use the classical metric \eqref{eq:classicalhypermetricII} to compute the inner products between the relevant charge-to-mass and species vectors. These are associated to the D4-string, with tension
+%
+\begin{equation}\label{eq:D4SYZSdual}
+	\left(\frac{T_{\text{D4}}}{\Mpf^2} \right)= \frac{2 \mathcal{R}'}{\left(\chi^{\rm IIA}\right)'} = \frac{1}{\chi^{\rm IIA}} \sim \frac{1}{\sigma^{2}}\, ,
+\end{equation}
+%
+and the KK scale
+%
+\begin{equation}\label{eq:KKSYZSdual}
+	\left(\frac{m_{\text{KK},\, B^0}}{\Mpf} \right)^2 \sim \frac{1}{\text{Im}\, z^{i\, '} \left(\chi^{\rm IIA}\right)'} \sim  \frac{1}{\text{Im}\, z^{i}\, \chi^{\rm IIA}} \sim \frac{1}{\sigma^2}\, ,
+\end{equation}
+%
+where in order to arrive at the second equalities we have used the S-duality transformation rules (see eq. \eqref{eq:SdualitytransIIA}). 
+	
+\subsubsection*{Large complex structure point}
+	
+A slightly different story holds for the second kind of limit, namely that corresponding classically to large complex structure at fixed 4d dilaton
+%
+\begin{equation}\label{eq:LCSfixeddilaton}
+	z^j ={\rm i} \xi^j \sigma\, , \qquad \varphi_4= \text{const.}\, , \qquad \sigma \to \infty\, .
+	\end{equation}
+%
+This limit is indeed the mirror dual to the one explored in \cite{Marchesano:2019ifh,Baume:2019sry}. In terms of the relevant coordinates controlling the behavior of the contact potential, such trajectories are of the form $(z^j (\sigma), \mathcal{R} (\sigma)) \sim \left( {\rm i} \sigma, \sigma^{-3/2}\right)$, which means that for small enough instanton charges $k_I$, the correction term controlled by the Bessel function in \eqref{eq:quantumchi} will behave as 
+%
+\begin{equation}\label{eq:strongorrections}
+	K_1 \left( 4\pi m \mathcal{R}|k_I z^I|\right) \sim\frac{1}{4\pi m \mathcal{R}|k_I z^I|}\, .
+\end{equation}
+%
+More precisely, the charges must be such that
+%
+\begin{equation}\label{eq:instantoncondition}
+	4\pi m \mathcal{R}|k_0 + k_i z^i| \ll 1\, ,
+\end{equation}
+%
+for the associated D2-instantons to contribute significantly to the tensor potential $\chi^{\rm IIA}_{\text{quant}}$. As already noted in \cite{Marchesano:2019ifh}, this parallels the behavior of the exponentially light towers of D3-brane bound states appearing in the mirror dual vector multiplet moduli space \cite{Grimm:2018ohb}.%\footnote{Interestingly, the dual D-particle towers play a crucial role in the context of the Emergence Proposal, see \cite{Castellano:2022bvr}.}
+	
+To see what is the upshot of including such quantum corrections into the hypermultiplet metric along the limit specified by \eqref{eq:LCSfixeddilaton}, one can follow the same strategy as in \cite{Baume:2019sry} and exploit the $\mathsf{SL(2, \mathbb{Z})}$ duality of the theory. This allows us to translate the aforementioned limit into a simpler one where we can readily identify the relevant asymptotic physics. Indeed, after performing the duality we end up exploring the following `classical' limit
+%
+\begin{equation}\label{eq:smallCSsmalldilaton}
+	\text{Im}\, z^{j\, '} \sim \sigma^{-1/2}\, , \qquad \mathcal{R}' = \frac{e^{-\phi\, '} \mathcal{V}_{A_0}'}{2} \sim \sigma^{3/2}\, , \qquad e^{2\varphi_4'} \sim \sigma^{-3/2}\, ,
+\end{equation}
+%
+where one should think of $z^{i\, '}= \frac{1}{2\pi {\rm i}} \log x^i$ as flat complex structure variables defined close to the LCS point ($x^i \to 0$), see below. Notice that this is nothing but the mirror dual of the F1 limit studied in \cite{Baume:2019sry}. There, the relevant quantum corrections to the classical Type IIB hypermultiplet metric are induced by $\alpha'$ and worldsheet instantons, whilst D-brane contributions decouple. Importantly, here such `corrections' are already captured by the \emph{exact} complex structure metric \eqref{eq:CSmetric}, thus simplifying the analysis enormously.
+	
+Therefore, recall that away from the LCS point, the periods of the holomorphic $(3,0)$-form $\Omega$ receive corrections from their flat values, namely \cite{B_hm_2000, Hori:2003ic} (see also Section \ref{ss:dualitieswithlowersusy} for details)
+%
+\begin{equation}\label{eq:analyticCSvariables}
+	z^{j\, '} = \frac{1}{2\pi {\rm i}} \log x^j + \mathcal{O}(x^i)\, ,
+\end{equation}
+%
+such that upon increasing $x^i$ towards one, the logarithmic approximation for $z^{i\, '}$ stops being valid and the polynomial corrections clearly dominate. Hence, instead of reaching a point where $\text{Im}\, z^{i\, '} \to 0$ asymptotically, what happens is that the complex structure variables generically approach some constant $\mathcal{O}(1)$ value (see e.g., \cite{Blumenhagen:2018nts,Joshi:2019nzi,Alvarez-Garcia:2021mzv,Cota:2023uir}). %(see \cite{Blumenhagen:2018nts,Joshi:2019nzi,Alvarez-Garcia:2021mzv} for one-parameter examples where this behavior has been observed). 
+This does not prevent, however, the $\mathcal{R}$ coordinate from keep flowing towards weak coupling, such that a more accurate parametrization of the asymptotic trajectory would be the following
+%
+\begin{equation}\label{eq:smallCSsmalldilatoncorrected}
+	\text{Im}\, z^{j\, '} = \text{const.}\, , \qquad \mathcal{R}' \sim \sigma^{3/2}\, , \qquad e^{2\varphi_4'} \sim \sigma^{-3}\, .
+\end{equation}
+%
+Notice that this belongs to the family of geodesics in \eqref{eq:generictrajII} with $\mathbf{e}=(0, 3/2)$. Hence, our previous analysis for the weak coupling singularity around \eqref{eq:asympotic Bessel infinity} also applies here and we conclude that the pattern still holds.
+	
+From the original perspective, though, a direct evaluation of the scalar product \eqref{eq:pattern} seems to be rather involved, since the metric receives strong corrections (c.f. eq. \eqref{eq:quantumhypermetric}) that deviate from the simple block diagonal form displayed in \eqref{eq:classicalhypermetricII} above. However, let us stress again that we do not need to do this, as we already know what is the S-dual limit of \eqref{eq:smallCSsmalldilatoncorrected}: It corresponds to an infinite distance trajectory of the form $\left( \mathcal{R} \sim \sigma^{-3/2} , \text{Im}\, z^{i} \sim \sigma^{3/2} \right)$, thus located at strong coupling and LCS (see discussion around \eqref{eq:D4SYZSdual}). Incidentally, this nicely explains why the pattern was still verified along the classically obstructed limit \eqref{eq:LCSfixeddilaton}, since the products in eqs. \eqref{eq:patternviolation} and \eqref{eq:patternviolationII} are formally identical to the ones that need to be computed along the present quantum corrected trajectory.

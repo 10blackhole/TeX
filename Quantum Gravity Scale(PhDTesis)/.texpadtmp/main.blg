@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: /Users/borjaalejandrodiezbravo/Desktop/Quantum Gravity Scale/.texpadtmp/main.aux
+The style file: ../JHEP.bst
+Reallocated field_info (elt_size=4) to 18050 items from 5000.
+Database file #1: ../alberbib.bib
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Warning--empty booktitle in Marchesano:2022qbx
+Warning--empty booktitle in Donoghue:2022eay
+Warning--empty booktitle in Blumenhagen:2024lmo
+Warning--empty publisher in Cox:2000vi
+Warning--empty booktitle in Alvarez:2022hjn
+Warning--empty publisher in Nair:2005iw
+You've used 435 entries,
+            2212 wiz_defined-function locations,
+            3556 strings with 74359 characters,
+and the built_in function-call counts, 120112 in all, are:
+= -- 12374
+> -- 4747
+< -- 0
++ -- 1436
+- -- 1001
+* -- 10478
+:= -- 17445
+add.period$ -- 451
+call.type$ -- 435
+change.case$ -- 419
+chr.to.int$ -- 0
+cite$ -- 441
+duplicate$ -- 5789
+empty$ -- 10215
+format.name$ -- 1001
+if$ -- 31657
+int.to.chr$ -- 0
+int.to.str$ -- 435
+missing$ -- 1592
+newline$ -- 1309
+num.names$ -- 427
+pop$ -- 684
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 5035
+stack$ -- 0
+substring$ -- 4123
+swap$ -- 2877
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 6
+while$ -- 948
+width$ -- 438
+write$ -- 4348
+(There were 6 warnings)

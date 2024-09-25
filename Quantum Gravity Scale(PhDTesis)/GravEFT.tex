@@ -1,0 +1,164 @@
+\AC{To do} 
+
+This chapter is based on the publication \cite{Castellano:2023aum} adapted to better fit in the broader context of this thesis. %The main results are, however, not affected. 
+
+\section{The Species Scale}
+\label{s:speciesscale}
+
+\subsection{The Basic Idea}
+\label{ss:basics}
+The main goal of this work is to understand the role and provide a proper definition of the species scale, understood as the scale at which quantum gravitational effects can no longer be neglected, all over the moduli space. To do so, one can try to approach the problem from different angles. The first one is to try to define this EFT cut-off as the scale at which corrections to Einstein gravity become important. In general, one expects the lagrangian density of such gravitational EFT to be organised according to the following energy expansion
+%
+\beq
+\mathcal{L}_{\mathrm{EFT,\,}d}\, =\, \dfrac{1}{2\kappa_d^2}\left(R + \sum_n \frac{\mathcal{O}_n (R)}{\LQG^{n-2}(\phi)}\right) + \frac{1}{2} G_{ij} \partial_{\mu} \phi^i \partial^{\mu} \phi^j+\ldots \, ,
+\label{eq:gravEFTexpansion}
+\eeq
+%
+with $\kappa_d^{2}=M_{\text{pl,\,}d}^{2-d}$ being Einstein's gravitational coupling, $\mathcal{O}_n (R)$ representing any dimension-$n$ higher-curvature correction (e.g., $R^2$ for $n=4$ or $R^4$ for $n=8$) and $\Lambda_{\text{QG}}(\phi)$ giving precisely the energy scale controlling/suppressing such corrections, which moreover generically depends on the massless scalar field vevs $\braket{\phi^j}$. The ellipsis indicates any other couplings and matter present in the EFT. Given the non-renormalizability of Einstein's theory, the naive expectation is for such ultra-violet (UV) scale to be precisely around the Planck scale. However, in the presence of $N$ light weakly coupled species, this UV cut-off can be significantly lowered, and typically coincides with the so-called species scale \cite{Dvali:2007hz,Dvali:2007wp}
+%
+\begin{equation}
+\label{eq:speciesscale}
+    \Lambda_{\text{sp}}\simeq \dfrac{M_{\text{pl,\,}d}}{N^{\frac{1}{d-2}}}\, .
+\end{equation}
+%
+This can be seen from e.g., computing the one-loop contribution from such species to the 2-point function of the graviton and observing that the one-loop correction and the tree-level piece become of the same order at precisely the scale defined in \eqref{eq:speciesscale}.
+
+An alternative, and perhaps more robust approach than the aforementioned perturbative computation, is to consider instead the smallest possible Black Hole (BH) that can be described semi-classically in the EFT, without automatically violating the known entropy bounds in the presence of $N$ light species. In fact, this can be used to \emph{define} the number of species in the presence of towers of states, which generically appear at the boundaries of moduli space and in the context of the Distance Conjecture. This definition has been shown to agree with the naive counting of weakly coupled species as long as the towers involved are sufficiently well separated (as e.g., for KK-like towers). It is clear, though, that these two approaches are not completely independent from each other, since higher derivative corrections are known to modify the area of the horizons in BH solutions and therefore their corresponding Bekenstein-Hawking entropy \cite{Sen:2005wa}. In fact, they have been shown to be consistent via general EFT analysis in \cite{vandeHeisteeg:2022btw}, and also in the context of generation of BH horizons of species scale size in \cite{Calderon-Infante:2023uhz}.
+
+The evidence for the species scale as a quantum gravity cut-off is moreover strongly supported in asymptotic regions of the moduli spaces in String Theory, where it seems to capture the relevant quantum gravity scale associated to the dual descriptions that arise as the infinite distance points are approached. In particular, it agrees with the higher-dimensional Planck scale in (dual) decompactification limits or rather with the string scale when probing emergent string limits \cite{Castellano:2022bvr, vandeHeisteeg:2022btw, Calderon-Infante:2023ler}, which are believed to be the only two possible ones according to the Emergent String Conjecture \cite{Lee:2019wij}.
+
+Most of these species scale computations precisely take place close to the infinite distance boundaries of moduli space, where the weak coupling behaviour helps in determining the spectrum of the theory as well as organising the EFT expansion. However, in a recent work \cite{vandeHeisteeg:2022btw}, the authors gave a first proposal for a globally defined species scale in 4d $\mathcal{N}=2$ theories from precisely identifying the scale suppressing the first higher-curvature correction, which happens to be exactly computable in this setup. It is given by the $\mathcal{F}_1$ coefficient accompanying the quadratic curvature correction originally calculated in \cite{Gopakumar:1998ii, Gopakumar:1998jq}.
+
+In this regard, it seems reasonable to try to push the idea of a global definition of species scale valid across the whole moduli space from studying the higher derivative corrections that are known to appear in different String Theory examples. In this context, even though the Distance Conjecture seems to be related only to infinite distance limits, where the interplay between the infinite towers of light states are the key to identify the species scale, the concept motivating such conjecture, namely dualities, can also shed some light into the problem of defining a global species scale across all moduli space. Our goal is then to use the knowledge of higher-derivative corrections, together with dualities (in particular $SL(n, \mathbb{R})$) to try to propose a well defined global notion of species scale.
+
+Let us mention in passing that, in principle, several different kinds of corrections can arise in a gravitational EFT, and not all of them need to be a priori suppressed by a single UV scale (as we will see in explicit examples below). Still, this should not be regarded as a drawback in the identification of the species scale from higher-curvature operators, since it is not generally expected that all of these corrections be sensitive to the full number of states in the theory (and thus to the full gravitational theory). In particular, we find that the ones that seem to be suppressed by the species scale are the UV divergent ones that must be regularized \cite{Green:1997as}, whereas some other finite corrections might be related to scales of other states, not necessarily the ones that become massless along the asymptotic limits.
+
+\subsection{Finding a globally defined Species Scale from dualities}
+\label{ss:modinvariantss}
+
+Let us then start by trying to define a globally defined species scale in the case in which some sector/branch of the moduli space $\mathcal{M}$ of a supersymmetric theory is given precisely by the coset $SL(2, \mathbb{R})/U(1)$, which we parametrise by the complex scalar $\tau=\tau_1 + \text{i} \tau_2$. The motivation for considering such particular example comes from both its simplicity and the fact that it appears in many instances across the string Landscape. For concreteness, one can think of explicit realisations such as e.g., the \emph{full} moduli space of the 10d Type IIB String Theory or some piece of the vector multiplet moduli space of 4d $\mathcal{N}=2$ compactifications of the heterotic string on $K3\times T^2$. We moreover assume that our theory presents some discrete $SL(2, \mathbb{Z})$ duality symmetry, which means that the true moduli space is described as the coset $\mathcal{M}= SL(2, \mathbb{Z}) \backslash SL(2, \mathbb{R})/U(1)$. Our aim is thus to propose a universal form for the species scale $\LQG (\tau)$ defined over $\mathcal{M}$.
+
+We will restrict ourselves to the fundamental domain $\mathcal{F}$ in what follows:
+%
+\begin{align}\label{funddomain}
+\mathcal{F} = \left\{\tau\in \mathbb{C} \;\;\vline \;\; |\tau|\geq 1 \, ,\; -\frac{1}{2} \leq \text{Re}\,\tau \leq \frac{1}{2}\right\}\, . 
+\end{align}
+%
+Furthermore, whenever the moduli space is described as the coset $SL(2, \mathbb{R})/U(1)$ one can find a parametrisation that leads to the following kinetic term for the modulus $\tau$
+%
+\beq
+\mathcal{L}_{\text{scalar}} = -\frac{\partial \tau \cdot \partial \bar \tau}{4\tau_2^2} \ .
+\label{eq:scalarlag}
+\eeq
+%
+Such moduli space presents three singularities within the fundamental domain: one at infinite distance ($\tau \to \text{i} \infty$) and two cusps (at $\tau=\text{i}, e^{\frac{2\pi \text{i}}{3}}$). The question is then what kind of function $\mathcal{G}(\tau, \bar \tau)$ could give rise to a properly behaved $\LQG$. In principle, it seems natural to ask for at least two things: 
+
+\begin{enumerate}[i)]
+    \item $\LQG$ must be bounded from above (since it cannot exceed $\Mpd$) and it should vanish asymptotically at infinite distance, namely $\mathcal{G} (\tau, \bar \tau) \to 0$ as $\tau \to \text{i} \infty$.
+
+    \item It should be an \emph{automorphic} form, namely a modular invariant function of $\tau$
+%
+\beq\label{eq:modtransf}
+ \mathcal{G} \left(\frac{a \tau +b}{c\tau +d}\, , \, \frac{a \bar \tau +b}{c \bar \tau +d} \right) = \mathcal{G} (\tau, \bar \tau)\, , \qquad ad-cd=1\, ,
+\eeq
+%
+where $a,b,c,d \in \mathbb{Z}$.
+\end{enumerate}
+
+At this point, one may wonder whether these two conditions are restrictive enough so as to single out the function $\mathcal{G}(\tau, \bar \tau)$ we seek for. Unfortunately, the answer turns out to be negative, although one can still extract some useful information about its possible behaviour and dependence with respect to the modulus $\tau$. For example, one could imagine such modular invariant species scale $\LQG$ to be given by certain \emph{holomorphic} function of $\tau$. However, it is easy to argue that this is actually incompatible with properties \emph{i)} and \emph{ii)} above, since there is no weight 0 (i.e. automorphic), non-singular modular form which is non-trivial. This essentially follows from the fundamental theorem of calculus, since any meromorphic modular function of zero weight must be of the form $ \mathcal{G} \left(\tau\right) = \frac{P(j(\tau))}{Q(j(\tau))}\, $ \cite{Cvetic:1991qm}, and would necessarily have some pole(s) in the interior of $\mathcal{F}$ (given precisely by the roots of the $Q$-polynomial). Hence, we conclude that $\mathcal{G}$ \emph{must} must be non-holomorphic in $\tau$, namely $\partial_{\bar \tau}\LQG(\tau, \bar \tau) \neq 0$, which leaves room for many possible functions fulfilling the above criteria, as we explain below.
+
+
+\subsubsection*{A first guess for $\mathcal{G}(\tau, \bar \tau)$}
+\label{ss:proposalf}
+
+We will now propose a first ansatz for our modular invariant species scale in the sector parameterized by $\tau$, which takes the following form
+%
+\beq\label{eq:modspeciesscale}
+\left( \frac{\LQG(\tau, \bar \tau)}{\Mpd} \right)^{d-2} = \frac{1}{\alpha \left[-\text{log} \left(\tau_2\,|\eta(\tau)|^4\right)\right]^{\gamma} + \beta}\, ,
+\eeq
+%
+where $\eta(\tau)$ is Dedekind eta function (c.f. eq. \eqref{eq:Dedekind}) and $\alpha, \beta, \gamma \in \mathbb{R}_{\geq 0}$. The particular functional form chosen in eq. \eqref{eq:modspeciesscale} above is also motivated by the modular examples in 4d $\mathcal{N}=2$ models discussed later on (see eq. \eqref{4dtopologicalfreeenergy}). 
+
+Equivalently, what we propose is the following moduli dependence for the number of light species in a theory enjoying $SL(2, \mathbb{Z})$ invariance:
+%
+\beq\label{eq:Nspecies}
+N = \alpha \left[-\text{log} \left(\tau_2\,|\eta(\tau)|^4\right)\right]^{\gamma} + \beta\, ,
+\eeq
+%
+which is of course a non-holomorphic function on $\tau$ as well as automorphic. It moreover grows as $\tau_2^{\gamma}$ whenever $\tau \to \text{i} \infty$ (see eq. \eqref{eq:asymptotic behavior}), which indeed tells us that $\LQG(\tau, \bar \tau) \sim \tau_2^{-\frac{\gamma}{d-2}} \to 0$ (in Planck units) upon taking $\tau_2 \to \infty$. Therefore it fulfills the two criteria discussed around eq. \eqref{eq:modtransf}, and one can check that there are no singularities within $\mathcal{F}$. The physical meaning of the free parameters $\alpha, \beta, \gamma$ is transparent: $\gamma$ controls the asymptotic decay rate for the species scale with respect to the moduli space distance (which indeed determines the relevant physics of the infinite distance limit), whilst $\beta$ and $\alpha$ are relevant for the behaviour of $\LQG(\tau, \bar \tau)$ in the interior of moduli space, determining e.g., the number of species at the desert point\cite{vandeHeisteeg:2022btw}.
+
+\subsubsection*{Are the possible values for $\gamma$ restricted?}
+\label{ss:G2}
+	
+Let us now explore whether we can obtain some closed form for $\partial_{\tau} \log \LQG$ in terms of modular functions. For large modulus, the prediction is that this expression should indeed go to a constant, which corresponds to the modulus of the so-called species vector, defined in analogy to the `scalar charge-to-mass' ratio for a scalar particle \cite{Calderon-Infante:2023ler} (see also the discussion around eq. \eqref{eq:speciescalechargetomass} below), and one could thus expect to be able to constrain $\gamma$ from imposing this. We will see that, even though this does not restrict $\gamma$ to a particular value, it does correlate it to the number of dimensions of the EFT and the particular infinite distance limits that are probed asymptotically.
+	
+For simplicity, let us take for $N$ the following expression (c.f. eq. \eqref{eq:modspeciesscale})
+%
+\beq
+	 N = \left(-\log(\tau_2|\eta(\tau)|^4 \right)^\gamma\, .
+\eeq
+%
+Note that adding an overall constant multiplying this expression would change nothing, since we are interested just in ratios. Analogously, an additive piece would play no role in the large modulus limit, where the $\eta$-term clearly dominates (see eq. \eqref{eq:asymptotic behavior}). Therefore, upon taking derivatives with respect to $\tau$ we obtain
+%
+\beq
+	\frac {\partial N}{\partial \tau} =  \, \frac{\gamma}{2\pi \text{i}} \left( -\log(\tau_2|\eta(\tau)|^4 \right)^{\gamma -1} \,  {\tilde G}_2(\tau, \bar\tau) , 
+\eeq
+where we have used that $\partial_{\tau}\eta(\tau)=\left(-4\pi \text{i}\right)^{-1}\eta(\tau)G_2(\tau)$ \cite{Cvetic:1991qm}, and with ${\tilde G}_2$ being the Eisenstein (non-holomorphic) modular form of weight 2, which is defined as follows\footnote{\label{fnote:Eisenstein}The Eisenstein series of weight 2 is carefully defined as the sum
+\beq
+G_{2}(\tau) = 2\zeta(2) + 2\sum_{n=1}^{\infty} \sum_{m \in \mathbb{Z}} \frac{1}{\left( m+n\tau\right)^{2}}\, ,
+\eeq since the usual definition (c.f. eq. \eqref{eq:holoEisenstein}) is not well-defined due to the lack of absolute convergence of the series. Actually, $G_2$ is not a modular form and it transforms as $G_2 \left(\frac{a \tau +b}{c\tau +d} \right)= \left( c\tau +d \right)^{2} G_{2}(\tau) -2 \pi \text{i} c \left( c\tau +d \right)$ under $SL(2, \mathbb{Z})$.} 
+%
+\beq\label{eq:nonholoG2}
+	{\tilde G}_2 (\tau, \bar \tau)=G_2 (\tau)-\frac{\pi}{\text{Im}\, \tau}\, .
+\eeq
+%
+Thus, we have in the end
+%
+\beq
+	\frac {\partial N}{\partial \tau}\ %= \frac {\gamma}{2\pi i} \left(-\log(\tau_2|\eta(\tau)|^4 \right)^{\gamma-1}\, {\tilde G}_2 \ 
+ =\ \frac {\gamma}{2\pi \text{i}} N^{\frac{\gamma-1}{\gamma}}\, {\tilde G}_2\, .
+\eeq
+%
+Using the definition \eqref{eq:speciesscale}, this allows us to compute  the logarithmic derivatives, which gives
+%
+\beq
+	\frac {1}{\LQG} \frac {\partial \LQG}{\partial \tau} = %-\, \frac {1}{(d-2)} \frac {1}{N} \frac {\partial N}{\partial \tau} =
+ -\, \frac {\gamma }{2\pi \text{i}(d-2)}\ N^{-\frac{1}{\gamma}} \ {\tilde G}_2\, .
+\eeq
+%
+Note, however, that this quantity is a holomorphic derivative with respect to $\tau$, but here we are interested in the canonically normalised field $\phi$ associated to $\tau_2$. Indeed, consider a kinetic term of the form
+%
+\beq \label{eq:lagrangianII}
+	\mathcal{L}_{\text{scalar}} =  -c\, \frac{\partial \tau \cdot \partial \bar \tau}{4\tau_2^2}\, ,
+\eeq
+%
+where we have added some constant $c \in \mathbb{R}$ for generality. Then a canonical kinetic term for a field $\hat{\tau}$ with $\tau_2=e^{a\hat{\tau}}$ is obtained for the particular choice $a=\sqrt{2/c}$. Consequently, $\partial \hat{\tau} /\partial \tau_2 = \sqrt{c}/\tau_2 \sqrt{2}$, such that
+%
+\beq
+	-\, \frac {1}{\LQG} \frac {\partial \LQG}{\partial \hat{\tau}} = \sqrt{\frac{2}{c}}\, \frac {\gamma}{\pi (d-2)} \frac {\tau_2\, \text{Re}\, {\tilde G}_2}{\left(-\log(\tau_2|\eta(\tau)|^4 \right)}\, .
+\eeq
+%
+According to the Distance conjecture, for large moduli this should go to a constant, in order to properly define a convex hull \cite{Etheredge:2022opl, Calderon-Infante:2023ler}. It is then easy to see, upon using the large $\tau_2$ limit
+%
+\beq \label{eq:larget2limits}
+	-\log \left(\tau_2|\eta(\tau)|^4 \right)\, \to \, \frac {\pi}{3}\tau_2\, , \qquad {\tilde G}_2\ \to \frac {\pi^2}{3}\, ,
+\eeq
+%
+that a constant is still obtained regardless of the particular value of the parameter $\gamma$, as previously announced:
+%
+\beq \label{eq:chargetomassratio}
+	-\, \frac {1}{\LQG} \frac {\partial \LQG}{\partial \hat{\tau}}\, \to\, \sqrt{\frac{2}{c}}\, \frac {\gamma}{d-2}\, .
+\eeq
+%
+Still, this quantity has been argued to take  the following form \cite{Calderon-Infante:2023ler, vandeHeisteeg:2023ubh}
+\begin{equation}
+\label{eq:lambdaspecies}
+\partial_{\hat{\tau}} (\log \LQG) \to \lambda_{\text{sp}}=\sqrt{\frac{p}{(d+p-2)(d-2)}}\, ,  
+\end{equation} 
+where $p$ represents the number of dimensions that are decompactified along a particular infinite distance limit that is being explored, and it can also capture the emergent string case with $p\to \infty$ . Thus, $\gamma$ cannot be restricted to a particular value but it is related to these parameters characterising the infinite distance singularities present in the aforementioned subsector of the moduli space. Finally, notice that the result matches the same quantity computed upon imposing the asymptotic approximation $\LQG(\tau, \bar \tau) \sim \tau_2^{-\frac{\gamma}{d-2}}$ from the beginning.
+
+
+
+\section{Summary}
+\AC{To do}
+
