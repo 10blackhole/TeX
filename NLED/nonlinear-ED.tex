@@ -1,17 +1,27 @@
 \section{Nonlinear Electrodynamics}
-As is defined in the Pleban ́ski book [33], nonlinear elec- trodynamics are described by the following action prin- ciple
-\begin{equation}
+As is defined in the Plebanski book [XX], nonlinear electrodynamics are described by the following action principle
+\begin{equation}\label{SE}
   S_{\rm E}[g,A,P]=-\frac{1}{4\p }\int\dd^4 x\sqrt{-g}\left(\frac{1}{2}F_{\m\n }P^{\m\n }-\mathscr{H}(\mathscr{P},\mathscr{Q})\right)
 \end{equation}
-which depends on the metric gμν, the gauge potential Aμ and the antisymmetric tensor Pμν. Here the struc- tural function H describes the precise nonlinear electro- dynamics and depends, in general, on the two Lorentz scalars that can be constructed with P μν [5]; see the first equality of Eq. (9b). As usual, the field strength is re- lated to the gauge potential as F = dA, ensuring the Faraday equations
+which depends on the metric $g_{\m\n }$, the gauge potential $A_\m$, and the antisymmetric tensor $P_{\m\n }$. Here the structural function $\mathscr{H}$ describes the precise nonlinear electrodynamics and depends, in general, on the two Lorentz scalars that can be constructed with $P^{\m\n }$ [XX]. As usual, the field strength is related to the gauge potential as $F=\dd A$, ensuring the Faraday equations
 \begin{equation}
-  \dd F=0
+  \dd F=0.
 \end{equation}
-On the other hand, the variation of action (1) with re- spect to the gauge potential leads to the Maxwell equa- tions
+On the other hand, the variation of action \eqref{SE} with respect to the gauge potential leads to the Maxwell equations
 \begin{equation}
-	\dd \star P=0
+	\dd \star P=0,
 \end{equation}
-where ⋆ stands for the Hodge dual, whereas varying (1) with respect to the antisymmetric tensor Pμν yields the constitutive relations
+where $\star$ stands for the Hodge dual, whereas varying \eqref{SE} with respect to the antisymmetric tensor $P^{\m\n }$ yields the constitutive relations
+\begin{equation}
+  F_{\m\n }=\pdv{\mathscr{H}}{\mathscr{P}}P_{\m\n }+\pdv{\mathscr{H}}{\mathscr{Q}}\star P_{\m\n }.
+\end{equation}
+Notice that Maxwell electrodynamics is recovered for $\mathscr{H}=\mathscr{P}$, giving linear constitutive relations. Lastly, the corresponding energy-momentum tensor reads
+\begin{equation}
+  4\p T_{\m\n }^{\rm E}=F_{\m\a }P_{\n }^{~\a }-g_{\m\n }\left(\frac{1}{2}F_{\a\b }P^{\a\b }-\mathscr{H}\right). 
+\end{equation}
+The main motivation for the action principle (1) is that now Maxwell equations (3) remain linear as the Fara- day ones (2) while the nonlinearity is encoded into the constitutive relations (4). Consequently, Maxwell equa- tions (3) can be now understood just like the Faraday ones (2), i.e., implying the local existence of a vector po- tential ⋆P = dA∗. Therefore, from the point of view of the action principle (1), a solution to nonlinear electro- dynamics can be understood as a pair of vector poten- tials A and A∗ compatible with the constitutive relations (4). Additionally, since in four dimensions both Faraday (2) and Maxwell (3) equations define conservation laws,
+
+
 
 
 
