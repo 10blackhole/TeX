@@ -1,40 +1,99 @@
 \section{Nonlinear Electrodynamics}
-As is defined in the Plebanski book [XX], nonlinear electrodynamics are described by the following action principle
-\begin{equation}\label{SE}
+As is defined in the Plebanski book \cite{Plebanski:1970zz}, nonlinear electrodynamics are described by the following action principle
+\begin{equation}\label{1}
   S_{\rm E}[g,A,P]=-\frac{1}{4\p }\int\dd^4 x\sqrt{-g}\left(\frac{1}{2}F_{\m\n }P^{\m\n }-\mathscr{H}(\mathscr{P},\mathscr{Q})\right)
 \end{equation}
-which depends on the metric $g_{\m\n }$, the gauge potential $A_\m$, and the antisymmetric tensor $P_{\m\n }$. Here the structural function $\mathscr{H}$ describes the precise nonlinear electrodynamics and depends, in general, on the two Lorentz scalars that can be constructed with $P^{\m\n }$ [XX]. As usual, the field strength is related to the gauge potential as $F=\dd A$, ensuring the Faraday equations
-\begin{equation}
+which depends on the metric $g_{\m\n }$, the gauge potential $A_\m$, and the antisymmetric tensor $P_{\m\n }$. Here the structural function $\mathscr{H}$ describes the precise nonlinear electrodynamics and depends, in general, on the two Lorentz scalars that can be constructed with $P^{\m\n }$ [XX]. As usual, the field strength is related to the gauge potential as $F=\dd A$, ensuring the \textit{Faraday equations}
+\begin{equation}\label{2}
   \dd F=0.
 \end{equation}
-On the other hand, the variation of action \eqref{SE} with respect to the gauge potential leads to the Maxwell equations
-\begin{equation}
+On the other hand, the variation of action \eqref{1} with respect to the gauge potential leads to the \textit{Maxwell equations}
+\begin{equation}\label{3}
 	\dd \star P=0,
 \end{equation}
-where $\star$ stands for the Hodge dual, whereas varying \eqref{SE} with respect to the antisymmetric tensor $P^{\m\n }$ yields the constitutive relations
-\begin{equation}
+where $\star$ stands for the Hodge dual, whereas varying \eqref{1} with respect to the antisymmetric tensor $P^{\m\n }$ yields the constitutive relations
+\begin{equation}\label{4}
   F_{\m\n }=\pdv{\mathscr{H}}{\mathscr{P}}P_{\m\n }+\pdv{\mathscr{H}}{\mathscr{Q}}\star P_{\m\n }.
 \end{equation}
 Notice that Maxwell electrodynamics is recovered for $\mathscr{H}=\mathscr{P}$, giving linear constitutive relations. Lastly, the corresponding energy-momentum tensor reads
-\begin{equation}
+\begin{equation}\label{5}
   4\p T_{\m\n }^{\rm E}=F_{\m\a }P_{\n }^{~\a }-g_{\m\n }\left(\frac{1}{2}F_{\a\b }P^{\a\b }-\mathscr{H}\right). 
 \end{equation}
-The main motivation for the action principle (1) is that now Maxwell equations (3) remain linear as the Fara- day ones (2) while the nonlinearity is encoded into the constitutive relations (4). Consequently, Maxwell equa- tions (3) can be now understood just like the Faraday ones (2), i.e., implying the local existence of a vector po- tential ⋆P = dA∗. Therefore, from the point of view of the action principle (1), a solution to nonlinear electro- dynamics can be understood as a pair of vector poten- tials A and A∗ compatible with the constitutive relations (4). Additionally, since in four dimensions both Faraday (2) and Maxwell (3) equations define conservation laws, there are conserved quantities related to them defined by the following integrals
+The main motivation for the action principle \eqref{SE} is that now Maxwell equations \eqref{3} remain linear as the Fara- day ones \eqref{2} while the nonlinearity is encoded into the constitutive relations \eqref{4}. Consequently, Maxwell equations \eqref{3} can be now understood just like the Faraday ones \eqref{2}, i.e., implying the local existence of a vector potential $\star P=\dd A^*$. Therefore, from the point of view of the action principle \eqref{1}, a solution to nonlinear electrodynamics can be understood as a pair of vector potentials $A$ and $A^*$ compatible with the constitutive relations \eqref{4}. Additionally, since in four dimensions both Faraday \eqref{2} and Maxwell \eqref{3} equations define conservation laws, there are conserved quantities related to them defined by the following integrals
 \begin{equation}
   p=\frac{1}{4\p }\int_{\partial\Sigma}F,\qquad q=\frac{1}{4\p }\int_{\partial\Sigma}\star P, 
 \end{equation}
 where the integration is taken at the boundary of con-
-stant time hypersurfaces $\Sigma $; obviously, these are noth- ing other than the magnetic and electric charges, respec- tively.
+stant time hypersurfaces $\Sigma $; obviously, these are nothing other than the magnetic and electric charges, respectively.
 
-After this brief and useful introduction, and in order to prepare for what follows, we review a strategy that has proved to be fruitful when nonlinear electrodynamics is considered in General Relativity [XX]. This strategy sim- ply consists of working in a null tetrad of the spacetime metric
-\begin{equation}
+After this brief and useful introduction, and in order to prepare for what follows, we review a strategy that has proved to be fruitful when nonlinear electrodynamics is considered in General Relativity [XX]. This strategy simply consists of working in a null tetrad of the spacetime metric
+\begin{equation}\label{7}
   g=2e^1\otimes_s e^2+2e^3\otimes_s e^4, 
 \end{equation}
 aligned along the common eigenvectors of the electro-
 magnetic fields, i.e.
-\begin{equation}
-  F+i \star P=(D+iB)e^1\wedge e^2+(E+iH)e^3\wedge e^4\, .
+\begin{equation}\label{8}
+  F+\i  \star P=(D+\i B)e^1\wedge e^2+(E+\i H)e^3\wedge e^4\,  .
 \end{equation}
+Here, the first pair of the tetrad is composed of complex conjugates one-forms, while the last pair is real. Additionally, it has been implicitly assumed that the electromagnetic configuration is algebraically general; namely, the real invariants $E$, $B$, $D$, and $H$ which are related to the eigenvalues are not all zero at the same time. We also remark that the scalars $E$ and $D$ are associated with the intensity of the electric field and electric induction, respectively, as perceived in the null frame, while $H$ and $B$ are their magnetic counterparts. In terms of the aligned tetrad invariants \eqref{8}, the standard invariants take the form
+\begin{subequations}\label{9}
+	\begin{align}
+  \mathscr{F}+\i \mathscr{G}&\equiv \frac{1}{4}F_{\m\n }F^{\m\n }+\frac{\i }{4}F_{\m\n}\star F^{\m\n }=-\frac{1}{2}(E+\i B)^2,\\
+  \mathscr{P}+\i \mathscr{Q}&\equiv \frac{1}{4}P_{\m\n }P^{\m\n }+\frac{\i }{4}P_{\m\n}\star P^{\m\n }=-\frac{1}{2}(D+\i H)^2,
+\end{align}
+\end{subequations}
+resulting in a parabolic relation between them. Therefore, the structural function is reparameterized as $\mathscr{H}(\mathscr{P},\mathscr{Q})=\mathscr{H}(D,H)$, which leads to a simpler version of the constitutive relations \eqref{4} that now reads
+\begin{equation}\label{10}
+  E+\i B=(-\partial_D+\i \partial_H)\mathscr{H}.
+\end{equation}
+This is not the only advantage of choosing an aligned tetrad, it also results in a diagonalization of the energy-momentum tensor allowing only two independent components. The latter are better expressed through the trace, $\tr T^{\rm E}$, of \eqref{5} together with its traceless part, $\hat{T}^{\rm E}\equiv T^{\rm E}-\frac{1}{4} g\tr T^{\rm E}$, according to
+\begin{subequations}
+	\begin{align}\label{11}
+  2\pi \tr T^{\rm E}&=DE-BH+2\mathscr{H},\\
+  4\pi \hat{T}^{\rm E}&=(DE+BH)(e^1\otimes_s e^2-e^3\otimes_s e^4).
+\end{align}
+\end{subequations}
+Here $E$ and $B$ must be determined from the constitutive relations \eqref{10}. This approach has been employed since the seminal work of Plebanski \cite{Plebanski:1970zz} to the formulations of nonlinear electrodynamics pioneered in [XX] which also is reviewed below. The power of this approach is such that it has been instrumental in the derivation of the first genuine example of a spinning charged black hole \cite{Garcia-Diaz:2021bao, DiazGarcia:2022jpc, Ayon-Beato:2022dwg}.
+
+The action principle \eqref{1} is concretely obtained as a Legendre transform from a Lagrangian, $-\frac{1}{4\p }\mathscr{L}(\mathscr{F},\mathscr{G})$, which prompts dubbing the action structural function $\mathscr{H}(\mathscr{P},\mathscr{Q})$ as the \textit{Hamiltonian}. This total Legendre transform is concretely given in terms of the new variables by
+\begin{equation}\label{12}
+  \mathscr{L}(E,B)=BH-DE-\mathscr{H}(D,H).
+\end{equation}
+This highlights that in the more known Lagrangian formulation the fundamental variables are instead $E$ and $B$, where the other must be determined from the constitutive relations. Using \eqref{10} as $\dd\mathscr{H}=-E\dd D+B\dd H$ in the differential of \eqref{12}, the constitutive relations acquire now the alternative simple form
+\begin{equation}\label{13}
+  D+\i H=(-\partial_E+\i \partial_B)\mathscr{L}.
+\end{equation}
+Furthermore, the total Legendre transform \eqref{12} motivates the definition of the following two partial Legendre transforms
+\begin{subequations}
+	\begin{align}
+  \mathscr{M}^+(D,B)&=BH-\mathscr{M}(D,H),\\
+  \mathscr{M}^-(E,H)&=DE+\mathscr{M}(D,H),
+\end{align}
+\end{subequations}
+which were first introduced in \cite{Salazar:1987ap} and led to two alternative dual descriptions of nonlinear electrodynamics, using purely inductions or intensities as independent variables. As was first pointed out and exploited in \cite{Salazar:1987ap}, these dual formulations are precisely the ideal ones to transparently describe theories invariant under duality rotations. \bc{maybe add more text}. Additionally, they are indispensable to determine the electrodynamics supporting the spinning nonlinearly charged black holes. Correspondingly, the constitutive relations in the mixed representations are written as
+\begin{subequations}\label{15}
+	\begin{align}
+  E+\i H&=(\partial_D +\i \partial_B)\mathscr{M}^+,\\
+  D+\i B&=(\partial_E+\i \partial_H)\mathscr{M}^-,
+\end{align}
+\end{subequations}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
