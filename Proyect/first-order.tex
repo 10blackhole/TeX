@@ -1,0 +1,210 @@
+\chapter{First order formalism}
+Let us consider the metric ansatz constructed as the $U(1)$ fibration of Einstein-K\"ahler manifolds
+\begin{equation}
+   \dd{s^2}=g_{\mu\nu}\dd x^\mu \dd x^\nu = \frac{\dd{r^2}}{f(r)}+f(r)h(r)(\dd{\tau}+\B)^2+N(r)\dd{\Sigma}^2\,,
+\end{equation}
+where $\B=\B_i\dd \bar{x}^{i}$ denotes the K\"ahler potential $1$-form that defines the symplectic structure $\Omega=\dd\B $ associated to the $(2m-2)$-dimensional Einstein-K\"ahler trnasverse with line element
+\begin{equation}
+  \dd\Sigma^2 = g_{ij}(\bar{x})\dd \bar{x}^{i}\dd \bar{x}^j
+\end{equation}
+Here, barred coordinates with Latin indices represent those that belong to the transverse section. Thus, coordinates with greek indices can be $x^\mu=\{r,t,\bar{x}^i\}$.
+
+It is straightforward to see that the non-zero metric components are given by
+\begin{align}
+  g_{rr}=\frac{1}{f},\quad g_{tt}=fh,\quad g_{ti}=fh\B_i,\quad g_{ij}=fh\B_i\B_j+N\bar{g}_{ij}
+\end{align}
+In order to find the components of the inverse metric, we use the fact that $g^{\m\n }g_{\n\lambda }=\d^\m_\lambda$, resulting in the following system of equations
+\begin{equation}
+\left\{
+\begin{array}{lll}
+  1&=g^{rr}g_{rr}\\
+  1&=fh(g^{tt}+g^{ti}\B_i)\\
+  \d^{i}_j&=fh\B_j(g^{ti}+g^{ik}\B_k)+Ng^{ik}\bar{g}_{kj}\\
+  0&=fh\B_i(g^{tt}+g^{tk}\B_k)+Ng^{tk}\bar{g}_{ki}
+\end{array}
+\right.
+\end{equation}
+whose solution is given by
+\begin{align}
+  g^{rr}&=1\\
+  g^{tt}&=\frac{\B_i\B_j}{N}\bar{g}^{ij}+\frac{1}{fh}\\
+  g^{ti}&=-\frac{1}{N}\B_j\bar{g}^{ij}\\
+  g^{ij}&=\frac{1}{N}\bar{g}^{ij}
+\end{align}
+We define the orthonormal noncoordinate frame basis of the metric () as
+\begin{align}
+    e^0&=\frac{\dd r}{\sqrt{f(r)}}\,,& e^1&=\sqrt{f(r)h(r)}(\dd\tau+\B)\,,& e^{A}&=\sqrt{N(r)}\,\bar{e}^{A}\,,
+\end{align}
+\begin{align}
+    \omega^{01}&=-\frac{(fh)'}{2h\sqrt{f}}e^1\,, & 
+    \omega^{0i}&=-\frac{\sqrt{f}N'}{2N}e^{i}\,, &
+    \omega^{1i}&=\frac{\sqrt{fh}}{2N}\Omega^{i}{}_je^j\,, &
+    \omega^{ij}&=\bar{\omega}^{ij}-\frac{\sqrt{fh}}{2N}\Omega^{ij}e^1\,.
+\end{align}
+
+\begin{align}
+  E_0&=\sqrt{f}\partial_r\\
+  E_1&=\frac{1}{\sqrt{fh}}\partial_t\\
+  E_A&=-\frac{1}{\sqrt{N}}B_j\bar{E}^j_A\partial_t +\frac{1}{\sqrt{N}}\bar{E}^j_A\partial_j
+\end{align}
+
+\begin{align}
+  R^{rt}_{rt}&=-\frac{1}{2\sqrt{h}}\left[\frac{(fh)'}{\sqrt{h}}\right]'\\
+  	R^{ij}_{rt}&=-\frac{1}{2N}\left[\frac{fh}{N}\right]'\Omega^{ij}\\
+  	R^{rt}_{ij}&=-\frac{N}{2h}\left[\frac{fh}{N}\right]'\Omega_{ij}\\
+  R^{ri}_{rj}&=-\frac{1}{2}\sqrt{\frac{f}{N}}\left[\frac{\sqrt{f}N'}{\sqrt{N}}\right]'\d^i_j\\
+  R^{\tau i}_{\tau j}&=\frac{fh}{4N^2}\Omega_{k}^{~i}\Omega^k_{~j}-\frac{N'(fh)'}{4Nh}\delta^{i}_j\\
+  R^{ri}_{tj}&=-\frac{f}{4}\left[\frac{fh}{N}\right]'\Omega^{i}_{~j}\\
+  R^{\tau i}_{rj}&=\frac{1}{4fh}\left[\frac{fh}{N}\right]'\Omega^{i}_{~j}\\
+  R^{ij}_{kl}&=\frac{1}{N}\bar{R}^{ij}_{kl}-\frac{fN'^2}{2N^2}\delta^{i}_{[k}\delta^j_{l]} -\frac{fh}{4N^2}\left(\Omega^{ij}\Omega_{kl}+4\Omega^{[i}_{~[k}\Omega^{j]}_{~l]}\right)\\
+     R^{ij}_{\tau k}&\,\rc{\stackrel{?}{=}0}\\
+     R^{ri}_{r\tau}&=0
+\end{align}
+
+\section{Connection components}
+\begin{align}
+  \G^r_{~\t\t }&=-\frac{1}{2}f(fh)'\,\checkmark\\
+  \G^r_{~rr}&=-\frac{f'}{2f}\,\checkmark\\
+  \G^{r}_{~ij }&=-\frac{f(fh)'}{2}\B_i\B_j-\frac{fN'}{2}\bar{g}_{ij}\\
+  \G^{r}_{\tau i}&=-\frac{f}{2}B_i(fh)'\\
+  \G^\t_{~\t r}&=\frac{1}{2}\frac{(fh)'}{fh}\\
+  \G^\tau_{~\t i}&=-\frac{fh}{2N}B^k\Omega_{ik}\\
+    \G^\tau_{~ri}&=\frac{B_i}{2}\left[\frac{(fh)'}{fh}-\frac{N'}{N}\right]=\frac{B_i}{2}\dv{r}\left[\ln(\frac{fh}{N})\right]\\
+   \G^\tau_{ij}&=\partial_{(i}B_{j)}-B_k\bar{\G}^k_{~ij}+\frac{fh}{N}\Omega_{k(i}\B_{j)}\B^k\\
+  \G^{i}_{~\t j}&=-\frac{fh}{2N}\Omega^{i}_{~j}\\
+  \G^{i}_{~rj}&=\frac{1}{2}\frac{N'}{N}\d^{i}_j\\
+  \G^{i}_{~jk}&=\bar{\G}^{i}_{~jk}+\frac{fh}{N}\B_{(j}\Omega_{k)}^{~i}
+\end{align}
+
+where $\Omega_{ij}=2\partial_{[i}B_{j]}$.
+
+\section{Curvature components}
+\begin{align}
+  R^r_{~trt}&=\partial_r\left[-\frac{1}{2}f(fh)'\right]+\frac{f'(fh)'}{4}+\frac{(fh)'^2}{4h}
+\end{align}
+
+
+\section{Invariant of the transverse section}
+We consider
+\begin{equation}
+  \bar{\mathcal{L}}^{(1)}=\bar{R}
+\end{equation}
+For the case of $2$-sphere products, we have
+\begin{align}
+  (\mathbb{S}^2)^1&:\mathcal{L}^{(1)}=2\\
+  (\mathbb{S}^2)^2&:\mathcal{L}^{(1)}=4\\
+  (\mathbb{S}^2)^3&:\mathcal{L}^{(1)}=6\\
+  (\mathbb{S}^2)^4&:\mathcal{L}^{(1)}=8\\
+  \vdots\\
+  (\mathbb{S}^2)^k&:\mathcal{L}^{(1)}=2k
+\end{align}
+For the case of $\mathbb{CP}^k$, we have
+\begin{align}
+  \mathbb{CP}^1&:\mathcal{L}^{(1)}=2\\
+  \mathbb{CP}^2&:\mathcal{L}^{(1)}=4\\
+  \mathbb{CP}^3&:\mathcal{L}^{(1)}=6\\
+  \vdots\\
+  \mathbb{CP}^k&:\mathcal{L}^{(1)}=2k
+\end{align}
+
+For the case of $(\mathbb{H}^2)^k$ we obtain $\bar{R}=-2k$. 
+
+Now, we consider $$\bar{\mathcal{L}}^{(2)}=\bar{R}^{\m\n }_{\lambda\rho}\bar{R}_{\m\n }^{\lambda\r }-4\bar{R}^\m_\n \bar{R}^\n_\m +\bar{R}^2$$ and we obtain 
+For the case of $2$-sphere products, we have
+\begin{align}
+  (\mathbb{S}^2)^1&:\mathcal{L}^{(2)}=0\\
+  (\mathbb{S}^2)^2&:\mathcal{L}^{(2)}=8\\
+  (\mathbb{S}^2)^3&:\mathcal{L}^{(2)}=24\\
+  (\mathbb{S}^2)^4&:\mathcal{L}^{(2)}=48\\
+  (\mathbb{S}^2)^5&:\mathcal{L}^{(2)}=80\\
+  \vdots\\
+  (\mathbb{S}^2)^k \text{ y } (\mathbb{H}^2)^k&:\mathcal{L}^{(2)}=4k(k-1)
+\end{align}
+
+For the case of $\mathbb{CP}^k$, we have
+\begin{align}
+  \mathbb{CP}^1&:\mathcal{L}^{(2)}=0\\
+  \mathbb{CP}^2&:\mathcal{L}^{(2)}=\frac{16}{3}\\
+  \mathbb{CP}^3&:\mathcal{L}^{(2)}=18=\frac{72}{4}\\
+  \mathbb{CP}^4&:\mathcal{L}^{(2)}=\frac{192}{5}\\
+  \mathbb{CP}^5&:\mathcal{L}^{(2)}=\frac{200}{3}=\frac{400}{6}\\
+  \mathbb{CP}^6&:\mathcal{L}^{(2)}=\frac{200}{3}=\frac{720}{7}\\
+  \vdots\\
+  \mathbb{CP}^k \text{ y } \mathbb{CH}^k&:\mathcal{L}^{(2)}=\frac{4k^2(k-1)}{k+1}
+\end{align}
+
+
+Now, we consider $$\bar{\mathcal{L}}^{(3)}$$
+For the case of $2$-sphere products, we have
+\begin{align}
+  (\mathbb{S}^2)^1&:\mathcal{L}^{(1)}=0\\
+  (\mathbb{S}^2)^2&:\mathcal{L}^{(1)}=0\\
+  (\mathbb{S}^2)^3&:\mathcal{L}^{(1)}=48\\
+  (\mathbb{S}^2)^4&:\mathcal{L}^{(1)}=192\\
+  (\mathbb{S}^2)^5&:\mathcal{L}^{(1)}=480\\
+  (\mathbb{S}^2)^6&:\mathcal{L}^{(1)}=960\\
+  \vdots\\
+  (\mathbb{S}^2)^k&:\mathcal{L}^{(3)}=8k(k-1)(k-2)=8(k-1)[(k-1)^2-1]
+\end{align}
+
+For the case of $2$-hyperboloids products, we have
+\begin{align}
+  (\mathbb{H}^2)^1&:\mathcal{L}^{(1)}=0\\
+  (\mathbb{H}^2)^2&:\mathcal{L}^{(1)}=0\\
+  (\mathbb{H}^2)^3&:\mathcal{L}^{(1)}=-48\\
+  (\mathbb{H}^2)^4&:\mathcal{L}^{(1)}=-192\\
+  \vdots\\
+  (\mathbb{H}^2)^k&:\mathcal{L}^{(3)}=-8k(k-1)(k-2)=-8(k-1)[(k-1)^2-1]
+\end{align}
+
+For the case of $\mathbb{CP}^k$ products, we have
+\begin{align}
+  \mathbb{CP}^1&:\mathcal{L}^{(3)}=0\\
+\mathbb{CP}^2&:\mathcal{L}^{(3)}=0\\
+\mathbb{CP}^3&:\mathcal{L}^{(3)}=18=\frac{288}{16}\\
+\mathbb{CP}^4&:\mathcal{L}^{(3)}=\frac{2304}{25}\\
+\mathbb{CP}^5&:\mathcal{L}^{(3)}=\frac{800}{3}=\frac{9600}{36}\\
+\mathbb{CP}^6&:\mathcal{L}^{(3)}=\frac{28800}{49}\\
+  \vdots\\
+  \mathbb{CP}^k&:\mathcal{L}^{(3)}=\frac{8k^2(k-1)^2(k-2)}{(k+1)^2}
+\end{align}
+
+For the case of $\mathbb{CH}^k$ products, we have
+\begin{equation}
+    \mathbb{CH}^k:\mathcal{L}^{(3)}=-\frac{8k^2(k-1)^2(k-2)}{(k+1)^2}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
