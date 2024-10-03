@@ -24,7 +24,7 @@ Lastly, the corresponding energy-momentum tensor reads
   4\p T_{\m\n }^{\rm E}=F_{\m\a }P_{\n }^{~\a }-g_{\m\n }\left(\frac{1}{2}F_{\a\b }P^{\a\b }-\mathscr{H}\right). 
 \end{equation}
 The main motivation for the action principle \eqref{1} is that now Maxwell equations \eqref{3} remain linear as the Fara- day ones \eqref{2} while the nonlinearity is encoded into the constitutive relations \eqref{4}. Consequently, Maxwell equations \eqref{3} can be now understood just like the Faraday ones \eqref{2}, i.e., implying the local existence of a vector potential $\star P=\dd A^*$. Therefore, from the point of view of the action principle \eqref{1}, a solution to nonlinear electrodynamics can be understood as a pair of vector potentials $A$ and $A^*$ compatible with the constitutive relations \eqref{4}. Additionally, since in four dimensions both Faraday \eqref{2} and Maxwell \eqref{3} equations define conservation laws, there are conserved quantities related to them defined by the following integrals
-\begin{equation}
+\begin{equation}\label{6}
   p=\frac{1}{4\p }\int_{\partial\Sigma}F,\qquad q=\frac{1}{4\p }\int_{\partial\Sigma}\star P, 
 \end{equation}
 where the integration is taken at the boundary of con-
@@ -39,7 +39,7 @@ magnetic fields, i.e.
 \begin{equation}\label{8}
   F+\i  \star P=(D+\i B)e^1\wedge e^2+(E+\i H)e^3\wedge e^4\,  .
 \end{equation}
-Here, the first pair of the tetrad is composed of complex conjugates one-forms, while the last pair is real. Additionally, it has been implicitly assumed that the electromagnetic configuration is algebraically general; namely, the real invariants $E$, $B$, $D$, and $H$ which are related to the eigenvalues are not all zero at the same time. We also remark that the scalars $E$ and $D$ are associated with the intensity of the electric field and electric induction, respectively, as perceived in the null frame, while $H$ and $B$ are their magnetic counterparts. In terms of the aligned tetrad invariants \eqref{8}, the standard invariants take the form
+Here, the first pair of the tetrad is composed of complex conjugates one-forms, while the last pair is real. Additionally, it has been implicitly assumed that the electromagnetic configuration is algebraically general; namely, the real invariants $E$, $B$, $D$, and $H$ related to the eigenvalues are not all zero at the same time. We also remark that the scalars $E$ and $D$ are associated with the intensity of the electric field and electric induction, respectively, as perceived in the null frame, while $H$ and $B$ are their magnetic counterparts. In terms of the aligned tetrad invariants \eqref{8}, the standard invariants take the form
 \begin{subequations}\label{9}
 	\begin{align}
   \mathscr{F}+\i \mathscr{G}&\equiv \frac{1}{4}F_{\m\n }F^{\m\n }+\frac{\i }{4}F_{\m\n}\star F^{\m\n }=-\frac{1}{2}(E+\i B)^2,\\
@@ -54,7 +54,7 @@ This is not the only advantage of choosing an aligned tetrad, it also results in
 \begin{subequations}
 	\begin{align}\label{11}
   2\pi \tr T^{\rm E}&=DE-BH+2\mathscr{H},\\
-  4\pi \hat{T}^{\rm E}&=(DE+BH)(e^1\otimes_s e^2-e^3\otimes_s e^4).
+  4\pi \hat{T}^{\rm E}&=(DE+BH)(e^1\otimes_s e^2-e^3\otimes_s e^4).\label{11b}
 \end{align}
 \end{subequations}
 Here $E$ and $B$ must be determined from the constitutive relations \eqref{10}. This approach has been employed since the seminal work of Plebanski \cite{Plebanski:1970zz} to the formulations of nonlinear electrodynamics pioneered in [XX] which also is reviewed below. The power of this approach is such that it has been instrumental in the derivation of the first genuine example of a spinning charged black hole \cite{Garcia-Diaz:2021bao, DiazGarcia:2022jpc, Ayon-Beato:2022dwg}.
@@ -68,7 +68,7 @@ This highlights that in the more known Lagrangian formulation the fundamental va
   D+\i H=(-\partial_E+\i \partial_B)\mathscr{L}.
 \end{equation}
 Furthermore, the total Legendre transform \eqref{12} motivates the definition of the following two partial Legendre transforms
-\begin{subequations}
+\begin{subequations}\label{14}
 	\begin{align}
   \mathscr{M}^+(D,B)&=BH-\mathscr{M}(D,H),\\
   \mathscr{M}^-(E,H)&=DE+\mathscr{M}(D,H),
@@ -81,6 +81,79 @@ which were first introduced in \cite{Salazar:1987ap} and led to two alternative 
   D+\i B&=(\partial_E+\i \partial_H)\mathscr{M}^-,
 \end{align}
 \end{subequations}
+Regarding the energy-momentum tensor, its traceless part is formally written again as in \eqref{11b} but considering the new constitutive relations above, while the trace changes according to the partial Legendre transforms \eqref{14}
+\begin{equation}\label{16}
+  2\p \tr T^{\rm E}=\pm (DE+BH-2\mathscr{M}^{\pm }).
+\end{equation}
+After clearly defining duality-invariant theories through these formalisms, we shall apply the above expression to determine their zero trace subclass defining the ModMax theory.
+
+\section{A simpler derivation of ModMax electrodynamics}
+Now, we will follow the formalism of the previous section to rederive the ModMax theory [XX] in a novel and comprehensive way. The approach will be based on the inductions and intensities formulations with structural functions $\M^+$ and $\M^-$, respectively, which in turn provide a direct and transparent way of deriving the theory from its defining symmetries. A symmetry-based approach was previously undertaken in [XX] but employed a Lagrangian description. In contrast with the $\M^{\pm }$ formulations, the resulting condition is nonlinear as it will be explained later, and it allows no explicit general solution as recently emphasized in [XX].
+
+\subsection{Duality symmetry}
+The main challenge is how to implement the duality symmetry. Fortunately, this problem was cleverly solved by Salazar, Garcia, and Plebanski \cite{Salazar:1987ap}. We didactically follow their approach to make evident its advantages. \textit{Duality symmetry is related to the possibility of interchanging the Faraday \eqref{2} and Maxwell equations \eqref{3}}, which are preserved by the more general rotations
+\begin{equation}\label{17}
+  \tilde{F}+\i \star\tilde{P}=e^{\i \varphi}(F+\i \star P).
+\end{equation}
+From the conserved charges \eqref{6}, these rotations are a covariant nonlinear realization of the well-known electric-magnetic duality
+\begin{equation}\label{18}
+  \tilde{p}+\i \tilde{q}=e^{\i \varphi}(p+\i q).
+\end{equation}
+However, this is not the end of the story since the involved fields are not independent as they are tied by the constitutive relations \eqref{4}. The circumstances under which the latter also remain unchanged after the rotations above are far from obvious, but we will show they are simple to analyze in the $\M^{\pm }$ formalisms. As we plan to couple the resulting duality-invariant nonlinear electrodynamics to General Relativity, we first demand the invariance of the energy-momentum tensor and show later that the emerging duality conditions are enough to also ensure preserving the constitutive relations.
+
+Using an aligned tetrad \eqref{8}, the duality rotations \eqref{17} becomes
+\begin{subequations}\label{19}
+	\begin{align}
+  \tilde{D}+\i\tilde{B}&=e^{\i \varphi}(D+\i B),\\
+  \tilde{E}+\i \tilde{H}&=e^{\i \varphi}(E+\i H),
+\end{align}
+\end{subequations}
+while their infinitesimal version
+\begin{subequations}\label{20}
+	\begin{align}
+  \tilde{D}+\i\tilde{B}&=D+\i B+\varphi X(D+\i B)+\cdots,\\
+  \tilde{E}+\i \tilde{H}&=E+\i H+\varphi X(E+\i H)+\cdots,
+\end{align}
+\end{subequations}
+defines the generator of duality rotations in this representation
+\begin{equation}\label{21}
+  X=-B\partial_D+D\partial_B-H\partial_E+E\partial_H.
+\end{equation}
+As previously announced, we shall demand now the invariance of the energy-momentum tensor under duality rotations, which infinitesimally requires the generator \eqref{21} to preserve their two independent components. The traceless part \eqref{11b} is already duality invariant since its single component identically satisfies
+\begin{equation}\label{22}
+  X(DE+BH)=0.
+\end{equation}
+The the duality invariance of the trace \eqref{16} reduces to the following conditions
+\begin{equation}\label{23}
+  X(\M^{\pm })=0.
+\end{equation}
+These last requirements are enough to also preserve the constitutive relations \eqref{15} under duality rotations since the corresponding infinitesimal conditions can be rewritten as
+\begin{subequations}
+	\begin{align}
+  X(E+\i H-[\partial_D+\i \partial_B]\M^+)&=-(\partial_D+\i \partial_B)X(\M^+)=0,\\
+  X(D+\i B-[\partial_E+\i \partial_H]\M^-)&=-(\partial_E+\i \partial_H)X(\M^-)=0.
+\end{align}
+\end{subequations}
+Notice that if one had started by analyzing first the invariance of the constitutive relations, one would have obtained from the previous expressions the preliminary conditions $X(\M ^{\pm })=$ const., which is exactly equivalent by \eqref{15} to the preliminary duality condition $DE-BE=$ const. obtained in [XX]. Anyway, the later restriction on the energy-momentum tensor, finally imposes the vanishing of this constant. The advantage here is that the duality condition \eqref{23} is expressed as a constraint on the structural functions which can be phrased as \textit{a nonlinear electrodynamics is duality invariant if and only if its structural functions $\M^+(D,B)$ and $\M^-(E,H)$ are preserved by duality rotations}. This is equivalent to the dollowing homogeneus linear first-order PDE
+\begin{equation}\label{24}
+  (-B\partial_D+D\partial_B)\M^+=0,\qquad (-H\partial_E+E\partial_H)\M^-=0,
+\end{equation}
+whoso general solutions are, respectively, of the form
+\begin{equation}\label{25}
+  \M^+=\M^+\left(\frac{D^2+B^2}{2}\right),\qquad \M^-=\M^-\left(\frac{E^2+H^2}{2}\right). 
+\end{equation}
+Hence, a generic duality-invariant nonlinear electrodynamics is necessarily described by the above structural functions, each generally depending on a single rotation-invariant variable built with the corresponding aligned invariants.
+
+We end this subsection with a last comment regarding the duality condition $BE = DH$ in the Lagrangian and Hamiltonian formulations. Using the constitutive relations \eqref{13} or \eqref{10}, this duality requisite can be expressed in either of the following two ways
+\begin{equation}\label{26}
+  \partial_E\mathscr{L}\partial_B \mathscr{L}=-EB,\qquad \partial_D\mathscr{H}\partial_H \mathscr{L}=-DH.
+\end{equation}
+These are nonlinear first-order PDEs of the Hamilton-Jacobi type, and it is a nontrivial task to find their general solutions. In the case of the above equations, it is possible to find their general solutions depending on an arbitrary function; see Ref. [XX] for a recent account of the several methods used to achieve this task. Unfortunately, as occurs for all nonlinear first-order PDEs, such general solutions are only implicitly given. This makes impossible a transparent treatment of duality-invariant theories in the conventional formulations, i.e., the occurrence or not of duality invariance needs to be checked case by case.
+
+
+
+
+
 
 
 
