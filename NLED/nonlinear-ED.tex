@@ -11,7 +11,7 @@ On the other hand, the variation of action \eqref{1} with respect to the gauge p
 \begin{equation}\label{3}
 	\dd \star P=0, 
 \end{equation}
-where $\star$ stands for the Hodge dual, whereas varying \eqref{1} with respect to the antisymmetric tensor $P^{\m\n }$ yields the constitutive relations \footnote{\rc{Try to obtain \eqref{3} and \eqref{4}}.}
+where $\star$ stands for the Hodge dual, whereas varying \eqref{1} with respect to the antisymmetric tensor $P^{\m\n }$ yields the constitutive relations
 \begin{equation}\label{4}
   F_{\m\n }=\pdv{\mathscr{H}}{\mathscr{P}}P_{\m\n }+\pdv{\mathscr{H}}{\mathscr{Q}}\star P_{\m\n }.
 \end{equation}
@@ -134,7 +134,7 @@ These last requirements are enough to also preserve the constitutive relations \
   X(D+\i B-[\partial_E+\i \partial_H]\M^-)&=-(\partial_E+\i \partial_H)X(\M^-)=0.
 \end{align}
 \end{subequations}
-Notice that if one had started by analyzing first the invariance of the constitutive relations, one would have obtained from the previous expressions the preliminary conditions $X(\M ^{\pm })=$ const., which is exactly equivalent by \eqref{15} to the preliminary duality condition $DE-BE=$ const. obtained in [XX]. Anyway, the later restriction on the energy-momentum tensor, finally imposes the vanishing of this constant. The advantage here is that the duality condition \eqref{23} is expressed as a constraint on the structural functions which can be phrased as \textit{a nonlinear electrodynamics is duality invariant if and only if its structural functions $\M^+(D,B)$ and $\M^-(E,H)$ are preserved by duality rotations}. This is equivalent to the dollowing homogeneus linear first-order PDE
+Notice that if one had started by analyzing first the invariance of the constitutive relations, one would have obtained from the previous expressions the preliminary conditions $X(\M ^{\pm })=$ const., which is exactly equivalent by \eqref{15} to the preliminary duality condition $DE-BE=$ const. obtained in [XX]. Anyway, the later restriction on the energy-momentum tensor, finally imposes the vanishing of this constant. The advantage here is that the duality condition \eqref{23} is expressed as a constraint on the structural functions which can be phrased as \textit{nonlinear electrodynamics is duality invariant if and only if its structural functions $\M^+(D,B)$ and $\M^-(E,H)$ are preserved by duality rotations}. This is equivalent to the following homogeneous linear first-order PDE
 \begin{equation}\label{24}
   (-B\partial_D+D\partial_B)\M^+=0,\qquad (-H\partial_E+E\partial_H)\M^-=0,
 \end{equation}
@@ -149,6 +149,59 @@ We end this subsection with a last comment regarding the duality condition $BE =
   \partial_E\mathscr{L}\partial_B \mathscr{L}=-EB,\qquad \partial_D\mathscr{H}\partial_H \mathscr{L}=-DH.
 \end{equation}
 These are nonlinear first-order PDEs of the Hamilton-Jacobi type, and it is a nontrivial task to find their general solutions. In the case of the above equations, it is possible to find their general solutions depending on an arbitrary function; see Ref. [XX] for a recent account of the several methods used to achieve this task. Unfortunately, as occurs for all nonlinear first-order PDEs, such general solutions are only implicitly given. This makes impossible a transparent treatment of duality-invariant theories in the conventional formulations, i.e., the occurrence or not of duality invariance needs to be checked case by case.
+
+\subsection{Conformal invariance}
+We now turn to conformal invariance, the other defining symmetry of the ModMax electrodynamics. It is easier to implement since it is well-known that conformal symmetry necessarily implies a traceless energy-momentum tensor. Hence, we must set the trace \eqref{16} to zero, which by taking into account the constitutive relations \eqref{15} yields the following inhomogeneous linear first-order PDE
+\begin{subequations}\label{27}
+	\begin{align}
+  (D\partial_D+B\partial_B)\M^+&=2\M^+,\\
+  (E\partial_E+H\partial_H)\M^-&=2\M^-.
+\end{align}
+\end{subequations}
+These linear PDE are easily solved and the result (which can also be obtained in the other formulations) is that the structural functions characterizing all the conformally invariant nonlinear electrodynamics are necessarily homogeneous. For example, the degree of the previous functions $\M^{\pm }$ must be two, and by directly taking the trace one. In order to exhibit that such conditions are enough to guarantee the conformal invariance of action \eqref{1}, we explicitly write down the conformal weights of its different ingredients
+\begin{equation}\label{28}
+  (g_{\m\n },A_\m ,P^{\m\n }) \mapsto (\Omega^2 g_{\m\n },A_\m ,\Omega^{-4}P^{\m\n }).
+\end{equation}
+They, together with the degree one homogeneity of the Hamiltonian, imply the latter transforms with the appropriate weight, i.e.,
+\begin{equation}\label{29}
+  \mathscr{H}(\mathscr{P},\mathscr{Q})\mapsto \mathscr{H}(\Omega^{-4}\mathscr{P},\Omega^{-4}\mathscr{Q})=\Omega^{-4}\mathscr{H}(\mathscr{P},\mathscr{Q}),
+\end{equation}
+ensuring in this way the required conformal invariance of action \eqref{1}.
+
+\subsection{ModMax derivation}
+After having transparently characterized both duality and conformal symmetries, it will turn to easily derive the ModMax theory [XX]. The single-argument dependence of duality-invariant theories \eqref{25} reduces the homogeneity defining PDE \eqref{27}, warranting conformal symmetry to the simple ordinary equations
+\begin{subequations}\label{30}
+	\begin{align}
+  \frac{1}{2}(D^2+B^2)\M ^{+}'&=\M^+,\\
+  \frac{1}{2}(E^2+H^2)\M^{-}'&=\M ^{-},
+\end{align}
+\end{subequations}
+whose general solutions are given by
+\begin{subequations}\label{31}
+	\begin{align}
+  \M^+_{\rm MM}(D,B)&=\frac{e^{-\gamma}}{2}(D^2+B^2),\\
+  \M^{-}_{\rm MM}(E,H)&=\frac{e^\gamma}{2}(E^2+H^2).
+\end{align}
+\end{subequations}
+These structural functions define the so-called ModMax electrodynamics, i.e., \textit{the generic family of duality-invariant theories that enjoy conformal symmetry at the same time.} The difference between the above integration constants is due to the fact that it is enough to integrate only one of the structural functions since the other is obtained from Legendre transforms \eqref{14} and results in the inverse integration constant of the former. In order to write the theory in a more standard form, notice that due to the squared dependence \eqref{31} the resulting constitutive relations \eqref{15} become linear and trivially invertible
+\begin{equation}\label{32}
+  E+\i H=e^{-\gamma}(D+\i B).
+\end{equation}
+That turns into a straightforward task to obtain the other structural functions from the Legendre transforms \eqref{14} and \eqref{12}, also yielding a squared dependence in terms of the aligned invariants
+\begin{subequations}\label{33}
+	\begin{align}
+  \LL_{\rm MM}(E,B)&=-\frac{1}{2}(e^\gamma E^2-e^{-\gamma}B^2),\\
+  \LL_{\rm MM}(D,H)&=-\frac{1}{2}(e^{-\gamma} D^2-e^{\gamma}H^2).
+\end{align}
+\end{subequations}
+We are now ready to express the Lagrangian and Hamiltonian in terms of the conventional invariants by inverting the parabolic relations \eqref{9} between the two families of invariants. Finally allows us to write down the standard structural functions of ModMax theory in this best-known form
+\begin{subequations}\label{34}
+	\begin{align}
+  \LL_{\rm MM}(\mathscr{F},\mathscr{G})&=\cosh(\gamma)\mathscr{F}-\sinh(\gamma)\sqrt{\mathscr{F}^2+\mathscr{G}^2},\\
+  \mathscr{H}_{\rm MM}(\mathscr{P},\mathscr{Q})&=\cosh(\gamma)\mathscr{P}-\sinh(\gamma)\sqrt{\mathscr{P}^2+\mathscr{Q}^2}.
+\end{align}
+\end{subequations}
+
 
 
 
