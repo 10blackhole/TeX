@@ -15,7 +15,7 @@
  \subsection{Covariant Phase Space}
  The idea is to develop the calculus both in spacetime and in field space.
  
-\subsubsection*{Spacetime Calculus} Consider a differentiable manifold $M$. Prior to a metric structure, one can introduce the de Rham calculus on the space of forms. Given a vector field $\xi\in TM$, a one form is an application from $TM$ to $C^\infty(M)$, that is, an element of the dual bundle $T^*M$. A generic $p$−form is an element of $\wedge^pT^*M$, where the symbol $\wedge$ stands for the wedge (skew-symmetric) product. The space of all forms constitutes the de \textit{Rham complex}
+\subsubsection*{Spacetime Calculus} Consider a differentiable manifold $M$. Prior to a metric structure, one can introduce the de Rham calculus on the space of forms. Given a vector field $\xi\in TM$, a one form is an application from $TM$ to $C^\infty(M)$, that is, an element of the dual bundle $T^*M$. A generic $p$-form is an element of $\wedge^pT^*M$, where the symbol $\wedge$ stands for the wedge (skew-symmetric) product. The space of all forms constitutes the \textit{de Rham complex}
 \begin{equation}
 	\Omega^\bullet(M,\mathbb{R}):=\bigoplus_{n=0}^d\wedge^n T^*M,
 \end{equation}
@@ -35,6 +35,13 @@ where $0$-forms are now functionals. We will denote by $\d$ and $I$ the exterior
 	\mathfrak{L}_V:=\d I_V+I_V\d .
 \end{equation}
 One can put together spacetime and field-space forms to form the variational bicomplex, defined on $(M,\Gamma)$. We will use the notation “($p, q$)-form” to refer to a form on the bicomplex which is a spacetime $p$-form and a field-space $q$-form. On the bicomplex, one can construct an exterior derivative which is $\dd +\d $. The latter is nilpotent if $\dd \d=-\d \dd $. In the following, we will repeatedly use that $I_V$ of a functional is zero, and that two interior products anti-commute. Unless stated otherwise, we will also assume that vector fields in $TM$ are field-independent, such that $\d\xi=0$, for all $\xi\in TM$.
+
+\subsubsection*{Lagrangian theory}
+Let us apply this formalism to a Lagrangian theory. The action reads
+\begin{equation}
+	S=\int_ML.
+\end{equation}
+The Lagrangian $L$ is thus a top form in spacetime, and does not contain field variations, so it is a functional of the fields $\varphi\in \G$. Given that $d=\dim M$, the Lagrangian is a $(d, 0)$-form, in the language just established.
  
  
  
