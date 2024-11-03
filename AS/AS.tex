@@ -1,34 +1,19 @@
-\documentclass[a4paper,11pt]{article}
-\usepackage{jheppub} % for details on the use of the package, please see the JINST-author-manual
-\usepackage{lineno}
-\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,physics,cancel,mathtools}
-\usepackage{mathrsfs}
-\usepackage{tcolorbox}
-\usepackage{marginnote,tensor}
-\usepackage{tcolorbox}
-%~~~~~~~~~ Document setup
-% \usepackage[spanish]{babel} % English formatting
-\usepackage[utf8]{inputenc} % Standard encoding
-% \usepackage[a4paper,left=3cm,bottom=3cm]{geometry} % Page formatting
-\usepackage{indentfirst} % Indents the first paragraph
-\usepackage{amsmath} % Maths type package
-\usepackage{bm} % Bold font maths
-\usepackage{graphicx} % Advanced graphics package
-\usepackage[export]{adjustbox} 
-\usepackage{pdflscape} % Make pages landscape
-\usepackage{fancyhdr} % Fancy headers
-% \usepackage[colorlinks=true,citecolor=blue,urlcolor=blue,linkcolor=black]{hyperref} % Link colours
-%\usepackage{natbib} % Bibliography
-% \usepackage{flafter} % Reference any 'float'
-% \usepackage[framemethod=tikz]{mdframed} % Box off stuff
-\usepackage{color} % Colour support
-\usepackage{wrapfig} % Text flowing around figures
-\usepackage{lipsum} % Generates meaningless text
-\usepackage{xcolor}
-%\usepackage{biblatex}
-%\usepackage[backend=bibtex]{biblatex}
-%\addbibresource{bibliography.bib}
-%\hypersetup{colorlinks=true, linkcolor=blue}
+\documentclass[11pt,letterpaper]{article}
+%\pdfoutput=1
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\def\author{Borja Diez}
+\def\title{Notes on Asymptotic Symmetries} 
+\usepackage{graphicx}
+\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=black, citecolor=black, urlcolor=blue]{hyperref}
+\usepackage{cancel}
+\usepackage{mdframed,framed}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{mathpazo}
+\usepackage{layout}
+\usepackage[nosort]{cite}
+\usepackage{physics}
 
 \newtheorem{ej}{Example}[section]
 \newtheorem{sol}{Solution}[section]
@@ -110,59 +95,78 @@
 \hypersetup{colorlinks,bookmarksopen,
 	bookmarksnumbered,
 	citecolor={nicered},
-	linkcolor={myDarkBlue},
+	linkcolor={black},
 	urlcolor={blue},
 	pdfstartview=FitH}
 
 
-% \arxivnumber{1234.56789} % if you have one
-
-\title{\boldmath Notes on Asymptotic Symmetries}
-
-% Collaborations
-
-%% [A] If main author
-%% \collaboration{\includegraphics[height=17mm]{collabroation-logo}\\[6pt]
-%%  XXX collaboration}
-
-%% or
-%% [B] If "on behalf of"
-%% \collaboration[c]{on behalf of XXX collaboration}
 
 
-% Authors
-% The "\note" macro will give a warning: "Ignoring empty anchor...", you can safely ignore it.
+% set up roman fonts in text and in mathmode
+%\renewcommand{\familydefault}{\rmdefault}
+%\usepackage{sfmath}
 
-%% [A] simple case: 2 authors, same institution
-%% \author[1]{A. Uthor\note{Corresponding author.}}
-%% \author{and A. Nother Author}
-%% \affiliation{Institution,\\Address, Country}
+% format table of contents
+\usepackage{tocloft}
+\setlength\cftparskip{5pt}
+\setlength\cftbeforesecskip{5pt}
+\setlength\cftaftertoctitleskip{2pt}
 
-%% or, e.g.
-%% [B] more complex case: 4 authors, 3 institutions, 2 footnotes
-%% \author[a,b]{F. Irst,\note{Now at another university}}
-%% \author[c]{S. Econd,}
-%% \author[a,2]{T. Hird\note{Also at Some University.}}
-%% \author[c,2]{and Fourth}
-%% \affiliation[a]{Institution_1,\\Address, Country}
-%% \affiliation[b]{Institution_2,\\Address, Country}
-%% \affiliation[c]{Institution_3,\\Address, Country}
+% generic pages setups
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = -0 in
+%\evensidemargin = -0.25 in
+\topmargin = -0. in
+\headheight = 0.0 in
+\headsep = 0.0 in
+%\parskip = 0.2in
+%\parindent = 0.2in
+\marginparsep = 0 in
+\footskip = 0.5 in
 
-\author{Borja Diez}
-\affiliation{Universidad Arturo Prat}
-% \affiliation{Another University,\\
-% different-address, Country}
-
-% E-mail addresses: only for the corresponding author
-\emailAdd{borjadiez1014@gmail.com}
-
-\abstract{These notes are based on \cite{Ciambelli:2022vot} and are for personal study purposes only.}
-
-
+% display references as hyperlinks
+\newcommand{\displayref}[2]{\href[pdfnewwindow]{#1}{{\color{BrickRed}[#2]}}}
 
 
 \begin{document}
-\maketitle
+
+{\centering
+ \vspace*{1cm}
+\textbf{\LARGE{\title{}}}
+\vspace{0.5cm}
+\begin{center}
+\author{}\\
+\vspace{0.5cm}
+\textit{Instituto de Ciencias Exactas y Naturales, Universidad Arturo Prat,\\
+Avenida Playa Brava 3256, 1111346, Iquique, Chile.\\
+Facultad de Ciencias, Universidad Arturo Prat,\\
+Avenida Arturo Prat Chac\'on 2120, 1110939, Iquique, Chile.}
+\end{center}
+\vspace{1cm}
+\begin{abstract}
+\vspace{0.5cm}
+These notes are based on \cite{Ciambelli:2022vot} and are for personal study purposes only.
+\end{abstract}}
+
+\vspace{5cm}
+
+\begin{center}
+\textit{Please write to} borjadiez1014@gmail.com \textit{for corrections, typos, and literature suggestions.}
+\end{center}
+
+
+\thispagestyle{empty}
+
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+\clearpage
+\pagenumbering{arabic} 
+
+%\layout
+
 %\tableofcontents
 %\flushbottom
 

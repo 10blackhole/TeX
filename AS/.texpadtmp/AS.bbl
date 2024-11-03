@@ -1,0 +1,19 @@
+
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
+
+\bibitem{Lee:1990nz}
+J.~Lee and R.M.~Wald, \emph{{Local symmetries and constraints}}, \href{https://doi.org/10.1063/1.528801}{\emph{J. Math. Phys.} {\bfseries 31} (1990) 725}.
+
+\bibitem{Wald:1993nt}
+R.M.~Wald, \emph{{Black hole entropy is the Noether charge}}, \href{https://doi.org/10.1103/PhysRevD.48.R3427}{\emph{Phys. Rev. D} {\bfseries 48} (1993) R3427} [\href{https://arxiv.org/abs/gr-qc/9307038}{{\ttfamily gr-qc/9307038}}].
+
+\bibitem{Iyer:1994ys}
+V.~Iyer and R.M.~Wald, \emph{{Some properties of Noether charge and a proposal for dynamical black hole entropy}}, \href{https://doi.org/10.1103/PhysRevD.50.846}{\emph{Phys. Rev. D} {\bfseries 50} (1994) 846} [\href{https://arxiv.org/abs/gr-qc/9403028}{{\ttfamily gr-qc/9403028}}].
+
+\bibitem{Iyer:1995kg}
+V.~Iyer and R.M.~Wald, \emph{{A Comparison of Noether charge and Euclidean methods for computing the entropy of stationary black holes}}, \href{https://doi.org/10.1103/PhysRevD.52.4430}{\emph{Phys. Rev. D} {\bfseries 52} (1995) 4430} [\href{https://arxiv.org/abs/gr-qc/9503052}{{\ttfamily gr-qc/9503052}}].
+
+\bibitem{Wald:1999wa}
+R.M.~Wald and A.~Zoupas, \emph{{A General definition of 'conserved quantities' in general relativity and other theories of gravity}}, \href{https://doi.org/10.1103/PhysRevD.61.084027}{\emph{Phys. Rev. D} {\bfseries 61} (2000) 084027} [\href{https://arxiv.org/abs/gr-qc/9911095}{{\ttfamily gr-qc/9911095}}].
+
+\end{thebibliography}\endgroup
