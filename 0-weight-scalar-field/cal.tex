@@ -43,7 +43,7 @@ By defining
 \end{align}
 we obtain
 \begin{align}
-  \d_\omega \E&=\sqrt{-g}A^{\m\n }\left(\g_{\m\n }\nabla^\r \f \nabla_\r \omega-2\nabla_\m \f\nabla_\n \omega\right)+\sqrt{-g}P^{\m\n }\d_\omega R^{\a\b }_{\m\n }+\sqrt{-g}\omega B_{\m\n }g_{\m\n }\\
+  \d_\omega \E&=\sqrt{-g}A^{\m\n }\left(g_{\m\n }\nabla^\r \f \nabla_\r \omega-2\nabla_\m \f\nabla_\n \omega\right)+\sqrt{-g}P^{\m\n }\d_\omega R^{\a\b }_{\m\n }+\sqrt{-g}\omega B_{\m\n }g_{\m\n }\\
   &=\sqrt{-g}\left(A\nabla^\r \f\nabla_\r \omega-2A^{\m\n}\nabla_\m \f\nabla_\n\omega+\omega B+P^{\m\n}_{\a\b}\d_\omega R^{\a\b }_{\m\n }\right)
 \end{align}
 Using
@@ -129,7 +129,7 @@ and its trace yields
   &=DX^{\frac{D-2}{2}}+(D-2)X^{\frac{D-2}{2}}\\
   &=2(D-1)X^{\frac{D-2}{2}}
 \end{align}
-Pluggin' into \eqref{A-condition},
+Pluggin into \eqref{A-condition},
 \begin{align*}
   A\nabla^\n \f-2A^{\m\n }\nabla_\m \f&=2(D-1)X^{\frac{D-2}{2}}\nabla^\n\f -2X^{\frac{D-2}{2}}g^{\m\n }\nabla_\m \f +(D-2)X^{\frac{D-4}{2}}\nabla^\m\f \nabla^\n\f \nabla_\m\f \\
   &=2(D-1)X^{\frac{D-2}{2}}\nabla^\n\f-2X^{\frac{D-2}{2}}\nabla^\n\f +(D-2)X^{\frac{D-4}{2}}(\nabla\f )^2\nabla^\n\f \\
@@ -142,602 +142,83 @@ Pluggin' into \eqref{A-condition},
 %--------------------
 
 
-\section{Building the auxiliary metric}
-We know the conditions that the most general second-order equation of motion for the zero conformal weight scalar field must satisfy. They are given by \eqref{conditions}. Now, the question is: how do we construct an auxiliary metric $\tilde{g}_{\m\n }$ such that  $\d_\omega \tilde{g}_{\m\n }=0$?
-
-Remember that in the exponential frame for the scalar field, the conformal transformations look like
+We notice that the constraints \eqref{conditions} on $E$ are an overdetermined linear PDE system with the following characteristic vector fields
+\begin{align}
+	Z&=g^{\m\n }\pdv{g^{\m\n }}-\frac{D}{2}E\pdv{E},\\
+	Z^\n &=\left(g_{\a\m }g^{\b\n }\nabla_\b \f -2\d^\n_\a \nabla_\m \f \right)\pdv{(\nabla_\a\nabla_\m \f )}
+\end{align}
+Let's see the integrability of the system. To do that, we compute the commutators between the vector fields. It is straightforward to see that $[Z^\n, Z^\lambda ]=0$. On the other hand
+\begin{align}
+  [Z,Z^\n ]&=ZZ^\n -\cancel{Z^\n  Z}\\
+  &=\left[\left(g^{\r\t }\pdv{g^{\r\t }}-\frac{DE}{2}\pdv{E}\right),(g_{\a\m }g^{\b\n }\f_\b -2\d^\n_\a \f_\m )\pdv{\f_{\a\m }}\right]\\
+  &=g^{\r\t }\pdv{g^{\r\t }}(g_{\a\m }g^{\b\n })\f_\b\pdv{\f_{\a\m }}
+\end{align}
+For compute the derivative, we note that
 \begin{equation}
-  g_{\m\n }\to \bar{g}_{\m\n }= \e^{2\omega}g_{\m\n },\qquad \f\to \bar{\f }=\f 
+  \d (g_{\a\m }g^{\b\n })=g^{\b\n }\d g_{\a\m }+g_{\a\m }\d g^{\b\n }.
 \end{equation}
-Since the inverse metric transforms as
+Using that
 \begin{equation}
-  g^{\m\n }\to \bar{g}^{\m\n }=\e^{-2\omega}g^{\m\n }
+  \d g_{\a\m }=-g_{\a\r }g_{\m\t }\d g^{\r\t },
 \end{equation}
-the kinetic term for the scalar field, defined as
+we obtain
 \begin{equation}
-  X:=-\frac{1}{2}\nabla_\m \f \nabla^\m \f =-\frac{1}{2}g^{\m\n }\nabla_\m \f\nabla_\n \f 
+  \d (g_{\a\m }g^{\b\n })=-g^{\b\n }g_{\a\r }g_{\m\t }\d g^{\r\t }+g_{\a\m }\d^\b_\r \d^\n_\t \d g^{\r\t }.
 \end{equation}
-transforms as
+Moreover,
 \begin{equation}
-  \bar{X}=-\frac{1}{2}\bar{g}^{\m\n }\partial_\m \bar{\f }\partial_\n \bar{\f }=-\frac{1}{2}\e^{-2\omega}g^{\m\n }\partial_\m \f\partial_\n \f =\e^{-2\omega}X
+  \d (g_{\a\m }g^{\b\n })=\pdv{g^{\r\t }}(g_{\a\m }g^{\b\n })\d g^{\r\t },
 \end{equation}
-Thus, the auxiliary metric is defined as
-\begin{equation}
-  \tilde{g}_{\m\n }=Xg_{\m\n }=-\frac{1}{2}(\nabla\f )^2g_{\m\n } \quad \implies\quad \d_\omega\tilde{g}_{\m\n }=0
-\end{equation}
-\textit{is conformally invariant}.
-
-Let us consider a pseudoscalar built from the zero weight conformal scalar field and its derivatives up to second-order and the conformally invariant geometry,
-\begin{equation}
-  \E=\sqrt{-\tilde{g}}E(\f,\tilde{\nabla}_\m\f ,\tilde{\nabla}_\m\tilde{\nabla}_\n \f ,\tilde{g}^{\m\n },\tilde{C}_{\m\n }^{\a\b })
-\end{equation}
-where we used the fact that for zero-weight, the $P^{\m\n }=0$ condition implies that the only dependence on the curvature is through the Weyl tensor, which is conformally invariant.
-%TODO [\rc{Update argument.}]
-
-We notice that $\d_\omega\E=0$. Indeed
-\begin{align*}
-  \d_\omega\E=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}^{\m\n }E\cancel{\d_\omega\tilde{g}_{\m\n }}+\sqrt{-\tilde{g}}&\left(\pdv{E}{\f }\cancel{\d_\omega\f} +\pdv{E}{(\tilde{\nabla}_\m\f )}\d_\omega (\tilde{\nabla}_\m\f )+\pdv{E}{(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )}\d_\omega(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )\right.\\&\left. +\pdv{E}{\tilde{g}^{\m\n }}\cancel{\d_\omega\tilde{g}^{\m\n }}+\tilde{P}^{\m\n }_{\a\b}\cancel{\d_\omega\tilde{C}^{\a\b }_{\m\n }}\right)
-\end{align*}
-but
-\begin{align}
-  \d_\omega\tilde{\nabla}_\m\f&=\d_\omega\partial_\m\f =\partial_\m\d_\omega\f=0
-\end{align}
-and
-\begin{align}
-  \d_\omega(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )&=\d_\omega(\tilde{\nabla}_\m\partial_\n \f )\\
- &=\d_\omega(\partial_\m\partial_\n \f -\tilde{\G}^{\lambda}_{~\m\n }\partial_\lambda\f )\\
- &=\partial_\m\partial_\n \d_\omega\f -\d_\omega\tilde{\G}^\lambda_{~\m\n }\partial_\lambda\f -\tilde{\G}^\lambda_{^\m\n }\partial_\lambda \d_\omega\f \\
- &=-\d_\omega\tilde{\G}^\lambda_{~\m\n }\partial_\lambda\f\\
- &=0
-\end{align}
-since $\d_\omega\tilde{\G}^\lambda_{~\m\n }=0$. Therefore,
-\begin{align}
-  \d_\omega\E=0\, .
-\end{align}
-
-
-%Since from conformal invariance for zero weight scalar field, the $P^{\m\n }=0$ condition implies that the explicit dependence of the Riemann tensor in the equation of motion is through the Weyl tensor, then,  for a equation of motion built from the conformally invariant geometry we have
-%\begin{equation}\label{EE}
-%  E=E(\f,\tilde{\nabla}_\m\f ,\tilde{\nabla}_\m\nabla_\n \f ,\tilde{g}^{\m\n },\tilde{C}_{\m\n }^{\a\b })=0
-%\end{equation}
-
-
-\section{Fréchet derivative}
-Now, let's try to find an action principle from which it emerges \eqref{EE}. To do that, we will use the formalism used in \cite{Ayon-Beato:2023bzp}. Hence, first we must to introduce the concept of Fréchet derivative.
-
-Let $P[u]=P\left(x,u^{(n)}\right)$ be a differential function, i.e. that depends in the point $x$, the function $u$ together with its derivatives $u^{(n)}$. Consider now its variation under a one-parameter family of functions. After interchanging the variation with derivatives (and without integrating by parts) we end with a differential operator acting on an arbitrary variation $\d u$ called the \textit{Fréchet derivative} of $P$,
-\begin{equation}
-  \d P=\dv{\varepsilon}\eval{P[u+\varepsilon\d u]}_{\varepsilon=0}:=D_P(\d u)
-\end{equation}
-Here, we consider the second order conformally invariant psudoscalar defined by
-\begin{equation}\label{E-frechet}
-  \E=\sqrt{-\tilde{g}}E(\f,\tilde{\nabla}_\m\f ,\tilde{\nabla}_\m\nabla_\n \f ,\tilde{g}^{\m\n },\tilde{C}_{\m\n }^{\a\b })
-\end{equation}
-which is the natural quantity that could be derived from a convariant action. The role of he dependent function $u$ is played by the zero weight conformally invariant scalar field $\f$,  and hence the Fréchet derivative of $\E$ can be calculated from
-\begin{equation}
-  D_\E(\d\f )=\d_\f\E\, .
-\end{equation}
-
-From \eqref{E-frechet} and using that $\d \f=0$, we have
-\begin{align*}
-  \d_\f \E&=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n }\d_\f \tilde{g}^{\m\n }+\sqrt{-\tilde{g}}\left(\pdv{E}{\f }\d\f \pdv{E}{(\tilde{\nabla}_\m\f )}\d_\f(\tilde{\nabla}_\m\f )+\pdv{E}{(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )}\d_\f(\tilde{\nabla}_\m\tilde{\nabla}_\n \f )\right.\\&\hspace{5cm}\left.+\pdv{E}{\tilde{g}^{\m\n }}\d_\f\tilde{g}^{\m\n }+\tilde{P}^{\m\n }_{\a\b }\d_\f \tilde{C}^{\a\b }_{\m\n }\right)\\
-  &=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n }\d_\f \tilde{g}^{\m\n }+\sqrt{-\tilde{g}}\left[\pdv{E}{\tilde{g}^{\m\n }}\d_\f\tilde{g}^{\m\n }+ E_\f\d\f +E^\m_\f \d_\f(\tilde{\nabla}_\m\f )+E^{\m\n }_\f \d_\f(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )+\tilde{P}^{\m\n }_{\a\b }\cancel{\d_\f \tilde{C}^{\a\b }_{\m\n }}\right]\\
-  &=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n }\d_\f \tilde{g}^{\m\n }+\sqrt{-\tilde{g}}\left[\pdv{E}{\tilde{g}^{\m\n }}\d_\f\tilde{g}^{\m\n }+ E_\f\d\f +E^\m_\f \d_\f(\tilde{\nabla}_\m\f )+E^{\m\n }_\f \d_\f(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )\right]
-\end{align*}
-where we have defined
-\begin{equation}
-  E_\f:=\pdv{E}{\f },\qquad E^\m_\f:=\pdv{E}{(\tilde{\nabla}_\m\f )},\qquad E^{\m\n }_\f:=\pdv{E}{(\tilde{\nabla}_\m\tilde{\nabla}_\n \f )}
-\end{equation}
-in order to reduce some notation and we used the fact that the Weyl tensor is conformally invariant, $\tilde{C}^{\a\b }_{\m\n }=C^{\a\b }_{\m\n }$, so that $\d_\f C^{\a\b }_{\m\n }=0$. Then,
-\begin{align}
-  \d_\f \E &=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n }\d_\f \tilde{g}^{\m\n }+\sqrt{-\tilde{g}}\left[\pdv{E}{\tilde{g}^{\m\n }}\d_\f\tilde{g}^{\m\n }+ E_\f\d\f +E^\m_\f \d_\f(\tilde{\nabla}_\m\f )+E^{\m\n }_\f \d_\f(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )\right]
-\end{align}
-Using \eqref{d-sqrt-E}, we can write
-\begin{align}
-  \d_\f \E &=\sqrt{-\tilde{g}}\left[\frac{1}{\sqrt{-\tilde{g}}}\pdv{(\sqrt{-\tilde{g}}E)}{\tilde{g}^{\m\n }}\d_\f\tilde{g}^{\m\n }+ E_\f\d\f +E^\m_\f \d_\f(\tilde{\nabla}_\m\f )+E^{\m\n }_\f \d_\f(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )\right]\\
-  &=\sqrt{-\tilde{g}}\left[-\frac{1}{2}E_{\m\n }+ E_\f\d\f +E^\m_\f \d_\f(\tilde{\nabla}_\m\f )+E^{\m\n }_\f \d_\f(\tilde{\nabla}_\m\tilde{\nabla}_\n\f )\right]\label{df-E}
-\end{align}
-where 
-\begin{equation}
-  E_{\m\n }:=-\frac{2}{\sqrt{-\tilde{g}}}\pdv{(\sqrt{-\tilde{g}}E)}{\tilde{g}^{\m\n }}
-\end{equation}
-
-
-
-
-
-
-
-
-Before proceeding, let's compute the variation w.r.t the scalar field $\f$ of some quantities:
-\begin{align}
-  \d_\f \tilde{g}_{\m\n }&=\d_\f (Xg_{\m\n })\\
-  &=\d_\f \left(-\frac{1}{2}(\nabla\f )^2g_{\m\n }\right)\\
-  &=-\nabla^\a \f \nabla_\a \d \f g_{\m\n }\\
-  &=-g_{\m\n }g^{\a\b }\nabla_\a\f\nabla_\b\d\f  \\
-  &=-g_{\m\n }g^{\a\b }\partial_\a\f\partial_\b\d\f\\
-  &=-g_{\m\n }Xg^{\a\b }X^{-1}\partial_\a\f\partial_\b\d\f \\
-  &=-\tilde{g}_{\m\n }\tilde{\nabla}^\a \f\tilde{\nabla}_\a\d\f 
-\end{align}
-
-\begin{align}
-  \d_\f \tilde{g}^{\m\n }&=\d_\f\left[\left(-\frac{1}{2}(\nabla\f )^2\right)^{-1} g^{\m\n }\right]\\
-  &=-\frac{1}{X^2}(-\nabla^\a\f\nabla_\a\d\f )g^{\m\n }\\
-  &=\frac{1}{X^2}g^{\m\n }g^{\a\b }\partial_\a\f\partial_\b\d\f \\
-  &=X^{-1}g^{\m\n }X^{-1}g^{\a\b }\partial_\a\f\partial_\b\d\f \\
-  &=\tilde{g}^{\m\n }\tilde{\nabla}^\a\f\tilde{\nabla}_\a\d\f 
-\end{align}
-
-\begin{align}
-  \d_\f \sqrt{-\tilde{g}}&=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n } \d_\f\tilde{g}^{\m\n }\\
-  &=-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n}\tilde{g}^{\m\n }\tilde{\nabla}^\a\f\tilde{\nabla}_\a\d\f \\
-  &=-\frac{D}{2}\sqrt{-\tilde{g}}\tilde{\nabla}^\a\f \tilde{\nabla}_\a\d\f 
-\end{align}
-
-\begin{align}
-  \d_\f (\tilde{\nabla}_\m \f)=\tilde{\nabla}_\m\d\f 
-\end{align}
-
-\begin{align}
-  \d_\f (\tilde{\nabla}_\m\tilde{\nabla}_\n\f )&=\d_\f (\tilde{\nabla}_\m\partial_\n \f )\\
-  &=\d_\f \left(\partial_\m \partial_\n \f -\tilde{\G }^\lambda_{~\m\n }\partial_\lambda\f \right)\\
-  &=\partial_\m\partial_\n\d \f -\d \f\tilde{\G }^\lambda_{~\m\n }\partial_\lambda\f-\tilde{\G }^\lambda_{~\m\n }\partial_\lambda\d\f \\
-  &=\tilde{\nabla}_\m\f\tilde{\nabla}_\n\d \f -\tilde{\nabla}_\lambda\f\d\f \tilde{\G }^\lambda_{~\m\n }\\
-  &=\tilde{\nabla}_\m\f\tilde{\nabla}_\n\d \f -\tilde{\nabla}_\lambda\f \d_\f \tilde{\G }^\lambda_{~\m\n }\\
-  &=\tilde{\nabla}_\m\f\tilde{\nabla}_\n\d \f-\tilde{\nabla}_\lambda\f\frac{1}{2}\tilde{g}^{\lambda\r }\left(\tilde{\nabla}_\m\d_\f \tilde{g}_{\n\r }+\tilde{\nabla}_\n \d_\f \tilde{g}_{\m\r }-\tilde{\nabla}_\r \d_\f \tilde{g}_{\m\n }\right)\\
-  &=\tilde{\nabla}_\m\f\tilde{\nabla}_\n\d \f-\frac{1}{2}\tilde{\nabla}^\r\f \left(2\tilde{\nabla}_{(\m }\d_\f \tilde{g}_{\n)\r }-\tilde{\nabla}_\r \d_\f \tilde{g}_{\m\n }\right)
-\end{align}
-
-
-Therefore,
-\begin{align}
-  E^{\m\n }_\f \d_\f (\tilde{\nabla}_\m\tilde{\nabla}_\n\f )&=E^{\m\n }_\f \left[\tilde{\nabla}_\m\f\tilde{\nabla}_\n\d \f-\frac{1}{2}\tilde{\nabla}^\r\f \left(2\tilde{\nabla}_{(\m }\d_\f \tilde{g}_{\n)\r }-\tilde{\nabla}_\r \d_\f \tilde{g}_{\m\n }\right)\right]\\
-  &=E^{\m\n }_\f \left[\tilde{\nabla}_\m\f\tilde{\nabla}_\n\d \f+\tilde{\nabla}^\r\f\tilde{\nabla}_\m(\tilde{g}_{\n\r }\tilde{\nabla}^\a\f\tilde{\nabla}_\a\d\f )-\frac{1}{2}\tilde{\nabla}^\r\f\tilde{\nabla}_\r (\tilde{g}_{\m\n }\tilde{\nabla}^\a\f\tilde{\nabla}_\a\d\f )\right]\\
-  &=E^{\m\n }_\f \left[\tilde{\nabla}_\m\f\tilde{\nabla}_\n\d\f +\tilde{\nabla}_\n\f \tilde{\nabla}_\m(\tilde{\nabla}^\a\f\tilde{\nabla}_\a\d\f )-\frac{1}{2}\tilde{g}_{\m\n }\tilde{\nabla}^\r\f\tilde{\nabla}_\r(\tilde{\nabla}^\a\f\tilde{\nabla}_\a\d\f )\right]
-\end{align}
-
-So \eqref{df-E} becomes
-
-%[\rc{Complete!!}]
-
-\begin{align*}
-  \d_\f\E &=\sqrt{-\tilde{g}}\left\{E_\f\d\f +E^\m_\f \tilde{\nabla}_\m\d\f -\frac{1}{2}E_{\m\n }\tilde{g}^{\m\n }\tilde{\nabla}^\a \tilde{\nabla}_\a \d\f \right.\\
-  &  \quad \left. + E^{\m\n }_\f \left[\tilde{\nabla}_\m \tilde{\nabla}_\n \d\f +\tilde{\nabla}_\n\f\tilde{\nabla}_\m (\tilde{\nabla}^\a\tilde{\nabla}_\a\d\f )-\frac{1}{2}\tilde{g}_{\m\n }\tilde{\nabla}^\r\f\tilde{\nabla}_\r (\tilde{\nabla}^\a\f\tilde{\nabla}_\a\d\f )\right]\right\} \\
-  &=\sqrt{-\tilde{g}}\left\{E_\f\d_\f+\left(E^\m_\f\tilde{\nabla}_\m-\frac{1}{2}E_{\r\tau }\tilde{g}^{\r\tau }\tilde{\nabla}^\m\f \right)\tilde{\nabla}_\m\d\f +E^{\m\n }_\b\tilde{\nabla}_\m\tilde{\nabla}_\n \d\f +E^{\m\n }_\f\tilde{\nabla}_\n \f(\tilde{\nabla}_\m \tilde{\nabla}^\a\f )\tilde{\nabla}_\a\d\f \right.\\
-  &\left.\quad + E^{\m\n }_\f\tilde{\nabla}_\n\f\tilde{\nabla}^\a \f(\tilde{\nabla}_\m\tilde{\nabla}_\a\d\f )-\frac{1}{2}E^{\m\n}_\f \tilde{g}_{\m\n }\tilde{\nabla}^\r\f(\tilde{\nabla}_\r\tilde{\nabla}^\a \f )\tilde{\nabla}_\a\d\f  -\frac{1}{2}E^{\m\n }_\f\tilde{g}_{\m\n }\tilde{\nabla}^\r\f\tilde{\nabla}^\a\f(\tilde{\nabla}_\r\tilde{\nabla}_\a\d\f )\right\}
-\end{align*}
-
-At this point it is convenient to introduce the following notation
-\begin{equation}
-  \tr \tilde{E}:=\tilde{g}^{\m\n }E_{\m\n },\qquad \tr\tilde{E}_\f :=\tilde{g}_{\m\n }\tilde{E}^{\m\n }_\f 
-\end{equation}
-Therefore,
-\begin{align*}
-   \d_\f\E &=\sqrt{-\tilde{g}}\left\{E_\f\d_\f+\left(E^\m_\f\tilde{\nabla}_\m-\frac{1}{2}\tr\tilde{E }\, \tilde{\nabla}^\m\f \right)\tilde{\nabla}_\m\d\f +E^{\m\n }_\f \tilde{\nabla}_\m\tilde{\nabla}_\n \d\f +E^{\m\n }_\f\tilde{\nabla}_\n \f(\tilde{\nabla}_\m \tilde{\nabla}^\a\f )\tilde{\nabla}_\a\d\f \right.\\
-  &\left.\quad + E^{\m\n }_\f\tilde{\nabla}_\n\f\tilde{\nabla}^\a \f(\tilde{\nabla}_\m\tilde{\nabla}_\a\d\f )-\frac{1}{2}E^{\m\n}_\f \tilde{g}_{\m\n }\tilde{\nabla}^\r\f(\tilde{\nabla}_\r\tilde{\nabla}^\a \f )\tilde{\nabla}_\a\d\f  -\frac{1}{2}\tr \tilde{E}_\f \tilde{\nabla}^\r\f\tilde{\nabla}^\a\f(\tilde{\nabla}_\r\tilde{\nabla}_\a\d\f )\right\}\\
-  &=\sqrt{-\tilde{g}}\left\{E_\f\d_\f+\left(E^\m_\f\tilde{\nabla}_\m-\frac{1}{2}\tr\tilde{E }\, \tilde{\nabla}^\m\f \right)\tilde{\nabla}_\m\d\f +E^{\m\n }_\f \tilde{\nabla}_\m\tilde{\nabla}_\n \d\f +E^{\m\n }_\f\tilde{\nabla}_\n \f(\tilde{\nabla}_\m \tilde{\nabla}^\a\f )\tilde{\nabla}_\a\d\f \right.\\
-  &\left.\quad + E^{\m\n }_\f\tilde{\nabla}_\n\f\tilde{\nabla}^\a \f(\tilde{\nabla}_\m\tilde{\nabla}_\a\d\f )-\frac{1}{2}E^{\m\n}_\f \tilde{g}_{\m\n }\tilde{\nabla}^\r\f(\tilde{\nabla}_\r\tilde{\nabla}^\a \f )\tilde{\nabla}_\a\d\f \right.\\
-   &\left.\quad  -\frac{1}{2}\tr\tilde{E}_\f \left[\tilde{\nabla}^\r\f (\tilde{\nabla}_\r\tilde{\nabla}^\a\f )\tilde{\nabla}_\a\d\f +\tilde{\nabla}^\r\f\tilde{\nabla}^\a\f (\tilde{\nabla}_\r\tilde{\nabla}_\a\d\f )\right]\right\}\\
-   &=\sqrt{-\tilde{g}}\left\{E_\f\d\f +\left(E^\m_\f-\frac{1}{2}\tr \tilde{E}\tilde{\nabla}^\m\f \right)\tilde{\nabla}_\m\d\f +\left[E^{\m\n }_\d\tilde{\nabla}_\n\f (\tilde{\nabla}_\m\tilde{\nabla}^\a\f )-\frac{1}{2}\tr \tilde{E}_\f \tilde{\nabla}^\r\f (\tilde{\nabla}_\r\tilde{\nabla}^\a\f )\right]\tilde{\nabla}_\d\f\right. \\
-   &\left. \quad +E^{\m\n }_\f\tilde{\nabla}_\m\tilde{\nabla}_\n \d\f +E^{\m\n }_\f\tilde{\nabla}_\n\f\tilde{\nabla}^\a\f (\tilde{\nabla}_\m\tilde{\nabla}_\a\d\f )-\frac{1}{2}\tr \tilde{E}_\f \tilde{\nabla}^\r\f\tilde{\nabla}^\a\f (\tilde{\nabla}_\r\tilde{\nabla}_\a\d\f )\right\}\\
-    &=\sqrt{-\tilde{g}}\left\{E_\f\d\f +\left[E^\m_\f \tilde{\nabla}_\m-\frac{1}{2}\tr\tilde{E}\tilde{\nabla}^\m\f +\left(E^{\a\b }_\f\tilde{\nabla}_\f-\frac{1}{2}\tr \tilde{E}_\b\f \tilde{\nabla}^\a\f \right)\tilde{\nabla}_\a\tilde{\nabla}^\m\f \right]\tilde{\nabla}_\m\d\f\right.\\
-    &\quad \left.+\left[E^{\m\n }_\f+\left(E^{\m\a }_\f \tilde{\nabla}_\n\f-\frac{1}{2}\tr\tilde{E}_\f \tilde{\nabla}^\m\f \right)\tilde{\nabla}^\n\f \right]\tilde{\nabla}_\m\tilde{\nabla}_\n\d\f  \right\}
-\end{align*}
-Therefore, the Fréchet derivative is given by the following operator
-
-\begin{equation}\label{DE}
-  D_\E =\sqrt{-\tilde{g}}\left[E_\f +H^\m\tilde{\nabla}_\m +H^{(\m\n )}\tilde{\nabla}_\m\tilde{\nabla}_\n \right]
-\end{equation}
-where
-\begin{align}
-  H^\m &:=E^\m_\f -\frac{1}{2}\tr\tilde{E}\tilde{\nabla}^\m\f +\left(E^{\a\b }_\f\tilde{\nabla}_\b \f -\frac{1}{2}\tr \tilde{E}_\f\tilde{\nabla}^\a\f \right)\tilde{\nabla}_\a\tilde{\nabla}^\m\f \\
-  H^{\m\n }&:=E^{\m\n }_\f+\left(E^{\m\a }_\f \tilde{\nabla}_\a \f-\frac{1}{2}\tr\tilde{E}_\f\tilde{\nabla}^\m\f \right)\tilde{\nabla}^\n\f 
-\end{align}
-%[\rc{Check possible typos!}]
-
-
-
-At this point let us remember that the adjoint of a differential operator $O$, denoted bu $O^\dagger$  satisfies
-\begin{equation}
-	\int\dd^Dx AO(B)=\int\dd ^DxBO^\dagger(A)
-\end{equation}
-for every pair of differential functions $A$ and $B$, with equality achieved up to boundary terms.
-In order to ensure that the equations arise from an action principle, we need $D_\E $ to be self-adjoint
-
-\begin{align}
-  \int\dd^DxAD_\E (B)&=\int\dd^Dx\sqrt{-\tilde{g}}\left[A\left(E_\f +H^\m\tilde{\nabla}_\m +H^{(\m\n )}\tilde{\nabla}_\m\tilde{\nabla}_\n\right)B\right]\\
-  &=\int\dd^Dx\sqrt{-\tilde{g}}\left[AE_\f B +AH^\m \tilde{\nabla}_\m B+AH^{\m\n }\tilde{\nabla}_\m\tilde{\nabla}_\n B\right]\\
-  &=\int\dd^Dx\sqrt{-\tilde{g}}\left[BE_\f A-B\tilde{\nabla}_\m (H^\m A)-\tilde{\nabla}_\m (AH^{\m\n })\tilde{\nabla}_\n B\right]+\rm b.t\\
-  &=\int\dd^Dx\sqrt{-\tilde{g}}\left[BE_\f A-B\tilde{\nabla}_\m (H^\m A)+B\tilde{\nabla}_\m\tilde{\nabla}_\n (H^{\m\n }A)\right]+\rm b.t
-\end{align}
-Then, 
-\begin{align}
-  D^\dagger_\E (A)&=\sqrt{-\tilde{g}}\left[E_\f A-\tilde{\nabla}_\m (H^\m A)+\tilde{\nabla}_\m\tilde{\nabla}_\n (H^{\m\n }A)\right]\\
-  &=\sqrt{-\tilde{g}}\left[E_\f A-A\tilde{\nabla}_\m H^\m -H^\m \tilde{\nabla}_\m A+\tilde{\nabla}_\n (A\tilde{\nabla}_\m H^{\m\n }+H^{\m\n }\tilde{\nabla}_\m A)\right]
-\end{align}
-But, in order to make appear $D_\E$ from \eqref{DE}, we can add an smart zero,
-\begin{align*}
-  D^\dagger_\E (A)&=\sqrt{-\tilde{g}}\left[E_\f A-\tilde{\nabla}_\m (H^\m A)+\tilde{\nabla}_\m\tilde{\nabla}_\n (H^{\m\n }A)\right]+2H^\m \tilde{\nabla}_\m A-2H^\m \tilde{\nabla}_\m A\\
-  &=\sqrt{-\tilde{g}}\left[E_\f A-A\tilde{\nabla}_\m H^\m +H^\m \tilde{\nabla}_\m A+\tilde{\nabla}_\n A\tilde{\nabla}_\m H^{\m\n }+A\tilde{\nabla}_\m \tilde{\nabla}_\n H^{\m\n }\right. \\
-  &\left.\quad +\tilde{\nabla}_\n H^{\m\n }\tilde{\nabla}_\m A +H^{\m\n }\tilde{\nabla}_\m \tilde{\nabla}_\n A -2H^\m \tilde{\nabla}_\m A\right]\\
-  &=D_\E (A)+\sqrt{-\tilde{g}}\left[-A\tilde{\nabla}_\m H^\m +\tilde{\nabla}_\n A\tilde{\nabla}_\m H^{\m\n }+A\tilde{\nabla}_\m \tilde{\nabla}_\n H^{\m\n }+\tilde{\nabla}_\n H^{\m\n }\tilde{\nabla}_\m A-2H^\m \tilde{\nabla}_\m A\right]\\
-  &=D_\E (A)+\sqrt{-\tilde{g}}\left[-A\tilde{\nabla}_\m H^\m +2\tilde{\nabla}_\m H^{\m\n }\tilde{\nabla}_\n A+A\tilde{\nabla}_\m \tilde{\nabla}_\n H^{\m\n }-2H^\m \tilde{\nabla}_\m A\right]\\
-  &=D_\E (A)+\sqrt{-\tilde{g}}\left[2J^\m \tilde{\nabla}_\m A+\tilde{\nabla}_\m J^\m A\right]
-\end{align*}
-where we have defined
-\begin{equation}
-  J^\m :=\tilde{\nabla}_\n H^{(\n\m) }-H^\m 
-\end{equation}
-
-Thus, for $D_\E $ to be self-adjoint, it must be fulfilled that
-\begin{equation}
-  D^\dagger _\E (A)=D_\E (A) \Leftrightarrow J^\m =0
-\end{equation}
-and the Helmholtz condition is reduced to
-\begin{tcolorbox}
-\begin{equation}\label{Hemholtz-condition}
-\boxed{  \tilde{\nabla}_\n H^{(\n\m) }=H^\m }
-\end{equation}
-where 
-\begin{align}
-  H^\m &:=\left[E^\m_\f -\frac{1}{2}\tr\tilde{E}\tilde{\nabla}^\m\f +\left(E^{\a\b }_\f\tilde{\nabla}_\b \f -\frac{1}{2}\tr \tilde{E}_\f\tilde{\nabla}^\a\f \right)\tilde{\nabla}_\a\tilde{\nabla}^\m\f \right]\\
-  H^{\m\n }&:=E^{\m\n }_\f+\left(E^{\m\a }_\f \tilde{\nabla}_\a \f-\frac{1}{2}\tr\tilde{E}_\f\tilde{\nabla}^\m\f \right)\tilde{\nabla}^\n\f 
-\end{align}
-\end{tcolorbox}
-
-Helmholtz conditions imply that a symmetric second rank tensor depending up to second order in the scalar field $\f$ and auxiliary metric $\tilde{g}_{\m\n }$ has a second order divergence. Horndeski characterized the most general tensor with these properties \cite{Horndeski:1974wa}. Consequently, $H^{\m\n }$ belongs to the Horndeski family built for the auxiliary metric $\tilde{g}_{\m\n }$.
-
-\subsection{Quantities written in the auxiliary frame}
-As an example, let's consider again the action principle
-\begin{equation}\label{S-auxiliar-frame}
-  S[g_{\m\n },\f ]=\int\dd^Dx\sqrt{-g}X^{D/2}
-\end{equation}
-
-Its equation is rewritten in the auxiliary frame as
-\begin{align}
-  \E&=\sqrt{-g}E\\
-  &=\sqrt{-g}\nabla_\m \left(X^{\frac{D-2}{2}}\nabla^\m \f \right)\\
-  &=\partial_\m \left(\underbrace{\sqrt{-g}X^\frac{D}{2}}_{\sqrt{-\tilde{g}}}\underbrace{X^{-1}g^{\m\n }}_{\tilde{g}^{\m\n }}\partial_\n \f \right)\\
-  &=\partial_\m (\sqrt{-\tilde{g}}\tilde{g}^{\m\n }\partial_\n \f )\\
-  &=\sqrt{-\tilde{g}}\tilde{g}^{\m\n }\tn_\m\tn_\n\f \\
-  &=\sqrt{-\tilde{g}}\tilde{\Box }\f 
-\end{align}
 which implies that
 \begin{equation}
-  E=\tilde{\Box }\f =\tilde{g}^{\m\n }\tn_\m \tn_\n\f 
+  \pdv{g^{\r\t }}(g_{\a\m }g^{\b\n })=-g^{\b\n }g_{\a(\r }g_{\m|\t) }+g_{\a\m }\d^\b_{(\r} \d^\n_{\t)}.
 \end{equation}
-Thus
+Finally,
+\begin{align}
+  [Z,Z^\n ]&=g^{\r\t }\pdv{g^{\r\t }}(g_{\a\m }g^{\b\n })\f_\b\pdv{\f_{\a\m }}\\
+  &=g^{\r\t }(g_{\a\m }\d^\b_\r \d^\n_\t -g^{\b\n }g_{\a\r }g_{\m\t })\f_\b \pdv{\f_{\a\m }}\\
+  &=(g^{\b\n }g_{\a\m }-g^{\b\n }\d^\t_\a g_{\m\t })\f_\b \pdv{\f_{\a\m }}\\
+  &=(g^{\b\n }g_{\a\m }-g^{\b\n }g_{\a\m })\f_\b \pdv{\f_{\a\m }}\\
+  &=0.
+\end{align}
+Then, the system is integrable.
+
+The characteristic system of $Z$ is
 \begin{equation}
-  E^{\m\n }_\f :=\pdv{E}{(\tn_\m\tn_\n\f )}=\tilde{g}^{\m\n }
+  \frac{\dd g^{11}}{g^{11}}=\cdots=\frac{\dd g^{\a\b }}{g^{\a\b }}=\cdots=\frac{\dd g^{DD}}{g^{DD}}=\frac{\dd E}{\frac{DE}{2}}.
 \end{equation}
-So then
-\begin{align}
-  H^{\m\n }&:=E^{\m\n }_\f+\left(E^{\a\m  }_\f \tilde{\nabla}_\a \f-\frac{1}{2}\tr\tilde{E}_\f\tilde{\nabla}^\m\f \right)\tilde{\nabla}^\n\f \notag \\
-  &=\tilde{g}^{\m\n } +\left(\tilde{g}^{\a\m }\tn_\a\f -\frac{1}{2}\tilde{g}_{\lambda\r }\tilde{E}^{\lambda\r }_\f \tn^\m\f \right)\tn^\n\f \notag  \\
-  &=\tilde{g}^{\m\n }+\left(\tn^\m\f-\frac{1}{2}\tilde{g}_{\lambda\r }\tilde{g}^{\lambda\r }\tn^\m\f \right)\tn^\n\f \notag \\
-  &=\tilde{g}^{\m\n }\left(\tn^\m\f -\frac{D}{2}\tn^\m\f \right)\tn^\n\f \notag  \\
-  &=\tilde{g}^{\m\n }-\frac{(D-2)}{2}\tn^\m\f\tn^\n\f \label{Hmn-auxiliar-frame}
-\end{align}
-
-Furthermore,
-\begin{align}
-  E_{\m\n }&:=-\frac{2}{\sqrt{-\tilde{g}}}\pdv{(\sqrt{-\tilde{g}}E)}{\tilde{g}^{\m\n }}\\
-  &=-\frac{2}{\sqrt{-\tilde{g}}}\left(-\frac{1}{2}\sqrt{-\tilde{g}}\tilde{g}_{\m\n }E+\sqrt{-\tilde{g}}\pdv{E}{\tilde{g}^{\m\n }}\right)\\
-  &=-2\left(-\frac{1}{2}\tilde{g}_{\m\n }E+\tn_\m\tn_\n\f \right)\\
-  &=-2\left(-\frac{1}{2}\tilde{g}_{\m\n }\tilde{\Box }\f +\tn_\m\tn_\n\f \right)\\
-  &=\tilde{g}_{\m\n }\tilde{\Box }\f-2\tn_\m\tn_\n\f 
-\end{align}
-which implies
+For $\a,\b $ fixed, a combination of the characteristic equations can also be incorporated, giving
 \begin{equation}
-  \tr\tilde{E}:=\tilde{g}^{\m\n }E_{\m\n }=D\tilde{\Box}\f-2\tilde{\Box }\f=(D-2)\tilde{\Box}\f 
+  \frac{\dd g^{\a\b }}{g^{\a\b }}=\frac{C_{\m\n }\dd g^{\m\n }}{C_{\m\n }g^{\m\n }}\implies \dd (\ln g^{\a\b })=\dd(\ln C_{\m\n }g^{\m\n }),
 \end{equation}
-It is also clear to see that
+where $C_{\m\n }$ is an arbitrary tensor which does not depend on $g_{\m\n }$. By integrating and exponentiating both sides, we obtain the invariant
 \begin{equation}
-  E^\m_\f :=\pdv{E}{(\tn_\m \f )}=0
+  \Omega^{\a\b }=\frac{g^{\a\b }}{C_{\m\n }g^{\m\n }}.
 \end{equation}
-So then
-\begin{align}
-  H^\m &:=\left[E^\m_\f -\frac{1}{2}\tr\tilde{E}\tilde{\nabla}^\m\f +\left(E^{\a\b }_\f\tilde{\nabla}_\b \f -\frac{1}{2}\tr \tilde{E}_\f\tilde{\nabla}^\a\f \right)\tilde{\nabla}_\a\tilde{\nabla}^\m\f \right]\\
-  &=-\frac{1}{2}(D-2)\tilde{\Box}\f\tn^\m\f+\left(\tilde{g}^{\a\b }\tn_\b\f -\frac{1}{2}\tilde{g}_{\lambda\r }\tilde{E}^{\lambda\r }_\f \tn^\a\f \right)\tn_\a\tn_\m\f \\
-  &=-\frac{(D-2)}{2}\tilde{\Box }\f\tn^\m\f +\left(\tn^\a\f-\frac{1}{2}\tilde{g}_{\lambda\r }\tilde{g}^{\lambda\r }\tn^{\a}\f \right)\tn_\a\tn^\m\f \\
-  &=-\frac{(D-2)}{2}\tilde{\Box\f }\tn^\m \f +\left(\tn^{\a }\f-\frac{D}{2}\tn^{\a }\f \right)\tn_\a\tn^\m\f \\\
-  &=-\frac{(D-2)}{2}\tilde{\Box}\f \tn^\m\f -\frac{(D-2)}{2}\tn^{\a }\f\tn_\a\tn^\m\f \\
-  &=-\frac{(D-2)}{2}\left(\tilde{\Box}\f\tn^\m\f +\tn^{\a }\f\tn_\a\tn^\m \f \right)
-\end{align}
-Finally, we have
-\begin{align}
-  \tn_\m H^{\m\n }&=\tn_\m\left( \tilde{g}^{\m\n }-\frac{(D-2)}{2}\tn^\m\f\tn^\n\f \right)\\
-  &=-\frac{(D-2)}{2}\tn_\m \left(\tn^\m\f\tn^\n \f \right)\\
-  &=-\frac{(D-2)}{2}\left(\tilde{\Box}\f \tn^\n\f+\tn^\m\f\tn_\m\tn^\n\f \right)\\
-  &=H^\n 
-\end{align}
-
-That is to say, the equations of motion coming from \eqref{S-auxiliar-frame}, writen in the auxiliar frame, satisfy the Hemholtz conditions \eqref{Hemholtz-condition}.
-
-
-\section{Horndeski theorem}
-Horndeski theorem says that in a space of dimension four, the most general symmetric contravariant tensor density of the form
+Choosing $C_{\m\n }=-\frac{1}{2}\f_\m \f_\n $ we recover the auxilliary metric
 \begin{equation}
-  A^{ab}=A^{ab}(g_{ij},\partial_hg_{ij},\partial_{h}\partial_k g_{ij},\f,\partial_h\f,\partial_h\partial_k\f )
+  \Omega^{\a\b }=\frac{g^{\a\b }}{X}=\tilde{g}^{\a\b }.
 \end{equation}
-which is such that $\nabla_aA^{ab }$ is at most of second-order in the derivatives of both $g_{ij}$ and $\f$ is given by
-\begin{equation}\label{Horndeski}
-\begin{split}
-  A^{ab}&=\sqrt{-g}\left\{K_1\d^{acde}_{fhjk}g^{fb}\nabla^h\nabla_c\f R^{jk}_{de}+K_2\d^{acd}_{efh}g^{eb}R^{fh}_{cd}\right.\\
-  &\left.\qquad +K_3\d^{acde}_{fhjk}g^{fb}\nabla_c\f\nabla^h\f R^{jk}_{de}+K_4\d^{acde}_{fhjk}g^{fb}\nabla_h\nabla_c\f \nabla^j\nabla_d\f \nabla^k\nabla_e\f \right.\\
-  &\left.\qquad +K_5\d^{acd}_{efh}g^{eb}\nabla^f\nabla_c\f \nabla^h\nabla_d\f +K_6\d^{acde}_{fhjk}g^{fb}\nabla_c\f \nabla^h\f \nabla^j\nabla_f\f \nabla^k\nabla_e\f \right.\\
-  &\left.\qquad +K_7\d^{ac}_{de}g^{db}\nabla^{e}\nabla_c\f+K_8\d^{acd}_{efh}g^{eb}\nabla_c\f \nabla^f\f \nabla^h\nabla_c\nabla_d\f +K_9g^{ab}+K_{10}\nabla^{a}\f\nabla^b\f  \right\}
-\end{split}
-\end{equation}
-%TODO check possible typos.
-where $K_i $ are arbitrary differentiable functions of $\f$ and $\partial_i\f$ \cite{Horndeski:1974wa}.
-
-Note that the dependence on the scalar curvature only appears in the first three terms of \eqref{Horndeski} with all indices contracted with the Kronecker delta, then, from its irreducible decomposition
-\begin{equation}\label{R-CSR}
-  R^{ab}_{mn}=C^{ab}_{mn}+2\d^{[a}_{[m}S^{b]}_{n]}+\frac{1}{6}\d^{a}_{[m}\d^b_{n]}R
-\end{equation}
- only the terms proportional to the trace of the Ricci tensor survive.
- 
- Now, using the identities
- \begin{equation}
-  \d^{\m_1...\m_p}_{\n_1...\n_p}\d^{\n_1}_{\m_1}\cdots \d^{\n_k}_{\m_k}=\frac{(D-p+k)!}{(D-p)!}\d^{\m_{k+1}...\m_p}_{\n_{k+1}...\n_p}
-\end{equation}
-and
+They corresponds to $\frac{D(D+1)}{2}-1$ invariants, since their symmetry and the condition $C_{\m\n }\Omega^{\m\n }=1$. The general solution to $Z(E)=0$ can be obtained from
 \begin{equation}
-  {\displaystyle \delta _{\nu _{1}\dots \nu _{p}}^{\mu _{1}\dots \mu _{p}}=p!\delta _{[\nu _{1}}^{\mu _{1}}\dots \delta _{\nu _{p}]}^{\mu _{p}}=p!\delta _{\nu _{1}}^{[\mu _{1}}\dots \delta _{\nu _{p}}^{\mu _{p}]}}
+  \frac{\dd X}{X}=\frac{\dd E}{\frac{DE}{2}}\implies \ln X=\frac{2}{D}\ln E,
 \end{equation}
- let's see how the first three terms of \eqref{Horndeski} look like:
- 
-\begin{align}
-  K_1\d^{acde}_{fhjk}g^{fb}\nabla^h\nabla_c\f R^{jk}_{de}&=\frac{K_1}{6}\d^{acde}_{fhjk}g^{fb}\nabla^h\nabla_c\f \d^j_d\d^k_eR\\
-  &=\frac{K_1}{6}\frac{(4-4+2)!}{(4-4)!}\d^{ac}_{fh}g^{fb}\nabla^h\nabla_c\f R\\
-  &=\frac{K_1}{3}\d^{ac}_{fh}g^{fb}\nabla^h\nabla_c\f R\label{K1}
-\end{align}
-
-\begin{align}
-	K_2\d^{acd}_{efh}g^{eb}R^{fh}_{cd}&=\frac{K_2}{6}\d^{acd}_{efh}g^{eb}\d^c_e\d^h_dR\\
-	&=\frac{K_2}{6}\frac{(4-3+2)!}{(4-3)!}\d^{a}_eg^{eb}R\\
-	&=K_2g^{ab}R\label{K2}
-\end{align}
-
-\begin{align}
-  K_3\d^{acde}_{fhjk}g^{fb}\nabla_c\f\nabla^h\f R^{jk}_{de}&=\frac{K_3}{6}\d^{acde}_{fhjk}g^{fb}\nabla_c\f\nabla^h\f \d^j_d\d^k_eR\\
-  &=\frac{K_3}{6}\frac{(4-4+2)!}{(4-4)!}\d^{ac}_{fh}g^{fb}\nabla_c\f\nabla^h\f R\\
-  &=\frac{K_3}{3}\d^{ec}_{fh}g^{fb}\nabla_c\f\nabla^h\f R\label{K3}
-\end{align}
-
-Adding these terms, we have
-\begin{align*}
-  [\eqref{K1}+\eqref{K2}+\eqref{K3}]&=\frac{1}{3}\d^{ac}_{fh}g^{fb}\left(K_1\nabla^h\nabla_c\f +K_3\nabla_c\f\nabla^h\f \right)R+K_2g^{ab}R\\
-  &=\frac{1}{3}\d^{a}_f\d^{c}_{h}g^{fb}(K_1\nabla^h\nabla_c\f +K_3\nabla_c\f\nabla^h\f ) -\frac{1}{3}\d^{a}_h\d^{c}_{f}g^{fb}(K_1\nabla^h\nabla_c\f +K_3\nabla_c\f\nabla^h\f )\\
-  &\quad +K_2g^{ab}R\\
-  &=\frac{1}{3}g^{ab}(K_1\Box\f +K_3\nabla_c\f \nabla^c\f )R -\frac{1}{3}g^{cb}(K_1\nabla^{a}\nabla_c\f +K_3\nabla_c \f \nabla^{a}\f )R+K_2g^{ab}R\\
-  &=\frac{1}{3}g^{ab}(K_1\Box\f +K_3\nabla_c\f\nabla^c\f )R -\frac{1}{3}(K_1\nabla^{a}\nabla^b\f +K_3\nabla^{a}\f\nabla^b\f )R +K_2g^{ab}R\\
-  &=\frac{1}{3}g^{ab}(K_1\Box\f -2K_3X)R -\frac{1}{3}(K_1\nabla^{a}\nabla^b\f +K_3\nabla^{a}\f\nabla^b\f )R +K_2g^{ab}R\\
-  &=\frac{1}{3}g^{ab}R(K_1\Box\f+3K_2-2K_3X)-\frac{1}{3}(K_1\nabla^{a}\nabla^b\f +K_3\nabla^{a}\f\nabla^b\f )R
-\end{align*}
-Since conformal invariance only allows those second order tensors independent $S^{a}_b$ and $R$ and here are all the terms that depend on the curvature in \eqref{Horndeski}, we have
-\begin{align}
-  0=\pdv{R}\left(\frac{A^{ab}}{\sqrt{-g}}\right)&=\frac{1}{3}g^{ab}(K_1\Box\f+3K_2-2K_3X)-\frac{1}{3}(K_1\nabla^{a}\nabla^b\f +K_3\nabla^{a}\f\nabla^b\f )
-\end{align}
-Taking the trace,
-\begin{equation}\label{trace-AR}
-\begin{split}
- 0= g_{ab}\pdv{R}\left(\frac{A^{ab}}{\sqrt{-g}}\right)&=\frac{4}{3}(K_1\Box\f+3K_2-2K_3X)-\frac{1}{3}(K_1\Box\f -2K_3X)\\
-  &=K_1\Box\f +4K_2-2K_3X
-\end{split}
-\end{equation}
-Since $K_i=K_i(\f,\partial_a\f )$ are independent of second scalar field derivatives we have
+giving
 \begin{equation}
-  K_1=0\qquad \text{and}\qquad K_2=\frac{1}{2}K_3X
+  E=X^\frac{D}{2}\tilde{E}(\f,\f_\m ,\f_{\m\n },\tilde{g}^{\m\n },\tilde{C}^{\a\b }_{\m\n }).
 \end{equation}
-Plugging into \eqref{trace-AR},
+Now, we have to find the general solution to $Z^\n (E)=0$. First, we notice that
 \begin{align}
-   0= g_{ab}\pdv{R}\left(\frac{A^{ab}}{\sqrt{-g}}\right)&=\frac{1}{3}g^{ab}\left(\frac{3}{2}K_3X-2K_3X\right)-\frac{1}{3}K_3(\nabla^{a}\f\nabla^b\f )\\
-   &=-\frac{1}{6}g^{ab}K_3X-\frac{1}{3}K_3\nabla^{a}\f\nabla^b\f \\
-   &=-\frac{K_3}{3}\left(\nabla^{a}\f\nabla^b\f +\frac{1}{2}g^{ab}X\right) \label{0-AR}
+  \tilde{\f}_{\m\n }&:=\tilde{\nabla}_\m \tilde{\nabla}_\n \f \\
+  &=\partial_\m \partial_\n \f -\tilde{\G }^\a _{~\m\n }\partial_\a\f
 \end{align}
-Now, using the fact that given any scalar field there always exists a vector field $Y^{a}$ for which \cite{Horndeski:1974wa}
-\begin{equation}
-  Y^{a}\nabla_a\f =0\qquad \text{and}\qquad Y^{a}Y_a\neq 0
-\end{equation}
-we can multiply \eqref{0-AR} by $Y_aY_b$,
-\begin{align}
-  0&=-\frac{K_3}{3}\left(\cancel{Y_a\nabla^{a}\f Y_b\nabla^b\f} +\frac{1}{2}Y_aY^{a}g^{ab}X\right) \\
-  &=-\frac{K_3}{3}\frac{1}{2}Y^{a}Y_a X
-\end{align}
-but, $X\neq 0$, so then $K_3=0$. In summary we have
-\begin{equation}\label{K1230}
-  K_1=K_2=K_3=0\,.
-\end{equation}
-
-Let's consider now the associated divergence, calculated by Horndeski as \cite{Horndeski:1974wa}
-\begin{equation}\label{nabla-A}
-\begin{split}
-  \frac{\nabla_b A^{ab}}{\sqrt{-g}}&=K_1'\d^{acde}_{fhjk}\nabla^f\f \nabla^h\nabla_c\f R^{jk}_{de}+2\dot{K}_2\d^{acd}_{efh}\nabla_p\f \nabla^{e}\nabla^p\f R^{fh}_{cd}\\
-  &\quad +K_3\d^{acde}_{fhjk}\nabla^h\f \nabla^f\nabla_c\f R^{jk}_{de}+K_5\d^{acd}_{efh}\nabla^m\f R^{fe}_{mc}\nabla^h\nabla_d\f \\
-  &\quad +2\dot{K}_1\d^{acde}_{fhjk}\nabla_p\f \nabla^f\nabla^p\f \nabla^h\nabla_c\f R^{jk}_{de}+\frac{3}{2}K_4\d^{acde}_{fhjk}\nabla^mR^{hf}_{mc}\nabla^j\nabla_d\f \nabla^k\nabla_e\f \\
-  &\quad +\frac{1}{2}K_1\d^{acde}_{fhjk}\nabla^m\f R^{hf}_{mc}R^{jk}_{de}+K_2'\d^{acd}_{efh}\nabla^{e}\f R^{fh}_{cd}+\frac{1}{2}K_7\d^{ac}_{de}\nabla^m\f R^{ed}_{mc}\\
-  &\quad +\frac{1}{2}K_8\d^{acd}_{efh}\nabla_c\f \nabla^f\f \nabla^m\f R^{he}_{md}+2\dot{K}_3\d^{acde}_{fhjk}\nabla_p\f \nabla^f\nabla^p\f \nabla_c\f R^{jk}_{de}\\
-  &\quad +K_6\d^{acde}_{fhjk}\nabla_c\f \nabla^h\f \nabla^m\f R^{jf}_{md}\nabla^k\nabla_e\f +K_4'\d^{acde}_{fhjk}\nabla^f\f\nabla^h\nabla_c\f \nabla^j\nabla_d\f \nabla^k\nabla_e\f \\
-  &\quad +2\dot{K}_5\d^{acd}_{efh}\nabla_p\f \nabla^{e}\nabla^p\f \nabla^f\nabla_c\f \nabla^h\nabla_d\f +K_6\d^{acde}_{fhjk}\nabla^h\f \nabla^f\nabla_c\f \nabla^j\nabla_d\f \nabla^k\nabla_e\f \\
-  &\quad +2\dot{K}_8\d^{acd}_{efh}\nabla_p\f \nabla^{e}\nabla^p\f \nabla_c\f\nabla^f\f\nabla^h\nabla_d\f +2\dot{K}_6\d^{acde}_{fhjk}\nabla_p\f \nabla^f\nabla^p\f \nabla_c\f \nabla^h\f \nabla^j\nabla_d\f\nabla^k\nabla_e\f \\
-  &\quad +2\dot{K}_4\d^{acde}_{fhjk}\nabla_p\f \nabla^f\nabla^p\f \nabla^h\nabla_c\f \nabla^j\nabla_d\f \nabla^k\nabla_e\f +K_5'\d^{acd}_{efh}\nabla^{e}\f \nabla^f\nabla_c\f \nabla^h\nabla_d\f \\
-  &\quad +2\dot{K}_7\d^{ac}_{de}\nabla_p\f \nabla^d\nabla^p\f \nabla^{e}\nabla_c\f +K_8\d^{acd}_{efh}\nabla^f\f\nabla^{e}\nabla_c\f \nabla^h\nabla_d\f +(2\dot{K}_9+K_{10})\nabla_b\f \nabla^b\nabla^{a}\f \\
-  &\quad+ K_7'\d^{ac}_{de}\nabla^d\f \nabla^{e}\nabla_c\f +\nabla^{a}\f (K_9'+\r K_{10}'+2\dot{K}_{10}\nabla^b\f \nabla^c\f \nabla_c\nabla_b\f +K_{10}\nabla^c\nabla_c\f )
-\end{split}
-\end{equation}
-where a prime denotes a partial derivative with respect to $\f$ and a dot denotes a partial derivative with respect to $\r$. Pluggin \eqref{K1230} into \eqref{nabla-A} we obtain
-\begin{align*}
-  \frac{\nabla_b A^{ab}}{\sqrt{-g}}&=K_5\d^{acd}_{efh}\nabla^m\f R^{fe}_{mc}\nabla^h\nabla_d\f +\frac{3}{2}K_4\d^{acde}_{fhjk}\nabla^mR^{hf}_{mc}\nabla^j\nabla_d\f \nabla^k\nabla_e\f +\frac{1}{2}K_7\d^{ac}_{de}\nabla^m\f R^{ed}_{mc}\\
-  &\quad +\frac{1}{2}K_8\d^{acd}_{efh}\nabla_c\f \nabla^f\f \nabla^m\f R^{he}_{md}+K_6\d^{acde}_{fhjk}\nabla_c\f \nabla^h\f \nabla^m\f R^{jf}_{md}\nabla^k\nabla_e\f\\&\quad  +K_4'\d^{acde}_{fhjk}\nabla^f\f\nabla^h\nabla_c\f \nabla^j\nabla_d\f \nabla^k\nabla_e\f +2\dot{K}_5\d^{acd}_{efh}\nabla_p\f \nabla^{e}\nabla^p\f \nabla^f\nabla_c\f \nabla^h\nabla_d\f \\&\quad +K_6\d^{acde}_{fhjk}\nabla^h\f \nabla^f\nabla_c\f \nabla^j\nabla_d\f \nabla^k\nabla_e\f +2\dot{K}_8\d^{acd}_{efh}\nabla_p\f \nabla^{e}\nabla^p\f \nabla_c\f\nabla^f\f\nabla^h\nabla_d\f \\ &\quad+2\dot{K}_6\d^{acde}_{fhjk}\nabla_p\f \nabla^f\nabla^p\f \nabla_c\f \nabla^h\f \nabla^j\nabla_d\f\nabla^k\nabla_e\f \\
-  &\quad +2\dot{K}_4\d^{acde}_{fhjk}\nabla_p\f \nabla^f\nabla^p\f \nabla^h\nabla_c\f \nabla^j\nabla_d\f \nabla^k\nabla_e\f +K_5'\d^{acd}_{efh}\nabla^{e}\f \nabla^f\nabla_c\f \nabla^h\nabla_d\f \\
-  &\quad +2\dot{K}_7\d^{ac}_{de}\nabla_p\f \nabla^d\nabla^p\f \nabla^{e}\nabla_c\f +K_8\d^{acd}_{efh}\nabla^f\f\nabla^{e}\nabla_c\f \nabla^h\nabla_d\f +(2\dot{K}_9+K_{10})\nabla_b\f \nabla^b\nabla^{a}\f \\
-  &\quad+ K_7'\d^{ac}_{de}\nabla^d\f \nabla^{e}\nabla_c\f +\nabla^{a}\f (K_9'+\r K_{10}'+2\dot{K}_{10}\nabla^b\f \nabla^c\f \nabla_c\nabla_b\f +K_{10}\nabla^c\nabla_c\f )
-\end{align*}
-The scalar curvature dependence would be through those terms with the Riemann tensor contracted totally with the Kronecker delta
-\begin{align*}
-  \frac{6}{R}\frac{\nabla_b A^{ab}}{\sqrt{-g}}&=K_5\d^{acd}_{efh}\d^f_m\d^{e}_c\nabla^m\f \nabla^h\nabla_d\f +\frac{3}{2}K_4\d^{acde}_{fhjk}\d^h_m\d^f_c\nabla^m\nabla^j\nabla_d\f \nabla^k\nabla_e\f +\frac{1}{2}K_7\d^{ac}_{de}\d^{e}_m\d^d_c\nabla^m\f \\
-  &\quad +\frac{1}{2}K_8\d^{acd}_{efh}\d^h_m\d^{e}_d\nabla_c\f \nabla^f\f \nabla^m\f +K_6\d^{acde}_{fhjk}\d^j_m\d^f_d\nabla_c\f \nabla^h\f \nabla^m\f\nabla^k\nabla_e\f\\
-  &=-2K_5\d^{ad}_{fh}\nabla^f\f\nabla^h\nabla_d\f-\frac{3}{2}K_4\d^{ade}_{hjk}\nabla^h\f\nabla^j\nabla_d\f\nabla^k\nabla_e\f -\frac{3}{2}K_7\nabla^{a}\f \\
-  &\quad +K_8\d^{ac}_{fh}\nabla_c\f \nabla^f\f\nabla^h\f +K_6\d^{ace}_{hjk}\nabla_c\f \nabla^h\f\nabla^j\f\nabla^k\nabla_e\f 
-\end{align*}
-Note that due to symmetry in the covariant derivative indices contracted with the antisymmetric Kronecker delta, the last two terms vanish. Therefore,
-\begin{align*}
-  \frac{6}{R}\frac{\nabla_b A^{ab}}{\sqrt{-g}}&=-2K_5\d^{ad}_{fh}\nabla^f\f\nabla^h\nabla_d\f-\frac{3}{2}K_4\d^{ade}_{hjk}\nabla^h\f\nabla^j\nabla_d\f\nabla^k\nabla_e\f -\frac{3}{2}K_7\nabla^{a}\f \\
-  &=-2K_5\left(\d^{a}_f\d^d_h-\d^d_f\d^{a}_h\right)\nabla^f\f\nabla^h\nabla_d\f-\frac{3}{2}K_7\nabla^{a}\f  \\
-  &\quad -\frac{3}{2}K_43!\left(\d^{a}_h\d^d_j\d^{e}_k+\d^{a}_j\d^d_k\d^{e}_h+\d^{a}_k\d^d_h\d^{e}_j-\d^{a}_j\d^d_h\d^{e}_k-\d^{a}_h\d^d_k\d^{e}_j-\d^{a}_j\d^d_k\d^{e}_h\right)\nabla^h\f\nabla^j\nabla_d\f\nabla^k\nabla_e\f \\
-  &=-2K_5 (\nabla^{a}\Box\f -\nabla^d\f\nabla^{a}\nabla_d\f )-\frac{3}{2}K_7\nabla^{a}\f \\
-  &\quad -9K_4\left[\nabla^{a}(\Box\f )^2+\nabla^{e}\f\nabla^{a}\nabla_d \f\nabla^d\nabla_e\f +\nabla^d\f\nabla^{e}\nabla_d\f \nabla^{a}\nabla_e\f -\nabla^d\f\nabla^{a}\nabla_d\f \Box\f \right.\\
-  &\left.\qquad \qquad -\nabla^{a}\f \nabla^{e}\nabla_d\f\nabla^d\nabla_e\f -\nabla^d\f\nabla^{a}\nabla_d\f\Box\f  \right]
-\end{align*}
-Introducing the following notation,
-\begin{equation}
-  \f^{a}:=\nabla^{a}\f,\quad \f^{ab}:=\nabla^{a}\nabla^b \f ,\quad X^{a}:=\nabla^{a}X=-\nabla^b \nabla^{a}\nabla_b\f =-\f^b \nabla^{a}\f_b 
-\end{equation}
-we have
-\begin{align*}
-  \frac{6}{R}\frac{\nabla_b A^{ab}}{\sqrt{-g}}&=-2K_5(\f^{a}\Box\f +X^{a})-\frac{3}{2}K_7\f^{a}\\
-  &\quad -9K_4\left[\f^{a}(\Box\f )^2-\nabla^{a}\f_dX^d-X^{e}\nabla^{a}\f_e+X^{a}\Box\f -\f^{a}\f_{ed}\f^{ed}+X^{a}\Box\f \right]\\
-  &=-2K_5(\f^{a}\Box\f +X^{a})-\frac{3}{2}K_7\f^{a}\\
-  &\quad -9K_4\left[\f^{a}(\Box\f )^2-\f^{a}\f_{ed}\f^{ed}+2X^{a}\Box\f -2X^d\nabla^{a}\f_d \right]
-\end{align*}
-
-The partial derivative with respect to the scalar curvature is given by
-\begin{align}
-  \pdv{R}\left(\frac{6\nabla_b A^{ab}}{\sqrt{-g}}\right)&=-2K_5(\f^{a}\Box\f +X^{a})-\frac{3}{2}K_7\f^{a}\\
-  &\quad -9K_4\left[\f^{a}(\Box\f )^2-\f^{a}\f_{ed}\f^{ed}+2X^{a}\Box\f -2X^d\nabla^{a}\f_d \right]
-\end{align}
-[\rc{Check factors}] %TODO Check factors
-
-The above must vanish for any value of the second derivative. Since the terms with the same degree have a common coefficient, such coefficients must vanish independently. Hence
-\begin{equation}
-  K_4=K_5=K_7=0
-\end{equation}
-In this way, the divergence of $A^{ab}$ is reduced to
-\begin{align*}
-    \frac{\nabla_b A^{ab}}{\sqrt{-g}}&= \frac{1}{2}K_8\d^{acd}_{efh}\nabla_c\f \nabla^f\f \nabla^m\f R^{he}_{md}+K_6\d^{acde}_{fhjk}\nabla_c\f \nabla^h\f \nabla^m\f R^{jf}_{md}\nabla^k\nabla_e\f\\&\quad +K_6\d^{acde}_{fhjk}\nabla^h\f \nabla^f\nabla_c\f \nabla^j\nabla_d\f \nabla^k\nabla_e\f +2\dot{K}_8\d^{acd}_{efh}\nabla_p\f \nabla^{e}\nabla^p\f \nabla_c\f\nabla^f\f\nabla^h\nabla_d\f \\ &\quad+2\dot{K}_6\d^{acde}_{fhjk}\nabla_p\f \nabla^f\nabla^p\f \nabla_c\f \nabla^h\f \nabla^j\nabla_d\f\nabla^k\nabla_e\f \\
-  &\quad+K_8\d^{acd}_{efh}\nabla^f\f\nabla^{e}\nabla_c\f \nabla^h\nabla_d\f +(2\dot{K}_9+K_{10})\nabla_b\f \nabla^b\nabla^{a}\f \\
-  &\quad+\nabla^{a}\f (K_9'+\r K_{10}'+2\dot{K}_{10}\nabla^b\f \nabla^c\f \nabla_c\nabla_b\f +K_{10}\nabla^c\nabla_c\f )
-\end{align*}
-
-Let's see the dependence of the traceless Ricci tensor $S^{a}_b$ in the expression above. Using \eqref{R-CSR} we have
-\begin{align*}
-  \frac{\nabla_bA^{ab}}{\sqrt{-g}}&=\frac{1}{2}K_8\d^{acd}_{efh}\f_c\f^f\f^m R^{he}_{md}+K_6\d^{acde}_{fhjk}\f_c\f^h\f^m\f^k_e R^{jf}_{md}\\
-  &=\frac{1}{2}2K_8\d^{acd}_{efh}\d^{[h}_{[m}S^{e]}_{d]}\f_c\f^f\f^m +2K_6\d^{acde}_{fhjk}\d^{[j}_{[m}S^{f]}_{d]}\f_c\f^h\f^m\f^k_e\\
-  &=\frac{K_8}{2}\d^{acd}_{efh}\left(\d^h_mS^{e}_d-\d^h_dS^{e}_m\right)\f_c\f^f\f^m+K_6\d^{acde}_{fhjk}\left(\d^j_mS^f_d-\d^j_dS^f_m\right)\f_c\f^h\f^m\f^k_e\\
-  &=\frac{K_8}{2}\left(\underbrace{\d^{acd}_{efh}S^{e}_d\f_c\f^{(f}\f^{h)}}_{=0}-2\d^{ac}_{ef}S^{e}_m\f_c\f^f\f^m\right)+K_6\left(\underbrace{\d^{acde}_{fhjk}S^f_d\f_c\f^{(h}\f^{j)}\f^k_e}_{=0}-\d^{ace}_{fhk}S^f_m\f_c\f^h\f^m\f^k_e\right)\\
-  &=-K_8\d^{ac}_{ef}S^{e}_m\f_c\f^f\f^m-K_6\d^{ace}_{fhk}S^f_m\f_c\f^h\f^m\f^k_e\\
-  &=-2K_8\d^{a}_{[e}\d^{c}_{f]}S^{e}_m\f_c\f^f\f^m-6K_6\d^{a}_{[f}\d^{c}_{h}\d^{e}_{k]}S^f_m\f_c\f^h\f^m\f^k_e
-\end{align*}
-Since both terms have different degrees in the second derivative, they must vanish independently, that is 
-\begin{equation}
-  K_6=K_8=0
-\end{equation}
-In summary, if one demands that only curvature couplings occur through the Weyl tensor, then there is no nonminimal coupling at all, and the second-order tensor becomes, in fact, of first-order,
-
-\begin{equation}
-\begin{split}
-  A^{ab}&=\sqrt{-g}\left\{K_9g^{ab}+K_{10}\nabla^{a}\f\nabla^b\f  \right\}
-\end{split}
-\end{equation}
-with second-order divergence given by
-\begin{align}
-   \nabla_b A^{ab}&= \sqrt{-g}\left\{(2\dot{K}_9+K_{10})\nabla_b\f \nabla^b\nabla^{a}\f\right. \\
-  &\quad\left.+\nabla^{a}\f (K_9'+\r K_{10}'+2\dot{K}_{10}\nabla^b\f \nabla^c\f \nabla_c\nabla_b\f +K_{10}\nabla^c\nabla_c\f )\right\}
-\end{align}
-
-Another restriction in the allowed terms is given by the fact that
-\begin{align}
-  \tilde{X}=-\frac{1}{2}\tilde{g}^{\m\n }\tn_\m\f \tn_\n\f =-\frac{1}{2}\frac{1}{X}g^{\m\n }\nabla_\m\f \nabla_\n\f=\frac{1}{X}X=1
-\end{align}
-
-
-In this way, the symmetric second rank tensor depending up to second order in the scalar field $\f$ and auxiliary metric $\tilde{g}^{\m\n}$ such that a second order divergence is given by
-\begin{align}
-  H^{\m\n}=\tilde{K}_9\tilde{g}^{\m\n }+\tilde{K}_{10}\tn^\m\f\tn^\n\f 
-\end{align}
-
-Taking its divergence,
-\begin{align}
-  \nabla_\n H^{(\m\n)}&=\partial_\f\tilde{K}_9\tn^\m\f +\partial_\f\tilde{K}_{10}\tn^\m\f \tn^\n\f \tn_\n\f +\tilde{K}_{10}\tn^\n\tn^\m\f\tn^\n\f +\tilde{K}_{10}\tn^\m\f\tilde{\Box}\f \\
-  &=\partial_\f \tilde{K}_9\tn^\m\f +\tilde{K}_{10}\tilde{\Box\f }\tn^\m\f -2\partial_\f\tilde{K}_{10}\tilde{X}\tn^\m\f -\tilde{K}_{10}\tn^\m\f 
-\end{align}
-but $\tilde{X}=1$, so then
-\begin{align}
-  H^\m = \nabla_\n H^{(\m\n)}&=\partial\f\tilde{K}_9+\tilde{K}_{10}\tilde{\Box}\f\tn^\m\f  -2\partial_\f \tilde{K}_{10}\tn^\m\f \\
-   &=(\partial_\f\tilde{K}_9+\tilde{K}_{10}\Box\f -2\partial_\f \tilde{K}_{10})\tn^\m\f 
-\end{align}
-
-In summary:
-\begin{tcolorbox}
-	\begin{align}
-  H^{\m\n}&=\tilde{K}_9\tilde{g}^{\m\n }+\tilde{K}_{10}\tn^\m\f\tn^\n\f \\
-  H^\m &=(\partial_\f\tilde{K}_9+\tilde{K}_{10}\Box\f -2\partial_\f \tilde{K}_{10})\tn^\m\f \\
-  K_i&=\eval{K_i(\f,\tilde{X})}_{\tilde{X}=1}
-\end{align}
-\end{tcolorbox}
 
 
 
 
-We can decompose $\pdv*{E}{(\tn_\n\tn_\n\f )}$ in its trace and traceless part,
-\begin{align}
-  \tn_\m\tn_\n\f =\TL_{\m\n }+\frac{1}{D}\tilde{g}^{\m\n }\tilde{\Box}\f 
-\end{align}
-where the $\TL_{\m\n }$ is the traceless part,
-\begin{equation}
-  \TL^\m_\n =\tn^\m\tn_\n\f -\frac{1}{D}\d^\m_\n \tilde{\Box}\f 
-\end{equation}
-Therefore, we have
-\begin{align}
-  E^{\m\n }_\f =\pdv{E}{(\tn_\m\tn_\n\f )}=\pdv{E}{(\TL^\a_\b) }\pdv{(\TL^\a_\b )}{(\tn_\m\tn_\n\f )}+\pdv{E}{(\tilde{\Box}\f )}\pdv{(\tilde{\Box}\f )}{(\tn_\m\tn_\n\f )}
-\end{align}
-but
-\begin{align}
-  \TL_{\a\b }&=\tn_\a\tn_\b \f-\frac{1}{D}\tilde{g}_{\a\b }\tilde{\Box}\f \\
-  \implies \TL^\a_\b &=\tn^\a\tn_\b\f -\frac{1}{D}\d^\a_\b\tilde{\Box}\f \\
-  &=\tilde{g}^{\m\a }\tn_\m\tn_\b\f  -\frac{1}{D}\d^\a_\b \tilde{g}^{\m\n }\tn_m\tn_\n\f \\
-  \implies \pdv{(\TL^\a_\b )}{(\tn_\m\tn_\n\f )}&=\tilde{g}^{\m\a }\d^\n_\b -\frac{1}{D}\d^\a_\b \tilde{g}^{\m\n }
-\end{align}
-and
-\begin{equation}
-  \pdv{(\tilde{\Box}\f )}{(\tn_\m\tn_\n\f )}=\pdv{(\tn_\m\tn_\n\f )}\left(\tilde{g}^{\m\n }\tn_\m\tn_\n\f \right)=\tilde{g}^{\m\n }
-\end{equation}
-Therefore
-\begin{align}
-  E^{\m\n }_\f &=\pdv{E}{(\TL^\a_\b )}\left(\tilde{g}^{\m\a }\d^\n_\b -\frac{1}{D}\d^\a_\b \tilde{g}^{\m\n }\right)+\pdv{E}{(\tilde{\Box}\f )}\tilde{g}^{\m\n }\\
-  &=\A ^{\m\n }-\frac{1}{D}\A \tilde{g}^{\m\n }+\pdv{E}{(\tilde{\Box}\f )}\tilde{g}^{\m\n }\\
-  &=\hat{\A }^{\m\n }+\pdv{E}{(\tilde{\Box}\f )}\tilde{g}^{\m\n }
-\end{align}
-where we have defined $\A^{\m\n } :=\pdv{E}{(\TL_{\m\n })}$ and $\hat{\A}$ is its traceless part.
 
-Now, let's decompose the two-rank Helmholtz conditions in its trace and traceless part,
-\begin{align}
-  \tilde{g}_{\m\n }H^{\m\n }&=\tilde{g}_{\m\n }\left[E^{\m\n }_\f+\left(E^{\m\a }_\f \tilde{\nabla}_\a \f-\frac{1}{2}\tr\tilde{E}_\f\tilde{\nabla}^\m\f \right)\tilde{\nabla}^\n\f \right]\\
-  &=\tr \tilde{E}_\f +E^{\a\m }_\f \tn_\a\tn_\m\f -\frac{1}{2}\tr \tilde{E}_\f \tn^\m\f \tn_\m\f \\
-  &=\tr\tilde{E}_\f +E^{\a\m }_\f\tn_\a\f\tn_\m\f +\tr \tilde{E}_\f \tilde{X}\\
-  &=2\tr\tilde{E}_\f +E^{\a\m }_\f\tn_\a\f\tn_\m\f\\
-  &=(2\tilde{g}_{\a\m }+\tn_\a\f\tn_\m\f )E^{\a\m }_\f \\
-  &=(2\tilde{g}_{\a\m }+\tn_\a\f\tn_\m\f )\left(\hat{\A }^{\m\n }+\pdv{E}{(\tilde{\Box}\f )}\tilde{g}^{\m\n }\right)\\
-  &=\cancel{2\tilde{g}_{\a\m }\hat{\A}^{\a\m }}+8\pdv{E}{(\tilde{\Box}\f )}+\hat{\A }^{\a\m }\tn_\a\f\tn_\m\f +\pdv{E}{(\tilde{\Box}\f )}\left(\tn\f \right)^2\\
-  &=\pdv{E}{(\tilde{\Box}\f )}\left(8-2\tilde{X}\right)+\hat{\A}^{\a\m }\tn_\a\f\tn_\m\f \\
-  &=6\pdv{E}{(\tilde{\Box}\f )}+\hat{\A }^{\m\n}\tn_\m\f\tn_\n\f \\
-  &=6\pdv{E}{(\tilde{\Box}\f )}+\A^{\m\n}\tn_\m\f\tn_\n\f-\frac{1}{4}\A (\tn\f )^2\\
-  &=6\pdv{E}{(\tilde{\Box}\f )}+\A^{\m\n}\tn_\m\f\tn_\n\f+\frac{1}{2}\A \tilde{X}\\
-  &=6\pdv{E}{(\tilde{\Box}\f )}+\left(\tn_\m\f\tn_\n\f +\frac{1}{2}\tilde{g}_{\m\n }\right)\pdv{E}{(\TL_{\m\n })}
-\end{align}
-but also
-\begin{align}
-  \tilde{g}_{\m\n }H^{\m\n }&=\tilde{g}_{\m\n }(\tilde{K}_9\tilde{g}^{\m\n }+\tilde{K}_{10}\tn^\m\f\tn^\n\f)\\
-  &=4\tilde{K}_9+\tilde{K}_{10}(\tn\f )^2\\
-  &=4\tilde{K}_9-2\tilde{K}_{10}\tilde{X}\\
-  &=2(2\tilde{K}_9-\tilde{K}_{10})
-\end{align}
-Thus
-\begin{align}
-  6\pdv{E}{(\tilde{\Box}\f )}+\left(\tn_\m\f\tn_\n\f +\frac{1}{2}\tilde{g}_{\m\n }\right)\pdv{E}{(\TL_{\m\n })}&=2(2\tilde{K}_9-\tilde{K}_{10})
-\end{align}
+
+
 
 
 

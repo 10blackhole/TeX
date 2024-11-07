@@ -1,0 +1,147 @@
+\section{Some useful calculations}
+\subsection{Variation of the Christoffel symbols}
+The Christoffel symbols in terms of the metric are given by
+\begin{equation*}
+    \tensor{\Gamma}{^\lambda_{\mu\beta}}=\frac{1}{2}g^{\lambda\rho}\left(\partial_\mu g_{\beta\rho}+\partial_\beta g_{\mu\rho}-\partial_\rho g_{\mu\beta}\right)
+\end{equation*}
+Varying both sides, we have
+\begin{align*}
+    \delta\tensor{\Gamma}{^\lambda_{\mu\beta}}&=\frac{1}{2}\delta g^{\lambda\rho}\left(\partial_\mu g_{\beta\rho}+\partial_\beta g_{\mu\rho}-\partial_\rho g_{\mu\beta}\right)+\frac{1}{2}g^{\lambda\rho}\left(\partial_\mu \delta g_{\beta\rho}+\partial_\beta \delta g_{\mu\rho}-\partial_\rho \delta g_{\mu\beta}\right)\\
+    &=-\frac{1}{2}g^{\lambda\sigma}g^{\rho\tau}(\delta g_{\sigma\tau})\left(\partial_\mu g_{\beta\rho}+\partial_\beta g_{\mu\rho}-\partial_\rho g_{\mu\beta}\right)+\frac{1}{2}g^{\lambda\rho}\left(\partial_\mu\delta g_{\beta\rho}+\partial_\beta \delta g_{\mu\rho}-\partial_\rho\delta g_{\mu\beta}\right)\\
+    &=-g^{\lambda\sigma}(\delta g_{\sigma\tau})\tensor{\Gamma}{^\tau_{\mu\beta}}+\frac{1}{2}g^{\lambda\rho}\left(\partial_\mu\delta g_{\beta\rho}+\partial_\beta \delta g_{\mu\rho}-\partial_\rho\delta g_{\mu\beta}\right)
+\end{align*}
+Changing the dumb indice $\sigma$ by $\rho$,
+\begin{align}
+    \nonumber\delta\tensor{\Gamma}{^\lambda_{\mu\beta}}&=-g^{\lambda\rho}(\delta g_{\rho\tau})\tensor{\Gamma}{^\tau_{\mu\beta}}+\frac{1}{2}g^{\lambda\rho}\left(\partial_\mu\delta g_{\beta\rho}+\partial_\beta \delta g_{\mu\rho}-\partial_\rho\delta g_{\mu\beta}\right)\\
+   \nonumber &=\frac{1}{2} g^{\lambda\rho}\left(\partial_\mu \delta g_{\beta\rho}+\partial_\beta \delta g_{\mu\rho}-\partial_\rho\delta g_{\mu\beta}-2\delta g_{\rho\tau}\tensor{\Gamma}{^\tau_{\mu\beta}}\right)\\
+   \nonumber &=\frac{1}{2}g^{\lambda\rho}\left(\partial_\mu \delta g_{\beta\rho}-\tensor{\Gamma}{^\tau_{\mu\beta}}\delta g_{\rho\tau}-\tensor{\Gamma}{^\tau_{\rho\mu}}\delta g_{\tau\beta}+\partial_\beta \delta g_{\mu\rho}-\tensor{\Gamma}{^\tau_{\mu\beta}}\delta g_{\rho\tau}-\tensor{\Gamma}{^\tau_{\rho\beta}}\delta g_{\tau\mu}\right.\\\nonumber &\left.-\partial_\rho \delta g{\mu\beta}+\tensor{\Gamma}{^\tau_{\mu\rho}}\delta g_{\tau\beta}+\tensor{\Gamma}{^\tau_{\beta\rho}}\delta g_{\mu\tau}\right)\\
+    &=\frac{1}{2}g^{\lambda\rho}\left(\nabla_\mu \delta g_{\beta\rho}+\nabla_\beta \delta g_{\mu\rho}-\nabla_\rho \delta g_{\mu\beta}\right)\label{delta Gamma}
+\end{align}
+
+
+\subsection{Variation of the Riemann tensor}
+The Riemann tensor is given by
+\begin{equation*}
+    \tensor{R}{^\rho_{\lambda\mu\nu}}=\partial_\mu\tensor{\Gamma}{^\rho_{\lambda\nu}}-\partial_\nu\tensor{\Gamma}{^\rho_{\lambda\mu}}+\tensor{\Gamma}{^\rho_{\tau\mu}}\tensor{\Gamma}{^\tau_{\lambda\nu}}-\tensor{\Gamma}{^\rho_{\tau\nu}}\tensor{\Gamma}{^\tau_{\lambda\mu}}
+\end{equation*}
+Varying both sides,
+\begin{align*}
+    \delta  \tensor{R}{^\rho_{\lambda\mu\nu}}&=\partial_\mu\delta\tensor{\Gamma}{^\rho_{\lambda\nu}}-\partial_\nu\delta\tensor{\Gamma}{^\rho_{\lambda\mu}}+\delta\tensor{\Gamma}{^\rho_{\tau\mu}}\tensor{\Gamma}{^\tau_{\lambda\nu}}+\tensor{\Gamma}{^\rho_{\tau\mu}}\delta\tensor{\Gamma}{^\tau_{\lambda\nu}}-\delta\tensor{\Gamma}{^\rho_{\tau\nu}}\tensor{\Gamma}{^\tau_{\lambda\mu}}-\tensor{\Gamma}{^\rho_{\tau\nu}}\delta\tensor{\Gamma}{^\tau_{\lambda\mu}}\\
+    &=\partial_\mu\delta\tensor{\Gamma}{^\rho_{\nu\lambda}}+\tensor{\Gamma}{^\rho_{\tau\mu}}\delta\tensor{\Gamma}{^\tau_{\nu\lambda}}-\tensor{\Gamma}{^\tau_{\mu\lambda}}\delta\tensor{\Gamma}{^\rho_{\tau\nu}}-\partial_\nu\delta\tensor{\Gamma}{^\rho_{\mu\lambda}}+\tensor{\Gamma}{^\tau_{\nu\lambda}}\delta\tensor{\Gamma}{^\rho_{\tau\mu}}-\tensor{\Gamma}{^\rho_{\tau\nu}}\delta\tensor{\Gamma}{^\tau_{\mu\lambda}}
+\end{align*}
+Adding a convenient zero of the form $\tensor{\Gamma}{^\tau_{\mu\nu}}\delta\tensor{\Gamma}{^\rho_{\tau\lambda}}-\tensor{\Gamma}{^\tau_{\mu\nu}}\delta\tensor{\Gamma}{^\rho_{\tau\lambda}}$, and using the fact that $\delta\tensor{\Gamma}{^\lambda_{\mu\nu}}$ is a tensor, we have
+\begin{equation}
+    \delta\tensor{R}{^\rho_{\lambda\mu\nu}}=\nabla_\mu\delta\tensor{\Gamma}{^\rho_{\nu\lambda}}-\nabla_\nu\delta\tensor{\Gamma}{^\rho_{\mu\lambda}}=2\nabla_{[\mu}\delta\tensor{\Gamma}{^\rho_{\nu]\lambda}}\label{delta Riemann}
+\end{equation}
+
+
+
+
+\subsection{Variation of derivatives of $\f$ w.r.t $\omega$}
+Let's compute the infinitesimal variations of the covariant derivatives of the scalar field. First, let us calculate $\d_\omega \nabla_\m \f $:
+\begin{align}
+  \d_\omega\nabla_\m \f&=\nabla_\m \d_\omega\f=0 \label{delta-nabla}
+\end{align}
+Now, let's compute $\d_\omega (\nabla_\m \nabla_\n \f )$:
+\begin{align}
+  \d_\omega (\nabla_\m \nabla_\n \f )&=\d_\omega \nabla_\m (\partial_\n \f )\\
+  &=\d_\omega(\partial_\m \partial_\n \f -\G^\lambda_{~\n\m }\partial_\lambda \f )\\
+  &=\partial_\m \partial_\n \d_\omega\f -\d_\omega\G^\lambda_{~\n\m }\partial_\lambda\f -\G^\lambda_{~\n\m }\d_\omega\partial_\lambda\f \\
+  &=\partial_\m \partial_\n \d_\omega\f -\d_\omega \G^\lambda_{~\n\m }\partial_\lambda\f -\G^\lambda_{~\n\m }\partial_\lambda \d_\omega \f \\
+  &=-\partial_\lambda\f \d_\omega \G^\lambda_{~\n\m }
+\end{align}
+Using that the variation of the Christoffel connection is
+\begin{equation}
+  \d \G^\lambda_{~\m\b }=\frac{1}{2}g^{\lambda\r }(\nabla_\m \d g_{\b\r }+\nabla_\b \d g_{\m\r }-\nabla_\r \d g_{\m\b })
+\end{equation}
+we have
+\begin{equation}
+  \d_\omega(\nabla_\m \nabla_\n\f )=-\partial_\lambda\f \frac{1}{2}g^{\lambda\r }(\nabla_\n \d_\omega g_{\m\r }+\nabla_\m \d_\omega g_{\n\r }-\nabla_\r\d_\omega g_{\n\b })
+\end{equation}
+but $\d_\omega g_{\n\m }=2\omega g_{\n\m }$, so then
+\begin{equation}
+   \d_\omega(\nabla_\m \nabla_\n\f )=-\partial_\lambda\f g^{\lambda\r }\left[\nabla_\n (\omega g_{\m\r })+\nabla_\m (\omega g_{\n\r })-\nabla_\r (\omega g_{\n\b })\right]
+\end{equation}
+Using the metric compatibility condition $\nabla_\m g_{\a\b }=0$ and $\nabla_\a\f =\partial_\a\f  $, we obtain
+\begin{align}
+   \d_\omega(\nabla_\m \nabla_\n\f )&=-\partial_\lambda\f g^{\lambda\r }(g_{\m\r }\nabla_\n \omega+g_{\n\r }\nabla_\m \omega-g_{\n\b }\nabla_\r \omega)\\
+   &=-\partial^\r \f (g_{\m\r }\nabla_\n \omega+g_{\n\r }\nabla_\m \omega-g_{\n\b }\nabla_\r \omega)\\
+   &=-\nabla_\m \f\nabla_\n \omega-\nabla_\n \f \nabla_\m \omega +g_{\n\b }\nabla^\r \f\nabla_\r\omega\\
+   &=-2\nabla_{(\m }\f\nabla_{\n)}\omega+g_{\n\b }\nabla^\r \f\nabla_\r\omega \label{delta-nabla-nabla}
+\end{align}
+
+
+\subsection{Variation of $E$ w.r.t Riemann tensor}
+In order to see what \eqref{P-condition} implies, let us split the dependence of the Riemann tensor in terms of its traceless part $C_{\m\n }^{\a\b }$, the traceless part of the Ricci tensor $S^\a_\b $, and the scalar curvature $R$. So we have
+\begin{equation*}
+    E\left(g^{\mu\nu},R^{\alpha\beta}_{\mu\nu}\right)=E\left(g^{\mu\nu},C^{\alpha\beta}_{\mu\nu},S^\alpha_\beta,R\right)
+\end{equation*}
+The variation w.r.t the Riemann tensor yields
+\begin{align}
+    \nonumber\delta_{\rm Riem}E&=P^{\alpha\beta}_{\mu\nu}\delta R^{\mu\nu}_{\alpha\beta}\\
+    &=H^{\alpha\beta}_{\mu\nu}\delta_{\rm Riem}C^{\mu\nu}_{\alpha\beta}+I^\alpha_\beta\delta_{\rm Riem}S^\beta_\alpha+J\delta_{\rm Riem}R\label{var R}
+\end{align}
+where
+\begin{equation*}
+    H^{\alpha\beta}_{\mu\nu}\equiv\pdv{E}{C^{\mu\nu}_{\alpha\beta}},\qquad I^\alpha_\beta\equiv \pdv{E}{S^\beta_\alpha}\qquad \text{y} \qquad  J\equiv\pdv{E}{R}
+\end{equation*}
+Since $P_{\a\b }^{\m\n }$ has the same algebraic symmetries as the Riemann tensor, its traceless part is given by
+\begin{equation}
+    \hat{P}^{\mu\nu}_{\alpha\beta}=P^{\mu\nu}_{\alpha\beta}-\frac{4}{D-2}\delta^{[\mu}_{[\alpha}P^{\nu]}_{\beta]}+\frac{2}{(D-2)(D-1)}P\delta^\mu_{[\alpha}\delta^\nu_{\beta]}
+\end{equation}
+
+
+
+
+Let us note that
+\begin{align}
+   \nonumber J\delta_{\rm Riem}R&=J\delta_{\rm Riem}\left(R^{\alpha\beta}_{\mu\nu}\delta^\mu_\alpha\delta^\nu_\beta\right)\\
+    &=J\delta^\mu_\alpha\delta^\nu_\beta R^{\alpha\beta}_{\mu\nu}\label{delta R}
+\end{align}
+
+Writing $S^\alpha_\beta$ in terms of the Riemann,
+\begin{align*}
+    S^\beta_\nu&=R^\beta_\nu-\frac{1}{D}R\delta^\beta_\nu\\
+    &=R^{\alpha\beta}_{\mu\nu}\delta^\mu_\alpha-\frac{1}{D}\delta^\beta_\nu Rs^{\alpha\gamma}_{\mu\lambda}\delta^\mu_\alpha\delta^\lambda_\gamma
+\end{align*}
+then,
+\begin{align*}
+    \delta_{\rm Riem}\tilde{S}^\beta_\nu&=\delta^\mu_\alpha\delta\tilde{R}^{\alpha\beta}_{\mu\nu}-\frac{1}{D}\delta^\beta_\nu\delta\tilde{R}^{\alpha\gamma}_{\mu\lambda}\delta^\mu_\alpha \delta^\lambda_\gamma
+\end{align*}
+Hence,
+\begin{align}
+   \nonumber I^\nu_\beta\delta_{\rm Riem}S^\beta_\nu&=I^\nu_\beta\delta^\mu_\alpha\delta R^{\alpha\beta}_{\mu\nu}-\frac{1}{D}I^\nu_\beta\delta^\beta_\nu\delta^\mu_\alpha\delta^\lambda_\gamma\delta R^{\alpha\gamma}_{\mu\lambda}\\
+    \nonumber&=I^\nu_\beta\delta^\mu_\alpha\delta\tilde{R}^{\alpha\beta}_{\mu\nu}-\frac{1}{D}I\delta^\mu_\alpha\delta R^{\alpha\gamma}_{\mu\lambda}\\
+    \nonumber&=\delta^\mu_\alpha\delta R^{\alpha\beta}_{\mu\nu}\left(I^\nu_\beta-\frac{1}{D}I\delta^\nu_\beta\right)\\
+    &=\delta^\mu_\alpha\hat{I} \delta R^{\alpha\beta}_{\mu\nu}\label{dela S}
+\end{align}
+
+Finally, let us write the Weyl tensor in terms of the Riemann,
+\begin{align*}
+    \tilde{C}^{\alpha\beta}_{\mu\nu}&=\tilde{R}^{\alpha\beta}_{\mu\nu}-\frac{4}{D-2}\delta^{[\alpha}_{[\mu}\tilde{R}^{\beta]}_{\nu]}+\frac{2}{(D-1)(D-2)}\tilde{R}\delta^{[\alpha}_{[\mu}\delta^{\beta]}_{\nu]}\\
+    &=\tilde{R}^{\alpha\beta}_{\mu\nu}-\frac{4}{D-2}\delta^\lambda_\gamma \delta^{[\alpha}_{[\mu}\tilde{R}^{\beta]\gamma}_{\nu]\lambda}+\frac{2}{(D-1)(D-2)}\delta^{[\alpha}_{[\mu}\delta^{\beta]}_{\nu]}\delta^\tau_\rho\delta^\lambda_\sigma\tilde{R}^{\rho\sigma}_{\tau\lambda}
+\end{align*}
+Varying with respect to $R^{\alpha\beta}_{\mu\nu}$,
+\begin{align*}
+    \delta_{\rm Riem}C^{\alpha\beta}_{\mu\nu}&=\delta R^{\alpha\beta}_{\mu\nu}-\frac{4}{D-2}\delta^\lambda_\gamma\delta^{[\alpha}_{[\mu}\delta R^{\beta]\gamma}_{\nu]\lambda}+\frac{2}{(D-1)(D-2)}\delta^\alpha_{[\mu}\delta^\beta_{\nu]}\delta^\tau_\rho\delta^\lambda_\sigma \delta R^{\rho\sigma}_{\tau\lambda}
+\end{align*}
+Then,
+\begin{align}
+   \nonumber H^{\mu\nu}_{\alpha\beta}\delta_{\rm Riem}C^{\alpha\beta}_{\mu\nu}&=H^{\mu\nu}_{\alpha\beta}\left[\delta R^{\alpha\beta}_{\mu\nu}-\frac{4}{D-2}\delta^\lambda_\gamma\delta^{[\alpha}_{[\mu}\delta R^{\beta]\gamma}_{\nu]\lambda}+\frac{2}{(D-1)(D-2)}\delta^\alpha_{[\mu}\delta^\beta_{\nu]}\delta^\tau_\rho\delta^\lambda_\sigma \delta R^{\rho\sigma}_{\tau\lambda}\right]\\
+    \nonumber&=H^{\mu\nu}_{\alpha\beta}\delta R^{\alpha\beta}_{\mu\nu}-\frac{4}{D-2}H^{\lambda\nu}_{\gamma\beta}\delta^\mu_\alpha\delta^\gamma_\lambda\delta R^{\beta\alpha}_{\nu\mu}+\frac{2}{(D-1)(D-2)}H^{\tau\lambda}_{\rho\sigma}\delta^\rho_\tau\delta^\sigma_\lambda \delta^\mu_\alpha\delta^\nu_\beta\delta R^{\alpha\beta}_{\mu\nu}\\
+    \nonumber&=\delta R^{\alpha\beta}_{\mu\nu}\left[H^{\mu\nu}_{\alpha\beta}-\frac{4}{D-2}H^\nu_\beta \delta^\mu_\alpha +\frac{2}{(D-1)(D-2)}H\right]\\
+    &=\hat{H}^{\mu\nu}_{\alpha\beta}\delta R^{\alpha\beta}_{\mu\nu}\label{delta C}
+\end{align}
+where the indices have been renamed in a convenient way and has been used the fact that $H^{\alpha\beta}_{\mu\nu}$ has the same algebraic symmetries as the Riemann tensor. 
+
+In this way, plugging (\ref{delta R}), (\ref{dela S}) and (\ref{delta C}) into (\ref{var R}), we obtain
+\begin{align*}
+    P^{\alpha\beta}_{\mu\nu}\delta R^{\mu\nu}_{\alpha\beta}&=\hat{H}^{\alpha\beta}_{\mu\nu}\delta R^{\mu\nu}_{\alpha\beta}+\delta^\alpha_\mu\hat{I}^\beta_\nu\delta R^{\mu\nu}_{\alpha\beta}+J\delta^\alpha_\mu\delta^\beta_\nu\delta R^{\mu\nu}_{\alpha\beta}
+\end{align*}
+Hence,
+\begin{equation}\label{P-tensor}
+    P^{\alpha\beta}_{\mu\nu}=\hat{H}^{\alpha\beta}_{\mu\nu}+\delta^{[\alpha}_{[\mu}\hat{I}^{\beta]}_{\nu]}+J\delta^\alpha_{[\mu}\delta^\beta_{\nu]}
+\end{equation}
+
+
+
