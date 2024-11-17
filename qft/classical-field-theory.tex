@@ -17,3 +17,120 @@ where $\dot{\f }=\partial_t\f $ and $\p [\f,\dot{\f }]$ is implicitly defined by
 \end{equation}
 where $\dot{\f }[\f,\p ]$ is implicitly defined by $\pdv*{\mathcal{L}[\f,\dot{\f }]}{\dot{\f }}=\p $.
 
+
+
+\subsection{Euler-Lagrange equations}
+In quantum field theory, we will almost exclusively use Lagrangians. The simplest reason for this is that Lagrangians are manifestly Lorentz invariant. Dynamics for a Lagrangian system are determined by the principle of least action. The \textit{action} is the integral over time of the Lagrangian:
+\begin{equation}
+  S=\int\dd tL=\int\dd^4x\lag(x).
+\end{equation}
+Say we have a Lagrangian $\lag[\f,\partial_\m\f ]$ that is a functional only of a field $\f$ and its first derivatives. Now we imagine varying $\f\to\f+\d\f $ where $\d\f $ can be any field. Then, 
+\begin{align}
+  \d S&=\int\dd^4x\left[\pdv{\lag}{\f }+\pdv{\lag}{(\partial_\m\f )}\d(\partial_\m\f )\right] \nonumber\\
+  &=\int\dd^4x\left\{\left[\pdv{\lag}{\f}-\partial_\m \pdv{\lag}{(\partial_\m\f )}\right]\d\f +\partial_\m \left[\pdv{\lag}{(\partial_\m \f )}\d\f \right]\right\}. \label{3.13}
+\end{align}
+We have integred by parts in order to factorize by $\d\f$. The last term is a total derivative and therefore its integral only depends on the field values at spatial and temporal infinity. We will always make the physical assumption that our fields vanish on these asymptotic boundaries, which lets us drop such total derivatives from Lagrangians.
+
+In classical field theory, just as in classical mechanics, the equations of motion are deter- mined by the principle of least action: when the action is evaluated on fields that satisfy the equations of motion, it should be insensitive to small variations of those fields, $\frac{\d S}{\d\f }=0$. If this holds for all variations, then \eqref{3.13} implies
+\begin{equation}\label{3.15}
+  \pdv{\lag}{\f}-\partial_\m \pdv{\lag}{(\partial_\m\f )}=0.
+\end{equation}
+The are the celebrated \textit{Euler-Lagrange equations}. They give the \textit{equations of motion} following from a Lagrangian.
+
+\begin{ej}
+	If our action is
+	\begin{equation}
+  S=\int\dd^4x\left[\frac{1}{2}(\partial_\m\f)(\partial^\m\f)  -V[\f ]\right],
+\end{equation}
+then
+\begin{equation}
+  \pdv{\lag}{\f}=-V'[\f],\quad \pdv{\lag}{(\partial_\m\f )}=\partial^\m\f \to \partial_\m \pdv{\lag}{(\partial_\m\f )}=\Box \f .
+\end{equation}
+So then, the equations of motion \eqref{3.15} are
+\begin{equation}
+  \Box \f+V'[\f]=0.
+\end{equation}
+where $\Box:=\partial^2$ is the d'Alambertian. In particular, if $\lag =\frac{1}{2}(\partial\f )^2-\frac{1}{2}m^2\f^2$, the equations of motion are
+\begin{equation}
+  (\Box +m^2)\f =0.
+\end{equation}
+This is known as the \textit{Klein-Gordon equation} which describes the equations of motion for a free scalar field.
+\end{ej}
+Why do we restrict to Lagrangians of the form $\lag[\f,\partial_\m\f]$? First of all, this is the form that all "classical" Lagrangians had. If only first derivatives are involved, boundary conditions can be specified by initial positions and velocities only, in accordance with Newton's laws. In the quantum theory, if kinetic terms have too many derivatives, for example $\lag=\f\Box^2\f $, there will generally be disastrous consequences. For example, there may be states with negative energy or negative norm, permitting the vacuum to decay. But interactions with multiple derivatives may occur. Actually, they must occur due to quantum effects in all but the simplest renormalizable field theories; for example, they are generic in all effective field theories.
+
+
+
+
+\subsection{Noether's theorem}
+It may happen that a Lagrangian is invariant under some special type of variation $\f\to \f+\d\f  $. For exmaple, a Lagrangian for a complex field $\f $ is
+\begin{equation}
+  \lag = |\partial_\m \f |^2-m^2|\f |^2.
+\end{equation}
+This Lagrangian is invariant under $\f\to e^{-i\a }\f$ for any $\a\in\mathbb{R}$. This transformation is a \textit{symmetry} of the Lagrangian. There are two independents degrees of fredoom in a complex field $\f$, which we can take as $\f=\f_1+i\f_2 $ or more conveniently $\f$ and $\f^*$. Then the Lagrangian is
+\begin{equation}
+  \lag =(\partial_\m\f )(\partial^\m \f^*)-m^2\f\f^*,
+\end{equation}
+and the symmetry transformations are
+\begin{equation}
+  \f\to e^{-i\a }\f,\quad \f^*\to e^{i\a }\f^*.
+\end{equation}
+We note that 
+\begin{equation}
+  \pdv{\lag}{\f }=-m^2\f^*,\quad \pdv{\lag}{(\partial_\m\f )}=\partial^\m \f^* \to \partial_\m \left(\pdv{\lag}{(\partial_\m\f )}\right)=\Box \f^* ,
+\end{equation}
+\begin{equation}
+  \pdv{\lag}{\f^* }=-m^2\f,\quad \pdv{\lag}{(\partial_\m\f^* )}=\partial^\m \f \to \partial_\m \left(\pdv{\lag}{(\partial_\m\f^* )}\right)=\Box \f.
+\end{equation}
+Thus, the equation of motion for this Lagrangian are given by
+\begin{equation}
+  (\Box +m^2)\f=0,\qquad (\Box +m^2)\f^*=0.
+\end{equation}
+When there is such a symmetry that depends on some parameter $\a$ that can be taken small (that is, the symmetry is \textit{continuous}), we find, that
+\begin{equation}\label{3.22}
+  0=\frac{\d \lag}{\d\a }=\sum_n\left\{\left[\pdv{\lag}{\f_n}-\partial_\m \pdv{\lag}{(\partial_\m \f_n )}\right]\frac{\d\f_n}{\d\a }+\partial_\m \left[\pdv{\lag}{(\partial_\m \f_n)}\frac{\d\f_n}{\d\a }\right]\right\},
+\end{equation}
+where $\f_n$ may be whatever set of fields the Lagrangian depends on. In constrast with \eqref{3.13}, this equation holds even for fields configurations $\f_n $ for which the action is not extremal (i.e. for $\f_n$ that do not satisfy the EOM), since the variation corresponds to a symmetry.
+
+When the EOM \textit{are} satisfied, the \eqref{3.22} reduces to $\partial_\m J^\m=0$, where
+\begin{equation}\label{3.23}
+	J^\m =\sum_n\pdv{\lag}{(\partial_\m\f_n )}\frac{\d\f_n }{\d\a }.
+\end{equation}
+This is known as a \textit{Noether current}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
