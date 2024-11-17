@@ -1,0 +1,19 @@
+\section{Classical Field Theory}
+Quantum field theory is just quantum mechanics with an infinite number of oscillators
+
+\subsection{Hamiltonians and Lagrangians}
+A classical field theory is just a mechanical system with a continuous set of degrees of freedom. Field theories can be defined in terms of either a Hamiltonian or a Lagrangian, which we often write as integrals over all space of Hamiltonian or Lagrangian densities:
+\begin{equation}
+	H=\int\dd^3x\mathcal{H},\quad L=\int\dd^3x\mathcal{L}.
+\end{equation}
+
+Formally, the \textit{Hamiltonian} (density) is a functional of fields and their conjugate momenta $\mathcal{H}[\f,\p ]$. The \textit{Lagrangian} (density) is the Legendre transform of the Hamiltonian (density). Formally, it is defined as
+\begin{equation}
+  \mathcal{L}[\f,\dot{\f }]=\p [\f,\dot{\f }]\dot{\f }-\mathcal{H}[\f,\p[\f\dot{\f }]],
+\end{equation}
+where $\dot{\f }=\partial_t\f $ and $\p [\f,\dot{\f }]$ is implicitly defined by $\pdv*{\mathcal{H}[\f,\p ]}{\p }=\dot{\f }$. The inverse transform is
+\begin{equation}
+  \mathcal{H}[\f,\p ]=\p \dot{\f }[\f,\p ]-\mathcal{L}[\f,\dot{\f }[\f,\p ]],
+\end{equation}
+where $\dot{\f }[\f,\p ]$ is implicitly defined by $\pdv*{\mathcal{L}[\f,\dot{\f }]}{\dot{\f }}=\p $.
+
