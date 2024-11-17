@@ -1,6 +1,7 @@
 \documentclass[11pt,letterpaper]{article}
 %\pdfoutput=1
-\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+%\usepackage{tcolorbox}
 \usepackage[T1]{fontenc}
 \usepackage{palatino}
 \def\author{Borja Diez}
@@ -15,10 +16,12 @@
 \usepackage[nosort]{cite}
 \usepackage{physics}
 
+\theoremstyle{definition}
 \newtheorem{ej}{Example}[section]
 \newtheorem{sol}{Solution}[section]
 \newtheorem{dem}{Proof}[section]
 \newtheorem{prop}{Propiedad}[section]
+\newtheorem{teo}{Theorem}[section]
 
 \def\a{\alpha}
 \def\b{\beta}
@@ -79,7 +82,7 @@
 %----------------------
 \newcommand{\corr}[1]{\textcolor{nicered}{#1}}
 \newcommand{\nick}[1]{\textcolor{olive}{#1}}
-\newcommand{\teo}[1]{\textcolor{azure(colorwheel)}{#1}}
+%\newcommand{\teo}[1]{\textcolor{azure(colorwheel)}{#1}}
 \newcommand{\chteo}[2]{\corr{\st{#1}} \teo{(#2)}}
 \newcommand{\bako}[1]{\textcolor{DarkViolet}{#1}}
 \newcommand{\than}[1]{\textcolor{magenta}{#1}}
@@ -147,7 +150,7 @@ Avenida Arturo Prat Chac\'on 2120, 1110939, Iquique, Chile.}
 \vspace{1cm}
 \begin{abstract}
 \vspace{0.5cm}
-These notes are based on \cite{Ciambelli:2022vot} and are for personal study purposes only.
+These notes are based on \cite{Schwartz:2014sze} and are for personal study purposes only.
 \end{abstract}}
 
 \vspace{5cm}

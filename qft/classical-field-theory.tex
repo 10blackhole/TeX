@@ -67,11 +67,11 @@ It may happen that a Lagrangian is invariant under some special type of variatio
   \lag = |\partial_\m \f |^2-m^2|\f |^2.
 \end{equation}
 This Lagrangian is invariant under $\f\to e^{-i\a }\f$ for any $\a\in\mathbb{R}$. This transformation is a \textit{symmetry} of the Lagrangian. There are two independents degrees of fredoom in a complex field $\f$, which we can take as $\f=\f_1+i\f_2 $ or more conveniently $\f$ and $\f^*$. Then the Lagrangian is
-\begin{equation}
+\begin{equation}\label{3.19}
   \lag =(\partial_\m\f )(\partial^\m \f^*)-m^2\f\f^*,
 \end{equation}
 and the symmetry transformations are
-\begin{equation}
+\begin{equation}\label{sim}
   \f\to e^{-i\a }\f,\quad \f^*\to e^{i\a }\f^*.
 \end{equation}
 We note that 
@@ -82,7 +82,7 @@ We note that
   \pdv{\lag}{\f^* }=-m^2\f,\quad \pdv{\lag}{(\partial_\m\f^* )}=\partial^\m \f \to \partial_\m \left(\pdv{\lag}{(\partial_\m\f^* )}\right)=\Box \f.
 \end{equation}
 Thus, the equation of motion for this Lagrangian are given by
-\begin{equation}
+\begin{equation}\label{eom-phi}
   (\Box +m^2)\f=0,\qquad (\Box +m^2)\f^*=0.
 \end{equation}
 When there is such a symmetry that depends on some parameter $\a$ that can be taken small (that is, the symmetry is \textit{continuous}), we find, that
@@ -96,6 +96,63 @@ When the EOM \textit{are} satisfied, the \eqref{3.22} reduces to $\partial_\m J^
 	J^\m =\sum_n\pdv{\lag}{(\partial_\m\f_n )}\frac{\d\f_n }{\d\a }.
 \end{equation}
 This is known as a \textit{Noether current}.
+
+\begin{ej}
+	Let us consider the Lagrangian in \eqref{3.19}
+	\begin{equation}
+   \lag =(\partial_\m\f )(\partial^\m \f^*)-m^2\f\f^*.
+\end{equation}
+Since it is invariant under the continuous symmetries \eqref{sim} parametrized with $\a$, which can be as small as we want, we can expand in Taylor series up-to first order in $\a$
+\begin{equation}
+  e^{-i\a }\approx 1-i\a ,\quad e^{i\a }\approx 1+i\a,
+\end{equation}
+so that,
+\begin{equation}
+  \frac{\d\f }{\d\a }=-i\f ,\quad \frac{\d\f^*}{\d\a }=i\f^*.
+\end{equation}
+By plugging in \eqref{3.23} we obtain
+\begin{equation}
+  J^\m =\pdv{\lag}{(\partial_\m\f )}\frac{\d\f }{\d\a }+\pdv{\lag}{(\partial_\m\f^* )}\frac{\d\f^* }{\d\a }=-i(\f\partial^\m \f^*-\f^*\partial\m \f ).
+\end{equation}
+We can check that
+\begin{equation}
+  \partial_\m J^\m =-i[\f\Box \f^*-\f^*\Box\f ],
+\end{equation}
+which vanishes when the EOM \eqref{eom-phi} are satisfied.
+\end{ej}
+
+A vector field $J^\m $ that satisfies $\partial_\m J^\m =0$ is called a \textit{conserved current}, because the total charge $Q$, defined as
+\begin{equation}
+  Q:=\int \dd^3x J^0,
+\end{equation}
+satisfies 
+\begin{equation}
+  \partial_tQ=\int\dd^3x\partial_t J^0=\int\dd^3x\nabla\cdot\vb*{J}=0,
+\end{equation}
+where in the last step we have assumed $\vb*{J}$ vanishes at the spatial boundary, since, by assumption, nothing is leaving our experiment. Thus, the total charge does not change with time, and is conserved.\footnote{Remeber that $\partial_\m J^\m =\partial_t J^0 - \partial_i J^{i}$.}
+
+We have just proved a very general and important theorem known as \textit{Noether's theorem.}
+
+\begin{teo}{\textbf{Noether's theorem}}
+
+	If a Lagrangian has a continuous symmetry then there exists a current asso- ciated with that symmetry that is conserved when the EOM are satisfied.
+\end{teo}
+
+Recall that we needed to assume the symmetry was continuous so that small variations $\frac{\d\lag }{\d\a }$ could be taken. So, Noether's theorem does not apply to discrete symmetries.
+
+Important points about this theorem are:
+\begin{itemize}
+	\item The symmetry must be continuous, otherwise $\d \a $ has no meaning.
+	\item The current is conserved \textit{on-shell}, that is, when the EOM are satisfied
+	\item It works for \textit{global symmetries}, parametrized by numbers $\a $, not only for \textit{local (gauge)} \textit{symmetries} parametrized by functions $\a(x)$.
+\end{itemize}
+
+
+
+
+
+
+
 
 
 
