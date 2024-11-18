@@ -147,6 +147,54 @@ Important points about this theorem are:
 	\item It works for \textit{global symmetries}, parametrized by numbers $\a $, not only for \textit{local (gauge)} \textit{symmetries} parametrized by functions $\a(x)$.
 \end{itemize}
 
+\subsubsection{Energy-momentum tensor}
+There is a very important case of Noether's theorem that applies to a global symmetry of the action, not the Lagrangian. This is the symmetry under (global) space-time translations. In general relativity this symmetry is promoted to a local symmetry -- diffeomorphism invariance -- but all one needs to get a conserved current is a global symmetry. The current in this case is the energy-momentum tensor, $T_{\m\n }$.
+
+Space-time translation invariance says that physics at a point $x$ should be the same as physics at any other point $y$. We have to be careful distinguishing this symmetry which acts on fields from a trivial symmetry under relabeling our coordinates. Acting on fields, it says that if we replace the value of the field $\f(x)$ with its value at a different point $\f(y)$, we will not be able to tell the difference. Scalar fields then transform as $f(x)\to \f(x+\xi )$. For infinitesimal $\xi^\m $, this is
+\begin{equation}
+  \f(x)\to \f(x+\xi )=\f(x)+\xi^\n \partial_\n \f(x)+\cdots,
+\end{equation}
+where the $\cdot$ are higher order in the infinitesimal transformation $\xi^\n $. To be clear, we are considering variations where we replace the field $\f(x)$ with a linear combination of the field and its derivatives evaluated at the same point $x$. The point $x$ does not change. Our coordinates do not change. A theory with a global translation symmetry is invariant under this replacement.
+
+This transformation law,
+\begin{equation}\label{3.30}
+  \frac{\d\f }{\d\xi^\n }=\partial_\n \f ,
+\end{equation}
+applies for any field, whether tensor or spinor or anything else. It is also applies to the Lagrangian itself, which is a scalar:
+\begin{equation}\label{3.31}
+  \frac{\d\lag }{\d\xi^\n }=\partial_\n \lag  .
+\end{equation}
+Proceeding as before, using the equations of motion, the variation of the Lagrangian is
+\begin{equation}
+  \frac{\d \lag [\f_n ,\partial_\m \f_n]}{\d\xi^\n }=\cancel{(EOM)}+\partial_\m \left(\pdv{\lag}{(\partial_\m \f_n )}\frac{\d\f_n}{\d \xi^\n }\right).
+\end{equation}
+Equating this with \eqref{3.31} and using \eqref{3.30} we find
+\begin{equation}
+  \partial_\n \lag=\partial_\m \left(\pdv{\lag}{(\partial_\m \f_n )}\partial_\n \f_n \right)
+\end{equation}
+or equivalently
+\begin{equation}
+	\partial_\m \underbrace{\left(\pdv{\lag}{(\partial_\m \f_n )}\partial_\n \f_n -\delta^\m _\n \lag\right)}_{T^\m _{~\n }}=0.
+\end{equation}
+The four symmetries have produced four Noether currents, one for each $\n $:
+\begin{equation}
+  T^\m _{~\n }:=\pdv{\lag}{(\partial_\m \f_n )}\partial_\n \f_n -\delta^\m _\n \lag,
+\end{equation}
+all of which are conserved: $\partial_\m T^\m _{~\n }=0$. The four conserved quantities are energy and momentum. $T_{\m\n }$ is called the \textit{energy-momentum tensor}.
+
+An important component of the energy-momentum tensor is the energy density:
+\begin{equation}
+  \mathcal{E}=T^{0}_{~0}=\pdv{\lag}{\dot{\f }_n}\dot{\f }_n-\lag,
+\end{equation}
+where $\dot{\f }_n=\partial_t\f_n$.
+
+
+
+
+
+
+
+
 
 
 
