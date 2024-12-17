@@ -1,0 +1,38 @@
+\section{Static ansatz}
+\begin{align}
+	\mathcal{E}^{(p)r}_{~~~~r}=\frac{\a_p}{(D-2p-1)!}\left[2pR^{1A_1}_{1B_1}R^{A_2A_3}_{B_2B_3}\cdots R^{A_{2p-2}A_{2p-1}}_{B{2p-2}B_{2p-1}}\d^{A_{2p}}_{B_{2p}}+(D-2p-1)R^{A_{1}A_2}_{B_1B_2}\cdots R^{A_{2p-1}A_{2p}}_{B{2p-1}B_{2p}}\right]\d^{B_1\cdots B_{2p}}_{A_1\cdots A_{2p}}
+\end{align}
+where
+\begin{equation}\label{R-components}
+	R^{AB}_{CD}=\frac{1}{2r^2}\bar{R}^{AB}_{CD}-\frac{f}{r^2}\d^{A}_{[C}\d^B_{D]}\qquad \text{and}\qquad R^{1A}_{1B}=-\frac{f'}{2r}\d^{A}_B\,.
+\end{equation}
+Let's compute $R^{A_{1}A_2}_{B_1B_2}\cdots R^{A_{2p-1}A_{2p}}_{B{2p-1}B_{2p}}\d^{B_1\cdots B_{2p}}_{A_1\cdots A_{2p}}$. Notice that we are dealing with a product of $p$ Riemann tensors, which are a sort of binomial [cf. Eq. \eqref{R-components}] . On the other hand, we know from the binomial theorem formula that
+\begin{equation}
+  (x+y)^p=\sum_{k=0}^p\binom{p}{k}x^k y^{p-k}\,.
+\end{equation}
+Thus, we can use it as a pictoric way to compute the product of $p$ Riemman tensors,
+\begin{align}
+  R^{A_{1}A_2}_{B_1B_2}\cdots R^{A_{2p-1}A_{2p}}_{B{2p-1}B_{2p}}&=\sum_{k=0}^p\binom{p}{k}\left(\frac{1}{2r^2}\right)^k\bar{R}^{A_1A_2}_{B_1B_2}\cdots \bar{R}^{A_{2k-1}A_{2k}}_{B_{2k-1}B_{2k}}\left(-\frac{f}{r^2}\right)^{p-k}\d^{A_{2k+1}}_{B_{2k+1}}\cdots \d^{A_{2p}}_{B_{2p}}\\
+  &=\sum_{k=0}^p\binom{p}{k}\frac{1}{r^{2k}}\frac{1}{2^k}\left(-\frac{f}{r^2}\right)^{p-k}\bar{R}^{A_1A_2}_{B_1B_2}\cdots \bar{R}^{A_{2k-1}A_{2k}}_{B_{2k-1}B_{2k}}\d^{A_{2k+1}}_{B_{2k+1}}\cdots \d^{A_{2p}}_{B_{2p}}\,.
+\end{align}
+Contraction with the $2p$ rank generalized Kronecker delta yields
+\begin{align}
+  R^{A_{1}A_2}_{B_1B_2}\cdots R^{A_{2p-1}A_{2p}}_{B{2p-1}B_{2p}}\d^{(2p)}&=\sum_{k=0}^p\binom{p}{k}\frac{1}{r^{2k}}\frac{1}{2^k}\left(-\frac{f}{r^2}\right)^{p-k}\bar{R}^{A_1A_2}_{B_1B_2}\cdots \bar{R}^{A_{2k-1}A_{2k}}_{B_{2k-1}B_{2k}}\underbrace{\d^{A_{2k+1}}_{B_{2k+1}}\cdots \d^{A_{2p}}_{B_{2p}}\d^{A_1\cdots A_{2p}}_{B_1\cdots B{2p}}}_{\frac{(d-2k)!}{(d-2p)!}\d^{A_1\cdots A_{2k}}_{B_1\cdots B_{2k}}}\\
+  &=\sum_{k=0}^p\binom{p}{k}\frac{1}{r^{2k}}\frac{1}{2^k}\left(-\frac{f}{r^2}\right)^{p-k}\frac{(d-2k)!}{(d-2p)!}\bar{R}^{A_1A_2}_{B_1B_2}\cdots \bar{R}^{A_{2k-1}A_{2k}}_{B_{2k-1}B_{2k}}\d^{A_1\cdots A_{2k}}_{B_1\cdots B_{2k}}\\
+  &=\sum_{k=0}^p\binom{p}{k}\frac{1}{r^{2k}}\left(-\frac{f}{r^2}\right)^{p-k}\frac{(d-2k)!}{(d-2p)!}\bar{\LL}^{(k)}\\
+  &=\sum_{k=0}^p\binom{p}{k}\frac{1}{r^{2p}}(-f)^{p-k}\frac{(d-2k)!}{(d-2p)!}\bar{\LL}^{(k)}
+\end{align}
+where $d$ stands for the dimension of the base-manifold $d:=D-2$ and we used the fact that
+\begin{equation}
+  \bar{\LL}^{(k)}=\frac{1}{2^k}\bar{R}^{A_1A_2}_{B_1B_2}\cdots \bar{R}^{A_{2k-1}A_{2k}}_{B_{2k-1}B_{2k}}
+\end{equation}
+is the $p$-th Lagrangian density of the base-manifold.
+
+Now, let's compute $R^{1A_1}_{1B_1}R^{A_2A_3}_{B_2B_3}\cdots R^{A_{2p-2}A_{2p-1}}_{B{2p-2}B_{2p-1}}\d^{A_{2p}}_{B_{2p}}\d^{B_1\cdots B_{2p}}_{A_1\cdots A_{2p}}$.
+\begin{align}
+  R^{1A_1}_{1B_1}R^{A_2A_3}_{B_2B_3}\cdots R^{A_{2p-2}A_{2p-1}}_{B{2p-2}B_{2p-1}}\d^{A_{2p}}_{B_{2p}}\d^{B_1\cdots B_{2p}}_{A_1\cdots A_{2p}}&=
+\end{align}
+
+
+
+
